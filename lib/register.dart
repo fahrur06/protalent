@@ -68,25 +68,11 @@ class _RegisterState extends State<Register> {
                       children: [
                         Container(
                           height: 40,
-                          width: screenSize.width*0.09,
+                          width: screenSize.width*0.2,
                           child: TextFormField(
                             textAlign: TextAlign.start,
                             decoration: InputDecoration(
-                              labelText: "Nama Depan",
-                              hintStyle: TextStyle(),
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5.0)),
-                            ),
-                          ),
-                        ),
-                        SizedBox(width: screenSize.width*0.02,),
-                        Container(
-                          height: 40,
-                          width: screenSize.width*0.09,
-                          child: TextFormField(
-                            textAlign: TextAlign.start,
-                            decoration: InputDecoration(
-                              labelText: "Nama Belakang",
+                              labelText: "Username",
                               hintStyle: TextStyle(),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(5.0)),
