@@ -83,7 +83,7 @@ class SettingDashboard extends StatelessWidget {
                     Container(
                       height: 50,
                       width: 150,
-                      child: Image.asset("assets/images/protalent.png"),
+                      child: Image.asset("assets/logo/logo_protalent.png"),
                     ),
                     SizedBox(
                       height: 0,
