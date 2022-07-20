@@ -338,7 +338,7 @@ class MainDashboard extends StatelessWidget {
                             lastExp: "Java Developer",
                             lastPosition: "Backend Developer",
                             lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
+                            berapaLama: "Feb 202 - Juni 2024",
                           ),
                         ],
                       )
@@ -446,7 +446,7 @@ class Profil extends StatelessWidget {
               children: [
 
                 CircleAvatar(
-                  foregroundImage: AssetImage("assets/images/logo.png"),
+                  foregroundImage: AssetImage("assets/images/petrik.png"),
                   radius: 35,
                 ),
                 Padding(
