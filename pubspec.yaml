@@ -38,6 +38,7 @@ dependencies:
   side_navigation: ^1.0.2
   collapsible_sidebar: ^2.0.1+2
   flip_card: ^0.6.0
+  google_fonts: ^3.0.1
 
 dev_dependencies:
   flutter_test:
