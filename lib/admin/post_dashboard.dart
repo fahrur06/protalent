@@ -54,15 +54,15 @@ class PostDashboard extends StatelessWidget {
         ),
         SizedBox(
             child: Row(
-          children: [
-            TextButton(
-              style: TextButton.styleFrom(
-                padding: const EdgeInsets.all(50),
-                primary: Colors.black,
-                textStyle: const TextStyle(fontSize: 15),
+              children: [
+                TextButton(
+                  style: TextButton.styleFrom(
+                    padding: const EdgeInsets.all(50),
+                    primary: Colors.black,
+                    textStyle: const TextStyle(fontSize: 15),
               ),
-              onPressed: () {},
-              child: const Text("All (3)"),
+                  onPressed: () {},
+                  child: const Text("All (3)"),
             ),
             Spacer(
               flex: 5,
@@ -88,30 +88,30 @@ class PostDashboard extends StatelessWidget {
             Spacer(
               flex: 1,
             ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(4),
-              child: Stack(
-                children: <Widget>[
-                  Positioned.fill(
-                    child: Container(
-                      decoration: const BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: <Color>[
-                            Color(0xFF42A5F5),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(4),
+                  child: Stack(
+                    children: <Widget>[
+                      Positioned.fill(
+                        child: Container(
+                          decoration: const BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: <Color>[
+                                Color(0xFF42A5F5),
                           ],
                         ),
                       ),
                     ),
                   ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                      padding: const EdgeInsets.all(16.0),
-                      primary: Colors.black,
-                      backgroundColor: Colors.blue,
-                      textStyle: const TextStyle(fontSize: 15),
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          padding: const EdgeInsets.all(16.0),
+                          primary: Colors.black,
+                          backgroundColor: Colors.blue,
+                          textStyle: const TextStyle(fontSize: 15),
                     ),
-                    onPressed: () {},
-                    child: const Text("Search Post"),
+                        onPressed: () {},
+                        child: const Text("Search Post"),
                   ),
                 ],
               ),
