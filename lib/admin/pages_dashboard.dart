@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PagesDashboard extends StatefulWidget {
   const PagesDashboard({Key? key}) : super(key: key);
@@ -17,10 +18,10 @@ class _PagesDashboardState extends State<PagesDashboard>{
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color.fromARGB(255, 211, 211, 211),
-      appBar: AppBar(title: Text('Protalent')),
-      body: Column(
+    return Container(
+      height: 1000,
+      color: Colors.white,
+      child: Column(
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -28,7 +29,10 @@ class _PagesDashboardState extends State<PagesDashboard>{
               Container(
                 child: Text(
                   'Pages    ',
-                  style: Theme.of(context).textTheme.headline5,
+                  style: GoogleFonts.didactGothic(
+                      color: Colors.black,
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold),
                 ),
               ),
 
@@ -122,7 +126,7 @@ class _PagesDashboardState extends State<PagesDashboard>{
 
               Container(
                 child: DropdownButton(
-                  items: <String>['All dates', 'Dates 1', 'Dates 2']
+                  items: <String>['All dates', 'July 2022', 'June 2022']
                       .map<DropdownMenuItem<String>>((String value) {
                     return DropdownMenuItem<String>(
                         child: Text(value), value: value);
