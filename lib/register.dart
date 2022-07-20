@@ -19,7 +19,7 @@ class _RegisterState extends State<Register> {
     return Scaffold(
       body: Container(
         color: Colors.grey[100],
-        padding: EdgeInsets.fromLTRB(200, 100, 200, 100),
+        padding: EdgeInsets.fromLTRB(screenSize.width*0.13, screenSize.height*0.13, screenSize.width*0.13, screenSize.height*0.13),
         child: Container(
           decoration: BoxDecoration(
               color: Colors.white,
@@ -29,12 +29,14 @@ class _RegisterState extends State<Register> {
             children: [
               Container(
                 color: Colors.blue,
-                width: screenSize.width * 0.4,
+                width: screenSize.width * 0.36,
                 height: screenSize.height * 0.9,
                 child: Image.asset("assets/logo/eksad.jpg"),
               ),
               Container(
-                padding: EdgeInsets.only(left: 100,top: 70),
+                padding: EdgeInsets.only(left: screenSize.width*0.08,top: screenSize.height*0.1),
+                width: screenSize.width * 0.36,
+                height: screenSize.height * 0.9,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -66,7 +68,7 @@ class _RegisterState extends State<Register> {
                       children: [
                         Container(
                           height: 40,
-                          width: 140,
+                          width: screenSize.width*0.09,
                           child: TextFormField(
                             textAlign: TextAlign.start,
                             decoration: InputDecoration(
@@ -77,10 +79,10 @@ class _RegisterState extends State<Register> {
                             ),
                           ),
                         ),
-                        SizedBox(width: 20,),
+                        SizedBox(width: screenSize.width*0.02,),
                         Container(
                           height: 40,
-                          width: 140,
+                          width: screenSize.width*0.09,
                           child: TextFormField(
                             textAlign: TextAlign.start,
                             decoration: InputDecoration(
@@ -114,7 +116,7 @@ class _RegisterState extends State<Register> {
                     ),
                     Container(
                       height: 40,
-                      width: 300,
+                      width: screenSize.width*0.2,
                       child: TextFormField(
                         textAlign: TextAlign.start,
                         decoration: InputDecoration(
@@ -146,7 +148,7 @@ class _RegisterState extends State<Register> {
                     ),
                     Container(
                       height: 40,
-                      width: 300,
+                      width: screenSize.width*0.2,
                       child: TextFormField(
                         textAlign: TextAlign.start,
                         obscureText: _isObscure,
@@ -177,7 +179,7 @@ class _RegisterState extends State<Register> {
                       children: [
                         Container(
                           height: 30,
-                          width: 120,
+                          width: screenSize.width*0.09,
                           child: ElevatedButton(
                             onPressed: () {Navigator.push(
                               context,
@@ -189,11 +191,11 @@ class _RegisterState extends State<Register> {
                           ),
                         ),
                         SizedBox(
-                          width: screenSize.width * 0.04,
+                          width: screenSize.width * 0.02,
                         ),
                         Container(
                           height: 30,
-                          width: 120,
+                          width: screenSize.width*0.09,
                           child: ElevatedButton(
                             onPressed: () {Navigator.push(
                               context,
