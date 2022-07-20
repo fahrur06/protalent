@@ -18,7 +18,7 @@ class MainDashboard extends StatelessWidget {
     return DefaultTabController(
         length: 3,
         child: Container(
-          padding: EdgeInsets.all(50),
+          padding: EdgeInsets.fromLTRB(50, 0, 50, 50),
           color: Colors.grey[200],
           child: Center(
             child: Column(
@@ -28,7 +28,7 @@ class MainDashboard extends StatelessWidget {
                     indicatorColor: Color(0xFF214B9A),
                     tabs: [
                       Container(
-                        height: 120,
+                        height: 100,
                         child: Tab(
                           icon: Icon(
                             Icons.person,
@@ -38,7 +38,7 @@ class MainDashboard extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        height: 120,
+                        height: 100,
                         child: Tab(
                           icon: Icon(
                             Icons.person,
@@ -48,7 +48,7 @@ class MainDashboard extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        height: 120,
+                        height: 100,
                         child: Tab(
                           icon: Icon(
                             Icons.person,
@@ -101,26 +101,81 @@ class MainDashboard extends StatelessWidget {
                         mainAxisSpacing: 50,
                         crossAxisSpacing: 50,
                         children: [
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
+                      Profil(
+                            name: "Bagas",
+                            gender: "Male",
+                            age: "26",
+                            exp: "5",
+                            skill1: "Java",
+                            skill2: "Flutter",
+                            skill3: "Quarkus",
+                            numSkill: "7",
+                            salary: "10.000.000",
+                            lastExp: "Java Developer",
+                            lastPosition: "Backend Developer",
+                            lastCompany: "EKSAD",
+                            berapaLama: "Feb 2020 - Juni 2024",
+                          ),
+                          Profil(
+                            name: "Bagas",
+                            gender: "Male",
+                            age: "26",
+                            exp: "5",
+                            skill1: "Java",
+                            skill2: "Flutter",
+                            skill3: "Quarkus",
+                            numSkill: "7",
+                            salary: "10.000.000",
+                            lastExp: "Java Developer",
+                            lastPosition: "Backend Developer",
+                            lastCompany: "EKSAD",
+                            berapaLama: "Feb 2020 - Juni 2024",
+                          ),
+                          Profil(
+                            name: "Bagas",
+                            gender: "Male",
+                            age: "26",
+                            exp: "5",
+                            skill1: "Java",
+                            skill2: "Flutter",
+                            skill3: "Quarkus",
+                            numSkill: "7",
+                            salary: "10.000.000",
+                            lastExp: "Java Developer",
+                            lastPosition: "Backend Developer",
+                            lastCompany: "EKSAD",
+                            berapaLama: "Feb 2020 - Juni 2024",
+                          ),
+                          Profil(
+                            name: "Bagas",
+                            gender: "Male",
+                            age: "26",
+                            exp: "5",
+                            skill1: "Java",
+                            skill2: "Flutter",
+                            skill3: "Quarkus",
+                            numSkill: "7",
+                            salary: "10.000.000",
+                            lastExp: "Java Developer",
+                            lastPosition: "Backend Developer",
+                            lastCompany: "EKSAD",
+                            berapaLama: "Feb 2020 - Juni 2024",
+                          ),
+                          Profil(
+                            name: "Bagas",
+                            gender: "Male",
+                            age: "26",
+                            exp: "5",
+                            skill1: "Java",
+                            skill2: "Flutter",
+                            skill3: "Quarkus",
+                            numSkill: "7",
+                            salary: "10.000.000",
+                            lastExp: "Java Developer",
+                            lastPosition: "Backend Developer",
+                            lastCompany: "EKSAD",
+                            berapaLama: "Feb 2020 - Juni 2024",
+                          ),
                         ],
                       ),
                       GridView.count(
@@ -128,26 +183,81 @@ class MainDashboard extends StatelessWidget {
                         mainAxisSpacing: 50,
                         crossAxisSpacing: 50,
                         children: [
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
+                        Profil(
+                            name: "Bagas",
+                            gender: "Male",
+                            age: "26",
+                            exp: "5",
+                            skill1: "Java",
+                            skill2: "Flutter",
+                            skill3: "Quarkus",
+                            numSkill: "7",
+                            salary: "10.000.000",
+                            lastExp: "Java Developer",
+                            lastPosition: "Backend Developer",
+                            lastCompany: "EKSAD",
+                            berapaLama: "Feb 2020 - Juni 2024",
+                          ),
+                          Profil(
+                            name: "Bagas",
+                            gender: "Male",
+                            age: "26",
+                            exp: "5",
+                            skill1: "Java",
+                            skill2: "Flutter",
+                            skill3: "Quarkus",
+                            numSkill: "7",
+                            salary: "10.000.000",
+                            lastExp: "Java Developer",
+                            lastPosition: "Backend Developer",
+                            lastCompany: "EKSAD",
+                            berapaLama: "Feb 2020 - Juni 2024",
+                          ),
+                          Profil(
+                            name: "Bagas",
+                            gender: "Male",
+                            age: "26",
+                            exp: "5",
+                            skill1: "Java",
+                            skill2: "Flutter",
+                            skill3: "Quarkus",
+                            numSkill: "7",
+                            salary: "10.000.000",
+                            lastExp: "Java Developer",
+                            lastPosition: "Backend Developer",
+                            lastCompany: "EKSAD",
+                            berapaLama: "Feb 2020 - Juni 2024",
+                          ),
+                          Profil(
+                            name: "Bagas",
+                            gender: "Male",
+                            age: "26",
+                            exp: "5",
+                            skill1: "Java",
+                            skill2: "Flutter",
+                            skill3: "Quarkus",
+                            numSkill: "7",
+                            salary: "10.000.000",
+                            lastExp: "Java Developer",
+                            lastPosition: "Backend Developer",
+                            lastCompany: "EKSAD",
+                            berapaLama: "Feb 2020 - Juni 2024",
+                          ),
+                          Profil(
+                            name: "Bagas",
+                            gender: "Male",
+                            age: "26",
+                            exp: "5",
+                            skill1: "Java",
+                            skill2: "Flutter",
+                            skill3: "Quarkus",
+                            numSkill: "7",
+                            salary: "10.000.000",
+                            lastExp: "Java Developer",
+                            lastPosition: "Backend Developer",
+                            lastCompany: "EKSAD",
+                            berapaLama: "Feb 2020 - Juni 2024",
+                          ),
                         ],
                       ),
                       GridView.count(
@@ -155,26 +265,81 @@ class MainDashboard extends StatelessWidget {
                         mainAxisSpacing: 50,
                         crossAxisSpacing: 50,
                         children: [
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
-                          Profil(),
+                     Profil(
+                            name: "Bagas",
+                            gender: "Male",
+                            age: "26",
+                            exp: "5",
+                            skill1: "Java",
+                            skill2: "Flutter",
+                            skill3: "Quarkus",
+                            numSkill: "7",
+                            salary: "10.000.000",
+                            lastExp: "Java Developer",
+                            lastPosition: "Backend Developer",
+                            lastCompany: "EKSAD",
+                            berapaLama: "Feb 2020 - Juni 2024",
+                          ),
+                          Profil(
+                            name: "Bagas",
+                            gender: "Male",
+                            age: "26",
+                            exp: "5",
+                            skill1: "Java",
+                            skill2: "Flutter",
+                            skill3: "Quarkus",
+                            numSkill: "7",
+                            salary: "10.000.000",
+                            lastExp: "Java Developer",
+                            lastPosition: "Backend Developer",
+                            lastCompany: "EKSAD",
+                            berapaLama: "Feb 2020 - Juni 2024",
+                          ),
+                          Profil(
+                            name: "Bagas",
+                            gender: "Male",
+                            age: "26",
+                            exp: "5",
+                            skill1: "Java",
+                            skill2: "Flutter",
+                            skill3: "Quarkus",
+                            numSkill: "7",
+                            salary: "10.000.000",
+                            lastExp: "Java Developer",
+                            lastPosition: "Backend Developer",
+                            lastCompany: "EKSAD",
+                            berapaLama: "Feb 2020 - Juni 2024",
+                          ),
+                          Profil(
+                            name: "Bagas",
+                            gender: "Male",
+                            age: "26",
+                            exp: "5",
+                            skill1: "Java",
+                            skill2: "Flutter",
+                            skill3: "Quarkus",
+                            numSkill: "7",
+                            salary: "10.000.000",
+                            lastExp: "Java Developer",
+                            lastPosition: "Backend Developer",
+                            lastCompany: "EKSAD",
+                            berapaLama: "Feb 2020 - Juni 2024",
+                          ),
+                          Profil(
+                            name: "Bagas",
+                            gender: "Male",
+                            age: "26",
+                            exp: "5",
+                            skill1: "Java",
+                            skill2: "Flutter",
+                            skill3: "Quarkus",
+                            numSkill: "7",
+                            salary: "10.000.000",
+                            lastExp: "Java Developer",
+                            lastPosition: "Backend Developer",
+                            lastCompany: "EKSAD",
+                            berapaLama: "Feb 2020 - Juni 2024",
+                          ),
                         ],
                       )
                     ],
@@ -188,162 +353,225 @@ class MainDashboard extends StatelessWidget {
 }
 
 class Profil extends StatelessWidget {
-  const Profil({
+  Profil({
     Key? key,
+    required this.name,
+    required this.gender,
+    required this.age,
+    required this.exp,
+    required this.skill1,
+    required this.skill2,
+    required this.skill3,
+    required this.numSkill,
+    required this.salary,
+    required this.lastExp,
+    required this.lastPosition,
+    required this.lastCompany,
+    required this.berapaLama,
   }) : super(key: key);
+
+  final String name;
+  final String gender;
+  final String age;
+  final String exp;
+  final String skill1;
+  final String skill2;
+  final String skill3;
+  final String numSkill;
+  final String salary;
+  final String lastExp;
+  final String lastPosition;
+  final String lastCompany;
+  final String berapaLama;
 
   @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery.of(context).size;
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => SideMenuTalent()));
-      },
-      child: Container(
-        height: 370,
-        width: 310,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "New Talent!",
-                style: TextStyle(
-                  color: Color(0xff01FF1A),
+    return Container(
+      height: 340,
+      width: 310,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "New Talent!",
+              style: TextStyle(
+                color: Color(0xff01FF1A),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            // ListTile(
+            //   leading: CircleAvatar(
+            //     child: Image.asset(
+            //       "assets/images/fotoprofil.png",
+            //       fit: BoxFit.fill,
+            //     ),
+            //     radius: 30,
+            //   ),
+            //   title: Row(
+            //     children: [
+            //       Text(
+            //         name,
+            //         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            //       ),
+            //       SizedBox(
+            //         width: 10,
+            //       ),
+            //       Image.asset("assets/icons/centangbiru.png")
+            //     ],
+            //   ),
+              
+            //   subtitle: Column(
+            //     crossAxisAlignment: CrossAxisAlignment.start,
+            //     children: [
+            //       SizedBox(height: 10,),
+            //       Text("$gender, $age years old"),
+            //       SizedBox(height: 5,),
+            //       Text("$exp years of experience"),
+            //     ],
+            //   ),
+              
+            //   trailing: Column(crossAxisAlignment: CrossAxisAlignment.end,children: [Icon(Icons.bookmark_border)]),
+            // ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+
+                CircleAvatar(
+                  foregroundImage: AssetImage("assets/images/logo.png"),
+                  radius: 35,
                 ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Image.asset("assets/images/fotoprofil.png"),
-                  Padding(
-                    padding: const EdgeInsets.all(5.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Text(
-                              "Morgan James",
-                              style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.bold),
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            name,
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(width: 10,),
+                          Image.asset("assets/icons/centangbiru.png")
+                        ],
+                      ),
+                      Text("$gender, $age years old"),
+                      Text("$exp years of experience"),
+                      Row(
+                        children: [
+                          Text(
+                            "100 % match",
+                            style: TextStyle(
+                              color: Color(0xff01FF1A),
                             ),
-                            Image.asset("assets/icons/centangbiru.png")
-                          ],
-                        ),
-                        Text("Male, 26 years old"),
-                        Text("7 years of experience"),
-                        Row(
-                          children: [
-                            Text(
-                              "100 % match",
-                              style: TextStyle(
-                                color: Color(0xff01FF1A),
-                              ),
-                            ),
-                            Icon(
-                              Icons.info_outline,
-                              size: 18,
-                            )
-                          ],
-                        )
-                      ],
-                    ),
+                          ),
+                          Icon(
+                            Icons.info_outline,
+                            size: 18,
+                          )
+                        ],
+                      )
+                    ],
                   ),
-                  Icon(Icons.bookmark_border)
-                ],
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                "Skills",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              Row(
-                children: [
-                  Container(
-                    child: Text("JavaScript"),
-                    color: Colors.grey[200],
-                    padding: EdgeInsets.all(5),
+                ),
+                Icon(Icons.bookmark_border)
+              ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              "Skills",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 5,),
+            Row(
+              children: [
+                Container(
+                  child: Text(skill1),
+                  color: Colors.grey[200],
+                  padding: EdgeInsets.all(5),
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Container(
+                  child: Text(skill2),
+                  color: Colors.grey[200],
+                  padding: EdgeInsets.all(5),
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Container(
+                  child: Text(skill3),
+                  color: Colors.grey[200],
+                  padding: EdgeInsets.all(5),
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+              ],
+            ),
+            SizedBox(height: 5,),
+            Text("and $numSkill more"),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              "Expected Salary",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 5,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "IDR $salary nett",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Color(0xFF214B9A),
                   ),
-                  SizedBox(
-                    width: 5,
+                ),
+                
+                Container(
+                  child: Text(
+                    "Non Negotiable",
+                    style: TextStyle(color: Colors.red),
                   ),
-                  Container(
-                    child: Text("PHP"),
-                    color: Colors.grey[200],
-                    padding: EdgeInsets.all(5),
-                  ),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Container(
-                    child: Text("Python"),
-                    color: Colors.grey[200],
-                    padding: EdgeInsets.all(5),
-                  ),
-                  SizedBox(
-                    width: 5,
-                  ),
-                ],
-              ),
-              Text("and 6 more"),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                "Expected Salary",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              Row(
-                children: [
-                  Text(
-                    "IDR 12.000.000 nett",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Color(0xFF214B9A),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Container(
-                    child: Text(
-                      "Non Negotiable",
-                      style: TextStyle(color: Colors.red),
-                    ),
-                    color: Colors.red[200],
-                    padding: EdgeInsets.all(5),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                "Latest Experience",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              Text(
-                "Technical Manager | Manager",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-              ),
-              Text("L-Commerce Indonesia"),
-              Text("Sep 2013 - Jan 2020"),
-            ],
-          ),
+                  color: Colors.red[200],
+                  padding: EdgeInsets.all(5),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              "Latest Experience",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 5,),
+            Text(
+              "$lastExp | $lastPosition",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            ),
+            
+            Text(lastCompany),
+            
+            Text(berapaLama),
+          ],
         ),
       ),
     );
