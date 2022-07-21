@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PagesDashboard extends StatefulWidget {
   const PagesDashboard({Key? key}) : super(key: key);
 
+  @override
   State<PagesDashboard> createState() => _PagesDashboardState();
 }
 
-class _PagesDashboardState extends State<PagesDashboard>{
+class _PagesDashboardState extends State<PagesDashboard> {
   String bulkAction = 'Bulk action';
   String allDates = 'All dates';
   bool value = false;
@@ -17,10 +19,10 @@ class _PagesDashboardState extends State<PagesDashboard>{
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color.fromARGB(255, 211, 211, 211),
-      appBar: AppBar(title: Text('Protalent')),
-      body: Column(
+    return Container(
+      height: 1000,
+      color: Colors.white,
+      child: Column(
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -28,7 +30,10 @@ class _PagesDashboardState extends State<PagesDashboard>{
               Container(
                 child: Text(
                   'Pages    ',
-                  style: Theme.of(context).textTheme.headline5,
+                  style: GoogleFonts.didactGothic(
+                      color: Colors.black,
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold),
                 ),
               ),
 
@@ -82,7 +87,7 @@ class _PagesDashboardState extends State<PagesDashboard>{
             ],
           ),
 
-          SizedBox(height: 20),
+          SizedBox(height: 80),
 
           Row(
             children: [
@@ -122,7 +127,7 @@ class _PagesDashboardState extends State<PagesDashboard>{
 
               Container(
                 child: DropdownButton(
-                  items: <String>['All dates', 'Dates 1', 'Dates 2']
+                  items: <String>['All dates', 'July 2022', 'June 2022']
                       .map<DropdownMenuItem<String>>((String value) {
                     return DropdownMenuItem<String>(
                         child: Text(value), value: value);
@@ -174,9 +179,21 @@ class _PagesDashboardState extends State<PagesDashboard>{
                             this.value = value!;
                           });
                         })),
-                DataColumn(label: Text('Title')),
-                DataColumn(label: Text('Author')),
-                DataColumn(label: Text('Date'))
+                DataColumn(
+                    label: Text(
+                      'Title',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    )),
+                DataColumn(
+                    label: Text(
+                      'Author',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    )),
+                DataColumn(
+                    label: Text(
+                      'Date',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ))
               ], rows: [
                 DataRow(cells: [
                   DataCell(Checkbox(
@@ -186,7 +203,32 @@ class _PagesDashboardState extends State<PagesDashboard>{
                           this.value1 = value!;
                         });
                       })),
-                  DataCell(Text('Title1')),
+                  DataCell(Row(
+                    children: [
+                      Image(image: AssetImage('assets/icons/home.png')),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Home',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 0, 0, 139)),
+                          ),
+                          SizedBox(height: 15),
+                          Row(
+                            children: [
+                              Text('Edit'),
+                              SizedBox(width: 20),
+                              Text('Remove'),
+                              SizedBox(width: 20),
+                              Text('View'),
+                              SizedBox(width: 20)
+                            ],
+                          )
+                        ],
+                      ),
+                    ],
+                  )),
                   DataCell(Text('Admin')),
                   DataCell(Text('2022-06-18')),
                 ]),
@@ -198,7 +240,32 @@ class _PagesDashboardState extends State<PagesDashboard>{
                           this.value2 = value!;
                         });
                       })),
-                  DataCell(Text('Title2')),
+                  DataCell(Row(
+                    children: [
+                      Image(image: AssetImage('assets/icons/home.png')),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'About',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 0, 0, 139)),
+                          ),
+                          SizedBox(height: 15),
+                          Row(
+                            children: [
+                              Text('Edit'),
+                              SizedBox(width: 20),
+                              Text('Remove'),
+                              SizedBox(width: 20),
+                              Text('View'),
+                              SizedBox(width: 20)
+                            ],
+                          )
+                        ],
+                      ),
+                    ],
+                  )),
                   DataCell(Text('Admin')),
                   DataCell(Text('2022-07-18')),
                 ]),
@@ -210,7 +277,32 @@ class _PagesDashboardState extends State<PagesDashboard>{
                           this.value3 = value!;
                         });
                       })),
-                  DataCell(Text('Title3')),
+                  DataCell(Row(
+                    children: [
+                      Image(image: AssetImage('assets/icons/home.png')),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'News',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 0, 0, 139)),
+                          ),
+                          SizedBox(height: 15),
+                          Row(
+                            children: [
+                              Text('Edit'),
+                              SizedBox(width: 20),
+                              Text('Remove'),
+                              SizedBox(width: 20),
+                              Text('View'),
+                              SizedBox(width: 20)
+                            ],
+                          )
+                        ],
+                      ),
+                    ],
+                  )),
                   DataCell(Text('Admin')),
                   DataCell(Text('2022-07-17')),
                 ]),
@@ -222,7 +314,32 @@ class _PagesDashboardState extends State<PagesDashboard>{
                           this.value4 = value!;
                         });
                       })),
-                  DataCell(Text('Title4')),
+                  DataCell(Row(
+                    children: [
+                      Image(image: AssetImage('assets/icons/home.png')),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Contact',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 0, 0, 139)),
+                          ),
+                          SizedBox(height: 15),
+                          Row(
+                            children: [
+                              Text('Edit'),
+                              SizedBox(width: 20),
+                              Text('Remove'),
+                              SizedBox(width: 20),
+                              Text('View'),
+                              SizedBox(width: 20)
+                            ],
+                          )
+                        ],
+                      )
+                    ],
+                  )),
                   DataCell(Text('Admin')),
                   DataCell(Text('2022-07-18'))
                 ])
