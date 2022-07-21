@@ -15,10 +15,9 @@ class Dashboard extends StatelessWidget {
 
   AppBar Appbar(BuildContext context) {
     return AppBar(
-      backgroundColor: Color.fromARGB(200, 9, 47, 171),
-      //backgroundColor: Colors.white70,
+      //backgroundColor: Color.fromARGB(200, 9, 47, 171),
+      backgroundColor: Colors.white,
       leading: Container(
-        // width: 440,height: 300,
         decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage('assets/logo/logo_protalent.png'),
@@ -33,11 +32,9 @@ class Dashboard extends StatelessWidget {
               onPressed: () {},
               icon: Icon(
                 Icons.remove_red_eye,
-                color: Colors.white70,
               ),
               label: Text(
                 'Site Online',
-                style: TextStyle(color: Colors.white70),
               ),
             ),
             TextButton.icon(
@@ -47,15 +44,17 @@ class Dashboard extends StatelessWidget {
                   MaterialPageRoute(builder: ((context) => login())),
                 );
               },
-              icon: Icon(Icons.output, color: Colors.white70),
+              icon: Icon(Icons.output,
+              ),
               label: Text(
                 'Logout',
-                style: TextStyle(color: Colors.white70),
+                style: TextStyle(
+                ),
               ),
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.person_pin),
+              icon: Icon(Icons.person_pin,color: Colors.blue,),
               iconSize: 40,
             )
           ],

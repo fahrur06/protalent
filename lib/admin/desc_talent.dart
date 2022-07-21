@@ -12,40 +12,63 @@ class SelectTalent extends StatelessWidget {
       child: Container(
           child: Stack(
         children: [
-          Column(children: [
+          Column(
+            children: [
             Container(
-              height: 150,
-              color: Colors.black26,
-            ),
-            Container(
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: Color.fromARGB(200, 9, 47, 171),),
-              height: 60,
-
+              height: 210,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),),
+                //color: Color.fromARGB(200, 9, 47, 171),
+                color: Color.fromARGB(200, 179, 183, 197),
+              boxShadow: [BoxShadow(
+                  color: Color.fromARGB(255, 10, 116, 255).withAlpha(60),
+              blurRadius: 15.0,
+              spreadRadius: 10.0,
+              offset: Offset(
+                0.0,
+                3.0,
+              ),
+            ),],),
               child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Container(
                   width: 20,
                     child: Text('')),
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Container(
-                      width:150,
-                        height: 30,
-                        child: Text('Pahrur',
-                          style: TextStyle(
-                              fontSize: 30,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),)),
+                        padding: EdgeInsets.only(bottom: 5),
+                      width:300,
+                        height: 70,
+                        child: Column(
+                          children: [
+                            Text('Pahrur',
+                              style: TextStyle(
+                                  fontSize: 30,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),),
+                            SizedBox(height: 3,),
+                            Text('Full Stack JavaScript Development',
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  color: Colors.black),),
+                          ],
+                        )),
 
-                    Container(
-                      padding: EdgeInsets.only(top: 5),
-                        width:300,
-                        height: 30,
-                        child: Text('Full Stack JavaScript Development',
-                            style: TextStyle(
-                                fontSize: 17,
-                                color: Colors.white)))
+                    // Container(
+                    //   padding: EdgeInsets.only(top: 5),
+                    //     width:300,
+                    //     height: 30,
+                    //     child: Text('Full Stack JavaScript Development',
+                    //         style: TextStyle(
+                    //             fontSize: 17,
+                    //             color: Colors.black),),
+                    // ),
                   ],
                 ),
                 Container(
@@ -87,10 +110,9 @@ class SelectTalent extends StatelessWidget {
                           height: 260,
                           child: Column(
                             children: [
-                              _workexp('PT. Selamat Sejahtera', 'Mar 2015 - Mar 2018'),
-                              _workexp('Fahrur Tekstil Indonesia', 'Apr 2018 - Juli 2022'),
-                              _workexp('Tokopedia', 'Juli 2022 - Sep 2022'),
-                              _workexp('PT. Selamat Sejahtera', 'Mar 2015 - Mar 2018'),
+                              _workexp('PT. Selamat Sejahtera','Jakarta Selatan', 'Mar 2015 - Mar 2018'),
+                              _workexp('Fahrur Tekstil Indonesia','Jakarta Selatan', 'Apr 2018 - Juli 2022'),
+                              _workexp('Tokopedia','Jakarta Pusat', 'Juli 2022 - Sep 2022'),
                             ],
                           ),
                         )
@@ -103,7 +125,7 @@ class SelectTalent extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                          height: 20,
+                          height: 30,
                           //color: Colors.red,
                         ),
                         Container(
@@ -121,20 +143,27 @@ class SelectTalent extends StatelessWidget {
                         //SPASI
 
                         Container(
-                          height: 20,
+                          height: 30,
                           //color: Colors.red,
                         ),
                         Container(
                           width: 350,
                           height: 35,
                           //color: Colors.grey,
-                          child: Text('Description',style: TextStyle(
+                          child: Text('Biodata',style: TextStyle(
                               fontSize: 20,fontWeight: FontWeight.bold,letterSpacing: 1.5),),
                         ),
-                        _rowdeskripsi(deskripsis),
-                        _rowdeskripsi(deskripsis),
-                        _rowdeskripsi(deskripsis),
-                        _rowdeskripsi(deskripsis)
+                        _rowpekerjaan('Nama', deskripsi),
+                        _rowpekerjaan('Umur', deskripsi),
+                        _rowpekerjaan('Jenis Kelamin', deskripsi),
+                        _rowpekerjaan('Alamat ', deskripsi)
+                        
+                        
+                        
+                        // _rowdeskripsi(deskripsis),
+                        // _rowdeskripsi(deskripsis),
+                        // _rowdeskripsi(deskripsis),
+                        // _rowdeskripsi(deskripsis)
 
                       ],
                     ),
@@ -143,10 +172,21 @@ class SelectTalent extends StatelessWidget {
               ),
             ),
             Container(
-              height: 430,
+              width: 1270,
+              height: 400,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
-                color: Color.fromARGB(200, 179, 183, 197),),
+                color: Color.fromARGB(200, 179, 183, 197),
+                boxShadow: [BoxShadow(
+                  color: Color.fromARGB(200, 128, 132, 143).withAlpha(60),
+                  blurRadius: 15.0,
+                  spreadRadius: 15.0,
+                  offset: Offset(
+                    0.0,
+                    3.0,
+                  ),
+                ),],
+              ),
 
             child: Row(
               children: [
@@ -185,86 +225,57 @@ class SelectTalent extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  width: 800,
-                  //color: Colors.blue,
+                  height: 400,
                   child: Column(
                     children: [
                       Container(
-                        padding: EdgeInsets.only(left: 35,top: 15),
-                        width: 800,
-                        height: 55,
-                        //color: Colors.grey,
-                        child: Text('Language',
+                        padding: EdgeInsets.only(top: 15,left: 30),
+                        width: 750,
+                        height: 50,
+                        //color: Colors.red,
+                        child: Text('Skills',
                             style: TextStyle(
                                 decoration: TextDecoration.underline,
                                 fontSize: 30,
                                 fontWeight: FontWeight.bold,
                                 letterSpacing: 2)),
                       ),
-                      Container(
-                        width: 780,
-                        // color: Colors.white,
-                        child: Column(
-                          children: [
-                            _language('INDONESIAN', '9', '8'),
-                            _language('PHILIPINA', '5', '7'),
-                            _language('ENGLISH', '9', '8'),
-                            _language('MALAYSIAN', '9', '8'),
-                          ],
-                        ),
+                      Row(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.only(left: 15),
+                            width: 400,
+                            child: Column(
+                              children: [
+                                _skills('Flutter Developer'),
+                                _skills('Java Developer'),
+                                _skills('React Native Developer'),
+                                _skills('Mobile Developer'),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: 330,
+                            child: Column(
+                              children: [
+                                _tempat('Bootcamp Flutter by Eksad'),
+                                _tempat('Bootcamp Java by Eksad'),
+                                _tempat('Bootcamp React by Eksad'),
+                                _tempat('Bootcamp Mobile by Eksad'),
+                              ],
+                            ),
+                          ),
+                          
+                        ],
                       )
                     ],
                   ),
-                ),
+                )
               ],
             ),
             ),
-            Container(
-              height: 400,
-              child: Column(
-                children: [
-                  Container(
-                    padding: EdgeInsets.only(top: 5),
-                    width: 1250,
-                    height: 50,
-                    //color: Colors.red,
-                      child: Text('Skills',
-                          style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                              letterSpacing: 2)),
-                  ),
-                  Row(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.only(left: 15),
-                        width: 520,
-                        child: Column(
-                          children: [
-                            _skills('Flutter Developer'),
-                            _skills('Java Developer'),
-                            _skills('React Native Developer'),
-                            _skills('Mobile Developer'),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: 630,
-                        child: Column(
-                          children: [
-                            _skills('Bootcamp Flutter by Eksad'),
-                            _skills('Bootcamp Java by Eksad'),
-                            _skills('Bootcamp React by Eksad'),
-                            _skills('Bootcamp Mobile by Eksad'),
-                          ],
-                        ),
-                      ),
-                    ],
-                  )
-                ],
-              ),
-            )
+            Container(width: 1200,height: 100,)
+
 
           ],
           ),
@@ -341,13 +352,24 @@ class SelectTalent extends StatelessWidget {
 }
 
 
-ListTile _workexp(String _perusahaan, String _tanggal) {
+ListTile _workexp(String _perusahaan, String _lokasi, String _tanggal) {
   return ListTile(
-    title: Text(_perusahaan,
-      style: const TextStyle(
-        fontWeight: FontWeight.w500,
-        fontSize: 16,height: 1.5
-      ),),
+    title: Row(
+      children: [
+        Text(_perusahaan,
+          style: const TextStyle(
+            fontWeight: FontWeight.w500,
+            fontSize: 16,height: 1.5
+          ),
+        ),
+        Text(' ,  '+_lokasi,
+          style: const TextStyle(
+              fontWeight: FontWeight.w500,
+              fontSize: 16,height: 1.5
+          ),
+        ),
+      ],
+    ),
     subtitle: Text(_tanggal),
   );
 }
@@ -368,31 +390,36 @@ ListTile _edukasi(String _pengalaman, String _tingkat, String _tanggal) {
   );
 }
 
-ListTile _language(String _bahasa, String _rangeint, String _rangeint2) {
-  return ListTile(
-    title: Text(_bahasa,
-      style: const TextStyle(
-          fontWeight: FontWeight.w600,
-          fontSize: 17,height: 1.5
-      ),),
-    subtitle: Text('Bicara: '+_rangeint+" | "+' Menulis: '+_rangeint2,
-      style: TextStyle(fontSize: 15),
-    ),
-  );
-}
+
 
 ListTile _skills(String skill){
   return ListTile(
+    minLeadingWidth: 8,
+    leading: Container(
+        padding: EdgeInsets.only(top: 7),
+        child: Icon(Icons.circle,size: 12,color: Colors.black,)),
     title: Text(skill,
       style: const TextStyle(
           fontWeight: FontWeight.w600,
           fontSize: 20,height: 1.5
       ),
     ),
-
     );
-
 }
+
+ListTile _tempat(String tempat){
+  return ListTile(
+    title: Text(tempat,
+      style: const TextStyle(
+          fontWeight: FontWeight.w600,
+          fontSize: 20,height: 1.5
+      ),
+    ),
+    trailing: Icon(Icons.download_for_offline_outlined,color: Colors.black,),
+
+  );
+}
+
 
 Row _rowpekerjaan (String _job, String _jabatan){
   return Row(
@@ -429,7 +456,18 @@ Row _rowdeskripsi (String _deskripsi){
 }
 
 
-
+ListTile _language(String _bahasa, String _rangeint, String _rangeint2) {
+  return ListTile(
+    title: Text(_bahasa,
+      style: const TextStyle(
+          fontWeight: FontWeight.w600,
+          fontSize: 17,height: 1.5
+      ),),
+    subtitle: Text('Bicara: '+_rangeint+" | "+' Menulis: '+_rangeint2,
+      style: TextStyle(fontSize: 15),
+    ),
+  );
+}
 
 // Column _workexp(String _perusahaan, String _tanggal) {
 //   return Column(

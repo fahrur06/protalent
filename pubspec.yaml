@@ -27,6 +27,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  easy_table: ^2.0.1
   sidebarx: ^0.7.0
   flutter:
     sdk: flutter

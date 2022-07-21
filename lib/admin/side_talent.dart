@@ -34,8 +34,8 @@ class _SideMenuTalentState extends State<SideMenuTalent> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(200, 9, 47, 171),
-        //backgroundColor: Colors.white70,
+        //backgroundColor: Color.fromARGB(200, 9, 47, 171),
+        backgroundColor: Colors.white,
         leading: Container(
           // width: 440,height: 300,
           decoration: BoxDecoration(
@@ -52,11 +52,10 @@ class _SideMenuTalentState extends State<SideMenuTalent> {
                 onPressed: () {},
                 icon: Icon(
                   Icons.remove_red_eye,
-                  color: Colors.white70,
+                  //color: Colors.white70,
                 ),
                 label: Text(
                   'Site Online',
-                  style: TextStyle(color: Colors.white70),
                 ),
               ),
               TextButton.icon(
@@ -66,15 +65,16 @@ class _SideMenuTalentState extends State<SideMenuTalent> {
                     MaterialPageRoute(builder: ((context) => login())),
                   );
                 },
-                icon: Icon(Icons.output, color: Colors.white70),
+                icon: Icon(Icons.output,
+                    //color: Colors.white70
+                ),
                 label: Text(
                   'Logout',
-                  style: TextStyle(color: Colors.white70),
                 ),
               ),
               IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.person_pin),
+                icon: Icon(Icons.person_pin,color: Colors.blue,),
                 iconSize: 40,
               )
             ],
@@ -103,10 +103,9 @@ class _SideMenuTalentState extends State<SideMenuTalent> {
                 ),
               ),
               subtitle: Container(),
-              // subtitle: Text(
-              //   'Admin Eksad',
-              //   style: TextStyle(color: Colors.white),
-              // ),
+
+
+
             ),
             selectedIndex: selectedIndex,
             items: const [
