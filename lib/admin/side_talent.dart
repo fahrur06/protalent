@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pro_talent/admin/appbar.dart';
 import 'package:pro_talent/admin/main_dashboard.dart';
 import 'package:side_navigation/side_navigation.dart';
 import 'package:pro_talent/admin/desc_talent.dart';
@@ -33,54 +34,7 @@ class _SideMenuTalentState extends State<SideMenuTalent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        //backgroundColor: Color.fromARGB(200, 9, 47, 171),
-        backgroundColor: Colors.white,
-        leading: Container(
-          // width: 440,height: 300,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/logo/logo_protalent.png'),
-                fit: BoxFit.fill),
-          ),
-        ),
-        leadingWidth: 230,
-        actions: [
-          Row(
-            children: [
-              TextButton.icon(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.remove_red_eye,
-                  //color: Colors.white70,
-                ),
-                label: Text(
-                  'Site Online',
-                ),
-              ),
-              TextButton.icon(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: ((context) => login())),
-                  );
-                },
-                icon: Icon(Icons.output,
-                    //color: Colors.white70
-                ),
-                label: Text(
-                  'Logout',
-                ),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.person_pin,color: Colors.blue,),
-                iconSize: 40,
-              )
-            ],
-          ),
-        ],
-      ),
+      appBar: BarAtas(context),
       body: Row(
         children: [
           SideNavigationBar(
