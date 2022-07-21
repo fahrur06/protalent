@@ -18,8 +18,9 @@ class SelectTalent extends StatelessWidget {
               color: Colors.black26,
             ),
             Container(
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: Color.fromARGB(200, 9, 47, 171),),
               height: 60,
-              color: Color.fromARGB(200, 9, 47, 171),
+
               child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -143,10 +144,14 @@ class SelectTalent extends StatelessWidget {
             ),
             Container(
               height: 430,
-              color: Color.fromARGB(200, 179, 183, 197),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                color: Color.fromARGB(200, 179, 183, 197),),
+
             child: Row(
               children: [
                 Container(
+                  padding: EdgeInsets.only(left: 10),
                   width: 505,
                   child: Column(
                     children: [
