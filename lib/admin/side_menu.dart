@@ -48,7 +48,7 @@ class _SideMenuState extends State<SideMenu> {
               'Fahrur Huzain',
               style: TextStyle(
               color: Colors.white,
-              fontSize: 15,
+              fontSize: 18,
               fontWeight: FontWeight.bold),
               ),),
               subtitle: Container(),

@@ -30,33 +30,34 @@ class _MasterDataState extends State<MasterData> {
     return Column(
       children: [
         SizedBox(
-          height: 30,
+          height: 50,
         ),
         Container(
           child: Container(
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20),bottomRight: Radius.circular(20)),
+              //borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
               border: Border.all(color: Colors.black)
             ),
-            width: 1130,
-            height: 562,
+            width: 1200,
+            height: 592,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
                   decoration: BoxDecoration(
                     color: Color.fromARGB(200, 9, 47, 171),
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
+                    border: Border(bottom: BorderSide(color: Colors.white),),
+                    //borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20),),
                   ),
                   padding: EdgeInsets.only(top: 27,left: 35),
-                  height: 85,
-                  width: 1130,
+                  height: 95,
+                  width: 1200,
                   child: Text('Master Data',style: TextStyle(
                       fontSize: 30,color: Colors.white,fontWeight: FontWeight.bold),),
                 ),
                 Container(
-                  height: 475,
+                  height: 495,
                   child: Row(
                     children: [
                       SideNavigationBar(

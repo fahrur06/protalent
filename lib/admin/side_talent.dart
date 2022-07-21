@@ -98,7 +98,7 @@ class _SideMenuTalentState extends State<SideMenuTalent> {
                   'Fahrur Huzain',
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 15,
+                      fontSize: 18,
                       fontWeight: FontWeight.bold),
                 ),
               ),
