@@ -2,8 +2,19 @@ import 'package:flutter/material.dart';
 
 import 'const/dropdownbuttondates.dart';
 
-class PostDashboard extends StatelessWidget {
+class PostDashboard extends StatefulWidget {
   const PostDashboard({Key? key}) : super(key: key);
+
+  @override
+  State<PostDashboard> createState() => _PostDashboardState();
+}
+
+class _PostDashboardState extends State<PostDashboard> {
+  bool value = false;
+  bool value1 = false;
+  bool value2 = false;
+  bool value3 = false;
+  bool value4 = false;
 
   @override
   Widget build(BuildContext context) {
@@ -52,6 +63,7 @@ class PostDashboard extends StatelessWidget {
             ],
           ),
         ),
+
         SizedBox(
             child: Row(
               children: [
@@ -64,29 +76,29 @@ class PostDashboard extends StatelessWidget {
                   onPressed: () {},
                   child: const Text("All (3)"),
             ),
-            Spacer(
-              flex: 5,
+                Spacer(
+                  flex: 5,
             ),
-            SizedBox(
-              height: 50,
-              width: 250,
-              child: TextFormField(
-                decoration: InputDecoration(
-                  labelText: "Search",
-                  prefixIcon: const Icon(Icons.search),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(width: 1, color: Colors.blue),
-                    borderRadius: BorderRadius.circular(15),
+                SizedBox(
+                  height: 50,
+                  width: 250,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      labelText: "Search",
+                      prefixIcon: const Icon(Icons.search),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(width: 1, color: Colors.blue),
+                        borderRadius: BorderRadius.circular(15),
                   ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(width: 1, color: Colors.blue),
-                    borderRadius: BorderRadius.circular(15),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(width: 1, color: Colors.blue),
+                        borderRadius: BorderRadius.circular(15),
                   ),
                 ),
               ),
             ),
-            Spacer(
-              flex: 1,
+                Spacer(
+                  flex: 1,
             ),
                 ClipRRect(
                   borderRadius: BorderRadius.circular(4),
@@ -118,6 +130,7 @@ class PostDashboard extends StatelessWidget {
             )
           ],
         )),
+
         Row(
           children: [
             const DropDownButtonDates(),
@@ -152,7 +165,187 @@ class PostDashboard extends StatelessWidget {
             const Text("3 items"),
           ],
         ),
-      ]),
+
+        Row(
+          children: [
+            DataTable(columns: [
+              DataColumn(
+                  label: Checkbox(
+                      value: this.value,
+                      onChanged: (bool? value) {
+                        setState(() {
+                          this.value = value!;
+                        });
+                      })),
+              DataColumn(
+                  label: Text(
+                    'Title',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  )),
+              DataColumn(
+                  label: Text(
+                    'Author',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  )),
+              DataColumn(
+                  label: Text(
+                    'Date',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ))
+            ], rows: [
+              DataRow(cells: [
+                DataCell(Checkbox(
+                    value: this.value1,
+                    onChanged: (bool? value) {
+                      setState(() {
+                        this.value1 = value!;
+                      });
+                    })),
+                DataCell(Row(
+                  children: [
+                    Image(image: AssetImage('assets/icons/home.png')),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Home',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 0, 0, 139)),
+                        ),
+                        SizedBox(height: 15),
+                        Row(
+                          children: [
+                            Text('Edit'),
+                            SizedBox(width: 20),
+                            Text('Remove'),
+                            SizedBox(width: 20),
+                            Text('View'),
+                            SizedBox(width: 20)
+                          ],
+                        )
+                      ],
+                    ),
+                  ],
+                )),
+                DataCell(Text('Admin')),
+                DataCell(Text('2022-06-18')),
+              ]),
+              DataRow(cells: [
+                DataCell(Checkbox(
+                    value: this.value2,
+                    onChanged: (bool? value) {
+                      setState(() {
+                        this.value2 = value!;
+                      });
+                    })),
+                DataCell(Row(
+                  children: [
+                    Image(image: AssetImage('assets/icons/home.png')),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'About',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 0, 0, 139)),
+                        ),
+                        SizedBox(height: 15),
+                        Row(
+                          children: [
+                            Text('Edit'),
+                            SizedBox(width: 20),
+                            Text('Remove'),
+                            SizedBox(width: 20),
+                            Text('View'),
+                            SizedBox(width: 20)
+                          ],
+                        )
+                      ],
+                    ),
+                  ],
+                )),
+                DataCell(Text('Admin')),
+                DataCell(Text('2022-07-18')),
+              ]),
+              DataRow(cells: [
+                DataCell(Checkbox(
+                    value: this.value3,
+                    onChanged: (bool? value) {
+                      setState(() {
+                        this.value3 = value!;
+                      });
+                    })),
+                DataCell(Row(
+                  children: [
+                    Image(image: AssetImage('assets/icons/home.png')),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'News',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 0, 0, 139)),
+                        ),
+                        SizedBox(height: 15),
+                        Row(
+                          children: [
+                            Text('Edit'),
+                            SizedBox(width: 20),
+                            Text('Remove'),
+                            SizedBox(width: 20),
+                            Text('View'),
+                            SizedBox(width: 20)
+                          ],
+                        )
+                      ],
+                    ),
+                  ],
+                )),
+                DataCell(Text('Admin')),
+                DataCell(Text('2022-07-17')),
+              ]),
+              DataRow(cells: [
+                DataCell(Checkbox(
+                    value: this.value4,
+                    onChanged: (bool? value) {
+                      setState(() {
+                        this.value4 = value!;
+                      });
+                    })),
+                DataCell(Row(
+                  children: [
+                    Image(image: AssetImage('assets/icons/home.png')),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Contact',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 0, 0, 139)),
+                        ),
+                        SizedBox(height: 15),
+                        Row(
+                          children: [
+                            Text('Edit'),
+                            SizedBox(width: 20),
+                            Text('Remove'),
+                            SizedBox(width: 20),
+                            Text('View'),
+                            SizedBox(width: 20)
+                          ],
+                        )
+                      ],
+                    )
+                  ],
+                )),
+                DataCell(Text('Admin')),
+                DataCell(Text('2022-07-18'))
+              ])
+            ])
+          ],
+        )
+          ],
+        )
     );
   }
 }
