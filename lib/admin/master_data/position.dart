@@ -101,12 +101,20 @@ class _PositionState extends State<Position> {
                     width: screenSize.width*0.1,
                     height: 55,
                     //color: Colors.red,
-                    child: ElevatedButton(onPressed: (){}, child: Row(
-                      children: [
-                        Icon(Icons.save),
-                        SizedBox(width: 5,),
-                        Text('Save')
-                      ],
+                    child: ElevatedButton(onPressed: (){},
+                        child: Container(
+                          width: screenSize.width*0.08,
+                      child: Row(
+                        children: [
+                          Container(
+                            width: screenSize.width*0.017,
+                              child: Icon(Icons.save)),
+                          Spacer(flex: 1,),
+                          Container(
+                            width: screenSize.width*0.028,
+                              child: Text('Save'))
+                        ],
+                      ),
                     )),
                   )
                 ],
