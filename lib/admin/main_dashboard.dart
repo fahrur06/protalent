@@ -1,5 +1,12 @@
+import 'dart:ui';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/src/widgets/framework.dart';
 import 'package:pro_talent/admin/side_talent.dart';
+
+import 'desc_talent.dart';
 
 class MainDashboard extends StatelessWidget {
   MainDashboard({Key? key}) : super(key: key);
@@ -94,7 +101,7 @@ class MainDashboard extends StatelessWidget {
                         mainAxisSpacing: 50,
                         crossAxisSpacing: 50,
                         children: [
-                          Profil(
+                      Profil(
                             name: "Bagas",
                             gender: "Male",
                             age: "26",
@@ -176,7 +183,7 @@ class MainDashboard extends StatelessWidget {
                         mainAxisSpacing: 50,
                         crossAxisSpacing: 50,
                         children: [
-                          Profil(
+                        Profil(
                             name: "Bagas",
                             gender: "Male",
                             age: "26",
@@ -258,7 +265,7 @@ class MainDashboard extends StatelessWidget {
                         mainAxisSpacing: 50,
                         crossAxisSpacing: 50,
                         children: [
-                          Profil(
+                     Profil(
                             name: "Bagas",
                             gender: "Male",
                             age: "26",
@@ -382,13 +389,13 @@ class Profil extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (Context) {
-              return SideMenuTalent();
-            },
-          ),
-        );
+                                context,
+                                MaterialPageRoute(
+                                  builder: (Context) {
+                                    return SideMenuTalent();
+                                  },
+                                ),
+                              );
       },
       child: Container(
         height: 340,
@@ -431,7 +438,7 @@ class Profil extends StatelessWidget {
               //       Image.asset("assets/icons/centangbiru.png")
               //     ],
               //   ),
-
+                
               //   subtitle: Column(
               //     crossAxisAlignment: CrossAxisAlignment.start,
               //     children: [
@@ -441,13 +448,14 @@ class Profil extends StatelessWidget {
               //       Text("$exp years of experience"),
               //     ],
               //   ),
-
+                
               //   trailing: Column(crossAxisAlignment: CrossAxisAlignment.end,children: [Icon(Icons.bookmark_border)]),
               // ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+    
                   CircleAvatar(
                     foregroundImage: AssetImage("assets/images/petrik.png"),
                     radius: 35,
@@ -464,9 +472,7 @@ class Profil extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 16, fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(
-                              width: 10,
-                            ),
+                            SizedBox(width: 10,),
                             Image.asset("assets/icons/centangbiru.png")
                           ],
                         ),
@@ -499,9 +505,7 @@ class Profil extends StatelessWidget {
                 "Skills",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              SizedBox(
-                height: 5,
-              ),
+              SizedBox(height: 5,),
               Row(
                 children: [
                   Container(
@@ -530,9 +534,7 @@ class Profil extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
-                height: 5,
-              ),
+              SizedBox(height: 5,),
               Text("and $numSkill more"),
               SizedBox(
                 height: 10,
@@ -541,9 +543,7 @@ class Profil extends StatelessWidget {
                 "Expected Salary",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              SizedBox(
-                height: 5,
-              ),
+              SizedBox(height: 5,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -555,6 +555,7 @@ class Profil extends StatelessWidget {
                       color: Color(0xFF214B9A),
                     ),
                   ),
+                  
                   Container(
                     child: Text(
                       "Non Negotiable",
@@ -572,16 +573,14 @@ class Profil extends StatelessWidget {
                 "Latest Experience",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              SizedBox(
-                height: 5,
-              ),
+              SizedBox(height: 5,),
               Text(
                 "$lastExp | $lastPosition",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
-
+              
               Text(lastCompany),
-
+              
               Text(berapaLama),
             ],
           ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/admin/floating_action_button.dart';
 import 'package:pro_talent/admin/main_dashboard.dart';
 import 'package:side_navigation/side_navigation.dart';
 import 'package:pro_talent/admin/desc_talent.dart';
@@ -34,7 +33,6 @@ class _SideMenuState extends State<SideMenu> {
     return Scaffold(
       body: Row(
         children: [
-          floating(),
           SideNavigationBar(
             header: SideNavigationBarHeader(
               image: CircleAvatar(
@@ -47,13 +45,12 @@ class _SideMenuState extends State<SideMenu> {
               title: Container(
                 padding: EdgeInsets.only(left: 10),
                 child: Text(
-                  'Fahrur Huzain',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
+              'Fahrur Huzain',
+              style: TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+              fontWeight: FontWeight.bold),
+              ),),
               subtitle: Container(),
               // subtitle: Text(
               //   'Admin Eksad',
@@ -99,9 +96,12 @@ class _SideMenuState extends State<SideMenu> {
             // Change the background color and disabled header/footer dividers
             // Make use of standard() constructor for other themes
             theme: SideNavigationBarTheme(
-              backgroundColor: Color.fromARGB(200, 9, 47, 171),
+              backgroundColor:
+              //Color.fromARGB(200, 9, 47, 171),
+              Color.fromARGB(255, 18, 108, 178),
               togglerTheme: SideNavigationBarTogglerTheme(
-                  shrinkIconColor: Colors.white, expandIconColor: Colors.white),
+                  shrinkIconColor: Colors.white,
+                  expandIconColor: Colors.white),
               itemTheme:
                   SideNavigationBarItemTheme(selectedItemColor: Colors.white),
               dividerTheme: SideNavigationBarDividerTheme.standard(),

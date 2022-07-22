@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pro_talent/admin/appbar.dart';
 import 'package:pro_talent/admin/main_dashboard.dart';
 import 'package:side_navigation/side_navigation.dart';
 import 'package:pro_talent/admin/desc_talent.dart';
@@ -33,54 +34,7 @@ class _SideMenuTalentState extends State<SideMenuTalent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(200, 9, 47, 171),
-        //backgroundColor: Colors.white70,
-        leading: Container(
-          // width: 440,height: 300,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/logo/logo_protalent.png'),
-                fit: BoxFit.fill),
-          ),
-        ),
-        leadingWidth: 230,
-        actions: [
-          Row(
-            children: [
-              TextButton.icon(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.remove_red_eye,
-                  color: Colors.white70,
-                ),
-                label: Text(
-                  'Site Online',
-                  style: TextStyle(color: Colors.white70),
-                ),
-              ),
-              TextButton.icon(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: ((context) => login())),
-                  );
-                },
-                icon: Icon(Icons.output, color: Colors.white70),
-                label: Text(
-                  'Logout',
-                  style: TextStyle(color: Colors.white70),
-                ),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.person_pin),
-                iconSize: 40,
-              )
-            ],
-          ),
-        ],
-      ),
+      appBar: BarAtas(context),
       body: Row(
         children: [
           SideNavigationBar(
@@ -98,15 +52,14 @@ class _SideMenuTalentState extends State<SideMenuTalent> {
                   'Fahrur Huzain',
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 15,
+                      fontSize: 18,
                       fontWeight: FontWeight.bold),
                 ),
               ),
               subtitle: Container(),
-              // subtitle: Text(
-              //   'Admin Eksad',
-              //   style: TextStyle(color: Colors.white),
-              // ),
+
+
+
             ),
             selectedIndex: selectedIndex,
             items: const [
@@ -147,7 +100,9 @@ class _SideMenuTalentState extends State<SideMenuTalent> {
             // Change the background color and disabled header/footer dividers
             // Make use of standard() constructor for other themes
             theme: SideNavigationBarTheme(
-              backgroundColor: Color.fromARGB(200, 9, 47, 171),
+              backgroundColor:
+              //Color.fromARGB(200, 9, 47, 171),
+              Color.fromARGB(255, 18, 108, 178),
               togglerTheme: SideNavigationBarTogglerTheme(
                   shrinkIconColor: Colors.white, expandIconColor: Colors.white),
               itemTheme:
