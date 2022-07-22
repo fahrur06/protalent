@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:pro_talent/login.dart';
 import '../botton.dart';
@@ -201,7 +202,7 @@ class SettingDashboard extends StatelessWidget {
                             // fontWeight: FontWeight.w600,
                           ),
                           decoration:
-                              InputDecoration(hintText: "xxxxxx@xxxxx.xxxx"),
+                          InputDecoration(hintText: "xxxxxx@xxxxx.xxxx"),
                         )),
                     Spacer(
                       flex: 20,
@@ -250,7 +251,7 @@ class SettingDashboard extends StatelessWidget {
                             // fontWeight: FontWeight.w600,
                           ),
                           decoration:
-                              InputDecoration(hintText: "02x-xxxx.xxxx"),
+                          InputDecoration(hintText: "02x-xxxx.xxxx"),
                         )),
                   ],
                 ),
