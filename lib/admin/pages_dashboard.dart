@@ -53,21 +53,52 @@ class _PagesDashboardState extends State<PagesDashboard> {
               //   ),
               // ),
 
-              Container(
-                child: FlatButton(
-                  child: Text(
-                    'Add new',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  color: Color.fromARGB(255, 204, 204, 255),
-                  textColor: Color.fromARGB(255, 0, 0, 139),
-                  onPressed: () {},
+              ClipRRect(
+                borderRadius: BorderRadius.circular(4),
+                child: Stack(
+                  children: <Widget>[
+                    Positioned.fill(
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: <Color>[
+                              Color(0xFF1976D2),
+                              Color(0xFF42A5F5),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        padding: const EdgeInsets.all(16.0),
+                        primary: Colors.black,
+                        textStyle: const TextStyle(fontSize: 15),
+                      ),
+                      onPressed: () {},
+                      child: const Text("Add New"),
+                    ),
+                  ],
                 ),
-              )
+              ),
+
+              // Container(
+              //   child: TextButton(
+              //     style: TextButton.styleFrom(
+              //     ),
+              //     child: Text(
+              //       'Add new',
+              //       style: TextStyle(fontWeight: FontWeight.bold),
+              //     ),
+              //     color: Color.fromARGB(255, 204, 204, 255),
+              //     textColor: Color.fromARGB(255, 0, 0, 139),
+              //     onPressed: () {},
+              //   ),
+              // )
             ],
           ),
 
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
 
           // Text('All'),
 
@@ -82,12 +113,68 @@ class _PagesDashboardState extends State<PagesDashboard> {
               //   onPressed: () {},
               // ),
 
-              Text('All(4)',
-                  style: TextStyle(color: Color.fromARGB(255, 0, 0, 139)))
+              const Text('All(4)',
+                  style: TextStyle(color: Color.fromARGB(255, 0, 0, 139))),
+              SizedBox(
+                height: 50,
+                width: 200,
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    labelText: "Search",
+                    prefixIcon: const Icon(Icons.search),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide:
+                          const BorderSide(width: 1, color: Colors.blue),
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide:
+                          const BorderSide(width: 1, color: Colors.blue),
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                  ),
+                ),
+              ),
+
+              const SizedBox(
+                width: 50,
+              ),
+
+              //     Spacer(
+              //       flex: 1,
+              // ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(3),
+                child: Stack(
+                  children: <Widget>[
+                    Positioned.fill(
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: <Color>[
+                              Color(0xFF42A5F5),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        padding: const EdgeInsets.all(16.0),
+                        primary: Colors.black,
+                        backgroundColor: Colors.blue,
+                        textStyle: const TextStyle(fontSize: 15),
+                      ),
+                      onPressed: () {},
+                      child: const Text("Search Pages"),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
 
-          SizedBox(height: 80),
+          const SizedBox(height: 80),
 
           Row(
             children: [
@@ -106,24 +193,42 @@ class _PagesDashboardState extends State<PagesDashboard> {
                     });
                   },
                   value: bulkAction,
-                  style: TextStyle(fontSize: 14),
+                  style: const TextStyle(fontSize: 14),
                 ),
               ),
 
-              SizedBox(width: 30),
+              const SizedBox(width: 30),
 
-              Container(
-                  child: FlatButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Apply',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(4),
+                child: Stack(
+                  children: <Widget>[
+                    Positioned.fill(
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: <Color>[
+                              Color(0xFF42A5F5),
+                            ],
+                          ),
+                        ),
+                      ),
                     ),
-                    color: Color.fromARGB(255, 204, 204, 255),
-                    textColor: Color.fromARGB(255, 0, 0, 139),
-                  )),
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        padding: const EdgeInsets.all(16.0),
+                        primary: Colors.black,
+                        backgroundColor: Colors.blue,
+                        textStyle: const TextStyle(fontSize: 15),
+                      ),
+                      onPressed: () {},
+                      child: const Text("Apply"),
+                    ),
+                  ],
+                ),
+              ),
 
-              SizedBox(width: 70),
+              const SizedBox(width: 70),
 
               Container(
                 child: DropdownButton(
@@ -138,26 +243,44 @@ class _PagesDashboardState extends State<PagesDashboard> {
                     });
                   },
                   value: allDates,
-                  style: TextStyle(fontSize: 14),
+                  style: const TextStyle(fontSize: 14),
                 ),
               ),
 
-              SizedBox(width: 30),
+              const SizedBox(width: 30),
 
-              Container(
-                  child: FlatButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Filter',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(4),
+                child: Stack(
+                  children: <Widget>[
+                    Positioned.fill(
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: <Color>[
+                              Color(0xFF42A5F5),
+                            ],
+                          ),
+                        ),
+                      ),
                     ),
-                    color: Color.fromARGB(255, 204, 204, 255),
-                    textColor: Color.fromARGB(255, 0, 0, 139),
-                  ))
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        padding: const EdgeInsets.all(16.0),
+                        primary: Colors.black,
+                        backgroundColor: Colors.blue,
+                        textStyle: const TextStyle(fontSize: 15),
+                      ),
+                      onPressed: () {},
+                      child: const Text("Filter"),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
 
-          SizedBox(height: 40),
+          const SizedBox(height: 40),
 
           Row(
             children: [
@@ -179,21 +302,21 @@ class _PagesDashboardState extends State<PagesDashboard> {
                             this.value = value!;
                           });
                         })),
-                DataColumn(
+                const DataColumn(
                     label: Text(
-                      'Title',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    )),
-                DataColumn(
+                  'Title',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )),
+                const DataColumn(
                     label: Text(
-                      'Author',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    )),
-                DataColumn(
+                  'Author',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )),
+                const DataColumn(
                     label: Text(
-                      'Date',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ))
+                  'Date',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ))
               ], rows: [
                 DataRow(cells: [
                   DataCell(Checkbox(
@@ -205,18 +328,18 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       })),
                   DataCell(Row(
                     children: [
-                      Image(image: AssetImage('assets/icons/home.png')),
+                      const Image(image: AssetImage('assets/icons/home.png')),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             'Home',
                             style: TextStyle(
                                 color: Color.fromARGB(255, 0, 0, 139)),
                           ),
-                          SizedBox(height: 15),
+                          const SizedBox(height: 15),
                           Row(
-                            children: [
+                            children: const [
                               Text('Edit'),
                               SizedBox(width: 20),
                               Text('Remove'),
@@ -229,8 +352,8 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       ),
                     ],
                   )),
-                  DataCell(Text('Admin')),
-                  DataCell(Text('2022-06-18')),
+                  const DataCell(Text('Admin')),
+                  const DataCell(Text('2022-06-18')),
                 ]),
                 DataRow(cells: [
                   DataCell(Checkbox(
@@ -242,18 +365,18 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       })),
                   DataCell(Row(
                     children: [
-                      Image(image: AssetImage('assets/icons/home.png')),
+                      const Image(image: AssetImage('assets/icons/home.png')),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             'About',
                             style: TextStyle(
                                 color: Color.fromARGB(255, 0, 0, 139)),
                           ),
-                          SizedBox(height: 15),
+                          const SizedBox(height: 15),
                           Row(
-                            children: [
+                            children: const [
                               Text('Edit'),
                               SizedBox(width: 20),
                               Text('Remove'),
@@ -266,8 +389,8 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       ),
                     ],
                   )),
-                  DataCell(Text('Admin')),
-                  DataCell(Text('2022-07-18')),
+                  const DataCell(Text('Admin')),
+                  const DataCell(Text('2022-07-18')),
                 ]),
                 DataRow(cells: [
                   DataCell(Checkbox(
@@ -279,18 +402,18 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       })),
                   DataCell(Row(
                     children: [
-                      Image(image: AssetImage('assets/icons/home.png')),
+                      const Image(image: AssetImage('assets/icons/home.png')),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             'News',
                             style: TextStyle(
                                 color: Color.fromARGB(255, 0, 0, 139)),
                           ),
-                          SizedBox(height: 15),
+                          const SizedBox(height: 15),
                           Row(
-                            children: [
+                            children: const [
                               Text('Edit'),
                               SizedBox(width: 20),
                               Text('Remove'),
@@ -303,8 +426,8 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       ),
                     ],
                   )),
-                  DataCell(Text('Admin')),
-                  DataCell(Text('2022-07-17')),
+                  const DataCell(Text('Admin')),
+                  const DataCell(Text('2022-07-17')),
                 ]),
                 DataRow(cells: [
                   DataCell(Checkbox(
@@ -316,18 +439,18 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       })),
                   DataCell(Row(
                     children: [
-                      Image(image: AssetImage('assets/icons/home.png')),
+                      const Image(image: AssetImage('assets/icons/home.png')),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             'Contact',
                             style: TextStyle(
                                 color: Color.fromARGB(255, 0, 0, 139)),
                           ),
-                          SizedBox(height: 15),
+                          const SizedBox(height: 15),
                           Row(
-                            children: [
+                            children: const [
                               Text('Edit'),
                               SizedBox(width: 20),
                               Text('Remove'),
@@ -340,8 +463,8 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       )
                     ],
                   )),
-                  DataCell(Text('Admin')),
-                  DataCell(Text('2022-07-18'))
+                  const DataCell(Text('Admin')),
+                  const DataCell(Text('2022-07-18'))
                 ])
               ])
             ],
