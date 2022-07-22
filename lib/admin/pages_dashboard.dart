@@ -52,6 +52,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
               //     style: TextStyle(color: Colors.black),
               //   ),
               // ),
+
               ClipRRect(
                 borderRadius: BorderRadius.circular(4),
                 child: Stack(
