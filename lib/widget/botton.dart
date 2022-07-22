@@ -63,7 +63,7 @@ class Botton_tombol extends StatelessWidget {
         },
         child: Text(
           title,
-          style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
       ),
     );
@@ -79,53 +79,60 @@ class AlertForm extends StatefulWidget {
 
 class _AlertFormState extends State<AlertForm> {
   late TextEditingController controller;
-  String posisi ='';
+  String posisi = '';
 
   @override
-  void initState(){
+  void initState() {
     super.initState();
 
     controller = TextEditingController();
   }
+
   @override
   Widget build(BuildContext context) {
-    void publish(){
+    void publish() {
       Navigator.of(context).pop(controller.text);
-
     }
-    Future openDialog() => showDialog<String>(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text('Add Talent'),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            SizedBox(height: 30,),
-            TextFormField(
-              decoration: InputDecoration(hintText: 'Nama Talent'),
-            ),
-            SizedBox(height: 20,),
-            TextFormField(
-              decoration: InputDecoration(hintText: 'Deskripsi Talent'),
-            ),
-            SizedBox(height: 30,),
-          ],
-        ),
-        actions: [
-          TextButton(onPressed: (){
-            publish();
 
-          }, child: Text('PUBLISH'))
-        ],
-      ),
-    );
+    Future openDialog() => showDialog<String>(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: Text('Add Talent'),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(
+                  height: 30,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(hintText: 'Nama Talent'),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(hintText: 'Deskripsi Talent'),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+              ],
+            ),
+            actions: [
+              TextButton(
+                  onPressed: () {
+                    publish();
+                  },
+                  child: Text('PUBLISH'))
+            ],
+          ),
+        );
     return Container(
       child: ElevatedButton(
-          onPressed: ()async {
-           final posisi = await openDialog();
-           if (posisi == null || posisi.isEmpty)
-             return;
-           setState(()=>this.posisi = posisi);
+          onPressed: () async {
+            final posisi = await openDialog();
+            if (posisi == null || posisi.isEmpty) return;
+            setState(() => this.posisi = posisi);
           },
           child: Text('Add New')),
     );
@@ -133,42 +140,41 @@ class _AlertFormState extends State<AlertForm> {
 }
 
 class ButtonAppbar extends StatelessWidget {
-  const ButtonAppbar(
-      {Key? key,
-        required this.arah,
-        required this.menu
-      }) : super(key: key);
+  const ButtonAppbar({Key? key, required this.arah, required this.menu})
+      : super(key: key);
   final String menu;
   final Widget arah;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      child:  TextButton(
-          onPressed: (){
-        Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => arah,
+      child: TextButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => arah,
+            ),
+          );
+        },
+        child: Text(
+          menu,
+          style: TextStyle(
+            fontSize: 18,
+            letterSpacing: 1.5,
+            fontWeight: FontWeight.w600,
+          ),
         ),
-      );}, child:  Text(menu,style: TextStyle(fontSize: 18,letterSpacing: 1.5,fontWeight: FontWeight.w600,color: Colors.black),
-      ),style: ButtonStyle(
-    foregroundColor: MaterialStateProperty.resolveWith<Color>(
-    (Set<MaterialState> states) {
-    if (states.contains(MaterialState.hovered))
-    // ignore: curly_braces_in_flow_control_structures
-    return Colors.blue;
-
-    return Colors.black; // null throus error in flutter 2.2+.
-    }
-    ),
-      //TextButton.styleFrom(onSurface: Colors.blue,surfaceTintColor: Colors.blue,),
+        style: ButtonStyle(
+          foregroundColor: MaterialStateProperty.resolveWith<Color>(
+              (Set<MaterialState> states) {
+            if (states.contains(MaterialState.hovered))
+              // ignore: curly_braces_in_flow_control_structures
+              return Colors.blue;
+            return Colors.black; // null throus error in flutter 2.2+.
+          }),
+        ),
       ),
-    ),
-    )
-    ;
+    );
   }
 }
-
-
-

@@ -93,7 +93,7 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context) {
             },
             child: Text(
               'Login',
-              style: TextStyle(fontSize: 18,fontWeight: FontWeight.w400),
+              style: TextStyle(fontSize: 18,fontWeight: FontWeight.w400,color: Colors.black),
             ),
           ),
           Container(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/login.dart';
+import 'package:pro_talent/public/home1.dart';
+import 'package:pro_talent/public/home2.dart';
 import 'package:pro_talent/public/appbar_home.dart';
 import 'package:pro_talent/widget/responsive.dart';
 
@@ -20,6 +21,13 @@ class _HomePageState extends State<HomePage> {
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? AppbarHomeSmall(screenSize)
           : AppbarHomeLarge(screenSize, context),
+      body: ListView(
+        children: [
+          Home1(),
+          Home2(),
+
+        ],
+      ),
 
     );
   }
