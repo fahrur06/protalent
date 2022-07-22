@@ -78,35 +78,38 @@ class _LevelState extends State<Level> {
               child: EasyTable<_level>(_model,columnsFit: true,),
             ),
             Spacer(flex: 1,),
-            Row(
-              children: [
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: 10,horizontal: 30),
-                  width: screenSize.width*0.47,
-                  height: 55,
-                  //color: Colors.grey,
-                  child: TextFormField(textAlign: TextAlign.start,
-                    decoration: InputDecoration(
-                      labelText: "Isi level talent",
-                      hintStyle: TextStyle(),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(5.0)),
-                    ),),
-                ),
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: 10,horizontal: 25),
-                  width: screenSize.width*0.1,
-                  height: 55,
-                  //color: Colors.red,
-                  child: ElevatedButton(onPressed: (){}, child: Row(
-                    children: [
-                      Icon(Icons.save),
-                      SizedBox(width: 5,),
-                      Text('Save')
-                    ],
-                  )),
-                )
-              ],
+            Container(
+              width: screenSize.width*0.6,
+              child: Row(
+                children: [
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: 10,horizontal: 30),
+                    width: screenSize.width*0.47,
+                    height: 55,
+                    //color: Colors.grey,
+                    child: TextFormField(textAlign: TextAlign.start,
+                      decoration: InputDecoration(
+                        labelText: "Isi level talent",
+                        hintStyle: TextStyle(),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5.0)),
+                      ),),
+                  ),
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: 10,horizontal: 25),
+                    width: screenSize.width*0.1,
+                    height: 55,
+                    //color: Colors.red,
+                    child: ElevatedButton(onPressed: (){}, child: Row(
+                      children: [
+                        Icon(Icons.save),
+                        SizedBox(width: 5,),
+                        Text('Save')
+                      ],
+                    )),
+                  )
+                ],
+              ),
             )
           ],
         ),
