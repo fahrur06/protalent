@@ -69,3 +69,60 @@ class Botton_tombol extends StatelessWidget {
     );
   }
 }
+
+final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+Future<void> showInformationDialog(BuildContext context) async {
+  return await showDialog(context: context,
+      builder: (context) {
+        final TextEditingController _textEditingController = TextEditingController();
+
+
+        return StatefulBuilder(builder: (context, setState) {
+          return AlertDialog(
+            content: Form(
+                key: _formKey,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    TextFormField(
+                      controller: _textEditingController,
+                      validator: (String? value) {
+                        if (value != null && value.isEmpty) {
+                          return "Nama tidak boleh kosong";
+                        }
+                        return null;
+                      },
+                      decoration: InputDecoration(hintText: "Nama Talent"),
+                    ),
+                    Container(
+                      height: 50,
+                    ),
+                    TextFormField(
+                      controller: _textEditingController,
+                      validator: (String? value) {
+                        if (value != null && value.isEmpty) {
+                          return "Deskripsi tidak boleh kosong";
+                        }
+                        return null;
+                      },
+                      decoration: InputDecoration(hintText: "Deskripsi Talent"),
+                    ),
+                  ],
+                ),
+            ),
+            actions: <Widget>[
+              TextButton(
+                child: Text('Publish'),
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    // Do something like updating SharedPreferences or User Settings etc.
+                    Navigator.of(context).pop();
+                  }
+                },
+              ),
+            ],
+          );
+        });
+      });
+}

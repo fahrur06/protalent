@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/login.dart';
+import 'package:pro_talent/botton.dart';
 
   AppBar BarAtas(BuildContext context) {
     return AppBar(
@@ -17,7 +18,9 @@ import 'package:pro_talent/login.dart';
         Row(
           children: [
             TextButton.icon(
-              onPressed: () {},
+              onPressed: () async {
+                await showInformationDialog(context);
+              },
               icon: Icon(
                 Icons.remove_red_eye,
               ),
