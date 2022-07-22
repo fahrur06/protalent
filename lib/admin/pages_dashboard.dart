@@ -52,18 +52,48 @@ class _PagesDashboardState extends State<PagesDashboard> {
               //     style: TextStyle(color: Colors.black),
               //   ),
               // ),
-
-              Container(
-                child: FlatButton(
-                  child: Text(
-                    'Add new',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  color: Color.fromARGB(255, 204, 204, 255),
-                  textColor: Color.fromARGB(255, 0, 0, 139),
-                  onPressed: () {},
+              ClipRRect(
+                borderRadius: BorderRadius.circular(4),
+                child: Stack(
+                  children: <Widget>[
+                    Positioned.fill(
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: <Color>[
+                              Color(0xFF1976D2),
+                              Color(0xFF42A5F5),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        padding: const EdgeInsets.all(16.0),
+                        primary: Colors.black,
+                        textStyle: const TextStyle(fontSize: 15),
+                      ),
+                      onPressed: () {},
+                      child: const Text("Add New"),
+                    ),
+                  ],
                 ),
-              )
+              ),
+
+              // Container(
+              //   child: TextButton(
+              //     style: TextButton.styleFrom(
+              //     ),
+              //     child: Text(
+              //       'Add new',
+              //       style: TextStyle(fontWeight: FontWeight.bold),
+              //     ),
+              //     color: Color.fromARGB(255, 204, 204, 255),
+              //     textColor: Color.fromARGB(255, 0, 0, 139),
+              //     onPressed: () {},
+              //   ),
+              // )
             ],
           ),
 
