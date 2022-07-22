@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/login.dart';
-import 'package:pro_talent/botton.dart';
+import 'package:pro_talent/widget/botton.dart';
+import 'package:pro_talent/homepage.dart';
 
   AppBar BarAtas(BuildContext context) {
     return AppBar(
@@ -19,8 +20,13 @@ import 'package:pro_talent/botton.dart';
           children: [
             //AlertForm(),
             TextButton.icon(
-              onPressed: () async {
-                //await showInformationDialog(context);
+              onPressed: ()  {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomePage(),
+                  ),
+                );
               },
               icon: Icon(
                 Icons.remove_red_eye,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'conts.dart';
+import '../conts.dart';
 
 class botton_tombol2 extends StatelessWidget {
   const botton_tombol2({
@@ -127,11 +127,48 @@ class _AlertFormState extends State<AlertForm> {
              return;
            setState(()=>this.posisi = posisi);
           },
-          child: Text('Site Online')),
+          child: Text('Add New')),
     );
-
-
   }
 }
+
+class ButtonAppbar extends StatelessWidget {
+  const ButtonAppbar(
+      {Key? key,
+        required this.arah,
+        required this.menu
+      }) : super(key: key);
+  final String menu;
+  final Widget arah;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child:  TextButton(
+          onPressed: (){
+        Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => arah,
+        ),
+      );}, child:  Text(menu,style: TextStyle(fontSize: 18,letterSpacing: 1.5,fontWeight: FontWeight.w600,color: Colors.black),
+      ),style: ButtonStyle(
+    foregroundColor: MaterialStateProperty.resolveWith<Color>(
+    (Set<MaterialState> states) {
+    if (states.contains(MaterialState.hovered))
+    // ignore: curly_braces_in_flow_control_structures
+    return Colors.blue;
+
+    return Colors.black; // null throus error in flutter 2.2+.
+    }
+    ),
+      //TextButton.styleFrom(onSurface: Colors.blue,surfaceTintColor: Colors.blue,),
+      ),
+    ),
+    )
+    ;
+  }
+}
+
 
 

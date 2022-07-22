@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/login.dart';
-import '../botton.dart';
+import '../widget/botton.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SettingDashboard extends StatelessWidget {

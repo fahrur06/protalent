@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/admin/side_menu.dart';
 import 'package:pro_talent/admin/appbar.dart';
+import 'package:pro_talent/main.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
