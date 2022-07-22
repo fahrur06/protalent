@@ -142,16 +142,34 @@ class _PagesDashboardState extends State<PagesDashboard> {
 
               SizedBox(width: 30),
 
-              Container(
-                  child: FlatButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Apply',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(4),
+                child: Stack(
+                  children: <Widget>[
+                    Positioned.fill(
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: <Color>[
+                              Color(0xFF42A5F5),
+                            ],
+                          ),
+                        ),
+                      ),
                     ),
-                    color: Color.fromARGB(255, 204, 204, 255),
-                    textColor: Color.fromARGB(255, 0, 0, 139),
-                  )),
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        padding: const EdgeInsets.all(16.0),
+                        primary: Colors.black,
+                        backgroundColor: Colors.blue,
+                        textStyle: const TextStyle(fontSize: 15),
+                      ),
+                      onPressed: () {},
+                      child: const Text("Apply"),
+                    ),
+                  ],
+                ),
+              ),
 
               SizedBox(width: 70),
 
@@ -174,16 +192,34 @@ class _PagesDashboardState extends State<PagesDashboard> {
 
               SizedBox(width: 30),
 
-              Container(
-                  child: FlatButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Filter',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(4),
+                child: Stack(
+                  children: <Widget>[
+                    Positioned.fill(
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: <Color>[
+                              Color(0xFF42A5F5),
+                            ],
+                          ),
+                        ),
+                      ),
                     ),
-                    color: Color.fromARGB(255, 204, 204, 255),
-                    textColor: Color.fromARGB(255, 0, 0, 139),
-                  ))
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        padding: const EdgeInsets.all(16.0),
+                        primary: Colors.black,
+                        backgroundColor: Colors.blue,
+                        textStyle: const TextStyle(fontSize: 15),
+                      ),
+                      onPressed: () {},
+                      child: const Text("Filter"),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
 

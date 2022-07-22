@@ -77,31 +77,36 @@ class _PostDashboardState extends State<PostDashboard> {
                   child: const Text("All (3)"),
             ),
                 Spacer(
-                  flex: 5,
+                  flex: 4,
             ),
                 SizedBox(
                   height: 50,
-                  width: 250,
+                  width: 200,
                   child: TextFormField(
                     decoration: InputDecoration(
                       labelText: "Search",
                       prefixIcon: const Icon(Icons.search),
                       enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(width: 1, color: Colors.blue),
-                        borderRadius: BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(5),
                   ),
                       focusedBorder: OutlineInputBorder(
                         borderSide: const BorderSide(width: 1, color: Colors.blue),
-                        borderRadius: BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(5),
                   ),
                 ),
               ),
             ),
-                Spacer(
-                  flex: 1,
+
+              SizedBox(width: 50,
+
             ),
+
+            //     Spacer(
+            //       flex: 1,
+            // ),
                 ClipRRect(
-                  borderRadius: BorderRadius.circular(4),
+                  borderRadius: BorderRadius.circular(3),
                   child: Stack(
                     children: <Widget>[
                       Positioned.fill(
@@ -125,9 +130,13 @@ class _PostDashboardState extends State<PostDashboard> {
                         onPressed: () {},
                         child: const Text("Search Post"),
                   ),
+
                 ],
               ),
-            )
+            ),
+                Spacer(
+                  flex: 1,
+                ),
           ],
         )),
 
@@ -162,7 +171,9 @@ class _PostDashboardState extends State<PostDashboard> {
                 ],
               ),
             ),
+            Spacer(flex: 5,),
             const Text("3 items"),
+            Spacer(flex: 1,)
           ],
         ),
 
