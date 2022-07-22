@@ -188,7 +188,7 @@ class SettingDashboard extends StatelessWidget {
                             fontSize: 20,
                             fontWeight: FontWeight.bold)),
                     Spacer(
-                      flex: 10,
+                      flex: 3,
                     ),
                     Container(
                         height: 50,
@@ -201,10 +201,10 @@ class SettingDashboard extends StatelessWidget {
                             // fontWeight: FontWeight.w600,
                           ),
                           decoration:
-                              InputDecoration(hintText: "yyyy@xxxxx.xxxx"),
+                              InputDecoration(hintText: "xxxxxx@xxxxx.xxxx"),
                         )),
                     Spacer(
-                      flex: 20,
+                      flex: 30,
                     ),
                   ],
                 ),
@@ -239,6 +239,9 @@ class SettingDashboard extends StatelessWidget {
                             color: Colors.black,
                             fontSize: 20,
                             fontWeight: FontWeight.bold)),
+                    Spacer(
+                      flex: 5,
+                    ),
                     Container(
                         height: 50,
                         width: 200,
@@ -252,6 +255,9 @@ class SettingDashboard extends StatelessWidget {
                           decoration:
                               InputDecoration(hintText: "02x-xxxx.xxxx"),
                         )),
+                    Spacer(
+                      flex: 30,
+                    ),
                   ],
                 ),
                 Row(
