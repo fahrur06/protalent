@@ -103,7 +103,7 @@ class _SideMenuState extends State<SideMenu> {
                   shrinkIconColor: Colors.white,
                   expandIconColor: Colors.white),
               itemTheme:
-                  SideNavigationBarItemTheme(selectedItemColor: Colors.white),
+                  SideNavigationBarItemTheme(selectedItemColor: Colors.white,unselectedItemColor: Colors.white60),
               dividerTheme: SideNavigationBarDividerTheme.standard(),
             ),
           ),

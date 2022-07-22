@@ -106,7 +106,7 @@ class _SideMenuTalentState extends State<SideMenuTalent> {
               togglerTheme: SideNavigationBarTogglerTheme(
                   shrinkIconColor: Colors.white, expandIconColor: Colors.white),
               itemTheme:
-                  SideNavigationBarItemTheme(selectedItemColor: Colors.white),
+                  SideNavigationBarItemTheme(selectedItemColor: Colors.white,unselectedItemColor: Colors.white60),
               dividerTheme: SideNavigationBarDividerTheme.standard(),
             ),
           ),

@@ -70,59 +70,68 @@ class Botton_tombol extends StatelessWidget {
   }
 }
 
-final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+class AlertForm extends StatefulWidget {
+  const AlertForm({Key? key}) : super(key: key);
 
-Future<void> showInformationDialog(BuildContext context) async {
-  return await showDialog(context: context,
-      builder: (context) {
-        final TextEditingController _textEditingController = TextEditingController();
-
-
-        return StatefulBuilder(builder: (context, setState) {
-          return AlertDialog(
-            content: Form(
-                key: _formKey,
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    TextFormField(
-                      controller: _textEditingController,
-                      validator: (String? value) {
-                        if (value != null && value.isEmpty) {
-                          return "Nama tidak boleh kosong";
-                        }
-                        return null;
-                      },
-                      decoration: InputDecoration(hintText: "Nama Talent"),
-                    ),
-                    Container(
-                      height: 50,
-                    ),
-                    TextFormField(
-                      controller: _textEditingController,
-                      validator: (String? value) {
-                        if (value != null && value.isEmpty) {
-                          return "Deskripsi tidak boleh kosong";
-                        }
-                        return null;
-                      },
-                      decoration: InputDecoration(hintText: "Deskripsi Talent"),
-                    ),
-                  ],
-                ),
-            ),
-            actions: <Widget>[
-              TextButton(
-                child: Text('Publish'),
-                onPressed: () {
-                  if (_formKey.currentState!.validate()) {
-                    // Do something like updating SharedPreferences or User Settings etc.
-                    Navigator.of(context).pop();
-                  }
-                },
-              ),
-            ],
-          );
-        });
-      });
+  @override
+  State<AlertForm> createState() => _AlertFormState();
 }
+
+class _AlertFormState extends State<AlertForm> {
+  late TextEditingController controller;
+  String posisi ='';
+
+  @override
+  void initState(){
+    super.initState();
+
+    controller = TextEditingController();
+  }
+  @override
+  Widget build(BuildContext context) {
+    void publish(){
+      Navigator.of(context).pop(controller.text);
+
+    }
+    Future openDialog() => showDialog<String>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('Add Talent'),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            SizedBox(height: 30,),
+            TextFormField(
+              decoration: InputDecoration(hintText: 'Nama Talent'),
+            ),
+            SizedBox(height: 20,),
+            TextFormField(
+              decoration: InputDecoration(hintText: 'Deskripsi Talent'),
+            ),
+            SizedBox(height: 30,),
+          ],
+        ),
+        actions: [
+          TextButton(onPressed: (){
+            publish();
+
+          }, child: Text('PUBLISH'))
+        ],
+      ),
+    );
+    return Container(
+      child: ElevatedButton(
+          onPressed: ()async {
+           final posisi = await openDialog();
+           if (posisi == null || posisi.isEmpty)
+             return;
+           setState(()=>this.posisi = posisi);
+          },
+          child: Text('Site Online')),
+    );
+
+
+  }
+}
+
+

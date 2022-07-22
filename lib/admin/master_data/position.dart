@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/conts.dart';
+import 'package:pro_talent/admin/dashboard.dart';
 import 'package:easy_table/easy_table.dart';
+
 
 class Position extends StatefulWidget {
   const Position({Key? key}) : super(key: key);
@@ -21,7 +23,7 @@ class Posisi {
 }
 
 class _PositionState extends State<Position> {
-
+  String posisi='';
   EasyTableModel<Posisi>? _model;
 
   @override
@@ -37,6 +39,7 @@ class _PositionState extends State<Position> {
       Posisi(5, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
       Posisi(6, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
 
+
     ];
 
     _model = EasyTableModel<Posisi>(rows: rows, columns: [
@@ -49,7 +52,21 @@ class _PositionState extends State<Position> {
     );
   }
 
+
+
   Widget build(BuildContext context) {
+    Future openDialog() => showDialog(context: context, builder: (context) => EasyTable<Posisi>(_model,columnsFit: true,),
+    //     TextFormField(
+    //   textAlign: TextAlign.start,
+    //   decoration: InputDecoration(
+    //     labelText: "Isi position talent",
+    //     hintStyle: TextStyle(),
+    //     border: OutlineInputBorder(
+    //         borderRadius: BorderRadius.circular(5.0)),
+    //   ),
+    // ),
+    );
+
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
@@ -87,21 +104,28 @@ class _PositionState extends State<Position> {
                     width: screenSize.width*0.47,
                     height: 55,
                     //color: Colors.grey,
-                    child: TextFormField(
+                    child:
+                    TextFormField(
                       textAlign: TextAlign.start,
                       decoration: InputDecoration(
                         labelText: "Isi position talent",
                         hintStyle: TextStyle(),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0)),
-                      ),),
-                  ),
+                      ),
+                    ),
+                   ),
                   Container(
                     padding: EdgeInsets.symmetric(vertical: 10,horizontal: 25),
                     width: screenSize.width*0.1,
                     height: 55,
                     //color: Colors.red,
-                    child: ElevatedButton(onPressed: (){},
+                    child: ElevatedButton(onPressed: ()async {
+                      final posisi = await openDialog();
+                      if (posisi == null || posisi.isEmpty)
+                        return;
+                      setState(()=>this._model = posisi);
+                    },
                         child: Container(
                           width: screenSize.width*0.08,
                       child: Row(

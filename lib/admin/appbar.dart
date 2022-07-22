@@ -17,9 +17,10 @@ import 'package:pro_talent/botton.dart';
       actions: [
         Row(
           children: [
+            //AlertForm(),
             TextButton.icon(
               onPressed: () async {
-                await showInformationDialog(context);
+                //await showInformationDialog(context);
               },
               icon: Icon(
                 Icons.remove_red_eye,
