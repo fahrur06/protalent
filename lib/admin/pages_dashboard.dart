@@ -98,7 +98,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
             ],
           ),
 
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
 
           // Text('All'),
 
@@ -113,7 +113,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
               //   onPressed: () {},
               // ),
 
-              Text('All(4)',
+              const Text('All(4)',
                   style: TextStyle(color: Color.fromARGB(255, 0, 0, 139))),
               SizedBox(
                 height: 50,
@@ -123,19 +123,21 @@ class _PagesDashboardState extends State<PagesDashboard> {
                     labelText: "Search",
                     prefixIcon: const Icon(Icons.search),
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(width: 1, color: Colors.blue),
+                      borderSide:
+                          const BorderSide(width: 1, color: Colors.blue),
                       borderRadius: BorderRadius.circular(5),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(width: 1, color: Colors.blue),
+                      borderSide:
+                          const BorderSide(width: 1, color: Colors.blue),
                       borderRadius: BorderRadius.circular(5),
                     ),
                   ),
                 ),
               ),
 
-              SizedBox(width: 50,
-
+              const SizedBox(
+                width: 50,
               ),
 
               //     Spacer(
@@ -166,14 +168,13 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       onPressed: () {},
                       child: const Text("Search Pages"),
                     ),
-
                   ],
                 ),
               ),
             ],
           ),
 
-          SizedBox(height: 80),
+          const SizedBox(height: 80),
 
           Row(
             children: [
@@ -192,11 +193,11 @@ class _PagesDashboardState extends State<PagesDashboard> {
                     });
                   },
                   value: bulkAction,
-                  style: TextStyle(fontSize: 14),
+                  style: const TextStyle(fontSize: 14),
                 ),
               ),
 
-              SizedBox(width: 30),
+              const SizedBox(width: 30),
 
               ClipRRect(
                 borderRadius: BorderRadius.circular(4),
@@ -227,7 +228,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                 ),
               ),
 
-              SizedBox(width: 70),
+              const SizedBox(width: 70),
 
               Container(
                 child: DropdownButton(
@@ -242,11 +243,11 @@ class _PagesDashboardState extends State<PagesDashboard> {
                     });
                   },
                   value: allDates,
-                  style: TextStyle(fontSize: 14),
+                  style: const TextStyle(fontSize: 14),
                 ),
               ),
 
-              SizedBox(width: 30),
+              const SizedBox(width: 30),
 
               ClipRRect(
                 borderRadius: BorderRadius.circular(4),
@@ -279,7 +280,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
             ],
           ),
 
-          SizedBox(height: 40),
+          const SizedBox(height: 40),
 
           Row(
             children: [
@@ -301,21 +302,21 @@ class _PagesDashboardState extends State<PagesDashboard> {
                             this.value = value!;
                           });
                         })),
-                DataColumn(
+                const DataColumn(
                     label: Text(
-                      'Title',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    )),
-                DataColumn(
+                  'Title',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )),
+                const DataColumn(
                     label: Text(
-                      'Author',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    )),
-                DataColumn(
+                  'Author',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )),
+                const DataColumn(
                     label: Text(
-                      'Date',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ))
+                  'Date',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ))
               ], rows: [
                 DataRow(cells: [
                   DataCell(Checkbox(
@@ -327,18 +328,18 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       })),
                   DataCell(Row(
                     children: [
-                      Image(image: AssetImage('assets/icons/home.png')),
+                      const Image(image: AssetImage('assets/icons/home.png')),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             'Home',
                             style: TextStyle(
                                 color: Color.fromARGB(255, 0, 0, 139)),
                           ),
-                          SizedBox(height: 15),
+                          const SizedBox(height: 15),
                           Row(
-                            children: [
+                            children: const [
                               Text('Edit'),
                               SizedBox(width: 20),
                               Text('Remove'),
@@ -351,8 +352,8 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       ),
                     ],
                   )),
-                  DataCell(Text('Admin')),
-                  DataCell(Text('2022-06-18')),
+                  const DataCell(Text('Admin')),
+                  const DataCell(Text('2022-06-18')),
                 ]),
                 DataRow(cells: [
                   DataCell(Checkbox(
@@ -364,18 +365,18 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       })),
                   DataCell(Row(
                     children: [
-                      Image(image: AssetImage('assets/icons/home.png')),
+                      const Image(image: AssetImage('assets/icons/home.png')),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             'About',
                             style: TextStyle(
                                 color: Color.fromARGB(255, 0, 0, 139)),
                           ),
-                          SizedBox(height: 15),
+                          const SizedBox(height: 15),
                           Row(
-                            children: [
+                            children: const [
                               Text('Edit'),
                               SizedBox(width: 20),
                               Text('Remove'),
@@ -388,8 +389,8 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       ),
                     ],
                   )),
-                  DataCell(Text('Admin')),
-                  DataCell(Text('2022-07-18')),
+                  const DataCell(Text('Admin')),
+                  const DataCell(Text('2022-07-18')),
                 ]),
                 DataRow(cells: [
                   DataCell(Checkbox(
@@ -401,18 +402,18 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       })),
                   DataCell(Row(
                     children: [
-                      Image(image: AssetImage('assets/icons/home.png')),
+                      const Image(image: AssetImage('assets/icons/home.png')),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             'News',
                             style: TextStyle(
                                 color: Color.fromARGB(255, 0, 0, 139)),
                           ),
-                          SizedBox(height: 15),
+                          const SizedBox(height: 15),
                           Row(
-                            children: [
+                            children: const [
                               Text('Edit'),
                               SizedBox(width: 20),
                               Text('Remove'),
@@ -425,8 +426,8 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       ),
                     ],
                   )),
-                  DataCell(Text('Admin')),
-                  DataCell(Text('2022-07-17')),
+                  const DataCell(Text('Admin')),
+                  const DataCell(Text('2022-07-17')),
                 ]),
                 DataRow(cells: [
                   DataCell(Checkbox(
@@ -438,18 +439,18 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       })),
                   DataCell(Row(
                     children: [
-                      Image(image: AssetImage('assets/icons/home.png')),
+                      const Image(image: AssetImage('assets/icons/home.png')),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             'Contact',
                             style: TextStyle(
                                 color: Color.fromARGB(255, 0, 0, 139)),
                           ),
-                          SizedBox(height: 15),
+                          const SizedBox(height: 15),
                           Row(
-                            children: [
+                            children: const [
                               Text('Edit'),
                               SizedBox(width: 20),
                               Text('Remove'),
@@ -462,8 +463,8 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       )
                     ],
                   )),
-                  DataCell(Text('Admin')),
-                  DataCell(Text('2022-07-18'))
+                  const DataCell(Text('Admin')),
+                  const DataCell(Text('2022-07-18'))
                 ])
               ])
             ],
