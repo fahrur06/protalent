@@ -113,7 +113,62 @@ class _PagesDashboardState extends State<PagesDashboard> {
               // ),
 
               Text('All(4)',
-                  style: TextStyle(color: Color.fromARGB(255, 0, 0, 139)))
+                  style: TextStyle(color: Color.fromARGB(255, 0, 0, 139))),
+              SizedBox(
+                height: 50,
+                width: 200,
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    labelText: "Search",
+                    prefixIcon: const Icon(Icons.search),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(width: 1, color: Colors.blue),
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(width: 1, color: Colors.blue),
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                  ),
+                ),
+              ),
+
+              SizedBox(width: 50,
+
+              ),
+
+              //     Spacer(
+              //       flex: 1,
+              // ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(3),
+                child: Stack(
+                  children: <Widget>[
+                    Positioned.fill(
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: <Color>[
+                              Color(0xFF42A5F5),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        padding: const EdgeInsets.all(16.0),
+                        primary: Colors.black,
+                        backgroundColor: Colors.blue,
+                        textStyle: const TextStyle(fontSize: 15),
+                      ),
+                      onPressed: () {},
+                      child: const Text("Search Pages"),
+                    ),
+
+                  ],
+                ),
+              ),
             ],
           ),
 
