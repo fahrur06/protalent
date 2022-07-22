@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 class PagesDashboard extends StatefulWidget {
   const PagesDashboard({Key? key}) : super(key: key);
 
-  @override
   State<PagesDashboard> createState() => _PagesDashboardState();
 }
 
@@ -53,17 +52,17 @@ class _PagesDashboardState extends State<PagesDashboard> {
               //   ),
               // ),
 
-              Container(
-                child: FlatButton(
-                  child: Text(
-                    'Add new',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  color: Color.fromARGB(255, 204, 204, 255),
-                  textColor: Color.fromARGB(255, 0, 0, 139),
-                  onPressed: () {},
-                ),
-              )
+              // Container(
+              //   child: FlatButton(
+              //     child: Text(
+              //       'Add new',
+              //       style: TextStyle(fontWeight: FontWeight.bold),
+              //     ),
+              //     color: Color.fromARGB(255, 204, 204, 255),
+              //     textColor: Color.fromARGB(255, 0, 0, 139),
+              //     onPressed: () {},
+              //   ),
+              // )
             ],
           ),
 
@@ -87,7 +86,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
             ],
           ),
 
-          SizedBox(height: 80),
+          SizedBox(height: 20),
 
           Row(
             children: [
@@ -112,16 +111,16 @@ class _PagesDashboardState extends State<PagesDashboard> {
 
               SizedBox(width: 30),
 
-              Container(
-                  child: FlatButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Apply',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    color: Color.fromARGB(255, 204, 204, 255),
-                    textColor: Color.fromARGB(255, 0, 0, 139),
-                  )),
+              // Container(
+              //     child: FlatButton(
+              //   onPressed: () {},
+              //   child: Text(
+              //     'Apply',
+              //     style: TextStyle(fontWeight: FontWeight.bold),
+              //   ),
+              //   color: Color.fromARGB(255, 204, 204, 255),
+              //   textColor: Color.fromARGB(255, 0, 0, 139),
+              // )),
 
               SizedBox(width: 70),
 
@@ -144,16 +143,16 @@ class _PagesDashboardState extends State<PagesDashboard> {
 
               SizedBox(width: 30),
 
-              Container(
-                  child: FlatButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Filter',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    color: Color.fromARGB(255, 204, 204, 255),
-                    textColor: Color.fromARGB(255, 0, 0, 139),
-                  ))
+              // Container(
+              //     child: FlatButton(
+              //   onPressed: () {},
+              //   child: Text(
+              //     'Filter',
+              //     style: TextStyle(fontWeight: FontWeight.bold),
+              //   ),
+              //   color: Color.fromARGB(255, 204, 204, 255),
+              //   textColor: Color.fromARGB(255, 0, 0, 139),
+              // ))
             ],
           ),
 
@@ -179,21 +178,9 @@ class _PagesDashboardState extends State<PagesDashboard> {
                             this.value = value!;
                           });
                         })),
-                DataColumn(
-                    label: Text(
-                      'Title',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    )),
-                DataColumn(
-                    label: Text(
-                      'Author',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    )),
-                DataColumn(
-                    label: Text(
-                      'Date',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ))
+                DataColumn(label: Text('Title')),
+                DataColumn(label: Text('Author')),
+                DataColumn(label: Text('Date'))
               ], rows: [
                 DataRow(cells: [
                   DataCell(Checkbox(
@@ -203,32 +190,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                           this.value1 = value!;
                         });
                       })),
-                  DataCell(Row(
-                    children: [
-                      Image(image: AssetImage('assets/icons/home.png')),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Home',
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 0, 0, 139)),
-                          ),
-                          SizedBox(height: 15),
-                          Row(
-                            children: [
-                              Text('Edit'),
-                              SizedBox(width: 20),
-                              Text('Remove'),
-                              SizedBox(width: 20),
-                              Text('View'),
-                              SizedBox(width: 20)
-                            ],
-                          )
-                        ],
-                      ),
-                    ],
-                  )),
+                  DataCell(Text('Title1')),
                   DataCell(Text('Admin')),
                   DataCell(Text('2022-06-18')),
                 ]),
@@ -240,32 +202,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                           this.value2 = value!;
                         });
                       })),
-                  DataCell(Row(
-                    children: [
-                      Image(image: AssetImage('assets/icons/home.png')),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'About',
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 0, 0, 139)),
-                          ),
-                          SizedBox(height: 15),
-                          Row(
-                            children: [
-                              Text('Edit'),
-                              SizedBox(width: 20),
-                              Text('Remove'),
-                              SizedBox(width: 20),
-                              Text('View'),
-                              SizedBox(width: 20)
-                            ],
-                          )
-                        ],
-                      ),
-                    ],
-                  )),
+                  DataCell(Text('Title2')),
                   DataCell(Text('Admin')),
                   DataCell(Text('2022-07-18')),
                 ]),
@@ -277,32 +214,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                           this.value3 = value!;
                         });
                       })),
-                  DataCell(Row(
-                    children: [
-                      Image(image: AssetImage('assets/icons/home.png')),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'News',
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 0, 0, 139)),
-                          ),
-                          SizedBox(height: 15),
-                          Row(
-                            children: [
-                              Text('Edit'),
-                              SizedBox(width: 20),
-                              Text('Remove'),
-                              SizedBox(width: 20),
-                              Text('View'),
-                              SizedBox(width: 20)
-                            ],
-                          )
-                        ],
-                      ),
-                    ],
-                  )),
+                  DataCell(Text('Title3')),
                   DataCell(Text('Admin')),
                   DataCell(Text('2022-07-17')),
                 ]),
@@ -314,32 +226,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                           this.value4 = value!;
                         });
                       })),
-                  DataCell(Row(
-                    children: [
-                      Image(image: AssetImage('assets/icons/home.png')),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Contact',
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 0, 0, 139)),
-                          ),
-                          SizedBox(height: 15),
-                          Row(
-                            children: [
-                              Text('Edit'),
-                              SizedBox(width: 20),
-                              Text('Remove'),
-                              SizedBox(width: 20),
-                              Text('View'),
-                              SizedBox(width: 20)
-                            ],
-                          )
-                        ],
-                      )
-                    ],
-                  )),
+                  DataCell(Text('Title4')),
                   DataCell(Text('Admin')),
                   DataCell(Text('2022-07-18'))
                 ])

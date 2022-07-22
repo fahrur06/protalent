@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:pro_talent/login.dart';
 import '../botton.dart';
@@ -25,7 +26,7 @@ class SettingDashboard extends StatelessWidget {
           ),
           Container(
             color: Colors.white,
-            height: 1000,
+            height: 500,
             width: 1000,
             padding: EdgeInsets.all(20),
             child: Column(
@@ -182,18 +183,17 @@ class SettingDashboard extends StatelessWidget {
                       height: 30,
                       width: 0,
                     ),
-                    Text("Site address",
+                    Text("Email address",
                         style: GoogleFonts.didactGothic(
                             color: Colors.black,
                             fontSize: 20,
                             fontWeight: FontWeight.bold)),
-                  ],
-                ),
-                Row(
-                  children: [
+                    Spacer(
+                      flex: 10,
+                    ),
                     Container(
                         height: 50,
-                        width: 600,
+                        width: 200,
                         child: TextFormField(
                           style: TextStyle(
                             fontSize: 20,
@@ -202,24 +202,31 @@ class SettingDashboard extends StatelessWidget {
                             // fontWeight: FontWeight.w600,
                           ),
                           decoration:
-                              InputDecoration(hintText: "xxxxxx@xxxxx.xxxx"),
+                          InputDecoration(hintText: "xxxxxx@xxxxx.xxxx"),
                         )),
-                    Container(
-                        height: 30,
-                        width: 200,
-                        child: ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(5),
-                              ),
-                              primary: Colors.white,
-                              // shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0))),
-                            ),
-                            child: Text(
-                              "+ Add custom address",
-                              style: TextStyle(color: Colors.black),
-                            ))),
+                    Spacer(
+                      flex: 20,
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    // Container(
+                    //     height: 30,
+                    //     width: 200,
+                    //     child: ElevatedButton(
+                    //         onPressed: () {},
+                    //         style: ElevatedButton.styleFrom(
+                    //           shape: RoundedRectangleBorder(
+                    //             borderRadius: BorderRadius.circular(5),
+                    //           ),
+                    //           primary: Colors.white,
+                    //           // shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0))),
+                    //         ),
+                    //         child: Text(
+                    //           "+ Add custom address",
+                    //           style: TextStyle(color: Colors.black),
+                    //         ))),
                   ],
                 ),
                 Row(
@@ -233,13 +240,9 @@ class SettingDashboard extends StatelessWidget {
                             color: Colors.black,
                             fontSize: 20,
                             fontWeight: FontWeight.bold)),
-                  ],
-                ),
-                Row(
-                  children: [
                     Container(
                         height: 50,
-                        width: 600,
+                        width: 200,
                         child: TextField(
                           style: TextStyle(
                             fontSize: 20,
@@ -248,24 +251,28 @@ class SettingDashboard extends StatelessWidget {
                             // fontWeight: FontWeight.w600,
                           ),
                           decoration:
-                              InputDecoration(hintText: "02x-xxxx.xxxx"),
+                          InputDecoration(hintText: "02x-xxxx.xxxx"),
                         )),
-                    Container(
-                        height: 30,
-                        width: 200,
-                        child: ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(5),
-                              ),
-                              primary: Colors.white,
-                              // shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0))),
-                            ),
-                            child: Text(
-                              "+ Add Number",
-                              style: TextStyle(color: Colors.black),
-                            ))),
+                  ],
+                ),
+                Row(
+                  children: [
+                    // Container(
+                    //     height: 30,
+                    //     width: 200,
+                    //     child: ElevatedButton(
+                    //         onPressed: () {},
+                    //         style: ElevatedButton.styleFrom(
+                    //           shape: RoundedRectangleBorder(
+                    //             borderRadius: BorderRadius.circular(5),
+                    //           ),
+                    //           primary: Colors.white,
+                    //           // shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0))),
+                    //         ),
+                    //         child: Text(
+                    //           "+ Add Number",
+                    //           style: TextStyle(color: Colors.black),
+                    //         ))),
                   ],
                 ),
                 Spacer(
