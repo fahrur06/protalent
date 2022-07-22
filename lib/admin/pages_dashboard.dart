@@ -7,7 +7,7 @@ class PagesDashboard extends StatefulWidget {
   State<PagesDashboard> createState() => _PagesDashboardState();
 }
 
-class _PagesDashboardState extends State<PagesDashboard>{
+class _PagesDashboardState extends State<PagesDashboard> {
   String bulkAction = 'Bulk action';
   String allDates = 'All dates';
   bool value = false;
@@ -52,17 +52,17 @@ class _PagesDashboardState extends State<PagesDashboard>{
               //   ),
               // ),
 
-              Container(
-                child: FlatButton(
-                  child: Text(
-                    'Add new',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  color: Color.fromARGB(255, 204, 204, 255),
-                  textColor: Color.fromARGB(255, 0, 0, 139),
-                  onPressed: () {},
-                ),
-              )
+              // Container(
+              //   child: FlatButton(
+              //     child: Text(
+              //       'Add new',
+              //       style: TextStyle(fontWeight: FontWeight.bold),
+              //     ),
+              //     color: Color.fromARGB(255, 204, 204, 255),
+              //     textColor: Color.fromARGB(255, 0, 0, 139),
+              //     onPressed: () {},
+              //   ),
+              // )
             ],
           ),
 
@@ -111,16 +111,16 @@ class _PagesDashboardState extends State<PagesDashboard>{
 
               SizedBox(width: 30),
 
-              Container(
-                  child: FlatButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Apply',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    color: Color.fromARGB(255, 204, 204, 255),
-                    textColor: Color.fromARGB(255, 0, 0, 139),
-                  )),
+              // Container(
+              //     child: FlatButton(
+              //   onPressed: () {},
+              //   child: Text(
+              //     'Apply',
+              //     style: TextStyle(fontWeight: FontWeight.bold),
+              //   ),
+              //   color: Color.fromARGB(255, 204, 204, 255),
+              //   textColor: Color.fromARGB(255, 0, 0, 139),
+              // )),
 
               SizedBox(width: 70),
 
@@ -143,16 +143,16 @@ class _PagesDashboardState extends State<PagesDashboard>{
 
               SizedBox(width: 30),
 
-              Container(
-                  child: FlatButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Filter',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    color: Color.fromARGB(255, 204, 204, 255),
-                    textColor: Color.fromARGB(255, 0, 0, 139),
-                  ))
+              // Container(
+              //     child: FlatButton(
+              //   onPressed: () {},
+              //   child: Text(
+              //     'Filter',
+              //     style: TextStyle(fontWeight: FontWeight.bold),
+              //   ),
+              //   color: Color.fromARGB(255, 204, 204, 255),
+              //   textColor: Color.fromARGB(255, 0, 0, 139),
+              // ))
             ],
           ),
 
