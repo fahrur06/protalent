@@ -53,17 +53,17 @@ class _PagesDashboardState extends State<PagesDashboard> {
               //   ),
               // ),
 
-              Container(
-                child: FlatButton(
-                  child: Text(
-                    'Add new',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  color: Color.fromARGB(255, 204, 204, 255),
-                  textColor: Color.fromARGB(255, 0, 0, 139),
-                  onPressed: () {},
-                ),
-              )
+              // Container(
+              //   child: FlatButton(
+              //     child: Text(
+              //       'Add new',
+              //       style: TextStyle(fontWeight: FontWeight.bold),
+              //     ),
+              //     color: Color.fromARGB(255, 204, 204, 255),
+              //     textColor: Color.fromARGB(255, 0, 0, 139),
+              //     onPressed: () {},
+              //   ),
+              // )
             ],
           ),
 
@@ -112,16 +112,16 @@ class _PagesDashboardState extends State<PagesDashboard> {
 
               SizedBox(width: 30),
 
-              Container(
-                  child: FlatButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Apply',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    color: Color.fromARGB(255, 204, 204, 255),
-                    textColor: Color.fromARGB(255, 0, 0, 139),
-                  )),
+              // Container(
+              //     child: FlatButton(
+              //       onPressed: () {},
+              //       child: Text(
+              //         'Apply',
+              //         style: TextStyle(fontWeight: FontWeight.bold),
+              //       ),
+              //       color: Color.fromARGB(255, 204, 204, 255),
+              //       textColor: Color.fromARGB(255, 0, 0, 139),
+              //     )),
 
               SizedBox(width: 70),
 
@@ -144,16 +144,16 @@ class _PagesDashboardState extends State<PagesDashboard> {
 
               SizedBox(width: 30),
 
-              Container(
-                  child: FlatButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Filter',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    color: Color.fromARGB(255, 204, 204, 255),
-                    textColor: Color.fromARGB(255, 0, 0, 139),
-                  ))
+              // Container(
+              //     child: FlatButton(
+              //       onPressed: () {},
+              //       child: Text(
+              //         'Filter',
+              //         style: TextStyle(fontWeight: FontWeight.bold),
+              //       ),
+              //       color: Color.fromARGB(255, 204, 204, 255),
+              //       textColor: Color.fromARGB(255, 0, 0, 139),
+              //     ))
             ],
           ),
 
@@ -181,19 +181,19 @@ class _PagesDashboardState extends State<PagesDashboard> {
                         })),
                 DataColumn(
                     label: Text(
-                      'Title',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    )),
+                  'Title',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )),
                 DataColumn(
                     label: Text(
-                      'Author',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    )),
+                  'Author',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )),
                 DataColumn(
                     label: Text(
-                      'Date',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ))
+                  'Date',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ))
               ], rows: [
                 DataRow(cells: [
                   DataCell(Checkbox(
