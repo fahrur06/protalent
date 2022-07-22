@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:pro_talent/admin/master_data/Industry.dart';
+import 'package:pro_talent/admin/master_data/level.dart';
 import 'package:pro_talent/admin/master_data/position.dart';
+import 'package:pro_talent/admin/master_data/skills.dart';
+import 'package:pro_talent/admin/master_data/location.dart';
 import 'package:side_navigation/side_navigation.dart';
 
 class MasterData extends StatefulWidget {
@@ -19,10 +23,10 @@ class _MasterDataState extends State<MasterData> {
   //position , skill , level , industry, location
   List<Widget> views = [
     Position(),
-    _container('skill'),
-    _container('level'),
-    _container('industry'),
-    _container('location')
+    Skill(),
+    Level(),
+    Industry(),
+    Location()
   ];
   int selectedIndex = 0;
   @override
@@ -33,11 +37,14 @@ class _MasterDataState extends State<MasterData> {
           height: 50,
         ),
         Container(
+
           child: Container(
             decoration: BoxDecoration(
               color: Colors.white,
               //borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
-              border: Border.all(color: Colors.black)
+              border: Border.all(color: Colors.black),
+
+
             ),
             width: 1200,
             height: 592,
@@ -46,15 +53,17 @@ class _MasterDataState extends State<MasterData> {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(200, 9, 47, 171),
-                    border: Border(bottom: BorderSide(color: Colors.white),),
+                    color: Color.fromARGB(255, 18, 108, 178),
+                    border: Border(bottom: BorderSide(color: Colors.white),
+                    ),
+
                     //borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20),),
                   ),
                   padding: EdgeInsets.only(top: 27,left: 35),
                   height: 95,
                   width: 1200,
                   child: Text('Master Data',style: TextStyle(
-                      fontSize: 30,color: Colors.white,fontWeight: FontWeight.bold),),
+                      fontSize: 35,color: Colors.white,fontWeight: FontWeight.bold,letterSpacing: 2),),
                 ),
                 Container(
                   height: 495,
@@ -95,7 +104,8 @@ class _MasterDataState extends State<MasterData> {
                           );
                         },
                         theme: SideNavigationBarTheme(
-                          backgroundColor: Color.fromARGB(200, 9, 47, 171),
+                         // backgroundColor: Color.fromARGB(200, 9, 47, 171),
+                          backgroundColor: Color.fromARGB(255, 18, 108, 178),
                           togglerTheme: SideNavigationBarTogglerTheme(
                               shrinkIconColor: Colors.white,
                               expandIconColor: Colors.white),

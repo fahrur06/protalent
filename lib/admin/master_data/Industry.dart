@@ -2,46 +2,46 @@ import 'package:flutter/material.dart';
 import 'package:pro_talent/conts.dart';
 import 'package:easy_table/easy_table.dart';
 
-class Position extends StatefulWidget {
-  const Position({Key? key}) : super(key: key);
+class Industry extends StatefulWidget {
+  const Industry({Key? key}) : super(key: key);
 
   @override
-  State<Position> createState() => _PositionState();
+  State<Industry> createState() => _IndustryState();
 }
 
-class Posisi {
-  Posisi(this.no, this.position, this.posting, this.status, this.delete);
+class _industry {
+  _industry(this.no, this.industry, this.posting, this.status, this.delete);
 
   final int no;
-  final String position;
+  final String industry;
   final String posting;
   final String status;
   final Widget delete;
 
 }
 
-class _PositionState extends State<Position> {
+class _IndustryState extends State<Industry> {
 
-  EasyTableModel<Posisi>? _model;
+  EasyTableModel<_industry>? _model;
 
   @override
 
   void initState() {
     super.initState();
 
-    List<Posisi> rows = [
-      Posisi(1, 'Head Product', '2022-07-18', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
-      Posisi(2, 'Java Developer', '2022-01-01', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
-      Posisi(3, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
-      Posisi(4, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
-      Posisi(5, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
-      Posisi(6, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
+    List<_industry> rows = [
+      _industry(1, 'Product Management', '2022-07-18', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
+      _industry(2, 'Marketing and Communication ', '2022-01-01', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
+      _industry(3, 'Data Science', '2022-03-29', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
+      _industry(4, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
+      _industry(5, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
+      _industry(6, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
 
     ];
 
-    _model = EasyTableModel<Posisi>(rows: rows, columns: [
+    _model = EasyTableModel<_industry>(rows: rows, columns: [
       EasyTableColumn(name: 'No',headerAlignment: Alignment.center,cellAlignment: Alignment.center, intValue: (row) => row.no),
-      EasyTableColumn(name: 'Position',weight: 3, stringValue: (row) => row.position),
+      EasyTableColumn(name: 'Industry',weight: 3, stringValue: (row) => row.industry),
       EasyTableColumn(name: 'Posted',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 2, stringValue: (row) => row.posting),
       EasyTableColumn(name: 'Status',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 2, stringValue: (row) => row.status),
       EasyTableColumn(name: '',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 1, objectValue: (row) => row.delete)
@@ -63,7 +63,7 @@ class _PositionState extends State<Position> {
               width: screenSize.width*0.2,
               //color: Colors.grey,
               child: Text(
-                "Talent Positions",
+                "Talent Industrys ",
                 style: TextStyle(
                     fontSize: 30,
                     color: kPrimaryColor,
@@ -75,7 +75,7 @@ class _PositionState extends State<Position> {
               width: screenSize.width*0.6,
               height: 330,
               color: Colors.white70,
-              child: EasyTable<Posisi>(_model,columnsFit: true,),
+              child: EasyTable<_industry>(_model,columnsFit: true,),
             ),
             Spacer(flex: 1,),
             Row(
@@ -87,7 +87,7 @@ class _PositionState extends State<Position> {
                   //color: Colors.grey,
                   child: TextFormField(textAlign: TextAlign.start,
                     decoration: InputDecoration(
-                      labelText: "Isi position talent",
+                      labelText: "Isi Industry talent",
                       hintStyle: TextStyle(),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(5.0)),

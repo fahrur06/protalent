@@ -2,46 +2,46 @@ import 'package:flutter/material.dart';
 import 'package:pro_talent/conts.dart';
 import 'package:easy_table/easy_table.dart';
 
-class Position extends StatefulWidget {
-  const Position({Key? key}) : super(key: key);
+class Level extends StatefulWidget {
+  const Level({Key? key}) : super(key: key);
 
   @override
-  State<Position> createState() => _PositionState();
+  State<Level> createState() => _LevelState();
 }
 
-class Posisi {
-  Posisi(this.no, this.position, this.posting, this.status, this.delete);
+class _level {
+  _level(this.no, this.level, this.posting, this.status, this.delete);
 
   final int no;
-  final String position;
+  final String level;
   final String posting;
   final String status;
   final Widget delete;
 
 }
 
-class _PositionState extends State<Position> {
+class _LevelState extends State<Level> {
 
-  EasyTableModel<Posisi>? _model;
+  EasyTableModel<_level>? _model;
 
   @override
 
   void initState() {
     super.initState();
 
-    List<Posisi> rows = [
-      Posisi(1, 'Head Product', '2022-07-18', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
-      Posisi(2, 'Java Developer', '2022-01-01', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
-      Posisi(3, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
-      Posisi(4, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
-      Posisi(5, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
-      Posisi(6, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
+    List<_level> rows = [
+      _level(1, 'Junior Java Programmer', '2022-07-18', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
+      _level(2, 'Junior Flutter Programmer ', '2022-01-01', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
+      _level(3, 'Senior Quarkus Programmer', '2022-03-29', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
+      _level(4, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
+      _level(5, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
+      _level(6, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
 
     ];
 
-    _model = EasyTableModel<Posisi>(rows: rows, columns: [
+    _model = EasyTableModel<_level>(rows: rows, columns: [
       EasyTableColumn(name: 'No',headerAlignment: Alignment.center,cellAlignment: Alignment.center, intValue: (row) => row.no),
-      EasyTableColumn(name: 'Position',weight: 3, stringValue: (row) => row.position),
+      EasyTableColumn(name: 'Level',weight: 3, stringValue: (row) => row.level),
       EasyTableColumn(name: 'Posted',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 2, stringValue: (row) => row.posting),
       EasyTableColumn(name: 'Status',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 2, stringValue: (row) => row.status),
       EasyTableColumn(name: '',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 1, objectValue: (row) => row.delete)
@@ -63,7 +63,7 @@ class _PositionState extends State<Position> {
               width: screenSize.width*0.2,
               //color: Colors.grey,
               child: Text(
-                "Talent Positions",
+                "Talent Levels ",
                 style: TextStyle(
                     fontSize: 30,
                     color: kPrimaryColor,
@@ -75,7 +75,7 @@ class _PositionState extends State<Position> {
               width: screenSize.width*0.6,
               height: 330,
               color: Colors.white70,
-              child: EasyTable<Posisi>(_model,columnsFit: true,),
+              child: EasyTable<_level>(_model,columnsFit: true,),
             ),
             Spacer(flex: 1,),
             Row(
@@ -87,7 +87,7 @@ class _PositionState extends State<Position> {
                   //color: Colors.grey,
                   child: TextFormField(textAlign: TextAlign.start,
                     decoration: InputDecoration(
-                      labelText: "Isi position talent",
+                      labelText: "Isi level talent",
                       hintStyle: TextStyle(),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(5.0)),

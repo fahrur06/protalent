@@ -96,7 +96,9 @@ class _SideMenuState extends State<SideMenu> {
             // Change the background color and disabled header/footer dividers
             // Make use of standard() constructor for other themes
             theme: SideNavigationBarTheme(
-              backgroundColor: Color.fromARGB(200, 9, 47, 171),
+              backgroundColor:
+              //Color.fromARGB(200, 9, 47, 171),
+              Color.fromARGB(255, 18, 108, 178),
               togglerTheme: SideNavigationBarTogglerTheme(
                   shrinkIconColor: Colors.white,
                   expandIconColor: Colors.white),
