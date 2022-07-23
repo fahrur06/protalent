@@ -45,7 +45,7 @@ AppBar AppbarHomeSmall(Size screenSize) {
 AppBar AppbarHomeLarge(Size screenSize, BuildContext context) {
   return AppBar(
     backgroundColor: Colors.white,
-    toolbarHeight: 70,
+    toolbarHeight: 80,
     leadingWidth: screenSize.width * 0.15,
     leading: Row(
       children: [
