@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/public/home1.dart';
 import 'package:pro_talent/public/home2.dart';
+import 'package:pro_talent/public/home3.dart';
+import 'package:pro_talent/public/home4.dart';
 import 'package:pro_talent/public/appbar_home.dart';
 import 'package:pro_talent/widget/responsive.dart';
 
@@ -25,6 +27,8 @@ class _HomePageState extends State<HomePage> {
         children: [
           Home1(),
           Home2(),
+          Home3(),
+          Home4(),
 
         ],
       ),
