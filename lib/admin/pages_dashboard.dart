@@ -27,7 +27,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
     return Container(
       height: 2000,
       width: screenSize.width,
-      padding: const EdgeInsets.only(left: 100),
+      padding: const EdgeInsets.only(left: 100,right: 100),
       color: const Color.fromRGBO(238, 224, 224, 1),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,7 +37,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
             child: Row(
               children: [
                 Container(
-                  padding: const EdgeInsets.only(left: 50),
+                  
                   child: Text(
                     'Pages    ',
                     style: TextStyle(
@@ -56,7 +56,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
               children: [
                 TextButton(
                   style: TextButton.styleFrom(
-                    padding: const EdgeInsets.only(left: 50),
+                    
                     primary: Colors.black,
                     textStyle: const TextStyle(fontSize: 15),
                   ),
@@ -123,9 +123,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                     ],
                   ),
                 ),
-                Spacer(
-                  flex: 1,
-                ),
+                
               ],
             ),
           ),
@@ -178,15 +176,13 @@ class _PagesDashboardState extends State<PagesDashboard> {
                 flex: 6,
               ),
               Text("4 items"),
-              Spacer(
-                flex: 2,
-              ),
+              
             ],
           ),
           Container(
             color: Colors.white,
             height: 300,
-            width: 1000,
+            width: screenSize.width,
             padding: const EdgeInsets.all(20),
             child: Row(
               children: [

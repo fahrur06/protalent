@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:easy_table/easy_table.dart';
+import 'package:pro_talent/widget/botton.dart';
 
 class TalentManagement extends StatefulWidget {
   const TalentManagement({Key? key}) : super(key: key);
@@ -82,32 +83,46 @@ class _TalentmanagementState extends State<TalentManagement> {
                 ),
                 width: screenSize.width * 0.7,
                 height: screenSize.height * 0.20,
-                child: Text(
-                  'Talent Management',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 2),
-                ),
-              ),
-              ElevatedButton(
-                  onPressed: () {},
-                  child: Row(
-                    children: [Icon(Icons.person_add), Text('Add Talent')],
-                  )),
-              TextFormField(
-                decoration: InputDecoration(
-                  labelText: "Search",
-                  prefixIcon: const Icon(Icons.search),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(width: 1, color: Colors.blue),
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(width: 1, color: Colors.blue),
-                    borderRadius: BorderRadius.circular(5),
-                  ),
+                child: Row(
+                  children: [
+                    Text(
+                      'Talent Management',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 2),
+                    ),
+                    Spacer(
+                      flex: 15,
+                    ),
+                    Container(
+                      height: 30,
+                      width: 180,
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.white,
+                          prefixIcon: const Icon(Icons.search),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide:
+                                const BorderSide(width: 1, color: Colors.blue),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide:
+                                const BorderSide(width: 1, color: Colors.blue),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Column(
+                      children: [
+                        AlertForm(),
+                      ],
+                    ),
+                  ],
                 ),
               ),
               Container(

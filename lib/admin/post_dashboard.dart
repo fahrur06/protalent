@@ -25,7 +25,7 @@ class _PostDashboardState extends State<PostDashboard> {
     return Container(
       height: 2000,
       width: screenSize.width,
-      padding: const EdgeInsets.only(left: 100),
+      padding: const EdgeInsets.only(left: 100,right: 100),
       color: const Color.fromRGBO(238, 224, 224, 1),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,7 +35,7 @@ class _PostDashboardState extends State<PostDashboard> {
             child: Row(
               children: [
                 Container(
-                  padding: const EdgeInsets.only(left: 50),
+                  
                   child: const Text("Post     ",
                       style: TextStyle(
                         fontSize: 20,
@@ -51,7 +51,7 @@ class _PostDashboardState extends State<PostDashboard> {
                 children: [
                   TextButton(
                     style: TextButton.styleFrom(
-                      padding: const EdgeInsets.only(left: 50),
+                      
                       primary: Colors.black,
                       textStyle: const TextStyle(fontSize: 15),
                     ),
@@ -112,28 +112,27 @@ class _PostDashboardState extends State<PostDashboard> {
                       ],
                     ),
                   ),
-                  const Spacer(
-                    flex: 1,
-                  ),
+                  
                 ],
               )),
           Row(
             children: const [
               DropDownButtonDates(),
+              Spacer(
+                flex: 1,
+              ),
               FilterButton(),
               Spacer(
-                flex: 5,
+                flex: 10,
               ),
               Text("3 items"),
-              Spacer(
-                flex: 2,
-              ),
+              
             ],
           ),
           Container(
             color: Colors.white,
             height: 300,
-            width: 1000,
+            width: screenSize.width,
             padding: const EdgeInsets.all(20),
             child: Row(
               children: [
