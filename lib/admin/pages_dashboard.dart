@@ -27,14 +27,12 @@ class _PagesDashboardState extends State<PagesDashboard> {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Container(
-                child: Text(
-                  'Pages    ',
-                  style: GoogleFonts.didactGothic(
-                      color: Colors.black,
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold),
-                ),
+              Text(
+                'Pages    ',
+                style: GoogleFonts.didactGothic(
+                    color: Colors.black,
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold),
               ),
 
               // TextButton(
@@ -180,21 +178,19 @@ class _PagesDashboardState extends State<PagesDashboard> {
             children: [
               // Text('Test'),
 
-              Container(
-                child: DropdownButton(
-                  items: <String>['Bulk action', 'Edit', 'Delete']
-                      .map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                        child: Text(value), value: value);
-                  }).toList(),
-                  onChanged: (String? newValue) {
-                    setState(() {
-                      bulkAction = newValue!;
-                    });
-                  },
-                  value: bulkAction,
-                  style: const TextStyle(fontSize: 14),
-                ),
+              DropdownButton(
+                items: <String>['Bulk action', 'Edit', 'Delete']
+                    .map<DropdownMenuItem<String>>((String value) {
+                  return DropdownMenuItem<String>(
+                      child: Text(value), value: value);
+                }).toList(),
+                onChanged: (String? newValue) {
+                  setState(() {
+                    bulkAction = newValue!;
+                  });
+                },
+                value: bulkAction,
+                style: const TextStyle(fontSize: 14),
               ),
 
               const SizedBox(width: 30),
@@ -230,21 +226,19 @@ class _PagesDashboardState extends State<PagesDashboard> {
 
               const SizedBox(width: 70),
 
-              Container(
-                child: DropdownButton(
-                  items: <String>['All dates', 'July 2022', 'June 2022']
-                      .map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                        child: Text(value), value: value);
-                  }).toList(),
-                  onChanged: (String? newValue) {
-                    setState(() {
-                      allDates = newValue!;
-                    });
-                  },
-                  value: allDates,
-                  style: const TextStyle(fontSize: 14),
-                ),
+              DropdownButton(
+                items: <String>['All dates', 'July 2022', 'June 2022']
+                    .map<DropdownMenuItem<String>>((String value) {
+                  return DropdownMenuItem<String>(
+                      child: Text(value), value: value);
+                }).toList(),
+                onChanged: (String? newValue) {
+                  setState(() {
+                    allDates = newValue!;
+                  });
+                },
+                value: allDates,
+                style: const TextStyle(fontSize: 14),
               ),
 
               const SizedBox(width: 30),
@@ -296,10 +290,10 @@ class _PagesDashboardState extends State<PagesDashboard> {
               DataTable(columns: [
                 DataColumn(
                     label: Checkbox(
-                        value: this.value,
+                        value: value,
                         onChanged: (bool? value) {
                           setState(() {
-                            this.value = value!;
+                            value = value!;
                           });
                         })),
                 const DataColumn(
