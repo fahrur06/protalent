@@ -5,6 +5,7 @@ import 'package:pro_talent/register.dart';
 import 'package:pro_talent/login.dart';
 import 'package:pro_talent/widget/dropdown_appbar.dart';
 import 'package:pro_talent/widget/botton.dart';
+import 'package:pro_talent/public/post/post.dart';
 
 AppBar AppbarHomeSmall(Size screenSize) {
   return AppBar(
@@ -81,7 +82,7 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context) {
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: HomePage(), menu: 'Post'),
+        ButtonAppbar(arah: Post(), menu: 'Post'),
         Spacer(
           flex: 1,
         ),
