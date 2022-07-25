@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/conts.dart';
 import 'package:pro_talent/homepage.dart';
+import 'package:pro_talent/public/contact_us/ContactUs.dart';
 import 'package:pro_talent/register.dart';
 import 'package:pro_talent/login.dart';
 import 'package:pro_talent/widget/dropdown_appbar.dart';
@@ -86,7 +87,7 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context) {
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: HomePage(), menu: 'Contact Us'),
+        ButtonAppbar(arah: ContactUs(), menu: 'Contact Us'),
         Spacer(
           flex: 3,
         ),
