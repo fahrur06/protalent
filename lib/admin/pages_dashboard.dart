@@ -21,9 +21,11 @@ class _PagesDashboardState extends State<PagesDashboard> {
 
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
     return Container(
       height: 1000,
-      color: Colors.white,
+      color: Color.fromARGB(255, 248, 195, 255),
+      padding: EdgeInsets.all(30),
       child: Column(
         children: [
           Row(
@@ -36,7 +38,6 @@ class _PagesDashboardState extends State<PagesDashboard> {
                     fontSize: 40,
                     fontWeight: FontWeight.bold),
               ),
-
               ClipRRect(
                 borderRadius: BorderRadius.circular(4),
                 child: Stack(
@@ -67,11 +68,6 @@ class _PagesDashboardState extends State<PagesDashboard> {
               ),
             ],
           ),
-
-          const SizedBox(height: 15),
-
-          // Text('All'),
-
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -82,15 +78,23 @@ class _PagesDashboardState extends State<PagesDashboard> {
               //   ),
               //   onPressed: () {},
               // ),
+              
 
-              const Text('All(4)',
-                  style: TextStyle(color: Color.fromARGB(255, 0, 0, 139))),
+              const Text(
+                'All(4)',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 0, 0, 139),
+                ),
+              ),
+              Spacer(flex: 10,),
 
               SizedBox(
-                height: 50,
+                height: 40,
                 width: 200,
                 child: TextFormField(
                   decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
                     labelText: "Search",
                     prefixIcon: const Icon(Icons.search),
                     enabledBorder: OutlineInputBorder(
@@ -142,28 +146,40 @@ class _PagesDashboardState extends State<PagesDashboard> {
                   ],
                 ),
               ),
+              Spacer(flex: 1,),
             ],
           ),
+          
 
-          const SizedBox(height: 80),
+
+          const SizedBox(height: 10),
 
           Row(
             children: [
               // Text('Test'),
 
-              DropdownButton(
-                items: <String>['Bulk action', 'Edit', 'Delete']
-                    .map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                      child: Text(value), value: value);
-                }).toList(),
-                onChanged: (String? newValue) {
-                  setState(() {
-                    bulkAction = newValue!;
-                  });
-                },
-                value: bulkAction,
-                style: const TextStyle(fontSize: 14),
+              Container(
+                height: 30,
+                    padding: EdgeInsets.all(5.0),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.grey, style: BorderStyle.solid, width: 0.80),
+                    ),
+                child: DropdownButton(
+                  underline: Container(),
+                  items: <String>['Bulk action', 'Edit', 'Delete']
+                      .map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                        child: Text(value), value: value);
+                  }).toList(),
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      bulkAction = newValue!;
+                    });
+                  },
+                  value: bulkAction,
+                  style: const TextStyle(fontSize: 14),
+                ),
               ),
 
               const SizedBox(width: 30),
@@ -172,19 +188,27 @@ class _PagesDashboardState extends State<PagesDashboard> {
 
               const SizedBox(width: 70),
 
-              DropdownButton(
-                items: <String>['All dates', 'July 2022', 'June 2022']
-                    .map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                      child: Text(value), value: value);
-                }).toList(),
-                onChanged: (String? newValue) {
-                  setState(() {
-                    allDates = newValue!;
-                  });
-                },
-                value: allDates,
-                style: const TextStyle(fontSize: 14),
+              Container(
+                height: 30,
+                    padding: EdgeInsets.all(5.0),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.grey, style: BorderStyle.solid, width: 0.80),
+                    ),
+                child: DropdownButton(
+                  items: <String>['All dates', 'July 2022', 'June 2022']
+                      .map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                        child: Text(value), value: value);
+                  }).toList(),
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      allDates = newValue!;
+                    });
+                  },
+                  value: allDates,
+                  style: const TextStyle(fontSize: 14),
+                ),
               ),
 
               const SizedBox(width: 30),
@@ -195,216 +219,231 @@ class _PagesDashboardState extends State<PagesDashboard> {
 
           const SizedBox(height: 40),
 
-          Row(
-            children: [
-              // Checkbox(
-              //     value: this.value,
-              //     onChanged: (bool? value) {
-              //       setState(() {
-              //         this.value = value!;
-              //       });
-              //     }),
-              // SizedBox(width: 25),
-              // Text('Test'),
-              DataTable(columns: [
-                DataColumn(
-                    label: Checkbox(
-                        value: value,
+          Container(
+            height: 400,
+            width: screenSize.width,
+            color: Colors.white,
+            child: Row(
+              children: [
+                // Checkbox(
+                //     value: this.value,
+                //     onChanged: (bool? value) {
+                //       setState(() {
+                //         this.value = value!;
+                //       });
+                //     }),
+                // SizedBox(width: 25),
+                // Text('Test'),
+                DataTable(columns: [
+                  DataColumn(
+                      label: Checkbox(
+                          value: value,
+                          onChanged: (bool? value) {
+                            setState(() {
+                              value = value!;
+                            });
+                          })),
+                  const DataColumn(
+                      label: Text(
+                    'Title',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  )),
+                  const DataColumn(
+                    label: Text(
+                      'Author',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  const DataColumn(
+                    label: Text(
+                      'Date',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ], rows: [
+                  DataRow(cells: [
+                    DataCell(Checkbox(
+                        value: this.value1,
                         onChanged: (bool? value) {
                           setState(() {
-                            value = value!;
+                            this.value1 = value!;
                           });
                         })),
-                const DataColumn(
-                    label: Text(
-                  'Title',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                )),
-                const DataColumn(
-                    label: Text(
-                  'Author',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                )),
-                const DataColumn(
-                    label: Text(
-                  'Date',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ))
-              ], rows: [
-                DataRow(cells: [
-                  DataCell(Checkbox(
-                      value: this.value1,
-                      onChanged: (bool? value) {
-                        setState(() {
-                          this.value1 = value!;
-                        });
-                      })),
-                  DataCell(Row(
-                    children: [
-                      Container(
-                        alignment: Alignment.center,
-                        child: const Image(
-                          image: AssetImage('assets/icons/home.png'),
-                          fit: BoxFit.cover, height: 40, width: 40,
-                        ),
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            'Home',
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 0, 0, 139)),
+                    DataCell(Row(
+                      children: [
+                        Container(
+                          alignment: Alignment.center,
+                          child: const Image(
+                            image: AssetImage('assets/icons/home.png'),
+                            fit: BoxFit.cover,
+                            height: 40,
+                            width: 40,
                           ),
-                          const SizedBox(height: 15),
-                          Row(
-                            children: const [
-                              Text('Edit'),
-                              SizedBox(width: 20),
-                              Text('Remove'),
-                              SizedBox(width: 20),
-                              Text('View'),
-                              SizedBox(width: 20)
-                            ],
-                          )
-                        ],
-                      ),
-                    ],
-                  )),
-                  const DataCell(Text('Admin')),
-                  const DataCell(Text('2022-06-18')),
-                ]),
-                DataRow(cells: [
-                  DataCell(Checkbox(
-                      value: this.value2,
-                      onChanged: (bool? value) {
-                        setState(() {
-                          this.value2 = value!;
-                        });
-                      })),
-                  DataCell(Row(
-                    children: [
-                      Container(
-                        alignment: Alignment.center,
-                        child: const Image(
-                          image: AssetImage('assets/icons/home.png'),
-                          fit: BoxFit.cover, height: 40, width: 40,
                         ),
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            'About',
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 0, 0, 139)),
-                          ),
-                          const SizedBox(height: 15),
-                          Row(
-                            children: const [
-                              Text('Edit'),
-                              SizedBox(width: 20),
-                              Text('Remove'),
-                              SizedBox(width: 20),
-                              Text('View'),
-                              SizedBox(width: 20)
-                            ],
-                          )
-                        ],
-                      ),
-                    ],
-                  )),
-                  const DataCell(Text('Admin')),
-                  const DataCell(Text('2022-07-18')),
-                ]),
-                DataRow(cells: [
-                  DataCell(Checkbox(
-                      value: this.value3,
-                      onChanged: (bool? value) {
-                        setState(() {
-                          this.value3 = value!;
-                        });
-                      })),
-                  DataCell(Row(
-                    children: [
-                      Container(
-                        alignment: Alignment.center,
-                        child: const Image(
-                          image: AssetImage('assets/icons/home.png'),
-                          fit: BoxFit.cover, height: 40, width: 40,
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Home',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 0, 0, 139)),
+                            ),
+                            const SizedBox(height: 15),
+                            Row(
+                              children: const [
+                                Text('Edit'),
+                                SizedBox(width: 20),
+                                Text('Remove'),
+                                SizedBox(width: 20),
+                                Text('View'),
+                                SizedBox(width: 20)
+                              ],
+                            )
+                          ],
                         ),
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            'News',
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 0, 0, 139)),
+                      ],
+                    )),
+                    const DataCell(Text('Admin')),
+                    const DataCell(Text('2022-06-18')),
+                  ]),
+                  DataRow(cells: [
+                    DataCell(Checkbox(
+                        value: this.value2,
+                        onChanged: (bool? value) {
+                          setState(() {
+                            this.value2 = value!;
+                          });
+                        })),
+                    DataCell(Row(
+                      children: [
+                        Container(
+                          alignment: Alignment.center,
+                          child: const Image(
+                            image: AssetImage('assets/icons/home.png'),
+                            fit: BoxFit.cover,
+                            height: 40,
+                            width: 40,
                           ),
-                          const SizedBox(height: 15),
-                          Row(
-                            children: const [
-                              Text('Edit'),
-                              SizedBox(width: 20),
-                              Text('Remove'),
-                              SizedBox(width: 20),
-                              Text('View'),
-                              SizedBox(width: 20)
-                            ],
-                          )
-                        ],
-                      ),
-                    ],
-                  )),
-                  const DataCell(Text('Admin')),
-                  const DataCell(Text('2022-07-17')),
-                ]),
-                DataRow(cells: [
-                  DataCell(Checkbox(
-                      value: this.value4,
-                      onChanged: (bool? value) {
-                        setState(() {
-                          this.value4 = value!;
-                        });
-                      })),
-                  DataCell(Row(
-                    children: [
-                      Container(
-                        alignment: Alignment.center,
-                        child: const Image(
-                          image: AssetImage('assets/icons/home.png'),
-                          fit: BoxFit.cover, height: 40, width: 40,
                         ),
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            'Contact',
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 0, 0, 139)),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'About',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 0, 0, 139)),
+                            ),
+                            const SizedBox(height: 15),
+                            Row(
+                              children: const [
+                                Text('Edit'),
+                                SizedBox(width: 20),
+                                Text('Remove'),
+                                SizedBox(width: 20),
+                                Text('View'),
+                                SizedBox(width: 20)
+                              ],
+                            )
+                          ],
+                        ),
+                      ],
+                    )),
+                    const DataCell(Text('Admin')),
+                    const DataCell(Text('2022-07-18')),
+                  ]),
+                  DataRow(cells: [
+                    DataCell(Checkbox(
+                        value: this.value3,
+                        onChanged: (bool? value) {
+                          setState(() {
+                            this.value3 = value!;
+                          });
+                        })),
+                    DataCell(Row(
+                      children: [
+                        Container(
+                          alignment: Alignment.center,
+                          child: const Image(
+                            image: AssetImage('assets/icons/home.png'),
+                            fit: BoxFit.cover,
+                            height: 40,
+                            width: 40,
                           ),
-                          const SizedBox(height: 15),
-                          Row(
-                            children: const [
-                              Text('Edit'),
-                              SizedBox(width: 20),
-                              Text('Remove'),
-                              SizedBox(width: 20),
-                              Text('View'),
-                              SizedBox(width: 20)
-                            ],
-                          )
-                        ],
-                      )
-                    ],
-                  )),
-                  const DataCell(Text('Admin')),
-                  const DataCell(Text('2022-07-18'))
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'News',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 0, 0, 139)),
+                            ),
+                            const SizedBox(height: 15),
+                            Row(
+                              children: const [
+                                Text('Edit'),
+                                SizedBox(width: 20),
+                                Text('Remove'),
+                                SizedBox(width: 20),
+                                Text('View'),
+                                SizedBox(width: 20)
+                              ],
+                            )
+                          ],
+                        ),
+                      ],
+                    )),
+                    const DataCell(Text('Admin')),
+                    const DataCell(Text('2022-07-17')),
+                  ]),
+                  DataRow(cells: [
+                    DataCell(Checkbox(
+                        value: this.value4,
+                        onChanged: (bool? value) {
+                          setState(() {
+                            this.value4 = value!;
+                          });
+                        })),
+                    DataCell(Row(
+                      children: [
+                        Container(
+                          alignment: Alignment.center,
+                          child: const Image(
+                            image: AssetImage('assets/icons/home.png'),
+                            fit: BoxFit.cover,
+                            height: 40,
+                            width: 40,
+                          ),
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Contact',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 0, 0, 139)),
+                            ),
+                            const SizedBox(height: 15),
+                            Row(
+                              children: const [
+                                Text('Edit'),
+                                SizedBox(width: 20),
+                                Text('Remove'),
+                                SizedBox(width: 20),
+                                Text('View'),
+                                SizedBox(width: 20)
+                              ],
+                            )
+                          ],
+                        )
+                      ],
+                    )),
+                    const DataCell(Text('Admin')),
+                    const DataCell(Text('2022-07-18'))
+                  ])
                 ])
-              ])
-            ],
+              ],
+            ),
           )
         ],
       ),
