@@ -75,7 +75,11 @@ class _Home1State extends State<Home1> {
           Container(
             width: screenSize.width * 0.2,
             height: screenSize.height * 0.3,
-            color: Colors.grey,
+            decoration: BoxDecoration(
+                color: Colors.grey,
+                image: DecorationImage(
+                    image: NetworkImage('https://cdn.discordapp.com/emojis/883722073845940294.webp?size=128&quality=lossless'),
+                    fit: BoxFit.fill)),
           ),
         ],
       ),

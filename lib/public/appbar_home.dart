@@ -106,7 +106,7 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context) {
               style: TextStyle(color: Colors.white, fontSize: 18,fontWeight: FontWeight.w400),
             ),
             style: ElevatedButton.styleFrom(
-              primary: Color.fromARGB(255, 18, 108, 178),
+              primary: Color.fromARGB(255, 0, 17, 255)
             ),
           ),
           Container(

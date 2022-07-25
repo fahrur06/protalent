@@ -28,7 +28,7 @@ class _Home3State extends State<Home3> {
                 fontSize: 35,
                 ),),
           style: TextButton.styleFrom(
-              primary: Color.fromARGB(255, 39, 36, 182),
+              primary: Color.fromARGB(255, 0, 17, 255),
               shadowColor: Colors.white,
             surfaceTintColor: Colors.white,
             backgroundColor: Colors.white,
