@@ -173,8 +173,10 @@ class SettingDashboard extends StatelessWidget {
                             width: screenSize1 * 0.5,
                             child: TextFormField(
                               decoration: InputDecoration(
-                                  hintText: "Talent Ready from Eksad",
-                                  enabledBorder: OutlineInputBorder(
+                                  
+                                  labelText: "Talent Ready from Eksad",
+                                  hintStyle: TextStyle(),
+                                  border: OutlineInputBorder(
                                       borderSide: BorderSide(
                                           width: 1, color: Colors.grey))),
                             ),
@@ -197,7 +199,7 @@ class SettingDashboard extends StatelessWidget {
                   height: 30,
                   width: 0,
                 ),
-                Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                Row(
                   children: [
                     Column(
                       crossAxisAlignment:CrossAxisAlignment.start,
@@ -216,10 +218,12 @@ class SettingDashboard extends StatelessWidget {
                           width: screenSize.width * 0.3,
                           child: TextFormField(
                             decoration: InputDecoration(fillColor: Colors.grey[200],
-                                hintText: "xxxxxx@eksad.com",
-                                enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                        width: 1, color: Colors.grey))),
+                               
+                                labelText: "xxxxxx@eksad.com",
+                                  hintStyle: TextStyle(),
+                                  border: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          width: 1, color: Colors.grey))),
                           ),
                         ),
                         SizedBox(height: 10,),
@@ -236,14 +240,17 @@ class SettingDashboard extends StatelessWidget {
                           width: screenSize.width * 0.3,
                           child: TextFormField(
                             decoration: InputDecoration(
-                                hintText: "02x-xxxx-xxxx",
-                                enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                        width: 1, color: Colors.grey))),
+                                
+                                labelText: "02x-xxxx-xxxx",
+                                  hintStyle: TextStyle(),
+                                  border: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          width: 1, color: Colors.grey))),
                           ),
                         ),
                       ],
                     ),
+                    SizedBox(width: 30,),
                     Column(
                       crossAxisAlignment:CrossAxisAlignment.start,
                       mainAxisAlignment:MainAxisAlignment.start,
@@ -264,7 +271,7 @@ class SettingDashboard extends StatelessWidget {
                                   ),
                                   child: Row(
                                     children: [
-                                      Icon(Icons.plus_one,color: Colors.black,),
+                                      Icon(Icons.add,color: Colors.black,),
                                       SizedBox(width: 10,),
                                       Text(
 
@@ -289,7 +296,7 @@ class SettingDashboard extends StatelessWidget {
                                   ),
                                   child: Row(
                                     children: [
-                                      Icon(Icons.plus_one,color: Colors.black,),
+                                      Icon(Icons.add,color: Colors.black,),
                                       SizedBox(width: 10,),
                                       Text(
                                         "Add Number",
