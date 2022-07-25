@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pro_talent/admin/const/addnew.dart';
 import 'package:pro_talent/admin/const/apply.dart';
 import 'package:pro_talent/admin/const/filter.dart';
+import 'package:pro_talent/admin/pages/add_pages.dart';
 
 class PagesDashboard extends StatefulWidget {
   const PagesDashboard({Key? key}) : super(key: key);
@@ -23,11 +25,20 @@ class _PagesDashboardState extends State<PagesDashboard> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
+<<<<<<< HEAD
       height: 1000,
       color: Color.fromARGB(255, 248, 195, 255),
       padding: EdgeInsets.all(30),
+=======
+      height: 2000,
+      width: screenSize.width,
+      padding: const EdgeInsets.only(left: 100),
+      color: const Color.fromRGBO(238, 224, 224, 1),
+>>>>>>> 86b216c7fc707df9d26a4c920c3df5d17e32185d
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+<<<<<<< HEAD
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -106,45 +117,100 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       borderSide:
                           const BorderSide(width: 1, color: Colors.blue),
                       borderRadius: BorderRadius.circular(5),
+=======
+          SizedBox(
+            height: 100,
+            child: Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.only(left: 50),
+                  child: Text(
+                    'Pages    ',
+                    style: TextStyle(
+                      fontSize: 20,
+>>>>>>> 86b216c7fc707df9d26a4c920c3df5d17e32185d
                     ),
                   ),
                 ),
-              ),
+                const AddNewButton(arah: AddPages())
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 50,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                TextButton(
+                  style: TextButton.styleFrom(
+                    padding: const EdgeInsets.only(left: 50),
+                    primary: Colors.black,
+                    textStyle: const TextStyle(fontSize: 15),
+                  ),
+                  onPressed: () {},
+                  child: const Text("All (4)"),
+                ),
+                Spacer(
+                  flex: 3,
+                ),
+                // const Text('All(4)',
+                //     style: TextStyle(color: Color.fromARGB(255, 0, 0, 139))),
 
-              const SizedBox(
-                width: 50,
-              ),
-
-              //     Spacer(
-              //       flex: 1,
-              // ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(3),
-                child: Stack(
-                  children: <Widget>[
-                    Positioned.fill(
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: <Color>[
-                              Color(0xFF42A5F5),
-                            ],
+                SizedBox(
+                  height: 40,
+                  width: 200,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      labelText: "Search",
+                      prefixIcon: const Icon(Icons.search),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide:
+                            const BorderSide(width: 1, color: Colors.blue),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide:
+                            const BorderSide(width: 1, color: Colors.blue),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  width: 50,
+                ),
+                //     Spacer(
+                //       flex: 1,
+                // ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(3),
+                  child: Stack(
+                    children: <Widget>[
+                      Positioned.fill(
+                        child: Container(
+                          decoration: const BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: <Color>[
+                                Color(0xFF42A5F5),
+                              ],
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    TextButton(
-                      style: TextButton.styleFrom(
-                        padding: const EdgeInsets.all(16.0),
-                        primary: Colors.black,
-                        backgroundColor: Colors.blue,
-                        textStyle: const TextStyle(fontSize: 15),
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          padding: const EdgeInsets.all(16.0),
+                          primary: Colors.black,
+                          backgroundColor: Colors.blue,
+                          textStyle: const TextStyle(fontSize: 15),
+                        ),
+                        onPressed: () {},
+                        child: const Text("Search Pages"),
                       ),
-                      onPressed: () {},
-                      child: const Text("Search Pages"),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
+<<<<<<< HEAD
               ),
               Spacer(flex: 1,),
             ],
@@ -180,13 +246,39 @@ class _PagesDashboardState extends State<PagesDashboard> {
                   value: bulkAction,
                   style: const TextStyle(fontSize: 14),
                 ),
+=======
+                Spacer(
+                  flex: 1,
+                ),
+              ],
+            ),
+          ),
+          Row(
+            children: [
+              // Text('Test'),
+              DropdownButton(
+                items: <String>['Bulk action', 'Edit', 'Delete']
+                    .map<DropdownMenuItem<String>>((String value) {
+                  return DropdownMenuItem<String>(
+                      child: Text(value), value: value);
+                }).toList(),
+                onChanged: (String? newValue) {
+                  setState(() {
+                    bulkAction = newValue!;
+                  });
+                },
+                value: bulkAction,
+                style: const TextStyle(fontSize: 14),
+>>>>>>> 86b216c7fc707df9d26a4c920c3df5d17e32185d
+              ),
+              const Spacer(
+                flex: 1,
               ),
 
-              const SizedBox(width: 30),
-
               ApplyButton(),
-
-              const SizedBox(width: 70),
+              const Spacer(
+                flex: 1,
+              ),
 
               Container(
                 height: 30,
@@ -210,12 +302,21 @@ class _PagesDashboardState extends State<PagesDashboard> {
                   style: const TextStyle(fontSize: 14),
                 ),
               ),
-
-              const SizedBox(width: 30),
+              const Spacer(
+                flex: 1,
+              ),
 
               FilterButton(),
+              Spacer(
+                flex: 6,
+              ),
+              Text("4 items"),
+              Spacer(
+                flex: 2,
+              ),
             ],
           ),
+<<<<<<< HEAD
 
           const SizedBox(height: 40),
 
@@ -234,6 +335,15 @@ class _PagesDashboardState extends State<PagesDashboard> {
                 //     }),
                 // SizedBox(width: 25),
                 // Text('Test'),
+=======
+          Container(
+            color: Colors.white,
+            height: 300,
+            width: 1000,
+            padding: const EdgeInsets.all(20),
+            child: Row(
+              children: [
+>>>>>>> 86b216c7fc707df9d26a4c920c3df5d17e32185d
                 DataTable(columns: [
                   DataColumn(
                       label: Checkbox(
@@ -249,6 +359,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   )),
                   const DataColumn(
+<<<<<<< HEAD
                     label: Text(
                       'Author',
                       style: TextStyle(fontWeight: FontWeight.bold),
@@ -260,6 +371,17 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ),
+=======
+                      label: Text(
+                    'Author',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  )),
+                  const DataColumn(
+                      label: Text(
+                    'Date',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ))
+>>>>>>> 86b216c7fc707df9d26a4c920c3df5d17e32185d
                 ], rows: [
                   DataRow(cells: [
                     DataCell(Checkbox(
