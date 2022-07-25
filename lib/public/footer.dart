@@ -11,7 +11,9 @@ class _FooterState extends State<Footer> {
   @override
 
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
     return Container(
+          height: screenSize.height*0.3,
           color: const Color.fromARGB(255, 70, 70, 70),
           child: Column(
             children: [
