@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 
-class AddNewButton extends StatefulWidget {
-  const AddNewButton({Key? key}) : super(key: key);
+class AddNewButton extends StatelessWidget {
+  const AddNewButton({Key? key, required this.arah}) : super(key: key);
+  final Widget arah;
 
-  @override
-  State<AddNewButton> createState() => _AddNewButtonState();
-}
-
-class _AddNewButtonState extends State<AddNewButton> {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -32,7 +28,10 @@ class _AddNewButtonState extends State<AddNewButton> {
               primary: Colors.black,
               textStyle: const TextStyle(fontSize: 15),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => arah));
+            },
             child: const Text("Add New"),
           ),
         ],
