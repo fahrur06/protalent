@@ -241,7 +241,13 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       })),
                   DataCell(Row(
                     children: [
-                      const Image(image: AssetImage('assets/icons/home.png')),
+                      Container(
+                        alignment: Alignment.center,
+                        child: const Image(
+                          image: AssetImage('assets/icons/home.png'),
+                          fit: BoxFit.cover, height: 40, width: 40,
+                        ),
+                      ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -278,7 +284,13 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       })),
                   DataCell(Row(
                     children: [
-                      const Image(image: AssetImage('assets/icons/home.png')),
+                      Container(
+                        alignment: Alignment.center,
+                        child: const Image(
+                          image: AssetImage('assets/icons/home.png'),
+                          fit: BoxFit.cover, height: 40, width: 40,
+                        ),
+                      ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -315,7 +327,13 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       })),
                   DataCell(Row(
                     children: [
-                      const Image(image: AssetImage('assets/icons/home.png')),
+                      Container(
+                        alignment: Alignment.center,
+                        child: const Image(
+                          image: AssetImage('assets/icons/home.png'),
+                          fit: BoxFit.cover, height: 40, width: 40,
+                        ),
+                      ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -352,7 +370,13 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       })),
                   DataCell(Row(
                     children: [
-                      const Image(image: AssetImage('assets/icons/home.png')),
+                      Container(
+                        alignment: Alignment.center,
+                        child: const Image(
+                          image: AssetImage('assets/icons/home.png'),
+                          fit: BoxFit.cover, height: 40, width: 40,
+                        ),
+                      ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pro_talent/admin/const/addnew.dart';
 import 'package:pro_talent/admin/const/filter.dart';
+import 'package:pro_talent/admin/post/add_post.dart';
 
 import 'const/dropdownbuttondates.dart';
 
@@ -21,7 +23,7 @@ class _PostDashboardState extends State<PostDashboard> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-        height: 1000,
+        height: 2000,
         width: screenSize.width,
         padding: const EdgeInsets.only(left: 100),
         color: const Color.fromRGBO(238, 224, 224, 1),
@@ -39,34 +41,7 @@ class _PostDashboardState extends State<PostDashboard> {
                           fontSize: 20,
                         )),
                   ),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(4),
-                    child: Stack(
-                      children: <Widget>[
-                        Positioned.fill(
-                          child: Container(
-                            decoration: const BoxDecoration(
-                              gradient: LinearGradient(
-                                colors: <Color>[
-                                  Color(0xFF1976D2),
-                                  Color(0xFF42A5F5),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        TextButton(
-                          style: TextButton.styleFrom(
-                            padding: const EdgeInsets.all(16.0),
-                            primary: Colors.black,
-                            textStyle: const TextStyle(fontSize: 15),
-                          ),
-                          onPressed: () {},
-                          child: const Text("Add New Post"),
-                        ),
-                      ],
-                    ),
-                  ),
+                  const AddNewButton(arah: AddPost())
                 ],
               ),
             ),
@@ -106,14 +81,9 @@ class _PostDashboardState extends State<PostDashboard> {
                         ),
                       ),
                     ),
-
                     const SizedBox(
                       width: 50,
                     ),
-
-                    //     Spacer(
-                    //       flex: 1,
-                    // ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(3),
                       child: Stack(
@@ -162,8 +132,8 @@ class _PostDashboardState extends State<PostDashboard> {
             ),
             Container(
               color: Colors.white,
-              height: 500,
-              width: 1100,
+              height: 300,
+              width: 1000,
               padding: const EdgeInsets.all(20),
               child: Row(
                 children: [
@@ -190,7 +160,7 @@ class _PostDashboardState extends State<PostDashboard> {
                         label: Text(
                       'Date',
                       style: TextStyle(fontWeight: FontWeight.bold),
-                    ))
+                    )),
                   ], rows: [
                     DataRow(cells: [
                       DataCell(Checkbox(
@@ -202,8 +172,13 @@ class _PostDashboardState extends State<PostDashboard> {
                           })),
                       DataCell(Row(
                         children: [
-                          const Image(
-                              image: AssetImage('assets/icons/home.png')),
+                          Container(
+                            alignment: Alignment.center,
+                            child: const Image(
+                              image: AssetImage('assets/icons/home.png'),
+                              fit: BoxFit.cover, height: 40, width: 40,
+                            ),
+                          ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -240,8 +215,13 @@ class _PostDashboardState extends State<PostDashboard> {
                           })),
                       DataCell(Row(
                         children: [
-                          const Image(
-                              image: AssetImage('assets/icons/home.png')),
+                          Container(
+                            alignment: Alignment.center,
+                            child: const Image(
+                              image: AssetImage('assets/icons/home.png'),
+                              fit: BoxFit.cover, height: 40, width: 40,
+                            ),
+                          ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -278,8 +258,13 @@ class _PostDashboardState extends State<PostDashboard> {
                           })),
                       DataCell(Row(
                         children: [
-                          const Image(
-                              image: AssetImage('assets/icons/home.png')),
+                          Container(
+                            alignment: Alignment.center,
+                            child: const Image(
+                              image: AssetImage('assets/icons/home.png'),
+                              fit: BoxFit.cover, height: 40, width: 40,
+                            ),
+                          ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -316,8 +301,13 @@ class _PostDashboardState extends State<PostDashboard> {
                           })),
                       DataCell(Row(
                         children: [
-                          const Image(
-                              image: AssetImage('assets/icons/home.png')),
+                          Container(
+                            alignment: Alignment.center,
+                            child: const Image(
+                              image: AssetImage('assets/icons/home.png'),
+                              fit: BoxFit.cover, height: 40, width: 40,
+                            ),
+                          ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [

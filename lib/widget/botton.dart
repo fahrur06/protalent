@@ -116,6 +116,7 @@ class _AlertFormState extends State<AlertForm> {
                 SizedBox(
                   height: 30,
                 ),
+                Container(child: IconButton(onPressed: (){}, icon: Icon(Icons.add_photo_alternate,size: 35,color: Colors.grey,)))
               ],
             ),
             actions: [
