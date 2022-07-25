@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:pro_talent/admin/const/addnew.dart';
 import 'package:pro_talent/admin/const/apply.dart';
 import 'package:pro_talent/admin/const/filter.dart';
@@ -165,7 +164,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                   });
                 },
                 value: allDates,
-                style: const TextStyle(fontSize: 14),
+                style: const TextStyle(fontSize: 15),
               ),
               const Spacer(
                 flex: 1,
