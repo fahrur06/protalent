@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/admin/const/addnew.dart';
 import 'package:pro_talent/admin/const/filter.dart';
-import 'package:pro_talent/widget/botton.dart';
 import 'package:pro_talent/admin/post/add_post.dart';
-
 
 import 'const/dropdownbuttondates.dart';
 
@@ -43,7 +41,7 @@ class _PostDashboardState extends State<PostDashboard> {
                           fontSize: 20,
                         )),
                   ),
-                  AddNewButton(arah: AddPost())
+                  const AddNewButton(arah: AddPost())
                 ],
               ),
             ),
@@ -83,12 +81,9 @@ class _PostDashboardState extends State<PostDashboard> {
                         ),
                       ),
                     ),
-
                     const SizedBox(
                       width: 50,
                     ),
-
-
                     ClipRRect(
                       borderRadius: BorderRadius.circular(3),
                       child: Stack(
