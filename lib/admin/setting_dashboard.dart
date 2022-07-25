@@ -148,8 +148,9 @@ class SettingDashboard extends StatelessWidget {
                             width: screenSize1 * 0.5,
                             child: TextFormField(
                               decoration: InputDecoration(
-                                  hintText: "Protalent",
-                                  enabledBorder: OutlineInputBorder(
+                                  labelText: "Protalent",
+                                  hintStyle: TextStyle(),
+                                  border: OutlineInputBorder(
                                       borderSide: BorderSide(
                                           width: 1, color: Colors.grey))),
                             ),
