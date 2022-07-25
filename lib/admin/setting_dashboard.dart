@@ -26,7 +26,7 @@ class SettingDashboard extends StatelessWidget {
           Container(
             color: Colors.white,
             height: 500,
-            width: 1000,
+            width: 1100,
             padding: EdgeInsets.all(20),
             child: Column(
               children: [
@@ -39,7 +39,7 @@ class SettingDashboard extends StatelessWidget {
                             fontWeight: FontWeight.normal)),
                     SizedBox(
                       height: 0,
-                      width: 750,
+                      width: 820,
                     ),
                     Botton_tombol(
                       title: "Save Setting",
