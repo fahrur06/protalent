@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:pro_talent/admin/const/text_homepage.dart';
 import 'package:pro_talent/widget/botton.dart';
 import 'package:pro_talent/register.dart';
+import 'dart:math';
+import 'package:pro_talent/widget/image_slide.dart';
 
 class Home1 extends StatefulWidget {
   const Home1({Key? key}) : super(key: key);
@@ -11,6 +13,8 @@ class Home1 extends StatefulWidget {
 }
 
 class _Home1State extends State<Home1> {
+  int boot = 1;
+
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -31,7 +35,7 @@ class _Home1State extends State<Home1> {
         children: [
           Container(
             padding: EdgeInsets.only(left: 20, right: 20, top: 50),
-            width: screenSize.width * 0.65,
+            width: screenSize.width * 0.6,
             //color: Colors.white,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,15 +76,18 @@ class _Home1State extends State<Home1> {
               ],
             ),
           ),
-          Container(
-            width: screenSize.width * 0.25,
-            height: screenSize.height * 0.33,
-            decoration: BoxDecoration(
-                color: Colors.grey,
-                image: DecorationImage(
-                    image: AssetImage('assets/images/bootcamp1.jpg'),
-                    fit: BoxFit.fill)),
-          ),
+          VerticalSlider(),
+          // TextButton(
+          //     onPressed: (){
+          //       setState((){
+          //         boot = Random().nextInt(2)+1;
+          //       });
+          //     },
+          //     child: Image.asset('assets/images/bootcamp$boot.jpg',
+          //       width: screenSize.width * 0.265,
+          //       height: screenSize.height * 0.33,
+          //       fit: BoxFit.fill,
+          //     ),),
         ],
       ),
     );

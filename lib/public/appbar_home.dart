@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/conts.dart';
 import 'package:pro_talent/homepage.dart';
+import 'package:pro_talent/register.dart';
 import 'package:pro_talent/login.dart';
 import 'package:pro_talent/widget/dropdown_appbar.dart';
 import 'package:pro_talent/widget/botton.dart';
@@ -100,7 +101,10 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context) {
             width: screenSize.width * 0.006,
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Register() ));
+            },
             child: Text(
               'Register',
               style: TextStyle(color: Colors.white, fontSize: 18,fontWeight: FontWeight.w400),
