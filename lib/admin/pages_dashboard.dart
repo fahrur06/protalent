@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pro_talent/admin/const/addnew.dart';
 import 'package:pro_talent/admin/const/apply.dart';
 import 'package:pro_talent/admin/const/filter.dart';
+import 'package:pro_talent/admin/pages/add_pages.dart';
 
 class PagesDashboard extends StatefulWidget {
   const PagesDashboard({Key? key}) : super(key: key);
@@ -21,73 +23,53 @@ class _PagesDashboardState extends State<PagesDashboard> {
 
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
     return Container(
-      height: 1000,
-      color: Colors.white,
+      height: 2000,
+      width: screenSize.width,
+      padding: const EdgeInsets.only(left: 100),
+      color: const Color.fromRGBO(238, 224, 224, 1),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Text(
-                'Pages    ',
-                style: GoogleFonts.didactGothic(
-                    color: Colors.black,
-                    fontSize: 40,
-                    fontWeight: FontWeight.bold),
-              ),
-
-              ClipRRect(
-                borderRadius: BorderRadius.circular(4),
-                child: Stack(
-                  children: <Widget>[
-                    Positioned.fill(
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: <Color>[
-                              Color(0xFF1976D2),
-                              Color(0xFF42A5F5),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    TextButton(
-                      style: TextButton.styleFrom(
-                        padding: const EdgeInsets.all(16.0),
-                        primary: Colors.black,
-                        textStyle: const TextStyle(fontSize: 15),
-                      ),
-                      onPressed: () {},
-                      child: const Text("Add New"),
-                    ),
-                  ],
+          SizedBox(
+            height: 100,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  child: Text(
+                    'Pages    ',
+                    style: GoogleFonts.didactGothic(
+                        color: Colors.black,
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
-              ),
-            ],
+
+                const AddNewButton(arah: AddPages())
+              ],
+            ),
           ),
-
-          const SizedBox(height: 15),
-
+          const SizedBox(height: 20),
           // Text('All'),
-
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              // TextButton(
-              //   child: Text(
-              //     'All(4)',
-              //     style: TextStyle(color: Color.fromARGB(255, 0, 0, 139)),
-              //   ),
-              //   onPressed: () {},
-              // ),
-
-              const Text('All(4)',
-                  style: TextStyle(color: Color.fromARGB(255, 0, 0, 139))),
+              TextButton(
+                style: TextButton.styleFrom(
+                  padding: const EdgeInsets.only(left: 50),
+                  primary: Colors.black,
+                  textStyle: const TextStyle(fontSize: 15),
+                ),
+                onPressed: () {},
+                child: const Text("All (4)"),
+              ),
+              // const Text('All(4)',
+              //     style: TextStyle(color: Color.fromARGB(255, 0, 0, 139))),
 
               SizedBox(
-                height: 50,
+                height: 40,
                 width: 200,
                 child: TextFormField(
                   decoration: InputDecoration(
@@ -106,11 +88,9 @@ class _PagesDashboardState extends State<PagesDashboard> {
                   ),
                 ),
               ),
-
               const SizedBox(
                 width: 50,
               ),
-
               //     Spacer(
               //       flex: 1,
               // ),
