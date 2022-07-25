@@ -64,7 +64,7 @@ class _TalentmanagementState extends State<TalentManagement> {
         child: Container(
           //padding: EdgeInsets.symmetric(vertical: screenSize.height*0.1,horizontal: screenSize.width*0.2),
           width: screenSize.width * 0.7,
-          height: screenSize.height * 0.7,
+          height: screenSize.height,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             border: Border.all(color: Colors.blue, width: 5),
@@ -81,7 +81,7 @@ class _TalentmanagementState extends State<TalentManagement> {
                   color: Colors.blue,
                 ),
                 width: screenSize.width * 0.7,
-                height: screenSize.height * 0.15,
+                height: screenSize.height * 0.20,
                 child: Text(
                   'Talent Management',
                   style: TextStyle(
@@ -91,21 +91,25 @@ class _TalentmanagementState extends State<TalentManagement> {
                       letterSpacing: 2),
                 ),
               ),
-              Container(
-                  child: TextFormField(
-                      decoration: InputDecoration(
-                          labelText: "Search",
-                          prefixIcon: const Icon(Icons.search),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide:
-                                const BorderSide(width: 1, color: Colors.blue),
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide:
-                                const BorderSide(width: 1, color: Colors.blue),
-                            borderRadius: BorderRadius.circular(5),
-                          )))),
+              ElevatedButton(
+                  onPressed: () {},
+                  child: Row(
+                    children: [Icon(Icons.person_add), Text('Add Talent')],
+                  )),
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: "Search",
+                  prefixIcon: const Icon(Icons.search),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(width: 1, color: Colors.blue),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(width: 1, color: Colors.blue),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                ),
+              ),
               Container(
                 width: screenSize.width * 0.7,
                 height: screenSize.height * 0.025,
@@ -121,7 +125,7 @@ class _TalentmanagementState extends State<TalentManagement> {
                   color: Colors.blue,
                 ),
                 width: screenSize.width * 0.67,
-                height: screenSize.height * 0.4,
+                height: screenSize.height * 0.5,
                 child: Center(
                   child: Container(
                     width: screenSize.width * 0.63,
