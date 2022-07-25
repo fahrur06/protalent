@@ -7,300 +7,483 @@ class SelectTalent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        Container(
-            child: Stack(
-          children: [
-            Column(
+    return SingleChildScrollView(
+      controller: ScrollController(),
+      child: Container(
+          child: Stack(
+        children: [
+          Column(
+            children: [
+            Container(
+              height: 210,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),),
+                //color: Color.fromARGB(200, 9, 47, 171),
+                color: Color.fromARGB(200, 179, 183, 197),
+              boxShadow: [BoxShadow(
+                  color: Color.fromARGB(255, 10, 116, 255).withAlpha(60),
+              blurRadius: 15.0,
+              spreadRadius: 10.0,
+              offset: Offset(
+                0.0,
+                3.0,
+              ),
+            ),],),
+              child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Container(
-                  height: 150,
-                  color: Colors.black26,
-                ),
+                  width: 20,
+                    child: Text('')),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Container(
+                        padding: EdgeInsets.only(bottom: 5),
+                      width:300,
+                        height: 70,
+                        child: Column(
+                          children: [
+                            Text('Pahrur',
+                              style: TextStyle(
+                                  fontSize: 30,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),),
+                            SizedBox(height: 3,),
+                            Text('Full Stack JavaScript Development',
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  color: Colors.black),),
+                          ],
+                        )),
 
+                    // Container(
+                    //   padding: EdgeInsets.only(top: 5),
+                    //     width:300,
+                    //     height: 30,
+                    //     child: Text('Full Stack JavaScript Development',
+                    //         style: TextStyle(
+                    //             fontSize: 17,
+                    //             color: Colors.black),),
+                    // ),
+                  ],
+                ),
                 Container(
+                  padding: EdgeInsets.only(top: 2),
+                  width: 180,
+                  height: 60,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image:
+                        AssetImage('assets/logo/logo_protalent.png'),
+                        fit: BoxFit.fill),
+                  ),
+                ),
+              ],
+            ),
+            ),
+            Container(
+              height: 380,
+              child: Row(
+                // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Container(
+                    width: 520,
+                    child: Column(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(left: 35,top: 15),
+                          width: 500,
+                          child: Text('Work Experience',
+                              style: TextStyle(
+                                  decoration: TextDecoration.underline,
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 2)),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 15),
+                          width: 490,
+                          height: 260,
+                          child: Column(
+                            children: [
+                              _workexp('PT. Selamat Sejahtera','Jakarta Selatan', 'Mar 2015 - Mar 2018'),
+                              _workexp('Fahrur Tekstil Indonesia','Jakarta Selatan', 'Apr 2018 - Juli 2022'),
+                              _workexp('Tokopedia','Jakarta Pusat', 'Juli 2022 - Sep 2022'),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: 780,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: 30,
+                          //color: Colors.red,
+                        ),
+                        Container(
+                          height: 35,
+                          //color: Colors.grey,
+                          child: Text(job2+' | '+job3,
+                            style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,letterSpacing: 1.5),),
+                        ),
+                        _rowpekerjaan('Level', deskripsi),
+                        _rowpekerjaan('Spesialisasi', deskripsi),
+                        _rowpekerjaan('Bidang Pekerjaan', deskripsi),
+                        _rowpekerjaan('Tingkat Jabatan', deskripsi),
+
+
+                        //SPASI
+
+                        Container(
+                          height: 30,
+                          //color: Colors.red,
+                        ),
+                        Container(
+                          width: 350,
+                          height: 35,
+                          //color: Colors.grey,
+                          child: Text('Biodata',style: TextStyle(
+                              fontSize: 20,fontWeight: FontWeight.bold,letterSpacing: 1.5),),
+                        ),
+                        _rowpekerjaan('Nama', deskripsi),
+                        _rowpekerjaan('Umur', deskripsi),
+                        _rowpekerjaan('Jenis Kelamin', deskripsi),
+                        _rowpekerjaan('Alamat ', deskripsi)
+                        
+                        
+                        
+                        // _rowdeskripsi(deskripsis),
+                        // _rowdeskripsi(deskripsis),
+                        // _rowdeskripsi(deskripsis),
+                        // _rowdeskripsi(deskripsis)
+
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              width: 1270,
+              height: 400,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                color: Color.fromARGB(200, 179, 183, 197),
+                boxShadow: [BoxShadow(
+                  color: Color.fromARGB(200, 128, 132, 143).withAlpha(60),
+                  blurRadius: 15.0,
+                  spreadRadius: 15.0,
+                  offset: Offset(
+                    0.0,
+                    3.0,
+                  ),
+                ),],
+              ),
+
+            child: Row(
+              children: [
+                Container(
+                  padding: EdgeInsets.only(left: 10),
+                  width: 505,
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
+                      Container(
+                        padding: EdgeInsets.only(left: 35,top: 15),
+                        width: 505,
+                        height: 55,
+                        //color: Colors.red,
+                        child: Text('Education',
+                            style: TextStyle(
+                                decoration: TextDecoration.underline,
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 2)),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(right: 20),
+                        width: 490,
+                        // color: Colors.white,
+                        child: Column(
+                          children: [
+                            _edukasi('Eksad University', 'Sarjana 1', 'Apr 2018 - Juni 2022'),
+                            _edukasi('Eksad University', 'Sarjana 1', 'Apr 2018 - Juni 2022'),
+                            _edukasi('Eksad University', 'Sarjana 1', 'Apr 2018 - Juni 2022'),
+                            _edukasi('Eksad University', 'Sarjana 1', 'Apr 2018 - Juni 2022'),
+                            _edukasi('Eksad University', 'Sarjana 1', 'Apr 2018 - Juni 2022'),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 400,
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.only(top: 15,left: 30),
+                        width: 750,
+                        height: 50,
+                        //color: Colors.red,
+                        child: Text('Skills',
+                            style: TextStyle(
+                                decoration: TextDecoration.underline,
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 2)),
+                      ),
                       Row(
                         children: [
-
-                          SizedBox(
-                            width: 495,
-                          ),
                           Container(
-                            width: 200,
-                            height: 50,
-                            //color: Colors.blue,
-                            child: Center(
-                              child: Text(
-                                nama,
-                                style: TextStyle(
-                                    fontSize: 28,
-                                    fontWeight: FontWeight.bold,
-                                    height: 1.5),
-                              ),
+                            padding: EdgeInsets.only(left: 15),
+                            width: 400,
+                            child: Column(
+                              children: [
+                                _skills('Flutter Developer'),
+                                _skills('Java Developer'),
+                                _skills('React Native Developer'),
+                                _skills('Mobile Developer'),
+                              ],
                             ),
                           ),
-                          SizedBox(
-                            width: 300,
-                          ),
                           Container(
-                            padding: EdgeInsets.only(top: 2),
-                            width: 180,
-                            height: 40,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image:
-                                      AssetImage('assets/logo/logo_protalent.png'),
-                                  fit: BoxFit.fill),
+                            width: 330,
+                            child: Column(
+                              children: [
+                                _tempat('Bootcamp Flutter by Eksad'),
+                                _tempat('Bootcamp Java by Eksad'),
+                                _tempat('Bootcamp React by Eksad'),
+                                _tempat('Bootcamp Mobile by Eksad'),
+                              ],
                             ),
                           ),
+                          
                         ],
-                      ),
-                      Container(
-                        height: 60,
-                        child: Text(
-                          job,
-                          style: TextStyle(fontSize: 16),),
-                      ),
-                      Container(
-                        height: 40,
-                        //color: Colors.blue,
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: 320,
-                            ),
-                            Container(
-                              padding: EdgeInsets.only(right: 5),
-                              child: Text(
-                                job2,
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    height: 1.5),
-                              ),
-                            ),
-                            Container(
-                              height: 20,
-                              width: 2,
-                              color: Colors.black,
-                            ),
-                            Container(
-                              padding: EdgeInsets.only(left: 5),
-                              child: Text(
-                                job3,
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    height: 1.5),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        height: 25,
-                        //color: Colors.grey,
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: 330,
-                            ),
-                            Container(
-                              width: 130,
-                             // color: Colors.red,
-                              child: Text(
-                                'Industry',
-                                style: TextStyle(fontSize: 16),
-                              ),
-                            ),
-                            Container(
-                              child: Text(': $deskripsi'),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        height: 25,
-                        //color: Colors.white,
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: 330,
-                            ),
-                            Container(
-                              width: 130,
-                              //color: Colors.red,
-                              child: Text(
-                                'Spesialisasi',
-                                style: TextStyle(fontSize: 16),
-                              ),
-                            ),
-                            Container(
-                              child: Text(': $deskripsi2'),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        height: 25,
-                        //color: Colors.blue,
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: 330,
-                            ),
-                            Container(
-                              width: 130,
-                              //color: Colors.red,
-                              child: Text(
-                                'Bidang Pekerjaan',
-                                style: TextStyle(fontSize: 16),
-                              ),
-                            ),
-                            Container(
-                              child: Text(': $deskripsi3'),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        height: 25,
-                        //color: Colors.grey,
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: 330,
-                            ),
-                            Container(
-                              width: 130,
-                             // color: Colors.red,
-                              child: Text(
-                                'Tingkat Jabatan',
-                                style: TextStyle(fontSize: 16),
-                              ),
-                            ),
-                            Container(
-                              child: Text(': $deskripsi4'),
-                            )
-                          ],
-                        ),
-                      ),
-                      SizedBox(height: 30,),
-                      Container(
-                        height: 40,
-                       // color: Colors.blue,
-                        child: Row(
-                          children: [
-                            // SizedBox(
-                            //   width: 420,
-                            // ),
-                            Container(
-                              padding: EdgeInsets.only(left: 50),
-                              child: Text('Description   :',style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                  height: 1.5),
-                      ),
-                            ),
-                          ],
-                        ),
-                      ),
+                      )
                     ],
                   ),
                 )
               ],
             ),
-            Container(
-              padding: EdgeInsets.only(top: 60, left: 8),
-              width: 240,
-              height: 350,
-              child: Column(
-                children: [
-                  Container(
-                    width: 150,
-                    height: 150,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.black),
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/petrik.png'),
-                          fit: BoxFit.contain),
-                    ),
-                  ),
-                  Container(
-                    child: Text('Work Experience',
-                        style: TextStyle(
-                            fontSize: 21,
-                            fontWeight: FontWeight.bold,
-                            height: 1.5)),
-                  ),
-                  _workexp('Fahrur Tekstil Indonesia','Apr 2018 - Juli 2022'),
-                  _workexp('Tokopedia', 'Juli 2022 - Sep 2022')
-                  // _workexp('PT. GDN Sejahtera', 'Apr 2015 - Sekarang')
-                ],
-              ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            Container(width: 1200,height: 100,)
+
+
+          ],
+          ),
+          Container(
+            padding: EdgeInsets.only(top: 60, left: 8),
+            width: 260,
+            height: 210,
+                                          //color: Colors.blueAccent,
+            child: Column(
               children: [
-                
                 Container(
-                  padding: EdgeInsets.only(top: 10),
-                  width: 90,
-                  height: 35,
-                  child: TextButton.icon(
-                    onPressed: () {Navigator.push(
+                  width: 150,
+                  height: 150,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.black),
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/petrik.png'),
+                        fit: BoxFit.contain),
+                  ),
+                ),
+
+
+              ],
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                padding: EdgeInsets.only(top: 10),
+                width: 90,
+                height: 35,
+                child: TextButton.icon(
+                  onPressed: () {
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => Dashboard(),
                       ),
                     );
-                      },
-                    icon: Icon(
-                      Icons.arrow_back,
-                      color: Colors.black,
-                    ),
-                    label: Text(
-                      'Back',
-                      style: TextStyle(color: Colors.black),
-                    ),
+                  },
+                  icon: Icon(
+                    Icons.arrow_back,
+                    color: Colors.black,
+                  ),
+                  label: Text(
+                    'Back',
+                    style: TextStyle(color: Colors.black),
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.only(top: 10),
-                  width: 120,height: 35,
-                  child: TextButton.icon(onPressed: (){},
-                    icon: Icon(Icons.download_rounded,color: Colors.black,),
-                    label: Text('Download',style: TextStyle(color: Colors.black),),
+              ),
+              Container(
+                padding: EdgeInsets.only(top: 10),
+                width: 120,
+                height: 35,
+                child: TextButton.icon(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.download_rounded,
+                    color: Colors.black,
+                  ),
+                  label: Text(
+                    'Download',
+                    style: TextStyle(color: Colors.black),
                   ),
                 ),
-              ],
-            ),
-          ],
-        )),
-      ],
+              ),
+            ],
+          ),
+        ],
+      )),
     );
   }
 }
 
-Column _workexp (String _perusahaan, String _tanggal){
-  return Column(
+
+ListTile _workexp(String _perusahaan, String _lokasi, String _tanggal) {
+  return ListTile(
+    title: Row(
+      children: [
+        Text(_perusahaan,
+          style: const TextStyle(
+            fontWeight: FontWeight.w500,
+            fontSize: 16,height: 1.5
+          ),
+        ),
+        Text(' ,  '+_lokasi,
+          style: const TextStyle(
+              fontWeight: FontWeight.w500,
+              fontSize: 16,height: 1.5
+          ),
+        ),
+      ],
+    ),
+    subtitle: Text(_tanggal),
+  );
+}
+
+ListTile _edukasi(String _pengalaman, String _tingkat, String _tanggal) {
+  return ListTile(
+    minLeadingWidth: 8,
+    leading: Container(
+      padding: EdgeInsets.only(top: 7),
+        child: Icon(Icons.circle,size: 12,color: Colors.black,)),
+    title: Text(_pengalaman,
+      style: const TextStyle(
+          fontWeight: FontWeight.w600,
+          fontSize: 17,height: 1.5
+      ),),
+    subtitle: Text(_tingkat),
+    trailing: Text(_tanggal),
+  );
+}
+
+
+
+ListTile _skills(String skill){
+  return ListTile(
+    minLeadingWidth: 8,
+    leading: Container(
+        padding: EdgeInsets.only(top: 7),
+        child: Icon(Icons.circle,size: 12,color: Colors.black,)),
+    title: Text(skill,
+      style: const TextStyle(
+          fontWeight: FontWeight.w600,
+          fontSize: 20,height: 1.5
+      ),
+    ),
+    );
+}
+
+ListTile _tempat(String tempat){
+  return ListTile(
+    title: Text(tempat,
+      style: const TextStyle(
+          fontWeight: FontWeight.w600,
+          fontSize: 20,height: 1.5
+      ),
+    ),
+    trailing: Icon(Icons.download_for_offline_outlined,color: Colors.black,),
+
+  );
+}
+
+
+Row _rowpekerjaan (String _job, String _jabatan){
+  return Row(
     children: [
       Container(
-        child: Text(_perusahaan,
-            style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
-                height: 1.5)),
+        padding: EdgeInsets.only(left: 15),
+        width: 180,
+        height: 20,
+        child: Text(_job,style: TextStyle(fontSize: 16)),
       ),
       Container(
-        padding: EdgeInsets.only(top: 2,bottom: 5),
-        child: Text(_tanggal),
+        padding: EdgeInsets.only(top: 3),
+        height: 25,
+        child: Text(': '+_jabatan),
       )
     ],
   );
 }
+
+Row _rowdeskripsi (String _deskripsi){
+  return Row(
+        children: [
+          Container(
+            width: 15,
+            child: Icon(Icons.circle,size: 12,color: Colors.black,),),
+          Container(
+            padding: EdgeInsets.only(left: 7,top: 5),
+            width: 765,
+            height: 25,
+            child: Text(deskripsis),
+          ),
+        ],
+      );
+}
+
+
+ListTile _language(String _bahasa, String _rangeint, String _rangeint2) {
+  return ListTile(
+    title: Text(_bahasa,
+      style: const TextStyle(
+          fontWeight: FontWeight.w600,
+          fontSize: 17,height: 1.5
+      ),),
+    subtitle: Text('Bicara: '+_rangeint+" | "+' Menulis: '+_rangeint2,
+      style: TextStyle(fontSize: 15),
+    ),
+  );
+}
+
+// Column _workexp(String _perusahaan, String _tanggal) {
+//   return Column(
+//     children: [
+//       Container(
+//         padding: EdgeInsets.only(top: 5),
+//         height: 25,
+//         child: Text(_perusahaan,
+//             style: TextStyle(
+//                 fontSize: 15, fontWeight: FontWeight.bold, height: 1.5)),
+//       ),
+//       Container(
+//         height: 17,
+//         padding: EdgeInsets.only(top: 2,),
+//         child: Text(_tanggal),
+//       )
+//     ],
+//   );
+// }

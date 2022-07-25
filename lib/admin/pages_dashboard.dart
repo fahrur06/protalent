@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PagesDashboard extends StatefulWidget {
   const PagesDashboard({Key? key}) : super(key: key);
 
+  @override
   State<PagesDashboard> createState() => _PagesDashboardState();
 }
 
-class _PagesDashboardState extends State<PagesDashboard>{
+class _PagesDashboardState extends State<PagesDashboard> {
   String bulkAction = 'Bulk action';
   String allDates = 'All dates';
   bool value = false;
@@ -17,19 +19,20 @@ class _PagesDashboardState extends State<PagesDashboard>{
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color.fromARGB(255, 211, 211, 211),
-      appBar: AppBar(title: Text('Protalent')),
-      body: Column(
+    return Container(
+      height: 1000,
+      color: Colors.white,
+      child: Column(
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Container(
-                child: Text(
-                  'Pages    ',
-                  style: Theme.of(context).textTheme.headline5,
-                ),
+              Text(
+                'Pages    ',
+                style: GoogleFonts.didactGothic(
+                    color: Colors.black,
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold),
               ),
 
               // TextButton(
@@ -48,21 +51,52 @@ class _PagesDashboardState extends State<PagesDashboard>{
               //   ),
               // ),
 
-              Container(
-                child: FlatButton(
-                  child: Text(
-                    'Add new',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  color: Color.fromARGB(255, 204, 204, 255),
-                  textColor: Color.fromARGB(255, 0, 0, 139),
-                  onPressed: () {},
+              ClipRRect(
+                borderRadius: BorderRadius.circular(4),
+                child: Stack(
+                  children: <Widget>[
+                    Positioned.fill(
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: <Color>[
+                              Color(0xFF1976D2),
+                              Color(0xFF42A5F5),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        padding: const EdgeInsets.all(16.0),
+                        primary: Colors.black,
+                        textStyle: const TextStyle(fontSize: 15),
+                      ),
+                      onPressed: () {},
+                      child: const Text("Add New"),
+                    ),
+                  ],
                 ),
-              )
+              ),
+
+              // Container(
+              //   child: TextButton(
+              //     style: TextButton.styleFrom(
+              //     ),
+              //     child: Text(
+              //       'Add new',
+              //       style: TextStyle(fontWeight: FontWeight.bold),
+              //     ),
+              //     color: Color.fromARGB(255, 204, 204, 255),
+              //     textColor: Color.fromARGB(255, 0, 0, 139),
+              //     onPressed: () {},
+              //   ),
+              // )
             ],
           ),
 
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
 
           // Text('All'),
 
@@ -77,82 +111,170 @@ class _PagesDashboardState extends State<PagesDashboard>{
               //   onPressed: () {},
               // ),
 
-              Text('All(4)',
-                  style: TextStyle(color: Color.fromARGB(255, 0, 0, 139)))
+              const Text('All(4)',
+                  style: TextStyle(color: Color.fromARGB(255, 0, 0, 139))),
+              SizedBox(
+                height: 50,
+                width: 200,
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    labelText: "Search",
+                    prefixIcon: const Icon(Icons.search),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide:
+                          const BorderSide(width: 1, color: Colors.blue),
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide:
+                          const BorderSide(width: 1, color: Colors.blue),
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                  ),
+                ),
+              ),
+
+              const SizedBox(
+                width: 50,
+              ),
+
+              //     Spacer(
+              //       flex: 1,
+              // ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(3),
+                child: Stack(
+                  children: <Widget>[
+                    Positioned.fill(
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: <Color>[
+                              Color(0xFF42A5F5),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        padding: const EdgeInsets.all(16.0),
+                        primary: Colors.black,
+                        backgroundColor: Colors.blue,
+                        textStyle: const TextStyle(fontSize: 15),
+                      ),
+                      onPressed: () {},
+                      child: const Text("Search Pages"),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
 
-          SizedBox(height: 20),
+          const SizedBox(height: 80),
 
           Row(
             children: [
               // Text('Test'),
 
-              Container(
-                child: DropdownButton(
-                  items: <String>['Bulk action', 'Edit', 'Delete']
-                      .map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                        child: Text(value), value: value);
-                  }).toList(),
-                  onChanged: (String? newValue) {
-                    setState(() {
-                      bulkAction = newValue!;
-                    });
-                  },
-                  value: bulkAction,
-                  style: TextStyle(fontSize: 14),
+              DropdownButton(
+                items: <String>['Bulk action', 'Edit', 'Delete']
+                    .map<DropdownMenuItem<String>>((String value) {
+                  return DropdownMenuItem<String>(
+                      child: Text(value), value: value);
+                }).toList(),
+                onChanged: (String? newValue) {
+                  setState(() {
+                    bulkAction = newValue!;
+                  });
+                },
+                value: bulkAction,
+                style: const TextStyle(fontSize: 14),
+              ),
+
+              const SizedBox(width: 30),
+
+              ClipRRect(
+                borderRadius: BorderRadius.circular(4),
+                child: Stack(
+                  children: <Widget>[
+                    Positioned.fill(
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: <Color>[
+                              Color(0xFF42A5F5),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        padding: const EdgeInsets.all(16.0),
+                        primary: Colors.black,
+                        backgroundColor: Colors.blue,
+                        textStyle: const TextStyle(fontSize: 15),
+                      ),
+                      onPressed: () {},
+                      child: const Text("Apply"),
+                    ),
+                  ],
                 ),
               ),
 
-              SizedBox(width: 30),
+              const SizedBox(width: 70),
 
-              Container(
-                  child: FlatButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Apply',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    color: Color.fromARGB(255, 204, 204, 255),
-                    textColor: Color.fromARGB(255, 0, 0, 139),
-                  )),
-
-              SizedBox(width: 70),
-
-              Container(
-                child: DropdownButton(
-                  items: <String>['All dates', 'Dates 1', 'Dates 2']
-                      .map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                        child: Text(value), value: value);
-                  }).toList(),
-                  onChanged: (String? newValue) {
-                    setState(() {
-                      allDates = newValue!;
-                    });
-                  },
-                  value: allDates,
-                  style: TextStyle(fontSize: 14),
-                ),
+              DropdownButton(
+                items: <String>['All dates', 'July 2022', 'June 2022']
+                    .map<DropdownMenuItem<String>>((String value) {
+                  return DropdownMenuItem<String>(
+                      child: Text(value), value: value);
+                }).toList(),
+                onChanged: (String? newValue) {
+                  setState(() {
+                    allDates = newValue!;
+                  });
+                },
+                value: allDates,
+                style: const TextStyle(fontSize: 14),
               ),
 
-              SizedBox(width: 30),
+              const SizedBox(width: 30),
 
-              Container(
-                  child: FlatButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Filter',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(4),
+                child: Stack(
+                  children: <Widget>[
+                    Positioned.fill(
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: <Color>[
+                              Color(0xFF42A5F5),
+                            ],
+                          ),
+                        ),
+                      ),
                     ),
-                    color: Color.fromARGB(255, 204, 204, 255),
-                    textColor: Color.fromARGB(255, 0, 0, 139),
-                  ))
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        padding: const EdgeInsets.all(16.0),
+                        primary: Colors.black,
+                        backgroundColor: Colors.blue,
+                        textStyle: const TextStyle(fontSize: 15),
+                      ),
+                      onPressed: () {},
+                      child: const Text("Filter"),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
 
-          SizedBox(height: 40),
+          const SizedBox(height: 40),
 
           Row(
             children: [
@@ -168,15 +290,27 @@ class _PagesDashboardState extends State<PagesDashboard>{
               DataTable(columns: [
                 DataColumn(
                     label: Checkbox(
-                        value: this.value,
+                        value: value,
                         onChanged: (bool? value) {
                           setState(() {
-                            this.value = value!;
+                            value = value!;
                           });
                         })),
-                DataColumn(label: Text('Title')),
-                DataColumn(label: Text('Author')),
-                DataColumn(label: Text('Date'))
+                const DataColumn(
+                    label: Text(
+                  'Title',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )),
+                const DataColumn(
+                    label: Text(
+                  'Author',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )),
+                const DataColumn(
+                    label: Text(
+                  'Date',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ))
               ], rows: [
                 DataRow(cells: [
                   DataCell(Checkbox(
@@ -186,9 +320,34 @@ class _PagesDashboardState extends State<PagesDashboard>{
                           this.value1 = value!;
                         });
                       })),
-                  DataCell(Text('Title1')),
-                  DataCell(Text('Admin')),
-                  DataCell(Text('2022-06-18')),
+                  DataCell(Row(
+                    children: [
+                      const Image(image: AssetImage('assets/icons/home.png')),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Home',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 0, 0, 139)),
+                          ),
+                          const SizedBox(height: 15),
+                          Row(
+                            children: const [
+                              Text('Edit'),
+                              SizedBox(width: 20),
+                              Text('Remove'),
+                              SizedBox(width: 20),
+                              Text('View'),
+                              SizedBox(width: 20)
+                            ],
+                          )
+                        ],
+                      ),
+                    ],
+                  )),
+                  const DataCell(Text('Admin')),
+                  const DataCell(Text('2022-06-18')),
                 ]),
                 DataRow(cells: [
                   DataCell(Checkbox(
@@ -198,9 +357,34 @@ class _PagesDashboardState extends State<PagesDashboard>{
                           this.value2 = value!;
                         });
                       })),
-                  DataCell(Text('Title2')),
-                  DataCell(Text('Admin')),
-                  DataCell(Text('2022-07-18')),
+                  DataCell(Row(
+                    children: [
+                      const Image(image: AssetImage('assets/icons/home.png')),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'About',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 0, 0, 139)),
+                          ),
+                          const SizedBox(height: 15),
+                          Row(
+                            children: const [
+                              Text('Edit'),
+                              SizedBox(width: 20),
+                              Text('Remove'),
+                              SizedBox(width: 20),
+                              Text('View'),
+                              SizedBox(width: 20)
+                            ],
+                          )
+                        ],
+                      ),
+                    ],
+                  )),
+                  const DataCell(Text('Admin')),
+                  const DataCell(Text('2022-07-18')),
                 ]),
                 DataRow(cells: [
                   DataCell(Checkbox(
@@ -210,9 +394,34 @@ class _PagesDashboardState extends State<PagesDashboard>{
                           this.value3 = value!;
                         });
                       })),
-                  DataCell(Text('Title3')),
-                  DataCell(Text('Admin')),
-                  DataCell(Text('2022-07-17')),
+                  DataCell(Row(
+                    children: [
+                      const Image(image: AssetImage('assets/icons/home.png')),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'News',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 0, 0, 139)),
+                          ),
+                          const SizedBox(height: 15),
+                          Row(
+                            children: const [
+                              Text('Edit'),
+                              SizedBox(width: 20),
+                              Text('Remove'),
+                              SizedBox(width: 20),
+                              Text('View'),
+                              SizedBox(width: 20)
+                            ],
+                          )
+                        ],
+                      ),
+                    ],
+                  )),
+                  const DataCell(Text('Admin')),
+                  const DataCell(Text('2022-07-17')),
                 ]),
                 DataRow(cells: [
                   DataCell(Checkbox(
@@ -222,9 +431,34 @@ class _PagesDashboardState extends State<PagesDashboard>{
                           this.value4 = value!;
                         });
                       })),
-                  DataCell(Text('Title4')),
-                  DataCell(Text('Admin')),
-                  DataCell(Text('2022-07-18'))
+                  DataCell(Row(
+                    children: [
+                      const Image(image: AssetImage('assets/icons/home.png')),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Contact',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 0, 0, 139)),
+                          ),
+                          const SizedBox(height: 15),
+                          Row(
+                            children: const [
+                              Text('Edit'),
+                              SizedBox(width: 20),
+                              Text('Remove'),
+                              SizedBox(width: 20),
+                              Text('View'),
+                              SizedBox(width: 20)
+                            ],
+                          )
+                        ],
+                      )
+                    ],
+                  )),
+                  const DataCell(Text('Admin')),
+                  const DataCell(Text('2022-07-18'))
                 ])
               ])
             ],

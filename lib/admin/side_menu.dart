@@ -48,7 +48,7 @@ class _SideMenuState extends State<SideMenu> {
               'Fahrur Huzain',
               style: TextStyle(
               color: Colors.white,
-              fontSize: 15,
+              fontSize: 18,
               fontWeight: FontWeight.bold),
               ),),
               subtitle: Container(),
@@ -96,12 +96,14 @@ class _SideMenuState extends State<SideMenu> {
             // Change the background color and disabled header/footer dividers
             // Make use of standard() constructor for other themes
             theme: SideNavigationBarTheme(
-              backgroundColor: Color.fromARGB(200, 9, 47, 171),
+              backgroundColor:
+              //Color.fromARGB(200, 9, 47, 171),
+              Color.fromARGB(255, 18, 108, 178),
               togglerTheme: SideNavigationBarTogglerTheme(
                   shrinkIconColor: Colors.white,
                   expandIconColor: Colors.white),
               itemTheme:
-                  SideNavigationBarItemTheme(selectedItemColor: Colors.white),
+                  SideNavigationBarItemTheme(selectedItemColor: Colors.white,unselectedItemColor: Colors.white60),
               dividerTheme: SideNavigationBarDividerTheme.standard(),
             ),
           ),
