@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pro_talent/admin/const/apply.dart';
+import 'package:pro_talent/admin/const/filter.dart';
 
 class PagesDashboard extends StatefulWidget {
   const PagesDashboard({Key? key}) : super(key: key);
@@ -35,22 +37,6 @@ class _PagesDashboardState extends State<PagesDashboard> {
                     fontWeight: FontWeight.bold),
               ),
 
-              // TextButton(
-              //   style: ButtonStyle(
-              //       foregroundColor: MaterialStateProperty.all(Colors.blue),
-              //       backgroundColor: MaterialStateProperty.resolveWith(
-              //           (Set<MaterialState> states) {
-              //         return states.contains(MaterialState.disabled)
-              //             ? null
-              //             : Colors.grey;
-              //       })),
-              //   onPressed: null,
-              //   child: Text(
-              //     'Add new',
-              //     style: TextStyle(color: Colors.black),
-              //   ),
-              // ),
-
               ClipRRect(
                 borderRadius: BorderRadius.circular(4),
                 child: Stack(
@@ -79,20 +65,6 @@ class _PagesDashboardState extends State<PagesDashboard> {
                   ],
                 ),
               ),
-
-              // Container(
-              //   child: TextButton(
-              //     style: TextButton.styleFrom(
-              //     ),
-              //     child: Text(
-              //       'Add new',
-              //       style: TextStyle(fontWeight: FontWeight.bold),
-              //     ),
-              //     color: Color.fromARGB(255, 204, 204, 255),
-              //     textColor: Color.fromARGB(255, 0, 0, 139),
-              //     onPressed: () {},
-              //   ),
-              // )
             ],
           ),
 
@@ -113,6 +85,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
 
               const Text('All(4)',
                   style: TextStyle(color: Color.fromARGB(255, 0, 0, 139))),
+
               SizedBox(
                 height: 50,
                 width: 200,
@@ -195,34 +168,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
 
               const SizedBox(width: 30),
 
-              ClipRRect(
-                borderRadius: BorderRadius.circular(4),
-                child: Stack(
-                  children: <Widget>[
-                    Positioned.fill(
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: <Color>[
-                              Color(0xFF42A5F5),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    TextButton(
-                      style: TextButton.styleFrom(
-                        padding: const EdgeInsets.all(16.0),
-                        primary: Colors.black,
-                        backgroundColor: Colors.blue,
-                        textStyle: const TextStyle(fontSize: 15),
-                      ),
-                      onPressed: () {},
-                      child: const Text("Apply"),
-                    ),
-                  ],
-                ),
-              ),
+              ApplyButton(),
 
               const SizedBox(width: 70),
 
@@ -243,34 +189,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
 
               const SizedBox(width: 30),
 
-              ClipRRect(
-                borderRadius: BorderRadius.circular(4),
-                child: Stack(
-                  children: <Widget>[
-                    Positioned.fill(
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: <Color>[
-                              Color(0xFF42A5F5),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    TextButton(
-                      style: TextButton.styleFrom(
-                        padding: const EdgeInsets.all(16.0),
-                        primary: Colors.black,
-                        backgroundColor: Colors.blue,
-                        textStyle: const TextStyle(fontSize: 15),
-                      ),
-                      onPressed: () {},
-                      child: const Text("Filter"),
-                    ),
-                  ],
-                ),
-              ),
+              FilterButton(),
             ],
           ),
 
