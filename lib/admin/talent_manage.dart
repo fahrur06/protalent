@@ -33,7 +33,7 @@ class _TalentmanagementState extends State<TalentManagement> {
           '2022-07-18', TextButton(onPressed: () {}, child: Text('edit'))),
       _TalentManagementState(2, 'Bambang', 'Quality Assuarance', 'Pre Hired',
           '2022-01-01', TextButton(onPressed: () {}, child: Text('edit'))),
-      _TalentManagementState(3, 'Udin', 'Bussiness Analyst', 'Hired',
+      _TalentManagementState(3, 'Udin', 'Bussiness Analyst', 'Available',
           '2022-03-29', TextButton(onPressed: () {}, child: Text('edit'))),
     ];
 

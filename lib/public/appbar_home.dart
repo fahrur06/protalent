@@ -22,12 +22,11 @@ AppBar AppbarHomeSmall(Size screenSize) {
             flex: 1,
           ),
           Container(
-            padding: const EdgeInsets.only(left: 30, top: 20, bottom: 20),
             child:
-                Container(child: Image.asset("assets/logo/logo_protalent.jpg")),
+                Container(child: Image.asset("assets/logo/logo_protalent.png"),height: 50,width: 150,),
           ),
           const Spacer(
-            flex: 1,
+            flex: 3,
           ),
           const SizedBox(
             height: 50,
@@ -67,17 +66,29 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context) {
     ),
     title: Row(
       children: [
-        Spacer(flex: 4,),
+        Spacer(
+          flex: 4,
+        ),
         ButtonAppbar(arah: HomePage(), menu: 'Home'),
-        Spacer(flex: 1,),
+        Spacer(
+          flex: 1,
+        ),
         ButtonAppbar(arah: HomePage(), menu: 'About Us'),
-        Spacer(flex: 1,),
+        Spacer(
+          flex: 1,
+        ),
         ButtonAppbar(arah: HomePage(), menu: 'Employee'),
-        Spacer(flex: 1,),
+        Spacer(
+          flex: 1,
+        ),
         ButtonAppbar(arah: HomePage(), menu: 'Post'),
-        Spacer(flex: 1,),
+        Spacer(
+          flex: 1,
+        ),
         ButtonAppbar(arah: HomePage(), menu: 'Contact Us'),
-        Spacer(flex: 3,),
+        Spacer(
+          flex: 3,
+        ),
       ],
     ),
     actions: [
@@ -94,7 +105,10 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context) {
             },
             child: Text(
               'Login',
-              style: TextStyle(fontSize: 18,fontWeight: FontWeight.w400,color: Colors.black),
+              style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black),
             ),
           ),
           Container(
@@ -103,15 +117,17 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context) {
           ElevatedButton(
             onPressed: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Register() ));
+                  context, MaterialPageRoute(builder: (context) => Register()));
             },
             child: Text(
               'Register',
-              style: TextStyle(color: Colors.white, fontSize: 18,fontWeight: FontWeight.w400),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w400),
             ),
             style: ElevatedButton.styleFrom(
-              primary: Color.fromARGB(255, 0, 17, 255)
-            ),
+                primary: Color.fromARGB(255, 0, 17, 255)),
           ),
           Container(
             width: screenSize.width * 0.02,
