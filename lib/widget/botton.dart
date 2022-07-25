@@ -116,7 +116,14 @@ class _AlertFormState extends State<AlertForm> {
                 SizedBox(
                   height: 30,
                 ),
-                Container(child: IconButton(onPressed: (){}, icon: Icon(Icons.add_photo_alternate,size: 35,color: Colors.grey,)))
+                Container(
+                    child: IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.add_photo_alternate,
+                          size: 35,
+                          color: Colors.grey,
+                        )))
               ],
             ),
             actions: [
@@ -128,14 +135,22 @@ class _AlertFormState extends State<AlertForm> {
             ],
           ),
         );
-    return Container(
-      child: ElevatedButton(
+    return Row(
+      children: [
+        Container(
+            child: ElevatedButton.icon(
+          icon: Icon(
+            Icons.person_add,
+            size: 20.0,
+          ),
+          label: Text('Add Talent'),
           onPressed: () async {
             final posisi = await openDialog();
             if (posisi == null || posisi.isEmpty) return;
             setState(() => this.posisi = posisi);
           },
-          child: Text('Add New')),
+        )),
+      ],
     );
   }
 }
