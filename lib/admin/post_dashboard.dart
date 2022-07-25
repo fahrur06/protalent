@@ -23,7 +23,7 @@ class _PostDashboardState extends State<PostDashboard> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-        height: 1000,
+        height: 2000,
         width: screenSize.width,
         padding: const EdgeInsets.only(left: 100),
         color: const Color.fromRGBO(238, 224, 224, 1),
@@ -132,8 +132,8 @@ class _PostDashboardState extends State<PostDashboard> {
             ),
             Container(
               color: Colors.white,
-              height: 500,
-              width: 1100,
+              height: 300,
+              width: 1000,
               padding: const EdgeInsets.all(20),
               child: Row(
                 children: [
@@ -160,7 +160,7 @@ class _PostDashboardState extends State<PostDashboard> {
                         label: Text(
                       'Date',
                       style: TextStyle(fontWeight: FontWeight.bold),
-                    ))
+                    )),
                   ], rows: [
                     DataRow(cells: [
                       DataCell(Checkbox(
@@ -173,7 +173,9 @@ class _PostDashboardState extends State<PostDashboard> {
                       DataCell(Row(
                         children: [
                           const Image(
-                              image: AssetImage('assets/icons/home.png')),
+                            image: AssetImage('assets/icons/home.png'),
+                            fit: BoxFit.fitWidth,
+                          ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -211,7 +213,9 @@ class _PostDashboardState extends State<PostDashboard> {
                       DataCell(Row(
                         children: [
                           const Image(
-                              image: AssetImage('assets/icons/home.png')),
+                            image: AssetImage('assets/icons/home.png'),
+                            fit: BoxFit.fitWidth,
+                          ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -249,7 +253,9 @@ class _PostDashboardState extends State<PostDashboard> {
                       DataCell(Row(
                         children: [
                           const Image(
-                              image: AssetImage('assets/icons/home.png')),
+                            image: AssetImage('assets/icons/home.png'),
+                            fit: BoxFit.fitWidth,
+                          ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -287,7 +293,9 @@ class _PostDashboardState extends State<PostDashboard> {
                       DataCell(Row(
                         children: [
                           const Image(
-                              image: AssetImage('assets/icons/home.png')),
+                            image: AssetImage('assets/icons/home.png'),
+                            fit: BoxFit.fitWidth,
+                          ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
