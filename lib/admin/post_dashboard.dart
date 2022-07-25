@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pro_talent/admin/const/addnew.dart';
 import 'package:pro_talent/admin/const/filter.dart';
 
 import 'const/dropdownbuttondates.dart';
@@ -39,34 +40,7 @@ class _PostDashboardState extends State<PostDashboard> {
                           fontSize: 20,
                         )),
                   ),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(4),
-                    child: Stack(
-                      children: <Widget>[
-                        Positioned.fill(
-                          child: Container(
-                            decoration: const BoxDecoration(
-                              gradient: LinearGradient(
-                                colors: <Color>[
-                                  Color(0xFF1976D2),
-                                  Color(0xFF42A5F5),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        TextButton(
-                          style: TextButton.styleFrom(
-                            padding: const EdgeInsets.all(16.0),
-                            primary: Colors.black,
-                            textStyle: const TextStyle(fontSize: 15),
-                          ),
-                          onPressed: () {},
-                          child: const Text("Add New Post"),
-                        ),
-                      ],
-                    ),
-                  ),
+                  AddNewButton(),
                 ],
               ),
             ),
@@ -111,9 +85,7 @@ class _PostDashboardState extends State<PostDashboard> {
                       width: 50,
                     ),
 
-                    //     Spacer(
-                    //       flex: 1,
-                    // ),
+
                     ClipRRect(
                       borderRadius: BorderRadius.circular(3),
                       child: Stack(
