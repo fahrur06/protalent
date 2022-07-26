@@ -186,6 +186,7 @@ class SettingDashboard extends StatelessWidget {
                           ),
                           Text(
                               "In a few words, explain what this site is about.",
+                              overflow: TextOverflow.ellipsis,
                               style: GoogleFonts.didactGothic(
                                   color: Colors.grey,
                                   fontSize: 20,
@@ -215,7 +216,7 @@ class SettingDashboard extends StatelessWidget {
                         SizedBox(height: 10,),
                         Container(
                           height: 50,
-                          width: screenSize.width * 0.3,
+                          width: screenSize1* 0.5,
                           child: TextFormField(
                             decoration: InputDecoration(fillColor: Colors.grey[200],
                                
@@ -237,7 +238,7 @@ class SettingDashboard extends StatelessWidget {
                         SizedBox(height: 10,),
                         Container(
                           height: 50,
-                          width: screenSize.width * 0.3,
+                          width: screenSize1* 0.5,
                           child: TextFormField(
                             decoration: InputDecoration(
                                 
@@ -251,61 +252,61 @@ class SettingDashboard extends StatelessWidget {
                       ],
                     ),
                     SizedBox(width: 30,),
-                    Column(
-                      crossAxisAlignment:CrossAxisAlignment.start,
-                      mainAxisAlignment:MainAxisAlignment.start,
-                      children: [
+                    // Column(
+                    //   crossAxisAlignment:CrossAxisAlignment.start,
+                    //   mainAxisAlignment:MainAxisAlignment.start,
+                    //   children: [
                         
-                        SizedBox(height: 40,),
-                        Container(
-                              height: 50,
-                              width: screenSize1*0.5,
-                              child: ElevatedButton(
-                                  onPressed: () {},
-                                  style: ElevatedButton.styleFrom(
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(5),
-                                    ),
-                                    primary: Colors.white,
-                                    // shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0))),
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Icon(Icons.add,color: Colors.black,),
-                                      SizedBox(width: 10,),
-                                      Text(
+                    //     SizedBox(height: 40,),
+                    //     Container(
+                    //           height: 50,
+                    //           width: screenSize1*0.5,
+                    //           child: ElevatedButton(
+                    //               onPressed: () {},
+                    //               style: ElevatedButton.styleFrom(
+                    //                 shape: RoundedRectangleBorder(
+                    //                   borderRadius: BorderRadius.circular(5),
+                    //                 ),
+                    //                 primary: Colors.white70,
+                    //                 // shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0))),
+                    //               ),
+                    //               child: Row(
+                    //                 children: [
+                    //                   Icon(Icons.add,color: Colors.black,),
+                    //                   SizedBox(width: 10,),
+                    //                   Text(
 
-                                        "Add custom address",
-                                        style: TextStyle(color: Colors.black,fontSize: 20, fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
-                                  ))),
-                        SizedBox(height: 40,),
+                    //                     "Add custom address",
+                    //                     style: TextStyle(color: Colors.black,fontSize: 20, fontWeight: FontWeight.bold),
+                    //                   ),
+                    //                 ],
+                    //               ))),
+                    //     SizedBox(height: 40,),
                         
-                        Container(
-                              height: 50,
-                              width: screenSize1*0.5,
-                              child: ElevatedButton(
-                                  onPressed: () {},
-                                  style: ElevatedButton.styleFrom(
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(5),
-                                    ),
-                                    primary: Colors.white,
-                                    // shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0))),
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Icon(Icons.add,color: Colors.black,),
-                                      SizedBox(width: 10,),
-                                      Text(
-                                        "Add Number",
-                                        style: TextStyle(color: Colors.black,fontSize: 20, fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
-                                  )))
-                      ],
-                    ),
+                    //     Container(
+                    //           height: 50,
+                    //           width: screenSize1*0.5,
+                    //           child: ElevatedButton(
+                    //               onPressed: () {},
+                    //               style: ElevatedButton.styleFrom(
+                    //                 shape: RoundedRectangleBorder(
+                    //                   borderRadius: BorderRadius.circular(5),
+                    //                 ),
+                    //                 primary: Colors.white70,
+                    //                 // shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0))),
+                    //               ),
+                    //               child: Row(
+                    //                 children: [
+                    //                   Icon(Icons.add,color: Colors.black,),
+                    //                   SizedBox(width: 10,),
+                    //                   Text(
+                    //                     "Add Number",
+                    //                     style: TextStyle(color: Colors.black,fontSize: 20, fontWeight: FontWeight.bold),
+                    //                   ),
+                    //                 ],
+                    //               )))
+                    //   ],
+                    // ),
           
                     
                   ],
