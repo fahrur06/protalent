@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pro_talent/admin/pages/add_pages.dart';
 import 'package:pro_talent/admin/post/add_post.dart';
 import 'package:pro_talent/conts_warna.dart';
 import 'package:pro_talent/public/footer.dart';
@@ -75,7 +74,8 @@ class _ContactUsState extends State<ContactUs> {
                           child: const Text(
                               "Office : (021) 5795 - 8040, "
                               "Email : info@eksad.com",
-                              style: TextStyle(color: Colors.white, fontSize: 16)),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 16)),
                         ),
                         const Spacer(
                           flex: 2,
@@ -106,7 +106,8 @@ class _ContactUsState extends State<ContactUs> {
                               "Jl. DR. Ide Anak Agung Gde Agung, "
                               "Kuningan, Kecamatan Setiabudi, "
                               "Kota Jakarta Selatan, DKI Jakarta 12950",
-                              style: TextStyle(color: Colors.white, fontSize: 16)),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 16)),
                         ),
                         const Spacer(
                           flex: 2,
@@ -136,7 +137,8 @@ class _ContactUsState extends State<ContactUs> {
                               "Mon–Fri   "
                               "8.30 am–5.30 pm,  "
                               "Sat&Sun Closed",
-                              style: TextStyle(color: Colors.white, fontSize: 16)),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 16)),
                         ),
                         const Spacer(
                           flex: 1,
@@ -150,7 +152,8 @@ class _ContactUsState extends State<ContactUs> {
                 ),
                 Container(
                   padding: const EdgeInsets.all(50),
-                  decoration: const BoxDecoration(color: Colors.white, boxShadow: [
+                  decoration:
+                      const BoxDecoration(color: Colors.white, boxShadow: [
                     BoxShadow(
                       color: Colors.grey,
                       spreadRadius: 4,
@@ -161,68 +164,71 @@ class _ContactUsState extends State<ContactUs> {
                   ]),
                   height: screenSize.height * 0.7,
                   width: screenSize.width * 0.35,
-                  child: Column(
-                    children: [
-                      const Spacer(
-                        flex: 1,
-                      ),
-                      SizedBox(
-                        height: 60,
-                        child: Text(
-                          "Contact Us",
-                          style: GoogleFonts.robotoCondensed(
-                              fontSize: 50,
-                              fontWeight: FontWeight.bold,
-                              color: kTextColor),
+                  child: Container(
+                    height: screenSize.height,
+                    child: Column(
+                      children: [
+                        const Spacer(
+                          flex: 1,
                         ),
-                      ),
-                      const Spacer(
-                        flex: 1,
-                      ),
-                      SizedBox(
-                        height: 60,
-                        child: TextFormField(
-                          decoration:
-                              const InputDecoration(hintText: "Enter Your Name"),
-                        ),
-                      ),
-                      const Spacer(
-                        flex: 1,
-                      ),
-                      SizedBox(
-                        height: 60,
-                        child: TextFormField(
-                          decoration: const InputDecoration(
-                              hintText: "Enter A Valid Email Address"),
-                        ),
-                      ),
-                      const Spacer(
-                        flex: 1,
-                      ),
-                      SizedBox(
-                        height: 60,
-                        child: TextFormField(
-                          decoration: const InputDecoration(hintText: ""),
-                        ),
-                      ),
-                      const Spacer(
-                        flex: 1,
-                      ),
-                      SizedBox(
+                        SizedBox(
                           height: 60,
-                          width: 600,
-                          child: SizedBox(
-                            height: screenSize.height,
-                            width: screenSize.width,
-                            child: Botton_tombol(
-                              title: "SUBMIT",
-                              arah: AddPost(),
-                            ),
-                          )),
-                      const Spacer(
-                        flex: 1,
-                      ),
-                    ],
+                          child: Text(
+                            "Contact Us",
+                            style: GoogleFonts.robotoCondensed(
+                                fontSize: 50,
+                                fontWeight: FontWeight.bold,
+                                color: kTextColor),
+                          ),
+                        ),
+                        const Spacer(
+                          flex: 1,
+                        ),
+                        SizedBox(
+                          height: 60,
+                          child: TextFormField(
+                            decoration: const InputDecoration(
+                                hintText: "Enter Your Name"),
+                          ),
+                        ),
+                        const Spacer(
+                          flex: 1,
+                        ),
+                        SizedBox(
+                          height: 60,
+                          child: TextFormField(
+                            decoration: const InputDecoration(
+                                hintText: "Enter A Valid Email Address"),
+                          ),
+                        ),
+                        const Spacer(
+                          flex: 1,
+                        ),
+                        SizedBox(
+                          height: 60,
+                          child: TextFormField(
+                            decoration: const InputDecoration(hintText: ""),
+                          ),
+                        ),
+                        const Spacer(
+                          flex: 1,
+                        ),
+                        SizedBox(
+                            height: 60,
+                            width: 600,
+                            child: SizedBox(
+                              height: screenSize.height,
+                              width: screenSize.width,
+                              child: Botton_tombol(
+                                title: "SUBMIT",
+                                arah: AddPost(),
+                              ),
+                            )),
+                        const Spacer(
+                          flex: 1,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 const Spacer(

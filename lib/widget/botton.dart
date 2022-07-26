@@ -105,25 +105,56 @@ class _AlertFormState extends State<AlertForm> {
                   height: 30,
                 ),
                 TextFormField(
-                  decoration: InputDecoration(hintText: 'Nama Talent'),
+                  decoration: InputDecoration(hintText: 'Full Name'),
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 TextFormField(
-                  decoration: InputDecoration(hintText: 'Deskripsi Talent'),
+                  decoration: InputDecoration(hintText: 'Gender'),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(hintText: 'Expected Salary'),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(hintText: 'Latest Company'),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(hintText: 'Salary Status'),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(hintText: 'Latest Work Period'),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(hintText: 'Work Location'),
                 ),
                 SizedBox(
                   height: 30,
                 ),
-                Container(
-                    child: IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.add_photo_alternate,
-                          size: 35,
-                          color: Colors.grey,
-                        )))
+
+                // Container(
+                //     child: IconButton(
+                //         onPressed: () {},
+                //         icon: Icon(
+                //           Icons.add_photo_alternate,
+                //           size: 35,
+                //           color: Colors.grey,
+                //         )))
               ],
             ),
             actions: [
@@ -131,7 +162,7 @@ class _AlertFormState extends State<AlertForm> {
                   onPressed: () {
                     publish();
                   },
-                  child: Text('PUBLISH'))
+                  child: Text('SAVE'))
             ],
           ),
         );
@@ -160,7 +191,8 @@ class _AlertFormState extends State<AlertForm> {
 }
 
 class ButtonAppbar extends StatelessWidget {
-  const ButtonAppbar({Key? key, required this.arah, required this.menu, required this.warna})
+  const ButtonAppbar(
+      {Key? key, required this.arah, required this.menu, required this.warna})
       : super(key: key);
   final String menu;
   final Widget arah;
