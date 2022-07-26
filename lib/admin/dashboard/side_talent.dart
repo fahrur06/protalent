@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/admin/appbar.dart';
-import 'package:pro_talent/admin/main_dashboard.dart';
+import 'package:pro_talent/admin/dashboard/main_dashboard.dart';
 import 'package:side_navigation/side_navigation.dart';
-import 'package:pro_talent/admin/desc_talent.dart';
+import 'package:pro_talent/admin/dashboard/desc_talent.dart';
 import 'package:pro_talent/admin/client_dashboard.dart';
-import 'package:pro_talent/admin/pages_dashboard.dart';
-import 'package:pro_talent/admin/post_dashboard.dart';
-import 'package:pro_talent/admin/master_data.dart';
+import 'package:pro_talent/admin/pages/pages_dashboard.dart';
+import 'package:pro_talent/admin/post/post_dashboard.dart';
+import 'package:pro_talent/admin/master_data/master_data.dart';
 import 'package:pro_talent/admin/setting_dashboard.dart';
 import 'package:pro_talent/admin/talent_manage.dart';
 
-import '../login.dart';
+import '../../login.dart';
 
 class SideMenuTalent extends StatefulWidget {
   const SideMenuTalent({Key? key}) : super(key: key);

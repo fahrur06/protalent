@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/widget/responsive.dart';
-import 'package:pro_talent/public/appbar_home.dart';
+import 'package:pro_talent/appbar/appbar_post.dart';
 import 'package:pro_talent/homepage.dart';
 import 'package:pro_talent/widget/grid_post.dart';
 import 'package:pro_talent/public/const/text_post.dart';

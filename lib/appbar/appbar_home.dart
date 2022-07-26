@@ -71,23 +71,23 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context) {
         Spacer(
           flex: 4,
         ),
-        ButtonAppbar(arah: HomePage(), menu: 'Home'),
+        ButtonAppbar(arah: HomePage(), menu: 'Home',warna: Colors.blue,),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: HomePage(), menu: 'About Us'),
+        ButtonAppbar(arah: HomePage(), menu: 'About Us',warna: Colors.black,),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: HomePage(), menu: 'Employee'),
+        ButtonAppbar(arah: HomePage(), menu: 'Our Talent',warna: Colors.black,),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: Post(), menu: 'Post'),
+        ButtonAppbar(arah: Post(), menu: 'Post',warna: Colors.black,),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: ContactUs(), menu: 'Contact Us'),
+        ButtonAppbar(arah: ContactUs(), menu: 'Contact Us',warna: Colors.black,),
         Spacer(
           flex: 3,
         ),

@@ -5,7 +5,7 @@ import 'package:pro_talent/admin/post/add_post.dart';
 import 'package:pro_talent/conts.dart';
 import 'package:pro_talent/public/footer.dart';
 import 'package:pro_talent/widget/responsive.dart';
-import 'package:pro_talent/public/appbar_home.dart';
+import 'package:pro_talent/appbar/appbar_contact_us.dart';
 
 import '../../widget/botton.dart';
 
