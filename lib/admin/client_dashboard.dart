@@ -74,11 +74,11 @@ class _ClientDashboardState extends State<ClientDashboard> {
       body: Center(
         child: Container(
           //padding: EdgeInsets.symmetric(vertical: screenSize.height*0.1,horizontal: screenSize.width*0.2),
-          width: screenSize.width * 0.7,
-          height: screenSize.height * 0.7,
+          width: screenSize.width * 0.72,
+          height: screenSize.height * 0.75,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: Colors.blue, width: 5),
+            border: Border.all(color: Color.fromARGB(255, 18, 108, 178), width: 20),
           ),
 
           child: Column(
@@ -87,34 +87,38 @@ class _ClientDashboardState extends State<ClientDashboard> {
                 padding: EdgeInsets.only(top: 30, left: 50),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(10),
-                      topLeft: Radius.circular(10)),
-                  color: Colors.blue,
+                      topRight: Radius.circular(20),
+                      topLeft: Radius.circular(20)),
+                  color:
+                    Colors.white
+                  //Color.fromARGB(255, 18, 108, 178),
                 ),
                 width: screenSize.width * 0.7,
                 height: screenSize.height * 0.15,
                 child: Text(
                   'Data Client',
                   style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40,
+                      color:
+                      //Colors.white,
+                      Color.fromARGB(255, 18, 108, 178),
+                      fontSize: 50,
                       fontWeight: FontWeight.bold,
                       letterSpacing: 2),
                 ),
               ),
               Container(
                 width: screenSize.width * 0.7,
-                height: screenSize.height * 0.025,
+                height: screenSize.height * 0.04,
                 decoration: BoxDecoration(
                   border: Border(
-                    top: BorderSide(color: Colors.blue, width: 5),
+                    top: BorderSide(color: Color.fromARGB(255, 18, 108, 178), width: 20),
                   ),
                 ),
               ),
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.blue,
+                  color: Color.fromARGB(255, 18, 108, 178),
                 ),
                 width: screenSize.width * 0.67,
                 height: screenSize.height * 0.5,
