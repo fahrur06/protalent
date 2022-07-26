@@ -27,7 +27,7 @@ class _ContactUsState extends State<ContactUs> {
       body: ListView(
         children: [
           Container(
-            height: 800,
+            height: screenSize.height,
             width: screenSize.width,
             color: Colors.white,
             child: Row(
@@ -57,20 +57,26 @@ class _ContactUsState extends State<ContactUs> {
                           children: [
                             const Icon(Icons.phone, color: Colors.white),
                             const SizedBox(width: 5),
-                            Text("CALL US",
-                                style: GoogleFonts.robotoCondensed(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold)),
+                            SizedBox(
+                              height: 60,
+                              child: Text("CALL US",
+                                  style: GoogleFonts.robotoCondensed(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold)),
+                            ),
                           ],
                         ),
                         const Spacer(
                           flex: 1,
                         ),
-                        const Text(
-                            "Office : (021) 5795 - 8040, "
-                            "Email : info@eksad.com",
-                            style: TextStyle(color: Colors.white, fontSize: 16)),
+                        SizedBox(
+                          height: 60,
+                          child: const Text(
+                              "Office : (021) 5795 - 8040, "
+                              "Email : info@eksad.com",
+                              style: TextStyle(color: Colors.white, fontSize: 16)),
+                        ),
                         const Spacer(
                           flex: 2,
                         ),
@@ -80,22 +86,28 @@ class _ContactUsState extends State<ContactUs> {
                             const SizedBox(
                               width: 5,
                             ),
-                            Text("LOCATION",
-                                style: GoogleFonts.robotoCondensed(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold)),
+                            SizedBox(
+                              height: 60,
+                              child: Text("LOCATION",
+                                  style: GoogleFonts.robotoCondensed(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold)),
+                            ),
                           ],
                         ),
                         const Spacer(
                           flex: 1,
                         ),
-                        const Text(
-                            "The East Tower 19th Floor, "
-                            "Jl. DR. Ide Anak Agung Gde Agung, "
-                            "Kuningan, Kecamatan Setiabudi, "
-                            "Kota Jakarta Selatan, DKI Jakarta 12950",
-                            style: TextStyle(color: Colors.white, fontSize: 16)),
+                        SizedBox(
+                          height: 60,
+                          child: const Text(
+                              "The East Tower 19th Floor, "
+                              "Jl. DR. Ide Anak Agung Gde Agung, "
+                              "Kuningan, Kecamatan Setiabudi, "
+                              "Kota Jakarta Selatan, DKI Jakarta 12950",
+                              style: TextStyle(color: Colors.white, fontSize: 16)),
+                        ),
                         const Spacer(
                           flex: 2,
                         ),
@@ -105,21 +117,27 @@ class _ContactUsState extends State<ContactUs> {
                             const SizedBox(
                               width: 5,
                             ),
-                            Text("BUSINESS HOURS",
-                                style: GoogleFonts.robotoCondensed(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold)),
+                            SizedBox(
+                              height: 60,
+                              child: Text("BUSINESS HOURS",
+                                  style: GoogleFonts.robotoCondensed(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold)),
+                            ),
                           ],
                         ),
                         const Spacer(
                           flex: 1,
                         ),
-                        const Text(
-                            "Mon–Fri   "
-                            "8.30 am–5.30 pm,  "
-                            "Sat&Sun Closed",
-                            style: TextStyle(color: Colors.white, fontSize: 16)),
+                        SizedBox(
+                          height: 60,
+                          child: const Text(
+                              "Mon–Fri   "
+                              "8.30 am–5.30 pm,  "
+                              "Sat&Sun Closed",
+                              style: TextStyle(color: Colors.white, fontSize: 16)),
+                        ),
                         const Spacer(
                           flex: 1,
                         ),
@@ -148,32 +166,44 @@ class _ContactUsState extends State<ContactUs> {
                       const Spacer(
                         flex: 1,
                       ),
-                      Text(
-                        "Contact Us",
-                        style: GoogleFonts.robotoCondensed(
-                            fontSize: 50,
-                            fontWeight: FontWeight.bold,
-                            color: kTextColor),
+                      SizedBox(
+                        height: 60,
+                        child: Text(
+                          "Contact Us",
+                          style: GoogleFonts.robotoCondensed(
+                              fontSize: 50,
+                              fontWeight: FontWeight.bold,
+                              color: kTextColor),
+                        ),
                       ),
                       const Spacer(
                         flex: 1,
                       ),
-                      TextFormField(
-                        decoration:
-                            const InputDecoration(hintText: "Enter Your Name"),
+                      SizedBox(
+                        height: 60,
+                        child: TextFormField(
+                          decoration:
+                              const InputDecoration(hintText: "Enter Your Name"),
+                        ),
                       ),
                       const Spacer(
                         flex: 1,
                       ),
-                      TextFormField(
-                        decoration: const InputDecoration(
-                            hintText: "Enter A Valid Email Address"),
+                      SizedBox(
+                        height: 60,
+                        child: TextFormField(
+                          decoration: const InputDecoration(
+                              hintText: "Enter A Valid Email Address"),
+                        ),
                       ),
                       const Spacer(
                         flex: 1,
                       ),
-                      TextFormField(
-                        decoration: const InputDecoration(hintText: ""),
+                      SizedBox(
+                        height: 60,
+                        child: TextFormField(
+                          decoration: const InputDecoration(hintText: ""),
+                        ),
                       ),
                       const Spacer(
                         flex: 1,
@@ -181,9 +211,13 @@ class _ContactUsState extends State<ContactUs> {
                       SizedBox(
                           height: 60,
                           width: 600,
-                          child: Botton_tombol(
-                            title: "SUBMIT",
-                            arah: AddPost(),
+                          child: SizedBox(
+                            height: screenSize.height,
+                            width: screenSize.width,
+                            child: Botton_tombol(
+                              title: "SUBMIT",
+                              arah: AddPost(),
+                            ),
                           )),
                       const Spacer(
                         flex: 1,

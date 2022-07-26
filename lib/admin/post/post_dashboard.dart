@@ -100,7 +100,7 @@ class _PostDashboardState extends State<PostDashboard> {
                         ),
                         TextButton(
                           style: TextButton.styleFrom(
-                            padding: const EdgeInsets.all(10.0),
+                            padding: const EdgeInsets.all(16.0),
                             primary: Colors.black,
                             backgroundColor: Colors.blue,
                             textStyle: const TextStyle(fontSize: 15),

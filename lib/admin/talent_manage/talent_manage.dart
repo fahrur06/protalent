@@ -68,95 +68,100 @@ class _TalentmanagementState extends State<TalentManagement> {
           height: screenSize.height,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: Colors.blue, width: 5),
+            border: Border.all(color: Color.fromARGB(255, 18, 108, 178), width: 5),
           ),
 
-          child: Column(
-            children: [
-              Container(
-                padding: EdgeInsets.only(top: 30, left: 50),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(10),
-                      topLeft: Radius.circular(10)),
-                  color: Colors.blue,
-                ),
-                width: screenSize.width * 0.7,
-                height: screenSize.height * 0.20,
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        Text(
-                          'Talent Management',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 40,
-                              fontWeight: FontWeight.bold,
-                              letterSpacing: 2),
-                        ),
-                        Spacer(
-                          flex: 15,
-                        ),
-                        Container(
-                          height: 30,
-                          width: 180,
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Colors.white,
-                              prefixIcon: const Icon(Icons.search),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
-                                    width: 1, color: Colors.blue),
-                                borderRadius: BorderRadius.circular(5),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
-                                    width: 1, color: Colors.blue),
-                                borderRadius: BorderRadius.circular(5),
+          child: Container(
+            color: Color.fromARGB(255, 18, 108, 178),
+            child: Column(
+              children: [
+                Container(
+                  padding: EdgeInsets.only(top: 30, left: 50),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(10),
+                        topLeft: Radius.circular(10)),
+                    color: Color.fromARGB(255, 18, 108, 178),
+                  ),
+                  width: screenSize.width * 0.7,
+                  height: screenSize.height * 0.20,
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            'Talent Management',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 40,
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 2),
+                          ),
+                          Spacer(
+                            flex: 15,
+                          ),
+                          Container(
+                            height: 30,
+                            width: 180,
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                filled: true,
+                                fillColor: Colors.white,
+                                prefixIcon: const Icon(Icons.search),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                      width: 1, color: Colors.blue),
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                      width: 1, color: Colors.blue),
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 30,
-                    ),
-                    AlertForm(),
-                  ],
-                ),
-              ),
-              Container(
-                width: screenSize.width * 0.7,
-                height: screenSize.height * 0.025,
-                decoration: BoxDecoration(
-                  border: Border(
-                    top: BorderSide(color: Colors.blue, width: 5),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      AlertForm(),
+                    ],
                   ),
                 ),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.blue,
+                Container(
+                  width: screenSize.width * 0.7,
+                  height: screenSize.height * 0.025,
+                  decoration: BoxDecoration(
+                    border: Border(
+                      top: BorderSide(color: Color.fromARGB(255, 18, 108, 178), width: 5),
+                    ),
+                  ),
                 ),
-                width: screenSize.width * 0.67,
-                height: screenSize.height * 0.6,
-                child: Center(
-                  child: Container(
-                    width: screenSize.width * 0.63,
-                    height: screenSize.height * 0.42,
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
                     color: Colors.white,
-                    child: EasyTable<_TalentManagementState>(
-                      _model,
-                      columnsFit: true,
+                  ),
+                  width: screenSize.width * 0.67,
+                  height: screenSize.height * 0.6,
+                  child: Center(
+                    child: Container(
+                      width: screenSize.width * 0.63,
+                      height: screenSize.height * 0.42,
+                      color: Colors.white,
+                      child: Container(
+                        child: EasyTable<_TalentManagementState>(
+                          _model,
+                          columnsFit: true,
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
