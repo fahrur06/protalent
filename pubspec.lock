@@ -43,13 +43,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.0"
-  collapsible_sidebar:
-    dependency: "direct main"
-    description:
-      name: collapsible_sidebar
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.1+2"
   collection:
     dependency: transitive
     description:
@@ -85,6 +78,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.2"
+  dropdown_search:
+    dependency: "direct main"
+    description:
+      name: dropdown_search
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "5.0.2"
   easy_table:
     dependency: "direct main"
     description:
@@ -152,7 +152,7 @@ packages:
     source: hosted
     version: "3.0.1"
   http:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: http
       url: "https://pub.dartlang.org"

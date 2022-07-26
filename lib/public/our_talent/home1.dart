@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/admin/const/text_homepage.dart';
+import 'package:pro_talent/const/text_homepage.dart';
 import 'package:pro_talent/widget/botton.dart';
 import 'package:pro_talent/register.dart';
 import 'dart:math';

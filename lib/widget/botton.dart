@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../conts.dart';
+import '../conts_warna.dart';
 
 class botton_tombol2 extends StatelessWidget {
   const botton_tombol2({
@@ -191,10 +191,11 @@ class _AlertFormState extends State<AlertForm> {
 }
 
 class ButtonAppbar extends StatelessWidget {
-  const ButtonAppbar({Key? key, required this.arah, required this.menu})
+  const ButtonAppbar({Key? key, required this.arah, required this.menu, required this.warna})
       : super(key: key);
   final String menu;
   final Widget arah;
+  final Color warna;
 
   @override
   Widget build(BuildContext context) {
@@ -222,7 +223,7 @@ class ButtonAppbar extends StatelessWidget {
             if (states.contains(MaterialState.hovered))
               // ignore: curly_braces_in_flow_control_structures
               return Colors.blue;
-            return Colors.black; // null throus error in flutter 2.2+.
+            return warna; // null throus error in flutter 2.2+.
           }),
         ),
       ),

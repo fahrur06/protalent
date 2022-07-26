@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/admin/const/addnew.dart';
-import 'package:pro_talent/admin/const/apply.dart';
-import 'package:pro_talent/admin/const/filter.dart';
+import 'package:pro_talent/const/addnew.dart';
+import 'package:pro_talent/const/apply.dart';
+import 'package:pro_talent/const/filter.dart';
 import 'package:pro_talent/admin/pages/add_pages.dart';
 
 class PagesDashboard extends StatefulWidget {

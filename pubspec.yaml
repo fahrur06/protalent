@@ -27,6 +27,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  dropdown_search: ^5.0.2
   carousel_slider: ^4.1.1
   easy_table: ^2.0.1
   sidebarx: ^0.7.0
@@ -38,11 +39,11 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   side_navigation: ^1.0.2
-  collapsible_sidebar: ^2.0.1+2
   flip_card: ^0.6.0
   google_fonts: ^3.0.1
   dependencies:
   font_awesome_flutter: ^10.1.0
+  http: ^0.13.4
 
 dev_dependencies:
   flutter_test:
