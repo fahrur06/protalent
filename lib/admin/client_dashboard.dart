@@ -117,8 +117,8 @@ class _ClientDashboardState extends State<ClientDashboard> {
               ),
               Container(
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Color.fromARGB(255, 18, 108, 178),
+                  // borderRadius: BorderRadius.circular(20),
+                  // color: Color.fromARGB(255, 18, 108, 178),
                 ),
                 width: screenSize.width * 0.65,
                 height: screenSize.height * 0.46,
