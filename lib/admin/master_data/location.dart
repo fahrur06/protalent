@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/conts.dart';
+import 'package:pro_talent/conts_warna.dart';
 import 'package:easy_table/easy_table.dart';
 
 class Location extends StatefulWidget {

@@ -71,6 +71,7 @@ class _ClientDashboardState extends State<ClientDashboard> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Color.fromRGBO(238, 224, 224, 1),
       body: Center(
         child: Container(
           //padding: EdgeInsets.symmetric(vertical: screenSize.height*0.1,horizontal: screenSize.width*0.2),
@@ -79,6 +80,7 @@ class _ClientDashboardState extends State<ClientDashboard> {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             border: Border.all(color: Color.fromARGB(255, 18, 108, 178), width: 20),
+            color: Colors.white,
           ),
 
           child: Column(

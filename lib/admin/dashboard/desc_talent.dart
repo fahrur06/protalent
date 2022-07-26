@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/admin/const/text_dashboard.dart';
+import 'package:pro_talent/const/text_dashboard.dart';
 import 'package:pro_talent/admin/dashboard.dart';
 
 class SelectTalent extends StatelessWidget {

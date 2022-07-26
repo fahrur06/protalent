@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/admin/const/text_homepage.dart';
+import 'package:pro_talent/const/text_homepage.dart';
 import 'package:pro_talent/widget/expansionpanel_home4.dart';
 
 class Home4 extends StatefulWidget {
