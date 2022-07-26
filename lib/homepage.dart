@@ -4,7 +4,7 @@ import 'package:pro_talent/public/our_talent/home1.dart';
 import 'package:pro_talent/public/our_talent/home2.dart';
 import 'package:pro_talent/public/our_talent/home3.dart';
 import 'package:pro_talent/public/our_talent/home4.dart';
-import 'package:pro_talent/public/appbar_home.dart';
+import 'package:pro_talent/appbar/appbar_home.dart';
 import 'package:pro_talent/widget/responsive.dart';
 
 

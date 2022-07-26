@@ -3,7 +3,7 @@ import 'package:pro_talent/admin/const/addnew.dart';
 import 'package:pro_talent/admin/const/filter.dart';
 import 'package:pro_talent/admin/post/add_post.dart';
 
-import 'const/dropdownbuttondates.dart';
+import '../const/dropdownbuttondates.dart';
 
 class PostDashboard extends StatefulWidget {
   const PostDashboard({Key? key}) : super(key: key);

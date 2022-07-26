@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:pro_talent/admin/side_talent.dart';
+import 'package:pro_talent/admin/dashboard/side_talent.dart';
 
 import 'desc_talent.dart';
 
