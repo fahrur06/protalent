@@ -14,6 +14,9 @@ class FindTalent extends StatefulWidget {
   State<FindTalent> createState() => _FindTalentState();
 }
 
+
+
+
 class _FindTalentState extends State<FindTalent> {
 
   final myKey = GlobalKey<DropdownSearchState<MultiLevelString>>();
@@ -32,18 +35,18 @@ class _FindTalentState extends State<FindTalent> {
         // Add your onPressed code here!
       },
       backgroundColor: Colors.green,
-      child: const Icon(Icons.whatsapp),
+      child: const Icon(Icons.whatsapp,size: 45,),
     ),
         body: Column(
           children: [
             Container(
               width: screenSize.width,
               height: screenSize.height*0.15,
-              color: Colors.grey,
+              color: Color.fromRGBO(238, 224, 224, 1),
               child: Center(
                 child: Container(
                   width: screenSize.width*0.83,
-                  height: screenSize.height*0.11,
+                  height: screenSize.height*0.12,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.blue
@@ -54,24 +57,53 @@ class _FindTalentState extends State<FindTalent> {
                         height: screenSize.height*0.04,
                         child: Row(
                           children: [
-                            Spacer(),
+                            SizedBox(width: 23,),
                             Text('Position',style: TextStyle(color: Colors.white,fontSize: 17,fontWeight: FontWeight.bold),),
                             Spacer(flex: 2,),
+                            SizedBox(width: 15,),
                             Text('Skill',style: TextStyle(color: Colors.white,fontSize: 17,fontWeight: FontWeight.bold),),
                             Spacer(flex: 2,),
+                            SizedBox(width: 33,),
                             Text('Level',style: TextStyle(color: Colors.white,fontSize: 17,fontWeight: FontWeight.bold),),
                             Spacer(flex: 2,),
+                            SizedBox(width: 31,),
                             Text('Industry',style: TextStyle(color: Colors.white,fontSize: 17,fontWeight: FontWeight.bold),),
                             Spacer(flex: 2,),
+                            SizedBox(width: 21,),
                             Text('Location',style: TextStyle(color: Colors.white,fontSize: 17,fontWeight: FontWeight.bold),),
-                            Spacer(flex: 4,),
+                            Spacer(flex: 5,),
                           ],
                         ),
                       ),
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
+                          SizedBox(width: 20,),
                           DropDownDashboard(),
+                          SizedBox(width: 20,),
+                          DropDownDashboard(),
+                          SizedBox(width: 20,),
+                          DropDownDashboard(),
+                          SizedBox(width: 20,),
+                          DropDownDashboard(),
+                          SizedBox(width: 20,),
+                          DropDownDashboard(),
+                          SizedBox(width: 20,),
+                          Container(
+                            color: Colors.white,
+                            height: 45,
+                            width: screenSize.width*0.12,
+                            child: ElevatedButton.icon(
+                              style: ElevatedButton.styleFrom(primary: Colors.white,onPrimary: Colors.blue),
+                                onPressed: (){},
+                                icon: Container(
+                                  width:  screenSize.width*0.02,
+                                    child: Icon(Icons.search,color: Colors.blue,)),
+                                label: Container(
+                                  width: screenSize.width*0.08,
+                                    child: Text('Search',style: TextStyle(color: Colors.blue,fontSize: 19,fontWeight: FontWeight.w500),)))
+                          ),
+
 
                         ],
                       ),
@@ -84,6 +116,7 @@ class _FindTalentState extends State<FindTalent> {
               padding: EdgeInsets.only(left: 30,right: 30,top: 20),
               width: screenSize.width,
               height: screenSize.height*0.75,
+              color: Color.fromRGBO(238, 224, 224, 1),
               child: GridView.count(
                 controller: ScrollController(),
                 crossAxisCount: 3,

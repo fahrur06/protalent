@@ -18,7 +18,7 @@ class _DropDownDashboardState extends State<DropDownDashboard> {
 
   final myKey = GlobalKey<DropdownSearchState<MultiLevelString>>();
   final List<MultiLevelString> myItems = [
-    MultiLevelString(level1: '1'),
+    MultiLevelString(level1: 'Software'),
     MultiLevelString(level1: "2"),
     MultiLevelString(level1: "3"),
     MultiLevelString(level1: "4")
@@ -27,8 +27,15 @@ class _DropDownDashboardState extends State<DropDownDashboard> {
 
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
     return Container(
-      width: 100,
+      width: screenSize.width*0.124,
+
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(5),
+        color: Colors.white,
+      ),
+
       child: DropdownSearch<MultiLevelString>(
         key: myKey,
         items: myItems,
@@ -44,6 +51,7 @@ class _DropDownDashboardState extends State<DropDownDashboard> {
             );
           },
         ),
+        clearButtonProps: ClearButtonProps(icon: Icon(Icons.clear,color: Colors.grey,),isVisible: true),
       ),
     );
   }
