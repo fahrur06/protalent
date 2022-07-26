@@ -68,7 +68,8 @@ class _TalentmanagementState extends State<TalentManagement> {
           height: screenSize.height,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: Colors.blue, width: 5),
+            border:
+                Border.all(color: Color.fromARGB(255, 18, 108, 178), width: 5),
           ),
 
           child: Column(
@@ -79,7 +80,7 @@ class _TalentmanagementState extends State<TalentManagement> {
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(10),
                       topLeft: Radius.circular(10)),
-                  color: Colors.blue,
+                  color: Color.fromARGB(255, 18, 108, 178),
                 ),
                 width: screenSize.width * 0.7,
                 height: screenSize.height * 0.20,
@@ -108,12 +109,14 @@ class _TalentmanagementState extends State<TalentManagement> {
                               prefixIcon: const Icon(Icons.search),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: const BorderSide(
-                                    width: 1, color: Colors.blue),
+                                    width: 1,
+                                    color: Color.fromARGB(255, 18, 108, 178)),
                                 borderRadius: BorderRadius.circular(5),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderSide: const BorderSide(
-                                    width: 1, color: Colors.blue),
+                                    width: 1,
+                                    color: Color.fromARGB(255, 18, 108, 178)),
                                 borderRadius: BorderRadius.circular(5),
                               ),
                             ),
@@ -133,14 +136,15 @@ class _TalentmanagementState extends State<TalentManagement> {
                 height: screenSize.height * 0.025,
                 decoration: BoxDecoration(
                   border: Border(
-                    top: BorderSide(color: Colors.blue, width: 5),
+                    top: BorderSide(
+                        color: Color.fromARGB(255, 18, 108, 178), width: 5),
                   ),
                 ),
               ),
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.blue,
+                  color: Color.fromARGB(255, 18, 108, 178),
                 ),
                 width: screenSize.width * 0.67,
                 height: screenSize.height * 0.6,

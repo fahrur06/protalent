@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:easy_table/easy_table.dart';
 
-class ClientDashboard extends StatefulWidget {
-  const ClientDashboard({Key? key}) : super(key: key);
+class AddTalent extends StatefulWidget {
+  const AddTalent({Key? key}) : super(key: key);
 
   @override
-  State<ClientDashboard> createState() => _ClientDashboardState();
+  State<AddTalent> createState() => _AddTalentState();
 }
 
-class _client {
-  _client(
+class _Talent {
+  _Talent(
       this.no, this.nama, this.deskripsi, this.lokasi, this.post, this.delete);
 
   final int no;
@@ -20,34 +20,34 @@ class _client {
   final Widget delete;
 }
 
-class _ClientDashboardState extends State<ClientDashboard> {
-  EasyTableModel<_client>? _model;
+class _AddTalentState extends State<AddTalent> {
+  EasyTableModel<_Talent>? _model;
 
   @override
   void initState() {
     super.initState();
 
-    List<_client> rows = [
-      _client(1, 'Budi', 'Dibu', 'South Jakarta', '2022-07-18',
+    List<_Talent> rows = [
+      _Talent(1, 'Budi', 'Dibu', 'South Jakarta', '2022-07-18',
           TextButton(onPressed: () {}, child: Text('delete'))),
-      _client(2, 'Fahrur', 'Dota 2 Champions', 'Madura', '2022-01-01',
+      _Talent(2, 'Fahrur', 'Dota 2 Champions', 'Madura', '2022-01-01',
           TextButton(onPressed: () {}, child: Text('delete'))),
-      _client(3, 'Udin', 'Jualan tahu bulat', 'Ciamis', '2022-03-29',
+      _Talent(3, 'Udin', 'Jualan tahu bulat', 'Ciamis', '2022-03-29',
           TextButton(onPressed: () {}, child: Text('delete'))),
-      _client(4, 'Rizki', 'Pro Player Mobile Legend', 'Bekasi', '2022-04-2',
+      _Talent(4, 'Rizki', 'Pro Player Mobile Legend', 'Bekasi', '2022-04-2',
           TextButton(onPressed: () {}, child: Text('delete'))),
-      _client(
+      _Talent(
           5,
           'Faid',
           'Angker, KRL Mania, Pengguna Transportasi Public',
           'Bogor',
           '2022-05-29',
           TextButton(onPressed: () {}, child: Text('delete'))),
-      _client(6, 'Tohap', 'Member Eksad', 'Jakarta Barat', '2022-03-9',
+      _Talent(6, 'Tohap', 'Member Eksad', 'Jakarta Barat', '2022-03-9',
           TextButton(onPressed: () {}, child: Text('delete'))),
     ];
 
-    _model = EasyTableModel<_client>(rows: rows, columns: [
+    _model = EasyTableModel<_Talent>(rows: rows, columns: [
       EasyTableColumn(
           name: 'No',
           headerAlignment: Alignment.center,
@@ -128,7 +128,7 @@ class _ClientDashboardState extends State<ClientDashboard> {
                     width: screenSize.width * 0.63,
                     height: screenSize.height * 0.42,
                     color: Colors.white,
-                    child: EasyTable<_client>(
+                    child: EasyTable<_Talent>(
                       _model,
                       columnsFit: true,
                     ),
