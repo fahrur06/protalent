@@ -191,7 +191,8 @@ class _AlertFormState extends State<AlertForm> {
 }
 
 class ButtonAppbar extends StatelessWidget {
-  const ButtonAppbar({Key? key, required this.arah, required this.menu, required this.warna})
+  const ButtonAppbar(
+      {Key? key, required this.arah, required this.menu, required this.warna})
       : super(key: key);
   final String menu;
   final Widget arah;

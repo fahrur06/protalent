@@ -99,7 +99,7 @@ class _AddTalentState extends State<AddTalent> {
                 width: screenSize.width * 0.7,
                 height: screenSize.height * 0.15,
                 child: Text(
-                  'Data Client',
+                  'Create Talent',
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 40,
