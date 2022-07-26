@@ -149,6 +149,10 @@ class _AlertFormState extends State<AlertForm> {
             if (posisi == null || posisi.isEmpty) return;
             setState(() => this.posisi = posisi);
           },
+          style: ElevatedButton.styleFrom(
+            primary: Colors.white,
+            onPrimary: Colors.black,
+          ),
         )),
       ],
     );

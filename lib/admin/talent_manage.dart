@@ -83,45 +83,48 @@ class _TalentmanagementState extends State<TalentManagement> {
                 ),
                 width: screenSize.width * 0.7,
                 height: screenSize.height * 0.20,
-                child: Row(
+                child: Column(
                   children: [
-                    Text(
-                      'Talent Management',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 40,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 2),
-                    ),
-                    Spacer(
-                      flex: 15,
-                    ),
-                    Container(
-                      height: 30,
-                      width: 180,
-                      child: TextFormField(
-                        decoration: InputDecoration(
-                          filled: true,
-                          fillColor: Colors.white,
-                          prefixIcon: const Icon(Icons.search),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide:
-                                const BorderSide(width: 1, color: Colors.blue),
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide:
-                                const BorderSide(width: 1, color: Colors.blue),
-                            borderRadius: BorderRadius.circular(5),
+                    Row(
+                      children: [
+                        Text(
+                          'Talent Management',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 40,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 2),
+                        ),
+                        Spacer(
+                          flex: 15,
+                        ),
+                        Container(
+                          height: 30,
+                          width: 180,
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                              filled: true,
+                              fillColor: Colors.white,
+                              prefixIcon: const Icon(Icons.search),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: const BorderSide(
+                                    width: 1, color: Colors.blue),
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: const BorderSide(
+                                    width: 1, color: Colors.blue),
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                            ),
                           ),
                         ),
-                      ),
-                    ),
-                    Column(
-                      children: [
-                        AlertForm(),
                       ],
                     ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    AlertForm(),
                   ],
                 ),
               ),
@@ -140,7 +143,7 @@ class _TalentmanagementState extends State<TalentManagement> {
                   color: Colors.blue,
                 ),
                 width: screenSize.width * 0.67,
-                height: screenSize.height * 0.5,
+                height: screenSize.height * 0.6,
                 child: Center(
                   child: Container(
                     width: screenSize.width * 0.63,
