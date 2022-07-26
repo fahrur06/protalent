@@ -1,32 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/admin/dashboard/main_dashboard.dart';
+import 'package:pro_talent/client/find_talent.dart';
+import 'package:pro_talent/client/hired_talent.dart';
+import 'package:pro_talent/client/my_employee.dart';
 import 'package:side_navigation/side_navigation.dart';
-import 'package:pro_talent/admin/dashboard/desc_talent.dart';
-import 'package:pro_talent/admin/client_dashboard.dart';
-import 'package:pro_talent/admin/pages/pages_dashboard.dart';
-import 'package:pro_talent/admin/post/post_dashboard.dart';
-import 'package:pro_talent/admin/master_data/master_data.dart';
-import 'package:pro_talent/admin/setting_dashboard.dart';
-import 'package:pro_talent/admin/talent_manage/talent_manage.dart';
 
-class SideMenu extends StatefulWidget {
-  const SideMenu({Key? key}) : super(key: key);
+
+
+class SideClient extends StatefulWidget {
+  const SideClient({Key? key}) : super(key: key);
 
   @override
-  _SideMenuState createState() => _SideMenuState();
+  State<SideClient> createState() => _SideClientState();
 }
 
-class _SideMenuState extends State<SideMenu> {
+class _SideClientState extends State<SideClient> {
+
   List<Widget> views = [
-    MainDashboard(),
-    SettingDashboard(),
-    PagesDashboard(),
-    PostDashboard(),
-    MasterData(),
-    ClientDashboard(),
-    TalentManagement(),
+  FindTalent(),
+
   ];
   int selectedIndex = 0;
+
 
   @override
   Widget build(BuildContext context) {
@@ -45,12 +39,12 @@ class _SideMenuState extends State<SideMenu> {
               title: Container(
                 padding: EdgeInsets.only(left: 10),
                 child: Text(
-              'Fahrur Huzain',
-              style: TextStyle(
-              color: Colors.white,
-              fontSize: 18,
-              fontWeight: FontWeight.bold),
-              ),),
+                  'Fahrur Huzain',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold),
+                ),),
               subtitle: Container(),
               // subtitle: Text(
               //   'Admin Eksad',
@@ -60,33 +54,18 @@ class _SideMenuState extends State<SideMenu> {
             selectedIndex: selectedIndex,
             items: const [
               SideNavigationBarItem(
-                icon: Icons.home,
-                label: 'Dashboard',
+                icon: Icons.person_search,
+                label: 'Find Talent',
               ),
               SideNavigationBarItem(
-                icon: Icons.settings,
-                label: 'Settings',
+                icon: Icons.note_outlined,
+                label: 'Hired Talent',
               ),
               SideNavigationBarItem(
-                icon: Icons.insert_page_break,
-                label: 'Pages',
+                icon: Icons.settings_applications,
+                label: 'My Employee',
               ),
-              SideNavigationBarItem(
-                icon: Icons.post_add,
-                label: 'Post',
-              ),
-              SideNavigationBarItem(
-                icon: Icons.table_rows,
-                label: 'Master Data',
-              ),
-              SideNavigationBarItem(
-                icon: Icons.person,
-                label: 'Client',
-              ),
-              SideNavigationBarItem(
-                icon: Icons.people_alt,
-                label: 'Talent Management',
-              ),
+
             ],
             onTap: (index) {
               setState(() {
@@ -103,7 +82,7 @@ class _SideMenuState extends State<SideMenu> {
                   shrinkIconColor: Colors.white,
                   expandIconColor: Colors.white),
               itemTheme:
-                  SideNavigationBarItemTheme(selectedItemColor: Colors.white,unselectedItemColor: Colors.white60),
+              SideNavigationBarItemTheme(selectedItemColor: Colors.white,unselectedItemColor: Colors.white60),
               dividerTheme: SideNavigationBarDividerTheme.standard(),
             ),
           ),

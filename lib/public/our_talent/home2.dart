@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/admin/const/text_homepage.dart';
+import 'package:pro_talent/const/text_homepage.dart';
 
 class Home2 extends StatefulWidget {
   const Home2({Key? key}) : super(key: key);
