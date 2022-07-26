@@ -3,13 +3,23 @@ import 'package:pro_talent/login.dart';
 import '../widget/botton.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SettingDashboard extends StatelessWidget {
-  const SettingDashboard({Key? key}) : super(key: key);
+// class SettingDashboard extends StatelessWidget {
+//   const SettingDashboard({Key? key}) : super(key: key);
 
+// }
+
+class SettingDashboard extends StatefulWidget {
+  const SettingDashboard({super.key});
+
+  @override
+  State<SettingDashboard> createState() => _SettingDashboardState();
+}
+
+class _SettingDashboardState extends State<SettingDashboard> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    var screenSize1 = screenSize.width*0.6;
+    var screenSize1 = screenSize.width * 0.6;
     return Container(
       color: Color.fromRGBO(238, 224, 224, 1),
       height: 1000,
@@ -173,7 +183,6 @@ class SettingDashboard extends StatelessWidget {
                             width: screenSize1 * 0.5,
                             child: TextFormField(
                               decoration: InputDecoration(
-                                  
                                   labelText: "Talent Ready from Eksad",
                                   hintStyle: TextStyle(),
                                   border: OutlineInputBorder(
@@ -203,8 +212,8 @@ class SettingDashboard extends StatelessWidget {
                 Row(
                   children: [
                     Column(
-                      crossAxisAlignment:CrossAxisAlignment.start,
-                      mainAxisAlignment:MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(
                           "Email address",
@@ -213,21 +222,25 @@ class SettingDashboard extends StatelessWidget {
                               fontSize: 20,
                               fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         Container(
                           height: 50,
-                          width: screenSize1* 0.5,
+                          width: screenSize1 * 0.5,
                           child: TextFormField(
-                            decoration: InputDecoration(fillColor: Colors.grey[200],
-                               
+                            decoration: InputDecoration(
+                                fillColor: Colors.grey[200],
                                 labelText: "xxxxxx@eksad.com",
-                                  hintStyle: TextStyle(),
-                                  border: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          width: 1, color: Colors.grey))),
+                                hintStyle: TextStyle(),
+                                border: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        width: 1, color: Colors.grey))),
                           ),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         Text(
                           "No Office",
                           style: GoogleFonts.didactGothic(
@@ -235,28 +248,31 @@ class SettingDashboard extends StatelessWidget {
                               fontSize: 20,
                               fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         Container(
                           height: 50,
-                          width: screenSize1* 0.5,
+                          width: screenSize1 * 0.5,
                           child: TextFormField(
                             decoration: InputDecoration(
-                                
                                 labelText: "02x-xxxx-xxxx",
-                                  hintStyle: TextStyle(),
-                                  border: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          width: 1, color: Colors.grey))),
+                                hintStyle: TextStyle(),
+                                border: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        width: 1, color: Colors.grey))),
                           ),
                         ),
                       ],
                     ),
-                    SizedBox(width: 30,),
+                    SizedBox(
+                      width: 30,
+                    ),
                     // Column(
                     //   crossAxisAlignment:CrossAxisAlignment.start,
                     //   mainAxisAlignment:MainAxisAlignment.start,
                     //   children: [
-                        
+
                     //     SizedBox(height: 40,),
                     //     Container(
                     //           height: 50,
@@ -282,7 +298,7 @@ class SettingDashboard extends StatelessWidget {
                     //                 ],
                     //               ))),
                     //     SizedBox(height: 40,),
-                        
+
                     //     Container(
                     //           height: 50,
                     //           width: screenSize1*0.5,
@@ -307,8 +323,6 @@ class SettingDashboard extends StatelessWidget {
                     //               )))
                     //   ],
                     // ),
-          
-                    
                   ],
                 ),
                 Row(
@@ -337,8 +351,6 @@ class SettingDashboard extends StatelessWidget {
                       height: 30,
                       width: 0,
                     ),
-                   
-                   
                     Spacer(
                       flex: 30,
                     ),
