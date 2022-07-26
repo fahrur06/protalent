@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pro_talent/client/dashboard_client.dart';
 import 'package:pro_talent/register.dart';
 
 import 'admin/dashboard.dart';
@@ -168,7 +169,7 @@ class _loginState extends State<login> {
                                   context,
                                   MaterialPageRoute(
                                     builder: (Context) {
-                                      return Dashboard();
+                                      return DashboardClient();
                                     },
                                   ),
                                 );

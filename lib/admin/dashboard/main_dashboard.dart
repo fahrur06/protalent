@@ -24,7 +24,7 @@ class MainDashboard extends StatelessWidget {
       body: DefaultTabController(
           length: 3,
           child: Container(
-            padding: EdgeInsets.fromLTRB(50, 0, 50, 50),
+            padding: EdgeInsets.fromLTRB(50, 0, 50, 0),
             color: Colors.grey[200],
             child: Center(
               child: Column(
