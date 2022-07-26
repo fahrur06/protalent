@@ -213,6 +213,7 @@ class _ContactUsState extends State<ContactUs> {
                           width: 600,
                           child: SizedBox(
                             height: screenSize.height,
+                            width: screenSize.width,
                             child: Botton_tombol(
                               title: "SUBMIT",
                               arah: AddPost(),
