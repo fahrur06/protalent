@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pro_talent/admin/pages/add_pages.dart';
+import 'package:pro_talent/admin/post/add_post.dart';
 import 'package:pro_talent/conts.dart';
 import 'package:pro_talent/public/footer.dart';
 import 'package:pro_talent/widget/responsive.dart';
@@ -182,7 +183,7 @@ class _ContactUsState extends State<ContactUs> {
                           width: 600,
                           child: Botton_tombol(
                             title: "SUBMIT",
-                            arah: AddPages(),
+                            arah: AddPost(),
                           )),
                       const Spacer(
                         flex: 1,

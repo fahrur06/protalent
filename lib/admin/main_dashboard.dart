@@ -15,81 +15,60 @@ class MainDashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-        length: 3,
-        child: Container(
-          padding: EdgeInsets.fromLTRB(50, 0, 50, 50),
-          color: Colors.grey[200],
-          child: Center(
-            child: Column(
-              children: [
-                TabBar(
-                    labelColor: Color(0xFF214B9A),
-                    indicatorColor: Color(0xFF214B9A),
-                    tabs: [
-                      Container(
-                        height: 100,
-                        child: Tab(
-                          icon: Icon(
-                            Icons.person,
-                            size: 50,
+    return Scaffold(floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add your onPressed code here!
+        },
+        backgroundColor: Colors.green,
+        child: const Icon(Icons.whatsapp),
+      ),
+      body: DefaultTabController(
+          length: 3,
+          child: Container(
+            padding: EdgeInsets.fromLTRB(50, 0, 50, 50),
+            color: Colors.grey[200],
+            child: Center(
+              child: Column(
+                children: [
+                  TabBar(
+                      labelColor: Color(0xFF214B9A),
+                      indicatorColor: Color(0xFF214B9A),
+                      tabs: [
+                        Container(
+                          height: 100,
+                          child: Tab(
+                            icon: Icon(
+                              Icons.person,
+                              size: 50,
+                            ),
+                            text: "ALL",
                           ),
-                          text: "ALL",
                         ),
-                      ),
-                      Container(
-                        height: 100,
-                        child: Tab(
-                          icon: Icon(
-                            Icons.person,
-                            size: 50,
+                        Container(
+                          height: 100,
+                          child: Tab(
+                            icon: Icon(
+                              Icons.person,
+                              size: 50,
+                            ),
+                            text: "Available",
                           ),
-                          text: "Available",
                         ),
-                      ),
-                      Container(
-                        height: 100,
-                        child: Tab(
-                          icon: Icon(
-                            Icons.person,
-                            size: 50,
-                          ),
-                          text: "Hired",
-                        ),
-                      )
-                    ])
-                // TabBar(tabs: [
-                //   Container(
-                //     height: 120,
-                //     child: Tab(
-                //       child: pilihan1(
-                //         title: "ALL",
-                //         colorbackground: Color(0xff214B9A),
-                //         colortitle: Colors.white,
-                //       ),
-                //     ),
-                //   ),
-                //   Container(
-                //     height: 120,
-                //     child: Tab(
-                //       child: pilihan1(
-                //         title: "Available",
-                //         colorbackground: Colors.white,
-                //         colortitle: Color(0xff214B9A),
-                //       ),
-                //     ),
-                //   ),
-                //   Container(
-                //     height: 120,
-                //     child: Tab(
-                //       child: pilihan1(
-                //           title: "Hired",
-                //           colorbackground: Colors.white,
-                //           colortitle: Color(0xff214B9A)),
-                //     ),
-                //   )
-                // ]),
-                ,
+                        Container(
+                          height: 100,
+                          child: Tab(
+                            icon: Icon(
+                              Icons.person,
+                              size: 50,
+                            ),
+                            text: "Hired",))
+                      ],),
+        
+  
+                  SizedBox(
+                    height: 50,
+                
+          ),
                 SizedBox(
                   height: 50,
                 ),
@@ -449,11 +428,14 @@ class MainDashboard extends StatelessWidget {
                       )
                     ],
                   ),
-                ),
-              ],
+                 )
+                ],
+              ),
             ),
-          ),
-        ));
+            
+          )),
+    );
+        
   }
 }
 

@@ -11,15 +11,16 @@ class _AddPostState extends State<AddPost> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("Publish",
+        child: TextButton(
+      onPressed: () {},
+      child: const Text(
+        "Bantuin Dong...",
         style: TextStyle(
-          fontSize: 18,
+          fontSize: 20,
           letterSpacing: 1.5,
           fontWeight: FontWeight.w600,
         ),
       ),
-
-
-    );
+    ));
   }
 }
