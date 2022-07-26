@@ -17,7 +17,8 @@ class _SideClientState extends State<SideClient> {
 
   List<Widget> views = [
   FindTalent(),
-
+  HiredTalent(),
+    MyEmployee()
   ];
   int selectedIndex = 0;
 
