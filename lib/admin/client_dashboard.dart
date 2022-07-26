@@ -108,7 +108,7 @@ class _ClientDashboardState extends State<ClientDashboard> {
               ),
               Container(
                 width: screenSize.width * 0.7,
-                height: screenSize.height * 0.04,
+                height: screenSize.height * 0.06,
                 decoration: BoxDecoration(
                   border: Border(
                     top: BorderSide(color: Color.fromARGB(255, 18, 108, 178), width: 20),
@@ -120,8 +120,8 @@ class _ClientDashboardState extends State<ClientDashboard> {
                   borderRadius: BorderRadius.circular(20),
                   color: Color.fromARGB(255, 18, 108, 178),
                 ),
-                width: screenSize.width * 0.67,
-                height: screenSize.height * 0.5,
+                width: screenSize.width * 0.65,
+                height: screenSize.height * 0.46,
                 child: Center(
                   child: Container(
                     width: screenSize.width * 0.63,
