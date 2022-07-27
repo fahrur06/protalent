@@ -13,7 +13,7 @@ class _HiredTalentState extends State<HiredTalent> {
     var screenSize = MediaQuery.of(context).size;
     var screenSize1 = screenSize.width *0.8; 
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(20),
       color: Colors.grey[200],
       child: Column(
         children: [
@@ -44,7 +44,7 @@ class _HiredTalentState extends State<HiredTalent> {
                 Container(
                     width: screenSize.width * 0.3, child: Text("Name")),
                 Container(
-                    width: screenSize.width * 0.3, child: Text("Status")),
+                    width: screenSize.width * 0.2, child: Text("Status")),
                 Container(
                     width: screenSize.width * 0.3, child: Text("Position")),
               ],
@@ -54,7 +54,9 @@ class _HiredTalentState extends State<HiredTalent> {
               child: Container(
                 width: screenSize.width,
             color: Colors.white,
-            child: ListView(children: [
+            child: ListView(
+              controller: ScrollController(),
+                children: [
               ListProfil(
                 screenSize: screenSize,
                 nama: "Bagas Wijayanto",
@@ -253,7 +255,7 @@ class ListProfil extends StatelessWidget {
                   Text(nama)
                 ],
               )),
-          Container(width: screenSize.width * 0.3, child: Text(status)),
+          Container(width: screenSize.width * 0.2, child: Text(status)),
           Container(width: screenSize.width * 0.3, child: Text(posisi)),
         ],
       ),
