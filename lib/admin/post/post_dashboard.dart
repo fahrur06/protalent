@@ -24,7 +24,7 @@ class _PostDashboardState extends State<PostDashboard> {
     return Container(
       height: 2000,
       width: screenSize.width,
-      padding: const EdgeInsets.only(left: 100,right: 100),
+      padding: const EdgeInsets.only(left: 100, right: 100),
       color: const Color.fromRGBO(238, 224, 224, 1),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,7 +34,6 @@ class _PostDashboardState extends State<PostDashboard> {
             child: Row(
               children: [
                 Container(
-                  
                   child: const Text("Post     ",
                       style: TextStyle(
                         fontSize: 20,
@@ -50,7 +49,6 @@ class _PostDashboardState extends State<PostDashboard> {
                 children: [
                   TextButton(
                     style: TextButton.styleFrom(
-                      
                       primary: Colors.black,
                       textStyle: const TextStyle(fontSize: 15),
                     ),
@@ -111,7 +109,6 @@ class _PostDashboardState extends State<PostDashboard> {
                       ],
                     ),
                   ),
-                  
                 ],
               )),
           Row(
@@ -125,38 +122,37 @@ class _PostDashboardState extends State<PostDashboard> {
                 flex: 10,
               ),
               Text("3 items"),
-              
             ],
           ),
           Container(
             color: Colors.white,
-            height: 300,
+            height: screenSize.height * 0.5,
             width: screenSize.width,
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(10),
             child: Row(
               children: [
                 Container(
-                  child: DataTable(columns: [
-                    DataColumn(
-                        label: Checkbox(
-                            value: value,
-                            onChanged: (bool? value) {
-                              setState(() {
-                                this.value = value!;
-                              });
-                            })),
-                    const DataColumn(
-                        label: Text(
+                  child: DataTable(
+                      columnSpacing: 30,
+                      dataRowHeight: 70,
+                      horizontalMargin: 10,
+                      columns: [
+                    DataColumn(label: Checkbox(
+                        value: value,
+                        onChanged: (bool? value) {
+                          setState(() {
+                            this.value = value!;
+                          });
+                        })),
+                    const DataColumn(label: Text(
                       'Title',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     )),
-                    const DataColumn(
-                        label: Text(
+                    const DataColumn(label: Text(
                       'Author',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     )),
-                    const DataColumn(
-                        label: Text(
+                    const DataColumn(label: Text(
                       'Date',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     )),
@@ -183,19 +179,42 @@ class _PostDashboardState extends State<PostDashboard> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
+                              const SizedBox(height: 10),
                               const Text(
-                                'Home',
+                                '    Books Recomendation by Senior Developer',
                                 style: TextStyle(
                                     color: Color.fromARGB(255, 0, 0, 139)),
                               ),
                               const SizedBox(height: 15),
                               Row(
-                                children: const [
-                                  Text('Edit'),
+                                children: [
+                                  const SizedBox(height: 10),
+                                  TextButton(
+                                    style: TextButton.styleFrom(
+                                      primary: Colors.black,
+                                      textStyle: const TextStyle(fontSize: 15),
+                                    ),
+                                    onPressed: () {},
+                                    child: const Text('Edit'),
+                                  ),
                                   SizedBox(width: 20),
-                                  Text('Remove'),
+                                  TextButton(
+                                    style: TextButton.styleFrom(
+                                      primary: Colors.black,
+                                      textStyle: const TextStyle(fontSize: 15),
+                                    ),
+                                    onPressed: () {},
+                                    child: const Text('Remove'),
+                                  ),
                                   SizedBox(width: 20),
-                                  Text('View'),
+                                  TextButton(
+                                    style: TextButton.styleFrom(
+                                      primary: Colors.black,
+                                      textStyle: const TextStyle(fontSize: 15),
+                                    ),
+                                    onPressed: () {},
+                                    child: const Text('View'),
+                                  ),
                                   SizedBox(width: 20)
                                 ],
                               )
@@ -228,19 +247,41 @@ class _PostDashboardState extends State<PostDashboard> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
+                              const SizedBox(height: 10),
                               const Text(
-                                'About',
+                                '    Welcome Bootcamp Batch 4',
                                 style: TextStyle(
                                     color: Color.fromARGB(255, 0, 0, 139)),
                               ),
                               const SizedBox(height: 15),
                               Row(
-                                children: const [
-                                  Text('Edit'),
+                                children: [
+                                  TextButton(
+                                    style: TextButton.styleFrom(
+                                      primary: Colors.black,
+                                      textStyle: const TextStyle(fontSize: 15),
+                                    ),
+                                    onPressed: () {},
+                                    child: const Text('Edit'),
+                                  ),
                                   SizedBox(width: 20),
-                                  Text('Remove'),
+                                  TextButton(
+                                    style: TextButton.styleFrom(
+                                      primary: Colors.black,
+                                      textStyle: const TextStyle(fontSize: 15),
+                                    ),
+                                    onPressed: () {},
+                                    child: const Text('Remove'),
+                                  ),
                                   SizedBox(width: 20),
-                                  Text('View'),
+                                  TextButton(
+                                    style: TextButton.styleFrom(
+                                      primary: Colors.black,
+                                      textStyle: const TextStyle(fontSize: 15),
+                                    ),
+                                    onPressed: () {},
+                                    child: const Text('View'),
+                                  ),
                                   SizedBox(width: 20)
                                 ],
                               )
@@ -273,19 +314,41 @@ class _PostDashboardState extends State<PostDashboard> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
+                              const SizedBox(height: 10),
                               const Text(
-                                'News',
+                                '    Hello World!',
                                 style: TextStyle(
                                     color: Color.fromARGB(255, 0, 0, 139)),
                               ),
                               const SizedBox(height: 15),
                               Row(
-                                children: const [
-                                  Text('Edit'),
+                                children: [
+                                  TextButton(
+                                    style: TextButton.styleFrom(
+                                      primary: Colors.black,
+                                      textStyle: const TextStyle(fontSize: 15),
+                                    ),
+                                    onPressed: () {},
+                                    child: const Text('Edit'),
+                                  ),
                                   SizedBox(width: 20),
-                                  Text('Remove'),
+                                  TextButton(
+                                    style: TextButton.styleFrom(
+                                      primary: Colors.black,
+                                      textStyle: const TextStyle(fontSize: 15),
+                                    ),
+                                    onPressed: () {},
+                                    child: const Text('Remove'),
+                                  ),
                                   SizedBox(width: 20),
-                                  Text('View'),
+                                  TextButton(
+                                    style: TextButton.styleFrom(
+                                      primary: Colors.black,
+                                      textStyle: const TextStyle(fontSize: 15),
+                                    ),
+                                    onPressed: () {},
+                                    child: const Text('View'),
+                                  ),
                                   SizedBox(width: 20)
                                 ],
                               )
@@ -318,20 +381,47 @@ class _PostDashboardState extends State<PostDashboard> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
+                              const SizedBox(height: 10),
                               const Text(
-                                'Contact',
+                                '    Why We Are Here?',
                                 style: TextStyle(
                                     color: Color.fromARGB(255, 0, 0, 139)),
                               ),
                               const SizedBox(height: 15),
                               Row(
-                                children: const [
-                                  Text('Edit'),
-                                  SizedBox(width: 20),
-                                  Text('Remove'),
-                                  SizedBox(width: 20),
-                                  Text('View'),
-                                  SizedBox(width: 20)
+                                children: [
+                                  TextButton(
+                                    style: TextButton.styleFrom(
+                                      primary: Colors.black,
+                                      textStyle: const TextStyle(fontSize: 15),
+                                    ),
+                                    onPressed: () {},
+                                    child: const Text('Edit'),
+                                  ),
+                                  SizedBox(
+                                      height:20,
+                                      width: 20),
+                                  TextButton(
+                                    style: TextButton.styleFrom(
+                                      primary: Colors.black,
+                                      textStyle: const TextStyle(fontSize: 15),
+                                    ),
+                                    onPressed: () {},
+                                    child: const Text('Remove'),
+                                  ),
+                                  SizedBox(
+                                      height:20,
+                                      width: 20),
+                                  TextButton(
+                                    style: TextButton.styleFrom(
+                                      primary: Colors.black,
+                                      textStyle: const TextStyle(fontSize: 15),
+                                    ),
+                                    onPressed: () {},
+                                    child: const Text('View'),
+                                  ),
+                                  SizedBox(height:20,
+                                      width: 20),
                                 ],
                               )
                             ],
