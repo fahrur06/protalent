@@ -1,143 +1,152 @@
 import 'package:flutter/material.dart';
-import 'package:easy_table/easy_table.dart';
+import 'package:pro_talent/admin/talent_manage/sidebar/Industry.dart';
+import 'package:pro_talent/admin/talent_manage/sidebar/briefly.dart';
+import 'package:pro_talent/admin/talent_manage/sidebar/contract.dart';
+import 'package:pro_talent/admin/talent_manage/sidebar/education.dart';
+import 'package:pro_talent/admin/talent_manage/sidebar/level.dart';
+import 'package:pro_talent/admin/talent_manage/sidebar/location.dart';
+import 'package:pro_talent/admin/talent_manage/sidebar/skills.dart';
+import 'package:side_navigation/side_navigation.dart';
 
-class ClientDashboard extends StatefulWidget {
-  const ClientDashboard({Key? key}) : super(key: key);
-
-  @override
-  State<ClientDashboard> createState() => _ClientDashboardState();
-}
-
-class _client {
-  _client(
-      this.no, this.nama, this.deskripsi, this.lokasi, this.post, this.delete);
-
-  final int no;
-  final String nama;
-  final String deskripsi;
-  final String lokasi;
-  final String post;
-  final Widget delete;
-}
-
-class _ClientDashboardState extends State<ClientDashboard> {
-  EasyTableModel<_client>? _model;
+class EditTalent extends StatefulWidget {
+  const EditTalent({Key? key}) : super(key: key);
 
   @override
-  void initState() {
-    super.initState();
+  State<EditTalent> createState() => _EditTalentState();
+}
 
-    List<_client> rows = [
-      _client(1, 'Budi', 'Dibu', 'South Jakarta', '2022-07-18',
-          TextButton(onPressed: () {}, child: Text('delete'))),
-      _client(2, 'Fahrur', 'Dota 2 Champions', 'Madura', '2022-01-01',
-          TextButton(onPressed: () {}, child: Text('delete'))),
-      _client(3, 'Udin', 'Jualan tahu bulat', 'Ciamis', '2022-03-29',
-          TextButton(onPressed: () {}, child: Text('delete'))),
-      _client(4, 'Rizki', 'Pro Player Mobile Legend', 'Bekasi', '2022-04-2',
-          TextButton(onPressed: () {}, child: Text('delete'))),
-      _client(
-          5,
-          'Faid',
-          'Angker, KRL Mania, Pengguna Transportasi Public',
-          'Bogor',
-          '2022-05-29',
-          TextButton(onPressed: () {}, child: Text('delete'))),
-      _client(6, 'Tohap', 'Member Eksad', 'Jakarta Barat', '2022-03-9',
-          TextButton(onPressed: () {}, child: Text('delete'))),
-    ];
+Container _container(String judul) {
+  return Container(
+    child: Text(judul),
+  );
+}
 
-    _model = EasyTableModel<_client>(rows: rows, columns: [
-      EasyTableColumn(
-          name: 'No',
-          headerAlignment: Alignment.center,
-          cellAlignment: Alignment.center,
-          intValue: (row) => row.no),
-      EasyTableColumn(name: 'Nama', weight: 3, stringValue: (row) => row.nama),
-      EasyTableColumn(
-          name: 'Description', weight: 3, stringValue: (row) => row.deskripsi),
-      EasyTableColumn(
-          name: 'Location', weight: 3, stringValue: (row) => row.lokasi),
-      EasyTableColumn(
-          name: 'Posted',
-          headerAlignment: Alignment.center,
-          cellAlignment: Alignment.center,
-          weight: 2,
-          stringValue: (row) => row.post),
-      EasyTableColumn(
-          name: '',
-          headerAlignment: Alignment.center,
-          cellAlignment: Alignment.center,
-          weight: 1,
-          objectValue: (row) => row.delete)
-    ]);
-  }
-
+class _EditTalentState extends State<EditTalent> {
+  //briefly, contract, education, industry, level, location, skill
+  List<Widget> views = [
+    EditBriefly(),
+    EditContract(),
+    EditEducation(),
+    EditIndustry(),
+    EditLevel(),
+    EditLocation(),
+    EditSkill()
+  ];
+  int selectedIndex = 0;
+  @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      body: Center(
-        child: Container(
-          //padding: EdgeInsets.symmetric(vertical: screenSize.height*0.1,horizontal: screenSize.width*0.2),
-          width: screenSize.width * 0.7,
-          height: screenSize.height * 0.7,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: Colors.blue, width: 5),
+      backgroundColor: Color.fromRGBO(238, 224, 224, 1),
+      body: Column(
+        children: [
+          SizedBox(
+            height: 50,
           ),
+          Center(
+            child: Container(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  //borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
+                  border: Border.all(color: Colors.black),
+                ),
+                width: 1200,
+                height: 592,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 18, 108, 178),
+                        border: Border(
+                          bottom: BorderSide(color: Colors.white),
+                        ),
 
-          child: Column(
-            children: [
-              Container(
-                padding: EdgeInsets.only(top: 30, left: 50),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(10),
-                      topLeft: Radius.circular(10)),
-                  color: Colors.blue,
-                ),
-                width: screenSize.width * 0.7,
-                height: screenSize.height * 0.15,
-                child: Text(
-                  'Data Client',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 2),
-                ),
-              ),
-              Container(
-                width: screenSize.width * 0.7,
-                height: screenSize.height * 0.025,
-                decoration: BoxDecoration(
-                  border: Border(
-                    top: BorderSide(color: Colors.blue, width: 5),
-                  ),
-                ),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.blue,
-                ),
-                width: screenSize.width * 0.67,
-                height: screenSize.height * 0.5,
-                child: Center(
-                  child: Container(
-                    width: screenSize.width * 0.63,
-                    height: screenSize.height * 0.42,
-                    color: Colors.white,
-                    child: EasyTable<_client>(
-                      _model,
-                      columnsFit: true,
+                        //borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20),),
+                      ),
+                      padding: EdgeInsets.only(top: 27, left: 35),
+                      height: 95,
+                      width: 1200,
+                      child: Text(
+                        'Edit Talent',
+                        style: TextStyle(
+                            fontSize: 35,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 2),
+                      ),
                     ),
-                  ),
+                    Container(
+                      height: 495,
+                      child: Row(
+                        children: [
+                          SideNavigationBar(
+                            expandable: false,
+                            //header: SideNavigationBarHeader(image: , title: title, subtitle: subtitle),
+                            selectedIndex: selectedIndex,
+                            items: const [
+                              //position , skill , level , industry, location
+                              SideNavigationBarItem(
+                                icon: Icons.currency_bitcoin,
+                                label: 'Briefly',
+                              ),
+                              SideNavigationBarItem(
+                                icon: Icons.browser_updated,
+                                label: 'Skill',
+                              ),
+                              SideNavigationBarItem(
+                                icon: Icons.leaderboard,
+                                label: 'Level',
+                              ),
+                              SideNavigationBarItem(
+                                icon: Icons.home_work_outlined,
+                                label: 'Industry',
+                              ),
+                              SideNavigationBarItem(
+                                icon: Icons.location_on,
+                                label: 'Location',
+                              ),
+                              SideNavigationBarItem(
+                                icon: Icons.grade_rounded,
+                                label: 'Education',
+                              ),
+                              SideNavigationBarItem(
+                                icon: Icons.document_scanner,
+                                label: 'Contract',
+                              ),
+                            ],
+                            onTap: (index) {
+                              setState(
+                                () {
+                                  selectedIndex = index;
+                                },
+                              );
+                            },
+                            theme: SideNavigationBarTheme(
+                              // backgroundColor: Color.fromARGB(200, 9, 47, 171),
+                              backgroundColor:
+                                  Color.fromARGB(255, 18, 108, 178),
+                              togglerTheme: SideNavigationBarTogglerTheme(
+                                  shrinkIconColor: Colors.white,
+                                  expandIconColor: Colors.white),
+                              itemTheme: SideNavigationBarItemTheme(
+                                  selectedItemColor: Colors.white),
+                              dividerTheme:
+                                  SideNavigationBarDividerTheme.standard(),
+                            ),
+                          ),
+                          Expanded(
+                            child: views.elementAt(selectedIndex),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
