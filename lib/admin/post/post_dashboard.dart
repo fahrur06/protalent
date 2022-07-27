@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:data_table_2/data_table_2.dart';
 import 'package:pro_talent/const/addnew.dart';
 import 'package:pro_talent/const/filter.dart';
 import 'package:pro_talent/admin/post/add_post.dart';
