@@ -18,39 +18,46 @@ class _Home4State extends State<Home4> {
     var screenSize = MediaQuery.of(context).size;
     return Container(
       child: Container(
+        padding: EdgeInsets.symmetric(vertical: 20,horizontal: 100),
         width: screenSize.width * 0.9,
         height: screenSize.height * 0.5,
-        color: Colors.green,
-        margin: EdgeInsets.all(10),
-        padding: EdgeInsets.all(10),
-        child: Stack(children: [
-          SizedBox(
-            width: screenSize.width,
-            child: Image.asset(
-              "assets/images/blue-white-low-poly-triangle-shapes-background.jpg",
-            ),
+        decoration: BoxDecoration(
+          image: DecorationImage(image: AssetImage("assets/images/blue-white-low-poly-triangle-shapes-background.jpg"),
+              fit: BoxFit.fill),
+        ),
+       
+        child: Stack(
+            children: [
+              Container(
+                width: screenSize.width * 0.9,
+                height: screenSize.height * 0.5,
+                child:  Column(
+                  children: [
+                    Text(
+                      "We'd love to hear from you"
+                          "\n"
+                          "Wheter you have a question about features, trials, pricing, "
+                          "need a demo, or anything else, "
+                          "\n"
+                          "our team is ready to answer all your questions",
+                      style: TextStyle(
+                        fontSize: 25,
+                        height: 2,
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
+
+                  TextButton(
+                    style: TextButton.styleFrom(
+                      primary: Colors.black,
+                      textStyle: const TextStyle(fontSize: 15),
+                    ),
+                    onPressed: () {},
+                    child: const Text('Get in touch'),
+                  ),
+          ]
           ),
-          Text(
-            "We'd love to hear from you"
-            "\n"
-            "Wheter you have a question about features, trials, pricing, "
-            "need a demo, or anything else, "
-            "\n"
-            "our team is ready to answer all your questions",
-            style: TextStyle(
-              fontSize: 25,
-              height: 2,
-              fontWeight: FontWeight.w300,
-            ),
-          ),
-          TextButton(
-            style: TextButton.styleFrom(
-              primary: Colors.black,
-              textStyle: const TextStyle(fontSize: 15),
-            ),
-            onPressed: () {},
-            child: const Text('Get in touch'),
-          ),
+              ),
         ]),
       ),
     );
