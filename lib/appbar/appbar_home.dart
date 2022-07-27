@@ -44,7 +44,7 @@ AppBar AppbarHomeSmall(Size screenSize) {
   );
 }
 
-AppBar AppbarHomeLarge(Size screenSize, BuildContext context) {
+AppBar AppbarHomeLarge(Size screenSize, BuildContext context,Color home,Color aboutUs, Color ourTalent,Color post, Color contactUs) {
   return AppBar(
     backgroundColor: Colors.white,
     toolbarHeight: 80,
@@ -71,23 +71,23 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context) {
         Spacer(
           flex: 4,
         ),
-        ButtonAppbar(arah: HomePage(), menu: 'Home',warna: Colors.blue,),
+        ButtonAppbar(arah: HomePage(), menu: 'Home',warna: home),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: HomePage(), menu: 'About Us',warna: Colors.black,),
+        ButtonAppbar(arah: HomePage(), menu: 'About Us',warna: aboutUs),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: HomePage(), menu: 'Our Talent',warna: Colors.black,),
+        ButtonAppbar(arah: HomePage(), menu: 'Our Talent',warna: ourTalent),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: Post(), menu: 'Post',warna: Colors.black,),
+        ButtonAppbar(arah: Post(), menu: 'Post',warna: post),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: ContactUs(), menu: 'Contact Us',warna: Colors.black,),
+        ButtonAppbar(arah: ContactUs(), menu: 'Contact Us',warna: contactUs),
         Spacer(
           flex: 3,
         ),
