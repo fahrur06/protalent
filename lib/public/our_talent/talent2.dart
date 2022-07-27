@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/const/text_homepage.dart';
 
-class Home2 extends StatefulWidget {
-  const Home2({Key? key}) : super(key: key);
+class Talent2 extends StatefulWidget {
+  const Talent2({Key? key}) : super(key: key);
 
   @override
-  State<Home2> createState() => _Home2State();
+  State<Talent2> createState() => _Talent2State();
 }
 
-class _Home2State extends State<Home2> {
+class _Talent2State extends State<Talent2> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -19,7 +19,7 @@ class _Home2State extends State<Home2> {
       //color: Colors.grey,
       child: Row(
         children: [
-          Container(
+          SizedBox(
             width: screenSize.width*0.45,
             //color: Colors.green,
             child:Column(
@@ -98,11 +98,11 @@ ListTile _list (IconData _icon,String title, String body ){
     ),
     minLeadingWidth: 60,
     title: Container(
-          height: 50,
+        height: 50,
         child: Text(title,style: TextStyle(fontSize: 27,fontWeight: FontWeight.bold,letterSpacing: 1.5),)
     ),
     subtitle: Container(
-          height: 85,
+        height: 85,
         child: Text(body,style: TextStyle(fontSize: 18,letterSpacing: 1.1,height: 1.2),)
     ),
 

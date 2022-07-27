@@ -22,7 +22,7 @@ class _PostState extends State<Post> {
     return Scaffold(
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? AppbarHomeSmall(screenSize)
-          : AppbarHomeLarge(screenSize, context, Colors.black,Colors.black,Colors.black,Colors.blue,Colors.black),
+          : AppbarHomeLarge(screenSize, context, Colors.black,Colors.black,Colors.blue,Colors.black),
       body: ListView(
         children: [
           Container(

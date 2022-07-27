@@ -1,10 +1,8 @@
 import 'dart:ui';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:pro_talent/client/sidemenu_talent.dart';
-import 'package:dropdown_search/dropdown_search.dart';
 import 'package:pro_talent/widget/dropdown_dashboard.dart';
 
 class FindTalent extends StatefulWidget {
@@ -19,13 +17,7 @@ class FindTalent extends StatefulWidget {
 
 class _FindTalentState extends State<FindTalent> {
 
-  final myKey = GlobalKey<DropdownSearchState<MultiLevelString>>();
-  final List<MultiLevelString> myItems = [
-    MultiLevelString(level1: "1"),
-    MultiLevelString(level1: "2"),
-    MultiLevelString(level1: "3"),
-    MultiLevelString(level1: "4")
-  ];
+
 
   @override
   Widget build(BuildContext context) {
@@ -79,15 +71,40 @@ class _FindTalentState extends State<FindTalent> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           SizedBox(width: 20,),
-                          DropDownDashboard(),
+                          DropDownDashboard2(
+                              item1: 'Software Enginering',
+                              item2: 'Flutter Developer',
+                              item3: 'Backend Developer',
+                              item4: 'Frontend Developer',
+                              item5: 'Mobile Developer'),
                           SizedBox(width: 20,),
-                          DropDownDashboard(),
+                          DropDownDashboard2(
+                              item1: 'Software Enginering',
+                              item2: 'Flutter Developer',
+                              item3: 'Backend Developer',
+                              item4: 'Frontend Developer',
+                              item5: 'Mobile Developer'),
                           SizedBox(width: 20,),
-                          DropDownDashboard(),
+                          DropDownDashboard2(
+                              item1: 'Software Enginering',
+                              item2: 'Flutter Developer',
+                              item3: 'Backend Developer',
+                              item4: 'Frontend Developer',
+                              item5: 'Mobile Developer'),
                           SizedBox(width: 20,),
-                          DropDownDashboard(),
+                          DropDownDashboard2(
+                              item1: 'Software Enginering',
+                              item2: 'Flutter Developer',
+                              item3: 'Backend Developer',
+                              item4: 'Frontend Developer',
+                              item5: 'Mobile Developer'),
                           SizedBox(width: 20,),
-                          DropDownDashboard(),
+                          DropDownDashboard2(
+                              item1: 'Software Enginering',
+                              item2: 'Flutter Developer',
+                              item3: 'Backend Developer',
+                              item4: 'Frontend Developer',
+                              item5: 'Mobile Developer'),
                           SizedBox(width: 20,),
                           Container(
                             color: Colors.white,

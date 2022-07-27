@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/public/footer.dart';
-import 'package:pro_talent/public/our_talent/home1.dart';
-import 'package:pro_talent/public/our_talent/home2.dart';
-import 'package:pro_talent/public/our_talent/home3.dart';
-import 'package:pro_talent/public/our_talent/home4.dart';
+import'package:pro_talent/public/home/home1.dart';
+import 'package:pro_talent/public/home/home2.dart';
+import 'package:pro_talent/public/home/home3.dart';
+import 'package:pro_talent/public/home/home4.dart';
 import 'package:pro_talent/appbar/appbar_home.dart';
 import 'package:pro_talent/widget/responsive.dart';
 
@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? AppbarHomeSmall(screenSize)
-          : AppbarHomeLarge(screenSize, context, Colors.black,Colors.black,Colors.blue,Colors.black,Colors.black),
+          : AppbarHomeLarge(screenSize, context, Colors.blue,Colors.black,Colors.black,Colors.black),
       body: ListView(
         children: [
           Home1(),
