@@ -70,7 +70,8 @@ class _TalentmanagementState extends State<TalentManagement> {
           height: screenSize.height,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: Color.fromARGB(255, 18, 108, 178), width: 5),
+            border:
+                Border.all(color: Color.fromARGB(255, 18, 108, 178), width: 5),
           ),
 
           child: Container(
@@ -128,26 +129,26 @@ class _TalentmanagementState extends State<TalentManagement> {
                       SizedBox(
                         height: 30,
                       ),
-                      // ElevatedButton.icon(
-                      //   icon: Icon(
-                      //     Icons.person_add,
-                      //     size: 20.0,
-                      //   ),
-                      //   label: Text('Add Talent'),
-                      //   onPressed: ()  {
-                      //     Navigator.push(
-                      //       context,
-                      //       MaterialPageRoute(
-                      //         builder: (context) => SideMenuManageTalent(),
-                      //       ),
-                      //     );
-                      //   },
-                      //   style: ElevatedButton.styleFrom(
-                      //     primary: Colors.white,
-                      //     onPrimary: Colors.black,
-                      //   ),
-                      // )
-                      AlertForm(),
+                      ElevatedButton.icon(
+                        icon: Icon(
+                          Icons.person_add,
+                          size: 20.0,
+                        ),
+                        label: Text('Add Talent'),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => AddTalent(),
+                            ),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.white,
+                          onPrimary: Colors.black,
+                        ),
+                      )
+                      // AlertForm(),
                     ],
                   ),
                 ),
@@ -156,7 +157,8 @@ class _TalentmanagementState extends State<TalentManagement> {
                   height: screenSize.height * 0.025,
                   decoration: BoxDecoration(
                     border: Border(
-                      top: BorderSide(color: Color.fromARGB(255, 18, 108, 178), width: 5),
+                      top: BorderSide(
+                          color: Color.fromARGB(255, 18, 108, 178), width: 5),
                     ),
                   ),
                 ),
