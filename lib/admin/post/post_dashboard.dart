@@ -24,7 +24,7 @@ class _PostDashboardState extends State<PostDashboard> {
     return Container(
       height: 2000,
       width: screenSize.width,
-      padding: const EdgeInsets.only(left: 100,right: 100),
+      padding: const EdgeInsets.only(left: 100, right: 100),
       color: const Color.fromRGBO(238, 224, 224, 1),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,7 +34,6 @@ class _PostDashboardState extends State<PostDashboard> {
             child: Row(
               children: [
                 Container(
-                  
                   child: const Text("Post     ",
                       style: TextStyle(
                         fontSize: 20,
@@ -50,7 +49,6 @@ class _PostDashboardState extends State<PostDashboard> {
                 children: [
                   TextButton(
                     style: TextButton.styleFrom(
-                      
                       primary: Colors.black,
                       textStyle: const TextStyle(fontSize: 15),
                     ),
@@ -111,7 +109,6 @@ class _PostDashboardState extends State<PostDashboard> {
                       ],
                     ),
                   ),
-                  
                 ],
               )),
           Row(
@@ -125,7 +122,6 @@ class _PostDashboardState extends State<PostDashboard> {
                 flex: 10,
               ),
               Text("3 items"),
-              
             ],
           ),
           Container(
@@ -190,8 +186,15 @@ class _PostDashboardState extends State<PostDashboard> {
                               ),
                               const SizedBox(height: 15),
                               Row(
-                                children: const [
-                                  Text('Edit'),
+                                children: [
+                                  TextButton(
+                                    style: TextButton.styleFrom(
+                                      primary: Colors.black,
+                                      textStyle: const TextStyle(fontSize: 15),
+                                    ),
+                                    onPressed: () {},
+                                    child: const Text('Edit'),
+                                  ),
                                   SizedBox(width: 20),
                                   Text('Remove'),
                                   SizedBox(width: 20),
