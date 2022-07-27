@@ -98,50 +98,94 @@ class _AlertFormState extends State<AlertForm> {
           context: context,
           builder: (context) => AlertDialog(
             title: Text('Add Talent'),
+            titlePadding: EdgeInsets.only(top: 40,left: 30),
             content: Column(
               mainAxisSize: MainAxisSize.min,
+              verticalDirection: VerticalDirection.down,
               children: [
                 SizedBox(
                   height: 30,
                 ),
                 TextFormField(
-                  decoration: InputDecoration(hintText: 'Full Name'),
+                  textAlign: TextAlign.start,
+                  decoration: InputDecoration(
+                    labelText: "Full Name",
+                    hintStyle: TextStyle(),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5.0)),
+                  ),
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 TextFormField(
-                  decoration: InputDecoration(hintText: 'Gender'),
+                  textAlign: TextAlign.start,
+                  decoration: InputDecoration(
+                    labelText: "Gender",
+                    hintStyle: TextStyle(),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5.0)),
+                  ),
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 TextFormField(
-                  decoration: InputDecoration(hintText: 'Expected Salary'),
+                  textAlign: TextAlign.start,
+                  decoration: InputDecoration(
+                    labelText: "Expected Salary",
+                    hintStyle: TextStyle(),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5.0)),
+                  ),
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 TextFormField(
-                  decoration: InputDecoration(hintText: 'Latest Company'),
+                  textAlign: TextAlign.start,
+                  decoration: InputDecoration(
+                    labelText: "Latest Company",
+                    hintStyle: TextStyle(),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5.0)),
+                  ),
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 TextFormField(
-                  decoration: InputDecoration(hintText: 'Salary Status'),
+                  textAlign: TextAlign.start,
+                  decoration: InputDecoration(
+                    labelText: "Salary Status",
+                    hintStyle: TextStyle(),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5.0)),
+                  ),
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 TextFormField(
-                  decoration: InputDecoration(hintText: 'Latest Work Period'),
+                  textAlign: TextAlign.start,
+                  decoration: InputDecoration(
+                    labelText: "Latest Work Period",
+                    hintStyle: TextStyle(),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5.0)),
+                  ),
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 TextFormField(
-                  decoration: InputDecoration(hintText: 'Work Location'),
+                  textAlign: TextAlign.start,
+                  decoration: InputDecoration(
+                    labelText: "Work Location",
+                    hintStyle: TextStyle(),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5.0)),
+                  ),
                 ),
                 SizedBox(
                   height: 30,
@@ -158,11 +202,8 @@ class _AlertFormState extends State<AlertForm> {
               ],
             ),
             actions: [
-              TextButton(
-                  onPressed: () {
-                    publish();
-                  },
-                  child: Text('SAVE'))
+              ElevatedButton(onPressed: (){}, child: Text('SAVE'))
+
             ],
           ),
         );

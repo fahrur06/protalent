@@ -4,7 +4,7 @@ import 'package:pro_talent/admin/post/add_post.dart';
 import 'package:pro_talent/conts_warna.dart';
 import 'package:pro_talent/public/footer.dart';
 import 'package:pro_talent/widget/responsive.dart';
-import 'package:pro_talent/appbar/appbar_contact_us.dart';
+import 'package:pro_talent/appbar/appbar_home.dart';
 
 import '../../widget/botton.dart';
 
@@ -22,7 +22,7 @@ class _ContactUsState extends State<ContactUs> {
     return Scaffold(
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? AppbarHomeSmall(screenSize)
-          : AppbarHomeLarge(screenSize, context),
+          : AppbarHomeLarge(screenSize, context, Colors.black,Colors.black,Colors.black,Colors.black,Colors.blue),
       body: ListView(
         children: [
           Container(

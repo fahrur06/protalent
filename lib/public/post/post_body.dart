@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/widget/responsive.dart';
-import 'package:pro_talent/appbar/appbar_post.dart';
+import 'package:pro_talent/appbar/appbar_home.dart';
 import 'package:pro_talent/public/post/post.dart';
 import 'package:pro_talent/homepage.dart';
 import 'package:pro_talent/public/footer.dart';
@@ -27,7 +27,7 @@ class PostBody extends StatelessWidget {
     return Scaffold(
         appBar: ResponsiveWidget.isSmallScreen(context)
         ? AppbarHomeSmall(screenSize)
-        : AppbarHomeLarge(screenSize, context),
+        : AppbarHomeLarge(screenSize, context, Colors.black,Colors.black,Colors.black,Colors.blue,Colors.black),
       body: ListView(
         children: [
           Container(
