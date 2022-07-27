@@ -180,12 +180,16 @@ class _PagesDashboardState extends State<PagesDashboard> {
           ),
           Container(
             color: Colors.white,
-            height: 300,
+            height: screenSize.height * 0.5,
             width: screenSize.width,
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(10),
             child: Row(
               children: [
-                DataTable(columns: [
+                DataTable(
+                    columnSpacing: 30,
+                    dataRowHeight: 70,
+                    horizontalMargin: 10,
+                    columns: [
                   DataColumn(
                       label: Checkbox(
                           value: value,
@@ -232,8 +236,9 @@ class _PagesDashboardState extends State<PagesDashboard> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            const SizedBox(height: 10),
                             const Text(
-                              'Home',
+                              '    Home',
                               style: TextStyle(
                                   color: Color.fromARGB(255, 0, 0, 139)),
                             ),
@@ -298,8 +303,9 @@ class _PagesDashboardState extends State<PagesDashboard> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            const SizedBox(height: 10),
                             const Text(
-                              'About',
+                              '    About',
                               style: TextStyle(
                                   color: Color.fromARGB(255, 0, 0, 139)),
                             ),
@@ -364,8 +370,9 @@ class _PagesDashboardState extends State<PagesDashboard> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            const SizedBox(height: 10),
                             const Text(
-                              'News',
+                              '    News',
                               style: TextStyle(
                                   color: Color.fromARGB(255, 0, 0, 139)),
                             ),
@@ -430,8 +437,9 @@ class _PagesDashboardState extends State<PagesDashboard> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            const SizedBox(height: 10),
                             const Text(
-                              'Contact',
+                              '    Contact',
                               style: TextStyle(
                                   color: Color.fromARGB(255, 0, 0, 139)),
                             ),
