@@ -169,7 +169,7 @@ class _loginState extends State<login> {
                                   context,
                                   MaterialPageRoute(
                                     builder: (Context) {
-                                      return Dashboard();
+                                      return DashboardClient();
                                     },
                                   ),
                                 );
