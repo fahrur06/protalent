@@ -239,12 +239,33 @@ class _PagesDashboardState extends State<PagesDashboard> {
                             ),
                             const SizedBox(height: 15),
                             Row(
-                              children: const [
-                                Text('Edit'),
+                              children: [
+                                TextButton(
+                                  style: TextButton.styleFrom(
+                                    primary: Colors.black,
+                                    textStyle: const TextStyle(fontSize: 15),
+                                  ),
+                                  onPressed: () {},
+                                  child: const Text('Edit'),
+                                ),
                                 SizedBox(width: 20),
-                                Text('Remove'),
+                                TextButton(
+                                  style: TextButton.styleFrom(
+                                    primary: Colors.black,
+                                    textStyle: const TextStyle(fontSize: 15),
+                                  ),
+                                  onPressed: () {},
+                                  child: const Text('Remove'),
+                                ),
                                 SizedBox(width: 20),
-                                Text('View'),
+                                TextButton(
+                                  style: TextButton.styleFrom(
+                                    primary: Colors.black,
+                                    textStyle: const TextStyle(fontSize: 15),
+                                  ),
+                                  onPressed: () {},
+                                  child: const Text('View'),
+                                ),
                                 SizedBox(width: 20)
                               ],
                             )
@@ -284,12 +305,33 @@ class _PagesDashboardState extends State<PagesDashboard> {
                             ),
                             const SizedBox(height: 15),
                             Row(
-                              children: const [
-                                Text('Edit'),
+                              children: [
+                                TextButton(
+                                  style: TextButton.styleFrom(
+                                    primary: Colors.black,
+                                    textStyle: const TextStyle(fontSize: 15),
+                                  ),
+                                  onPressed: () {},
+                                  child: const Text('Edit'),
+                                ),
                                 SizedBox(width: 20),
-                                Text('Remove'),
+                                TextButton(
+                                  style: TextButton.styleFrom(
+                                    primary: Colors.black,
+                                    textStyle: const TextStyle(fontSize: 15),
+                                  ),
+                                  onPressed: () {},
+                                  child: const Text('Remove'),
+                                ),
                                 SizedBox(width: 20),
-                                Text('View'),
+                                TextButton(
+                                  style: TextButton.styleFrom(
+                                    primary: Colors.black,
+                                    textStyle: const TextStyle(fontSize: 15),
+                                  ),
+                                  onPressed: () {},
+                                  child: const Text('View'),
+                                ),
                                 SizedBox(width: 20)
                               ],
                             )
@@ -329,12 +371,33 @@ class _PagesDashboardState extends State<PagesDashboard> {
                             ),
                             const SizedBox(height: 15),
                             Row(
-                              children: const [
-                                Text('Edit'),
+                              children: [
+                                TextButton(
+                                  style: TextButton.styleFrom(
+                                    primary: Colors.black,
+                                    textStyle: const TextStyle(fontSize: 15),
+                                  ),
+                                  onPressed: () {},
+                                  child: const Text('Edit'),
+                                ),
                                 SizedBox(width: 20),
-                                Text('Remove'),
+                                TextButton(
+                                  style: TextButton.styleFrom(
+                                    primary: Colors.black,
+                                    textStyle: const TextStyle(fontSize: 15),
+                                  ),
+                                  onPressed: () {},
+                                  child: const Text('Remove'),
+                                ),
                                 SizedBox(width: 20),
-                                Text('View'),
+                                TextButton(
+                                  style: TextButton.styleFrom(
+                                    primary: Colors.black,
+                                    textStyle: const TextStyle(fontSize: 15),
+                                  ),
+                                  onPressed: () {},
+                                  child: const Text('View'),
+                                ),
                                 SizedBox(width: 20)
                               ],
                             )
@@ -374,12 +437,33 @@ class _PagesDashboardState extends State<PagesDashboard> {
                             ),
                             const SizedBox(height: 15),
                             Row(
-                              children: const [
-                                Text('Edit'),
+                              children: [
+                                TextButton(
+                                  style: TextButton.styleFrom(
+                                    primary: Colors.black,
+                                    textStyle: const TextStyle(fontSize: 15),
+                                  ),
+                                  onPressed: () {},
+                                  child: const Text('Edit'),
+                                ),
                                 SizedBox(width: 20),
-                                Text('Remove'),
+                                TextButton(
+                                  style: TextButton.styleFrom(
+                                    primary: Colors.black,
+                                    textStyle: const TextStyle(fontSize: 15),
+                                  ),
+                                  onPressed: () {},
+                                  child: const Text('Remove'),
+                                ),
                                 SizedBox(width: 20),
-                                Text('View'),
+                                TextButton(
+                                  style: TextButton.styleFrom(
+                                    primary: Colors.black,
+                                    textStyle: const TextStyle(fontSize: 15),
+                                  ),
+                                  onPressed: () {},
+                                  child: const Text('View'),
+                                ),
                                 SizedBox(width: 20)
                               ],
                             )

@@ -4,7 +4,7 @@ import 'package:pro_talent/admin/post/add_post.dart';
 import 'package:pro_talent/conts_warna.dart';
 import 'package:pro_talent/public/footer.dart';
 import 'package:pro_talent/widget/responsive.dart';
-import 'package:pro_talent/appbar/appbar_contact_us.dart';
+import 'package:pro_talent/appbar/appbar_home.dart';
 
 import '../../widget/botton.dart';
 
@@ -22,7 +22,7 @@ class _ContactUsState extends State<ContactUs> {
     return Scaffold(
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? AppbarHomeSmall(screenSize)
-          : AppbarHomeLarge(screenSize, context),
+          : AppbarHomeLarge(screenSize, context, Colors.black,Colors.black,Colors.black,Colors.black,Colors.blue),
       body: ListView(
         children: [
           Container(
@@ -56,27 +56,21 @@ class _ContactUsState extends State<ContactUs> {
                           children: [
                             const Icon(Icons.phone, color: Colors.white),
                             const SizedBox(width: 5),
-                            SizedBox(
-                              height: 60,
-                              child: Text("CALL US",
-                                  style: GoogleFonts.robotoCondensed(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold)),
-                            ),
+                            Text("CALL US",
+                                style: GoogleFonts.robotoCondensed(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold)),
                           ],
                         ),
                         const Spacer(
                           flex: 1,
                         ),
-                        SizedBox(
-                          height: 60,
-                          child: const Text(
-                              "Office : (021) 5795 - 8040, "
-                              "Email : info@eksad.com",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 16)),
-                        ),
+                        const Text(
+                            "Office : (021) 5795 - 8040, "
+                            "Email : info@eksad.com",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 16)),
                         const Spacer(
                           flex: 2,
                         ),
@@ -86,29 +80,23 @@ class _ContactUsState extends State<ContactUs> {
                             const SizedBox(
                               width: 5,
                             ),
-                            SizedBox(
-                              height: 60,
-                              child: Text("LOCATION",
-                                  style: GoogleFonts.robotoCondensed(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold)),
-                            ),
+                            Text("LOCATION",
+                                style: GoogleFonts.robotoCondensed(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold)),
                           ],
                         ),
                         const Spacer(
                           flex: 1,
                         ),
-                        SizedBox(
-                          height: 60,
-                          child: const Text(
-                              "The East Tower 19th Floor, "
-                              "Jl. DR. Ide Anak Agung Gde Agung, "
-                              "Kuningan, Kecamatan Setiabudi, "
-                              "Kota Jakarta Selatan, DKI Jakarta 12950",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 16)),
-                        ),
+                        const Text(
+                            "The East Tower 19th Floor, "
+                            "Jl. DR. Ide Anak Agung Gde Agung, "
+                            "Kuningan, Kecamatan Setiabudi, "
+                            "Kota Jakarta Selatan, DKI Jakarta 12950",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 16)),
                         const Spacer(
                           flex: 2,
                         ),
@@ -118,28 +106,22 @@ class _ContactUsState extends State<ContactUs> {
                             const SizedBox(
                               width: 5,
                             ),
-                            SizedBox(
-                              height: 60,
-                              child: Text("BUSINESS HOURS",
-                                  style: GoogleFonts.robotoCondensed(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold)),
-                            ),
+                            Text("BUSINESS HOURS",
+                                style: GoogleFonts.robotoCondensed(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold)),
                           ],
                         ),
                         const Spacer(
                           flex: 1,
                         ),
-                        SizedBox(
-                          height: 60,
-                          child: const Text(
-                              "Mon–Fri   "
-                              "8.30 am–5.30 pm,  "
-                              "Sat&Sun Closed",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 16)),
-                        ),
+                        const Text(
+                            "Mon–Fri   "
+                            "8.30 am–5.30 pm,  "
+                            "Sat&Sun Closed",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 16)),
                         const Spacer(
                           flex: 1,
                         ),
@@ -171,44 +153,32 @@ class _ContactUsState extends State<ContactUs> {
                         const Spacer(
                           flex: 1,
                         ),
-                        SizedBox(
-                          height: 60,
-                          child: Text(
-                            "Contact Us",
-                            style: GoogleFonts.robotoCondensed(
-                                fontSize: 50,
-                                fontWeight: FontWeight.bold,
-                                color: kTextColor),
-                          ),
+                        Text(
+                          "Contact Us",
+                          style: GoogleFonts.robotoCondensed(
+                              fontSize: 50,
+                              fontWeight: FontWeight.bold,
+                              color: kTextColor),
                         ),
                         const Spacer(
                           flex: 1,
                         ),
-                        SizedBox(
-                          height: 60,
-                          child: TextFormField(
-                            decoration: const InputDecoration(
-                                hintText: "Enter Your Name"),
-                          ),
+                        TextFormField(
+                          decoration: const InputDecoration(
+                              hintText: "Enter Your Name"),
                         ),
                         const Spacer(
                           flex: 1,
                         ),
-                        SizedBox(
-                          height: 60,
-                          child: TextFormField(
-                            decoration: const InputDecoration(
-                                hintText: "Enter A Valid Email Address"),
-                          ),
+                        TextFormField(
+                          decoration: const InputDecoration(
+                              hintText: "Enter A Valid Email Address"),
                         ),
                         const Spacer(
                           flex: 1,
                         ),
-                        SizedBox(
-                          height: 60,
-                          child: TextFormField(
-                            decoration: const InputDecoration(hintText: ""),
-                          ),
+                        TextFormField(
+                          decoration: const InputDecoration(hintText: ""),
                         ),
                         const Spacer(
                           flex: 1,
@@ -237,7 +207,7 @@ class _ContactUsState extends State<ContactUs> {
               ],
             ),
           ),
-          Footer(),
+          const Footer(),
         ],
       ),
     );
