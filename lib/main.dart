@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/admin/dashboard.dart';
 import 'package:pro_talent/admin/setting_dashboard.dart';
+import 'package:pro_talent/client/hired_talent.dart';
 import 'package:pro_talent/homepage.dart';
 
 void main() {
