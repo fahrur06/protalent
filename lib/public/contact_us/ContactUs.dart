@@ -22,7 +22,7 @@ class _ContactUsState extends State<ContactUs> {
     return Scaffold(
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? AppbarHomeSmall(screenSize)
-          : AppbarHomeLarge(screenSize, context, Colors.black,Colors.black,Colors.black,Colors.black,Colors.blue),
+          : AppbarHomeLarge(screenSize, context, Colors.black,Colors.black,Colors.black,Colors.blue),
       body: ListView(
         children: [
           Container(

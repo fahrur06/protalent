@@ -17,3 +17,7 @@ String home2_subtitle1 = 'Talenta kami telah melewati proses pelatihan secara ke
     'dengan keterampilan teknis yang terbukti dan kemampuan untuk memecahkan setiap masalah yang ada.';
 String home2_subtitle2 = 'Anda cukup menghubungi kami dan kami akan membantu melakukan proses interview dengan talenta kami.';
 String home2_subtitle3 = 'Talenta kami terus berkembang untuk memastikan Anda memiliki akses ke keterampilan yang paling dibutuhkan industri.';
+
+
+String talent1_head = 'Talenta dengan Kemampuan terbaik';
+String talent1_body = 'Dapatkan talenta - talenta dengan kemampuan terbaik untuk perusahaan anda dengan cara yang mudah';

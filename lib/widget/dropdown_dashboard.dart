@@ -1,32 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 
-class DropDownDashboard extends StatefulWidget {
-  DropDownDashboard({Key? key, }) : super(key: key);
+class DropDownDashboard2 extends StatelessWidget {
+  DropDownDashboard2({Key? key, required this.item1,
+    required this.item2 ,
+    required this.item3 ,
+    required this.item4,
+    required this.item5}) : super(key: key);
 
- // String item;
-
-  @override
-  State<DropDownDashboard> createState() => _DropDownDashboardState();
-}
-
-
-
-class _DropDownDashboardState extends State<DropDownDashboard> {
-
-  String items = '';
-
-  final myKey = GlobalKey<DropdownSearchState<MultiLevelString>>();
-  final List<MultiLevelString> myItems = [
-    MultiLevelString(level1: 'Software'),
-    MultiLevelString(level1: "2"),
-    MultiLevelString(level1: "3"),
-    MultiLevelString(level1: "4")
-  ];
-
+  String item1;
+  String item2;
+  String item3;
+  String item4;
+  String item5;
 
   @override
   Widget build(BuildContext context) {
+    final myKey = GlobalKey<DropdownSearchState<MultiLevelString>>();
+    final List<MultiLevelString> myItems = [
+      MultiLevelString(level1: item1),
+      MultiLevelString(level1: item2),
+      MultiLevelString(level1: item3),
+      MultiLevelString(level1: item4),
+      MultiLevelString(level1: item5),
+    ];
     var screenSize = MediaQuery.of(context).size;
     return Container(
       width: screenSize.width*0.124,
@@ -56,6 +53,8 @@ class _DropDownDashboardState extends State<DropDownDashboard> {
     );
   }
 }
+
+
 
 class MultiLevelString {
   final String level1;

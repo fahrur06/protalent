@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pro_talent/conts_warna.dart';
 import 'package:pro_talent/homepage.dart';
 import 'package:pro_talent/public/contact_us/ContactUs.dart';
+import 'package:pro_talent/public/our_talent/our_talent.dart';
 import 'package:pro_talent/register.dart';
 import 'package:pro_talent/login.dart';
 import 'package:pro_talent/widget/dropdown_appbar.dart';
@@ -44,7 +45,7 @@ AppBar AppbarHomeSmall(Size screenSize) {
   );
 }
 
-AppBar AppbarHomeLarge(Size screenSize, BuildContext context,Color home,Color aboutUs, Color ourTalent,Color post, Color contactUs) {
+AppBar AppbarHomeLarge(Size screenSize, BuildContext context,Color home, Color ourTalent,Color post, Color contactUs) {
   return AppBar(
     backgroundColor: Colors.white,
     toolbarHeight: 80,
@@ -75,11 +76,8 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context,Color home,Color ab
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: HomePage(), menu: 'About Us',warna: aboutUs),
-        Spacer(
-          flex: 1,
-        ),
-        ButtonAppbar(arah: HomePage(), menu: 'Our Talent',warna: ourTalent),
+
+        ButtonAppbar(arah: OurTalent(), menu: 'Our Talent',warna: ourTalent),
         Spacer(
           flex: 1,
         ),
