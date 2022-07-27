@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:easy_table/easy_table.dart';
+import 'package:pro_talent/admin/talent_manage/add_talent.dart';
+import 'package:pro_talent/admin/talent_manage/side_manage_talent.dart';
 import 'package:pro_talent/widget/botton.dart';
 
 class TalentManagement extends StatefulWidget {
@@ -126,6 +128,25 @@ class _TalentmanagementState extends State<TalentManagement> {
                       SizedBox(
                         height: 30,
                       ),
+                      // ElevatedButton.icon(
+                      //   icon: Icon(
+                      //     Icons.person_add,
+                      //     size: 20.0,
+                      //   ),
+                      //   label: Text('Add Talent'),
+                      //   onPressed: ()  {
+                      //     Navigator.push(
+                      //       context,
+                      //       MaterialPageRoute(
+                      //         builder: (context) => SideMenuManageTalent(),
+                      //       ),
+                      //     );
+                      //   },
+                      //   style: ElevatedButton.styleFrom(
+                      //     primary: Colors.white,
+                      //     onPrimary: Colors.black,
+                      //   ),
+                      // )
                       AlertForm(),
                     ],
                   ),
