@@ -146,15 +146,21 @@ class _PostDashboardState extends State<PostDashboard> {
                         })),
                     const DataColumn(label: Text(
                       'Title',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize:20,
+                          fontWeight: FontWeight.bold),
                     )),
                     const DataColumn(label: Text(
                       'Author',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize:20,
+                          fontWeight: FontWeight.bold),
                     )),
                     const DataColumn(label: Text(
                       'Date',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize:20,
+                          fontWeight: FontWeight.bold),
                     )),
                   ], rows: [
                     DataRow(cells: [
@@ -183,7 +189,8 @@ class _PostDashboardState extends State<PostDashboard> {
                               const Text(
                                 '    Books Recomendation by Senior Developer',
                                 style: TextStyle(
-                                    color: Color.fromARGB(255, 0, 0, 139)),
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold),
                               ),
                               const SizedBox(height: 15),
                               Row(
@@ -191,7 +198,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                   const SizedBox(height: 10),
                                   TextButton(
                                     style: TextButton.styleFrom(
-                                      primary: Colors.black,
+                                      primary: Colors.blue[900],
                                       textStyle: const TextStyle(fontSize: 15),
                                     ),
                                     onPressed: () {},
@@ -200,7 +207,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                   SizedBox(width: 20),
                                   TextButton(
                                     style: TextButton.styleFrom(
-                                      primary: Colors.black,
+                                      primary: Colors.blue[900],
                                       textStyle: const TextStyle(fontSize: 15),
                                     ),
                                     onPressed: () {},
@@ -209,7 +216,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                   SizedBox(width: 20),
                                   TextButton(
                                     style: TextButton.styleFrom(
-                                      primary: Colors.black,
+                                      primary: Colors.blue[900],
                                       textStyle: const TextStyle(fontSize: 15),
                                     ),
                                     onPressed: () {},
@@ -251,14 +258,15 @@ class _PostDashboardState extends State<PostDashboard> {
                               const Text(
                                 '    Welcome Bootcamp Batch 4',
                                 style: TextStyle(
-                                    color: Color.fromARGB(255, 0, 0, 139)),
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold),
                               ),
                               const SizedBox(height: 15),
                               Row(
                                 children: [
                                   TextButton(
                                     style: TextButton.styleFrom(
-                                      primary: Colors.black,
+                                      primary: Colors.blue[900],
                                       textStyle: const TextStyle(fontSize: 15),
                                     ),
                                     onPressed: () {},
@@ -267,7 +275,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                   SizedBox(width: 20),
                                   TextButton(
                                     style: TextButton.styleFrom(
-                                      primary: Colors.black,
+                                      primary: Colors.blue[900],
                                       textStyle: const TextStyle(fontSize: 15),
                                     ),
                                     onPressed: () {},
@@ -276,7 +284,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                   SizedBox(width: 20),
                                   TextButton(
                                     style: TextButton.styleFrom(
-                                      primary: Colors.black,
+                                      primary: Colors.blue[900],
                                       textStyle: const TextStyle(fontSize: 15),
                                     ),
                                     onPressed: () {},
@@ -318,14 +326,15 @@ class _PostDashboardState extends State<PostDashboard> {
                               const Text(
                                 '    Hello World!',
                                 style: TextStyle(
-                                    color: Color.fromARGB(255, 0, 0, 139)),
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold),
                               ),
                               const SizedBox(height: 15),
                               Row(
                                 children: [
                                   TextButton(
                                     style: TextButton.styleFrom(
-                                      primary: Colors.black,
+                                      primary: Colors.blue[900],
                                       textStyle: const TextStyle(fontSize: 15),
                                     ),
                                     onPressed: () {},
@@ -334,7 +343,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                   SizedBox(width: 20),
                                   TextButton(
                                     style: TextButton.styleFrom(
-                                      primary: Colors.black,
+                                      primary: Colors.blue[900],
                                       textStyle: const TextStyle(fontSize: 15),
                                     ),
                                     onPressed: () {},
@@ -343,7 +352,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                   SizedBox(width: 20),
                                   TextButton(
                                     style: TextButton.styleFrom(
-                                      primary: Colors.black,
+                                      primary: Colors.blue[900],
                                       textStyle: const TextStyle(fontSize: 15),
                                     ),
                                     onPressed: () {},
@@ -385,14 +394,15 @@ class _PostDashboardState extends State<PostDashboard> {
                               const Text(
                                 '    Why We Are Here?',
                                 style: TextStyle(
-                                    color: Color.fromARGB(255, 0, 0, 139)),
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold),
                               ),
                               const SizedBox(height: 15),
                               Row(
                                 children: [
                                   TextButton(
                                     style: TextButton.styleFrom(
-                                      primary: Colors.black,
+                                      primary: Colors.blue[900],
                                       textStyle: const TextStyle(fontSize: 15),
                                     ),
                                     onPressed: () {},
@@ -403,7 +413,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                       width: 20),
                                   TextButton(
                                     style: TextButton.styleFrom(
-                                      primary: Colors.black,
+                                      primary: Colors.blue[900],
                                       textStyle: const TextStyle(fontSize: 15),
                                     ),
                                     onPressed: () {},
@@ -414,7 +424,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                       width: 20),
                                   TextButton(
                                     style: TextButton.styleFrom(
-                                      primary: Colors.black,
+                                      primary: Colors.blue[900],
                                       textStyle: const TextStyle(fontSize: 15),
                                     ),
                                     onPressed: () {},
