@@ -3,6 +3,8 @@ import 'package:pro_talent/const/addnew.dart';
 import 'package:pro_talent/const/apply.dart';
 import 'package:pro_talent/const/filter.dart';
 import 'package:pro_talent/admin/pages/add_pages.dart';
+import 'package:pro_talent/public/contact_us/ContactUs.dart';
+import 'package:data_table_2/data_table_2.dart';
 
 class PagesDashboard extends StatefulWidget {
   const PagesDashboard({Key? key}) : super(key: key);
@@ -36,7 +38,6 @@ class _PagesDashboardState extends State<PagesDashboard> {
             child: Row(
               children: [
                 Container(
-                  
                   child: Text(
                     'Pages    ',
                     style: TextStyle(
@@ -55,12 +56,12 @@ class _PagesDashboardState extends State<PagesDashboard> {
               children: [
                 TextButton(
                   style: TextButton.styleFrom(
-                    
+
                     primary: Colors.black,
                     textStyle: const TextStyle(fontSize: 15),
                   ),
                   onPressed: () {},
-                  child: const Text("All (4)"),
+                  child: const Text("All (3)"),
                 ),
                 Spacer(
                   flex: 3,
@@ -77,12 +78,12 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       prefixIcon: const Icon(Icons.search),
                       enabledBorder: OutlineInputBorder(
                         borderSide:
-                            const BorderSide(width: 1, color: Colors.blue),
+                        const BorderSide(width: 1, color: Colors.blue),
                         borderRadius: BorderRadius.circular(5),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderSide:
-                            const BorderSide(width: 1, color: Colors.blue),
+                        const BorderSide(width: 1, color: Colors.blue),
                         borderRadius: BorderRadius.circular(5),
                       ),
                     ),
@@ -122,367 +123,321 @@ class _PagesDashboardState extends State<PagesDashboard> {
                     ],
                   ),
                 ),
-                
+
               ],
             ),
           ),
           Row(
             children: [
-              // Text('Test'),
-              DropdownButton(
-                items: <String>['Bulk action', 'Edit', 'Delete']
-                    .map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                      child: Text(value), value: value);
-                }).toList(),
-                onChanged: (String? newValue) {
-                  setState(() {
-                    bulkAction = newValue!;
-                  });
-                },
-                value: bulkAction,
-                style: const TextStyle(fontSize: 14),
-              ),
-              const Spacer(
-                flex: 1,
-              ),
-
-              ApplyButton(),
-              const Spacer(
-                flex: 1,
-              ),
-
-              DropdownButton(
-                items: <String>['All dates', 'July 2022', 'June 2022']
-                    .map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                      child: Text(value), value: value);
-                }).toList(),
-                onChanged: (String? newValue) {
-                  setState(() {
-                    allDates = newValue!;
-                  });
-                },
-                value: allDates,
-                style: const TextStyle(fontSize: 15),
-              ),
-              const Spacer(
-                flex: 1,
-              ),
-
-              FilterButton(),
               Spacer(
                 flex: 6,
               ),
-              Text("4 items"),
-              
+              Text("3 items"),
+
             ],
           ),
+          SizedBox(height: 10,),
           Container(
             color: Colors.white,
-            height: screenSize.height * 0.5,
+            height: 300,
             width: screenSize.width,
-            padding: const EdgeInsets.all(10),
-            child: Row(
-              children: [
-                DataTable(
-                    columnSpacing: 30,
-                    dataRowHeight: 70,
-                    horizontalMargin: 10,
-                    columns: [
-                  DataColumn(
-                      label: Checkbox(
-                          value: value,
-                          onChanged: (bool? value) {
-                            setState(() {
-                              value = value!;
-                            });
-                          })),
-                  const DataColumn(
-                      label: Text(
-                    'Title',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  )),
-                  const DataColumn(
-                      label: Text(
-                    'Author',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  )),
-                  const DataColumn(
-                      label: Text(
-                    'Date',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ))
-                ], rows: [
-                  DataRow(cells: [
-                    DataCell(Checkbox(
-                        value: this.value1,
-                        onChanged: (bool? value) {
-                          setState(() {
-                            this.value1 = value!;
-                          });
-                        })),
-                    DataCell(Row(
-                      children: [
-                        Container(
-                          alignment: Alignment.center,
-                          child: const Image(
-                            image: AssetImage('assets/icons/home.png'),
-                            fit: BoxFit.cover,
-                            height: 40,
-                            width: 40,
-                          ),
-                        ),
-                        Column(
+            padding: EdgeInsets.zero,
+            child: DataTable2(
+              columnSpacing: 20,
+              horizontalMargin: 20,
+              minWidth: 600,
+              columns: [
+                DataColumn2(
+                  label: Text('Tittle',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold
+                    ),
+                  ),
+                  size: ColumnSize.M,
+                ),
+                DataColumn(
+                  label: Text('Author',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold
+                    ),
+                  ),
+                ),
+                DataColumn(
+                  label: Text('Detail',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold
+                    ),
+                  ),
+                ),
+              ],
+              rows: [
+                DataRow(cells: [
+                  DataCell(
+                      Container(
+                        // padding: EdgeInsets.only(top: 10),
+                        child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const SizedBox(height: 10),
-                            const Text(
-                              '    Home',
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 0, 0, 139)),
-                            ),
-                            const SizedBox(height: 15),
                             Row(
+
                               children: [
-                                TextButton(
-                                  style: TextButton.styleFrom(
-                                    primary: Colors.black,
-                                    textStyle: const TextStyle(fontSize: 15),
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('Edit'),
+                                Image(image: AssetImage
+                                  ('assets/icons/home.png'),
+                                  height: 35,
+                                  width: 35,
                                 ),
-                                SizedBox(width: 20),
-                                TextButton(
-                                  style: TextButton.styleFrom(
-                                    primary: Colors.black,
-                                    textStyle: const TextStyle(fontSize: 15),
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('Remove'),
-                                ),
-                                SizedBox(width: 20),
-                                TextButton(
-                                  style: TextButton.styleFrom(
-                                    primary: Colors.black,
-                                    textStyle: const TextStyle(fontSize: 15),
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('View'),
-                                ),
-                                SizedBox(width: 20)
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    // SizedBox(height: 10,width: 10,),
+                                    Text('     About',
+                                      style: TextStyle(
+                                          color: Color.fromARGB(255, 0, 0, 139)
+                                      ),),
+                                    Row(
+                                      children: [
+                                        // Text('Edit'),
+                                        TextButton(
+                                          onPressed: (){
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>ContactUs(),
+                                                )
+                                            );
+                                          },
+                                          child: Text('Edit',
+                                            style: TextStyle(
+                                                color: Colors.black
+                                            ),
+                                          ),
+                                        ),
+                                        TextButton(
+                                          onPressed: (){
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>ContactUs(),
+                                                )
+                                            );
+                                          },
+                                          child: Text('Remove',
+                                            style: TextStyle(
+                                                color: Colors.black
+                                            ),
+                                          ),
+                                        ),
+                                        TextButton(
+                                          onPressed: (){
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>ContactUs(),
+                                                )
+                                            );
+                                          },
+                                          child: Text('View',
+                                            style: TextStyle(
+                                                color: Colors.black
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                )
                               ],
-                            )
+                            ),
+
                           ],
                         ),
-                      ],
-                    )),
-                    const DataCell(Text('Admin')),
-                    const DataCell(Text('2022-06-18')),
-                  ]),
-                  DataRow(cells: [
-                    DataCell(Checkbox(
-                        value: this.value2,
-                        onChanged: (bool? value) {
-                          setState(() {
-                            this.value2 = value!;
-                          });
-                        })),
-                    DataCell(Row(
-                      children: [
-                        Container(
-                          alignment: Alignment.center,
-                          child: const Image(
-                            image: AssetImage('assets/icons/home.png'),
-                            fit: BoxFit.cover,
-                            height: 40,
-                            width: 40,
-                          ),
-                        ),
-                        Column(
+                      )
+                  ),
+                  DataCell(Text('Admin',
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 0, 0, 139)
+                    ),
+                  ),),
+                  DataCell(Text('2022-06-18'),),
+                ]),
+                DataRow(cells: [
+                  DataCell(
+                      Container(
+                        // padding: EdgeInsets.only(top: 10),
+                        child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const SizedBox(height: 10),
-                            const Text(
-                              '    About',
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 0, 0, 139)),
-                            ),
-                            const SizedBox(height: 15),
                             Row(
+
                               children: [
-                                TextButton(
-                                  style: TextButton.styleFrom(
-                                    primary: Colors.black,
-                                    textStyle: const TextStyle(fontSize: 15),
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('Edit'),
+                                Image(image: AssetImage
+                                  ('assets/icons/home.png'),
+                                  height: 35,
+                                  width: 35,
                                 ),
-                                SizedBox(width: 20),
-                                TextButton(
-                                  style: TextButton.styleFrom(
-                                    primary: Colors.black,
-                                    textStyle: const TextStyle(fontSize: 15),
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('Remove'),
-                                ),
-                                SizedBox(width: 20),
-                                TextButton(
-                                  style: TextButton.styleFrom(
-                                    primary: Colors.black,
-                                    textStyle: const TextStyle(fontSize: 15),
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('View'),
-                                ),
-                                SizedBox(width: 20)
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    // SizedBox(height: 10,width: 10,),
+                                    Text('     News',
+                                      style: TextStyle(
+                                          color: Color.fromARGB(255, 0, 0, 139)
+                                      ),),
+                                    Row(
+                                      children: [
+                                        // Text('Edit'),
+                                        TextButton(
+                                          onPressed: (){
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>ContactUs(),
+                                                )
+                                            );
+                                          },
+                                          child: Text('Edit',
+                                            style: TextStyle(
+                                                color: Colors.black
+                                            ),
+                                          ),
+                                        ),
+                                        TextButton(
+                                          onPressed: (){
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>ContactUs(),
+                                                )
+                                            );
+                                          },
+                                          child: Text('Remove',
+                                            style: TextStyle(
+                                                color: Colors.black
+                                            ),
+                                          ),
+                                        ),
+                                        TextButton(
+                                          onPressed: (){
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>ContactUs(),
+                                                )
+                                            );
+                                          },
+                                          child: Text('View',
+                                            style: TextStyle(
+                                                color: Colors.black
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                )
                               ],
-                            )
+                            ),
+
                           ],
                         ),
-                      ],
-                    )),
-                    const DataCell(Text('Admin')),
-                    const DataCell(Text('2022-07-18')),
-                  ]),
-                  DataRow(cells: [
-                    DataCell(Checkbox(
-                        value: this.value3,
-                        onChanged: (bool? value) {
-                          setState(() {
-                            this.value3 = value!;
-                          });
-                        })),
-                    DataCell(Row(
-                      children: [
-                        Container(
-                          alignment: Alignment.center,
-                          child: const Image(
-                            image: AssetImage('assets/icons/home.png'),
-                            fit: BoxFit.cover,
-                            height: 40,
-                            width: 40,
-                          ),
-                        ),
-                        Column(
+                      )
+                  ),
+                  DataCell(Text('Admin',
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 0, 0, 139)
+                    ),
+                  ),),
+                  DataCell(Text('2022-06-18'),),
+                ]),
+                DataRow(cells: [
+                  DataCell(
+                      Container(
+                        // padding: EdgeInsets.only(top: 10),
+                        child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const SizedBox(height: 10),
-                            const Text(
-                              '    News',
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 0, 0, 139)),
-                            ),
-                            const SizedBox(height: 15),
                             Row(
+
                               children: [
-                                TextButton(
-                                  style: TextButton.styleFrom(
-                                    primary: Colors.black,
-                                    textStyle: const TextStyle(fontSize: 15),
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('Edit'),
+                                Image(image: AssetImage
+                                  ('assets/icons/home.png'),
+                                  height: 35,
+                                  width: 35,
                                 ),
-                                SizedBox(width: 20),
-                                TextButton(
-                                  style: TextButton.styleFrom(
-                                    primary: Colors.black,
-                                    textStyle: const TextStyle(fontSize: 15),
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('Remove'),
-                                ),
-                                SizedBox(width: 20),
-                                TextButton(
-                                  style: TextButton.styleFrom(
-                                    primary: Colors.black,
-                                    textStyle: const TextStyle(fontSize: 15),
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('View'),
-                                ),
-                                SizedBox(width: 20)
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    // SizedBox(height: 10,width: 10,),
+                                    Text('     Contact',
+                                      style: TextStyle(
+                                          color: Color.fromARGB(255, 0, 0, 139)
+                                      ),),
+                                    Row(
+                                      children: [
+                                        // Text('Edit'),
+                                        TextButton(
+                                          onPressed: (){
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>ContactUs(),
+                                                )
+                                            );
+                                          },
+                                          child: Text('Edit',
+                                            style: TextStyle(
+                                                color: Colors.black
+                                            ),
+                                          ),
+                                        ),
+                                        TextButton(
+                                          onPressed: (){
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>ContactUs(),
+                                                )
+                                            );
+                                          },
+                                          child: Text('Remove',
+                                            style: TextStyle(
+                                                color: Colors.black
+                                            ),
+                                          ),
+                                        ),
+                                        TextButton(
+                                          onPressed: (){
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>ContactUs(),
+                                                )
+                                            );
+                                          },
+                                          child: Text('View',
+                                            style: TextStyle(
+                                                color: Colors.black
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                )
                               ],
-                            )
+                            ),
+
                           ],
                         ),
-                      ],
-                    )),
-                    const DataCell(Text('Admin')),
-                    const DataCell(Text('2022-07-17')),
-                  ]),
-                  DataRow(cells: [
-                    DataCell(Checkbox(
-                        value: this.value4,
-                        onChanged: (bool? value) {
-                          setState(() {
-                            this.value4 = value!;
-                          });
-                        })),
-                    DataCell(Row(
-                      children: [
-                        Container(
-                          alignment: Alignment.center,
-                          child: const Image(
-                            image: AssetImage('assets/icons/home.png'),
-                            fit: BoxFit.cover,
-                            height: 40,
-                            width: 40,
-                          ),
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const SizedBox(height: 10),
-                            const Text(
-                              '    Contact',
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 0, 0, 139)),
-                            ),
-                            const SizedBox(height: 15),
-                            Row(
-                              children: [
-                                TextButton(
-                                  style: TextButton.styleFrom(
-                                    primary: Colors.black,
-                                    textStyle: const TextStyle(fontSize: 15),
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('Edit'),
-                                ),
-                                SizedBox(width: 20),
-                                TextButton(
-                                  style: TextButton.styleFrom(
-                                    primary: Colors.black,
-                                    textStyle: const TextStyle(fontSize: 15),
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('Remove'),
-                                ),
-                                SizedBox(width: 20),
-                                TextButton(
-                                  style: TextButton.styleFrom(
-                                    primary: Colors.black,
-                                    textStyle: const TextStyle(fontSize: 15),
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('View'),
-                                ),
-                                SizedBox(width: 20)
-                              ],
-                            )
-                          ],
-                        )
-                      ],
-                    )),
-                    const DataCell(Text('Admin')),
-                    const DataCell(Text('2022-07-18'))
-                  ])
-                ])
+                      )
+                  ),
+                  DataCell(Text('Admin',
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 0, 0, 139)
+                    ),
+                  ),),
+                  DataCell(Text('2022-06-18'),),
+                ]),
               ],
             ),
           )
