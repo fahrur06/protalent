@@ -87,7 +87,7 @@ class _EditTalentState extends State<EditTalent> {
                             items: const [
                               //position , skill , level , industry, location
                               SideNavigationBarItem(
-                                icon: Icons.currency_bitcoin,
+                                icon: Icons.badge_sharp,
                                 label: 'Briefly',
                               ),
                               SideNavigationBarItem(
