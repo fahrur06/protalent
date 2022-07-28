@@ -143,12 +143,13 @@ class _PagesDashboardState extends State<PagesDashboard> {
             width: screenSize.width,
             padding: EdgeInsets.zero,
             child: DataTable2(
-              columnSpacing: 20,
-              horizontalMargin: 20,
+              columnSpacing: 30,
+              dataRowHeight: 70,
+              horizontalMargin: 10,
               minWidth: 600,
               columns: [
                 DataColumn2(
-                  label: Text('Tittle',
+                  label: Text('Title',
                     style: TextStyle(
                         fontWeight: FontWeight.bold
                     ),
