@@ -11,7 +11,7 @@ class _HiredTalentState extends State<HiredTalent> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    var screenSize1 = screenSize.width *0.8; 
+    var screenSize1 = screenSize.width * 0.8;
     return Container(
       padding: EdgeInsets.all(20),
       color: Colors.grey[200],
@@ -26,11 +26,17 @@ class _HiredTalentState extends State<HiredTalent> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Hired Talent",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                    Text(
+                      "Hired Talent",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
                     Text("13 results found"),
                   ],
                 ),
-                SizedBox(width:screenSize1*0.5,),
+                SizedBox(
+                  width: screenSize1 * 0.5,
+                ),
                 ElevatedButton(
                     onPressed: () {}, child: Icon(Icons.filter_alt_sharp)),
               ],
@@ -38,13 +44,12 @@ class _HiredTalentState extends State<HiredTalent> {
           ),
           Container(
             padding: EdgeInsets.all(10),
-            color: Colors.white,width: screenSize.width,
+            color: Colors.white,
+            width: screenSize.width,
             child: Row(
               children: [
-                Container(
-                    width: screenSize.width * 0.3, child: Text("Name")),
-                Container(
-                    width: screenSize.width * 0.2, child: Text("Status")),
+                Container(width: screenSize.width * 0.3, child: Text("Name")),
+                Container(width: screenSize.width * 0.2, child: Text("Status")),
                 Container(
                     width: screenSize.width * 0.3, child: Text("Position")),
               ],
@@ -52,11 +57,9 @@ class _HiredTalentState extends State<HiredTalent> {
           ),
           Expanded(
               child: Container(
-                width: screenSize.width,
+            width: screenSize.width,
             color: Colors.white,
-            child: ListView(
-              controller: ScrollController(),
-                children: [
+            child: ListView(controller: ScrollController(), children: [
               ListProfil(
                 screenSize: screenSize,
                 nama: "Bagas Wijayanto",
