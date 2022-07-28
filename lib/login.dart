@@ -19,15 +19,22 @@ class _loginState extends State<login> {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
+        decoration: new BoxDecoration(
+            image: new DecorationImage(
+              image: new AssetImage("assets/images/blue background login.jpg"),
+              fit: BoxFit.fill,
+            )
+        ),
         height: screenSize.height,
         width: screenSize.width,
-        color: Colors.grey[100],
+
         padding: EdgeInsets.only(
             left: screenSize.width * 0.15,
             top: screenSize.height * 0.13,
             bottom: screenSize.height * 0.13),
         child: Stack(
           children: [
+
             Container(
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 10, 116, 255),
@@ -83,7 +90,10 @@ class _loginState extends State<login> {
                       ),
                       Container(
                         height: screenSize.width * 0.02,
-                        child: Text('Login as : ',style: TextStyle(fontSize: 16),),
+                        child: Text(
+                          'Login as : ',
+                          style: TextStyle(fontSize: 16),
+                        ),
                       ),
                       Row(
                         children: [
@@ -144,7 +154,9 @@ class _loginState extends State<login> {
                           ),
                         ],
                       ),
-                      Spacer(flex: 2,),
+                      Spacer(
+                        flex: 2,
+                      ),
                       Row(
                         children: [
                           Icon(
@@ -170,7 +182,8 @@ class _loginState extends State<login> {
                             labelText: "Email",
                             hintStyle: TextStyle(),
                             border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(5.0)),
+                              borderRadius: BorderRadius.circular(5.0),
+                            ),
                           ),
                         ),
                       ),
@@ -276,6 +289,7 @@ class _loginState extends State<login> {
   }
 }
 
+// Halaman Login Untuk Client
 class loginClient extends StatefulWidget {
   const loginClient({Key? key}) : super(key: key);
 
@@ -292,7 +306,12 @@ class _loginClientState extends State<loginClient> {
       body: Container(
         height: screenSize.height,
         width: screenSize.width,
-        color: Colors.grey[100],
+        decoration: new BoxDecoration(
+            image: new DecorationImage(
+              image: new AssetImage("assets/images/blue background login.jpg"),
+              fit: BoxFit.fill,
+            ),
+        ),
         padding: EdgeInsets.only(
             left: screenSize.width * 0.15,
             top: screenSize.height * 0.13,
@@ -345,7 +364,7 @@ class _loginClientState extends State<loginClient> {
                     children: [
                       Container(
                         padding:
-                        EdgeInsets.only(left: screenSize.width * 0.055),
+                            EdgeInsets.only(left: screenSize.width * 0.055),
                         height: screenSize.width * 0.02,
                         child: Image.asset("assets/logo/logo_protalent.png"),
                       ),
@@ -354,7 +373,10 @@ class _loginClientState extends State<loginClient> {
                       ),
                       Container(
                         height: screenSize.width * 0.02,
-                        child: Text('Login as : ',style: TextStyle(fontSize: 16),),
+                        child: Text(
+                          'Login as : ',
+                          style: TextStyle(fontSize: 16),
+                        ),
                       ),
                       Row(
                         children: [
@@ -390,32 +412,34 @@ class _loginClientState extends State<loginClient> {
                             height: 30,
                             width: screenSize.width * 0.08,
                             child: ElevatedButton(
-                                onPressed: () {
-                                  Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => login(),
-                                    ),
-                                  );
-                                },
-                                child: Text("ADMIN"),
-                                style: ElevatedButton.styleFrom(
-                                  fixedSize: Size(130, 40),
-                                  primary: Colors.white,
-                                  onPrimary: Colors.blue,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30),
+                              onPressed: () {
+                                Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => login(),
                                   ),
-                                  side:
-                                  BorderSide(width: 1, color: Colors.blue),
-                                )),
+                                );
+                              },
+                              child: Text("ADMIN"),
+                              style: ElevatedButton.styleFrom(
+                                fixedSize: Size(130, 40),
+                                primary: Colors.white,
+                                onPrimary: Colors.blue,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                side: BorderSide(width: 1, color: Colors.blue),
+                              ),
+                            ),
                           ),
                           Spacer(
                             flex: 5,
                           ),
                         ],
                       ),
-                      Spacer(flex: 2,),
+                      Spacer(
+                        flex: 2,
+                      ),
                       Row(
                         children: [
                           Icon(
@@ -441,7 +465,8 @@ class _loginClientState extends State<loginClient> {
                             labelText: "Email",
                             hintStyle: TextStyle(),
                             border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(5.0)),
+                              borderRadius: BorderRadius.circular(5.0),
+                            ),
                           ),
                         ),
                       ),
@@ -478,7 +503,7 @@ class _loginClientState extends State<loginClient> {
                                   : Icons.visibility_off),
                               onPressed: () {
                                 setState(
-                                      () {
+                                  () {
                                     _isObscure = !_isObscure;
                                   },
                                 );
@@ -486,7 +511,8 @@ class _loginClientState extends State<loginClient> {
                             ),
                             hintStyle: TextStyle(),
                             border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(5.0)),
+                              borderRadius: BorderRadius.circular(5.0),
+                            ),
                           ),
                         ),
                       ),
@@ -546,3 +572,5 @@ class _loginClientState extends State<loginClient> {
     );
   }
 }
+
+// Akhir Halaman Login Untuk CLient

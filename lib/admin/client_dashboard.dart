@@ -78,9 +78,9 @@ class _ClientDashboardState extends State<ClientDashboard> {
           width: screenSize.width * 0.72,
           height: screenSize.height * 0.75,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: Color.fromARGB(255, 18, 108, 178), width: 20),
-            color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(color: Color.fromARGB(255, 18, 108, 178), width: 20),
+              color: Color.fromARGB(255, 18, 108, 178)
           ),
 
           child: Column(
@@ -92,8 +92,8 @@ class _ClientDashboardState extends State<ClientDashboard> {
                       topRight: Radius.circular(20),
                       topLeft: Radius.circular(20)),
                   color:
-                    Colors.white
-                  //Color.fromARGB(255, 18, 108, 178),
+                  // Colors.white
+                  Color.fromARGB(255, 18, 108, 178),
                 ),
                 width: screenSize.width * 0.7,
                 height: screenSize.height * 0.15,
@@ -101,8 +101,7 @@ class _ClientDashboardState extends State<ClientDashboard> {
                   'Data Client',
                   style: TextStyle(
                       color:
-                      //Colors.white,
-                      Color.fromARGB(255, 18, 108, 178),
+                      Colors.white,
                       fontSize: 50,
                       fontWeight: FontWeight.bold,
                       letterSpacing: 2),
@@ -119,8 +118,8 @@ class _ClientDashboardState extends State<ClientDashboard> {
               ),
               Container(
                 decoration: BoxDecoration(
-                  // borderRadius: BorderRadius.circular(20),
-                  // color: Color.fromARGB(255, 18, 108, 178),
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.white,
                 ),
                 width: screenSize.width * 0.65,
                 height: screenSize.height * 0.46,
