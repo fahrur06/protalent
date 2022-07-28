@@ -19,15 +19,22 @@ class _loginState extends State<login> {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
+        decoration: new BoxDecoration(
+            image: new DecorationImage(
+              image: new AssetImage("assets/images/blue background login.jpg"),
+              fit: BoxFit.fill,
+            )
+        ),
         height: screenSize.height,
         width: screenSize.width,
-        color: Colors.grey[100],
+
         padding: EdgeInsets.only(
             left: screenSize.width * 0.15,
             top: screenSize.height * 0.13,
             bottom: screenSize.height * 0.13),
         child: Stack(
           children: [
+
             Container(
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 10, 116, 255),
@@ -299,7 +306,12 @@ class _loginClientState extends State<loginClient> {
       body: Container(
         height: screenSize.height,
         width: screenSize.width,
-        color: Colors.grey[100],
+        decoration: new BoxDecoration(
+            image: new DecorationImage(
+              image: new AssetImage("assets/images/blue background login.jpg"),
+              fit: BoxFit.fill,
+            )
+        ),
         padding: EdgeInsets.only(
             left: screenSize.width * 0.15,
             top: screenSize.height * 0.13,
