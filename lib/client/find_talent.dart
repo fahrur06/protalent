@@ -4,6 +4,9 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:pro_talent/client/sidemenu_talent.dart';
 import 'package:pro_talent/widget/dropdown_dashboard.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+
 
 class FindTalent extends StatefulWidget {
   const FindTalent({Key? key}) : super(key: key);
@@ -16,18 +19,33 @@ class FindTalent extends StatefulWidget {
 
 
 class _FindTalentState extends State<FindTalent> {
-
+  Future<void>? _launched;
 
 
   @override
+  Future<void> _launchInBrowser(Uri url) async {
+    if (!await launchUrl(
+      url,
+      mode: LaunchMode.externalApplication,
+    )) {
+      throw 'Could not launch $url';
+    }
+  }
+
   Widget build(BuildContext context) {
+    final Uri toLaunch =
+    Uri(scheme: 'https', host: 'web.whatsapp.com', );
+
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(floatingActionButton: FloatingActionButton(
       onPressed: () {
+        setState((){
+          _launched = _launchInBrowser(toLaunch);
+        });
         // Add your onPressed code here!
       },
       backgroundColor: Colors.green,
-      child: const Icon(Icons.whatsapp,size: 45,),
+      child: const Icon(Icons.whatsapp,size: 40,),
     ),
         body: Column(
           children: [
