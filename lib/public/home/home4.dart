@@ -48,9 +48,15 @@ class _Home4State extends State<Home4> {
                     ),
 
                   TextButton(
-                    style: TextButton.styleFrom(
-                      primary: Colors.black,
-                      textStyle: const TextStyle(fontSize: 15),
+                    style: ButtonStyle(
+                      foregroundColor: MaterialStateProperty.all(Colors.red),
+                      backgroundColor: MaterialStateProperty.all(Colors.white),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          side: BorderSide(color: Colors.red)
+                        ),
+                      ),
                     ),
                     onPressed: () {},
                     child: const Text('Get in touch'),
