@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/conts_warna.dart';
 import 'package:easy_table/easy_table.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class EditBriefly extends StatefulWidget {
   const EditBriefly({Key? key}) : super(key: key);
@@ -72,68 +72,235 @@ class _EditBrieflyState extends State<EditBriefly> {
 
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
+    var screenSize1 = screenSize.width * 0.6;
     return Scaffold(
-      body: Container(
-        width: screenSize.width * 0.64,
-        //color: Colors.blue,
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              width: screenSize.width * 0.6,
-              height: 330,
-              color: Colors.white70,
-              child: EasyTable<_skill>(
-                _model,
-                columnsFit: true,
-              ),
-            ),
-            Spacer(
-              flex: 1,
-            ),
-            Container(
-              width: screenSize.width * 0.6,
-              child: Row(
-                children: [
-                  Container(
-                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
-                    width: screenSize.width * 0.47,
-                    height: 55,
-                    //color: Colors.grey,
-                    child: TextFormField(
-                      textAlign: TextAlign.start,
-                      decoration: InputDecoration(
-                        labelText: "Isi skill talent",
-                        hintStyle: TextStyle(),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(5.0)),
+        body: Container(
+            width: screenSize.width * 0.64,
+            //color: Colors.blue,
+            padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              // Container(
+              //   width: screenSize.width * 0.6,
+              //   height: 330,
+              //   color: Colors.white70,
+              //   child: EasyTable<_skill>(
+              //     _model,
+              //     columnsFit: true,
+              //   ),
+              // ),
+
+              Container(
+                width: screenSize.width * 0.63,
+                height: screenSize.height * 0.42,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Name",
+                      style: GoogleFonts.didactGothic(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Container(
+                      height: 50,
+                      width: screenSize1 * 0.3,
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                            // labelText: "Fullname",
+                            // hintStyle: TextStyle(),
+                            border: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(width: 1, color: Colors.grey))),
                       ),
                     ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                    width: screenSize.width * 0.1,
-                    height: 55,
-                    //color: Colors.red,
-                    child: ElevatedButton(
-                        onPressed: () {},
-                        child: Row(
-                          children: [
-                            Icon(Icons.save),
-                            SizedBox(
-                              width: 5,
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      "Latest Position",
+                      style: GoogleFonts.didactGothic(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Row(children: [
+                      Container(
+                        height: 50,
+                        width: screenSize1 * 0.3,
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                              // labelText: "Fullname",
+                              // hintStyle: TextStyle(),
+                              border: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                      width: 1, color: Colors.grey))),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                    ]),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Row(
+                      children: [
+                        Column(children: [
+                          Text(
+                            "Age",
+                            style: GoogleFonts.didactGothic(
+                                color: Colors.black,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Container(
+                            height: 50,
+                            width: screenSize1 * 0.1,
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                  // labelText: "Fullname",
+                                  // hintStyle: TextStyle(),
+                                  border: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          width: 1, color: Colors.grey))),
                             ),
-                            Text('Save')
+                          ),
+                        ]),
+                        SizedBox(
+                          width: 7,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "Gender",
+                              style: GoogleFonts.didactGothic(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Container(
+                              height: 50,
+                              width: screenSize1 * 0.1,
+                              child: TextFormField(
+                                decoration: InputDecoration(
+                                    // labelText: "Fullname",
+                                    // hintStyle: TextStyle(),
+                                    border: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                            width: 1, color: Colors.grey))),
+                              ),
+                            ),
                           ],
-                        )),
-                  )
-                ],
+                        )
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Column(children: [
+                          Text(
+                            "Work Period",
+                            style: GoogleFonts.didactGothic(
+                                color: Colors.black,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Container(
+                            height: 50,
+                            width: screenSize1 * 0.1,
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                  // labelText: "Fullname",
+                                  // hintStyle: TextStyle(),
+                                  border: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          width: 1, color: Colors.grey))),
+                            ),
+                          ),
+                        ]),
+                        SizedBox(
+                          width: 7,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "Latest Work Period",
+                              style: GoogleFonts.didactGothic(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Container(
+                              height: 50,
+                              width: screenSize1 * 0.1,
+                              child: TextFormField(
+                                decoration: InputDecoration(
+                                    // labelText: "Fullname",
+                                    // hintStyle: TextStyle(),
+                                    border: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                            width: 1, color: Colors.grey))),
+                              ),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                    Spacer(
+                      flex: 1,
+                    ),
+                    Container(
+                      width: screenSize.width * 0.6,
+                      child: Row(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10, horizontal: 25),
+                            width: screenSize.width * 0.1,
+                            height: 55,
+                            //color: Colors.red,
+                            child: ElevatedButton(
+                                onPressed: () {},
+                                child: Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Text('Cancel')
+                                  ],
+                                )),
+                          ),
+                          Container(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10, horizontal: 25),
+                            width: screenSize.width * 0.1,
+                            height: 55,
+                            //color: Colors.red,
+                            child: ElevatedButton(
+                                onPressed: () {},
+                                child: Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Text('Save')
+                                  ],
+                                )),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
-            )
-          ],
-        ),
-      ),
-    );
+            ])));
   }
 }

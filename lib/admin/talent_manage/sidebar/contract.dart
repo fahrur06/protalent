@@ -116,19 +116,20 @@ class _EditContractState extends State<EditContract> {
               child: Row(
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
-                    width: screenSize.width * 0.47,
+                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                    width: screenSize.width * 0.1,
                     height: 55,
-                    //color: Colors.grey,
-                    child: TextFormField(
-                      textAlign: TextAlign.start,
-                      decoration: InputDecoration(
-                        labelText: "Isi position talent",
-                        hintStyle: TextStyle(),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(5.0)),
-                      ),
-                    ),
+                    //color: Colors.red,
+                    child: ElevatedButton(
+                        onPressed: () {},
+                        child: Row(
+                          children: [
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text('Cancel')
+                          ],
+                        )),
                   ),
                   Container(
                     padding: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
@@ -136,28 +137,16 @@ class _EditContractState extends State<EditContract> {
                     height: 55,
                     //color: Colors.red,
                     child: ElevatedButton(
-                        onPressed: () async {
-                          final posisi = await openDialog();
-                          if (posisi == null || posisi.isEmpty) return;
-                          setState(() => this._model = posisi);
-                        },
-                        child: Container(
-                          width: screenSize.width * 0.08,
-                          child: Row(
-                            children: [
-                              Container(
-                                  width: screenSize.width * 0.017,
-                                  child: Icon(Icons.save)),
-                              Spacer(
-                                flex: 1,
-                              ),
-                              Container(
-                                  width: screenSize.width * 0.028,
-                                  child: Text('Save'))
-                            ],
-                          ),
+                        onPressed: () {},
+                        child: Row(
+                          children: [
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text('Save')
+                          ],
                         )),
-                  )
+                  ),
                 ],
               ),
             )
