@@ -310,7 +310,7 @@ class _loginClientState extends State<loginClient> {
             image: new DecorationImage(
               image: new AssetImage("assets/images/blue background login.jpg"),
               fit: BoxFit.fill,
-            )
+            ),
         ),
         padding: EdgeInsets.only(
             left: screenSize.width * 0.15,

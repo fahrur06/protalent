@@ -20,7 +20,12 @@ class _RegisterState extends State<Register> {
       body: Container(
         height: screenSize.height,
         width: screenSize.width,
-        color: Colors.grey[100],
+        decoration: new BoxDecoration(
+          image: new DecorationImage(
+            image: new AssetImage("assets/images/blue background login.jpg"),
+            fit: BoxFit.fill,
+          ),
+        ),
         padding: EdgeInsets.only(
             left: screenSize.width * 0.15,
             top: screenSize.height * 0.13,
