@@ -21,6 +21,7 @@ class _HiredTalentState extends State<HiredTalent> {
             padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
             color: Colors.grey[200],
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -34,11 +35,18 @@ class _HiredTalentState extends State<HiredTalent> {
                     Text("13 results found"),
                   ],
                 ),
-                SizedBox(
-                  width: screenSize1 * 0.5,
+                
+                 Container(
+                  width: 200,
+                  child: Expanded(
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.search),
+                        border: OutlineInputBorder(),
+                      ),
+                    ),
+                  ),
                 ),
-                ElevatedButton(
-                    onPressed: () {}, child: Icon(Icons.filter_alt_sharp)),
               ],
             ),
           ),

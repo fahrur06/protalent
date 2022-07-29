@@ -81,7 +81,7 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context,Color home, Color o
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: Post(), menu: 'Post',warna: post),
+        ButtonAppbar(arah: Post(), menu: 'News',warna: post),
         Spacer(
           flex: 1,
         ),
