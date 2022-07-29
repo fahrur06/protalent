@@ -30,9 +30,9 @@ class PostBody extends StatelessWidget {
         : AppbarHomeLarge(screenSize, context, Colors.black,Colors.black,Colors.blue,Colors.black),
       body: ListView(
         children: [
-          Container(
+          SingleChildScrollView(
             padding: EdgeInsets.only(left: 70, right: 70),
-            height: 850,
+            controller: ScrollController(),
             child: Container(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,11 +1,11 @@
-String headgrid1 = 'Post 6 Headline';
+String headgrid1 = 'Kerja Sama dengan Alibaba';
 String headgrid2 = 'Post 5 Headline';
 String headgrid3 = 'Post 4 Headline';
 String headgrid4 = 'Post 3 Headline';
 String headgrid5 = 'Post 2 Headline';
 String headgrid6 = 'Post 1 Headline';
 
-String bodygrid1 = 'Example text for headline 6. Example text for headline 6. Example text for headline 6. Example text for headline 6. ';
+String bodygrid1 = 'Melakukan kerja sama dengan alibaba cloud. ';
 String bodygrid2 = 'Example text for headline 5. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
 String bodygrid3 = 'Example text for headline 4. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
 String bodygrid4 = 'Example text for headline 3. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
@@ -16,7 +16,49 @@ String bodyfull1 = 'Build enterprise-grade containerized applications faster wit
     'best-in-class managed Kubernetes and serverless platform on cloud '
     'and on-premises environments. You can build a fast, scalable software '
     'delivery pipeline no matter where you run by seamlessly implementing DevOps '
-    'and SRE practices with cloud-native tooling and expert guidance.';
+    '/n'
+    'hfdgufdfudfvgydufdufudvufvdfvdufdiuvfidufg eugeiugfuirgfiregieruguirgfirgiegtitirhtioe'
+    'delivery pipeline no matter where you run by seamlessly implementing DevOps '
+    '/n'
+    'hfdgufdfudfvgydufdufudvufvdfvdufdiuvfidufg eugeiugfuirgfiregieruguirgfirgiegtitirhtioe'
+    'delivery pipeline no matter where you run by seamlessly implementing DevOps '
+    '/n'
+    'hfdgufdfudfvgydufdufudvufvdfvdufdiuvfidufg eugeiugfuirgfiregieruguirgfirgiegtitirhtioe'
+    'delivery pipeline no matter where you run by seamlessly implementing DevOps '
+    '/n'
+    'hfdgufdfudfvgydufdufudvufvdfvdufdiuvfidufg eugeiugfuirgfiregieruguirgfirgiegtitirhtioe'
+    'delivery pipeline no matter where you run by seamlessly implementing DevOps '
+    '/n'
+    'hfdgufdfudfvgydufdufudvufvdfvdufdiuvfidufg eugeiugfuirgfiregieruguirgfirgiegtitirhtioe'
+    'delivery pipeline no matter where you run by seamlessly implementing DevOps '
+    '/n'
+    'hfdgufdfudfvgydufdufudvufvdfvdufdiuvfidufg eugeiugfuirgfiregieruguirgfirgiegtitirhtioe'
+    'delivery pipeline no matter where you run by seamlessly implementing DevOps '
+    '/n'
+    'hfdgufdfudfvgydufdufudvufvdfvdufdiuvfidufg eugeiugfuirgfiregieruguirgfirgiegtitirhtioe'
+    'delivery pipeline no matter where you run by seamlessly implementing DevOps '
+    '/n'
+    'hfdgufdfudfvgydufdufudvufvdfvdufdiuvfidufg eugeiugfuirgfiregieruguirgfirgiegtitirhtioe'
+    'delivery pipeline no matter where you run by seamlessly implementing DevOps '
+    '/n''hfdgufdfudfvgydufdufudvufvdfvdufdiuvfidufg eugeiugfuirgfiregieruguirgfirgiegtitirhtioe'
+    'delivery pipeline no matter where you run by seamlessly implementing DevOps '
+    '/n'
+    'hfdgufdfudfvgydufdufudvufvdfvdufdiuvfidufg eugeiugfuirgfiregieruguirgfirgiegtitirhtioe'
+    'delivery pipeline no matter where you run by seamlessly implementing DevOps '
+    '/n'
+    'hfdgufdfudfvgydufdufudvufvdfvdufdiuvfidufg eugeiugfuirgfiregieruguirgfirgiegtitirhtioe'
+    'delivery pipeline no matter where you run by seamlessly implementing DevOps '
+    '/n'
+    'hfdgufdfudfvgydufdufudvufvdfvdufdiuvfidufg eugeiugfuirgfiregieruguirgfirgiegtitirhtioe'
+    'delivery pipeline no matter where you run by seamlessly implementing DevOps '
+    '/n'
+    'hfdgufdfudfvgydufdufudvufvdfvdufdiuvfidufg eugeiugfuirgfiregieruguirgfirgiegtitirhtioe'
+    'delivery pipeline no matter where you run by seamlessly implementing DevOps '
+    '/n'
+    'hfdgufdfudfvgydufdufudvufvdfvdufdiuvfidufg eugeiugfuirgfiregieruguirgfirgiegtitirhtioe'
+    'delivery pipeline no matter where you run by seamlessly implementing DevOps '
+    '/n'
+    'hfdgufdfudfvgydufdufudvufvdfvdufdiuvfidufg eugeiugfuirgfiregieruguirgfirgiegtitirhtioe';
 String bodyfull2 = 'Multicloud - the use of cloud services from two or '
     'more vendors - gives organizations more flexibility to optimize performance, '
     'control costs, and leverage the best cloud technologies available.';

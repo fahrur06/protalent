@@ -86,10 +86,10 @@ class _PostState extends State<Post> {
               children: <Widget>[
                 GridContainer(
                   HeadGrid: headgrid1,
-                  ImageGrid: 'assets/images/3.jpeg',
+                  ImageGrid: 'assets/images/eksad.jpg',
                   BodyGrid: bodygrid1,
                   arah: PostBody(
-                    Image: 'assets/images/3.jpeg',
+                    Image: 'assets/images/eksad.jpg',
                     HeadText: headgrid1,
                     Tanggal: tanggal,
                     Bodyfull: bodyfull1,
