@@ -122,12 +122,12 @@ class _PostState extends State<Post> {
                 ),
                 GridContainer(
                   HeadGrid: headgrid4,
-                  ImageGrid: 'assets/images/3.jpeg',
+                  ImageGrid: 'assets/images/call us.jpg',
                   BodyGrid: bodygrid4,
                   arah: PostBody(
-                    Image: 'assets/images/3.jpeg',
+                    Image: 'assets/images/call us.jpg',
                     HeadText: headgrid4,
-                    Tanggal: tanggal,
+                    Tanggal: tanggal4,
                     Bodyfull: bodyfull4,
                     Urutan: urutan4,
                   ),
