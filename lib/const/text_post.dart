@@ -99,17 +99,63 @@ String bodyfull5 =
     'untuk membangun proyek atau aplikasi perusahaan Anda dengan durasi 1 hingga 3 bulan '
     'yang terdiri dari Project Manager, Business Analyst, Developer, dan UI/UX'
     '\n'
+    '\n'
+    'Info lebih lengkap Anda dapat menghubungi:'
+    '\n'
+    'www.eksad.com'
+    '\n'
+    'marketing@eksad.com'
+    '\n'
+    '0811329381'
     '\n';
 
 String bodyfull6 =
     'EKSAD memberikan solusi dan mitra resources IT yang professional, yang menyediakan tenaga ahli IT yang berkompeten '
     'dalam mengerjakan proyek-proyek perusahaan serta memiliki pengetahuan teknis yang terbukti. '
     'EKSAD IT resources juga membantu Anda dalam meningkatkan kinerja layanan dan '
-    'menawarkan peningkatan fleksibilitas dalam manajemen tenaga kerja.';
+    'menawarkan peningkatan fleksibilitas dalam manajemen tenaga kerja. '
+    '\n'
+    '\n'
+    ''
+    'Keunggulan Kami:'
+    '\n'
+    '1. Kecepatan'
+    '\n'
+    'Pemenuhan sumber daya maksimal 3 bulan dari PO'
+    '\n'
+    '\n'
+    '2. Integritas & Komitmen'
+    '\n'
+    'Sumber daya dengan integritas dan komitmen yang tinggi dalam menyelesaikan tugas'
+    '\n'
+    '\n'
+    '3. Kompeten'
+    '\n'
+    'Sumber daya yang sudah terlatih dan bersertifikasi'
+    '\n'
+    '\n'
+    '4. Fleksibel'
+    '\n'
+    'Fleksibilitas untuk klien yang akan merekrut sumber daya menjadi permanen karyawan'
+    '\n'
+    '\n'
+    '5. Bisnis Fokus'
+    '\n'
+    'Membantu klien untuk fokus pada aktivitas bisnis utama mereka'
+    '\n'
+    '\n'
+    '6. Biaya Kompetitif'
+    '\n'
+    'Harga kompetitif dievaluasi setiap 2 tahun'
+    '\n';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 String tanggal = '17 Juli 2022';
+String tanggal5 = '18 Juli 2022';
+String tanggal6 = '17 Juli 2022';
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 String urutan1 = 'News 6';
 String urutan2 = 'News 5';
 String urutan3 = 'News 4';

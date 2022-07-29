@@ -139,7 +139,7 @@ class _PostState extends State<Post> {
                   arah: PostBody(
                     Image: 'assets/images/layanan kami.jpg',
                     HeadText: headgrid5,
-                    Tanggal: tanggal,
+                    Tanggal: tanggal5,
                     Bodyfull: bodyfull5,
                     Urutan: urutan5,
                   ),
@@ -151,7 +151,7 @@ class _PostState extends State<Post> {
                   arah: PostBody(
                     Image: 'assets/images/eksad IT resources.jpg',
                     HeadText: headgrid6,
-                    Tanggal: tanggal,
+                    Tanggal: tanggal6,
                     Bodyfull: bodyfull6,
                     Urutan: urutan6,
                   ),
