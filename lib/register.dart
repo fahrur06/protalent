@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/login.dart';
-import 'package:pro_talent/widget/whatsapp.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
@@ -16,6 +16,21 @@ class _RegisterState extends State<Register> {
   String _usname = '';
   String _usmail = '';
   String _uspswd = '';
+
+  void chat(
+      {required final int phone,
+        required String message,
+      }) async {
+    String url() {
+      return "https://api.whatsapp.com/send?phone=$phone&text=${Uri.parse(message)}";
+    }
+
+    if (await canLaunch(url())) {
+      await launch(url());
+    } else {
+      throw 'Could not launch ${url()}';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -202,6 +217,7 @@ class _RegisterState extends State<Register> {
                                   borderRadius: BorderRadius.circular(5.0)),
                             ),
                             onChanged: (value)=> _uspswd = value,
+
                           ),
                         ),
                         Spacer(
@@ -231,8 +247,10 @@ class _RegisterState extends State<Register> {
                               height: 30,
                               width: screenSize.width * 0.09,
                               child: ElevatedButton(
-                                onPressed: () => WAChat().launchWhatsApp(phone: 628112622993, message: 'Form Register Client Protalent %0A%0AUsername : $_usname %0Aemail address : $_usmail %0Apassword : $_uspswd %0A%0Adengan ini saya ingin mengajukan regristrasi akun baru.%0ATerimakasih.'),
-                                child: Text("REGISTER"),
+                                onPressed: () {
+                                  chat(phone: 6281807890777, message: 'Form Register Client Protalent \n\nUsername = $_usname \nemail address = $_usmail \npassword = $_uspswd \n\ndengan ini saya ingin mengajukan regristrasi akun baru.\nTerimakasih.');
+                                },
+                                child: const Text('REGISTER'),
                               ),
                             ),
                           ],
