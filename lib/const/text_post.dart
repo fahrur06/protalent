@@ -1,3 +1,5 @@
+import 'dart:core';
+
 String headgrid1 = 'Penghargaan dari Alibaba Cloud';
 String headgrid2 = 'Talenta Hebat';
 String headgrid3 = 'Partner Kerja Kelas Dunia';
@@ -21,7 +23,6 @@ String bodygrid5 = 'Kami menyediakan IT expert sebagai berikut: '
 String bodygrid6 =
     'EKSAD memberikan solusi dan mitra resources IT yang professional, yang menyediakan tenaga ahli IT yang berkompeten ...';
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 String bodyfull1 =
     'Berkat kehandalan dan kemampuan eksad dalam menerapkan solusi dari Alibaba Cloud ke puluhan perusahaan klien. Eksad memperoleh pengghargaan dari Alibaba '
     'Build enterprise-grade containerized applications faster with '
@@ -120,7 +121,12 @@ String bodyfull6 =
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 String tanggal = '17 Juli 2022';
+String tanggal4 = '19 Juli 2022';
+String tanggal5 = '18 Juli 2022';
+String tanggal6 = '17 Juli 2022';
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 String urutan1 = 'News 6';
 String urutan2 = 'News 5';
 String urutan3 = 'News 4';
