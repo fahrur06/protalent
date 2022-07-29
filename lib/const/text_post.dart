@@ -89,15 +89,20 @@ String bodyfull4 = 'A multicloud solution is a cloud computing solution that\'s 
 String bodyfull5 =
     'Kami menyediakan IT expert sebagai berikut: '
     '\n'
+    '\n'
     '1. Penugasan individu (Project Manager, Business Analyst, Java Developer, '
     'Fullstack Developer, Technical Writer, Software Tester, DevOps, '
     'UI/UX, Mobile Developer, Technical Lead, IT Infrastructure, Database Administrator) '
     '\n'
+    '\n'
     '2. Penugasan Tim (Terdiri dari 5 hingga 8 orang dalam satu tim yang digunakan '
-    'untuk membangun proyek atau aplikasi perusahaan Anda dengan durasi 1 hingga 3 bulan yang terdiri dari Project Manager, Business Analyst, Developer, dan UI/UX';
+    'untuk membangun proyek atau aplikasi perusahaan Anda dengan durasi 1 hingga 3 bulan '
+    'yang terdiri dari Project Manager, Business Analyst, Developer, dan UI/UX'
+    '\n'
+    '\n';
 
 String bodyfull6 =
-    'EKSAD memberikan solusi dan mitra resources IT yang professional, yang menyediakan tenaga ahli IT yang berkompeten'
+    'EKSAD memberikan solusi dan mitra resources IT yang professional, yang menyediakan tenaga ahli IT yang berkompeten '
     'dalam mengerjakan proyek-proyek perusahaan serta memiliki pengetahuan teknis yang terbukti. '
     'EKSAD IT resources juga membantu Anda dalam meningkatkan kinerja layanan dan '
     'menawarkan peningkatan fleksibilitas dalam manajemen tenaga kerja.';
