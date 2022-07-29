@@ -6,7 +6,8 @@ import 'package:pro_talent/public/home/home3.dart';
 import 'package:pro_talent/public/home/home4.dart';
 import 'package:pro_talent/appbar/appbar_home.dart';
 import 'package:pro_talent/widget/responsive.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:pro_talent/widget/whatsapp.dart';
+
 
 
 class HomePage extends StatefulWidget {
@@ -17,22 +18,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  Future<void>? _launched;
 
-  void launchWhatsApp(
-      {required int phone,
-        required String message,
-      }) async {
-    String url() {
-      return "https://web.whatsapp.com/send?phone=$phone&text=${Uri.parse(message)}";
-    }
-
-    if (await canLaunch(url())) {
-      await launch(url());
-    } else {
-      throw 'Could not launch ${url()}';
-    }
-  }
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -47,20 +33,10 @@ class _HomePageState extends State<HomePage> {
           Home3(),
           Home4(),
           Footer(),
-
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState((){
-            launchWhatsApp(phone: 6282125034380, message: 'Permisi bang saya mau pesan nasi uduk 1');
-          });
-          // Add your onPressed code here!
-        },
-        backgroundColor: Colors.green,
-        child: const Icon(Icons.whatsapp,size: 40,),
-      ),
+      floatingActionButton: WAChat()
 
     );
   }
