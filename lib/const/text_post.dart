@@ -2,16 +2,22 @@ String headgrid1 = 'Kerja Sama dengan Alibaba';
 String headgrid2 = 'Post 5 Headline';
 String headgrid3 = 'Post 4 Headline';
 String headgrid4 = 'Post 3 Headline';
-String headgrid5 = 'Post 2 Headline';
-String headgrid6 = 'Post 1 Headline';
+String headgrid5 = 'Layanan Kami';
+String headgrid6 = 'Tentang EKSAD IT Resources';
 
 String bodygrid1 = 'Melakukan kerja sama dengan alibaba cloud. ';
 String bodygrid2 = 'Example text for headline 5. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
 String bodygrid3 = 'Example text for headline 4. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
 String bodygrid4 = 'Example text for headline 3. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
-String bodygrid5 = 'Example text for headline 2. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
-String bodygrid6 = 'Example text for headline 1. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
 
+String bodygrid5 = 'Kami menyediakan IT expert sebagai berikut: '
+    '\n '
+    '1. Penugasan individu (Project Manager, Business Analyst, Java Developer, Fullstack Developer ... ';
+
+String bodygrid6 = 'EKSAD memberikan solusi dan mitra resources IT yang professional, yang menyediakan tenaga ahli IT yang berkompeten ...';
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 String bodyfull1 = 'Build enterprise-grade containerized applications faster with '
     'best-in-class managed Kubernetes and serverless platform on cloud '
     'and on-premises environments. You can build a fast, scalable software '
@@ -62,12 +68,14 @@ String bodyfull1 = 'Build enterprise-grade containerized applications faster wit
 String bodyfull2 = 'Multicloud - the use of cloud services from two or '
     'more vendors - gives organizations more flexibility to optimize performance, '
     'control costs, and leverage the best cloud technologies available.';
+
 String bodyfull3 = 'Multicloud is the use of cloud services from more than one cloud vendor. '
     'It can be as simple as using software-as-a-service (SaaS) from different cloud vendors – '
     'e.g., Salesforce and Workday. But in the enterprise, multicloud typically refers to '
     'running enterprise applications on platform-as-a-service (PaaS) or infrastructure-as-a-service '
     '(IaaS) from multiple cloud service providers, such as Amazon Web Services (AWS), '
     'Google Cloud Platform, IBM Cloud and Microsoft Azure.';
+
 String bodyfull4 = 'A multicloud solution is a cloud computing solution that\'s portable '
     'across multiple cloud providers cloud infrastructures. Multicloud solutions are '
     'typically built on open-source, cloud-native technologies, such as Kubernetes, '
@@ -77,13 +85,24 @@ String bodyfull4 = 'A multicloud solution is a cloud computing solution that\'s 
     'such as VMware, offer multicloud solutions for compute infrastructure, development, data '
     'warehousing, cloud storage, artificial intelligence (AI) and machine learning (ML), disaster'
     ' recovery/business continuity and more.';
-String bodyfull5 = 'Flexibility to choose cloud services from different cloud providers '
-    'based on the combination of pricing, performance, security and compliance requirements, '
-    'geographical location that best suits the business;';
-String bodyfull6 = 'The key to maximizing the benefits of a multicloud architecture is to '
-    'manage applications and resources across the multiple clouds centrally, as if they were '
-    'part of a single cloud. But multicloud management comes with multiple challenges';
 
+String bodyfull5 =
+    'Kami menyediakan IT expert sebagai berikut: '
+    '\n'
+    '1. Penugasan individu (Project Manager, Business Analyst, Java Developer, '
+    'Fullstack Developer, Technical Writer, Software Tester, DevOps, '
+    'UI/UX, Mobile Developer, Technical Lead, IT Infrastructure, Database Administrator) '
+    '\n'
+    '2. Penugasan Tim (Terdiri dari 5 hingga 8 orang dalam satu tim yang digunakan '
+    'untuk membangun proyek atau aplikasi perusahaan Anda dengan durasi 1 hingga 3 bulan yang terdiri dari Project Manager, Business Analyst, Developer, dan UI/UX';
+
+String bodyfull6 =
+    'EKSAD memberikan solusi dan mitra resources IT yang professional, yang menyediakan tenaga ahli IT yang berkompeten'
+    'dalam mengerjakan proyek-proyek perusahaan serta memiliki pengetahuan teknis yang terbukti. '
+    'EKSAD IT resources juga membantu Anda dalam meningkatkan kinerja layanan dan '
+    'menawarkan peningkatan fleksibilitas dalam manajemen tenaga kerja.';
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 String tanggal = '17 Juli 2022';
 
 String urutan1 = 'News 6';
@@ -92,6 +111,8 @@ String urutan3 = 'News 4';
 String urutan4 = 'News 3';
 String urutan5 = 'News 2';
 String urutan6 = 'News 1';
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 String row1 = 'Eksad Providing Services High Quality Based '
     'on Strong Experience in the industry and technology. '
