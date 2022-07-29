@@ -98,7 +98,7 @@ class _AlertFormState extends State<AlertForm> {
           context: context,
           builder: (context) => AlertDialog(
             title: Text('Add Talent'),
-            titlePadding: EdgeInsets.only(top: 40,left: 30),
+            titlePadding: EdgeInsets.only(top: 40, left: 30),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               verticalDirection: VerticalDirection.down,
@@ -201,10 +201,7 @@ class _AlertFormState extends State<AlertForm> {
                 //         )))
               ],
             ),
-            actions: [
-              ElevatedButton(onPressed: (){}, child: Text('SAVE'))
-
-            ],
+            actions: [ElevatedButton(onPressed: () {}, child: Text('SAVE'))],
           ),
         );
     return Row(

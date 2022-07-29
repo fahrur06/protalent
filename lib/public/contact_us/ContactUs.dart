@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pro_talent/admin/post/add_post.dart';
 import 'package:pro_talent/conts_warna.dart';
+import 'package:pro_talent/public/contact_us/SendEmail.dart';
 import 'package:pro_talent/public/footer.dart';
 import 'package:pro_talent/widget/responsive.dart';
 import 'package:pro_talent/appbar/appbar_home.dart';
-import 'package:pro_talent/widget/whatsapp.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 
 import '../../widget/botton.dart';
+import '../../widget/whatsapp.dart';
 
 class ContactUs extends StatefulWidget {
   const ContactUs({Key? key}) : super(key: key);
@@ -17,6 +20,11 @@ class ContactUs extends StatefulWidget {
 }
 
 class _ContactUsState extends State<ContactUs> {
+  final _formKey = GlobalKey<FormState>();
+
+  final emailController = TextEditingController();
+  final messageController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -24,7 +32,8 @@ class _ContactUsState extends State<ContactUs> {
       floatingActionButton: WAChat(),
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? AppbarHomeSmall(screenSize)
-          : AppbarHomeLarge(screenSize, context, Colors.black,Colors.black,Colors.black,Colors.blue),
+          : AppbarHomeLarge(screenSize, context, Colors.black, Colors.black,
+              Colors.black, Colors.blue),
       body: ListView(
         children: [
           Container(
@@ -150,56 +159,66 @@ class _ContactUsState extends State<ContactUs> {
                   width: screenSize.width * 0.35,
                   child: Container(
                     height: screenSize.height,
-                    child: Column(
-                      children: [
-                        const Spacer(
-                          flex: 1,
-                        ),
-                        Text(
-                          "Contact Us",
-                          style: GoogleFonts.robotoCondensed(
-                              fontSize: 50,
-                              fontWeight: FontWeight.bold,
-                              color: kTextColor),
-                        ),
-                        const Spacer(
-                          flex: 1,
-                        ),
-                        TextFormField(
-                          decoration: const InputDecoration(
-                              hintText: "Enter Your Name"),
-                        ),
-                        const Spacer(
-                          flex: 1,
-                        ),
-                        TextFormField(
-                          decoration: const InputDecoration(
-                              hintText: "Enter A Valid Email Address"),
-                        ),
-                        const Spacer(
-                          flex: 1,
-                        ),
-                        TextFormField(
-                          decoration: const InputDecoration(hintText: ""),
-                        ),
-                        const Spacer(
-                          flex: 1,
-                        ),
-                        SizedBox(
-                            height: 60,
-                            width: 600,
-                            child: SizedBox(
-                              height: screenSize.height,
-                              width: screenSize.width,
-                              child: Botton_tombol(
-                                title: "SUBMIT",
-                                arah: AddPost(),
-                              ),
-                            )),
-                        const Spacer(
-                          flex: 1,
-                        ),
-                      ],
+                    child: Form(
+                      key: _formKey,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          const Text('Contact Us',
+                              style: TextStyle(
+                                  fontSize: 50, fontWeight: FontWeight.bold)),
+                          TextFormField(
+                            controller: emailController,
+                            decoration:
+                                const InputDecoration(hintText: 'Email'),
+                          ),
+                          TextFormField(
+                            controller: messageController,
+                            decoration:
+                                const InputDecoration(hintText: 'Message'),
+                            maxLines: 5,
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return '*Required';
+                              }
+                              return null;
+                            },
+                          ),
+                          SizedBox(
+                            height: 45,
+                            width: 110,
+                            child: TextButton(
+                              style: TextButton.styleFrom(
+                                  primary: Colors.white,
+                                  backgroundColor: const Color(0xff151534),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40))),
+                              onPressed: () async {
+                                if (_formKey.currentState!.validate()) {
+                                  final response = await SendEmail(
+                                      emailController.value.text,
+                                      messageController.value.text);
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    response == 200
+                                        ? const SnackBar(
+                                            content: Text('Message Sent!'),
+                                            backgroundColor: Colors.green)
+                                        : const SnackBar(
+                                            content:
+                                                Text('Failed to send message!'),
+                                            backgroundColor: Colors.red),
+                                  );
+
+                                  emailController.clear();
+                                  messageController.clear();
+                                }
+                              },
+                              child: const Text('Send',
+                                  style: TextStyle(fontSize: 16)),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -213,5 +232,23 @@ class _ContactUsState extends State<ContactUs> {
         ],
       ),
     );
+  }
+
+  Future SendEmail(String email, String message) async {
+    final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
+    const serviceId = 'service_wava70j';
+    const templateId = 'template_koc73cj';
+    const userId = 'h4BmDnyWlm3OziBDx';
+    final response = await http.post(url,
+        headers: {
+          'Content-Type': 'application/json'
+        }, //This line makes sure it works for all platforms.
+        body: json.encode({
+          'service_id': serviceId,
+          'template_id': templateId,
+          'user_id': userId,
+          'template_params': {'to_email': email, 'message': message}
+        }));
+    return response.statusCode;
   }
 }
