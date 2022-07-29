@@ -6,6 +6,7 @@ import 'package:pro_talent/widget/grid_post.dart';
 import 'package:pro_talent/const/text_post.dart';
 import 'package:pro_talent/public/post/post_body.dart';
 import 'package:pro_talent/public/footer.dart';
+import 'package:pro_talent/widget/whatsapp.dart';
 
 
 class Post extends StatefulWidget {
@@ -20,6 +21,7 @@ class _PostState extends State<Post> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
+      floatingActionButton: WAChat(),
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? AppbarHomeSmall(screenSize)
           : AppbarHomeLarge(screenSize, context, Colors.black,Colors.black,Colors.blue,Colors.black),

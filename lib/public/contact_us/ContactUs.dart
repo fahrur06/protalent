@@ -5,6 +5,7 @@ import 'package:pro_talent/conts_warna.dart';
 import 'package:pro_talent/public/footer.dart';
 import 'package:pro_talent/widget/responsive.dart';
 import 'package:pro_talent/appbar/appbar_home.dart';
+import 'package:pro_talent/widget/whatsapp.dart';
 
 import '../../widget/botton.dart';
 
@@ -20,6 +21,7 @@ class _ContactUsState extends State<ContactUs> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
+      floatingActionButton: WAChat(),
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? AppbarHomeSmall(screenSize)
           : AppbarHomeLarge(screenSize, context, Colors.black,Colors.black,Colors.black,Colors.blue),
