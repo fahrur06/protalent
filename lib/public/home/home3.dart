@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/public/post/post.dart';
-import 'package:pro_talent/public/const/text_post.dart';
+import 'package:pro_talent/const/text_post.dart';
 import 'package:pro_talent/public/post/post_body.dart';
 
 class Home3 extends StatefulWidget {
