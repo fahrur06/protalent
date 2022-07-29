@@ -12,7 +12,7 @@ class _FooterState extends State<Footer> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-      height: screenSize.height * 0.3,
+      height: screenSize.height * 0.15,
       decoration: const BoxDecoration(
           gradient: LinearGradient(colors: <Color>[
             Color(0xFF0D5396),
@@ -24,13 +24,19 @@ class _FooterState extends State<Footer> {
           const Spacer(flex: 1),
           const Text("PT Tiga Daya Digital Indonesia",
               style: TextStyle(
+                fontSize: 18,
                 color: Colors.white,
               )),
-          const Spacer(flex: 1),
+          SizedBox(
+            height: 10,
+          ),
           const Text("Powered by EKSAD Technology ",
               style: TextStyle(
                 color: Colors.white,
               )),
+          SizedBox(
+            height: 10,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [

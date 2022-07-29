@@ -50,6 +50,7 @@ class _HomePageState extends State<HomePage> {
 
         ],
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState((){

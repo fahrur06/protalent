@@ -3,7 +3,7 @@ import 'package:pro_talent/widget/responsive.dart';
 import 'package:pro_talent/appbar/appbar_home.dart';
 import 'package:pro_talent/homepage.dart';
 import 'package:pro_talent/widget/grid_post.dart';
-import 'package:pro_talent/public/const/text_post.dart';
+import 'package:pro_talent/const/text_post.dart';
 import 'package:pro_talent/public/post/post_body.dart';
 import 'package:pro_talent/public/footer.dart';
 
