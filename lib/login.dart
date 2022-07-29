@@ -226,7 +226,17 @@ class _loginState extends State<login> {
                                           ),
                                     );
                                   }else{
-                                    print('Gagal login');
+                                    AlertDialog(
+                                      title: Text('Gagal login'),
+                                      content: Container(
+                                        child: Text('Akun Belum terdaftar,Silahkan Registrasi'),
+                                      ),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () => Navigator.of(context).pop(),
+                                          child: Text('Ok'))
+                                      ],
+                                    );
                                   }
                                 },
                                 child: Text("LOGIN"),
