@@ -86,10 +86,10 @@ class _PostState extends State<Post> {
               children: <Widget>[
                 GridContainer(
                   HeadGrid: headgrid1,
-                  ImageGrid: 'assets/images/3.jpeg',
+                  ImageGrid: 'assets/images/eksad.jpg',
                   BodyGrid: bodygrid1,
                   arah: PostBody(
-                    Image: 'assets/images/3.jpeg',
+                    Image: 'assets/images/eksad.jpg',
                     HeadText: headgrid1,
                     Tanggal: tanggal,
                     Bodyfull: bodyfull1,
@@ -134,10 +134,10 @@ class _PostState extends State<Post> {
                 ),
                 GridContainer(
                   HeadGrid: headgrid5,
-                  ImageGrid: 'assets/images/2.jpeg',
+                  ImageGrid: 'assets/images/layanan kami.jpg',
                   BodyGrid: bodygrid5,
                   arah: PostBody(
-                    Image: 'assets/images/2.jpeg',
+                    Image: 'assets/images/layanan kami.jpg',
                     HeadText: headgrid5,
                     Tanggal: tanggal,
                     Bodyfull: bodyfull5,
@@ -146,10 +146,10 @@ class _PostState extends State<Post> {
                 ),
                 GridContainer(
                   HeadGrid: headgrid6,
-                  ImageGrid: 'assets/images/1.jpeg',
+                  ImageGrid: 'assets/images/eksad IT resources.jpg',
                   BodyGrid: bodygrid6,
                   arah: PostBody(
-                    Image: 'assets/images/1.jpeg',
+                    Image: 'assets/images/eksad IT resources.jpg',
                     HeadText: headgrid6,
                     Tanggal: tanggal,
                     Bodyfull: bodyfull6,
