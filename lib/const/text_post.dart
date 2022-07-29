@@ -1,14 +1,15 @@
 String headgrid1 = 'Kerja Sama dengan Alibaba';
 String headgrid2 = 'Post 5 Headline';
 String headgrid3 = 'Post 4 Headline';
-String headgrid4 = 'Post 3 Headline';
+String headgrid4 = 'Contact Us';
 String headgrid5 = 'Layanan Kami';
 String headgrid6 = 'Tentang EKSAD IT Resources';
 
 String bodygrid1 = 'Melakukan kerja sama dengan alibaba cloud. ';
 String bodygrid2 = 'Example text for headline 5. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
 String bodygrid3 = 'Example text for headline 4. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
-String bodygrid4 = 'Example text for headline 3. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
+
+String bodygrid4 = 'Contact Us ...';
 
 String bodygrid5 = 'Kami menyediakan IT expert sebagai berikut: '
     '\n '
@@ -76,15 +77,21 @@ String bodyfull3 = 'Multicloud is the use of cloud services from more than one c
     '(IaaS) from multiple cloud service providers, such as Amazon Web Services (AWS), '
     'Google Cloud Platform, IBM Cloud and Microsoft Azure.';
 
-String bodyfull4 = 'A multicloud solution is a cloud computing solution that\'s portable '
-    'across multiple cloud providers cloud infrastructures. Multicloud solutions are '
-    'typically built on open-source, cloud-native technologies, such as Kubernetes, '
-    'that are supported by all public cloud providers. They also typically include '
-    'capabilities for managing workloads across multiple clouds with a central console (or \'single '
-    'pane of glass\'). Many of the leading cloud providers, as well as cloud solution providers '
-    'such as VMware, offer multicloud solutions for compute infrastructure, development, data '
-    'warehousing, cloud storage, artificial intelligence (AI) and machine learning (ML), disaster'
-    ' recovery/business continuity and more.';
+String bodyfull4 = 'Contact Us'
+    '\n'
+    '\n'
+    'Info lebih lengkap Anda dapat menghubungi:'
+    '\n'
+    '\n'
+    'www.eksad.com'
+    '\n'
+    '\n'
+    'marketing@eksad.com'
+    '\n'
+    '\n'
+    '0811329381'
+    '\n'
+    '\n';
 
 String bodyfull5 =
     'Kami menyediakan IT expert sebagai berikut: '
@@ -99,14 +106,6 @@ String bodyfull5 =
     'untuk membangun proyek atau aplikasi perusahaan Anda dengan durasi 1 hingga 3 bulan '
     'yang terdiri dari Project Manager, Business Analyst, Developer, dan UI/UX'
     '\n'
-    '\n'
-    'Info lebih lengkap Anda dapat menghubungi:'
-    '\n'
-    'www.eksad.com'
-    '\n'
-    'marketing@eksad.com'
-    '\n'
-    '0811329381'
     '\n';
 
 String bodyfull6 =
@@ -151,6 +150,7 @@ String bodyfull6 =
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 String tanggal = '17 Juli 2022';
+String tanggal4 = '19 Juli 2022';
 String tanggal5 = '18 Juli 2022';
 String tanggal6 = '17 Juli 2022';
 
