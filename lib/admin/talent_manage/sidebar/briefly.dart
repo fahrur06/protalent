@@ -101,14 +101,14 @@ class _EditBrieflyState extends State<EditBriefly> {
                       "Name",
                       style: GoogleFonts.didactGothic(
                           color: Colors.black,
-                          fontSize: 18,
+                          fontSize: 15,
                           fontWeight: FontWeight.bold),
                     ),
                     SizedBox(
                       height: 8,
                     ),
                     Container(
-                      height: 50,
+                      height: 30,
                       width: screenSize1 * 0.3,
                       child: TextFormField(
                         decoration: InputDecoration(
@@ -126,7 +126,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                       "Latest Position",
                       style: GoogleFonts.didactGothic(
                           color: Colors.black,
-                          fontSize: 18,
+                          fontSize: 15,
                           fontWeight: FontWeight.bold),
                     ),
                     SizedBox(
@@ -134,7 +134,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                     ),
                     Row(children: [
                       Container(
-                        height: 50,
+                        height: 30,
                         width: screenSize1 * 0.3,
                         child: TextFormField(
                           decoration: InputDecoration(
@@ -159,11 +159,11 @@ class _EditBrieflyState extends State<EditBriefly> {
                             "Age",
                             style: GoogleFonts.didactGothic(
                                 color: Colors.black,
-                                fontSize: 18,
+                                fontSize: 15,
                                 fontWeight: FontWeight.bold),
                           ),
                           Container(
-                            height: 50,
+                            height: 30,
                             width: screenSize1 * 0.1,
                             child: TextFormField(
                               decoration: InputDecoration(
@@ -184,11 +184,11 @@ class _EditBrieflyState extends State<EditBriefly> {
                               "Gender",
                               style: GoogleFonts.didactGothic(
                                   color: Colors.black,
-                                  fontSize: 18,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.bold),
                             ),
                             Container(
-                              height: 50,
+                              height: 30,
                               width: screenSize1 * 0.1,
                               child: TextFormField(
                                 decoration: InputDecoration(
@@ -210,11 +210,11 @@ class _EditBrieflyState extends State<EditBriefly> {
                             "Work Period",
                             style: GoogleFonts.didactGothic(
                                 color: Colors.black,
-                                fontSize: 18,
+                                fontSize: 15,
                                 fontWeight: FontWeight.bold),
                           ),
                           Container(
-                            height: 50,
+                            height: 30,
                             width: screenSize1 * 0.1,
                             child: TextFormField(
                               decoration: InputDecoration(
@@ -235,11 +235,11 @@ class _EditBrieflyState extends State<EditBriefly> {
                               "Latest Work Period",
                               style: GoogleFonts.didactGothic(
                                   color: Colors.black,
-                                  fontSize: 18,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.bold),
                             ),
                             Container(
-                              height: 50,
+                              height: 30,
                               width: screenSize1 * 0.1,
                               child: TextFormField(
                                 decoration: InputDecoration(
