@@ -93,16 +93,6 @@ class _loginState extends State<login> {
                         Spacer(
                           flex: 1,
                         ),
-                        Container(
-                          height: screenSize.width * 0.02,
-                          child: Text(
-                            'Login as : ',
-                            style: TextStyle(fontSize: 16),
-                          ),
-                        ),
-                        Spacer(
-                          flex: 2,
-                        ),
                         Row(
                           children: [
                             Icon(
