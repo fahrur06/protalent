@@ -4,6 +4,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:pro_talent/client/sidemenu_talent.dart';
 import 'package:pro_talent/widget/dropdown_dashboard.dart';
+import 'package:pro_talent/widget/whatsapp.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 
@@ -19,48 +20,16 @@ class FindTalent extends StatefulWidget {
 
 
 class _FindTalentState extends State<FindTalent> {
-  Future<void>? _launched;
 
-  void launchWhatsApp(
-      {required int phone,
-        required String message,
-      }) async {
-    String url() {
-      return "https://web.whatsapp.com/send?phone=$phone&text=${Uri.parse(message)}";
-      }
 
-  if (await canLaunch(url())) {
-  await launch(url());
-  } else {
-  throw 'Could not launch ${url()}';
-  }
-}
 
   @override
-  // Future<void> _launchInBrowser(Uri url) async {
-  //   if (!await launchUrl(
-  //     url,
-  //     mode: LaunchMode.externalApplication,
-  //   )) {
-  //     throw 'Could not launch $url';
-  //   }
-  // }
-
   Widget build(BuildContext context) {
 
 
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
-        floatingActionButton: FloatingActionButton(
-      onPressed: () {
-        setState((){
-          launchWhatsApp(phone: 6282125034380, message: 'Permisi bang saya mau pesan');
-        });
-        // Add your onPressed code here!
-      },
-      backgroundColor: Colors.green,
-      child: const Icon(Icons.whatsapp,size: 40,),
-    ),
+        floatingActionButton: WAChat(),
         body: Column(
           children: [
             Container(
