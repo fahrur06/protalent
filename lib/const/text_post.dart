@@ -1,11 +1,11 @@
 import 'dart:core';
 
-String headgrid1 = 'Penghargaan dari Alibaba Cloud';
+String headgrid1 = 'Penghargaan Alibaba Cloud';
 String headgrid2 = 'Talenta Hebat';
 String headgrid3 = 'Partner Kerja Kelas Dunia';
 String headgrid4 = 'Bootcamp Batch 4';
 String headgrid5 = 'Layanan Kami';
-String headgrid6 = 'Tentang EKSAD IT Resources';
+String headgrid6 = 'Talenta ProTalent';
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -56,9 +56,11 @@ String bodyfull3 =
     'Google Cloud Platform, IBM Cloud and Microsoft Azure.';
 
 
-String bodyfull4 =
-    '';
-
+String bodyfull4 ='Eksad Providing Services High Quality Based '
+    'on Strong Experience in the industry and technology. '
+    'Building the right IT Service Solution to enable it '
+    'Partners in speeding up business development';
+    
 String bodyfull5 = 'Kami menyediakan IT expert sebagai berikut: '
     '\n'
     '\n'
