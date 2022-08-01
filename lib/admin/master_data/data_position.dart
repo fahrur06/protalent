@@ -181,7 +181,7 @@ class DessertDataSource extends DataTableSource {
       specificRowHeight:
       hasRowHeightOverrides && dessert.nomer >= 25 ? 100 : null,
       cells: [
-        DataCell(Text(dessert.nomer.toStringAsFixed(1))),
+        DataCell(Text(dessert.nomer.toStringAsFixed(0))),
         DataCell(Text('${dessert.posisi}'),
             onTap: () => _showSnackbar(context,
                 'Tapped on a cell with "${dessert.posisi}"', Colors.red)),
