@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pro_talent/admin/dashboard.dart';
 import 'package:pro_talent/conts_warna.dart';
 import 'package:pro_talent/homepage.dart';
 import 'package:pro_talent/public/contact_us/ContactUs.dart';
@@ -99,7 +100,7 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context,Color home, Color o
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const login(),
+                  builder: (context) => const Dashboard(),
                 ),
               );
             },

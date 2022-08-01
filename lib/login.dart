@@ -25,7 +25,7 @@ class _loginState extends State<login> {
       body: Container(
         decoration: new BoxDecoration(
             image: new DecorationImage(
-              image: new AssetImage("assets/images/blue background login.jpg"),
+              image: new AssetImage("assets/images/blue_background login.jpg"),
               fit: BoxFit.fill,
             )
         ),
