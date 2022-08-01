@@ -39,7 +39,7 @@ String bodyfull1 =
     'best-in-class managed Kubernetes and serverless platform on cloud '
     'and on-premises environments. You can build a fast, scalable software '
     'delivery pipeline no matter where you run by seamlessly implementing DevOps '
-    '/n';
+    '\n';
 
 
 String bodyfull2 =
