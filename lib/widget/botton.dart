@@ -106,38 +106,43 @@ class _AlertFormState extends State<AlertForm> {
                 SizedBox(
                   height: 30,
                 ),
-                Row(children: [
-                  Expanded(child: TextFormField(
-                    textAlign: TextAlign.start,
-                    decoration: InputDecoration(
-                      labelText: "Full Name",
-                      hintStyle: TextStyle(),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(5.0)),
+                Row(
+                  children: [
+                    Container(
+                      width: 200,
+                      child: TextFormField(
+                        textAlign: TextAlign.start,
+                        decoration: InputDecoration(
+                          labelText: "Full Name",
+                          hintStyle: TextStyle(),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5.0)),
+                        ),
+                      ),
                     ),
-                  ),
-                  ),
-                  SizedBox(
-                    height: 20, width: 20,
-                  ),
-                  Expanded(child: TextFormField(
-                    textAlign: TextAlign.start,
-                    decoration: InputDecoration(
-                      labelText: "Gender",
-                      hintStyle: TextStyle(),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(5.0)),
+                    SizedBox(
+                      height: 20,
+                      width: 10,
                     ),
-                  ),
-                  ),
-                  SizedBox(
-                    height: 20, width: 20,
-                  ),
-                ],
+                    Container(
+                      width: 200,
+                      child: TextFormField(
+                        textAlign: TextAlign.start,
+                        decoration: InputDecoration(
+                          labelText: "Gender",
+                          hintStyle: TextStyle(),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5.0)),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                      width: 20,
+                    ),
+                  ],
                 ),
-                SizedBox(
-                  height: 20
-                ),
+                SizedBox(height: 20),
                 TextFormField(
                   textAlign: TextAlign.start,
                   decoration: InputDecoration(
