@@ -74,26 +74,26 @@ class _EditBrieflyState extends State<EditBriefly> {
     var screenSize = MediaQuery.of(context).size;
     var screenSize1 = screenSize.width * 0.6;
     return Scaffold(
-        body: Container(
-            width: screenSize.width * 0.64,
-            //color: Colors.blue,
-            padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-            child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              // Container(
-              //   width: screenSize.width * 0.6,
-              //   height: 330,
-              //   color: Colors.white70,
-              //   child: EasyTable<_skill>(
-              //     _model,
-              //     columnsFit: true,
-              //   ),
-              // ),
+      body: Container(
+          width: screenSize.width * 0.64,
+          //color: Colors.blue,
+          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            // Container(
+            //   width: screenSize.width * 0.6,
+            //   height: 330,
+            //   color: Colors.white70,
+            //   child: EasyTable<_skill>(
+            //     _model,
+            //     columnsFit: true,
+            //   ),
+            // ),
 
-              Container(
-                width: screenSize.width * 0.63,
-                height: screenSize.height * 0.42,
-                child: Column(
+            Container(
+              width: screenSize.width * 0.63,
+              height: screenSize.height * 0.42,
+              child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -257,50 +257,142 @@ class _EditBrieflyState extends State<EditBriefly> {
                     Spacer(
                       flex: 1,
                     ),
-                    Container(
-                      width: screenSize.width * 0.6,
-                      child: Row(
-                        children: [
-                          Container(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 10, horizontal: 25),
-                            width: screenSize.width * 0.1,
-                            height: 55,
-                            //color: Colors.red,
-                            child: ElevatedButton(
-                                onPressed: () {},
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 5,
-                                    ),
-                                    Text('Cancel')
-                                  ],
-                                )),
+                    Row(
+                      children: [
+                        Column(children: [
+                          Text(
+                            "Expected Salary",
+                            style: GoogleFonts.didactGothic(
+                                color: Colors.black,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold),
                           ),
                           Container(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 10, horizontal: 25),
-                            width: screenSize.width * 0.1,
-                            height: 55,
-                            //color: Colors.red,
-                            child: ElevatedButton(
-                                onPressed: () {},
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 5,
-                                    ),
-                                    Text('Save')
-                                  ],
-                                )),
+                            height: 30,
+                            width: screenSize1 * 0.1,
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                  // labelText: "Fullname",
+                                  // hintStyle: TextStyle(),
+                                  border: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          width: 1, color: Colors.grey))),
+                            ),
                           ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ])));
+                        ]),
+                        SizedBox(
+                          width: 7,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "Salary Status",
+                              style: GoogleFonts.didactGothic(
+                                  color: Colors.black,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Container(
+                              height: 30,
+                              width: screenSize1 * 0.1,
+                              child: TextFormField(
+                                decoration: InputDecoration(
+                                    // labelText: "Fullname",
+                                    // hintStyle: TextStyle(),
+                                    border: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                            width: 1, color: Colors.grey))),
+                              ),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                    Spacer(
+                      flex: 1,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Latest Company",
+                          style: GoogleFonts.didactGothic(
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Container(
+                          height: 30,
+                          width: screenSize1 * 0.3,
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                                // labelText: "Fullname",
+                                // hintStyle: TextStyle(),
+                                border: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        width: 1, color: Colors.grey))),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "Work Location",
+                          style: GoogleFonts.didactGothic(
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Container(
+                          width: screenSize.width * 0.6,
+                          child: Row(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 10, horizontal: 25),
+                                width: screenSize.width * 0.1,
+                                height: 55,
+                                //color: Colors.red,
+                                child: ElevatedButton(
+                                    onPressed: () {},
+                                    child: Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 5,
+                                        ),
+                                        Text('Cancel')
+                                      ],
+                                    )),
+                              ),
+                              Container(
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 10, horizontal: 25),
+                                width: screenSize.width * 0.1,
+                                height: 55,
+                                //color: Colors.red,
+                                child: ElevatedButton(
+                                    onPressed: () {},
+                                    child: Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 5,
+                                        ),
+                                        Text('Save')
+                                      ],
+                                    )),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ]),
+            ),
+          ])),
+    );
   }
 }

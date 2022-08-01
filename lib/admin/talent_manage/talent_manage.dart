@@ -153,7 +153,7 @@ class _TalentmanagementState extends State<TalentManagement> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => EditTalent(),
+                              builder: (context) => AddTalent(),
                             ),
                           );
                         },

@@ -183,7 +183,7 @@ class _AddTalentState extends State<AddTalent> {
                             height: 10,
                           ),
                           Text(
-                            "Name",
+                            "Gender",
                             style: GoogleFonts.didactGothic(
                                 color: Colors.black,
                                 fontSize: 20,
@@ -197,7 +197,7 @@ class _AddTalentState extends State<AddTalent> {
                             width: screenSize1 * 0.2,
                             child: TextFormField(
                               decoration: InputDecoration(
-                                  labelText: "Fullname",
+                                  labelText: "Gender",
                                   hintStyle: TextStyle(),
                                   border: OutlineInputBorder(
                                       borderSide: BorderSide(
@@ -208,7 +208,7 @@ class _AddTalentState extends State<AddTalent> {
                             height: 10,
                           ),
                           Text(
-                            "Name",
+                            "Expected Salary",
                             style: GoogleFonts.didactGothic(
                                 color: Colors.black,
                                 fontSize: 20,
@@ -222,7 +222,7 @@ class _AddTalentState extends State<AddTalent> {
                             width: screenSize1 * 0.2,
                             child: TextFormField(
                               decoration: InputDecoration(
-                                  labelText: "Fullname",
+                                  labelText: "Expected Salary",
                                   hintStyle: TextStyle(),
                                   border: OutlineInputBorder(
                                       borderSide: BorderSide(
