@@ -38,7 +38,7 @@ class _Home3State extends State<Home3> {
                     PostBody(Image: 'assets/images/bootcamp1.jpg',
                         HeadText: headgrid4, Tanggal: tanggal, Bodyfull: bodyfull4, Urutan: urutan4)),
                 _container(context, screenSize,Color.fromARGB(255, 241, 23, 42),
-                    'assets/images/eksad.jpg','Penghargaan Alibaba Cloud', row2,
+                    'assets/images/eksad.jpg','Penghargaan Alibaba', row2,
                     PostBody(Image: 'assets/images/eksad.jpg',
                         HeadText: headgrid1, Tanggal: tanggal, Bodyfull: bodyfull1, Urutan: urutan1)),
                 _container(context, screenSize,Color.fromARGB(255, 241, 23, 42),
