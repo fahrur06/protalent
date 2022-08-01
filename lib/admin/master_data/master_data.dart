@@ -40,92 +40,87 @@ class _MasterDataState extends State<MasterData> {
           ),
           Center(
             child: Container(
-
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  //borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
-                  border: Border.all(color: Colors.black),
-
-
-                ),
-                width: 1200,
-                height: 592,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 18, 108, 178),
-                        border: Border(bottom: BorderSide(color: Colors.white),
-                        ),
-
-                        //borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20),),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                //borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
+                border: Border.all(color: Colors.black),
+              ),
+              width: 1200,
+              height: 600,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 18, 108, 178),
+                      border: Border(bottom: BorderSide(color: Colors.white),
                       ),
-                      padding: EdgeInsets.only(top: 27,left: 35),
-                      height: 95,
-                      width: 1200,
-                      child: Text('Master Data',style: TextStyle(
-                          fontSize: 35,color: Colors.white,fontWeight: FontWeight.bold,letterSpacing: 2),),
+
+                      //borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20),),
                     ),
-                    Container(
-                      height: 495,
-                      child: Row(
-                        children: [
-                          SideNavigationBar(
-                            expandable: false,
-                            //header: SideNavigationBarHeader(image: , title: title, subtitle: subtitle),
-                            selectedIndex: selectedIndex,
-                            items: const [
-                              //position , skill , level , industry, location
-                              SideNavigationBarItem(
-                                icon: Icons.people_alt,
-                                label: 'Position',
-                              ),
-                              SideNavigationBarItem(
-                                icon: Icons.browser_updated,
-                                label: 'Skill',
-                              ),
-                              SideNavigationBarItem(
-                                icon: Icons.leaderboard,
-                                label: 'Level',
-                              ),
-                              SideNavigationBarItem(
-                                icon: Icons.home_work_outlined,
-                                label: 'Industry',
-                              ),
-                              SideNavigationBarItem(
-                                icon: Icons.location_on,
-                                label: 'Location',
-                              ),
-                            ],
-                            onTap: (index) {
-                              setState(
-                                () {
-                                  selectedIndex = index;
-                                },
-                              );
-                            },
-                            theme: SideNavigationBarTheme(
-                             // backgroundColor: Color.fromARGB(200, 9, 47, 171),
-                              backgroundColor: Color.fromARGB(255, 18, 108, 178),
-                              togglerTheme: SideNavigationBarTogglerTheme(
-                                  shrinkIconColor: Colors.white,
-                                  expandIconColor: Colors.white),
-                              itemTheme: SideNavigationBarItemTheme(
-                                  selectedItemColor: Colors.white),
-                              dividerTheme:
-                                  SideNavigationBarDividerTheme.standard(),
+                    padding: EdgeInsets.only(top: 27,left: 35),
+                    height: 95,
+                    width: 1200,
+                    child: Text('Master Data',style: TextStyle(
+                        fontSize: 35,color: Colors.white,fontWeight: FontWeight.bold,letterSpacing: 2),),
+                  ),
+                  Container(
+                    height: 503,
+                    child: Row(
+                      children: [
+                        SideNavigationBar(
+                          expandable: false,
+                          //header: SideNavigationBarHeader(image: , title: title, subtitle: subtitle),
+                          selectedIndex: selectedIndex,
+                          items: const [
+                            //position , skill , level , industry, location
+                            SideNavigationBarItem(
+                              icon: Icons.people_alt,
+                              label: 'Position',
                             ),
+                            SideNavigationBarItem(
+                              icon: Icons.browser_updated,
+                              label: 'Skill',
+                            ),
+                            SideNavigationBarItem(
+                              icon: Icons.leaderboard,
+                              label: 'Level',
+                            ),
+                            SideNavigationBarItem(
+                              icon: Icons.home_work_outlined,
+                              label: 'Industry',
+                            ),
+                            SideNavigationBarItem(
+                              icon: Icons.location_on,
+                              label: 'Location',
+                            ),
+                          ],
+                          onTap: (index) {
+                            setState(
+                              () {
+                                selectedIndex = index;
+                              },
+                            );
+                          },
+                          theme: SideNavigationBarTheme(
+                           // backgroundColor: Color.fromARGB(200, 9, 47, 171),
+                            backgroundColor: Color.fromARGB(255, 18, 108, 178),
+                            togglerTheme: SideNavigationBarTogglerTheme(
+                                shrinkIconColor: Colors.white,
+                                expandIconColor: Colors.white),
+                            itemTheme: SideNavigationBarItemTheme(
+                                selectedItemColor: Colors.white),
+                            dividerTheme:
+                                SideNavigationBarDividerTheme.standard(),
                           ),
-                          Expanded(
-                            child: views.elementAt(selectedIndex),
-                          )
-                        ],
-                      ),
+                        ),
+                        Expanded(
+                          child: views.elementAt(selectedIndex),
+                        )
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:easy_table/easy_table.dart';
-import '../data_sources.dart';
+import 'data_sources.dart';
 
 class ClientDashboard extends StatefulWidget {
   const ClientDashboard({Key? key}) : super(key: key);
@@ -9,66 +8,10 @@ class ClientDashboard extends StatefulWidget {
   State<ClientDashboard> createState() => _ClientDashboardState();
 }
 
-class _client {
-  _client(
-      this.no, this.nama, this.deskripsi, this.lokasi, this.post, this.delete);
-
-  final int no;
-  final String nama;
-  final String deskripsi;
-  final String lokasi;
-  final String post;
-  final Widget delete;
-}
-
 class _ClientDashboardState extends State<ClientDashboard> {
-  EasyTableModel<_client>? _model;
+
 
   @override
-  void initState() {
-    super.initState();
-
-    List<_client> rows = [
-      _client(1, 'Budi', 'Dibu', 'South Jakarta', '2022-07-18',
-          TextButton(onPressed: () {}, child: Text('delete'))),
-      _client(2, 'Fahrur', 'Dota 2 Champions', 'Madura', '2022-01-01',
-          TextButton(onPressed: () {}, child: Text('delete'))),
-      _client(3, 'Udin', 'Jualan tahu bulat', 'Ciamis', '2022-03-29',
-          TextButton(onPressed: () {}, child: Text('delete'))),
-      _client(4, 'Rizki', 'Pro Player Mobile Legend', 'Bekasi', '2022-04-2',
-          TextButton(onPressed: () {}, child: Text('delete'))),
-      _client(5, 'Faid', 'Angker, KRL Mania, Pengguna Transportasi Public', 'Bogor', '2022-05-29',
-          TextButton(onPressed: () {}, child: Text('delete'))),
-      _client(6, 'Tohap', 'Member Eksad', 'Jakarta Barat', '2022-03-9',
-          TextButton(onPressed: () {}, child: Text('delete'))),
-    ];
-
-    _model = EasyTableModel<_client>(rows: rows, columns: [
-      EasyTableColumn(
-          name: 'No',
-          headerAlignment: Alignment.center,
-          cellAlignment: Alignment.center,
-          intValue: (row) => row.no),
-      EasyTableColumn(name: 'Nama', weight: 3, stringValue: (row) => row.nama),
-      EasyTableColumn(
-          name: 'Description', weight: 3, stringValue: (row) => row.deskripsi),
-      EasyTableColumn(
-          name: 'Location', weight: 3, stringValue: (row) => row.lokasi),
-      EasyTableColumn(
-          name: 'Posted',
-          headerAlignment: Alignment.center,
-          cellAlignment: Alignment.center,
-          weight: 2,
-          stringValue: (row) => row.post),
-      EasyTableColumn(
-          name: '',
-          headerAlignment: Alignment.center,
-          cellAlignment: Alignment.center,
-          weight: 1,
-          objectValue: (row) => row.delete)
-    ]);
-  }
-
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
@@ -315,24 +258,7 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
                 onSort: (columnIndex, ascending) =>
                     sort<String>((d) => d.posted, columnIndex, ascending),
               ),
-              // DataColumn(
-              //   label: const Text('Sodium (mg)'),
-              //   numeric: true,
-              //   onSort: (columnIndex, ascending) =>
-              //       sort<num>((d) => d.sodium, columnIndex, ascending),
-              // ),
-              // DataColumn(
-              //   label: const Text('Calcium (%)'),
-              //   numeric: true,
-              //   onSort: (columnIndex, ascending) =>
-              //       sort<num>((d) => d.calcium, columnIndex, ascending),
-              // ),
-              // DataColumn(
-              //   label: const Text('Iron (%)'),
-              //   numeric: true,
-              //   onSort: (columnIndex, ascending) =>
-              //       sort<num>((d) => d.iron, columnIndex, ascending),
-              // ),
+
             ],
             source: _dessertsDataSource,
           ),
@@ -342,3 +268,21 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
   }
 }
 
+// DataColumn(
+//   label: const Text('Sodium (mg)'),
+//   numeric: true,
+//   onSort: (columnIndex, ascending) =>
+//       sort<num>((d) => d.sodium, columnIndex, ascending),
+// ),
+// DataColumn(
+//   label: const Text('Calcium (%)'),
+//   numeric: true,
+//   onSort: (columnIndex, ascending) =>
+//       sort<num>((d) => d.calcium, columnIndex, ascending),
+// ),
+// DataColumn(
+//   label: const Text('Iron (%)'),
+//   numeric: true,
+//   onSort: (columnIndex, ascending) =>
+//       sort<num>((d) => d.iron, columnIndex, ascending),
+// ),
