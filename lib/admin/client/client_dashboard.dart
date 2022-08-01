@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:easy_table/easy_table.dart';
-import '../data_sources.dart';
+import 'data_sources.dart';
 
 class ClientDashboard extends StatefulWidget {
   const ClientDashboard({Key? key}) : super(key: key);
