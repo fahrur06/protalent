@@ -106,29 +106,37 @@ class _AlertFormState extends State<AlertForm> {
                 SizedBox(
                   height: 30,
                 ),
-                TextFormField(
-                  textAlign: TextAlign.start,
-                  decoration: InputDecoration(
-                    labelText: "Full Name",
-                    hintStyle: TextStyle(),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5.0)),
+                Row(children: [
+                  Expanded(child: TextFormField(
+                    textAlign: TextAlign.start,
+                    decoration: InputDecoration(
+                      labelText: "Full Name",
+                      hintStyle: TextStyle(),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(5.0)),
+                    ),
                   ),
+                  ),
+                  SizedBox(
+                    height: 20, width: 20,
+                  ),
+                  Expanded(child: TextFormField(
+                    textAlign: TextAlign.start,
+                    decoration: InputDecoration(
+                      labelText: "Gender",
+                      hintStyle: TextStyle(),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(5.0)),
+                    ),
+                  ),
+                  ),
+                  SizedBox(
+                    height: 20, width: 20,
+                  ),
+                ],
                 ),
                 SizedBox(
-                  height: 20,
-                ),
-                TextFormField(
-                  textAlign: TextAlign.start,
-                  decoration: InputDecoration(
-                    labelText: "Gender",
-                    hintStyle: TextStyle(),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5.0)),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
+                  height: 20
                 ),
                 TextFormField(
                   textAlign: TextAlign.start,

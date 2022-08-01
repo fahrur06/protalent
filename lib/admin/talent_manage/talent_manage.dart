@@ -143,26 +143,26 @@ class _TalentmanagementState extends State<TalentManagement> {
                         height: 30,
                       ),
 
-                      ElevatedButton.icon(
-                        icon: Icon(
-                          Icons.person_add,
-                          size: 20.0,
-                        ),
-                        label: Text('Add Talent'),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => AddTalent(),
-                            ),
-                          );
-                        },
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.white,
-                          onPrimary: Colors.black,
-                        ),
-                      )
-                      // AlertForm(),
+                      // ElevatedButton.icon(
+                      //   icon: Icon(
+                      //     Icons.person_add,
+                      //     size: 20.0,
+                      //   ),
+                      //   label: Text('Add Talent'),
+                      //   onPressed: () {
+                      //     Navigator.push(
+                      //       context,
+                      //       MaterialPageRoute(
+                      //         builder: (context) => AddTalent(),
+                      //       ),
+                      //     );
+                      //   },
+                      //   style: ElevatedButton.styleFrom(
+                      //     primary: Colors.white,
+                      //     onPrimary: Colors.black,
+                      //   ),
+                      // )
+                      AlertForm(),
                     ],
                   ),
                 ),
