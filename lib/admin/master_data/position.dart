@@ -101,9 +101,9 @@ class _PositionState extends State<Position> {
               child: Row(
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 10,horizontal: 30),
+                    padding: EdgeInsets.symmetric(vertical: 7,horizontal: 30),
                     width: screenSize.width*0.47,
-                    height: 55,
+                    height: 58,
                     //color: Colors.grey,
                     child:
                     TextFormField(
@@ -117,9 +117,9 @@ class _PositionState extends State<Position> {
                     ),
                    ),
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 10,horizontal: 25),
+                    padding: EdgeInsets.symmetric(vertical: 7,horizontal: 25),
                     width: screenSize.width*0.1,
-                    height: 55,
+                    height: 58,
                     //color: Colors.red,
                     child: ElevatedButton(onPressed: ()async {
                       final posisi = await openDialog();
