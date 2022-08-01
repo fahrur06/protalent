@@ -120,10 +120,27 @@ class _AlertFormState extends State<AlertForm> {
                         ),
                       ),
                     ),
+                    Spacer(flex: 1,),
                     SizedBox(
-                      height: 20,
-                      width: 10,
+                      width: 20,
                     ),
+                    Container(
+                      width: 200,
+                      child: TextFormField(
+                        textAlign: TextAlign.start,
+                        decoration: InputDecoration(
+                          labelText: "Age",
+                          hintStyle: TextStyle(),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5.0)),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+                Row(
+                  children: [
                     Container(
                       width: 200,
                       child: TextFormField(
@@ -136,25 +153,58 @@ class _AlertFormState extends State<AlertForm> {
                         ),
                       ),
                     ),
+                    Spacer(flex: 1,),
                     SizedBox(
-                      height: 20,
                       width: 20,
+                    ),
+                    Container(
+                      width: 200,
+                      child: TextFormField(
+                        textAlign: TextAlign.start,
+                        decoration: InputDecoration(
+                          labelText: "Work Experience",
+                          hintStyle: TextStyle(),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5.0)),
+                        ),
+                      ),
                     ),
                   ],
                 ),
                 SizedBox(height: 20),
-                TextFormField(
-                  textAlign: TextAlign.start,
-                  decoration: InputDecoration(
-                    labelText: "Expected Salary",
-                    hintStyle: TextStyle(),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5.0)),
-                  ),
+                Row(
+                  children: [
+                    Container(
+                      width: 200,
+                      child: TextFormField(
+                        textAlign: TextAlign.start,
+                        decoration: InputDecoration(
+                          labelText: "Expected Salary",
+                          hintStyle: TextStyle(),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5.0)),
+                        ),
+                      ),
+                    ),
+                    Spacer(flex: 1,),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Container(
+                      width: 200,
+                      child: TextFormField(
+                        textAlign: TextAlign.start,
+                        decoration: InputDecoration(
+                          labelText: "Latest Position",
+                          hintStyle: TextStyle(),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5.0)),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                SizedBox(
-                  height: 20,
-                ),
+                SizedBox(height: 20),
                 TextFormField(
                   textAlign: TextAlign.start,
                   decoration: InputDecoration(
