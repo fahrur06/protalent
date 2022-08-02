@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/admin/client/client_dashboard.dart';
-import 'package:pro_talent/admin/client/data_sources.dart';
+import 'data_location.dart';
 import 'package:pro_talent/conts_warna.dart';
 import 'package:easy_table/easy_table.dart';
 
@@ -12,7 +12,7 @@ class Location extends StatefulWidget {
 }
 
 class Lokasi {
-  Lokasi(this.no, this.location, this.posting, this.status, this.delete);
+  Lokasi(this.no, this.location, this.post, this.status, this.delete);
 
   final int no;
   final String location;
@@ -44,7 +44,7 @@ class _LocationState extends State<Location> {
     _model = EasyTableModel<Lokasi>(rows: rows, columns: [
       EasyTableColumn(name: 'No',headerAlignment: Alignment.center,cellAlignment: Alignment.center, intValue: (row) => row.no),
       EasyTableColumn(name: 'Location',weight: 3, stringValue: (row) => row.location),
-      EasyTableColumn(name: 'Posted',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 2, stringValue: (row) => row.posting),
+      EasyTableColumn(name: 'Posted',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 2, stringValue: (row) => row.post),
       EasyTableColumn(name: 'Status',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 2, stringValue: (row) => row.status),
       EasyTableColumn(name: '',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 1, objectValue: (row) => row.delete)
     ]
@@ -282,13 +282,13 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
                 label: const Text('Posted'),
                 //numeric: true,
                 onSort: (columnIndex, ascending) =>
-                    sort<String>((d) => d.pos, columnIndex, ascending),
+                    sort<String>((d) => d.posted, columnIndex, ascending),
               ),
               DataColumn(
                 label: const Text('STATUS'),
                 //numeric: true,
                 onSort: (columnIndex, ascending) =>
-                    sort<String>((d) => d.deskripsi, columnIndex, ascending),
+                    sort<String>((d) => d.status, columnIndex, ascending),
               ),
               DataColumn(
                 label: const Text(''),
