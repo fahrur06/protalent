@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pro_talent/admin/client/client_dashboard.dart';
+import 'package:pro_talent/admin/client/data_sources.dart';
 import 'package:pro_talent/conts_warna.dart';
 import 'package:easy_table/easy_table.dart';
 
@@ -9,37 +11,37 @@ class Location extends StatefulWidget {
   State<Location> createState() => _LocationState();
 }
 
-class _location {
-  _location(this.no, this.location, this.posting, this.status, this.delete);
+class Lokasi {
+  Lokasi(this.no, this.location, this.posting, this.status, this.delete);
 
   final int no;
   final String location;
-  final String posting;
+  final String post;
   final String status;
   final Widget delete;
 
 }
 
 class _LocationState extends State<Location> {
-
-  EasyTableModel<_location>? _model;
+  String lokasi='';
+  EasyTableModel<Lokasi>? _model;
 
   @override
 
   void initState() {
     super.initState();
 
-    List<_location> rows = [
-      _location(1, 'West Jakarta', '2022-07-18', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
-      _location(2, 'Purwakarta', '2022-01-01', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
-      _location(3, 'Madura', '2022-03-29', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
-      _location(4, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
-      _location(5, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
-      _location(6, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
+    List<Lokasi> rows = [
+      Lokasi(1, 'Bogor', '2022-07-18', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
+      Lokasi(2, 'Bogor', '2022-01-01', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
+      Lokasi(3, 'Bogor', '2022-03-29', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
+      Lokasi(4, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
+      Lokasi(5, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
+      Lokasi(6, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
 
     ];
 
-    _model = EasyTableModel<_location>(rows: rows, columns: [
+    _model = EasyTableModel<Lokasi>(rows: rows, columns: [
       EasyTableColumn(name: 'No',headerAlignment: Alignment.center,cellAlignment: Alignment.center, intValue: (row) => row.no),
       EasyTableColumn(name: 'Location',weight: 3, stringValue: (row) => row.location),
       EasyTableColumn(name: 'Posted',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 2, stringValue: (row) => row.posting),
@@ -50,6 +52,9 @@ class _LocationState extends State<Location> {
   }
 
   Widget build(BuildContext context) {
+    Future openDialog() => showDialog(context: context, builder: (context) => EasyTable<Lokasi>(_model,columnsFit: true,),
+    );
+
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
@@ -75,7 +80,7 @@ class _LocationState extends State<Location> {
               width: screenSize.width*0.6,
               height: 330,
               color: Colors.white70,
-              child: EasyTable<_location>(_model,columnsFit: true,),
+              child: PaginatedDataTableDemo(),
             ),
             Spacer(flex: 1,),
             Container(
@@ -87,7 +92,8 @@ class _LocationState extends State<Location> {
                     width: screenSize.width*0.47,
                     height: 55,
                     //color: Colors.grey,
-                    child: TextFormField(textAlign: TextAlign.start,
+                    child:
+                    TextFormField(textAlign: TextAlign.start,
                       decoration: InputDecoration(
                         labelText: "Isi location talent",
                         hintStyle: TextStyle(),
@@ -100,19 +106,201 @@ class _LocationState extends State<Location> {
                     width: screenSize.width*0.1,
                     height: 55,
                     //color: Colors.red,
-                    child: ElevatedButton(onPressed: (){}, child: Row(
-                      children: [
-                        Icon(Icons.save),
-                        SizedBox(width: 5,),
-                        Text('Save')
-                      ],
-                    )),
+                    child: ElevatedButton(onPressed: ()async {
+                      final posisi = await openDialog();
+                      if (posisi == null || posisi.isEmpty)
+                        return;
+                      setState(()=>this._model = posisi);
+                    },
+                        child: Container(
+                          width: screenSize.width*0.08,
+                          child: Row(
+                            children: [
+                              Container(
+                                  width: screenSize.width*0.017,
+                                  child: Icon(Icons.save)),
+                              Spacer(flex: 1,),
+                              Container(
+                                  width: screenSize.width*0.028,
+                                  child: Text('Save'))
+                            ],
+                          ),
+                        )),
                   )
                 ],
               ),
             )
           ],
         ),
+      ),
+    );
+  }
+}
+
+class PaginatedDataTableDemo extends StatefulWidget {
+  const PaginatedDataTableDemo({super.key});
+
+  @override
+  PaginatedDataTableDemoState createState() => PaginatedDataTableDemoState();
+}
+
+class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
+    with RestorationMixin {
+  final RestorableClientSelections _dessertSelections =
+  RestorableClientSelections();
+  final RestorableInt _rowIndex = RestorableInt(0);
+  final RestorableInt _rowsPerPage =
+  RestorableInt(PaginatedDataTable.defaultRowsPerPage);
+  final RestorableBool _sortAscending = RestorableBool(true);
+  final RestorableIntN _sortColumnIndex = RestorableIntN(null);
+  late DessertDataSource _dessertsDataSource;
+  bool initialized = false;
+
+  @override
+  String get restorationId => 'paginated_data_table_demo';
+
+  @override
+  void restoreState(RestorationBucket? oldBucket, bool initialRestore) {
+    registerForRestoration(_dessertSelections, 'selected_row_indices');
+    registerForRestoration(_rowIndex, 'current_row_index');
+    registerForRestoration(_rowsPerPage, 'rows_per_page');
+    registerForRestoration(_sortAscending, 'sort_ascending');
+    registerForRestoration(_sortColumnIndex, 'sort_column_index');
+
+    if (!initialized) {
+      _dessertsDataSource = DessertDataSource(context);
+      initialized = true;
+    }
+    switch (_sortColumnIndex.value) {
+      case 0:
+        _dessertsDataSource.sort<num>((d) => d.nomer, _sortAscending.value);
+        break;
+      case 1:
+        _dessertsDataSource.sort<String>((d) => d.lokasi, _sortAscending.value);
+        break;
+      case 2:
+        _dessertsDataSource.sort<String>((d) => d.posted, _sortAscending.value);
+        break;
+      case 3:
+        _dessertsDataSource.sort<String>((d) => d.status, _sortAscending.value);
+        break;
+    // case 4:
+    //   _dessertsDataSource.sort<Widget>((d) => d.button, _sortAscending.value);
+    //   break;
+    // case 5:
+    //   _dessertsDataSource.sort<num>((d) => d.sodium, _sortAscending.value);
+    //   break;
+    // case 6:
+    //   _dessertsDataSource.sort<num>((d) => d.calcium, _sortAscending.value);
+    //   break;
+    // case 7:
+    //   _dessertsDataSource.sort<num>((d) => d.iron, _sortAscending.value);
+    //   break;
+    }
+    _dessertsDataSource.updateSelectedClients(_dessertSelections);
+    _dessertsDataSource.addListener(_updateSelectedDessertRowListener);
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (!initialized) {
+      _dessertsDataSource = DessertDataSource(context);
+      initialized = true;
+    }
+    _dessertsDataSource.addListener(_updateSelectedDessertRowListener);
+  }
+
+  void _updateSelectedDessertRowListener() {
+    _dessertSelections.setClientSelections(_dessertsDataSource.clients);
+  }
+
+  void sort<T>(
+      Comparable<T> Function(Client d) getField,
+      int columnIndex,
+      bool ascending,
+      ) {
+    _dessertsDataSource.sort<T>(getField, ascending);
+    setState(() {
+      _sortColumnIndex.value = columnIndex;
+      _sortAscending.value = ascending;
+    });
+  }
+
+  @override
+  void dispose() {
+    _rowsPerPage.dispose();
+    _sortColumnIndex.dispose();
+    _sortAscending.dispose();
+    _dessertsDataSource.removeListener(_updateSelectedDessertRowListener);
+    _dessertsDataSource.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
+    return Container(
+      width: screenSize.width * 0.63,
+      height: screenSize.height * 0.43,
+      child: ListView(
+        controller: ScrollController(),
+        restorationId: 'paginated_data_table_list_view',
+        padding: const EdgeInsets.all(7),
+        children: [
+          PaginatedDataTable(
+
+            rowsPerPage: _rowsPerPage.value,
+            onRowsPerPageChanged: (value) {
+              setState(() {
+                _rowsPerPage.value = value!;
+              });
+            },
+            initialFirstRowIndex: _rowIndex.value,
+            onPageChanged: (rowIndex) {
+              setState(() {
+                _rowIndex.value = rowIndex;
+              });
+            },
+            sortColumnIndex: _sortColumnIndex.value,
+            sortAscending: _sortAscending.value,
+            onSelectAll: _dessertsDataSource.selectAll,
+            columns: [
+              DataColumn(
+                label: const Text('No'),
+                numeric: true,
+                onSort: (columnIndex, ascending) =>
+                    sort<num>((d) => d.nomer, columnIndex, ascending),
+              ),
+              DataColumn(
+                label: const Text('Location'),
+
+                onSort: (columnIndex, ascending) =>
+                    sort<String>((d) => d.lokasi, columnIndex, ascending),
+              ),
+              DataColumn(
+                label: const Text('Posted'),
+                //numeric: true,
+                onSort: (columnIndex, ascending) =>
+                    sort<String>((d) => d.pos, columnIndex, ascending),
+              ),
+              DataColumn(
+                label: const Text('STATUS'),
+                //numeric: true,
+                onSort: (columnIndex, ascending) =>
+                    sort<String>((d) => d.deskripsi, columnIndex, ascending),
+              ),
+              DataColumn(
+                label: const Text(''),
+                //numeric: true,
+                // onSort: (columnIndex, ascending) =>
+                //     sort<Widget>((d) => d.button, columnIndex, ascending),
+              ),
+
+            ],
+            source: _dessertsDataSource,
+          ),
+        ],
       ),
     );
   }

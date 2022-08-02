@@ -60,7 +60,7 @@ class Client {
   Client(
       this.nomer,
       this.lokasi,
-      this.post,
+      this.posted,
       this.status,
       this.button,
       );
@@ -69,7 +69,7 @@ class Client {
 
   final int nomer;
   final String lokasi;
-  final String post;
+  final String posted;
   final String status;
   final Widget button;
   bool selected = false;
@@ -91,7 +91,7 @@ class DessertDataSource extends DataTableSource {
         this.hasZebraStripes = false]) {
     clients = _clients;
     if (sortedByCalories) {
-      sort((d) => d.posisi, true);
+      sort((d) => d.lokasi, true);
     }
   }
 
@@ -176,10 +176,10 @@ class DessertDataSource extends DataTableSource {
       hasRowHeightOverrides && dessert.nomer >= 25 ? 100 : null,
       cells: [
         DataCell(Text(dessert.nomer.toStringAsFixed(1))),
-        DataCell(Text('${dessert.posisi}'),
+        DataCell(Text('${dessert.lokasi}'),
             onTap: () => _showSnackbar(context,
-                'Tapped on a cell with "${dessert.posisi}"', Colors.red)),
-        DataCell(Text(dessert.post),),
+                'Tapped on a cell with "${dessert.lokasi}"', Colors.red)),
+        DataCell(Text(dessert.posted),),
         DataCell(Text('${dessert.status}')),
         DataCell(TextButton(child: dessert.button, onPressed: () {  },)),
         // DataCell(Text('${dessert.sodium}')),
@@ -291,8 +291,8 @@ class ClientDataSourceAsync extends AsyncDataTableSource {
             },
             cells: [
               DataCell(Text(dessert.nomer.toStringAsFixed(1))),
-              DataCell(Text('${dessert.posisi}')),
-              DataCell(Text(dessert.post)),
+              DataCell(Text('${dessert.lokasi}')),
+              DataCell(Text(dessert.posted)),
               DataCell(Text('${dessert.status}')),
               DataCell(TextButton(child: dessert.button, onPressed: () {  },)),
               // DataCell(Text('${dessert.sodium}')),
@@ -323,10 +323,10 @@ class ClientsFakeWebService {
     switch (column) {
       case 'no':
         return (Client d1, Client d2) => coef * (d1.nomer - d2.nomer);                                   //d1.nomer.compareTo(d2.nomer);
-      case 'posisi':
-        return (Client d1, Client d2) => coef * d1.posisi.compareTo(d2.posisi);
+      case 'lokasi':
+        return (Client d1, Client d2) => coef * d1.lokasi.compareTo(d2.lokasi);
       case 'post':
-        return (Client d1, Client d2) => coef * d1.post.compareTo(d2.post);
+        return (Client d1, Client d2) => coef * d1.posted.compareTo(d2.posted);
       case 'status':
         return (Client d1, Client d2) => coef * d1.status.compareTo(d2.status);
     // case '':
@@ -374,7 +374,7 @@ int _selectedCount = 0;
 List<Client> _clients = <Client>[
   Client(
     1,
-    'Manager',
+    'Bogor',
     '09-08-2012',
     'ACTIVE',
     Text('delete'),
@@ -384,7 +384,7 @@ List<Client> _clients = <Client>[
   ),
   Client(
     2,
-    'Product Head',
+    'Bogor',
     '09-08-2012',
     'ACTIVE',
     Text('delete'),
@@ -394,7 +394,7 @@ List<Client> _clients = <Client>[
   ),
   Client(
     3,
-    'CEO',
+    'Bogor',
     '09-08-2012',
     'INACTIVE',
     Text('delete'),
@@ -404,7 +404,7 @@ List<Client> _clients = <Client>[
   ),
   Client(
     4,
-    'HRD',
+    'Bogor',
     '09-08-2012',
     'ACTIVE',
     Text('delete'),
@@ -414,7 +414,7 @@ List<Client> _clients = <Client>[
   ),
   Client(
     5,
-    'Developer',
+    'Bogor',
     '09-08-2012',
     'INACTIVE',
     Text('delete'),
@@ -695,9 +695,9 @@ List<Client> _clients = <Client>[
 ];
 
 List<Client> _dessertsX3 = _clients.toList()
-  ..addAll(_clients.map((i) => Client(i.nomer, '${i.posisi} x2', '${i.post} x2',
+  ..addAll(_clients.map((i) => Client(i.nomer, '${i.lokasi} x2', '${i.posted} x2',
       '${i.status} x2',i.button)))
-  ..addAll(_clients.map((i) => Client(i.nomer, '${i.posisi} x3', '${i.post} x3',
+  ..addAll(_clients.map((i) => Client(i.nomer, '${i.lokasi} x3', '${i.posted} x3',
       '${i.status} x3',i.button)));
 
 _showSnackbar(BuildContext context, String text, [Color? color]) {
