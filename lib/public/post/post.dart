@@ -138,10 +138,10 @@ class _PostState extends State<Post> {
                 ),
                 GridContainer(
                   HeadGrid: headgrid5,
-                  ImageGrid: 'assets/images/layanan kami.jpg',
+                  ImageGrid: 'assets/images/layanan_kami.jpg',
                   BodyGrid: bodygrid5,
                   arah: PostBody(
-                    Image: 'assets/images/layanan kami.jpg',
+                    Image: 'assets/images/layanan_kami.jpg',
                     HeadText: headgrid5,
                     Tanggal: tanggal5,
                     Bodyfull: bodyfull5,
@@ -150,10 +150,10 @@ class _PostState extends State<Post> {
                 ),
                 GridContainer(
                   HeadGrid: headgrid6,
-                  ImageGrid: 'assets/images/eksad IT resources.jpg',
+                  ImageGrid: 'assets/images/eksad_IT_resources.jpg',
                   BodyGrid: bodygrid6,
                   arah: PostBody(
-                    Image: 'assets/images/eksad IT resources.jpg',
+                    Image: 'assets/images/eksad_IT_resources.jpg',
                     HeadText: headgrid6,
                     Tanggal: tanggal6,
                     Bodyfull: bodyfull6,

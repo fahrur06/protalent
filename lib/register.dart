@@ -41,7 +41,7 @@ class _RegisterState extends State<Register> {
         width: screenSize.width,
         decoration: new BoxDecoration(
           image: new DecorationImage(
-            image: new AssetImage("assets/images/blue background login.jpg"),
+            image: new AssetImage("assets/images/blue_background login.jpg"),
             fit: BoxFit.fill,
           ),
         ),
