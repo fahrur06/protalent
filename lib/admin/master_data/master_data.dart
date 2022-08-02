@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/admin/master_data/Industry.dart';
+import 'package:pro_talent/admin/master_data/industry.dart';
 import 'package:pro_talent/admin/master_data/level.dart';
 import 'package:pro_talent/admin/master_data/position.dart';
 import 'package:pro_talent/admin/master_data/skills.dart';
