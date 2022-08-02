@@ -11,7 +11,7 @@ import 'package:data_table_2/data_table_2.dart';
 // The file was extracted from GitHub: https://github.com/flutter/gallery
 // Changes and modifications by Maxim Saplin, 2021
 
-  /// Keeps track of selected rows, feed the data into DesertsDataSource
+/// Keeps track of selected rows, feed the data into DesertsDataSource
 class RestorableClientSelections extends RestorableProperty<Set<int>> {
   Set<int> _clientSelections = {};
 
@@ -60,18 +60,20 @@ class Client {
   Client(
       this.nomer,
       this.lokasi,
-      this.posted,
+      this.post,
       this.status,
       this.button,
+
       );
 
   final int id = _idCounter++;
 
   final int nomer;
   final String lokasi;
-  final String posted;
+  final String post;
   final String status;
   final Widget button;
+
   bool selected = false;
 }
 
@@ -175,11 +177,11 @@ class DessertDataSource extends DataTableSource {
       specificRowHeight:
       hasRowHeightOverrides && dessert.nomer >= 25 ? 100 : null,
       cells: [
-        DataCell(Text(dessert.nomer.toStringAsFixed(1))),
+        DataCell(Text(dessert.nomer.toStringAsFixed(0))),
         DataCell(Text('${dessert.lokasi}'),
             onTap: () => _showSnackbar(context,
                 'Tapped on a cell with "${dessert.lokasi}"', Colors.red)),
-        DataCell(Text(dessert.posted),),
+        DataCell(Text(dessert.post),),
         DataCell(Text('${dessert.status}')),
         DataCell(TextButton(child: dessert.button, onPressed: () {  },)),
         // DataCell(Text('${dessert.sodium}')),
@@ -292,7 +294,7 @@ class ClientDataSourceAsync extends AsyncDataTableSource {
             cells: [
               DataCell(Text(dessert.nomer.toStringAsFixed(1))),
               DataCell(Text('${dessert.lokasi}')),
-              DataCell(Text(dessert.posted)),
+              DataCell(Text(dessert.post)),
               DataCell(Text('${dessert.status}')),
               DataCell(TextButton(child: dessert.button, onPressed: () {  },)),
               // DataCell(Text('${dessert.sodium}')),
@@ -326,7 +328,7 @@ class ClientsFakeWebService {
       case 'lokasi':
         return (Client d1, Client d2) => coef * d1.lokasi.compareTo(d2.lokasi);
       case 'post':
-        return (Client d1, Client d2) => coef * d1.posted.compareTo(d2.posted);
+        return (Client d1, Client d2) => coef * d1.post.compareTo(d2.post);
       case 'status':
         return (Client d1, Client d2) => coef * d1.status.compareTo(d2.status);
     // case '':
@@ -374,7 +376,7 @@ int _selectedCount = 0;
 List<Client> _clients = <Client>[
   Client(
     1,
-    'Bogor',
+    'Jakarta',
     '09-08-2012',
     'ACTIVE',
     Text('delete'),
@@ -394,7 +396,7 @@ List<Client> _clients = <Client>[
   ),
   Client(
     3,
-    'Bogor',
+    'Depok',
     '09-08-2012',
     'INACTIVE',
     Text('delete'),
@@ -404,7 +406,7 @@ List<Client> _clients = <Client>[
   ),
   Client(
     4,
-    'Bogor',
+    'Tangerang',
     '09-08-2012',
     'ACTIVE',
     Text('delete'),
@@ -414,7 +416,7 @@ List<Client> _clients = <Client>[
   ),
   Client(
     5,
-    'Bogor',
+    'Bekasi',
     '09-08-2012',
     'INACTIVE',
     Text('delete'),
@@ -695,9 +697,9 @@ List<Client> _clients = <Client>[
 ];
 
 List<Client> _dessertsX3 = _clients.toList()
-  ..addAll(_clients.map((i) => Client(i.nomer, '${i.lokasi} x2', '${i.posted} x2',
+  ..addAll(_clients.map((i) => Client(i.nomer, '${i.lokasi} x2', '${i.post} x2',
       '${i.status} x2',i.button)))
-  ..addAll(_clients.map((i) => Client(i.nomer, '${i.lokasi} x3', '${i.posted} x3',
+  ..addAll(_clients.map((i) => Client(i.nomer, '${i.lokasi} x3', '${i.post} x3',
       '${i.status} x3',i.button)));
 
 _showSnackbar(BuildContext context, String text, [Color? color]) {

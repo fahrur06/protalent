@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/admin/client/client_dashboard.dart';
-import 'data_location.dart';
 import 'package:pro_talent/conts_warna.dart';
+import 'package:pro_talent/admin/dashboard.dart';
 import 'package:easy_table/easy_table.dart';
+import 'data_location.dart';
+
 
 class Location extends StatefulWidget {
   const Location({Key? key}) : super(key: key);
@@ -12,11 +13,11 @@ class Location extends StatefulWidget {
 }
 
 class Lokasi {
-  Lokasi(this.no, this.location, this.post, this.status, this.delete);
+  Lokasi(this.no, this.location, this.posting, this.status, this.delete);
 
   final int no;
   final String location;
-  final String post;
+  final String posting;
   final String status;
   final Widget delete;
 
@@ -32,27 +33,39 @@ class _LocationState extends State<Location> {
     super.initState();
 
     List<Lokasi> rows = [
-      Lokasi(1, 'Bogor', '2022-07-18', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
-      Lokasi(2, 'Bogor', '2022-01-01', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
-      Lokasi(3, 'Bogor', '2022-03-29', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
+      Lokasi(1, 'Head Product', '2022-07-18', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
+      Lokasi(2, 'Java Developer', '2022-01-01', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
+      Lokasi(3, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
       Lokasi(4, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
       Lokasi(5, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
       Lokasi(6, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
+
 
     ];
 
     _model = EasyTableModel<Lokasi>(rows: rows, columns: [
       EasyTableColumn(name: 'No',headerAlignment: Alignment.center,cellAlignment: Alignment.center, intValue: (row) => row.no),
       EasyTableColumn(name: 'Location',weight: 3, stringValue: (row) => row.location),
-      EasyTableColumn(name: 'Posted',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 2, stringValue: (row) => row.post),
+      EasyTableColumn(name: 'Posted',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 2, stringValue: (row) => row.posting),
       EasyTableColumn(name: 'Status',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 2, stringValue: (row) => row.status),
       EasyTableColumn(name: '',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 1, objectValue: (row) => row.delete)
     ]
     );
   }
 
+
+
   Widget build(BuildContext context) {
     Future openDialog() => showDialog(context: context, builder: (context) => EasyTable<Lokasi>(_model,columnsFit: true,),
+      //     TextFormField(
+      //   textAlign: TextAlign.start,
+      //   decoration: InputDecoration(
+      //     labelText: "Isi position talent",
+      //     hintStyle: TextStyle(),
+      //     border: OutlineInputBorder(
+      //         borderRadius: BorderRadius.circular(5.0)),
+      //   ),
+      // ),
     );
 
     var screenSize = MediaQuery.of(context).size;
@@ -60,7 +73,7 @@ class _LocationState extends State<Location> {
       body: Container(
         width: screenSize.width*0.64,
         //color: Colors.blue,
-        padding: EdgeInsets.symmetric(vertical: 20,horizontal: 40),
+        padding: EdgeInsets.symmetric(vertical: 15,horizontal: 38),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -68,7 +81,7 @@ class _LocationState extends State<Location> {
               width: screenSize.width*0.2,
               //color: Colors.grey,
               child: Text(
-                "Talent Locations ",
+                "Talent Location",
                 style: TextStyle(
                     fontSize: 30,
                     color: kPrimaryColor,
@@ -77,10 +90,10 @@ class _LocationState extends State<Location> {
             ),
             Spacer(flex: 1,),
             Container(
-              width: screenSize.width*0.6,
-              height: 330,
-              color: Colors.white70,
-              child: PaginatedDataTableDemo(),
+                width: screenSize.width*0.6,
+                height: 374,
+                color: Colors.white70,
+                child: PaginatedDataTableDemo()
             ),
             Spacer(flex: 1,),
             Container(
@@ -88,23 +101,25 @@ class _LocationState extends State<Location> {
               child: Row(
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 10,horizontal: 30),
+                    padding: EdgeInsets.symmetric(vertical: 7,horizontal: 30),
                     width: screenSize.width*0.47,
-                    height: 55,
+                    height: 58,
                     //color: Colors.grey,
                     child:
-                    TextFormField(textAlign: TextAlign.start,
+                    TextFormField(
+                      textAlign: TextAlign.start,
                       decoration: InputDecoration(
-                        labelText: "Isi location talent",
+                        labelText: "Isi lokasi talent",
                         hintStyle: TextStyle(),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0)),
-                      ),),
+                      ),
+                    ),
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 10,horizontal: 25),
+                    padding: EdgeInsets.symmetric(vertical: 7,horizontal: 25),
                     width: screenSize.width*0.1,
-                    height: 55,
+                    height: 58,
                     //color: Colors.red,
                     child: ElevatedButton(onPressed: ()async {
                       final posisi = await openDialog();
@@ -179,7 +194,7 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
         _dessertsDataSource.sort<String>((d) => d.lokasi, _sortAscending.value);
         break;
       case 2:
-        _dessertsDataSource.sort<String>((d) => d.posted, _sortAscending.value);
+        _dessertsDataSource.sort<String>((d) => d.post, _sortAscending.value);
         break;
       case 3:
         _dessertsDataSource.sort<String>((d) => d.status, _sortAscending.value);
@@ -282,7 +297,7 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
                 label: const Text('Posted'),
                 //numeric: true,
                 onSort: (columnIndex, ascending) =>
-                    sort<String>((d) => d.posted, columnIndex, ascending),
+                    sort<String>((d) => d.post, columnIndex, ascending),
               ),
               DataColumn(
                 label: const Text('STATUS'),
