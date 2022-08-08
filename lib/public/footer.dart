@@ -14,6 +14,10 @@ class Footer extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            const Divider(
+              height: 3,
+              thickness: 3,
+            ),
             SizedBox(
               height: screenSize.height * 0.07,
             ),
@@ -24,6 +28,7 @@ class Footer extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+
                   Container(
                       padding: const EdgeInsets.only(left: 5),
                       width: screenSize.width * 0.2,
