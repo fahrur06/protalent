@@ -4,7 +4,6 @@ import 'package:pro_talent/conts_warna.dart';
 import 'package:pro_talent/homepage.dart';
 import 'package:pro_talent/public/contact_us/ContactUs.dart';
 import 'package:pro_talent/public/our_talent/our_talent.dart';
-import 'package:pro_talent/public_baru/our_services/our_services.dart';
 import 'package:pro_talent/register.dart';
 import 'package:pro_talent/login.dart';
 import 'package:pro_talent/widget/dropdown_appbar.dart';
@@ -76,7 +75,7 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context,Color home,Color ab
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: Post(), menu: 'Career',warna: career),
+        ButtonAppbar(arah: Career(), menu: 'Career',warna: career),
         Spacer(
           flex: 1,
         ),
