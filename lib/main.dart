@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "PROTALENT BY EKSAD",
+
       home: Scaffold(
         body: HomePage(),
       ),
