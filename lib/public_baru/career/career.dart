@@ -7,6 +7,7 @@ import '../../public/footer.dart';
 import '../../widget/responsive.dart';
 import '../../widget/whatsapp.dart';
 import 'career1.dart';
+import 'career1_2.dart';
 
 class Career extends StatefulWidget {
   const Career({Key? key}) : super(key: key);
@@ -28,6 +29,7 @@ class _CareerState extends State<Career> {
           children: [
 
             Career1(),
+            Career1_2(),
             Footer(),
           ],
         ),
