@@ -27,8 +27,11 @@ class Career3 extends StatelessWidget {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Spacer(
+            flex: 1,
+          ),
           Container(
             width: screenSize.width,
             alignment: Alignment.center,
@@ -38,18 +41,26 @@ class Career3 extends StatelessWidget {
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontWeight: FontWeight.bold)),
           ),
+          Spacer(
+            flex: 1,
+          ),
           Container(
             width: screenSize.width,
             alignment: Alignment.center,
             child: Text(
-                'You may or may not be actively looking for a job at the moment but there are some positions that will give you a peep into the dynamic'
-                'job market. Submit your resume from button bellow and our consultants will do the rest.',
-                style: TextStyle(
-                  fontSize: 18,
-                  letterSpacing: 1.1,
-                  // height: 1.3,
-                  color: Color.fromARGB(255, 255, 255, 255),
-                )),
+              'You may or may not be actively looking for a job at the moment but there are some positions that will give you a peep into the dynamic '
+              'job market. Submit your resume from button bellow and our consultants will do the rest.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18,
+                letterSpacing: 1.1,
+                // height: 1.3,
+                color: Color.fromARGB(255, 255, 255, 255),
+              ),
+            ),
+          ),
+          Spacer(
+            flex: 1,
           ),
           // Container(
           //   width: screenSize.width,
@@ -78,6 +89,9 @@ class Career3 extends StatelessWidget {
               },
               child: Text("APPLY NOW"),
             ),
+          ),
+          Spacer(
+            flex: 1,
           ),
         ],
       ),
