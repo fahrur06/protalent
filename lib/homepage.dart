@@ -23,8 +23,8 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         appBar: ResponsiveWidget.isSmallScreen(context)
             ? AppbarHomeSmall(screenSize)
-            : AppbarHomeLarge(screenSize, context, Colors.blue, Colors.black,Colors.black,
-                Colors.black, Colors.black),
+            : AppbarHomeLarge(screenSize, context, Colors.blue, Colors.black,
+                Colors.black, Colors.black, Colors.black),
         body: ListView(
           children: [
             Home1(),
