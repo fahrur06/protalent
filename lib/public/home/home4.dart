@@ -20,6 +20,8 @@ class Home4 extends StatefulWidget {
 class _Home4State extends State<Home4> {
   final _formKey = GlobalKey<FormState>();
 
+  final nameController = TextEditingController();
+  final phoneController = TextEditingController();
   final emailController = TextEditingController();
   final messageController = TextEditingController();
 
@@ -201,6 +203,16 @@ class _Home4State extends State<Home4> {
                             style: TextStyle(
                                 fontSize: 50, fontWeight: FontWeight.bold)),
                         TextFormField(
+                          controller: nameController,
+                          decoration:
+                          const InputDecoration(hintText: 'Name'),
+                        ),
+                        TextFormField(
+                          controller: phoneController,
+                          decoration:
+                          const InputDecoration(hintText: 'Phone Number'),
+                        ),
+                        TextFormField(
                           controller: emailController,
                           decoration: const InputDecoration(hintText: 'Email'),
                         ),
@@ -228,6 +240,8 @@ class _Home4State extends State<Home4> {
                             onPressed: () async {
                               if (_formKey.currentState!.validate()) {
                                 final response = await SendEmail(
+                                    nameController.value.text,
+                                    phoneController.value.text,
                                     emailController.value.text,
                                     messageController.value.text);
                                 ScaffoldMessenger.of(context).showSnackBar(
@@ -241,6 +255,8 @@ class _Home4State extends State<Home4> {
                                           backgroundColor: Colors.red),
                                 );
 
+                                nameController.clear();
+                                phoneController.clear();
                                 emailController.clear();
                                 messageController.clear();
                               }
@@ -262,7 +278,7 @@ class _Home4State extends State<Home4> {
     );
   }
 
-  Future SendEmail(String email, String message) async {
+  Future SendEmail(String name, String phone, String email, String message) async {
     final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
     const serviceId = 'service_wava70j';
     const templateId = 'template_koc73cj';
@@ -275,7 +291,7 @@ class _Home4State extends State<Home4> {
           'service_id': serviceId,
           'template_id': templateId,
           'user_id': userId,
-          'template_params': {'to_email': email, 'message': message}
+          'template_params': {'from_name': name, 'from_phone': phone, 'to_email': email, 'message': message}
         }));
     return response.statusCode;
   }
