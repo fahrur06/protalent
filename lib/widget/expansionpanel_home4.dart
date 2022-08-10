@@ -7,90 +7,11 @@ class Expansionpanel extends StatefulWidget {
 }
 
 class Expansionpaneltate extends State<Expansionpanel> {
-  List<ExpansionpanelItem> items = <ExpansionpanelItem>[
-    ExpansionpanelItem(
-        isExpanded: false,
-        title: 'Software Engineering',
-        content: Padding(
-            padding: EdgeInsets.only(bottom: 5, left: 20),
-            child: Column(children: <Widget>[
-              _judulposisi(),
-              _posisi('Backend Engineer'),
-              _posisi('Frontend Engineer'),
-              _posisi('DevOps Engineer'),
-              _posisi('IT Consultant'),
-              _posisi('Fullstack Engineer'),
-              _posisi('Tester Engineer'),
-              _posisi('Mobile Engineer'),
-            ])),
-        leading: Icon(Icons.computer)),
-    ExpansionpanelItem(
-        isExpanded: false,
-        title: 'Product Management',
-        content: Padding(
-            padding: EdgeInsets.only(bottom: 5, left: 20),
-            child: Column(children: <Widget>[
-              _judulposisi(),
-              _posisi('Product Marketing'),
-              _posisi('Product Management'),
-              _posisi('Project Management'),
-              _posisi('Product Design'),
-            ])),
-        leading: Icon(Icons.manage_accounts)),
-    ExpansionpanelItem(
-        isExpanded: false,
-        title: 'Marketing & Communications',
-        content: Padding(
-            padding: EdgeInsets.only(bottom: 5, left: 20),
-            child: Column(children: <Widget>[
-              _judulposisi(),
-              _posisi('Social Media'),
-              _posisi('Public Relations'),
-              _posisi('Graphic Designer'),
-            ])),
-        leading: Icon(Icons.comment_outlined)),
-    ExpansionpanelItem(
-        isExpanded: false,
-        title: 'Data Science',
-        content: Padding(
-            padding: EdgeInsets.only(bottom: 5, left: 20),
-            child: Column(children: <Widget>[
-              _judulposisi(),
-              _posisi('Database Engineer'),
-              _posisi('Engineer'),
-              _posisi('Business Intelligence'),
-              _posisi('Statistician/Scientist'),
-            ])),
-        leading: Icon(Icons.table_rows)),
-    ExpansionpanelItem(
-        isExpanded: false,
-        title: 'Sales',
-        content: Padding(
-            padding: EdgeInsets.only(bottom: 5, left: 20),
-            child: Column(children: <Widget>[
-              _judulposisi(),
-              _posisi('Business Development (B2B)'),
-              _posisi('Business Development (B2C)'),
-              _posisi('International Sales'),
-            ])),
-        leading: Icon(Icons.shopping_cart)),
-    ExpansionpanelItem(
-        isExpanded: false,
-        title: 'Human Resources',
-        content: Padding(
-            padding: EdgeInsets.only(bottom: 5, left: 20),
-            child: Column(children: <Widget>[
-              _judulposisi(),
-              _posisi('Recruitment'),
-              _posisi('Training & Development'),
-              _posisi('Business Partner'),
-            ])),
-        leading: Icon(Icons.people)),
-  ];
+
 
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
+    return SingleChildScrollView(
+      child:
         Padding(
           padding: EdgeInsets.all(10.0),
           child: ExpansionPanelList.radio(
@@ -120,10 +41,91 @@ class Expansionpaneltate extends State<Expansionpanel> {
             }).toList(),
           ),
         ),
-      ],
+
     );
   }
 }
+
+List<ExpansionpanelItem> items = <ExpansionpanelItem>[
+  ExpansionpanelItem(
+      isExpanded: false,
+      title: 'Software Engineering',
+      content: Padding(
+          padding: EdgeInsets.only(bottom: 5, left: 20),
+          child: Column(children: <Widget>[
+            _judulposisi(),
+            _posisi('Backend Engineer'),
+            _posisi('Frontend Engineer'),
+            _posisi('DevOps Engineer'),
+            _posisi('IT Consultant'),
+            _posisi('Fullstack Engineer'),
+            _posisi('Tester Engineer'),
+            _posisi('Mobile Engineer'),
+          ])),
+      leading: Icon(Icons.computer)),
+  ExpansionpanelItem(
+      isExpanded: false,
+      title: 'Product Management',
+      content: Padding(
+          padding: EdgeInsets.only(bottom: 5, left: 20),
+          child: Column(children: <Widget>[
+            _judulposisi(),
+            _posisi('Product Marketing'),
+            _posisi('Product Management'),
+            _posisi('Project Management'),
+            _posisi('Product Design'),
+          ])),
+      leading: Icon(Icons.manage_accounts)),
+  ExpansionpanelItem(
+      isExpanded: false,
+      title: 'Marketing & Communications',
+      content: Padding(
+          padding: EdgeInsets.only(bottom: 5, left: 20),
+          child: Column(children: <Widget>[
+            _judulposisi(),
+            _posisi('Social Media'),
+            _posisi('Public Relations'),
+            _posisi('Graphic Designer'),
+          ])),
+      leading: Icon(Icons.comment_outlined)),
+  ExpansionpanelItem(
+      isExpanded: false,
+      title: 'Data Science',
+      content: Padding(
+          padding: EdgeInsets.only(bottom: 5, left: 20),
+          child: Column(children: <Widget>[
+            _judulposisi(),
+            _posisi('Database Engineer'),
+            _posisi('Engineer'),
+            _posisi('Business Intelligence'),
+            _posisi('Statistician/Scientist'),
+          ])),
+      leading: Icon(Icons.table_rows)),
+  ExpansionpanelItem(
+      isExpanded: false,
+      title: 'Sales',
+      content: Padding(
+          padding: EdgeInsets.only(bottom: 5, left: 20),
+          child: Column(children: <Widget>[
+            _judulposisi(),
+            _posisi('Business Development (B2B)'),
+            _posisi('Business Development (B2C)'),
+            _posisi('International Sales'),
+          ])),
+      leading: Icon(Icons.shopping_cart)),
+  ExpansionpanelItem(
+      isExpanded: false,
+      title: 'Human Resources',
+      content: Padding(
+          padding: EdgeInsets.only(bottom: 5, left: 20),
+          child: Column(children: <Widget>[
+            _judulposisi(),
+            _posisi('Recruitment'),
+            _posisi('Training & Development'),
+            _posisi('Business Partner'),
+          ])),
+      leading: Icon(Icons.people)),
+];
 
 Container _judulposisi (){
   return Container(
