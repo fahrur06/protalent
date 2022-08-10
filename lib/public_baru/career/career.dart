@@ -1,9 +1,12 @@
-import 'package:flutter/cupertino.dart';
+
+
 import 'package:flutter/material.dart';
-import 'package:pro_talent/appbar/appbar_home.dart';
-import 'package:pro_talent/public/footer.dart';
-import 'package:pro_talent/widget/responsive.dart';
-import 'package:pro_talent/widget/whatsapp.dart';
+
+import '../../appbar/appbar_baru.dart';
+import '../../public/footer.dart';
+import '../../widget/responsive.dart';
+import '../../widget/whatsapp.dart';
+import 'career1.dart';
 
 class Career extends StatefulWidget {
   const Career({Key? key}) : super(key: key);
@@ -17,15 +20,17 @@ class _CareerState extends State<Career> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: ResponsiveWidget.isSmallScreen(context)
-          ? AppbarHomeSmall(screenSize)
-          : AppbarHomeLarge(screenSize, context, Colors.blue, Colors.black, Colors.black, Colors.black),
-      body: ListView(
-        children: [
+        appBar: ResponsiveWidget.isSmallScreen(context)
+            ? AppbarHomeSmall(screenSize)
+            : AppbarHomeLarge(screenSize, context, Colors.blue, Colors.black,Colors.black,
+            Colors.black, Colors.black),
+        body: ListView(
+          children: [
 
-          Footer(),
-        ],
-      ),
+            Career1(),
+            Footer(),
+          ],
+        ),
         floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
         floatingActionButton: WAChat()
     );
