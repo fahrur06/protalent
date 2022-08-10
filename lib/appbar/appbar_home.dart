@@ -4,6 +4,7 @@ import 'package:pro_talent/conts_warna.dart';
 import 'package:pro_talent/homepage.dart';
 import 'package:pro_talent/public/contact_us/ContactUs.dart';
 import 'package:pro_talent/public/our_talent/our_talent.dart';
+import 'package:pro_talent/public_baru/career/career.dart';
 import 'package:pro_talent/register.dart';
 import 'package:pro_talent/login.dart';
 import 'package:pro_talent/widget/dropdown_appbar.dart';
@@ -46,7 +47,7 @@ AppBar AppbarHomeSmall(Size screenSize) {
   );
 }
 
-AppBar AppbarHomeLarge(Size screenSize, BuildContext context,Color home, Color ourTalent,Color post, Color contactUs) {
+AppBar AppbarHomeLarge(Size screenSize, BuildContext context,Color home, Color ourTalent,Color career, Color contactUs) {
   return AppBar(
     backgroundColor: Colors.white,
     toolbarHeight: 80,
@@ -82,7 +83,7 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context,Color home, Color o
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: Post(), menu: 'News',warna: post),
+        ButtonAppbar(arah: Career(), menu: 'Career',warna: career),
         Spacer(
           flex: 1,
         ),
