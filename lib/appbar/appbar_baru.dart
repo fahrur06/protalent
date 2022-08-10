@@ -10,6 +10,9 @@ import 'package:pro_talent/widget/dropdown_appbar.dart';
 import 'package:pro_talent/widget/botton.dart';
 import 'package:pro_talent/public/post/post.dart';
 
+import '../public_baru/career/career.dart';
+import '../public_baru/our_services/our_services.dart';
+
 AppBar AppbarHomeSmall(Size screenSize) {
   return AppBar(
     backgroundColor: Colors.white,
