@@ -314,9 +314,9 @@ class ButtonAppbar extends StatelessWidget {
         child: Text(
           menu,
           style: TextStyle(
-            fontSize: 18,
-            letterSpacing: 1.5,
-            fontWeight: FontWeight.w600,
+            fontSize: 19,
+            letterSpacing: 1.3,
+            fontWeight: FontWeight.w500,
           ),
         ),
         style: ButtonStyle(

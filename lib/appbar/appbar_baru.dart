@@ -46,99 +46,81 @@ AppBar AppbarHomeSmall(Size screenSize) {
   );
 }
 
-AppBar AppbarHomeLarge(Size screenSize, BuildContext context,Color home, Color ourTalent,Color post, Color contactUs) {
+AppBar AppbarHomeLarge(Size screenSize, BuildContext context,Color home,Color aboutUs, Color ourServices,Color career, Color contactUs) {
   return AppBar(
     backgroundColor: Colors.white,
-    toolbarHeight: 80,
-    leadingWidth: screenSize.width * 0.15,
+    toolbarHeight: 100,
+    leadingWidth: screenSize.width * 0.3,
     leading: Row(
       children: [
         Container(
-          width: screenSize.width * 0.015,
+          width: screenSize.width * 0.1,
         ),
-        GestureDetector(child: Container(
-          width: screenSize.width * 0.13,
-          height: 50,
-          padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-          decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/logo/logo_protalent.png'),
-                fit: BoxFit.fill),
-          ),
-        ),),
+        IconButton(onPressed: (){}, icon: Image(image: AssetImage('assets/logo/protalent.png'),width: 500,height: 200,
+        ),iconSize: 190,
+        ),
       ],
     ),
     title: Row(
       children: [
-        Spacer(
-          flex: 4,
-        ),
         ButtonAppbar(arah: HomePage(), menu: 'Home',warna: home),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: HomePage(), menu: 'About Us',warna: home),
+        ButtonAppbar(arah: HomePage(), menu: 'About Us',warna: aboutUs),
         Spacer(
           flex: 1,
         ),
-
-        ButtonAppbar(arah: OurTalent(), menu: 'Our Services',warna: ourTalent),
+        ButtonAppbar(arah: OurTalent(), menu: 'Our Services',warna: ourServices),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: Post(), menu: 'Career',warna: post),
+        ButtonAppbar(arah: Post(), menu: 'Career',warna: career),
         Spacer(
           flex: 1,
         ),
         ButtonAppbar(arah: ContactUs(), menu: 'Contact Us',warna: contactUs),
         Spacer(
-          flex: 3,
+          flex: 2,
         ),
+        TextButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const Dashboard(),
+              ),
+            );
+          },
+          child: Text(
+            'Login',
+            style: TextStyle(
+                fontSize: 19,
+                fontWeight: FontWeight.w500,
+                color: Colors.black),
+          ),
+        ),
+        Container(
+          width: screenSize.width * 0.006,
+        ),
+        ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Register()));
+          },
+          child: Text(
+            'Register',
+            style: TextStyle(
+                color: Colors.white,
+                fontSize: 19,
+                fontWeight: FontWeight.w500),
+          ),
+          style: ElevatedButton.styleFrom(
+              primary: Color.fromARGB(255, 60, 74, 243),
+              fixedSize: Size(130, 45)),
+        ),
+        Spacer(flex: 5,),
       ],
     ),
-    actions: [
-      Row(
-        children: [
-          TextButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const Dashboard(),
-                ),
-              );
-            },
-            child: Text(
-              'Login',
-              style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w400,
-                  color: Colors.black),
-            ),
-          ),
-          Container(
-            width: screenSize.width * 0.006,
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Register()));
-            },
-            child: Text(
-              'Register',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w400),
-            ),
-            style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 0, 17, 255)),
-          ),
-          Container(
-            width: screenSize.width * 0.02,
-          )
-        ],
-      )
-    ],
   );
 }
