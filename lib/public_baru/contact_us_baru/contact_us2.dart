@@ -62,8 +62,13 @@ class ContactUs2 extends StatelessWidget {
                   // const Spacer(
                   //   flex: 1,
                   // ),
-                  const Text("Leave your contact info and",
-                      style: TextStyle(color: Colors.white, fontSize: 25)),
+                  const Text(
+                      'Yes, you need an outsourcing partner '
+                      'you can trust and thrive with',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold)),
                   // const Spacer(
                   //   flex: 2,
                   // ),
@@ -83,19 +88,15 @@ class ContactUs2 extends StatelessWidget {
                   const Spacer(
                     flex: 1,
                   ),
-                  const Text("Le​t’s Discuss",
+                  const Text(
+                      'Go for the one who knows what they are doing, those who you share values with, '
+                      'and those who will celebrate your success and help you win over your biggest challenges Looking for an outsourcing partner? ',
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 40,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1.3)),
+                          fontSize: 23,
+                          // fontWeight: FontWeight.bold,
+                          letterSpacing: 1.1)),
 
-                  const Text("Business",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 40,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1.3)),
                   // const Spacer(
                   //   flex: 2,
                   // ),
@@ -116,7 +117,7 @@ class ContactUs2 extends StatelessWidget {
                     flex: 1,
                   ),
                   const Text(
-                      "We’ll contact you immediately to discuss potential business",
+                      "We’ll contact you immediately to discuss to help you",
                       style: TextStyle(color: Colors.white, fontSize: 23)),
                   const Spacer(
                     flex: 1,
@@ -138,11 +139,44 @@ class ContactUs2 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  Container(
+                    child: Text(
+                      "Name",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    width: 450,
+                    child: TextFormField(
+                      controller: nameController,
+                      decoration: InputDecoration(
+                        hintText: "Enter your Name",
+                        fillColor: Colors.white,
+                        filled: true,
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.zero,
+                          borderSide:
+                              const BorderSide(width: 1, color: Colors.white),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.zero,
+                          borderSide:
+                              const BorderSide(width: 1, color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Row(
                     children: [
                       Container(
                         child: Text(
-                          "Name",
+                          "Phone Number",
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
@@ -150,7 +184,7 @@ class ContactUs2 extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 170,
+                        width: 88,
                       ),
                       Container(
                         child: Text(
@@ -170,7 +204,7 @@ class ContactUs2 extends StatelessWidget {
                         child: TextFormField(
                           controller: nameController,
                           decoration: InputDecoration(
-                            hintText: "Enter your Name",
+                            // hintText: "Enter your Name",
                             fillColor: Colors.white,
                             filled: true,
                             enabledBorder: OutlineInputBorder(
@@ -211,7 +245,7 @@ class ContactUs2 extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 20,
                       ),
                     ],
                   ),
