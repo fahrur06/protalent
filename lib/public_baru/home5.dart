@@ -5,8 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-class ContactUs2 extends StatelessWidget {
-  ContactUs2({Key? key}) : super(key: key);
+class HomeBaru5 extends StatelessWidget {
+  HomeBaru5({Key? key}) : super(key: key);
 
   final _formKey = GlobalKey<FormState>();
 
