@@ -11,6 +11,7 @@ class ContactUs2 extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
 
   final nameController = TextEditingController();
+  final phoneController = TextEditingController();
   final emailController = TextEditingController();
   final messageController = TextEditingController();
 
@@ -202,7 +203,7 @@ class ContactUs2 extends StatelessWidget {
                       Container(
                         width: 212,
                         child: TextFormField(
-                          controller: nameController,
+                          controller: phoneController,
                           decoration: InputDecoration(
                             // hintText: "Enter your Name",
                             fillColor: Colors.white,
@@ -294,6 +295,7 @@ class ContactUs2 extends StatelessWidget {
                         if (_formKey.currentState!.validate()) {
                           final response = await SendEmail(
                               nameController.value.text,
+                              phoneController.value.text,
                               emailController.value.text,
                               messageController.value.text);
                           ScaffoldMessenger.of(context).showSnackBar(
@@ -307,6 +309,7 @@ class ContactUs2 extends StatelessWidget {
                           );
 
                           nameController.clear();
+                          phoneController.clear();
                           emailController.clear();
                           messageController.clear();
                         }
@@ -327,11 +330,11 @@ class ContactUs2 extends StatelessWidget {
     );
   }
 
-  Future SendEmail(String name, String email, String message) async {
+  Future SendEmail(String name, String phone, String email, String message) async {
     final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
-    const serviceId = 'service_zfjchwr';
-    const templateId = 'template_1wbd3w9';
-    const userId = 'DP7R9Yu0J2SBQu2DC';
+    const serviceId = 'service_wava70j';
+    const templateId = 'template_koc73cj';
+    const userId = 'h4BmDnyWlm3OziBDx';
     final response = await http.post(url,
         headers: {
           'Content-Type': 'application/json'
@@ -342,6 +345,7 @@ class ContactUs2 extends StatelessWidget {
           'user_id': userId,
           'template_params': {
             'from_name': name,
+            'from_phone': phone,
             'to_email': email,
             'message': message
           }
