@@ -4,6 +4,7 @@ import 'package:pro_talent/admin/setting_dashboard.dart';
 import 'package:pro_talent/client/dashboard_client.dart';
 import 'package:pro_talent/client/hired_talent.dart';
 import 'package:pro_talent/homepage.dart';
+import 'package:pro_talent/homepage_new.dart';
 import 'package:pro_talent/login.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: "PROTALENT BY EKSAD",
 
       home: Scaffold(
-        body: HomePage(),
+        body: HomepageNew(),
       ),
     );
   }
