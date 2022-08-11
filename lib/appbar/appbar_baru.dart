@@ -104,7 +104,7 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const Dashboard(),
+                builder: (context) => const login(),
               ),
             );
           },
@@ -129,7 +129,11 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
           ),
           style: ElevatedButton.styleFrom(
               primary: Color.fromARGB(255, 60, 74, 243),
-              fixedSize: Size(130, 45)),
+              fixedSize: Size(130, 45),
+              onPrimary: Colors.red,
+
+
+          ),
         ),
         Spacer(
           flex: 5,
