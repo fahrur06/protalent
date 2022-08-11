@@ -82,7 +82,7 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: HomePage(), menu: 'About Us', warna: aboutUs),
+        ButtonAppbar(arah: HomePageNew(), menu: 'About Us', warna: aboutUs),
         Spacer(
           flex: 1,
         ),
@@ -129,11 +129,9 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
                 color: Colors.white, fontSize: 19, fontWeight: FontWeight.w500),
           ),
           style: ElevatedButton.styleFrom(
-              primary: Color.fromARGB(255, 60, 74, 243),
+              primary: Color(0xff1e5ea8),
               fixedSize: Size(130, 45),
               onPrimary: Colors.red,
-
-
           ),
         ),
         Spacer(
