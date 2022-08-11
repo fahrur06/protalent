@@ -78,25 +78,25 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
     ),
     title: Row(
       children: [
-        ButtonAppbar(arah: HomePageNew(), menu: 'Home', warna: home),
+        ButtonAppbar_baru(arah: '/', menu: 'Home', warna: home),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: HomePageNew(), menu: 'About Us', warna: aboutUs),
+        ButtonAppbar_baru(arah: '/', menu: 'About Us', warna: aboutUs),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(
-            arah: OurServices(), menu: 'Our Services', warna: ourServices),
+        ButtonAppbar_baru(
+            arah: '/service', menu: 'Our Services', warna: ourServices),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: Career(), menu: 'Career', warna: career),
+        ButtonAppbar_baru(arah: '/career', menu: 'Career', warna: career),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(
-            arah: ContactUs_baru(), menu: 'Contact Us', warna: contactUs),
+        ButtonAppbar_baru(
+            arah: '/contact', menu: 'Contact Us', warna: contactUs),
         Spacer(
           flex: 2,
         ),

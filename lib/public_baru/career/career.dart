@@ -24,8 +24,8 @@ class _CareerState extends State<Career> {
     return Scaffold(
         appBar: ResponsiveWidget.isSmallScreen(context)
             ? AppbarHomeSmall(screenSize)
-            : AppbarHomeLarge(screenSize, context, Colors.blue, Colors.black,Colors.black,
-            Colors.black, Colors.black),
+            : AppbarHomeLarge(screenSize, context, Colors.black, Colors.black,Colors.black,
+            Colors.blue, Colors.black),
         body: ListView(
           children: [
 

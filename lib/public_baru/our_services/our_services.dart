@@ -22,8 +22,8 @@ class _OurServicesState extends State<OurServices> {
     return Scaffold(
         appBar: ResponsiveWidget.isSmallScreen(context)
             ? AppbarHomeSmall(screenSize)
-            : AppbarHomeLarge(screenSize, context, Colors.blue, Colors.black,
-                Colors.black, Colors.black, Colors.black),
+            : AppbarHomeLarge(screenSize, context, Colors.black, Colors.black,
+                Colors.blue, Colors.black, Colors.black),
         body: ListView(
           children: [
             OurServices1(),
