@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/public/footer.dart';
+import 'package:pro_talent/public/home/home4.dart';
 import 'package:pro_talent/public_baru/home/home1_new.dart';
 import 'package:pro_talent/public_baru/home/home2_new.dart';
 import 'package:pro_talent/public_baru/home/home3_new.dart';
+import 'package:pro_talent/public_baru/home/home4_new.dart';
 import '../appbar/appbar_baru.dart';
 
 import '../widget/responsive.dart';
@@ -29,6 +31,7 @@ class _HomepageNewState extends State<HomepageNew> {
           HomeNew1(),
           HomeNew2(),
           HomeNew3(),
+          HomeNew4(),
           Footer(),
 
         ],

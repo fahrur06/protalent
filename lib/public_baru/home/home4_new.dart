@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/widget/expansion_home4.dart';
 
-class Home4 extends StatefulWidget {
-  const Home4({Key? key}) : super(key: key);
+class HomeNew4 extends StatefulWidget {
+  const HomeNew4({Key? key}) : super(key: key);
 
   @override
-  State<Home4> createState() => _Home4State();
+  State<HomeNew4> createState() => _HomeNew4State();
 }
 
-class _Home4State extends State<Home4> {
+class _HomeNew4State extends State<HomeNew4> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
