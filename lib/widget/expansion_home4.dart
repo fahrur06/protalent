@@ -9,17 +9,17 @@ class _ExpansionHome4State extends State<ExpansionHome4> {
   Widget build(BuildContext context) {
     return Container(
       child: Padding(
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.all(5),
         child: ExpansionPanelList.radio(
           expansionCallback: (int index, bool isExpanded){
             setState(() {
-              items[index].isExpanded = isExpanded;
+              items[index].isExpanded = !items[index].isExpanded;
             });
           },
           children: items.map((ExpansionpanelItem item){
             return ExpansionPanelRadio(
               canTapOnHeader: true,
-                value: item.title,
+                value: item.content,
                 headerBuilder: (BuildContext context, bool isExpanded){
                 return ListTile(
                   leading: item.leading,
@@ -32,7 +32,8 @@ class _ExpansionHome4State extends State<ExpansionHome4> {
                     ),
                   ),
                 );
-                },body: item.content,
+                },
+                body: item.content,
             );
           }).toList(),
         ),
@@ -44,7 +45,7 @@ class _ExpansionHome4State extends State<ExpansionHome4> {
 List<ExpansionpanelItem> items = <ExpansionpanelItem>[
 
   ExpansionpanelItem(
-      isExpanded: false,
+      isExpanded: true,
       title: 'Non Financial Services',
       content: Padding(
           padding: EdgeInsets.only( left: 20),
@@ -91,13 +92,11 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
 
 ListTile _posisi(String namaposisi) {
   return ListTile(
-    leading: Container(
-        padding: EdgeInsets.only(top: 7),
-        child: Icon(
-          Icons.circle,
-          size: 10,
-          color: Colors.black,
-        )),
+    leading: Icon(
+      Icons.circle,
+      size: 10,
+      color: Colors.black,
+    ),
     title: Text(
       namaposisi,
       style: const TextStyle(

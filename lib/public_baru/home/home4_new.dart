@@ -15,37 +15,33 @@ class _HomeNew4State extends State<HomeNew4> {
     return Container(
       height: 873,
       width: screenSize.width,
+
       child: Column(
         children: [
-          Container(
-            height: 130,
-            color: Color(0xff1e5ea8),
-            width: screenSize.width,
-            child: Column(
-              children: <Widget>[
-                SizedBox(height: 15,),
-                Text('VARIOUS INDUSTRY AND SECTORS',
+          SizedBox(height: 20,),
+          Center(
+            child: (
+                Text("VARIOUS INDUSTRY AND SECTORS",
                   style: TextStyle(
-                    fontSize: 36,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                SizedBox(height: 15,),
-                Text('Masing-masing Industri mempunyai kebutuhan spesifik nya, kami siap membantu untuk menyediakan layanan sesuai industri nya, dari diskusi awal sampai dengan menyediakan expert consultant.',
-                  style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.white
-                  ),
-                ),
-              ],
+                      fontSize: 45,
+                      color: Color(0xff1e5ea8),
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1.1),
+                )
             ),
           ),
           Container(
-            color: Colors.white,
-            width: screenSize.width*0.6,
+            padding: EdgeInsets.symmetric(horizontal: screenSize.width*0.15,vertical: 20),
+            child: Text('Each industry has its specific needs, we are'
+                ' ready to help to provide services according to its industry'
+                ', from initial discussions to providing expert consultants.',
+              style: TextStyle(fontSize: 21),textAlign: TextAlign.center,),
+          ),
+
+          Container(
+            width: screenSize.width*0.5,
             child: ExpansionHome4(),
-          )
+          ),
         ],
       ),
     );

@@ -17,7 +17,6 @@ class _HomeNew3State extends State<HomeNew3> {
     return Container(
       height: screenSize.height * 0.8,
       width: screenSize.width,
-      color: Colors.grey[200],
       child: Column(
         children: [
           const SizedBox(
