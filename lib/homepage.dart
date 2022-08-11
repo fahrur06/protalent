@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
             Home1(),
             HomeNew2(),
             Home3(),
-
+            HomeNew4(),
             HomeBaru5(),
             Footer(),
           ],

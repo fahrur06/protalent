@@ -11,6 +11,7 @@ class _ExpansionOurServices2State extends State<ExpansionOurServices2> {
       child: Padding(
         padding: EdgeInsets.all(10),
         child: ExpansionPanelList.radio(
+
           expansionCallback: (int index, bool isExpanded){
             setState(() {
               items[index].isExpanded = isExpanded;
@@ -27,8 +28,9 @@ class _ExpansionOurServices2State extends State<ExpansionOurServices2> {
                     item.title,
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 16,
                       fontWeight: FontWeight.w600,
+                      color: Colors.grey[600]
                     ),
                   ),
                 );
@@ -70,7 +72,7 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
           ],
         ),
       ),
-      leading: Icon(Icons.computer)),
+      leading: Icon(Icons.change_circle_sharp)),
 
   ExpansionpanelItem(
       isExpanded: false,
@@ -86,7 +88,7 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
           ],
         ),
       ),
-      leading: Icon(Icons.computer)),
+      leading: Icon(Icons.dataset_linked_sharp)),
 
   ExpansionpanelItem(
       isExpanded: false,
@@ -102,7 +104,7 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
           ],
         ),
       ),
-      leading: Icon(Icons.computer)),
+      leading: Icon(Icons.account_circle)),
 ];
 
 ListTile _posisi(String namaposisi){
@@ -119,7 +121,7 @@ ListTile _posisi(String namaposisi){
       namaposisi,
       style: TextStyle(
         fontWeight: FontWeight.w500,
-        fontSize: 16,
+        fontSize: 15,
         letterSpacing: 1.2
       ),
     ),

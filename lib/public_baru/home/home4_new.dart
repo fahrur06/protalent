@@ -15,7 +15,47 @@ class _HomeNew4State extends State<HomeNew4> {
     return Container(
       height: 873,
       width: screenSize.width,
+      child: Column(
+        children: [
+          Container(
+            height: 130,
+            color: Color(0xff1e5ea8),
+            width: screenSize.width,
+            child: Column(
+              children: <Widget>[
+                SizedBox(height: 15,),
+                Text('VARIOUS INDUSTRY AND SECTORS',
+                  style: TextStyle(
+                    fontSize: 36,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 15,),
+                Text('Each industry has its specific needs, we are'
+                    ' ready to help to provide services according to its industry'
+                    ', from initial discussions to providing expert consultants.',
+                  style: TextStyle(
+                      fontSize: 18,
+                    color: Colors.white
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
+          ),
+          Container(
+            width: screenSize.width*0.6,
+            color: Colors.white,
+            child: ExpansionHome4(),
+          ),
+        ],
+      ),
+    );
 
+    return Container(
+      height: 873,
+      width: screenSize.width,
       child: Column(
         children: [
           SizedBox(height: 20,),
