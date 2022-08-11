@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pro_talent/admin/dashboard.dart';
 import 'package:pro_talent/conts_warna.dart';
 import 'package:pro_talent/homepage.dart';
+import 'package:pro_talent/homepage_new.dart';
 import 'package:pro_talent/public/contact_us/ContactUs.dart';
 import 'package:pro_talent/public/our_talent/our_talent.dart';
 import 'package:pro_talent/public_baru/contact_us_baru/contact_us_baru.dart';
@@ -77,7 +78,7 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
     ),
     title: Row(
       children: [
-        ButtonAppbar(arah: HomePage(), menu: 'Home', warna: home),
+        ButtonAppbar(arah: HomePageNew(), menu: 'Home', warna: home),
         Spacer(
           flex: 1,
         ),
