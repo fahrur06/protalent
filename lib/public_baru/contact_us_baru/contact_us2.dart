@@ -185,7 +185,7 @@ class ContactUs2 extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 88,
+                        width: 73,
                       ),
                       Container(
                         child: Text(
@@ -201,7 +201,7 @@ class ContactUs2 extends StatelessWidget {
                   Row(
                     children: [
                       Container(
-                        width: 212,
+                        width: 200,
                         child: TextFormField(
                           controller: phoneController,
                           decoration: InputDecoration(
@@ -222,10 +222,10 @@ class ContactUs2 extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 10,
+                        width: 7,
                       ),
                       Container(
-                        width: 212,
+                        width: 230,
                         child: TextFormField(
                           controller: emailController,
                           decoration: InputDecoration(
@@ -249,6 +249,9 @@ class ContactUs2 extends StatelessWidget {
                         height: 20,
                       ),
                     ],
+                  ),
+                  SizedBox(
+                    height: 20,
                   ),
                   Text(
                     "Message",
@@ -283,14 +286,18 @@ class ContactUs2 extends StatelessWidget {
                     },
                   ),
                   SizedBox(
+                    height: 10,
+                  ),
+                  SizedBox(
                     height: 45,
                     width: 110,
                     child: TextButton(
                       style: TextButton.styleFrom(
                           primary: Colors.white,
-                          backgroundColor: const Color(0xff151534),
+                          backgroundColor:
+                              const Color.fromARGB(255, 12, 66, 101),
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(40))),
+                              borderRadius: BorderRadius.circular(15))),
                       onPressed: () async {
                         if (_formKey.currentState!.validate()) {
                           final response = await SendEmail(
@@ -330,7 +337,8 @@ class ContactUs2 extends StatelessWidget {
     );
   }
 
-  Future SendEmail(String name, String phone, String email, String message) async {
+  Future SendEmail(
+      String name, String phone, String email, String message) async {
     final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
     const serviceId = 'service_wava70j';
     const templateId = 'template_koc73cj';
