@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:pro_talent/admin/dashboard.dart';
 import 'package:pro_talent/conts_warna.dart';
 import 'package:pro_talent/homepage.dart';
+import 'package:pro_talent/homepage_new.dart';
 import 'package:pro_talent/public/contact_us/ContactUs.dart';
 import 'package:pro_talent/public/our_talent/our_talent.dart';
+import 'package:pro_talent/public_baru/contact_us_baru/contact_us_baru.dart';
 import 'package:pro_talent/register.dart';
 import 'package:pro_talent/login.dart';
 import 'package:pro_talent/widget/dropdown_appbar.dart';
@@ -29,8 +31,11 @@ AppBar AppbarHomeSmall(Size screenSize) {
             flex: 1,
           ),
           Container(
-            child:
-            Container(child: Image.asset("assets/logo/logo_protalent.png"),height: 50,width: 150,),
+            child: Container(
+              child: Image.asset("assets/logo/logo_protalent.png"),
+              height: 50,
+              width: 150,
+            ),
           ),
           const Spacer(
             flex: 3,
@@ -49,7 +54,8 @@ AppBar AppbarHomeSmall(Size screenSize) {
   );
 }
 
-AppBar AppbarHomeLarge(Size screenSize, BuildContext context,Color home,Color aboutUs, Color ourServices,Color career, Color contactUs) {
+AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
+    Color aboutUs, Color ourServices, Color career, Color contactUs) {
   return AppBar(
     backgroundColor: Colors.white,
     toolbarHeight: 100,
@@ -59,30 +65,38 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context,Color home,Color ab
         Container(
           width: screenSize.width * 0.1,
         ),
-        IconButton(onPressed: (){}, icon: Image(image: AssetImage('assets/logo/protalent.png'),width: 500,height: 200,
-        ),iconSize: 190,
+        IconButton(
+          onPressed: () {},
+          icon: Image(
+            image: AssetImage('assets/logo/protalent.png'),
+            width: 500,
+            height: 200,
+          ),
+          iconSize: 190,
         ),
       ],
     ),
     title: Row(
       children: [
-        ButtonAppbar(arah: HomePage(), menu: 'Home',warna: home),
+        ButtonAppbar(arah: HomePageNew(), menu: 'Home', warna: home),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: HomePage(), menu: 'About Us',warna: aboutUs),
+        ButtonAppbar(arah: HomePageNew(), menu: 'About Us', warna: aboutUs),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: OurServices(), menu: 'Our Services',warna: ourServices),
+        ButtonAppbar(
+            arah: OurServices(), menu: 'Our Services', warna: ourServices),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: Career(), menu: 'Career',warna: career),
+        ButtonAppbar(arah: Career(), menu: 'Career', warna: career),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: ContactUs(), menu: 'Contact Us',warna: contactUs),
+        ButtonAppbar(
+            arah: ContactUs_baru(), menu: 'Contact Us', warna: contactUs),
         Spacer(
           flex: 2,
         ),
@@ -91,16 +105,14 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context,Color home,Color ab
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const Dashboard(),
+                builder: (context) => const login(),
               ),
             );
           },
           child: Text(
             'Login',
             style: TextStyle(
-                fontSize: 19,
-                fontWeight: FontWeight.w500,
-                color: Colors.black),
+                fontSize: 19, fontWeight: FontWeight.w500, color: Colors.black),
           ),
         ),
         Container(
@@ -114,15 +126,17 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context,Color home,Color ab
           child: Text(
             'Register',
             style: TextStyle(
-                color: Colors.white,
-                fontSize: 19,
-                fontWeight: FontWeight.w500),
+                color: Colors.white, fontSize: 19, fontWeight: FontWeight.w500),
           ),
           style: ElevatedButton.styleFrom(
-              primary: Color.fromARGB(255, 60, 74, 243),
-              fixedSize: Size(130, 45)),
+              primary: Color(0xff1e5ea8),
+              fixedSize: Size(130, 45),
+              onPrimary: Colors.red,
+          ),
         ),
-        Spacer(flex: 5,),
+        Spacer(
+          flex: 5,
+        ),
       ],
     ),
   );
