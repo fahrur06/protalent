@@ -19,24 +19,36 @@ class _HomeNew4State extends State<HomeNew4> {
       child: Column(
         children: [
           SizedBox(height: 20,),
-          Center(
-            child: (
-                Text("VARIOUS INDUSTRY AND SECTORS",
-                  style: TextStyle(
-                      fontSize: 45,
-                      color: Color(0xff1e5ea8),
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 1.1),
-                )
+          Container(
+            height: 150,
+            width: screenSize.width,
+            color: Color(0xff1e5ea8),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(
+                  child: (
+                      Text("VARIOUS INDUSTRY AND SECTORS",
+                        style: TextStyle(
+                            fontSize: 30,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 1.1),
+                      )
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: screenSize.width*0.15,vertical: 20),
+                  child: Text('Each industry has its specific needs, we are'
+                      ' ready to help to provide services according to its industry'
+                      ', from initial discussions to providing expert consultants.',
+                    style: TextStyle(fontSize: 21,color: Colors.white),textAlign: TextAlign.center,),
+                ),
+              ],
             ),
           ),
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: screenSize.width*0.15,vertical: 20),
-            child: Text('Each industry has its specific needs, we are'
-                ' ready to help to provide services according to its industry'
-                ', from initial discussions to providing expert consultants.',
-              style: TextStyle(fontSize: 21),textAlign: TextAlign.center,),
-          ),
+
+
 
           Container(
             width: screenSize.width*0.5,
