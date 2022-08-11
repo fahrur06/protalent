@@ -11,7 +11,7 @@ class _ExpansionHome4State extends State<ExpansionHome4> {
       child: Padding(
         padding: EdgeInsets.all(5),
         child: ExpansionPanelList.radio(
-          initialOpenPanelValue: 'Non Financial Services',
+          initialOpenPanelValue: 'Financial Services',
           expansionCallback: (int index, bool isExpanded){
             setState(() {
               items[index].isExpanded = !items[index].isExpanded;
