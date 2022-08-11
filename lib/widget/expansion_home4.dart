@@ -11,6 +11,7 @@ class _ExpansionHome4State extends State<ExpansionHome4> {
       child: Padding(
         padding: EdgeInsets.all(5),
         child: ExpansionPanelList.radio(
+          initialOpenPanelValue: 'Financial Services',
           expansionCallback: (int index, bool isExpanded){
             setState(() {
               items[index].isExpanded = !items[index].isExpanded;
@@ -19,7 +20,7 @@ class _ExpansionHome4State extends State<ExpansionHome4> {
           children: items.map((ExpansionpanelItem item){
             return ExpansionPanelRadio(
               canTapOnHeader: true,
-                value: item.content,
+                value: item.title,
                 headerBuilder: (BuildContext context, bool isExpanded){
                 return ListTile(
                   leading: item.leading,
@@ -92,6 +93,7 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
       leading: Icon(Icons.comment_outlined)),
 ];
 
+
 ListTile _posisi(String namaposisi) {
   return ListTile(
     leading: Icon(
@@ -110,6 +112,7 @@ ListTile _posisi(String namaposisi) {
   );
 }
 
+
 class ExpansionpanelItem {
   ExpansionpanelItem(
       {required this.isExpanded,
@@ -121,7 +124,6 @@ class ExpansionpanelItem {
   final Widget content;
   final Icon leading;
 }
-
 
 
 

@@ -4,7 +4,7 @@ import 'package:pro_talent/public_baru/our_services/our_services2.dart';
 import 'package:pro_talent/public_baru/our_services/our_services4.dart';
 
 import '../../appbar/appbar_baru.dart';
-import '../../public/footer.dart';
+import '../../footer.dart';
 import '../../widget/responsive.dart';
 import '../../widget/whatsapp.dart';
 

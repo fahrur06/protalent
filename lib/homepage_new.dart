@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/public/footer.dart';
+import 'package:pro_talent/footer.dart';
 import 'package:pro_talent/public/home/home4.dart';
 import 'package:pro_talent/public_baru/home/home1_new.dart';
 import 'package:pro_talent/public_baru/home/home2_new.dart';
@@ -10,14 +10,14 @@ import '../appbar/appbar_baru.dart';
 import '../widget/responsive.dart';
 
 
-class HomepageNew extends StatefulWidget {
-  const HomepageNew({Key? key}) : super(key: key);
+class HomePageNew extends StatefulWidget {
+  const HomePageNew({Key? key}) : super(key: key);
 
   @override
-  State<HomepageNew> createState() => _HomepageNewState();
+  State<HomePageNew> createState() => _HomePageNewState();
 }
 
-class _HomepageNewState extends State<HomepageNew> {
+class _HomePageNewState extends State<HomePageNew> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -33,7 +33,6 @@ class _HomepageNewState extends State<HomepageNew> {
           HomeNew3(),
           HomeNew4(),
           Footer(),
-
         ],
       ),
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/public/footer.dart';
+import 'package:pro_talent/footer.dart';
 import 'package:pro_talent/public/home/home1.dart';
 import 'package:pro_talent/public/home/home2.dart';
 import 'package:pro_talent/public/home/home3.dart';
@@ -32,7 +32,6 @@ class _HomePageState extends State<HomePage> {
             Home1(),
             HomeNew2(),
             Home3(),
-            HomeNew4(),
             HomeBaru5(),
             Footer(),
           ],
