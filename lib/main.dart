@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: "PROTALENT BY EKSAD",
 
       home: Scaffold(
-        body: HomepageNew(),
+        body: HomePageNew(),
       ),
     );
   }

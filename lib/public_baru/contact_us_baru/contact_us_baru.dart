@@ -5,7 +5,7 @@ import 'package:pro_talent/public_baru/contact_us_baru/contact_us1.dart';
 import 'package:pro_talent/public_baru/contact_us_baru/contact_us2.dart';
 
 import '../../appbar/appbar_baru.dart';
-import '../../public/footer.dart';
+import '../../footer.dart';
 import '../../widget/responsive.dart';
 import '../../widget/whatsapp.dart';
 

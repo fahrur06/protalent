@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:pro_talent/admin/post/add_post.dart';
 import 'package:pro_talent/conts_warna.dart';
 import 'package:pro_talent/public/contact_us/SendEmail.dart';
-import 'package:pro_talent/public/footer.dart';
+import 'package:pro_talent/footer.dart';
 import 'package:pro_talent/widget/responsive.dart';
 import 'package:pro_talent/appbar/appbar_home.dart';
 import 'dart:convert';

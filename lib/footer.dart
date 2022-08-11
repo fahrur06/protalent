@@ -109,10 +109,9 @@ class Footer extends StatelessWidget {
                       )),
                   Container(
                       width: screenSize.width * 0.1,
-                      height: screenSize.height * 0.35,
+                      height: screenSize.height * 0.27,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Container(
                             width: screenSize.width * 0.1,
@@ -125,74 +124,19 @@ class Footer extends StatelessWidget {
                                   letterSpacing: 1.5),
                             ),
                           ),
-                          Spacer(
-                            flex: 6,
-                          ),
-                          TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                'About',
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    decoration: TextDecoration.underline,
-                                    fontSize: 17),
-                              )),
+                          Spacer(flex: 2,),
+                          itemBawah(item: 'Home',routeName: '',),
                           Spacer(),
-                          TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                'Solutions',
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    decoration: TextDecoration.underline,
-                                    fontSize: 17),
-                              )),
+                          itemBawah(item: 'About Us',routeName: '',),
                           Spacer(),
-                          TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                'Portfolio',
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    decoration: TextDecoration.underline,
-                                    fontSize: 17),
-                              )),
+                          itemBawah(item: 'Service',routeName: '',),
                           Spacer(),
-                          TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                'Career',
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    decoration: TextDecoration.underline,
-                                    fontSize: 17),
-                              )),
-                          Spacer(),
-                          TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                'Blog',
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    decoration: TextDecoration.underline,
-                                    fontSize: 17),
-                              )),
-                          Spacer(),
-                          TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                'Contact Us',
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    decoration: TextDecoration.underline,
-                                    fontSize: 17),
-                              )),
-                          Spacer(),
+                          itemBawah(item: 'Career',routeName: '',),
                         ],
                       )),
                   Container(
                       width: screenSize.width * 0.13,
-                      height: screenSize.height * 0.35,
+                      height: screenSize.height * 0.27,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -209,45 +153,20 @@ class Footer extends StatelessWidget {
                             ),
                           ),
                           Spacer(
-                            flex: 4,
+                            flex: 2,
                           ),
-                          TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                'Software as a Service',
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    decoration: TextDecoration.underline,
-                                    fontSize: 17),
-                              )),
+                          itemBawah(item: 'Retained Search',routeName: '',),
                           Spacer(),
-                          TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                'Cloud',
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    decoration: TextDecoration.underline,
-                                    fontSize: 17),
-                              )),
+                          itemBawah(item: 'Dedicated Services',routeName: '',),
                           Spacer(),
-                          TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                'IT Resource',
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    decoration: TextDecoration.underline,
-                                    fontSize: 17),
-                              )),
-                          Spacer(
-                            flex: 13,
-                          ),
+                          itemBawah(item: 'Contract Services',routeName: '',),
+                          Spacer(),
+                          itemBawah(item: 'Recruitment',routeName: '',),
                         ],
                       )),
                   Container(
                       width: screenSize.width * 0.2,
-                      height: screenSize.height * 0.37,
+                      height: screenSize.height * 0.35,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -332,6 +251,31 @@ class Footer extends StatelessWidget {
                   )),
             )
           ],
+        ));
+  }
+}
+
+class itemBawah extends StatelessWidget {
+  const itemBawah({
+    Key? key,
+    required this.item,
+    required this.routeName
+  }) : super(key: key);
+  final String item;
+  final String routeName;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+        onPressed: () {
+          Navigator.pushNamed(context, routeName);
+        },
+        child: Text(
+          item,
+          style: TextStyle(
+              color: Color(0xff1e5ea8),
+              //decoration: TextDecoration.underline,
+              fontSize: 17),
         ));
   }
 }

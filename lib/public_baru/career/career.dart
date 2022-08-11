@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:pro_talent/public_baru/career/career3.dart';
 
 import '../../appbar/appbar_baru.dart';
-import '../../public/footer.dart';
+import '../../footer.dart';
 import '../../widget/responsive.dart';
 import '../../widget/whatsapp.dart';
 import 'career1.dart';
