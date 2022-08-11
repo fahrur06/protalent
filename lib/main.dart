@@ -9,9 +9,16 @@ import 'package:pro_talent/login.dart';
 import 'package:pro_talent/public_baru/career/career.dart';
 import 'package:pro_talent/public_baru/our_services/our_services.dart';
 import 'package:pro_talent/register.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  configureApp();
   runApp(const MyApp());
+}
+
+void configureApp() {
+  setUrlStrategy(PathUrlStrategy());
 }
 
 class MyApp extends StatelessWidget {
