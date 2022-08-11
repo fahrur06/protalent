@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/login.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Career3 extends StatelessWidget {
   const Career3({Key? key}) : super(key: key);
@@ -80,12 +81,13 @@ class Career3 extends StatelessWidget {
             alignment: Alignment.center,
             child: ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => login(),
-                  ),
-                );
+                _launchURL();
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) => login(),
+                //   ),
+                // );
               },
               child: Text("APPLY NOW"),
             ),
@@ -95,6 +97,16 @@ class Career3 extends StatelessWidget {
           ),
         ],
       ),
+
     );
+  }
+}
+
+_launchURL() async {
+  const url = 'https://bit.ly/EksadFormApplicant';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }
