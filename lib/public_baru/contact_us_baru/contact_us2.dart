@@ -19,7 +19,7 @@ class ContactUs2 extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-      height: 500,
+      height: 450,
       width: screenSize.width,
       // color: Colors.blue,
       decoration: BoxDecoration(
@@ -41,28 +41,14 @@ class ContactUs2 extends StatelessWidget {
             height: screenSize.height * 0.7,
             width: screenSize.width * 0.35,
             child: Container(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Spacer(
                     flex: 1,
                   ),
-                  // Row(
-                  // children: [
-                  //   const Icon(Icons.phone, color: Colors.white),
-                  //   const SizedBox(width: 5),
-                  //   Text("CALL US",
-                  //       style: GoogleFonts.robotoCondensed(
-                  //           color: Colors.white,
-                  //           fontSize: 20,
-                  //           fontWeight: FontWeight.bold)),
-                  // ],
-                  // ),
-                  // const Spacer(
-                  //   flex: 1,
-                  // ),
                   const Text(
                       'Yes, you need an outsourcing partner '
                       'you can trust and thrive with',
@@ -70,22 +56,6 @@ class ContactUs2 extends StatelessWidget {
                           color: Colors.white,
                           fontSize: 40,
                           fontWeight: FontWeight.bold)),
-                  // const Spacer(
-                  //   flex: 2,
-                  // ),
-                  // Row(
-                  // children: [
-                  //   const Icon(Icons.location_pin, color: Colors.white),
-                  //   const SizedBox(
-                  //     width: 5,
-                  //   ),
-                  //   Text("LOCATION",
-                  //       style: GoogleFonts.robotoCondensed(
-                  //           color: Colors.white,
-                  //           fontSize: 20,
-                  //           fontWeight: FontWeight.bold)),
-                  // ],
-                  // ),
                   const Spacer(
                     flex: 1,
                   ),
@@ -94,44 +64,25 @@ class ContactUs2 extends StatelessWidget {
                       'and those who will celebrate your success and help you win over your biggest challenges Looking for an outsourcing partner? ',
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 23,
+                          fontSize: 18,
                           // fontWeight: FontWeight.bold,
                           letterSpacing: 1.1)),
-
-                  // const Spacer(
-                  //   flex: 2,
-                  // ),
-                  // Row(
-                  // children: [
-                  //   const Icon(Icons.access_time, color: Colors.white),
-                  //   const SizedBox(
-                  //     width: 5,
-                  //   ),
-                  //   Text("BUSINESS HOURS",
-                  //       style: GoogleFonts.robotoCondensed(
-                  //           color: Colors.white,
-                  //           fontSize: 20,
-                  //           fontWeight: FontWeight.bold)),
-                  // ],
-                  // ),
                   const Spacer(
                     flex: 1,
                   ),
                   const Text(
                       "We’ll contact you immediately to discuss to help you",
-                      style: TextStyle(color: Colors.white, fontSize: 23)),
+                      style: TextStyle(color: Colors.white, fontSize: 18)),
                   const Spacer(
-                    flex: 1,
+                    flex: 2,
                   ),
                 ],
               ),
             ),
           ),
-          const Spacer(
-            flex: 1,
-          ),
+          Spacer(),
           Container(
-            padding: const EdgeInsets.all(50),
+            padding: const EdgeInsets.all(20),
             height: screenSize.height * 0.7,
             width: screenSize.width * 0.35,
             child: Form(
@@ -146,7 +97,7 @@ class ContactUs2 extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.w400),
                     ),
                   ),
                   Container(
@@ -181,11 +132,11 @@ class ContactUs2 extends StatelessWidget {
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
-                              fontWeight: FontWeight.bold),
+                              fontWeight: FontWeight.w400),
                         ),
                       ),
                       SizedBox(
-                        width: 73,
+                        width: 92,
                       ),
                       Container(
                         child: Text(
@@ -193,7 +144,7 @@ class ContactUs2 extends StatelessWidget {
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
-                              fontWeight: FontWeight.bold),
+                              fontWeight: FontWeight.w400),
                         ),
                       ),
                     ],
@@ -201,7 +152,7 @@ class ContactUs2 extends StatelessWidget {
                   Row(
                     children: [
                       Container(
-                        width: 200,
+                        width: 220,
                         child: TextFormField(
                           controller: phoneController,
                           decoration: InputDecoration(
@@ -225,7 +176,7 @@ class ContactUs2 extends StatelessWidget {
                         width: 7,
                       ),
                       Container(
-                        width: 230,
+                        width: 220,
                         child: TextFormField(
                           controller: emailController,
                           decoration: InputDecoration(
@@ -258,39 +209,42 @@ class ContactUs2 extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
-                        fontWeight: FontWeight.bold),
+                        fontWeight: FontWeight.w400),
                   ),
-                  TextFormField(
-                    controller: messageController,
-                    decoration: InputDecoration(
-                      hintText: "Enter your message",
-                      fillColor: Colors.white,
-                      filled: true,
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.zero,
-                        borderSide:
-                            const BorderSide(width: 1, color: Colors.white),
+                  Container(
+                    width: 450,
+                    child: TextFormField(
+                      controller: messageController,
+                      decoration: InputDecoration(
+                        hintText: "Enter your message",
+                        fillColor: Colors.white,
+                        filled: true,
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.zero,
+                          borderSide:
+                              const BorderSide(width: 1, color: Colors.white),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.zero,
+                          borderSide:
+                              const BorderSide(width: 1, color: Colors.white),
+                        ),
                       ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.zero,
-                        borderSide:
-                            const BorderSide(width: 1, color: Colors.white),
-                      ),
+                      maxLines: 5,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return '*Required';
+                        }
+                        return null;
+                      },
                     ),
-                    maxLines: 5,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return '*Required';
-                      }
-                      return null;
-                    },
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   SizedBox(
                     height: 45,
-                    width: 110,
+                    width: 100,
                     child: TextButton(
                       style: TextButton.styleFrom(
                           primary: Colors.white,
