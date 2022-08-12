@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pro_talent/public_baru/our_services/our_services1b.dart';
+import 'package:pro_talent/public_baru/our_services/our_services1a.dart';
 import 'package:pro_talent/public_baru/contact_us_baru/contact_us2.dart';
-import 'package:pro_talent/public_baru/our_services/our_services1.dart';
 import 'package:pro_talent/public_baru/our_services/our_services2.dart';
 import 'package:pro_talent/public_baru/our_services/our_services4.dart';
 
@@ -27,7 +28,8 @@ class _OurServicesState extends State<OurServices> {
                 Colors.blue, Colors.black, Colors.black),
         body: ListView(
           children: [
-            OurServices1(),
+            OurServices1a(),
+            OurServices1b(),
             OurServices2(),
             // OurServices3(),
             ContactUs2(),
