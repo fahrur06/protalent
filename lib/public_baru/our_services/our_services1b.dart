@@ -49,6 +49,9 @@ class _OurServices1bState extends State<OurServices1b> {
                   ),
                 ),
               ),
+               SizedBox(
+                height: 10,
+              ),
               Row(
                 children: [
                   Container(
@@ -83,6 +86,7 @@ class _OurServices1bState extends State<OurServices1b> {
                           height: 20,
                         ),
                         Container(
+                          height: 30,
                           padding: EdgeInsets.only(top: 5),
                           child: ShowUpAnimation(
                             delayStart: Duration(seconds: 1),
@@ -102,7 +106,8 @@ class _OurServices1bState extends State<OurServices1b> {
                         ),
                         Container(
                           padding: EdgeInsets.only(top: 10),
-                          width: 200,
+                          width: 220,
+                          height: 100,
                           child: ShowUpAnimation(
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
@@ -151,6 +156,7 @@ class _OurServices1bState extends State<OurServices1b> {
                           height: 20,
                         ),
                         Container(
+                          height: 30,
                           padding: EdgeInsets.only(top: 5),
                           child: ShowUpAnimation(
                             delayStart: Duration(seconds: 1),
@@ -171,6 +177,7 @@ class _OurServices1bState extends State<OurServices1b> {
                         Container(
                           padding: EdgeInsets.only(top: 10),
                           width: 200,
+                          height: 100,
                           child: ShowUpAnimation(
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
@@ -219,6 +226,7 @@ class _OurServices1bState extends State<OurServices1b> {
                           height: 20,
                         ),
                         Container(
+                          height: 30,
                           padding: EdgeInsets.only(top: 5),
                           child: ShowUpAnimation(
                             delayStart: Duration(seconds: 1),
@@ -239,6 +247,7 @@ class _OurServices1bState extends State<OurServices1b> {
                         Container(
                           padding: EdgeInsets.only(top: 10),
                           width: 200,
+                          height: 100,
                           child: ShowUpAnimation(
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
@@ -287,6 +296,7 @@ class _OurServices1bState extends State<OurServices1b> {
                           height: 20,
                         ),
                         Container(
+                          height: 30,
                           padding: EdgeInsets.only(top: 5),
                           child: ShowUpAnimation(
                             delayStart: Duration(seconds: 1),
@@ -306,7 +316,8 @@ class _OurServices1bState extends State<OurServices1b> {
                         ),
                         Container(
                           padding: EdgeInsets.only(top: 10),
-                          width: 200,
+                          width: 220,
+                          height: 100,
                           child: ShowUpAnimation(
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
