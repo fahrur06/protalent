@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:show_up_animation/show_up_animation.dart';
+import 'package:pro_talent/animation/animasi_kiri_kanan.dart';
 
 class OurServices1 extends StatefulWidget {
   const OurServices1({Key? key}) : super(key: key);
@@ -128,6 +129,8 @@ class _OurServices1State extends State<OurServices1> {
           height: 15,
         ),
         Container(
+          height: 400,
+          width: screenSize.width,
           color: Colors.white,
           child: Column(
             children: [
@@ -138,13 +141,13 @@ class _OurServices1State extends State<OurServices1> {
                   Column(
                     children: [
                       Container(
-                        // width: screenSize.width * 0.15,
-                        // height: screenSize.height * 0.08,
+                        width: screenSize.width * 0.15,
+                        height: screenSize.height * 0.08,
                         child: Text(
                           "Our Services",
                           style: GoogleFonts.robotoCondensed(
                             color: Color(0xff1e5ea8),
-                            fontSize: 24,
+                            fontSize: 34,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -163,53 +166,36 @@ class _OurServices1State extends State<OurServices1> {
                           ),
                         ),
                       ),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Row(
-                        // mainAxisAlignment: MainAxisAlignment.center,
-                        // crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
                             width: screenSize.width * 0.2,
                             child: Column(
                               children: [
-                                // Container(
-                                //   padding: EdgeInsets.only(
-                                //       top: screenSize.height * 0.01),
-                                //   width: screenSize.width * 0.5,
-                                //   child: ShowUpAnimation(
-                                //     delayStart: Duration(seconds: 1),
-                                //     curve: Curves.bounceIn,
-                                //     direction: Direction.horizontal,
-                                //     offset: -0.2,
-                                //     child: Container(
-                                //       child: CircleAvatar(
-                                //         radius: 45,
-                                //         backgroundColor:
-                                //             Colors.white,
-                                //         child: ClipOval(
-                                //           child: Image.asset(
-                                //         "assets/icons/xxx.png",
-                                //             fit: BoxFit.cover,
-                                //             width: 80,
-                                //             height: 80,
-                                //           ),
-                                //         ),
-                                //       ),
-                                //     ),
-                                //   ),
-                                // ),
-
-                                Container(
-                                  width: 50,
-                                  height: 50,
-                                  decoration: BoxDecoration(
+                                Animasi_Kiri_Kanan(
+                                  screenSize: screenSize,
+                                  widget: Container(
+                                    width: 80,
+                                    height: 80,
+                                    decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(100),
                                       border: Border.all(
-                                          color: Colors.black, width: 1),
+                                          color:
+                                              Color.fromARGB(255, 4, 97, 184),
+                                          width: 1),
                                       image: DecorationImage(
-                                          image: AssetImage(
-                                              'assets/icons/icon-service-1.png'))),
+                                        image: AssetImage(
+                                          'assets/icons/icon-service-1.png',
+                                        ),
+                                      ),
+                                    ),
+                                  ),
                                 ),
-
                                 const SizedBox(
                                   height: 10,
                                 ),
@@ -252,18 +238,22 @@ class _OurServices1State extends State<OurServices1> {
                             width: screenSize.width * 0.2,
                             child: Column(
                               children: [
-                                Container(
-                                  padding: EdgeInsets.only(
-                                      top: screenSize.height * 0.01),
-                                  width: screenSize.width * 0.5,
-                                  child: ShowUpAnimation(
-                                    delayStart: Duration(seconds: 1),
-                                    curve: Curves.bounceIn,
-                                    direction: Direction.horizontal,
-                                    offset: -0.2,
-                                    child: Image.asset(
-                                      "assets/icons/icon-service-2.png",
-                                      height: screenSize.height * 0.1,
+                                Animasi_Kiri_Kanan(
+                                  screenSize: screenSize,
+                                  widget: Container(
+                                    width: 80,
+                                    height: 80,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(100),
+                                      border: Border.all(
+                                          color:
+                                              Color.fromARGB(255, 4, 97, 184),
+                                          width: 1),
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                          'assets/icons/icon-service-2.png',
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -309,18 +299,22 @@ class _OurServices1State extends State<OurServices1> {
                             width: screenSize.width * 0.2,
                             child: Column(
                               children: [
-                                Container(
-                                  padding: EdgeInsets.only(
-                                      top: screenSize.height * 0.01),
-                                  width: screenSize.width * 0.5,
-                                  child: ShowUpAnimation(
-                                    delayStart: Duration(seconds: 1),
-                                    curve: Curves.bounceIn,
-                                    direction: Direction.horizontal,
-                                    offset: -0.2,
-                                    child: Image.asset(
-                                      "assets/icons/icon-service-3.png",
-                                      height: screenSize.height * 0.1,
+                                Animasi_Kiri_Kanan(
+                                  screenSize: screenSize,
+                                  widget: Container(
+                                    width: 80,
+                                    height: 80,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(100),
+                                      border: Border.all(
+                                          color:
+                                              Color.fromARGB(255, 4, 97, 184),
+                                          width: 1),
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                          'assets/icons/icon-service-3.png',
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -366,18 +360,22 @@ class _OurServices1State extends State<OurServices1> {
                             width: screenSize.width * 0.2,
                             child: Column(
                               children: [
-                                Container(
-                                  padding: EdgeInsets.only(
-                                      top: screenSize.height * 0.01),
-                                  width: screenSize.width * 0.5,
-                                  child: ShowUpAnimation(
-                                    delayStart: Duration(seconds: 1),
-                                    curve: Curves.bounceIn,
-                                    direction: Direction.horizontal,
-                                    offset: -0.2,
-                                    child: Image.asset(
-                                      "assets/icons/icon-service-4.png",
-                                      height: screenSize.height * 0.1,
+                                Animasi_Kiri_Kanan(
+                                  screenSize: screenSize,
+                                  widget: Container(
+                                    width: 80,
+                                    height: 80,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(100),
+                                      border: Border.all(
+                                          color:
+                                              Color.fromARGB(255, 4, 97, 184),
+                                          width: 1),
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                          'assets/icons/icon-service-4.png',
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:google_fonts/google_fonts.dart';
 import 'package:show_up_animation/show_up_animation.dart';
 
 class Animasi_Kiri_Kanan extends StatelessWidget {
@@ -15,7 +16,7 @@ class Animasi_Kiri_Kanan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ShowUpAnimation(
-        delayStart: Duration(seconds: 3),
+        delayStart: Duration(seconds: 1),
         curve: Curves.decelerate,
         direction: Direction.horizontal,
         offset: -0.3,
