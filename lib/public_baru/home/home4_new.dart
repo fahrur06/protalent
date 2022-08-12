@@ -22,8 +22,7 @@ class _HomeNew4State extends State<HomeNew4> {
             color: Color(0xff1e5ea8),
             width: screenSize.width,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 Text('VARIOUS INDUSTRY AND SECTORS',
                   style: TextStyle(
@@ -41,6 +40,7 @@ class _HomeNew4State extends State<HomeNew4> {
                   ),
                   textAlign: TextAlign.center,
                 ),
+                SizedBox()
               ],
             ),
           ),
