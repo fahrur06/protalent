@@ -102,12 +102,7 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
         ),
         TextButton(
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const login(),
-              ),
-            );
+            Navigator.pushNamed(context, '/login');
           },
           child: Text(
             'Login',
@@ -120,8 +115,7 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
         ),
         ElevatedButton(
           onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Register()));
+            Navigator.pushNamed(context, '/register');
           },
           child: Text(
             'Register',
