@@ -32,7 +32,6 @@ class _ExpansionHome4State extends State<ExpansionHome4> {
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
-                      color: Colors.grey[600]
                     ),
                   ),
                 );
