@@ -49,7 +49,6 @@ class ContactUs2 extends StatelessWidget {
                   const Spacer(
                     flex: 1,
                   ),
-
                   const Text(
                       'Yes, you need an outsourcing partner '
                       'you can trust and thrive with',
@@ -57,7 +56,6 @@ class ContactUs2 extends StatelessWidget {
                           color: Colors.white,
                           fontSize: 40,
                           fontWeight: FontWeight.bold)),
-
                   const Spacer(
                     flex: 1,
                   ),
@@ -69,8 +67,6 @@ class ContactUs2 extends StatelessWidget {
                           fontSize: 18,
                           // fontWeight: FontWeight.bold,
                           letterSpacing: 1.1)),
-
-
                   const Spacer(
                     flex: 1,
                   ),
@@ -84,9 +80,7 @@ class ContactUs2 extends StatelessWidget {
               ),
             ),
           ),
-
           Spacer(),
-
           Container(
             padding: const EdgeInsets.all(20),
             height: screenSize.height * 0.7,
@@ -182,7 +176,7 @@ class ContactUs2 extends StatelessWidget {
                         width: 7,
                       ),
                       Container(
-                        width: 230,
+                        width: 240,
                         child: TextFormField(
                           controller: emailController,
                           decoration: InputDecoration(
@@ -217,37 +211,40 @@ class ContactUs2 extends StatelessWidget {
                         fontSize: 20,
                         fontWeight: FontWeight.w400),
                   ),
-                  TextFormField(
-                    controller: messageController,
-                    decoration: InputDecoration(
-                      hintText: "Enter your message",
-                      fillColor: Colors.white,
-                      filled: true,
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.zero,
-                        borderSide:
-                            const BorderSide(width: 1, color: Colors.white),
+                  Container(
+                    width: 450,
+                    child: TextFormField(
+                      controller: messageController,
+                      decoration: InputDecoration(
+                        hintText: "Enter your message",
+                        fillColor: Colors.white,
+                        filled: true,
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.zero,
+                          borderSide:
+                              const BorderSide(width: 1, color: Colors.white),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.zero,
+                          borderSide:
+                              const BorderSide(width: 1, color: Colors.white),
+                        ),
                       ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.zero,
-                        borderSide:
-                            const BorderSide(width: 1, color: Colors.white),
-                      ),
+                      maxLines: 5,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return '*Required';
+                        }
+                        return null;
+                      },
                     ),
-                    maxLines: 5,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return '*Required';
-                      }
-                      return null;
-                    },
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   SizedBox(
                     height: 45,
-                    width: 110,
+                    width: 100,
                     child: TextButton(
                       style: TextButton.styleFrom(
                           primary: Colors.white,
