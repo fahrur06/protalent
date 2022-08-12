@@ -97,7 +97,9 @@ class _OurServices1aState extends State<OurServices1a> {
                     direction: Direction.horizontal,
                     offset: -0.2,
                     child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/register');
+                        },
                         style: ButtonStyle(
                           overlayColor:
                               MaterialStateProperty.resolveWith<Color?>(

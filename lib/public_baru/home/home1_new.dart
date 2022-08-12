@@ -80,7 +80,9 @@ class HomeNew1 extends StatelessWidget {
                   direction: Direction.horizontal,
                   offset: -0.2,
                   child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/contact');
+                      },
                       child: Text(
                         'CONTACT US',
                         style: TextStyle(

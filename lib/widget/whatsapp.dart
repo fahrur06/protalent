@@ -47,7 +47,7 @@ class WAChat extends StatelessWidget {
           springController: springController,
           alignment: Alignment.center,
           animStatus: (AnimStatus status){
-            print(status);
+
           },
 
           child: const Icon(
