@@ -317,7 +317,7 @@ class _Career2State extends State<Career2> {
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
                             child: Text(
-                              "Join us to make your carrer growth",
+                              "Join us to make your career growth",
                               textAlign: TextAlign.center,
                               style: GoogleFonts.robotoCondensed(
                                 color: Color(0xff111111),
