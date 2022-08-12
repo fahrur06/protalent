@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Footer extends StatelessWidget {
   const Footer({Key? key}) : super(key: key);
@@ -68,7 +69,9 @@ class Footer extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    launch('https://www.linkedin.com/company/pt-tiga-daya-digital-indonesia-triputra-group-eksad-technology');
+                                  },
                                   icon: Icon(
                                     FontAwesomeIcons.linkedinIn,
                                     size: 30,
@@ -76,15 +79,19 @@ class Footer extends StatelessWidget {
                                   iconSize: 20,
                                 ),
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    launch('https://twitter.com/eksad_technology/');
+                                  },
                                   icon: Icon(
-                                    FontAwesomeIcons.facebook,
+                                    FontAwesomeIcons.twitter,
                                     size: 30,
                                   ),
                                   iconSize: 20,
                                 ),
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    launch('https://www.instagram.com/eksad_technology/');
+                                  },
                                   icon: Icon(
                                     FontAwesomeIcons.instagram,
                                     size: 30,
@@ -92,7 +99,9 @@ class Footer extends StatelessWidget {
                                   iconSize: 20,
                                 ),
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    launch('https://youtube.com/eksad_technology');
+                                  },
                                   icon: Icon(
                                     FontAwesomeIcons.youtube,
                                     size: 30,
