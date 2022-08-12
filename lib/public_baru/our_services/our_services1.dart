@@ -180,8 +180,8 @@ class _OurServices1State extends State<OurServices1> {
                                 Animasi_Kiri_Kanan(
                                   screenSize: screenSize,
                                   widget: Container(
-                                    width: 80,
-                                    height: 80,
+                                  width: 60,
+                                  height: 60,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(100),
                                       border: Border.all(
@@ -197,7 +197,7 @@ class _OurServices1State extends State<OurServices1> {
                                   ),
                                 ),
                                 const SizedBox(
-                                  height: 10,
+                                  height: 20,
                                 ),
                                 Container(
                                   child: ShowUpAnimation(
@@ -241,8 +241,8 @@ class _OurServices1State extends State<OurServices1> {
                                 Animasi_Kiri_Kanan(
                                   screenSize: screenSize,
                                   widget: Container(
-                                    width: 80,
-                                    height: 80,
+                                  width: 60,
+                                  height: 60,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(100),
                                       border: Border.all(
@@ -258,7 +258,7 @@ class _OurServices1State extends State<OurServices1> {
                                   ),
                                 ),
                                 const SizedBox(
-                                  height: 10,
+                                  height: 20,
                                 ),
                                 Container(
                                   child: ShowUpAnimation(
@@ -302,8 +302,8 @@ class _OurServices1State extends State<OurServices1> {
                                 Animasi_Kiri_Kanan(
                                   screenSize: screenSize,
                                   widget: Container(
-                                    width: 80,
-                                    height: 80,
+                                  width: 60,
+                                  height: 60,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(100),
                                       border: Border.all(
@@ -319,7 +319,7 @@ class _OurServices1State extends State<OurServices1> {
                                   ),
                                 ),
                                 const SizedBox(
-                                  height: 10,
+                                  height: 20,
                                 ),
                                 Container(
                                   child: ShowUpAnimation(
@@ -363,8 +363,8 @@ class _OurServices1State extends State<OurServices1> {
                                 Animasi_Kiri_Kanan(
                                   screenSize: screenSize,
                                   widget: Container(
-                                    width: 80,
-                                    height: 80,
+                                  width: 60,
+                                  height: 60,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(100),
                                       border: Border.all(
@@ -380,7 +380,7 @@ class _OurServices1State extends State<OurServices1> {
                                   ),
                                 ),
                                 const SizedBox(
-                                  height: 10,
+                                  height: 20,
                                 ),
                                 Container(
                                   child: ShowUpAnimation(
@@ -426,6 +426,7 @@ class _OurServices1State extends State<OurServices1> {
             ],
           ),
         ),
+      
       ],
     );
   }
