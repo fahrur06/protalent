@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pro_talent/widget/button_color.dart';
 import 'package:show_up_animation/show_up_animation.dart';
 
 class HomeNew1 extends StatelessWidget {
@@ -90,8 +91,8 @@ class HomeNew1 extends StatelessWidget {
                             letterSpacing: 2,
                             color: Colors.white),
                       ),
-                      style: ElevatedButton.styleFrom(
-                          primary: Color(0xff1e5ea8), onPrimary: Colors.red)),
+                    style: DefaultColors(),
+                  ),
                 ),
               )
             ],

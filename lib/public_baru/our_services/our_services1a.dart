@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pro_talent/widget/button_color.dart';
 import 'package:show_up_animation/show_up_animation.dart';
 import 'package:pro_talent/animation/animasi_kiri_kanan.dart';
 
@@ -100,16 +101,7 @@ class _OurServices1aState extends State<OurServices1a> {
                         onPressed: () {
                           Navigator.pushNamed(context, '/register');
                         },
-                        style: ButtonStyle(
-                          overlayColor:
-                              MaterialStateProperty.resolveWith<Color?>(
-                            (Set<MaterialState> states) {
-                              if (states.contains(MaterialState.pressed))
-                                return Colors.red; //<-- SEE HERE
-                              return null; // Defer to the widget's default.
-                            },
-                          ),
-                        ),
+                        style: DefaultColors(),
                         child: Text(
                           'FREE REGISTER',
                           style: TextStyle(
