@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pro_talent/public_baru/contact_us_baru/contact_us2.dart';
 import 'package:pro_talent/public_baru/our_services/our_services1.dart';
 import 'package:pro_talent/public_baru/our_services/our_services2.dart';
 import 'package:pro_talent/public_baru/our_services/our_services4.dart';
@@ -29,7 +30,7 @@ class _OurServicesState extends State<OurServices> {
             OurServices1(),
             OurServices2(),
             // OurServices3(),
-            OurServices4(),
+            ContactUs2(),
             Footer(),
           ],
         ),

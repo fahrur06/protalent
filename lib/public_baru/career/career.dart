@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:pro_talent/public_baru/career/career2.dart';
 import 'package:pro_talent/public_baru/career/career3.dart';
 
 import '../../appbar/appbar_baru.dart';
@@ -31,6 +32,7 @@ class _CareerState extends State<Career> {
 
             Career1(),
             Career1_2(),
+            Career2(),
             Career3(),
             Footer(),
           ],

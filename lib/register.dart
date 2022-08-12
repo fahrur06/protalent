@@ -230,12 +230,7 @@ class _RegisterState extends State<Register> {
                               width: screenSize.width * 0.09,
                               child: ElevatedButton(
                                 onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => login(),
-                                    ),
-                                  );
+                                  Navigator.pushNamed(context, '/login');
                                 },
                                 child: Text("LOGIN"),
                               ),
