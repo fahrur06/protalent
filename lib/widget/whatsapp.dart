@@ -43,7 +43,9 @@ class WAChat extends StatelessWidget {
 
         },
         child: Spring.rotate(
-          animDuration: Duration(seconds: 15),
+
+          endAngle: 360*10,
+          animDuration: Duration(seconds: 3*10),
           springController: springController,
           alignment: Alignment.center,
           animStatus: (AnimStatus status){
