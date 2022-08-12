@@ -246,12 +246,25 @@ class ContactUs2 extends StatelessWidget {
                     height: 45,
                     width: 100,
                     child: TextButton(
-                      style: TextButton.styleFrom(
-                          primary: Colors.white,
-                          backgroundColor:
-                              const Color.fromARGB(255, 12, 66, 101),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15))),
+                      style: ButtonStyle(
+                        shape: MaterialStateProperty.resolveWith(
+                            (ShapeBorder) => RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15))),
+                        overlayColor: MaterialStateProperty.resolveWith<Color?>(
+                          (Set<MaterialState> states) {
+                            if (states.contains(MaterialState.hovered))
+                              return Colors.red;
+                            return Colors.white;
+                          },
+                        ),
+
+                        // primary: Colors.white,
+                        // backgroundColor:
+                        //     const Color.fromARGB(255, 12, 66, 101),
+                        // shape: RoundedRectangleBorder(
+                        //     borderRadius: BorderRadius.circular(15),
+                        //     ),
+                      ),
                       onPressed: () async {
                         if (_formKey.currentState!.validate()) {
                           final response = await SendEmail(
@@ -275,8 +288,10 @@ class ContactUs2 extends StatelessWidget {
                           messageController.clear();
                         }
                       },
-                      child:
-                          const Text('Submit', style: TextStyle(fontSize: 16)),
+                      child: const Text(
+                        'Submit',
+                        style: TextStyle(fontSize: 16, color: Colors.white),
+                      ),
                     ),
                   ),
                 ],
