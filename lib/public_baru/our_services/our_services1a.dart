@@ -54,7 +54,7 @@ class _OurServices1aState extends State<OurServices1a> {
               children: [
                 SizedBox(height: 100),
                 Container(
-                   height: screenSize.height * 0.10,
+                  height: screenSize.height * 0.10,
                   child: ShowUpAnimation(
                     delayStart: Duration(seconds: 1),
                     direction: Direction.horizontal,
@@ -68,9 +68,9 @@ class _OurServices1aState extends State<OurServices1a> {
                     ),
                   ),
                 ),
-                SizedBox(height:20),
+                SizedBox(height: 20),
                 Container(
-                   width: screenSize.width * 0.28,
+                  width: screenSize.width * 0.28,
                   height: screenSize.height * 0.20,
                   child: ShowUpAnimation(
                     delayStart: Duration(seconds: 1),
@@ -98,6 +98,16 @@ class _OurServices1aState extends State<OurServices1a> {
                     offset: -0.2,
                     child: ElevatedButton(
                         onPressed: () {},
+                        style: ButtonStyle(
+                          overlayColor:
+                              MaterialStateProperty.resolveWith<Color?>(
+                            (Set<MaterialState> states) {
+                              if (states.contains(MaterialState.pressed))
+                                return Colors.red; //<-- SEE HERE
+                              return null; // Defer to the widget's default.
+                            },
+                          ),
+                        ),
                         child: Text(
                           'FREE REGISTER',
                           style: TextStyle(
@@ -105,15 +115,13 @@ class _OurServices1aState extends State<OurServices1a> {
                               // letterSpacing: 2,
                               color: Colors.white),
                         ),
-                        style: ElevatedButton.styleFrom(
-                            primary: Color(0xff1e5ea8), onPrimary: Colors.red)),
+                        ),
                   ),
                 )
               ],
             ),
           ),
         ),
-      
       ],
     );
   }

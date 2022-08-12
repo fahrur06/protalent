@@ -11,7 +11,7 @@ class _ExpansionOurServices2State extends State<ExpansionOurServices2> {
       child: Padding(
         padding: EdgeInsets.all(10),
         child: ExpansionPanelList.radio(
-
+          initialOpenPanelValue: 'Developer',
           expansionCallback: (int index, bool isExpanded){
             setState(() {
               items[index].isExpanded = isExpanded;
@@ -19,6 +19,7 @@ class _ExpansionOurServices2State extends State<ExpansionOurServices2> {
           },
           children: items.map((ExpansionpanelItem item){
             return ExpansionPanelRadio(
+              backgroundColor: Colors.grey[100],
               canTapOnHeader: true,
               value: item.title,
               headerBuilder: (BuildContext context, bool isExpanded){
@@ -30,7 +31,6 @@ class _ExpansionOurServices2State extends State<ExpansionOurServices2> {
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
-                      color: Colors.grey[600]
                     ),
                   ),
                 );

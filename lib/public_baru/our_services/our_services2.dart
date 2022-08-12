@@ -43,6 +43,7 @@ class _OurServices2State extends State<OurServices2> {
             ),
           ),
           Container(
+            padding: EdgeInsets.only(top: 20),
             color: Colors.white,
             width: screenSize.width*0.6,
             child: ExpansionOurServices2(),

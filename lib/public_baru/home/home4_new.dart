@@ -22,8 +22,8 @@ class _HomeNew4State extends State<HomeNew4> {
             color: Color(0xff1e5ea8),
             width: screenSize.width,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                SizedBox(height: 15,),
                 Text('VARIOUS INDUSTRY AND SECTORS',
                   style: TextStyle(
                     fontSize: 36,
@@ -31,7 +31,6 @@ class _HomeNew4State extends State<HomeNew4> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 15,),
                 Text('Each industry has its specific needs, we are'
                     ' ready to help to provide services according to its industry'
                     ', from initial discussions to providing expert consultants.',
@@ -41,10 +40,12 @@ class _HomeNew4State extends State<HomeNew4> {
                   ),
                   textAlign: TextAlign.center,
                 ),
+                SizedBox()
               ],
             ),
           ),
           Container(
+            padding: EdgeInsets.only(top: 20),
             width: screenSize.width*0.6,
             color: Colors.white,
             child: ExpansionHome4(),

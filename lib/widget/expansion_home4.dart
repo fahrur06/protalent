@@ -19,6 +19,7 @@ class _ExpansionHome4State extends State<ExpansionHome4> {
           },
           children: items.map((ExpansionpanelItem item){
             return ExpansionPanelRadio(
+              backgroundColor: Colors.grey[100],
               canTapOnHeader: true,
                 value: item.title,
                 headerBuilder: (BuildContext context, bool isExpanded){
@@ -31,7 +32,6 @@ class _ExpansionHome4State extends State<ExpansionHome4> {
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
-                      color: Colors.grey[600]
                     ),
                   ),
                 );
