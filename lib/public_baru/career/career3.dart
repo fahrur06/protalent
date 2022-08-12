@@ -76,10 +76,19 @@ class Career3 extends StatelessWidget {
           //       )),
           // ),
           Container(
-            height: 30,
-            width: screenSize.width * 0.09,
+            height: 40,
+            width: screenSize.width * 0.10,
             alignment: Alignment.center,
             child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  // padding: const EdgeInsets.all(15),
+                  fixedSize: screenSize,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  primary: Color.fromARGB(255, 12, 66, 101)
+                  // shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0))),
+                  ),
               onPressed: () {
                 _launchURL();
                 // Navigator.push(
@@ -89,7 +98,7 @@ class Career3 extends StatelessWidget {
                 //   ),
                 // );
               },
-              child: Text("APPLY NOW"),
+              child: Text("APPLY NOW", style: TextStyle(fontSize: 17)),
             ),
           ),
           Spacer(
@@ -97,7 +106,6 @@ class Career3 extends StatelessWidget {
           ),
         ],
       ),
-
     );
   }
 }

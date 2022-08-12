@@ -13,7 +13,7 @@ class _HomeNew4State extends State<HomeNew4> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-      height: 873,
+      height: 893,
       width: screenSize.width,
       child: Column(
         children: [
@@ -88,7 +88,7 @@ class _HomeNew4State extends State<HomeNew4> {
             ),
           ),
 
-
+          SizedBox(height: 20,),
 
           Container(
             width: screenSize.width*0.5,

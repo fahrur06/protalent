@@ -17,6 +17,8 @@ class _loginState extends State<login> {
   final formKey = GlobalKey<FormState>();
   String _usmail = '';
   String _uspswd = '';
+  TextEditingController _editingController = TextEditingController();
+  TextEditingController _editingController2 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -113,6 +115,7 @@ class _loginState extends State<login> {
                           height: 40,
                           width: screenSize.width * 0.2,
                           child: TextFormField(
+                            controller: _editingController,
                             textAlign: TextAlign.start,
                             decoration: InputDecoration(
                               labelText: "Enter Your Email",
@@ -123,6 +126,7 @@ class _loginState extends State<login> {
                             ),
                             validator: (value){
                               if(value == null || value.trim().isEmpty){
+                                _editingController.clear();
                                 return "please enter your email address";
                               }else if(!RegExp(r'\S+@\S+\.\S+').hasMatch(value)){
                                 return 'Please enter a valid email address';
@@ -130,6 +134,7 @@ class _loginState extends State<login> {
                                 return null;
                               }
                             },
+
                             onChanged: (value) => _usmail = value,
                           ),
                         ),
@@ -156,6 +161,7 @@ class _loginState extends State<login> {
                           height: 40,
                           width: screenSize.width * 0.2,
                           child: TextFormField(
+                            controller: _editingController2,
                             textAlign: TextAlign.start,
                             obscureText: _isObscure,
                             decoration: InputDecoration(
@@ -178,6 +184,7 @@ class _loginState extends State<login> {
                             ),
                             validator: (value){
                               if(value == null || value.trim().isEmpty){
+                                _editingController2.clear();
                                 return 'This field is required';
                               } else if(value.trim().length<8){
                                 return 'Password must be at least 8 characters in length';
@@ -198,23 +205,9 @@ class _loginState extends State<login> {
                               child: ElevatedButton(
                                 onPressed: () {
                                   if(_usmail == 'admin@admin.com' && _uspswd == 'administrator') {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                       builder: (Context) {
-                                         return Dashboard();
-                                       },
-                                      ),
-                                    );
+                                    Navigator.pushNamed(context, '/admin');
                                   } else if (_usmail == 'client@client.com' && _uspswd == 'clientpage'){
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (Context){
-                                            return DashboardClient();
-                                          }
-                                          ),
-                                    );
+                                    Navigator.pushNamed(context, '/client');
                                   }else{
                                     showDialog<String>(
                                       context: context,
@@ -242,12 +235,7 @@ class _loginState extends State<login> {
                               width: screenSize.width * 0.08,
                               child: ElevatedButton(
                                 onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => Register(),
-                                    ),
-                                  );
+                                  Navigator.pushNamed(context, '/register');
                                 },
                                 child: Text("REGISTER"),
                               ),

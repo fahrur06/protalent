@@ -78,36 +78,31 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
     ),
     title: Row(
       children: [
-        ButtonAppbar(arah: HomePageNew(), menu: 'Home', warna: home),
+        ButtonAppbar_baru(arah: '/', menu: 'Home', warna: home),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: HomePage(), menu: 'About Us', warna: aboutUs),
+        ButtonAppbar_baru(arah: '/', menu: 'About Us', warna: aboutUs),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(
-            arah: OurServices(), menu: 'Our Services', warna: ourServices),
+        ButtonAppbar_baru(
+            arah: '/service', menu: 'Our Services', warna: ourServices),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: Career(), menu: 'Career', warna: career),
+        ButtonAppbar_baru(arah: '/career', menu: 'Career', warna: career),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(
-            arah: ContactUs_baru(), menu: 'Contact Us', warna: contactUs),
+        ButtonAppbar_baru(
+            arah: '/contact', menu: 'Contact Us', warna: contactUs),
         Spacer(
           flex: 2,
         ),
         TextButton(
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const login(),
-              ),
-            );
+            Navigator.pushNamed(context, '/login');
           },
           child: Text(
             'Login',
@@ -120,8 +115,7 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
         ),
         ElevatedButton(
           onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Register()));
+            Navigator.pushNamed(context, '/register');
           },
           child: Text(
             'Register',
@@ -129,11 +123,9 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
                 color: Colors.white, fontSize: 19, fontWeight: FontWeight.w500),
           ),
           style: ElevatedButton.styleFrom(
-              primary: Color.fromARGB(255, 60, 74, 243),
+              primary: Color(0xff1e5ea8),
               fixedSize: Size(130, 45),
               onPrimary: Colors.red,
-
-
           ),
         ),
         Spacer(

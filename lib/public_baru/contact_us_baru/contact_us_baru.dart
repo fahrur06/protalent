@@ -23,8 +23,8 @@ class _ContactUsState extends State<ContactUs_baru> {
     return Scaffold(
         appBar: ResponsiveWidget.isSmallScreen(context)
             ? AppbarHomeSmall(screenSize)
-            : AppbarHomeLarge(screenSize, context, Colors.blue, Colors.black,
-                Colors.black, Colors.black, Colors.black),
+            : AppbarHomeLarge(screenSize, context, Colors.black, Colors.black,
+                Colors.black, Colors.black, Colors.blue),
         body: ListView(
           children: [
             ContactUs1(),

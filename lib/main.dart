@@ -7,10 +7,19 @@ import 'package:pro_talent/homepage.dart';
 import 'package:pro_talent/homepage_new.dart';
 import 'package:pro_talent/login.dart';
 import 'package:pro_talent/public_baru/career/career.dart';
+import 'package:pro_talent/public_baru/contact_us_baru/contact_us_baru.dart';
 import 'package:pro_talent/public_baru/our_services/our_services.dart';
+import 'package:pro_talent/register.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  configureApp();
   runApp(const MyApp());
+}
+
+void configureApp() {
+  setUrlStrategy(PathUrlStrategy());
 }
 
 class MyApp extends StatelessWidget {
@@ -24,11 +33,15 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const HomePageNew(),
-        '/aboutus': (context) => const HomePageNew(),
-        '/login': (context) => const login(),
-        '/dashboard': (context) => const Dashboard(),
+        '/about': (context) => const HomePageNew(),
         '/career': (context) => const Career(),
         '/service': (context) => const OurServices(),
+        '/contact': (context) => const ContactUs_baru(),
+        '/login': (context) => const login(),
+        '/register': (context) => const Register(),
+        '/admin': (context) => const Dashboard(),
+        '/client': (context) => const DashboardClient(),
+
 
       },
 
