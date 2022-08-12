@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:spring/spring.dart';
 
 
 class WAChat extends StatelessWidget {
-  const WAChat({Key? key}) : super(key: key);
+  WAChat({Key? key}) : super(key: key);
 
 
   void launchWhatsApp(
@@ -20,16 +21,40 @@ class WAChat extends StatelessWidget {
       throw 'Could not launch ${url()}';
     }
   }
-
+  final SpringController springController =
+  SpringController(initialAnim: Motion.play);
 
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
       onPressed: () {
-          launchWhatsApp(phone: 6281807890777, message: 'Hallo, saya tertarik dengan produk EKSAD dan saya ingin tahu lebih lanjut tentang program Protalent');
+        launchWhatsApp(phone: 6281807890777, message: 'Hallo, saya tertarik dengan produk EKSAD dan saya ingin tahu lebih lanjut tentang program Protalent');
       },
       backgroundColor: Colors.green,
-      child: const Icon(Icons.whatsapp,size: 40,),
+      child: GestureDetector(
+        onTap: (){
+          springController.play(
+              motion: Motion.reverse,
+              animDuration: Duration(milliseconds: 1000),
+              curve: Curves.easeInBack,
+              delay: Duration(milliseconds: 100)
+          );
+          launchWhatsApp(phone: 6281807890777, message: 'Hallo, saya tertarik dengan produk EKSAD dan saya ingin tahu lebih lanjut tentang program Protalent');
+
+        },
+        child: Spring.rotate(
+          animDuration: Duration(seconds: 15),
+          springController: springController,
+          alignment: Alignment.center,
+          animStatus: (AnimStatus status){
+            print(status);
+          },
+
+          child: const Icon(
+              Icons.whatsapp,
+              size: 30),
+        ),
+      ),
     );
   }
 

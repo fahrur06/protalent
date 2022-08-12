@@ -6,6 +6,7 @@ import 'package:pro_talent/public_baru/home/home1_new.dart';
 import 'package:pro_talent/public_baru/home/home2_new.dart';
 import 'package:pro_talent/public_baru/home/home3_new.dart';
 import 'package:pro_talent/public_baru/home/home4_new.dart';
+import 'package:pro_talent/widget/whatsapp.dart';
 import '../appbar/appbar_baru.dart';
 
 import '../widget/responsive.dart';
@@ -23,6 +24,7 @@ class _HomePageNewState extends State<HomePageNew> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
+      floatingActionButton: WAChat(),
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? AppbarHomeSmall(screenSize)
           : AppbarHomeLarge(screenSize, context, Colors.blue, Colors.black,
