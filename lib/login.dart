@@ -198,23 +198,9 @@ class _loginState extends State<login> {
                               child: ElevatedButton(
                                 onPressed: () {
                                   if(_usmail == 'admin@admin.com' && _uspswd == 'administrator') {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                       builder: (Context) {
-                                         return Dashboard();
-                                       },
-                                      ),
-                                    );
+                                    Navigator.pushNamed(context, '/admin');
                                   } else if (_usmail == 'client@client.com' && _uspswd == 'clientpage'){
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (Context){
-                                            return DashboardClient();
-                                          }
-                                          ),
-                                    );
+                                    Navigator.pushNamed(context, '/client');
                                   }else{
                                     showDialog<String>(
                                       context: context,
@@ -242,12 +228,7 @@ class _loginState extends State<login> {
                               width: screenSize.width * 0.08,
                               child: ElevatedButton(
                                 onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => Register(),
-                                    ),
-                                  );
+                                  Navigator.pushNamed(context, '/register');
                                 },
                                 child: Text("REGISTER"),
                               ),

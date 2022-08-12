@@ -15,8 +15,8 @@ class _DropDownHomeState extends State<DropDownHome> {
   var items = [
     'Home',
     'About Us',
-    'Employee',
-    'Post',
+    'Our Service',
+    'Career',
     'Contact Us',
   ];
   @override

@@ -21,12 +21,7 @@ import 'package:pro_talent/homepage.dart';
             //AlertForm(),
             TextButton.icon(
               onPressed: ()  {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => HomePage(),
-                  ),
-                );
+                Navigator.pushNamed(context, '/');
               },
               icon: Icon(
                 Icons.remove_red_eye,
@@ -37,10 +32,7 @@ import 'package:pro_talent/homepage.dart';
             ),
             TextButton.icon(
               onPressed: () {
-                Navigator.pop(
-                  context,
-                  MaterialPageRoute(builder: ((context) => login())),
-                );
+                Navigator.popAndPushNamed(context, '/login');
               },
               icon: Icon(Icons.output,
               ),

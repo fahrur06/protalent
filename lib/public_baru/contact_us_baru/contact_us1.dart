@@ -20,16 +20,16 @@ class _ContactUsState extends State<ContactUs1> {
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(
-                    "assets/images/bootcamp3.jpg",
+                    "assets/images/contactus1.jpg",
                   ),
-                  alignment: Alignment.bottomCenter,
+                  alignment: Alignment.center,
                   fit: BoxFit.cover)),
         ),
         Container(
           width: screenSize.width * 0.5,
           height: screenSize.height * 0.31,
           padding: EdgeInsets.only(
-              left: screenSize.width * 0.15, top: screenSize.height * 0.02),
+              right: screenSize.width * 0.30, left: screenSize.height * 0.10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -38,7 +38,7 @@ class _ContactUsState extends State<ContactUs1> {
                 child: Text(
                   'Contact Us',
                   style: TextStyle(
-                      fontSize: 50,
+                      fontSize: 40,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
                   overflow: TextOverflow.ellipsis,
