@@ -49,7 +49,7 @@ class _ExpansionHome4State extends State<ExpansionHome4> {
 List<ExpansionpanelItem> items = <ExpansionpanelItem>[
 
   ExpansionpanelItem(
-      isExpanded: true,
+      isExpanded: false,
       title: 'Non Financial Services',
       content: Padding(
           padding: EdgeInsets.only( left: 20),
