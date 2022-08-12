@@ -19,7 +19,7 @@ class _ExpansionOurServices2State extends State<ExpansionOurServices2> {
           },
           children: items.map((ExpansionpanelItem item){
             return ExpansionPanelRadio(
-              backgroundColor: Colors.grey[200],
+              backgroundColor: Colors.grey[100],
               canTapOnHeader: true,
               value: item.title,
               headerBuilder: (BuildContext context, bool isExpanded){
