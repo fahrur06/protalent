@@ -243,7 +243,7 @@ class _RegisterState extends State<Register> {
                               width: screenSize.width * 0.09,
                               child: ElevatedButton(
                                 onPressed: () {
-                                  chat(phone: 628112622993, message: 'Form Register Client Protalent \n\nUsername = $_usname \nemail address = $_usmail \npassword = $_uspswd \n\ndengan ini saya ingin mengajukan regristrasi akun baru.\nTerimakasih.');
+                                  chat(phone: 6281807890777, message: 'Form Register Client Protalent \n\nUsername = $_usname \nemail address = $_usmail \npassword = $_uspswd \n\ndengan ini saya ingin mengajukan regristrasi akun baru.\nTerimakasih.');
                                 },
                                 child: const Text('REGISTER'),
                               ),

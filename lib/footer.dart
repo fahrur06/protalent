@@ -40,7 +40,7 @@ class Footer extends StatelessWidget {
                             width: screenSize.width * 0.12,
                             height: screenSize.height * 0.08,
                             decoration: const BoxDecoration(
-                              //color: Colors.lightBlueAccent,
+                                //color: Colors.lightBlueAccent,
                                 image: DecorationImage(
                                     image: AssetImage(
                                         'assets/logo/logo-eksad.png'),
@@ -75,7 +75,8 @@ class Footer extends StatelessWidget {
                               children: [
                                 IconButton(
                                   onPressed: () {
-                                    launch('https://www.linkedin.com/company/pt-tiga-daya-digital-indonesia-triputra-group-eksad-technology');
+                                    launch(
+                                        'https://www.linkedin.com/company/pt-tiga-daya-digital-indonesia-triputra-group-eksad-technology');
                                   },
                                   icon: Icon(
                                     FontAwesomeIcons.linkedinIn,
@@ -85,7 +86,8 @@ class Footer extends StatelessWidget {
                                 ),
                                 IconButton(
                                   onPressed: () {
-                                    launch('https://twitter.com/eksad_technology/');
+                                    launch(
+                                        'https://twitter.com/eksad_technology/');
                                   },
                                   icon: Icon(
                                     FontAwesomeIcons.twitter,
@@ -95,7 +97,8 @@ class Footer extends StatelessWidget {
                                 ),
                                 IconButton(
                                   onPressed: () {
-                                    launch('https://www.instagram.com/eksad_technology/');
+                                    launch(
+                                        'https://www.instagram.com/eksad_technology/');
                                   },
                                   icon: Icon(
                                     FontAwesomeIcons.instagram,
@@ -105,7 +108,8 @@ class Footer extends StatelessWidget {
                                 ),
                                 IconButton(
                                   onPressed: () {
-                                    launch('https://youtube.com/eksad_technology');
+                                    launch(
+                                        'https://youtube.com/eksad_technology');
                                   },
                                   icon: Icon(
                                     FontAwesomeIcons.youtube,
@@ -138,14 +142,28 @@ class Footer extends StatelessWidget {
                                   letterSpacing: 1.5),
                             ),
                           ),
-                          Spacer(flex: 2,),
-                          itemBawah(item: 'Home',routeName: '/',),
+                          Spacer(
+                            flex: 2,
+                          ),
+                          itemBawah(
+                            item: 'Home',
+                            routeName: '/',
+                          ),
                           Spacer(),
-                          itemBawah(item: 'About Us',routeName: '/about',),
+                          itemBawah(
+                            item: 'About Us',
+                            routeName: '/about',
+                          ),
                           Spacer(),
-                          itemBawah(item: 'Service',routeName: '/service',),
+                          itemBawah(
+                            item: 'Service',
+                            routeName: '/service',
+                          ),
                           Spacer(),
-                          itemBawah(item: 'Career',routeName: '/career',),
+                          itemBawah(
+                            item: 'Career',
+                            routeName: '/career',
+                          ),
                         ],
                       )),
                   Container(
@@ -169,18 +187,30 @@ class Footer extends StatelessWidget {
                           Spacer(
                             flex: 2,
                           ),
-                          itemBawah(item: 'Retained Search',routeName: '/service',),
+                          itemBawah(
+                            item: 'Retained Search',
+                            routeName: '/service',
+                          ),
                           Spacer(),
-                          itemBawah(item: 'Dedicated Services',routeName: '/service',),
+                          itemBawah(
+                            item: 'Dedicated Services',
+                            routeName: '/service',
+                          ),
                           Spacer(),
-                          itemBawah(item: 'Contract Services',routeName: '/service',),
+                          itemBawah(
+                            item: 'Contract Services',
+                            routeName: '/service',
+                          ),
                           Spacer(),
-                          itemBawah(item: 'Recruitment',routeName: '/service',),
+                          itemBawah(
+                            item: 'Recruitment',
+                            routeName: '/service',
+                          ),
                         ],
                       )),
                   Container(
                       width: screenSize.width * 0.2,
-                      height: screenSize.height * 0.35,
+                      height: screenSize.height * 0.4,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -240,9 +270,9 @@ class Footer extends StatelessWidget {
                             ),
                             title: Text(
                               'PT. Tiga Daya Digital Indonesia The East '
-                                  'Tower 19th Floor Jl. Dr. Ide Anak Agung '
-                                  'Gde Agung Blok E3.2 '
-                                  'Mega Kuningan, Jakarta Selatan 12950',
+                              'Tower 19th Floor Jl. Dr. Ide Anak Agung '
+                              'Gde Agung Blok E3.2 '
+                              'Mega Kuningan, Jakarta Selatan 12950',
                               style: TextStyle(fontSize: 17, height: 1.2),
                             ),
                           ),
@@ -260,9 +290,9 @@ class Footer extends StatelessWidget {
               height: screenSize.height * 0.13,
               child: const Center(
                   child: Text(
-                    'PT. Tiga Daya Digital Indonesia © 2018, All Rights Reserved',
-                    style: TextStyle(letterSpacing: 1.3, height: 1.4, fontSize: 17),
-                  )),
+                'PT. Tiga Daya Digital Indonesia © 2018, All Rights Reserved',
+                style: TextStyle(letterSpacing: 1.3, height: 1.4, fontSize: 17),
+              )),
             )
           ],
         ));
@@ -270,11 +300,8 @@ class Footer extends StatelessWidget {
 }
 
 class itemBawah extends StatelessWidget {
-  const itemBawah({
-    Key? key,
-    required this.item,
-    required this.routeName
-  }) : super(key: key);
+  const itemBawah({Key? key, required this.item, required this.routeName})
+      : super(key: key);
   final String item;
   final String routeName;
 

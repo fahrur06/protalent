@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 // import 'package:mcs_flutter/const/conts.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:pro_talent/widget/button_color.dart';
 
 class ContactUs2 extends StatelessWidget {
   ContactUs2({Key? key}) : super(key: key);
@@ -246,25 +247,25 @@ class ContactUs2 extends StatelessWidget {
                     height: 45,
                     width: 100,
                     child: TextButton(
-                      style: ButtonStyle(
-                        shape: MaterialStateProperty.resolveWith(
-                            (ShapeBorder) => RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15))),
-                        overlayColor: MaterialStateProperty.resolveWith<Color?>(
-                          (Set<MaterialState> states) {
-                            if (states.contains(MaterialState.hovered))
-                              return Colors.red;
-                            return Colors.white;
-                          },
-                        ),
+                      style: Btn_Submit(),
+                      // shape: MaterialStateProperty.resolveWith(
+                      //     (ShapeBorder) => RoundedRectangleBorder(
+                      //         borderRadius: BorderRadius.circular(15))),
+                      // overlayColor: MaterialStateProperty.resolveWith<Color?>(
+                      //   (Set<MaterialState> states) {
+                      //     if (states.contains(MaterialState.hovered))
+                      //       return Colors.red;
+                      //     return Colors.white;
+                      //   },
+                      // ),
 
-                        // primary: Colors.white,
-                        // backgroundColor:
-                        //     const Color.fromARGB(255, 12, 66, 101),
-                        // shape: RoundedRectangleBorder(
-                        //     borderRadius: BorderRadius.circular(15),
-                        //     ),
-                      ),
+                      // primary: Colors.white,
+                      // backgroundColor:
+                      //     const Color.fromARGB(255, 12, 66, 101),
+                      // shape: RoundedRectangleBorder(
+                      //     borderRadius: BorderRadius.circular(15),
+                      //     ),
+
                       onPressed: () async {
                         if (_formKey.currentState!.validate()) {
                           final response = await SendEmail(
