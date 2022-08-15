@@ -91,7 +91,8 @@ class OurServices4 extends StatelessWidget {
                   ),
                   const Text(
                       'Go for the one who knows what they are doing, those who you share values with, '
-                      'and those who will celebrate your success and help you win over your biggest challenges Looking for an outsourcing partner? ',
+                      'and those who will celebrate your success and help you win over your biggest challenges.'
+                      'Looking for an outsourcing partner? ',
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 23,

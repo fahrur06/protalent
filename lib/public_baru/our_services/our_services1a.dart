@@ -79,7 +79,7 @@ class _OurServices1aState extends State<OurServices1a> {
                     direction: Direction.horizontal,
                     offset: -0.2,
                     child: Text(
-                      'Register for free now , Find our Best Talent and enjoy our unlimited hires at low cost',
+                      'Register for free now, find our Best Talent, and enjoy our unlimited hires at a low cost',
                       style: TextStyle(
                           fontSize: 16,
                           letterSpacing: 1.8,

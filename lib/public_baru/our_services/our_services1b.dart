@@ -112,7 +112,7 @@ class _OurServices1bState extends State<OurServices1b> {
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
                             child: Text(
-                              "We not only keep our eyes wide open for talented individuals, we make it an active endeavour. One that digs deeper to find you that star employee ahead of your competition.",
+                              "We not only keep our eyes wide open for talented individuals, but we also make it an active endeavor. One that digs deeper to find you that star employee ahead of your competition.",
                               textAlign: TextAlign.center,
                               style: GoogleFonts.robotoCondensed(
                                 color: Color(0xff111111),
@@ -182,7 +182,7 @@ class _OurServices1bState extends State<OurServices1b> {
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
                             child: Text(
-                              "Our dedicated team of recruiters help fulfill your critical hiring needs in the mid-level and executive positions making the recruitment cycle short and efficient.",
+                              "Our dedicated team of recruiters helps fulfill your critical hiring needs in the mid-level and executive positions making the recruitment cycle short and efficient.",
                               textAlign: TextAlign.center,
                               style: GoogleFonts.robotoCondensed(
                                 color: Color(0xff111111),
@@ -252,7 +252,7 @@ class _OurServices1bState extends State<OurServices1b> {
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
                             child: Text(
-                              "Time sensitive projects are treated with urgency to provide skilled technical resources needed for quick and cost-effective turnaround.",
+                              "Time-sensitive projects are treated with urgency to provide skilled technical resources needed for quick and cost-effective turnaround.",
                               textAlign: TextAlign.center,
                               style: GoogleFonts.robotoCondensed(
                                 color: Color(0xff111111),
