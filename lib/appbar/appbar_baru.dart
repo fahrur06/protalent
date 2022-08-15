@@ -66,7 +66,9 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
           width: screenSize.width * 0.1,
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/');
+          },
           icon: Image(
             image: AssetImage('assets/logo/protalent.png'),
             width: 500,
@@ -123,9 +125,9 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
                 color: Colors.white, fontSize: 19, fontWeight: FontWeight.w500),
           ),
           style: ElevatedButton.styleFrom(
-              primary: Color(0xff1e5ea8),
-              fixedSize: Size(130, 45),
-              onPrimary: Colors.red,
+            primary: Color(0xff1e5ea8),
+            fixedSize: Size(130, 45),
+            onPrimary: Colors.red,
           ),
         ),
         Spacer(
