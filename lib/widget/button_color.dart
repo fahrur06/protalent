@@ -20,7 +20,7 @@ ButtonStyle DefaultColors() {
 ButtonStyle Btn_Submit() {
   return ButtonStyle(
     shape: MaterialStateProperty.resolveWith((ShapeBorder) =>
-        RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
+        RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
     backgroundColor: MaterialStateProperty.resolveWith<Color?>(
       (Set<MaterialState> states) {
         return Color(0xff1e5ea8); // Defer to the widget's default.
