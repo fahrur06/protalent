@@ -49,8 +49,8 @@ class Career3 extends StatelessWidget {
             width: screenSize.width,
             alignment: Alignment.center,
             child: Text(
-              'You may or may not be actively looking for a job at the moment but there are some positions that will give you a peep into the dynamic '
-              'job market. Submit your resume from button bellow and our consultants will do the rest.',
+              'You may or may not be actively looking for a job at the moment but some positions will give you a peep into the dynamic '
+              'job market. Submit your resume from the button bellow and our consultants will do the rest.',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 18,

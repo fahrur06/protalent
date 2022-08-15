@@ -44,7 +44,7 @@ class _Career2State extends State<Career2> {
               Container(
                 width: 1000,
                 child: Text(
-                  "Depending on your area of expertise, core skills and interest, we offer contract/project, contract-to-hire, and direct-hire opportunities in each of the specialty areas we service",
+                  "Depending on your area of expertise, core skills, and interest, we offer contract/project, contract-to-hire, and direct-hire opportunities in each of the specialty areas we service",
                   textAlign: TextAlign.center,
                   style: GoogleFonts.robotoCondensed(
                     color: Color(0xff111111),
@@ -58,7 +58,7 @@ class _Career2State extends State<Career2> {
               Container(
                 width: 1000,
                 child: Text(
-                  "Our process begins with meticulous pairing of candidate with the right professional who understands your needs and goals.",
+                  "Our process begins with a meticulous pairing of candidates with the right professional who understands your needs and goals.",
                   textAlign: TextAlign.center,
                   style: GoogleFonts.robotoCondensed(
                     color: Color(0xff111111),
@@ -125,7 +125,7 @@ class _Career2State extends State<Career2> {
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
                             child: Text(
-                              "Our understanding of the business and strong network helps find you a job that fits your skills, interests and goals.",
+                              "Our understanding of the business and strong network helps find you a job that fits your skills, interests, and goals.",
                               textAlign: TextAlign.center,
                               style: GoogleFonts.robotoCondensed(
                                 color: Color(0xff111111),
@@ -189,7 +189,7 @@ class _Career2State extends State<Career2> {
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
                             child: Text(
-                              "Everyone knows that the right experts can work wonders for your career by getting you much needed attention.",
+                              "Everyone knows that the right experts can work wonders for your career by getting you much-needed attention.",
                               textAlign: TextAlign.center,
                               style: GoogleFonts.robotoCondensed(
                                 color: Color(0xff111111),
@@ -253,7 +253,7 @@ class _Career2State extends State<Career2> {
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
                             child: Text(
-                              "We find positions that put your right at the heart of business and disruptive change. Step into the future.",
+                              "We find positions that put your right at the heart of the business and disruptive change. Step into the future.",
                               textAlign: TextAlign.center,
                               style: GoogleFonts.robotoCondensed(
                                 color: Color(0xff111111),
@@ -317,7 +317,7 @@ class _Career2State extends State<Career2> {
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
                             child: Text(
-                              "Join us to make your career growth",
+                              "Join us to advance your career growth",
                               textAlign: TextAlign.center,
                               style: GoogleFonts.robotoCondensed(
                                 color: Color(0xff111111),
