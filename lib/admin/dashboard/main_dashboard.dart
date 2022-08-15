@@ -4,22 +4,45 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:pro_talent/admin/dashboard/side_talent.dart';
+import 'package:spring/spring.dart';
 
 import 'desc_talent.dart';
 
 class MainDashboard extends StatelessWidget {
   MainDashboard({Key? key}) : super(key: key);
-
+  final SpringController springController =
+  SpringController(initialAnim: Motion.play);
   Color _color = Colors.red;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Add your onPressed code here!
-        },
-        backgroundColor: Colors.green,
-        child: const Icon(Icons.whatsapp),
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            // Add your onPressed code here!
+            },
+          backgroundColor: Colors.green,
+          child: GestureDetector(
+            onTap: (){
+              springController.play(
+                  motion: Motion.reverse,
+                  animDuration: Duration(milliseconds: 1000),
+                  curve: Curves.easeInBack,
+                  delay: Duration(milliseconds: 100)
+              );
+            },
+            child: Spring.rotate(
+              springController: springController,
+              alignment: Alignment.center,
+              animStatus: (AnimStatus status){
+                print(status);
+              },
+
+              child: const Icon(
+                        Icons.whatsapp,
+                      size: 30),
+            ),
+          ),
       ),
       body: DefaultTabController(
           length: 3,

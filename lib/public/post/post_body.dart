@@ -3,7 +3,7 @@ import 'package:pro_talent/widget/responsive.dart';
 import 'package:pro_talent/appbar/appbar_home.dart';
 import 'package:pro_talent/public/post/post.dart';
 import 'package:pro_talent/homepage.dart';
-import 'package:pro_talent/public/footer.dart';
+import 'package:pro_talent/footer.dart';
 
 class PostBody extends StatelessWidget {
   final String Image;

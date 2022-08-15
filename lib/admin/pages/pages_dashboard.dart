@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/const/addnew.dart';
-import 'package:pro_talent/const/apply.dart';
+import 'package:pro_talent/widget/addnew.dart';
+import 'package:pro_talent/widget/apply.dart';
 import 'package:pro_talent/widget/filter.dart';
 import 'package:pro_talent/admin/pages/add_pages.dart';
 import 'package:pro_talent/public/contact_us/ContactUs.dart';

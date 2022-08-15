@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/appbar/appbar_home.dart';
-import 'package:pro_talent/public/footer.dart';
+import 'package:pro_talent/footer.dart';
 import 'package:pro_talent/public/our_talent/talent1.dart';
 import 'package:pro_talent/public/our_talent/talent2.dart';
 import 'package:pro_talent/public/our_talent/talent3.dart';

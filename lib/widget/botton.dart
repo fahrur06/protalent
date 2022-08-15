@@ -314,9 +314,9 @@ class ButtonAppbar extends StatelessWidget {
         child: Text(
           menu,
           style: TextStyle(
-            fontSize: 18,
-            letterSpacing: 1.5,
-            fontWeight: FontWeight.w600,
+            fontSize: 19,
+            letterSpacing: 1.3,
+            fontWeight: FontWeight.w500,
           ),
         ),
         style: ButtonStyle(
@@ -327,6 +327,43 @@ class ButtonAppbar extends StatelessWidget {
               return Colors.blue;
             return warna; // null throus error in flutter 2.2+.
           }),
+        ),
+      ),
+    );
+  }
+}
+
+class ButtonAppbar_baru extends StatelessWidget {
+  const ButtonAppbar_baru(
+      {Key? key, required this.arah, required this.menu, required this.warna})
+      : super(key: key);
+  final String menu;
+  final String arah;
+  final Color warna;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: TextButton(
+        onPressed: () {
+          Navigator.pushNamed(context, arah);
+        },
+        child: Text(
+          menu,
+          style: TextStyle(
+            fontSize: 19,
+            letterSpacing: 1.3,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        style: ButtonStyle(
+          foregroundColor: MaterialStateProperty.resolveWith<Color>(
+                  (Set<MaterialState> states) {
+                if (states.contains(MaterialState.hovered))
+                  // ignore: curly_braces_in_flow_control_structures
+                  return Colors.blue;
+                return warna; // null throus error in flutter 2.2+.
+              }),
         ),
       ),
     );

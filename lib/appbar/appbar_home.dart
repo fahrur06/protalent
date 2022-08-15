@@ -4,6 +4,7 @@ import 'package:pro_talent/conts_warna.dart';
 import 'package:pro_talent/homepage.dart';
 import 'package:pro_talent/public/contact_us/ContactUs.dart';
 import 'package:pro_talent/public/our_talent/our_talent.dart';
+import 'package:pro_talent/public_baru/career/career.dart';
 import 'package:pro_talent/register.dart';
 import 'package:pro_talent/login.dart';
 import 'package:pro_talent/widget/dropdown_appbar.dart';
@@ -26,8 +27,11 @@ AppBar AppbarHomeSmall(Size screenSize) {
             flex: 1,
           ),
           Container(
-            child:
-                Container(child: Image.asset("assets/logo/logo_protalent.png"),height: 50,width: 150,),
+            child: Container(
+              child: Image.asset("assets/logo/logo_protalent.png"),
+              height: 50,
+              width: 150,
+            ),
           ),
           const Spacer(
             flex: 3,
@@ -46,7 +50,8 @@ AppBar AppbarHomeSmall(Size screenSize) {
   );
 }
 
-AppBar AppbarHomeLarge(Size screenSize, BuildContext context,Color home, Color ourTalent,Color post, Color contactUs) {
+AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
+    Color ourTalent, Color career, Color contactUs) {
   return AppBar(
     backgroundColor: Colors.white,
     toolbarHeight: 80,
@@ -73,20 +78,19 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context,Color home, Color o
         Spacer(
           flex: 4,
         ),
-        ButtonAppbar(arah: HomePage(), menu: 'Home',warna: home),
+        ButtonAppbar(arah: HomePage(), menu: 'Home', warna: home),
         Spacer(
           flex: 1,
         ),
-
-        ButtonAppbar(arah: OurTalent(), menu: 'Our Talent',warna: ourTalent),
+        ButtonAppbar(arah: OurTalent(), menu: 'Our Talent', warna: ourTalent),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: Post(), menu: 'News',warna: post),
+        ButtonAppbar(arah: Career(), menu: 'Career', warna: career),
         Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: ContactUs(), menu: 'Contact Us',warna: contactUs),
+        ButtonAppbar(arah: ContactUs(), menu: 'Contact Us', warna: contactUs),
         Spacer(
           flex: 3,
         ),
