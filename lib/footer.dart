@@ -210,14 +210,14 @@ class Footer extends StatelessWidget {
                       )),
 
                   Container(
-                      width: screenSize.width * 0.2,
+                      width: screenSize.width * 0.18,
                       height: screenSize.height * 0.46,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           SizedBox(
-                            width: screenSize.width * 0.2,
+                            width: screenSize.width * 0.18,
                             height: screenSize.height * 0.04,
                             child: Text(
                               ' Contact',
@@ -250,7 +250,7 @@ class Footer extends StatelessWidget {
                           ),
 
                           Container(
-                            width: screenSize.width * 0.16,
+                            width: screenSize.width * 0.164,
                             child: ListTile(
                               leading: Icon(
                                 Icons.mail,
