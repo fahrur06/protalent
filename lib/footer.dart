@@ -208,9 +208,10 @@ class Footer extends StatelessWidget {
                           ),
                         ],
                       )),
+
                   Container(
                       width: screenSize.width * 0.2,
-                      height: screenSize.height * 0.4,
+                      height: screenSize.height * 0.46,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -226,9 +227,11 @@ class Footer extends StatelessWidget {
                                   letterSpacing: 1.5),
                             ),
                           ),
+
                           Spacer(),
+
                           Container(
-                            width: screenSize.width * 0.155,
+                            width: screenSize.width * 0.164,
                             child: ListTile(
                               leading: Icon(
                                 Icons.phone,
@@ -236,8 +239,7 @@ class Footer extends StatelessWidget {
                               ),
                               title: TextButton(
                                 onPressed: () {},
-                                child: Text(
-                                  '(021) 5795 - 8040',
+                                child: Text('(021) 5795 - 8040',
                                   style: TextStyle(
                                     fontSize: 17,
                                     color: Colors.black87,
@@ -246,8 +248,9 @@ class Footer extends StatelessWidget {
                               ),
                             ),
                           ),
+
                           Container(
-                            width: screenSize.width * 0.15,
+                            width: screenSize.width * 0.16,
                             child: ListTile(
                               leading: Icon(
                                 Icons.mail,
@@ -255,26 +258,34 @@ class Footer extends StatelessWidget {
                               ),
                               title: TextButton(
                                 onPressed: () {},
-                                child: Text(
-                                  'info@eksad.com',
+                                child: Text('info@eksad.com',
                                   style: TextStyle(
-                                      fontSize: 17, color: Colors.black87),
+                                      fontSize: 17,
+                                      color: Colors.black87
+                                  ),
                                 ),
                               ),
                             ),
                           ),
+
                           ListTile(
                             leading: Icon(
                               Icons.location_on,
                               size: 30,
                             ),
-                            title: Text(
+                            title: Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: Text(
                               'PT. Tiga Daya Digital Indonesia The East '
                               'Tower 19th Floor Jl. Dr. Ide Anak Agung '
                               'Gde Agung Blok E3.2 '
                               'Mega Kuningan, Jakarta Selatan 12950',
-                              style: TextStyle(fontSize: 17, height: 1.2),
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  height: 1.2
+                              ),
                             ),
+                            )
                           ),
                         ],
                       )),
@@ -290,7 +301,7 @@ class Footer extends StatelessWidget {
               height: screenSize.height * 0.13,
               child: const Center(
                   child: Text(
-                'PT. Tiga Daya Digital Indonesia © 2018, All Rights Reserved',
+                'PT. Tiga Daya Digital Indonesia © 2018, All Rights Reserved.',
                 style: TextStyle(letterSpacing: 1.3, height: 1.4, fontSize: 17),
               )),
             )
