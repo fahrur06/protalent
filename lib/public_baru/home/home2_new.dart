@@ -21,7 +21,7 @@ class HomeNew2 extends StatelessWidget {
         children: [
           Container(
             width: screenSize.width,
-            child: Text('How do we help?',
+            child: Text('How do we help ?',
                 style: TextStyle(
                     fontSize: 30,
                     color: Color.fromARGB(255, 12, 66, 101),
@@ -30,25 +30,28 @@ class HomeNew2 extends StatelessWidget {
           Container(
             width: screenSize.width,
             child: Text(
-                'We understand the complexities of finding the right candidate and its impact on business. We provide cost savings,'
-                'operational efficiency with a recruitment solution customised to your needs.',
+                'We understand the complexities of finding the right candidate and its impact on business. We provide cost savings, and'
+                'operational efficiency with a recruitment solution customized to your needs.',
+                textAlign: TextAlign.justify,
                 style:
                     TextStyle(fontSize: 18, letterSpacing: 1.1, height: 1.3)),
           ),
           Container(
             width: screenSize.width,
             child: Text(
-                'Not only do we pick a qualified candidate,'
-                'we ensure we look for one who fits into your company culture.,'
-                ' This will guarantee a high retention rate and employee satisfaction.',
+                'Not only do we pick a qualified candidate, '
+                    'we ensure we look for one who fits into your company culture. '
+                    'This will guarantee a high retention rate and employee satisfaction.',
+                textAlign: TextAlign.justify,
                 style:
                     TextStyle(fontSize: 18, letterSpacing: 1.1, height: 1.3)),
           ),
           Container(
             width: screenSize.width,
             child: Text(
-                'We are flexible with rates and provide strategic recruiting that help achieve the most value for our client.,'
-                ' We adapt to market shifts with a promise to deliver and make it happen.',
+                'We are flexible with rates and provide strategic recruiting that help to achieve the most value for our client. '
+                    'We adapt to market shifts with a promise to deliver and make it happen.',
+                textAlign: TextAlign.justify,
                 style:
                     TextStyle(fontSize: 18, letterSpacing: 1.1, height: 1.3)),
           ),

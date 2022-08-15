@@ -49,7 +49,7 @@ class _HomeNew3State extends State<HomeNew3> {
                     Container(
                       padding: EdgeInsets.only(top: 5),
                       width: 250,
-                      height:45,
+                      height:65,
                       child: Text('We work as an extension of your team.',
                         style: TextStyle(color: Colors.blueAccent,fontSize: 17,letterSpacing: 1.1),textAlign: TextAlign.center,),),
                     const SizedBox(
@@ -58,9 +58,9 @@ class _HomeNew3State extends State<HomeNew3> {
                     Container(
                       padding: EdgeInsets.only(top: 10),
                         width: 220,
-                        height: 300,
+                        height: 330,
                       child: Animasi_Kanan_Kiri(judul: 'WE WORK AS A TRUE EXTENSION OF '
-                          'YOUR TEAM. WE BELIEVE IN ROLLING UP OUR SLEEVES, DIVING IN AND '
+                          'YOUR TEAM. WE BELIEVE IN ROLLING UP OUR SLEEVES, DIVING IN, AND '
                           'WORKING TOGETHER TO DELIVER THE TOP-QUALITY, TAILORED SOLUTIONS'
                           ' OUR CLIENTS NEED TO GROW AND THRIVE.')
                     )
@@ -82,7 +82,7 @@ class _HomeNew3State extends State<HomeNew3> {
                     Container(
                       padding: EdgeInsets.only(top: 5),
                       width: 250,
-                      height:45,
+                      height:65,
                       child: Text('We offer smart tailored outsourcing and HR solutions.',
                         style: TextStyle(color: Colors.blueAccent,fontSize: 17,letterSpacing: 1.1),textAlign: TextAlign.center,),),
                     const SizedBox(
@@ -91,7 +91,7 @@ class _HomeNew3State extends State<HomeNew3> {
                     Container(
                         padding: EdgeInsets.only(top: 10),
                         width: 220,
-                        height: 300,
+                        height: 330,
                         child: Animasi_Kanan_Kiri(judul: 'THROUGH OUR TAILORED APPROACH, EXCEPTIONAL SUPPORT, AND FLEXIBLE SOLUTIONS, WE MAKE FINDING AND RETAINING TOP TALENTS EASIER AND SIMPLER.')
                     )
                   ],
@@ -112,7 +112,7 @@ class _HomeNew3State extends State<HomeNew3> {
                     Container(
                       padding: EdgeInsets.only(top: 5),
                       width: 250,
-                      height:45,
+                      height: 65,
                       child: Text('We have a rich outsourcing experience across various industries.',
                         style: TextStyle(color: Colors.blueAccent,fontSize: 17,letterSpacing: 1.1),textAlign: TextAlign.center,),),
                     const SizedBox(
@@ -121,8 +121,8 @@ class _HomeNew3State extends State<HomeNew3> {
                     Container(
                         padding: EdgeInsets.only(top: 10),
                         width: 220,
-                        height: 300,
-                        child: Animasi_Kanan_Kiri(judul: 'WE HAVE BEEN PROVIDING OUTSOURCING SOLUTIONS '
+                        height: 330,
+                        child: Animasi_Kanan_Kiri(judul: 'WE HAVE PROVIDED OUTSOURCING SOLUTIONS '
                             'TO VARIANCE CLIENTS FOR EIGHT YEARS NOW—HELPING THEM STREAMLINE THEIR OPERATIONS,'
                             ' SAVE VALUABLE TIME, AND CUT COSTS.')
                     )
@@ -144,8 +144,8 @@ class _HomeNew3State extends State<HomeNew3> {
                     Container(
                       padding: EdgeInsets.only(top: 5),
                       width: 250,
-                      height:45,
-                      child: Text('We Are Expert recruites.',
+                      height:65,
+                      child: Text('We Are Expert recruiters.',
                         style: TextStyle(color: Colors.blueAccent,fontSize: 17,letterSpacing: 1.1),textAlign: TextAlign.center,),),
                     const SizedBox(
                       height: 10,
@@ -153,11 +153,12 @@ class _HomeNew3State extends State<HomeNew3> {
                     Container(
                         padding: EdgeInsets.only(top: 10),
                         width: 220,
-                        height: 300,
-                        child: Animasi_Kanan_Kiri(judul: 'WE ARE A TEAM OF EXPERT RECRUITERS, WITH A '
-                            'MISSION TO MATCH TALENTED PEOPLE WITH SUCCESSFUL EMPLOYERS. WE STRONGLY BELIEVE'
-                            ' IN BUILDING A VALUE OF TRUST, HONESTY AND TRANSPARENCY WITH OUR CLIENTS SO AS '
-                            'TO DEVELOP LONG TERM RELATIONSHIPS AND TO ADOPT FLEXIBLE APPROACH AS PER THEIR NEEDS.')
+                        height: 330,
+                        child: Animasi_Kanan_Kiri(judul: 'WE ARE A TEAM OF EXPERT RECRUITERS, '
+                            'WITH A MISSION TO MATCH TALENTED PEOPLE WITH SUCCESSFUL EMPLOYERS. '
+                            'WE STRONGLY BELIEVE IN BUILDING A VALUE OF TRUST, HONESTY, '
+                            'AND TRANSPARENCY WITH OUR CLIENTS TO DEVELOP LONG-TERM RELATIONSHIPS '
+                            'AND ADOPT A FLEXIBLE APPROACH AS PER THEIR NEEDS.')
                     )
                   ],
                 ),
