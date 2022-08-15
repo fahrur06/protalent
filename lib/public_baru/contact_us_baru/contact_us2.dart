@@ -157,7 +157,7 @@ class ContactUs2 extends StatelessWidget {
                         child: TextFormField(
                           controller: phoneController,
                           decoration: InputDecoration(
-                            // hintText: "Enter your Name",
+                            hintText: "Enter a valid phone number",
                             fillColor: Colors.white,
                             filled: true,
                             enabledBorder: OutlineInputBorder(
