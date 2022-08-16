@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeNew2 extends StatelessWidget {
   const HomeNew2({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class HomeNew2 extends StatelessWidget {
           Container(
             width: screenSize.width,
             child: Text('How do we help ?',
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                     fontSize: 30,
                     color: Color.fromARGB(255, 12, 66, 101),
                     fontWeight: FontWeight.bold)),
@@ -34,7 +35,7 @@ class HomeNew2 extends StatelessWidget {
                 'operational efficiency with a recruitment solution customized to your needs.',
                 textAlign: TextAlign.justify,
                 style:
-                    TextStyle(fontSize: 18, letterSpacing: 1.1, height: 1.3)),
+                GoogleFonts.poppins(fontSize: 18, letterSpacing: 1.1, height: 1.3)),
           ),
           Container(
             width: screenSize.width,
@@ -44,7 +45,7 @@ class HomeNew2 extends StatelessWidget {
                     'This will guarantee a high retention rate and employee satisfaction.',
                 textAlign: TextAlign.justify,
                 style:
-                    TextStyle(fontSize: 18, letterSpacing: 1.1, height: 1.3)),
+                GoogleFonts.poppins(fontSize: 18, letterSpacing: 1.1, height: 1.3)),
           ),
           Container(
             width: screenSize.width,
@@ -53,7 +54,7 @@ class HomeNew2 extends StatelessWidget {
                     'We adapt to market shifts with a promise to deliver and make it happen.',
                 textAlign: TextAlign.justify,
                 style:
-                    TextStyle(fontSize: 18, letterSpacing: 1.1, height: 1.3)),
+                    GoogleFonts.poppins(fontSize: 18, letterSpacing: 1.1, height: 1.3)),
           ),
         ],
       ),
