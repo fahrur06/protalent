@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pro_talent/widget/button_color.dart';
 import 'package:show_up_animation/show_up_animation.dart';
 
@@ -24,23 +25,22 @@ class HomeNew1 extends StatelessWidget {
           width: screenSize.width,
           height: screenSize.height * 0.65,
           padding: EdgeInsets.only(
-              right: screenSize.width * 0.47,
-              top: screenSize.height * 0.12,
-              bottom: screenSize.height * 0.05),
+              right: screenSize.width * 0.48,
+              top: screenSize.height * 0.09),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                width: screenSize.width * 0.25,
-                height: screenSize.height * 0.1,
+                width: screenSize.width * 0.3,
+                height: screenSize.height * 0.13,
                 child: ShowUpAnimation(
                   delayStart: Duration(seconds: 1),
                   direction: Direction.horizontal,
                   child: Text(
                     'EMPOWER YOUR BUSINESS FOR SUCCESS.',
-                    style: TextStyle(
-                        fontSize: 30,
+                    style: GoogleFonts.poppins(
+                        fontSize: 33,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                     textAlign: TextAlign.center,
@@ -48,9 +48,8 @@ class HomeNew1 extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: EdgeInsets.only(top: 10),
-                width: screenSize.width * 0.29,
-                height: screenSize.height * 0.27,
+                width: screenSize.width * 0.32,
+                height: screenSize.height * 0.30,
                 child: ShowUpAnimation(
                   delayStart: Duration(seconds: 1),
                   curve: Curves.bounceIn,
@@ -62,10 +61,10 @@ class HomeNew1 extends StatelessWidget {
                     'edge over your competition, you can create the future you want to see. Our'
                     ' top-of-the-line IT professional outsourcing and managed services allow companies '
                     'to plan for what’s to come.',
-                    style: TextStyle(
-                        fontSize: 16,
-                        letterSpacing: 1.8,
-                        height: 1.4,
+                    style: GoogleFonts.poppins(
+                        fontSize: 17,
+                        letterSpacing: 2,
+                        height: 1.5,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                     textAlign: TextAlign.center,
