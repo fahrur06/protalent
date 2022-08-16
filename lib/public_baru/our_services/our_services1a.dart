@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pro_talent/widget/button_color.dart';
 import 'package:show_up_animation/show_up_animation.dart';
-import 'package:pro_talent/animation/animasi_kiri_kanan.dart';
 
 class OurServices1a extends StatefulWidget {
   const OurServices1a({Key? key}) : super(key: key);
@@ -21,11 +20,11 @@ class _OurServices1aState extends State<OurServices1a> {
       children: [
         Container(
           width: screenSize.width,
-          height: screenSize.height * 0.5,
+          height: screenSize.height * 0.6,
           decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage(
-                  "assets/images/ourtalent2.jpg",
+                  "assets/images/home1.jpg",
                 ),
                 fit: BoxFit.cover),
           ),
@@ -36,19 +35,19 @@ class _OurServices1aState extends State<OurServices1a> {
         Container(
           width: screenSize.width,
           height: screenSize.height * 0.5,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            gradient: LinearGradient(
-              colors: [
-                Colors.blueGrey.withOpacity(0.30),
-                Colors.blueGrey.withOpacity(0.30),
-              ],
-              stops: [0.0, 1.0],
-            ),
-          ),
+          // decoration: BoxDecoration(
+          //   color: Colors.white,
+          //   gradient: LinearGradient(
+          //     colors: [
+          //       Colors.blueGrey.withOpacity(0.30),
+          //       Colors.blueGrey.withOpacity(0.30),
+          //     ],
+          //     stops: [0.0, 1.0],
+          //   ),
+          // ),
         ),
         Container(
-          padding: EdgeInsets.only(right: screenSize.width*0.65),
+          padding: EdgeInsets.only(right: screenSize.width*0.5),
           child: Center(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
