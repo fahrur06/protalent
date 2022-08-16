@@ -145,24 +145,36 @@ class Footer extends StatelessWidget {
                           Spacer(
                             flex: 2,
                           ),
-                          itemBawah(
-                            item: 'Home',
-                            routeName: '/',
+                          Container(
+                            height: screenSize.height*0.04,
+                            child: itemBawah(
+                              item: 'Home',
+                              routeName: '/',
+                            ),
                           ),
                           Spacer(),
-                          itemBawah(
-                            item: 'About Us',
-                            routeName: '/about',
+                          Container(
+                            height: screenSize.height*0.04,
+                            child: itemBawah(
+                              item: 'About Us',
+                              routeName: '/about',
+                            ),
                           ),
                           Spacer(),
-                          itemBawah(
-                            item: 'Service',
-                            routeName: '/service',
+                          Container(
+                            height: screenSize.height*0.04,
+                            child: itemBawah(
+                              item: 'Service',
+                              routeName: '/service',
+                            ),
                           ),
                           Spacer(),
-                          itemBawah(
-                            item: 'Career',
-                            routeName: '/career',
+                          Container(
+                            height: screenSize.height*0.04,
+                            child: itemBawah(
+                              item: 'Career',
+                              routeName: '/career',
+                            ),
                           ),
                         ],
                       )),
@@ -187,37 +199,49 @@ class Footer extends StatelessWidget {
                           Spacer(
                             flex: 2,
                           ),
-                          itemBawah(
-                            item: 'Retained Search',
-                            routeName: '/service',
+                          Container(
+                            height: screenSize.height*0.04,
+                            child: itemBawah(
+                              item: 'Retained Search',
+                              routeName: '/service',
+                            ),
                           ),
                           Spacer(),
-                          itemBawah(
-                            item: 'Dedicated Services',
-                            routeName: '/service',
+                          Container(
+                            height: screenSize.height*0.04,
+                            child: itemBawah(
+                              item: 'Dedicated Services',
+                              routeName: '/service',
+                            ),
                           ),
                           Spacer(),
-                          itemBawah(
-                            item: 'Contract Services',
-                            routeName: '/service',
+                          Container(
+                            height: screenSize.height*0.04,
+                            child: itemBawah(
+                              item: 'Contract Services',
+                              routeName: '/service',
+                            ),
                           ),
                           Spacer(),
-                          itemBawah(
-                            item: 'Recruitment',
-                            routeName: '/service',
+                          Container(
+                            height: screenSize.height*0.04,
+                            child: itemBawah(
+                              item: 'Recruitment',
+                              routeName: '/service',
+                            ),
                           ),
                         ],
                       )),
 
                   Container(
-                      width: screenSize.width * 0.18,
-                      height: screenSize.height * 0.46,
+                      width: screenSize.width * 0.25,
+                      height: screenSize.height * 0.65,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SizedBox(
-                            width: screenSize.width * 0.18,
+                            width: screenSize.width * 0.2,
                             height: screenSize.height * 0.04,
                             child: Text(
                               ' Contact',
@@ -228,7 +252,6 @@ class Footer extends StatelessWidget {
                             ),
                           ),
 
-                          Spacer(),
 
                           Container(
                             width: screenSize.width * 0.164,
@@ -241,10 +264,13 @@ class Footer extends StatelessWidget {
                                 onPressed: () {
                                   launch('tel:02157958040');
                                 },
-                                child: Text('(021) 5795 - 8040',
-                                  style: TextStyle(
-                                    fontSize: 17,
-                                    color: Colors.black87,
+                                child: Container(
+                                  height: screenSize.height*0.04,
+                                  child: Text('(021) 5795 - 8040',
+                                    style: TextStyle(
+                                      fontSize: 17,
+                                      color: Colors.black87,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -252,7 +278,7 @@ class Footer extends StatelessWidget {
                           ),
 
                           Container(
-                            width: screenSize.width * 0.164,
+                            width: screenSize.width * 0.16,
                             child: ListTile(
                               leading: Icon(
                                 Icons.mail,
@@ -262,34 +288,42 @@ class Footer extends StatelessWidget {
                                 onPressed: () {
                                   launch('mailto:Info@eksad.com?subject=Hallo saya ingin bertanya tentang protalent');
                                 },
-                                child: Text('Hallo@eksad.com',
-                                  style: TextStyle(
-                                      fontSize: 17,
-                                      color: Colors.black87
+                                child: Container(
+                                  height: screenSize.height*0.04,
+                                  child: Text('Hallo@eksad.com',
+                                    style: TextStyle(
+                                        fontSize: 17,
+                                        color: Colors.black87
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
                           ),
 
-                          ListTile(
-                            leading: Icon(
-                              Icons.location_on,
-                              size: 30,
-                            ),
-                            title: Padding(
-                              padding: const EdgeInsets.all(15.0),
-                              child: Text(
-                              'PT. Tiga Daya Digital Indonesia The East '
-                              'Tower 19th Floor Jl. Dr. Ide Anak Agung '
-                              'Gde Agung Blok E3.2 '
-                              'Mega Kuningan, Jakarta Selatan 12950',
-                              style: TextStyle(
-                                  fontSize: 17,
-                                  height: 1.2
+                          Container(
+                            width: screenSize.width * 0.25,
+                            height: screenSize.height*0.27,
+                            child: ListTile(
+                              leading: Icon(
+                                Icons.location_on,
+                                size: 30,
                               ),
+                              title: Container(
+                                width: screenSize.width * 0.25,
+                                height: screenSize.height*0.24,
+                                child: Text(
+                                'PT. Tiga Daya Digital Indonesia \nThe East '
+                                'Tower 19th Floor \nJl. Dr. Ide Anak Agung '
+                                '\nGde Agung Blok E3.2 '
+                                '\nMega Kuningan, \nJakarta Selatan 12950',
+                                style: TextStyle(
+                                    fontSize: 17,
+                                    height: 1.6,
+                                ),textAlign: TextAlign.left,
+                              ),
+                              )
                             ),
-                            )
                           ),
                         ],
                       )),

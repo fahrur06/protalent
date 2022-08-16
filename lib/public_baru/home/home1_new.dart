@@ -17,7 +17,7 @@ class HomeNew1 extends StatelessWidget {
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(
-                    "assets/images/home1.jpg",
+                    "assets/images/home2.jpg",
                   ),
                   fit: BoxFit.cover)),
         ),

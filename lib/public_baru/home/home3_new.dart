@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pro_talent/animation/animasi_kanan_kiri.dart';
 import 'package:pro_talent/animation/animasi_kiri_kanan.dart';
+import 'package:show_up_animation/show_up_animation.dart';
 
 
 class HomeNew3 extends StatefulWidget {
@@ -59,7 +60,7 @@ class _HomeNew3State extends State<HomeNew3> {
                     Container(
                       padding: EdgeInsets.only(top: 10),
                         width: 220,
-                        height: 330,
+                        height: screenSize.height*0.43,
                       child: Animasi_Kanan_Kiri(judul: 'WE WORK AS A TRUE EXTENSION OF '
                           'YOUR TEAM. WE BELIEVE IN ROLLING UP OUR SLEEVES, DIVING IN, AND '
                           'WORKING TOGETHER TO DELIVER THE TOP-QUALITY, TAILORED SOLUTIONS'
@@ -92,7 +93,7 @@ class _HomeNew3State extends State<HomeNew3> {
                     Container(
                         padding: EdgeInsets.only(top: 10),
                         width: 220,
-                        height: 330,
+                        height: screenSize.height*0.43,
                         child: Animasi_Kanan_Kiri(judul: 'THROUGH OUR TAILORED APPROACH, EXCEPTIONAL SUPPORT, AND FLEXIBLE SOLUTIONS, WE MAKE FINDING AND RETAINING TOP TALENTS EASIER AND SIMPLER.')
                     )
                   ],
@@ -122,7 +123,7 @@ class _HomeNew3State extends State<HomeNew3> {
                     Container(
                         padding: EdgeInsets.only(top: 10),
                         width: 220,
-                        height: 330,
+                        height: screenSize.height*0.43,
                         child: Animasi_Kanan_Kiri(judul: 'WE HAVE PROVIDED OUTSOURCING SOLUTIONS '
                             'TO VARIANCE CLIENTS FOR EIGHT YEARS NOW—HELPING THEM STREAMLINE THEIR OPERATIONS,'
                             ' SAVE VALUABLE TIME, AND CUT COSTS.')
@@ -154,12 +155,32 @@ class _HomeNew3State extends State<HomeNew3> {
                     Container(
                         padding: EdgeInsets.only(top: 10),
                         width: 220,
-                        height: 330,
-                        child: Animasi_Kanan_Kiri(judul: 'WE ARE A TEAM OF EXPERT RECRUITERS, '
-                            'WITH A MISSION TO MATCH TALENTED PEOPLE WITH SUCCESSFUL EMPLOYERS. '
-                            'WE STRONGLY BELIEVE IN BUILDING A VALUE OF TRUST, HONESTY, '
-                            'AND TRANSPARENCY WITH OUR CLIENTS TO DEVELOP LONG-TERM RELATIONSHIPS '
-                            'AND ADOPT A FLEXIBLE APPROACH AS PER THEIR NEEDS.')
+                        height: screenSize.height*0.43,
+                        child:
+                        ShowUpAnimation(
+                          delayStart: Duration(seconds:1),
+                          curve: Curves.decelerate,
+                          direction: Direction.horizontal,
+                          child: Container(
+                            height: screenSize.height*0.42,
+                            child: Text(
+                              'WE ARE A TEAM OF EXPERT RECRUITERS, '
+                                  'WITH A MISSION TO MATCH TALENTED PEOPLE WITH SUCCESSFUL EMPLOYERS. '
+                                  'WE STRONGLY BELIEVE IN BUILDING A VALUE OF TRUST, HONESTY, '
+                                  'AND TRANSPARENCY WITH OUR CLIENTS TO DEVELOP LONG-TERM RELATIONSHIPS '
+                                  'AND ADOPT A FLEXIBLE APPROACH AS PER THEIR NEEDS.',
+                              style: GoogleFonts.robotoCondensed(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 1.3,height: 1.4
+                              ),textAlign: TextAlign.center,
+                            ),
+                          ),)
+                        // Animasi_Kanan_Kiri(judul: 'WE ARE A TEAM OF EXPERT RECRUITERS, '
+                        //     'WITH A MISSION TO MATCH TALENTED PEOPLE WITH SUCCESSFUL EMPLOYERS. '
+                        //     'WE STRONGLY BELIEVE IN BUILDING A VALUE OF TRUST, HONESTY, '
+                        //     'AND TRANSPARENCY WITH OUR CLIENTS TO DEVELOP LONG-TERM RELATIONSHIPS '
+                        //     'AND ADOPT A FLEXIBLE APPROACH AS PER THEIR NEEDS.')
                     )
                   ],
                 ),

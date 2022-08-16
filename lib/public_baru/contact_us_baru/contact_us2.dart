@@ -50,30 +50,36 @@ class ContactUs2 extends StatelessWidget {
                   const Spacer(
                     flex: 1,
                   ),
-                  const Text(
-                      'Yes, you need '
-                          '\n'
-                          'an outsourcing partner '
-                          '\n'
-                          'you can trust and thrive with',
-                      textAlign: TextAlign.justify,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 40,
-                          fontWeight: FontWeight.bold)),
+                  Container(
+                    height: screenSize.height*0.2,
+                    child: const Text(
+                        'Yes, you need '
+                            '\n'
+                            'an outsourcing partner '
+                            '\n'
+                            'you can trust and thrive with',
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold)),
+                  ),
                   const Spacer(
                     flex: 1,
                   ),
-                  const Text(
-                      'Go for the one who knows what they are doing, those who you share values with, '
-                      'and those who will celebrate your success, and help you win over your biggest challenges. '
-                      'Looking for an outsourcing partner? ',
-                      textAlign: TextAlign.justify,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          // fontWeight: FontWeight.bold,
-                          letterSpacing: 1.1)),
+                  Container(
+                    height: screenSize.height*0.15,
+                    child: const Text(
+                        'Go for the one who knows what they are doing, those who you share values with, '
+                        'and those who will celebrate your success, and help you win over your biggest challenges. '
+                        'Looking for an outsourcing partner? ',
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            // fontWeight: FontWeight.bold,
+                            letterSpacing: 1.1)),
+                  ),
                   const Spacer(
                     flex: 1,
                   ),
@@ -254,23 +260,7 @@ class ContactUs2 extends StatelessWidget {
                     width: 100,
                     child: TextButton(
                       style: Btn_Submit(),
-                      // shape: MaterialStateProperty.resolveWith(
-                      //     (ShapeBorder) => RoundedRectangleBorder(
-                      //         borderRadius: BorderRadius.circular(15))),
-                      // overlayColor: MaterialStateProperty.resolveWith<Color?>(
-                      //   (Set<MaterialState> states) {
-                      //     if (states.contains(MaterialState.hovered))
-                      //       return Colors.red;
-                      //     return Colors.white;
-                      //   },
-                      // ),
 
-                      // primary: Colors.white,
-                      // backgroundColor:
-                      //     const Color.fromARGB(255, 12, 66, 101),
-                      // shape: RoundedRectangleBorder(
-                      //     borderRadius: BorderRadius.circular(15),
-                      //     ),
 
                       onPressed: () async {
                         if (_formKey.currentState!.validate()) {
