@@ -234,7 +234,7 @@ class Footer extends StatelessWidget {
                       )),
 
                   Container(
-                      width: screenSize.width * 0.2,
+                      width: screenSize.width * 0.25,
                       height: screenSize.height * 0.65,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -302,7 +302,7 @@ class Footer extends StatelessWidget {
                           ),
 
                           Container(
-                            width: screenSize.width * 0.185,
+                            width: screenSize.width * 0.25,
                             height: screenSize.height*0.27,
                             child: ListTile(
                               leading: Icon(
@@ -310,17 +310,17 @@ class Footer extends StatelessWidget {
                                 size: 30,
                               ),
                               title: Container(
-                                width: screenSize.width * 0.184,
+                                width: screenSize.width * 0.25,
                                 height: screenSize.height*0.24,
                                 child: Text(
-                                'PT. Tiga Daya Digital Indonesia The East '
-                                'Tower 19th Floor Jl. Dr. Ide Anak Agung '
-                                'Gde Agung Blok E3.2 '
-                                'Mega Kuningan, Jakarta Selatan 12950',
+                                'PT. Tiga Daya Digital Indonesia \nThe East '
+                                'Tower 19th Floor \nJl. Dr. Ide Anak Agung '
+                                '\nGde Agung Blok E3.2 '
+                                '\nMega Kuningan, \nJakarta Selatan 12950',
                                 style: TextStyle(
                                     fontSize: 17,
-                                    height: 1.2,
-                                ),textAlign: TextAlign.justify,
+                                    height: 1.6,
+                                ),textAlign: TextAlign.left,
                               ),
                               )
                             ),
