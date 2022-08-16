@@ -5,7 +5,6 @@ import 'package:pro_talent/public/home/home2.dart';
 import 'package:pro_talent/public/home/home3.dart';
 import 'package:pro_talent/public/home/home4.dart';
 import 'package:pro_talent/appbar/appbar_baru.dart';
-import 'package:pro_talent/public_baru/home5.dart';
 import 'package:pro_talent/widget/responsive.dart';
 import 'package:pro_talent/widget/whatsapp.dart';
 import 'package:pro_talent/public_baru/home/home2_new.dart';
@@ -32,7 +31,6 @@ class _HomePageState extends State<HomePage> {
             Home1(),
             HomeNew2(),
             Home3(),
-            HomeBaru5(),
             Footer(),
           ],
         ),
