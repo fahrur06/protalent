@@ -21,11 +21,11 @@ class _OurServices1aState extends State<OurServices1a> {
       children: [
         Container(
           width: screenSize.width,
-          height: screenSize.height * 0.7,
+          height: screenSize.height * 0.5,
           decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage(
-                  "assets/images/ourservice.jpeg",
+                  "assets/images/ourtalent2.jpg",
                 ),
                 fit: BoxFit.cover),
           ),
@@ -35,7 +35,7 @@ class _OurServices1aState extends State<OurServices1a> {
         ),
         Container(
           width: screenSize.width,
-          height: screenSize.height * 0.7,
+          height: screenSize.height * 0.5,
           decoration: BoxDecoration(
             color: Colors.white,
             gradient: LinearGradient(
@@ -48,10 +48,11 @@ class _OurServices1aState extends State<OurServices1a> {
           ),
         ),
         Container(
+          padding: EdgeInsets.only(right: screenSize.width*0.65),
           child: Center(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 SizedBox(height: 100),
                 Container(
@@ -61,18 +62,18 @@ class _OurServices1aState extends State<OurServices1a> {
                     direction: Direction.horizontal,
                     child: Text(
                       'Find & Get the Best Talent',
-                      style: TextStyle(
-                          fontSize: 30,
+                      style: GoogleFonts.poppins(
+                          fontSize: 34,
                           fontWeight: FontWeight.bold,
                           color: Colors.white),
                       textAlign: TextAlign.center,
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 10),
                 Container(
                   width: screenSize.width * 0.28,
-                  height: screenSize.height * 0.20,
+                  height: screenSize.height * 0.15,
                   child: ShowUpAnimation(
                     delayStart: Duration(seconds: 1),
                     curve: Curves.bounceIn,
@@ -80,8 +81,8 @@ class _OurServices1aState extends State<OurServices1a> {
                     offset: -0.2,
                     child: Text(
                       'Register for free now, find our Best Talent, and enjoy our unlimited hires at a low cost',
-                      style: TextStyle(
-                          fontSize: 16,
+                      style: GoogleFonts.poppins(
+                          fontSize: 18,
                           letterSpacing: 1.8,
                           height: 1.4,
                           fontWeight: FontWeight.bold,
@@ -111,7 +112,8 @@ class _OurServices1aState extends State<OurServices1a> {
                         ),
                         ),
                   ),
-                )
+                ),
+                SizedBox(height: 10,)
               ],
             ),
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pro_talent/widget/expansion_home4.dart';
 
 class HomeNew4 extends StatefulWidget {
@@ -25,7 +26,7 @@ class _HomeNew4State extends State<HomeNew4> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 Text('VARIOUS INDUSTRY AND SECTORS',
-                  style: TextStyle(
+                  style: GoogleFonts.poppins(
                     fontSize: 36,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
@@ -34,7 +35,7 @@ class _HomeNew4State extends State<HomeNew4> {
                 Text('Each industry has its specific needs, we are'
                     ' ready to help to provide services according to its industry'
                     ', from initial discussions to providing expert consultants.',
-                  style: TextStyle(
+                  style: GoogleFonts.poppins(
                       fontSize: 18,
                     color: Colors.white
                   ),

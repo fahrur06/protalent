@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pro_talent/animation/animasi_kanan_kiri.dart';
 import 'package:pro_talent/animation/animasi_kiri_kanan.dart';
 
@@ -15,7 +16,7 @@ class _HomeNew3State extends State<HomeNew3> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-      height: screenSize.height * 0.8,
+      height: screenSize.height * 0.82,
       width: screenSize.width,
       child: Column(
         children: [
@@ -23,7 +24,7 @@ class _HomeNew3State extends State<HomeNew3> {
             height: 30,
           ),
           Text("Why Protalent ?",
-              style: TextStyle(
+              style: GoogleFonts.poppins(
                   fontSize: 36,
                   color: Color(0xff1e5ea8),
                   fontWeight: FontWeight.bold)),

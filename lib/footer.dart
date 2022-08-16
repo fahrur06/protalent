@@ -238,7 +238,9 @@ class Footer extends StatelessWidget {
                                 size: 25,
                               ),
                               title: TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  launch('tel:02157958040');
+                                },
                                 child: Text('(021) 5795 - 8040',
                                   style: TextStyle(
                                     fontSize: 17,
@@ -257,8 +259,10 @@ class Footer extends StatelessWidget {
                                 size: 25,
                               ),
                               title: TextButton(
-                                onPressed: () {},
-                                child: Text('info@eksad.com',
+                                onPressed: () {
+                                  launch('mailto:Info@eksad.com?subject=Hallo saya ingin bertanya tentang protalent');
+                                },
+                                child: Text('Hallo@eksad.com',
                                   style: TextStyle(
                                       fontSize: 17,
                                       color: Colors.black87
