@@ -16,7 +16,7 @@ class HomeNew1 extends StatelessWidget {
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(
-                    "assets/images/ImageHome1.jpeg",
+                    "assets/images/home1.jpg",
                   ),
                   fit: BoxFit.cover)),
         ),
@@ -24,8 +24,8 @@ class HomeNew1 extends StatelessWidget {
           width: screenSize.width,
           height: screenSize.height * 0.65,
           padding: EdgeInsets.only(
-              left: screenSize.width * 0.3,
-              top: screenSize.height * 0.15,
+              right: screenSize.width * 0.47,
+              top: screenSize.height * 0.12,
               bottom: screenSize.height * 0.05),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
