@@ -72,7 +72,7 @@ class ContactUs2 extends StatelessWidget {
                     child: Text(
                         'Go for the one who knows what they are doing, those who you share values with, '
                         'and those who will celebrate your success, and help you win over your biggest challenges. '
-                        'Looking for an outsourcing partner? ',
+                        '\nLooking for an outsourcing partner? ',
                         textAlign: TextAlign.justify,
                         style: GoogleFonts.poppins(
                             color: Colors.white,
@@ -84,7 +84,7 @@ class ContactUs2 extends StatelessWidget {
                     flex: 1,
                   ),
                    Text(
-                      "We’ll contact you immediately to discuss to help you",
+                      "We’ll contact you immediately to discuss to help you.",
                       style: GoogleFonts.poppins(color: Colors.white, fontSize: 18,letterSpacing: 1.2)),
                   const Spacer(
                     flex: 2,
@@ -149,7 +149,7 @@ class ContactUs2 extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 92,
+                        width: 80,
                       ),
                       Container(
                         child: Text(
