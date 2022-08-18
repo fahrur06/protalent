@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pro_talent/widget/expansion_ourservices2.dart';
 
 
@@ -26,15 +27,16 @@ class _OurServices2State extends State<OurServices2> {
               children: <Widget>[
                 SizedBox(height: 15,),
                 Text('Technologies Experties',
-                  style: TextStyle(
+                  style: GoogleFonts.poppins(
                       fontSize: 36,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
+                    letterSpacing: 1.3
                   ),
                 ),
                 SizedBox(height: 15,),
                 Text('Our Talent',
-                  style: TextStyle(
+                  style: GoogleFonts.poppins(
                       fontSize: 18,
                     color: Colors.white
                   ),

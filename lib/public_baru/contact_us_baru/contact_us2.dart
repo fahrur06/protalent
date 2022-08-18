@@ -20,7 +20,7 @@ class ContactUs2 extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-      height: 450,
+      height: 460,
       width: screenSize.width,
       // color: Colors.blue,
       decoration: BoxDecoration(
@@ -51,30 +51,30 @@ class ContactUs2 extends StatelessWidget {
                     flex: 1,
                   ),
                   Container(
-                    height: screenSize.height * 0.2,
-                    child: const Text(
+                    height: screenSize.height * 0.17,
+                    child: Text(
                         'Yes, you need '
                         '\n'
                         'an outsourcing partner '
                         '\n'
                         'you can trust and thrive with',
                         textAlign: TextAlign.justify,
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                             color: Colors.white,
-                            fontSize: 40,
+                            fontSize: 30,
                             fontWeight: FontWeight.bold)),
                   ),
                   const Spacer(
                     flex: 1,
                   ),
                   Container(
-                    height: screenSize.height * 0.15,
-                    child: const Text(
+                    height: screenSize.height * 0.2,
+                    child: Text(
                         'Go for the one who knows what they are doing, those who you share values with, '
                         'and those who will celebrate your success, and help you win over your biggest challenges. '
                         'Looking for an outsourcing partner? ',
                         textAlign: TextAlign.justify,
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                             color: Colors.white,
                             fontSize: 18,
                             // fontWeight: FontWeight.bold,
@@ -83,9 +83,9 @@ class ContactUs2 extends StatelessWidget {
                   const Spacer(
                     flex: 1,
                   ),
-                  const Text(
+                   Text(
                       "We’ll contact you immediately to discuss to help you",
-                      style: TextStyle(color: Colors.white, fontSize: 18)),
+                      style: GoogleFonts.poppins(color: Colors.white, fontSize: 18,letterSpacing: 1.2)),
                   const Spacer(
                     flex: 2,
                   ),
@@ -95,7 +95,7 @@ class ContactUs2 extends StatelessWidget {
           ),
           Spacer(),
           Container(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(15),
             height: screenSize.height * 0.7,
             width: screenSize.width * 0.35,
             child: Form(
@@ -107,7 +107,7 @@ class ContactUs2 extends StatelessWidget {
                   Container(
                     child: Text(
                       "Name",
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 20,
                           fontWeight: FontWeight.w400),
@@ -142,7 +142,7 @@ class ContactUs2 extends StatelessWidget {
                       Container(
                         child: Text(
                           "Phone Number",
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               color: Colors.white,
                               fontSize: 20,
                               fontWeight: FontWeight.w400),
@@ -154,7 +154,7 @@ class ContactUs2 extends StatelessWidget {
                       Container(
                         child: Text(
                           "Email",
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               color: Colors.white,
                               fontSize: 20,
                               fontWeight: FontWeight.w400),
@@ -219,7 +219,7 @@ class ContactUs2 extends StatelessWidget {
                   ),
                   Text(
                     "Message",
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                         color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.w400),

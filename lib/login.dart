@@ -204,7 +204,35 @@ class _loginState extends State<login> {
                               width: screenSize.width * 0.08,
                               child: ElevatedButton(
                                 onPressed: () {
-                                  if(_usmail == 'admin@admin.com' && _uspswd == 'administrator') {
+                                  if(_usmail == 'admin@admin.com' && _uspswd != 'administrator') {
+                                    showDialog<String>(
+                                      context: context,
+                                      builder: (BuildContext context) => AlertDialog(
+                                        title: const Text('Gagal login'),
+                                        content: const Text('Password anda salah!!!'),
+                                        actions: <Widget>[
+                                          TextButton(
+                                            onPressed: () => Navigator.pop(context, 'OK'),
+                                            child: const Text('OK'),
+                                          ),
+                                        ],
+                                      ),
+                                    );
+                                  } else if(_usmail == 'client@client.com' && _uspswd != 'clientpage') {
+                                    showDialog<String>(
+                                      context: context,
+                                      builder: (BuildContext context) => AlertDialog(
+                                        title: const Text('Gagal login'),
+                                        content: const Text('Password anda salah!!!'),
+                                        actions: <Widget>[
+                                          TextButton(
+                                            onPressed: () => Navigator.pop(context, 'OK'),
+                                            child: const Text('OK'),
+                                          ),
+                                        ],
+                                      ),
+                                    );
+                                  } else if(_usmail == 'admin@admin.com' && _uspswd == 'administrator') {
                                     Navigator.pushNamed(context, '/admin');
                                   } else if (_usmail == 'client@client.com' && _uspswd == 'clientpage'){
                                     Navigator.pushNamed(context, '/client');
