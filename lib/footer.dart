@@ -134,10 +134,10 @@ class Footer extends StatelessWidget {
                         children: [
                           Container(
                             width: screenSize.width * 0.1,
-                            height: screenSize.height * 0.04,
+                            height: screenSize.height * 0.05,
                             child: Text(
                               ' Sitemap',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                   fontSize: 28,
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 1.5),
@@ -188,10 +188,10 @@ class Footer extends StatelessWidget {
                         children: [
                           Container(
                             width: screenSize.width * 0.13,
-                            height: screenSize.height * 0.04,
+                            height: screenSize.height * 0.05,
                             child: Text(
                               ' Solutions',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                   fontSize: 28,
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 1.5),
@@ -236,17 +236,18 @@ class Footer extends StatelessWidget {
 
                   Container(
                       width: screenSize.width * 0.25,
-                      height: screenSize.height * 0.6,
+                      height: screenSize.height * 0.42,
+
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SizedBox(
                             width: screenSize.width * 0.2,
-                            height: screenSize.height * 0.04,
+                            height: screenSize.height * 0.05,
                             child: Text(
                               ' Contact',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                   fontSize: 28,
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 1.5),
@@ -304,7 +305,7 @@ class Footer extends StatelessWidget {
 
                           Container(
                             width: screenSize.width * 0.25,
-                            height: screenSize.height*0.27,
+                            height: screenSize.height*0.22,
                             child: ListTile(
                               leading: Icon(
                                 Icons.location_on,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ExpansionOurServices2 extends StatefulWidget {
   State<ExpansionOurServices2> createState() => _ExpansionOurServices2State();
@@ -19,7 +20,7 @@ class _ExpansionOurServices2State extends State<ExpansionOurServices2> {
           },
           children: items.map((ExpansionpanelItem item){
             return ExpansionPanelRadio(
-              backgroundColor: Colors.grey[100],
+              backgroundColor: Colors.grey[200],
               canTapOnHeader: true,
               value: item.title,
               headerBuilder: (BuildContext context, bool isExpanded){
@@ -28,8 +29,8 @@ class _ExpansionOurServices2State extends State<ExpansionOurServices2> {
                   title: Text(
                     item.title,
                     textAlign: TextAlign.left,
-                    style: TextStyle(
-                      fontSize: 16,
+                    style: GoogleFonts.poppins(
+                      fontSize: 16.0,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -119,9 +120,9 @@ ListTile _posisi(String namaposisi){
     ),
     title: Text(
       namaposisi,
-      style: TextStyle(
+      style: GoogleFonts.poppins(
         fontWeight: FontWeight.w500,
-        fontSize: 15,
+        fontSize: 16,
         letterSpacing: 1.2
       ),
     ),
