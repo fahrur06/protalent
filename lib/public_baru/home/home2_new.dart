@@ -35,7 +35,8 @@ class HomeNew2 extends StatelessWidget {
                 'operational efficiency with a recruitment solution customized to your needs.',
                 textAlign: TextAlign.justify,
                 style:
-                GoogleFonts.poppins(fontSize: 18, letterSpacing: 1.1, height: 1.3)),
+                GoogleFonts.poppins(fontSize: 18, letterSpacing: 1.1, height: 1.3,fontWeight: FontWeight.w500)
+            ),
           ),
           Container(
             width: screenSize.width,
@@ -45,7 +46,7 @@ class HomeNew2 extends StatelessWidget {
                     'This will guarantee a high retention rate and employee satisfaction.',
                 textAlign: TextAlign.justify,
                 style:
-                GoogleFonts.poppins(fontSize: 18, letterSpacing: 1.1, height: 1.3)),
+                GoogleFonts.poppins(fontSize: 18, letterSpacing: 1.1, height: 1.3,fontWeight: FontWeight.w500)),
           ),
           Container(
             width: screenSize.width,
@@ -54,7 +55,7 @@ class HomeNew2 extends StatelessWidget {
                     'We adapt to market shifts with a promise to deliver and make it happen.',
                 textAlign: TextAlign.justify,
                 style:
-                    GoogleFonts.poppins(fontSize: 18, letterSpacing: 1.1, height: 1.3)),
+                    GoogleFonts.poppins(fontSize: 18, letterSpacing: 1.1, height: 1.3,fontWeight: FontWeight.w500)),
           ),
         ],
       ),

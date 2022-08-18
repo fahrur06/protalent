@@ -88,7 +88,8 @@ class HomeNew1 extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 19,
                             letterSpacing: 2,
-                            color: Colors.white),
+                            color: Colors.white,
+                        fontWeight: FontWeight.w500),
                       ),
                     style: DefaultColors(),
                   ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pro_talent/login.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -37,7 +38,7 @@ class Career3 extends StatelessWidget {
             width: screenSize.width,
             alignment: Alignment.center,
             child: Text('Apply Your Resume',
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                     fontSize: 30,
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontWeight: FontWeight.bold)),
@@ -52,8 +53,8 @@ class Career3 extends StatelessWidget {
               'You may or may not be actively looking for a job at the moment but some positions will give you a peep into the dynamic '
               'job market. Submit your resume from the button bellow and our consultants will do the rest.',
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 18,
+              style: GoogleFonts.poppins(
+                fontSize: 20,
                 letterSpacing: 1.1,
                 // height: 1.3,
                 color: Color.fromARGB(255, 255, 255, 255),
@@ -63,18 +64,7 @@ class Career3 extends StatelessWidget {
           Spacer(
             flex: 1,
           ),
-          // Container(
-          //   width: screenSize.width,
-          //   alignment: Alignment.center,
-          //   child: Text(
-          //       'job market. Submit your resume from button bellow and our consultants will do the rest.',
-          //       style: TextStyle(
-          //         fontSize: 18,
-          //         letterSpacing: 1.1,
-          //         // height: 1.3,
-          //         color: Color.fromARGB(255, 255, 255, 255),
-          //       )),
-          // ),
+
           Container(
             height: 40,
             width: screenSize.width * 0.10,
@@ -91,12 +81,7 @@ class Career3 extends StatelessWidget {
                   ),
               onPressed: () {
                 _launchURL();
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) => login(),
-                //   ),
-                // );
+
               },
               child: Text("APPLY NOW", style: TextStyle(fontSize: 17)),
             ),

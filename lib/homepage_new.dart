@@ -27,7 +27,7 @@ class _HomePageNewState extends State<HomePageNew> {
       floatingActionButton: WAChat(),
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? AppbarHomeSmall(screenSize)
-          : AppbarHomeLarge(screenSize, context, Colors.blue, Colors.black,
+          : AppbarHomeLarge(screenSize, context, Colors.blue, Colors.blue,
           Colors.black, Colors.black, Colors.black),
       body: ListView(
         children: [

@@ -53,7 +53,7 @@ class _HomeNew3State extends State<HomeNew3> {
                       width: 250,
                       height:65,
                       child: Text('We work as an extension of your team.',
-                        style: TextStyle(color: Colors.blueAccent,fontSize: 17,letterSpacing: 1.1),textAlign: TextAlign.center,),),
+                        style: TextStyle(color: Colors.blueAccent,fontSize: 17,letterSpacing: 1.1,fontWeight: FontWeight.w600),textAlign: TextAlign.center,),),
                     const SizedBox(
                       height: 10,
                     ),
@@ -61,10 +61,7 @@ class _HomeNew3State extends State<HomeNew3> {
                       padding: EdgeInsets.only(top: 10),
                         width: 220,
                         height: screenSize.height*0.43,
-                      child: Animasi_Kanan_Kiri(judul: 'WE WORK AS A TRUE EXTENSION OF '
-                          'YOUR TEAM. WE BELIEVE IN ROLLING UP OUR SLEEVES, DIVING IN, AND '
-                          'WORKING TOGETHER TO DELIVER THE TOP-QUALITY, TAILORED SOLUTIONS'
-                          ' OUR CLIENTS NEED TO GROW AND THRIVE.')
+                      child: Animasi_Kanan_Kiri(judul: 'We work as a true extension of your team. We believe in rolling up our sleeves, diving in and working together to deliver the top-quality, tailored solutions our clients need to grow and thrive.')
                     )
                   ],
                 ),
@@ -86,7 +83,7 @@ class _HomeNew3State extends State<HomeNew3> {
                       width: 250,
                       height:65,
                       child: Text('We offer smart tailored outsourcing and HR solutions.',
-                        style: TextStyle(color: Colors.blueAccent,fontSize: 17,letterSpacing: 1.1),textAlign: TextAlign.center,),),
+                        style: TextStyle(color: Colors.blueAccent,fontSize: 17,letterSpacing: 1.1,fontWeight: FontWeight.w600),textAlign: TextAlign.center,),),
                     const SizedBox(
                       height: 10,
                     ),
@@ -94,7 +91,7 @@ class _HomeNew3State extends State<HomeNew3> {
                         padding: EdgeInsets.only(top: 10),
                         width: 220,
                         height: screenSize.height*0.43,
-                        child: Animasi_Kanan_Kiri(judul: 'THROUGH OUR TAILORED APPROACH, EXCEPTIONAL SUPPORT, AND FLEXIBLE SOLUTIONS, WE MAKE FINDING AND RETAINING TOP TALENTS EASIER AND SIMPLER.')
+                        child: Animasi_Kanan_Kiri(judul: 'Through our tailored approach, exceptional support, and flexible solutions, we make finding and retaining top talents easier and simpler.')
                     )
                   ],
                 ),
@@ -116,7 +113,7 @@ class _HomeNew3State extends State<HomeNew3> {
                       width: 250,
                       height: 65,
                       child: Text('We have a rich outsourcing experience across various industries.',
-                        style: TextStyle(color: Colors.blueAccent,fontSize: 17,letterSpacing: 1.1),textAlign: TextAlign.center,),),
+                        style: TextStyle(color: Colors.blueAccent,fontSize: 17,letterSpacing: 1.1,fontWeight: FontWeight.w600),textAlign: TextAlign.center,),),
                     const SizedBox(
                       height: 10,
                     ),
@@ -124,9 +121,7 @@ class _HomeNew3State extends State<HomeNew3> {
                         padding: EdgeInsets.only(top: 10),
                         width: 220,
                         height: screenSize.height*0.43,
-                        child: Animasi_Kanan_Kiri(judul: 'WE HAVE PROVIDED OUTSOURCING SOLUTIONS '
-                            'TO VARIANCE CLIENTS FOR EIGHT YEARS NOW—HELPING THEM STREAMLINE THEIR OPERATIONS,'
-                            ' SAVE VALUABLE TIME, AND CUT COSTS.')
+                        child: Animasi_Kanan_Kiri(judul: 'We have been providing outsourcing solutions to variance clients for eight years now helping them streamline their operations, save valuable time, and cut costs.')
                     )
                   ],
                 ),
@@ -148,7 +143,7 @@ class _HomeNew3State extends State<HomeNew3> {
                       width: 250,
                       height:65,
                       child: Text('We Are Expert recruiters.',
-                        style: TextStyle(color: Colors.blueAccent,fontSize: 17,letterSpacing: 1.1),textAlign: TextAlign.center,),),
+                        style: TextStyle(color: Colors.blueAccent,fontSize: 17,letterSpacing: 1.1,fontWeight: FontWeight.w600),textAlign: TextAlign.center,),),
                     const SizedBox(
                       height: 10,
                     ),
@@ -164,14 +159,10 @@ class _HomeNew3State extends State<HomeNew3> {
                           child: Container(
                             height: screenSize.height*0.42,
                             child: Text(
-                              'WE ARE A TEAM OF EXPERT RECRUITERS, '
-                                  'WITH A MISSION TO MATCH TALENTED PEOPLE WITH SUCCESSFUL EMPLOYERS. '
-                                  'WE STRONGLY BELIEVE IN BUILDING A VALUE OF TRUST, HONESTY, '
-                                  'AND TRANSPARENCY WITH OUR CLIENTS TO DEVELOP LONG-TERM RELATIONSHIPS '
-                                  'AND ADOPT A FLEXIBLE APPROACH AS PER THEIR NEEDS.',
-                              style: GoogleFonts.robotoCondensed(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
+                              'We are a team of expert recruiters, with a mission to match talented people with successful employers. We strongly believe in building a value of trust, honesty and transparency with our clients so as to develop long term relationships and to adopt flexible approach as per their needs.',
+                              style: GoogleFonts.poppins(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500,
                                   letterSpacing: 1.3,height: 1.4
                               ),textAlign: TextAlign.center,
                             ),

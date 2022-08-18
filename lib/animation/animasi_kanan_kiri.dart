@@ -18,11 +18,12 @@ class Animasi_Kanan_Kiri extends StatelessWidget {
       direction: Direction.horizontal,
       child: Text(
         judul,
-        style: GoogleFonts.robotoCondensed(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
+        style: GoogleFonts.poppins(
+            fontSize: 15,
+            fontWeight: FontWeight.w500,
           letterSpacing: 1.3,height: 1.4
         ),textAlign: TextAlign.center,
-      ),);
+      ),
+    );
   }
 }

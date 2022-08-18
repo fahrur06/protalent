@@ -15,7 +15,7 @@ class _OurServices1bState extends State<OurServices1b> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-      height: 400,
+      height: 550,
       width: screenSize.width,
       color: Colors.white,
       child: Row(
@@ -24,13 +24,13 @@ class _OurServices1bState extends State<OurServices1b> {
         children: [
           Column(
             children: [
-              SizedBox(height: 15,),
+              SizedBox(height: 20,),
               Container(
                 child: Text(
                   "Our Services",
-                  style: GoogleFonts.robotoCondensed(
+                  style: GoogleFonts.poppins(
                     color: Color(0xff1e5ea8),
-                    fontSize: 34,
+                    fontSize: 36,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -43,14 +43,17 @@ class _OurServices1bState extends State<OurServices1b> {
                 child: Text(
                   "We adopt a simple approach - we listen. Our consultants listen to our candidates and our client. The consultants are match-makers and work to meet the needs of both the client and the candidate to make the perfect fit. Of course, please feel free to ask us about any blended solution that appeals to you and we will try to make it happen.",
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
+                  style: GoogleFonts.poppins(
                     color: Color(0xff111111),
-                    fontSize: 14,
+                    fontSize: 17,
+                    letterSpacing: 1.3,
+                    height: 1.2,
+                      fontWeight: FontWeight.w500
                   ),
                 ),
               ),
                SizedBox(
-                height: 10,
+                height: 25,
               ),
               Row(
                 children: [
@@ -86,18 +89,14 @@ class _OurServices1bState extends State<OurServices1b> {
                           height: 20,
                         ),
                         Container(
-                          height: 30,
+                          height: 40,
                           padding: EdgeInsets.only(top: 5),
                           child: ShowUpAnimation(
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
                             child: Text(
                               "RETAINED SEARCH",
-                              style: GoogleFonts.robotoCondensed(
-                                color: Color(0xff1e5ea8),
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                              ),
+                              style: TextStyle(color: Colors.blueAccent,fontSize: 16,letterSpacing: 1.1,fontWeight: FontWeight.w600)
                             ),
                           ),
                         ),
@@ -107,17 +106,18 @@ class _OurServices1bState extends State<OurServices1b> {
                         Container(
                           padding: EdgeInsets.only(top: 10),
                           width: 220,
-                          height: 100,
+                          height: 180,
                           child: ShowUpAnimation(
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
                             child: Text(
                               "We not only keep our eyes wide open for talented individuals, but we also make it an active endeavor. One that digs deeper to find you that star employee ahead of your competition.",
-                              textAlign: TextAlign.center,
-                              style: GoogleFonts.robotoCondensed(
-                                color: Color(0xff111111),
-                                fontSize: 14,
-                              ),
+                              style: GoogleFonts.poppins(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: 1.3,height: 1.4
+                              ),textAlign: TextAlign.center,
+
                             ),
                           ),
                         ),
@@ -156,18 +156,14 @@ class _OurServices1bState extends State<OurServices1b> {
                           height: 20,
                         ),
                         Container(
-                          height: 30,
+                          height: 40,
                           padding: EdgeInsets.only(top: 5),
                           child: ShowUpAnimation(
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
                             child: Text(
                               "DEDICATED SERVICES",
-                              style: GoogleFonts.robotoCondensed(
-                                color: Color(0xff1e5ea8),
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                              ),
+                              style: TextStyle(color: Colors.blueAccent,fontSize: 16,letterSpacing: 1.1,fontWeight: FontWeight.w600)
                             ),
                           ),
                         ),
@@ -177,17 +173,18 @@ class _OurServices1bState extends State<OurServices1b> {
                         Container(
                           padding: EdgeInsets.only(top: 10),
                           width: 200,
-                          height: 100,
+                          height: 180,
                           child: ShowUpAnimation(
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
                             child: Text(
                               "Our dedicated team of recruiters helps fulfill your critical hiring needs in the mid-level and executive positions making the recruitment cycle short and efficient.",
-                              textAlign: TextAlign.center,
-                              style: GoogleFonts.robotoCondensed(
-                                color: Color(0xff111111),
-                                fontSize: 14,
-                              ),
+                              style: GoogleFonts.poppins(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: 1.3,height: 1.4
+                              ),textAlign: TextAlign.center,
+
                             ),
                           ),
                         ),
@@ -226,18 +223,14 @@ class _OurServices1bState extends State<OurServices1b> {
                           height: 20,
                         ),
                         Container(
-                          height: 30,
+                          height: 40,
                           padding: EdgeInsets.only(top: 5),
                           child: ShowUpAnimation(
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
                             child: Text(
                               "CONTRACT SERVICES",
-                              style: GoogleFonts.robotoCondensed(
-                                color: Color(0xff1e5ea8),
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                              ),
+                              style: TextStyle(color: Colors.blueAccent,fontSize: 16,letterSpacing: 1.1,fontWeight: FontWeight.w600)
                             ),
                           ),
                         ),
@@ -247,17 +240,18 @@ class _OurServices1bState extends State<OurServices1b> {
                         Container(
                           padding: EdgeInsets.only(top: 10),
                           width: 200,
-                          height: 100,
+                          height: 180,
                           child: ShowUpAnimation(
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
                             child: Text(
                               "Time-sensitive projects are treated with urgency to provide skilled technical resources needed for quick and cost-effective turnaround.",
-                              textAlign: TextAlign.center,
-                              style: GoogleFonts.robotoCondensed(
-                                color: Color(0xff111111),
-                                fontSize: 14,
-                              ),
+                              style: GoogleFonts.poppins(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: 1.3,height: 1.4
+                              ),textAlign: TextAlign.center,
+
                             ),
                           ),
                         ),
@@ -296,18 +290,14 @@ class _OurServices1bState extends State<OurServices1b> {
                           height: 20,
                         ),
                         Container(
-                          height: 30,
+                          height: 40,
                           padding: EdgeInsets.only(top: 5),
                           child: ShowUpAnimation(
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
                             child: Text(
                               "RECRUITMENT PROCESS OUTSOURCING",
-                              style: GoogleFonts.robotoCondensed(
-                                color: Color(0xff1e5ea8),
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                              ),
+                              style: TextStyle(color: Colors.blueAccent,fontSize: 16,letterSpacing: 1.1,fontWeight: FontWeight.w600),textAlign: TextAlign.center,
                             ),
                           ),
                         ),
@@ -317,17 +307,17 @@ class _OurServices1bState extends State<OurServices1b> {
                         Container(
                           padding: EdgeInsets.only(top: 10),
                           width: 220,
-                          height: 100,
+                          height: 180,
                           child: ShowUpAnimation(
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
                             child: Text(
                               "Hire the best without ever having to face the logistics. From the very beginning till actually getting your next 'rockstar' employees to walk in and take their positions on your floors.",
-                              textAlign: TextAlign.center,
-                              style: GoogleFonts.robotoCondensed(
-                                color: Color(0xff111111),
-                                fontSize: 14,
-                              ),
+                              style: GoogleFonts.poppins(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: 1.3,height: 1.4
+                              ),textAlign: TextAlign.center,
                             ),
                           ),
                         ),

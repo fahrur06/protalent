@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Career1_2 extends StatelessWidget {
   const Career1_2({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class Career1_2 extends StatelessWidget {
           Container(
             width: screenSize.width,
             child: Text('How do we help?',
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                     fontSize: 30,
                     color: Color.fromARGB(255, 12, 66, 101),
                     fontWeight: FontWeight.bold)),
@@ -33,10 +34,8 @@ class Career1_2 extends StatelessWidget {
             child: Text(
                 'The most difficult part of finding the right job is finding the right job. We get this and '
                     'we’re here to make this process a bit easier for you.', textAlign: TextAlign.justify,
-                style: TextStyle(
-                    fontSize: 18,
-                    height: 1.3
-                )),
+                style:
+                GoogleFonts.poppins(fontSize: 18, letterSpacing: 1.1, height: 1.3,fontWeight: FontWeight.w500)),
           ),
           SizedBox(height: 40,),
           Container(
@@ -46,10 +45,8 @@ class Career1_2 extends StatelessWidget {
                     'your core skills, technical abilities, and competitive edge to help you grab that right '
                     'opportunity! In addition to all the placement opportunities we discuss and share, '
                     'we promise to support and confidentiality in all your matters.',textAlign: TextAlign.justify,
-                style: TextStyle(
-                    fontSize: 18,
-                    height: 1.3
-                )),
+                style:
+                GoogleFonts.poppins(fontSize: 18, letterSpacing: 1.1, height: 1.3,fontWeight: FontWeight.w500)),
           ),
         ],
       ),

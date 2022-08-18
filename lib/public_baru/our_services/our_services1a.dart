@@ -105,8 +105,8 @@ class _OurServices1aState extends State<OurServices1a> {
                         child: Text(
                           'FREE REGISTER',
                           style: TextStyle(
-                              fontSize: 19,
-                              // letterSpacing: 2,
+                              fontSize: 19,fontWeight: FontWeight.w500,
+                               letterSpacing: 1.1,
                               color: Colors.white),
                         ),
                         ),

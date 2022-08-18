@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ContactUs1 extends StatefulWidget {
   const ContactUs1({Key? key}) : super(key: key);
@@ -29,7 +30,7 @@ class _ContactUsState extends State<ContactUs1> {
           width: screenSize.width * 0.5,
           height: screenSize.height * 0.31,
           padding: EdgeInsets.only(
-              right: screenSize.width * 0.30, left: screenSize.height * 0.10),
+              right: screenSize.width * 0.30, left: screenSize.height * 0.06),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -37,7 +38,7 @@ class _ContactUsState extends State<ContactUs1> {
               Container(
                 child: Text(
                   'Contact Us',
-                  style: TextStyle(
+                  style: GoogleFonts.poppins(
                       fontSize: 40,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),

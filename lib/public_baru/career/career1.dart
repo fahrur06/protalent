@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Career1 extends StatefulWidget {
   const Career1({Key? key}) : super(key: key);
@@ -30,7 +31,7 @@ class _Career1State extends State<Career1> {
           children: [
           Container(
           child: Text(
-          'Career',style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold,color: Colors.white),overflow: TextOverflow.ellipsis,),
+          'Career',style: GoogleFonts.poppins(fontSize: 50,fontWeight: FontWeight.bold,color: Colors.white,letterSpacing: 1.3),overflow: TextOverflow.ellipsis,),
           ),
         ],
         ),
