@@ -15,7 +15,7 @@ class _OurServices1bState extends State<OurServices1b> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-      height: 550,
+      height: 600,
       width: screenSize.width,
       color: Colors.white,
       child: Row(
@@ -47,13 +47,13 @@ class _OurServices1bState extends State<OurServices1b> {
                     color: Color(0xff111111),
                     fontSize: 17,
                     letterSpacing: 1.3,
-                    height: 1.2,
+                    height: 1.3,
                       fontWeight: FontWeight.w500
                   ),
                 ),
               ),
                SizedBox(
-                height: 25,
+                height: 40,
               ),
               Row(
                 children: [
