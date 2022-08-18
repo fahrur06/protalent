@@ -83,9 +83,11 @@ class ContactUs2 extends StatelessWidget {
                   const Spacer(
                     flex: 1,
                   ),
-                   Text(
-                      "We’ll contact you immediately to discuss to help you.",
-                      style: GoogleFonts.poppins(color: Colors.white, fontSize: 18,letterSpacing: 1.2)),
+                  Text("We’ll contact you immediately to discuss to help you.",
+                      style: GoogleFonts.poppins(
+                          color: Colors.white,
+                          fontSize: 18,
+                          letterSpacing: 1.2)),
                   const Spacer(
                     flex: 2,
                   ),

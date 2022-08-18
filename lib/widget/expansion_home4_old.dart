@@ -1,47 +1,41 @@
 import 'package:flutter/material.dart';
 
-
-
 class Expansionpanel extends StatefulWidget {
   Expansionpaneltate createState() => Expansionpaneltate();
 }
 
 class Expansionpaneltate extends State<Expansionpanel> {
-
-
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child:
-        Padding(
-          padding: EdgeInsets.all(10.0),
-          child: ExpansionPanelList.radio(
-            expansionCallback: (int index, bool isExpanded) {
-              setState(() {
-                items[index].isExpanded = isExpanded;
-              });
-            },
-            children: items.map((ExpansionpanelItem item) {
-              return ExpansionPanelRadio(
-                value: item.title,
-                headerBuilder: (BuildContext context, bool isExpanded) {
-                  return ListTile(
-                      leading: item.leading,
-                      title: Text(
-                        item.title,
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ));
-                },
-                //isExpanded: item.isExpanded,
-                body: item.content,
-              );
-            }).toList(),
-          ),
+      child: Padding(
+        padding: EdgeInsets.all(10.0),
+        child: ExpansionPanelList.radio(
+          expansionCallback: (int index, bool isExpanded) {
+            setState(() {
+              items[index].isExpanded = isExpanded;
+            });
+          },
+          children: items.map((ExpansionpanelItem item) {
+            return ExpansionPanelRadio(
+              value: item.title,
+              headerBuilder: (BuildContext context, bool isExpanded) {
+                return ListTile(
+                    leading: item.leading,
+                    title: Text(
+                      item.title,
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ));
+              },
+              //isExpanded: item.isExpanded,
+              body: item.content,
+            );
+          }).toList(),
         ),
-
+      ),
     );
   }
 }
@@ -127,7 +121,7 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
       leading: Icon(Icons.people)),
 ];
 
-Container _judulposisi (){
+Container _judulposisi() {
   return Container(
     width: 1400,
     child: Text(

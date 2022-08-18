@@ -12,8 +12,9 @@ class _AddPagesState extends State<AddPages> {
   Widget build(BuildContext context) {
     return Container(
       child: TextButton(
-        onPressed: (){},
-        child: Text("Publish",
+        onPressed: () {},
+        child: Text(
+          "Publish",
           style: TextStyle(
             fontSize: 18,
             letterSpacing: 1.5,

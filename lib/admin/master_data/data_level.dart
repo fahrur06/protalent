@@ -58,15 +58,15 @@ int _idCounter = 0;
 /// Domain model entity
 class Client {
   Client(
-      this.nomer,
-      this.level,
-      this.post,
-      this.status,
-      this.button,
-      // this.sodium,
-      // this.calcium,
-      // this.iron,
-      );
+    this.nomer,
+    this.level,
+    this.post,
+    this.status,
+    this.button,
+    // this.sodium,
+    // this.calcium,
+    // this.iron,
+  );
 
   final int id = _idCounter++;
 
@@ -90,9 +90,9 @@ class DessertDataSource extends DataTableSource {
 
   DessertDataSource(this.context,
       [sortedByCalories = false,
-        this.hasRowTaps = false,
-        this.hasRowHeightOverrides = false,
-        this.hasZebraStripes = false]) {
+      this.hasRowTaps = false,
+      this.hasRowHeightOverrides = false,
+      this.hasZebraStripes = false]) {
     clients = _clients;
     if (sortedByCalories) {
       sort((d) => d.level, true);
@@ -148,44 +148,51 @@ class DessertDataSource extends DataTableSource {
       color: color != null
           ? MaterialStateProperty.all(color)
           : (hasZebraStripes && index.isEven
-          ? MaterialStateProperty.all(Theme.of(context).highlightColor)
-          : null),
+              ? MaterialStateProperty.all(Theme.of(context).highlightColor)
+              : null),
       onSelectChanged: hasRowTaps
           ? null
           : (value) {
-        if (dessert.selected != value) {
-          _selectedCount += value! ? 1 : -1;
-          assert(_selectedCount >= 0);
-          dessert.selected = value;
-          notifyListeners();
-        }
-      },
+              if (dessert.selected != value) {
+                _selectedCount += value! ? 1 : -1;
+                assert(_selectedCount >= 0);
+                dessert.selected = value;
+                notifyListeners();
+              }
+            },
       onTap: hasRowTaps
           ? () => _showSnackbar(context, 'Tapped on row ${dessert.nomer}')
           : null,
       onDoubleTap: hasRowTaps
-          ? () => _showSnackbar(context, 'Double Tapped on row ${dessert.nomer}')
+          ? () =>
+              _showSnackbar(context, 'Double Tapped on row ${dessert.nomer}')
           : null,
       onLongPress: hasRowTaps
           ? () => _showSnackbar(context, 'Long pressed on row ${dessert.nomer}')
           : null,
       onSecondaryTap: hasRowTaps
-          ? () => _showSnackbar(context, 'Right clicked on row ${dessert.nomer}')
+          ? () =>
+              _showSnackbar(context, 'Right clicked on row ${dessert.nomer}')
           : null,
       onSecondaryTapDown: hasRowTaps
-          ? (d) =>
-          _showSnackbar(context, 'Right button down on row ${dessert.nomer}')
+          ? (d) => _showSnackbar(
+              context, 'Right button down on row ${dessert.nomer}')
           : null,
       specificRowHeight:
-      hasRowHeightOverrides && dessert.nomer >= 25 ? 100 : null,
+          hasRowHeightOverrides && dessert.nomer >= 25 ? 100 : null,
       cells: [
         DataCell(Text(dessert.nomer.toStringAsFixed(0))),
         DataCell(Text('${dessert.level}'),
             onTap: () => _showSnackbar(context,
                 'Tapped on a cell with "${dessert.level}"', Colors.red)),
-        DataCell(Text(dessert.post),),
+        DataCell(
+          Text(dessert.post),
+        ),
         DataCell(Text('${dessert.status}')),
-        DataCell(TextButton(child: dessert.button, onPressed: () {  },)),
+        DataCell(TextButton(
+          child: dessert.button,
+          onPressed: () {},
+        )),
         // DataCell(Text('${dessert.sodium}')),
         // DataCell(Text(format.format(dessert.calcium / 100))),
         // DataCell(Text(format.format(dessert.iron / 100))),
@@ -280,7 +287,7 @@ class ClientDataSourceAsync extends AsyncDataTableSource {
         ? await Future.delayed(const Duration(milliseconds: 2000),
             () => DesertsFakeWebServiceResponse(0, []))
         : await _repo.getData(
-        start, end, _caloriesFilter, _sortColumn, _sortAscending);
+            start, end, _caloriesFilter, _sortColumn, _sortAscending);
 
     var r = AsyncRowsResponse(
         x.totalRecords,
@@ -298,7 +305,10 @@ class ClientDataSourceAsync extends AsyncDataTableSource {
               DataCell(Text('${dessert.level}')),
               DataCell(Text(dessert.post)),
               DataCell(Text('${dessert.status}')),
-              DataCell(TextButton(child: dessert.button, onPressed: () {  },)),
+              DataCell(TextButton(
+                child: dessert.button,
+                onPressed: () {},
+              )),
               // DataCell(Text('${dessert.sodium}')),
               // DataCell(Text(format.format(dessert.calcium / 100))),
               // DataCell(Text(format.format(dessert.iron / 100))),
@@ -326,22 +336,23 @@ class ClientsFakeWebService {
     var coef = ascending ? 1 : -1;
     switch (column) {
       case 'no':
-        return (Client d1, Client d2) => coef * (d1.nomer - d2.nomer);                                   //d1.nomer.compareTo(d2.nomer);
+        return (Client d1, Client d2) =>
+            coef * (d1.nomer - d2.nomer); //d1.nomer.compareTo(d2.nomer);
       case 'level':
         return (Client d1, Client d2) => coef * d1.level.compareTo(d2.level);
       case 'post':
         return (Client d1, Client d2) => coef * d1.post.compareTo(d2.post);
       case 'status':
         return (Client d1, Client d2) => coef * d1.status.compareTo(d2.status);
-    // case '':
-    //   return (Client d1, Client d2) =>
-    //   coef * d1.button.compareTo(d2.button);
-    // case 'sodium':
-    //   return (Dessert d1, Dessert d2) => coef * (d1.sodium - d2.sodium);
-    // case 'calcium':
-    //   return (Dessert d1, Dessert d2) => coef * (d1.calcium - d2.calcium);
-    // case 'iron':
-    //   return (Dessert d1, Dessert d2) => coef * (d1.iron - d2.iron);
+      // case '':
+      //   return (Client d1, Client d2) =>
+      //   coef * d1.button.compareTo(d2.button);
+      // case 'sodium':
+      //   return (Dessert d1, Dessert d2) => coef * (d1.sodium - d2.sodium);
+      // case 'calcium':
+      //   return (Dessert d1, Dessert d2) => coef * (d1.calcium - d2.calcium);
+      // case 'iron':
+      //   return (Dessert d1, Dessert d2) => coef * (d1.iron - d2.iron);
     }
 
     return null;
@@ -354,8 +365,8 @@ class ClientsFakeWebService {
             milliseconds: startingAt == 0
                 ? 2650
                 : startingAt < 20
-                ? 2000
-                : 400), () {
+                    ? 2000
+                    : 400), () {
       var result = _dessertsX3;
 
       // if (caloriesFilter != null) {
@@ -699,10 +710,10 @@ List<Client> _clients = <Client>[
 ];
 
 List<Client> _dessertsX3 = _clients.toList()
-  ..addAll(_clients.map((i) => Client(i.nomer, '${i.level} x2', '${i.post} x2',
-      '${i.status} x2',i.button)))
-  ..addAll(_clients.map((i) => Client(i.nomer, '${i.level} x3', '${i.post} x3',
-      '${i.status} x3',i.button)));
+  ..addAll(_clients.map((i) => Client(
+      i.nomer, '${i.level} x2', '${i.post} x2', '${i.status} x2', i.button)))
+  ..addAll(_clients.map((i) => Client(
+      i.nomer, '${i.level} x3', '${i.post} x3', '${i.status} x3', i.button)));
 
 _showSnackbar(BuildContext context, String text, [Color? color]) {
   ScaffoldMessenger.of(context).showSnackBar(SnackBar(

@@ -11,7 +11,6 @@ import '../appbar/appbar_baru.dart';
 
 import '../widget/responsive.dart';
 
-
 class HomePageNew extends StatefulWidget {
   const HomePageNew({Key? key}) : super(key: key);
 
@@ -28,7 +27,7 @@ class _HomePageNewState extends State<HomePageNew> {
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? AppbarHomeSmall(screenSize)
           : AppbarHomeLarge(screenSize, context, Colors.blue, Colors.blue,
-          Colors.black, Colors.black, Colors.black),
+              Colors.black, Colors.black, Colors.black),
       body: ListView(
         children: [
           HomeNew1(),
@@ -39,7 +38,6 @@ class _HomePageNewState extends State<HomePageNew> {
           Footer(),
         ],
       ),
-
     );
   }
 }

@@ -24,7 +24,8 @@ class _OurTalentState extends State<OurTalent> {
       floatingActionButton: WAChat(),
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? AppbarHomeSmall(screenSize)
-          : AppbarHomeLarge(screenSize, context, Colors.black,Colors.blue,Colors.black,Colors.black),
+          : AppbarHomeLarge(screenSize, context, Colors.black, Colors.blue,
+              Colors.black, Colors.black),
       body: ListView(
         children: [
           Talent1(),

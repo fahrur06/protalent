@@ -35,8 +35,7 @@ class _HiredTalentState extends State<HiredTalent> {
                     Text("13 results found"),
                   ],
                 ),
-                
-                 Container(
+                Container(
                   width: 200,
                   child: Expanded(
                     child: TextFormField(

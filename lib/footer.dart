@@ -30,7 +30,6 @@ class Footer extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Container(
                       padding: const EdgeInsets.only(left: 5),
                       width: screenSize.width * 0.2,
@@ -147,7 +146,7 @@ class Footer extends StatelessWidget {
                             flex: 2,
                           ),
                           Container(
-                            height: screenSize.height*0.04,
+                            height: screenSize.height * 0.04,
                             child: itemBawah(
                               item: 'Home',
                               routeName: '/',
@@ -155,7 +154,7 @@ class Footer extends StatelessWidget {
                           ),
                           Spacer(),
                           Container(
-                            height: screenSize.height*0.04,
+                            height: screenSize.height * 0.04,
                             child: itemBawah(
                               item: 'About Us',
                               routeName: '/about',
@@ -163,7 +162,7 @@ class Footer extends StatelessWidget {
                           ),
                           Spacer(),
                           Container(
-                            height: screenSize.height*0.04,
+                            height: screenSize.height * 0.04,
                             child: itemBawah(
                               item: 'Service',
                               routeName: '/service',
@@ -171,7 +170,7 @@ class Footer extends StatelessWidget {
                           ),
                           Spacer(),
                           Container(
-                            height: screenSize.height*0.04,
+                            height: screenSize.height * 0.04,
                             child: itemBawah(
                               item: 'Career',
                               routeName: '/career',
@@ -201,7 +200,7 @@ class Footer extends StatelessWidget {
                             flex: 2,
                           ),
                           Container(
-                            height: screenSize.height*0.04,
+                            height: screenSize.height * 0.04,
                             child: itemBawah(
                               item: 'Retained Search',
                               routeName: '/service',
@@ -209,7 +208,7 @@ class Footer extends StatelessWidget {
                           ),
                           Spacer(),
                           Container(
-                            height: screenSize.height*0.04,
+                            height: screenSize.height * 0.04,
                             child: itemBawah(
                               item: 'Dedicated Services',
                               routeName: '/service',
@@ -217,7 +216,7 @@ class Footer extends StatelessWidget {
                           ),
                           Spacer(),
                           Container(
-                            height: screenSize.height*0.04,
+                            height: screenSize.height * 0.04,
                             child: itemBawah(
                               item: 'Contract Services',
                               routeName: '/service',
@@ -225,7 +224,7 @@ class Footer extends StatelessWidget {
                           ),
                           Spacer(),
                           Container(
-                            height: screenSize.height*0.04,
+                            height: screenSize.height * 0.04,
                             child: itemBawah(
                               item: 'Recruitment',
                               routeName: '/service',
@@ -233,11 +232,9 @@ class Footer extends StatelessWidget {
                           ),
                         ],
                       )),
-
                   Container(
                       width: screenSize.width * 0.25,
                       height: screenSize.height * 0.42,
-
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -254,7 +251,6 @@ class Footer extends StatelessWidget {
                             ),
                           ),
                           SizedBox(height: 8),
-
                           Container(
                             width: screenSize.width * 0.164,
                             child: ListTile(
@@ -267,8 +263,9 @@ class Footer extends StatelessWidget {
                                   launch('tel:02157958040');
                                 },
                                 child: Container(
-                                  height: screenSize.height*0.04,
-                                  child: Text('(021) 5795 - 8040',
+                                  height: screenSize.height * 0.04,
+                                  child: Text(
+                                    '(021) 5795 - 8040',
                                     style: GoogleFonts.poppins(
                                       fontSize: 17,
                                       color: Colors.black87,
@@ -278,7 +275,6 @@ class Footer extends StatelessWidget {
                               ),
                             ),
                           ),
-
                           Container(
                             width: screenSize.width * 0.17,
                             child: ListTile(
@@ -288,45 +284,44 @@ class Footer extends StatelessWidget {
                               ),
                               title: TextButton(
                                 onPressed: () {
-                                  launch('mailto:Hello@eksad.com?subject=Hello saya ingin bertanya tentang protalent');
+                                  launch(
+                                      'mailto:Hello@eksad.com?subject=Hello saya ingin bertanya tentang protalent');
                                 },
                                 child: Container(
-                                  height: screenSize.height*0.04,
-                                  child: Text('Hello@eksad.com',
+                                  height: screenSize.height * 0.04,
+                                  child: Text(
+                                    'Hello@eksad.com',
                                     style: GoogleFonts.poppins(
-                                        fontSize: 17,
-                                        color: Colors.black87
-                                    ),
+                                        fontSize: 17, color: Colors.black87),
                                   ),
                                 ),
                               ),
                             ),
                           ),
-
                           Container(
                             width: screenSize.width * 0.25,
-                            height: screenSize.height*0.22,
+                            height: screenSize.height * 0.22,
                             child: ListTile(
-                              leading: Icon(
-                                Icons.location_on,
-                                size: 30,
-                              ),
-                              title: Container(
-                                padding: EdgeInsets.only(left: 14),
-                                width: screenSize.width * 0.25,
-                                height: screenSize.height*0.22,
-                                child: Text(
-                                'PT. Tiga Daya Digital Indonesia \nThe East '
-                                'Tower 19th Floor \nJl. Dr. Ide Anak Agung '
-                                '\nGde Agung Blok E3.2 '
-                                '\nMega Kuningan, \nJakarta Selatan 12950',
-                                style: GoogleFonts.poppins(
-                                    fontSize: 17,
-                                    height: 1.6,
-                                ),textAlign: TextAlign.left,
-                              ),
-                              )
-                            ),
+                                leading: Icon(
+                                  Icons.location_on,
+                                  size: 30,
+                                ),
+                                title: Container(
+                                  padding: EdgeInsets.only(left: 14),
+                                  width: screenSize.width * 0.25,
+                                  height: screenSize.height * 0.22,
+                                  child: Text(
+                                    'PT. Tiga Daya Digital Indonesia \nThe East '
+                                    'Tower 19th Floor \nJl. Dr. Ide Anak Agung '
+                                    '\nGde Agung Blok E3.2 '
+                                    '\nMega Kuningan, \nJakarta Selatan 12950',
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 17,
+                                      height: 1.6,
+                                    ),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                )),
                           ),
                         ],
                       )),

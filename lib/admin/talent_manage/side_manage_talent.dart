@@ -58,9 +58,6 @@ class _SideMenuManageTalentState extends State<SideMenuManageTalent> {
                 ),
               ),
               subtitle: Container(),
-
-
-
             ),
             selectedIndex: selectedIndex,
             items: const [
@@ -102,12 +99,13 @@ class _SideMenuManageTalentState extends State<SideMenuManageTalent> {
             // Make use of standard() constructor for other themes
             theme: SideNavigationBarTheme(
               backgroundColor:
-              //Color.fromARGB(200, 9, 47, 171),
-              Color.fromARGB(255, 18, 108, 178),
+                  //Color.fromARGB(200, 9, 47, 171),
+                  Color.fromARGB(255, 18, 108, 178),
               togglerTheme: SideNavigationBarTogglerTheme(
                   shrinkIconColor: Colors.white, expandIconColor: Colors.white),
-              itemTheme:
-              SideNavigationBarItemTheme(selectedItemColor: Colors.white,unselectedItemColor: Colors.white60),
+              itemTheme: SideNavigationBarItemTheme(
+                  selectedItemColor: Colors.white,
+                  unselectedItemColor: Colors.white60),
               dividerTheme: SideNavigationBarDividerTheme.standard(),
             ),
           ),

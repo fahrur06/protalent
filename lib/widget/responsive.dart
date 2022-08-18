@@ -8,7 +8,6 @@ class ResponsiveWidget extends StatelessWidget {
   const ResponsiveWidget({
     Key? key,
     required this.largeScreen,
-
     required this.smallScreen,
   }) : super(key: key);
 
@@ -19,8 +18,6 @@ class ResponsiveWidget extends StatelessWidget {
   static bool isLargeScreen(BuildContext context) {
     return MediaQuery.of(context).size.width > 1300;
   }
-
-
 
   @override
   Widget build(BuildContext context) {

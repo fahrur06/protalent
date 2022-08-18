@@ -9,8 +9,6 @@ class ClientDashboard extends StatefulWidget {
 }
 
 class _ClientDashboardState extends State<ClientDashboard> {
-
-
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -23,9 +21,9 @@ class _ClientDashboardState extends State<ClientDashboard> {
           height: screenSize.height * 0.75,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: Color.fromARGB(255, 18, 108, 178), width: 20),
-              color: Color.fromARGB(255, 18, 108, 178)
-          ),
+              border: Border.all(
+                  color: Color.fromARGB(255, 18, 108, 178), width: 20),
+              color: Color.fromARGB(255, 18, 108, 178)),
 
           child: Column(
             children: [
@@ -36,16 +34,15 @@ class _ClientDashboardState extends State<ClientDashboard> {
                       topRight: Radius.circular(20),
                       topLeft: Radius.circular(20)),
                   color:
-                  // Colors.white
-                  Color.fromARGB(255, 18, 108, 178),
+                      // Colors.white
+                      Color.fromARGB(255, 18, 108, 178),
                 ),
                 width: screenSize.width * 0.7,
                 height: screenSize.height * 0.15,
                 child: Text(
                   'Data Client',
                   style: TextStyle(
-                      color:
-                      Colors.white,
+                      color: Colors.white,
                       fontSize: 50,
                       fontWeight: FontWeight.bold,
                       letterSpacing: 2),
@@ -69,16 +66,16 @@ class _ClientDashboardState extends State<ClientDashboard> {
                 height: screenSize.height * 0.52,
                 child: Center(
                   child: Container(
-                    width: screenSize.width * 0.63,
-                    height: screenSize.height * 0.5,
-                    color: Colors.white,
-                    child: PaginatedDataTableDemo()
+                      width: screenSize.width * 0.63,
+                      height: screenSize.height * 0.5,
+                      color: Colors.white,
+                      child: PaginatedDataTableDemo()
 
-                    // EasyTable<_client>(
-                    //   _model,
-                    //   columnsFit: true,
-                    // ),
-                  ),
+                      // EasyTable<_client>(
+                      //   _model,
+                      //   columnsFit: true,
+                      // ),
+                      ),
                 ),
               ),
             ],
@@ -88,9 +85,6 @@ class _ClientDashboardState extends State<ClientDashboard> {
     );
   }
 }
-
-
-
 
 // Copyright 2019 The Flutter team. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
@@ -109,10 +103,10 @@ class PaginatedDataTableDemo extends StatefulWidget {
 class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
     with RestorationMixin {
   final RestorableClientSelections _dessertSelections =
-  RestorableClientSelections();
+      RestorableClientSelections();
   final RestorableInt _rowIndex = RestorableInt(0);
   final RestorableInt _rowsPerPage =
-  RestorableInt(PaginatedDataTable.defaultRowsPerPage);
+      RestorableInt(PaginatedDataTable.defaultRowsPerPage);
   final RestorableBool _sortAscending = RestorableBool(true);
   final RestorableIntN _sortColumnIndex = RestorableIntN(null);
   late DessertDataSource _dessertsDataSource;
@@ -138,10 +132,12 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
         _dessertsDataSource.sort<num>((d) => d.nomer, _sortAscending.value);
         break;
       case 1:
-        _dessertsDataSource.sort<String>((d) => d.namaClient, _sortAscending.value);
+        _dessertsDataSource.sort<String>(
+            (d) => d.namaClient, _sortAscending.value);
         break;
       case 2:
-        _dessertsDataSource.sort<String>((d) => d.deskripsi, _sortAscending.value);
+        _dessertsDataSource.sort<String>(
+            (d) => d.deskripsi, _sortAscending.value);
         break;
       case 3:
         _dessertsDataSource.sort<String>((d) => d.lokasi, _sortAscending.value);
@@ -178,10 +174,10 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
   }
 
   void sort<T>(
-      Comparable<T> Function(Client d) getField,
-      int columnIndex,
-      bool ascending,
-      ) {
+    Comparable<T> Function(Client d) getField,
+    int columnIndex,
+    bool ascending,
+  ) {
     _dessertsDataSource.sort<T>(getField, ascending);
     setState(() {
       _sortColumnIndex.value = columnIndex;
@@ -211,7 +207,6 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
         padding: const EdgeInsets.all(7),
         children: [
           PaginatedDataTable(
-
             rowsPerPage: _rowsPerPage.value,
             onRowsPerPageChanged: (value) {
               setState(() {
@@ -236,7 +231,6 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
               ),
               DataColumn(
                 label: const Text('Client Name'),
-
                 onSort: (columnIndex, ascending) =>
                     sort<String>((d) => d.namaClient, columnIndex, ascending),
               ),
@@ -258,7 +252,6 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
                 onSort: (columnIndex, ascending) =>
                     sort<String>((d) => d.posted, columnIndex, ascending),
               ),
-
             ],
             source: _dessertsDataSource,
           ),

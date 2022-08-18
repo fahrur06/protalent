@@ -1,117 +1,141 @@
-class Api{
+class Api {
   String cmd = 'http://localhost:8081';
   String query = 'http://localhost:8082';
   String msd = 'http://localhost:8083';
 
   //Menu Page
-  Uri getPage(){
-    return Uri.parse(query+"/page/getAllPageByIdRole");
+  Uri getPage() {
+    return Uri.parse(query + "/page/getAllPageByIdRole");
   }
-  Uri createPage(){
-    return Uri.parse(cmd+"/page/savePage");
+
+  Uri createPage() {
+    return Uri.parse(cmd + "/page/savePage");
   }
-  Uri deletePage(String id){
-    return Uri.parse(cmd+"/page/deletePage/"+id);
+
+  Uri deletePage(String id) {
+    return Uri.parse(cmd + "/page/deletePage/" + id);
   }
 
   //Menu Setting
-  Uri getSetting(){
-    return Uri.parse(query+"/page/getAllSettingByIdRole");
+  Uri getSetting() {
+    return Uri.parse(query + "/page/getAllSettingByIdRole");
   }
-  Uri createSetting(){
-    return Uri.parse(cmd+"/page/saveSetting");
+
+  Uri createSetting() {
+    return Uri.parse(cmd + "/page/saveSetting");
   }
-  Uri updateSetting(){
-    return Uri.parse(cmd+"/page/updateSetting");
+
+  Uri updateSetting() {
+    return Uri.parse(cmd + "/page/updateSetting");
   }
 
   //List Menu
-  Uri getMenu(String idrole){
-    return Uri.parse(query+"/menu/"+idrole);
+  Uri getMenu(String idrole) {
+    return Uri.parse(query + "/menu/" + idrole);
   }
 
   //Menu Post
-  Uri getPost(){
-    return Uri.parse(query+"/post/getAllPostByIdRole");
+  Uri getPost() {
+    return Uri.parse(query + "/post/getAllPostByIdRole");
   }
-  Uri createPost(){
-    return Uri.parse(cmd+"/post/savePost");
+
+  Uri createPost() {
+    return Uri.parse(cmd + "/post/savePost");
   }
-  Uri deletePost(String id){
-    return Uri.parse(cmd+"/post/deletePost/"+id);
+
+  Uri deletePost(String id) {
+    return Uri.parse(cmd + "/post/deletePost/" + id);
   }
 
   //Menu Master Data
   //Location
-  Uri createLocation(){
+  Uri createLocation() {
     return Uri.parse(cmd);
   }
-  Uri getLocation(){
+
+  Uri getLocation() {
     return Uri.parse(cmd);
   }
-  Uri deleteLocation(){
+
+  Uri deleteLocation() {
     return Uri.parse(cmd);
   }
+
   //Level
-  Uri createLevel(){
+  Uri createLevel() {
     return Uri.parse(cmd);
   }
-  Uri getLevel(){
+
+  Uri getLevel() {
     return Uri.parse(cmd);
   }
-  Uri deleteLevel(){
+
+  Uri deleteLevel() {
     return Uri.parse(cmd);
   }
+
   //Industry
-  Uri createIndustry(){
+  Uri createIndustry() {
     return Uri.parse(cmd);
   }
-  Uri getIndustry(){
+
+  Uri getIndustry() {
     return Uri.parse(cmd);
   }
-  Uri deleteIndustry(){
+
+  Uri deleteIndustry() {
     return Uri.parse(cmd);
   }
+
   //Position
-  Uri createPosition(){
+  Uri createPosition() {
     return Uri.parse(msd);
   }
-  Uri getPosition(){
-    return Uri.parse(msd+"/v1/masterdata/position/get.all.name");
+
+  Uri getPosition() {
+    return Uri.parse(msd + "/v1/masterdata/position/get.all.name");
   }
-  Uri deletePosition(){
+
+  Uri deletePosition() {
     return Uri.parse(cmd);
   }
+
   //Skill
-  Uri createSkill(){
+  Uri createSkill() {
     return Uri.parse(cmd);
   }
-  Uri getSkill(){
+
+  Uri getSkill() {
     return Uri.parse(cmd);
   }
-  Uri deleteSkill(){
+
+  Uri deleteSkill() {
     return Uri.parse(cmd);
   }
 
   //Dashboard
-  Uri getAllTalent(){
+  Uri getAllTalent() {
     return Uri.parse(cmd);
   }
-  Uri getAvailable(){
+
+  Uri getAvailable() {
     return Uri.parse(cmd);
   }
-  Uri getHired(){
+
+  Uri getHired() {
     return Uri.parse(cmd);
   }
 
   //Talent Management
-  Uri searchTalent(){
+  Uri searchTalent() {
     return Uri.parse(cmd);
   }
-  Uri createTalent(){
+
+  Uri createTalent() {
     return Uri.parse(cmd);
   }
-  Uri editTalent(){
+
+  Uri editTalent() {
     return Uri.parse(cmd);
   }
 }

@@ -22,13 +22,11 @@ class _Talent1State extends State<Talent1> {
       width: screenSize.width,
       height: screenSize.height * 0.5,
       decoration: BoxDecoration(
-          gradient: LinearGradient(
-              colors: <Color>[
-                Color(0xFF0D5396),
-                Color(0xFF2B69A4),
-                Color(0xFF42A5F5),
-              ])
-      ),
+          gradient: LinearGradient(colors: <Color>[
+        Color(0xFF0D5396),
+        Color(0xFF2B69A4),
+        Color(0xFF42A5F5),
+      ])),
       //color: Colors.blue,
       child: Row(
         children: [

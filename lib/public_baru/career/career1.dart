@@ -17,27 +17,39 @@ class _Career1State extends State<Career1> {
       children: [
         Container(
           width: screenSize.width,
-          height: screenSize.height*0.42,
-          decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/career1.jpg",),alignment: Alignment.bottomCenter,fit: BoxFit.cover)),
+          height: screenSize.height * 0.42,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage(
+                    "assets/images/career1.jpg",
+                  ),
+                  alignment: Alignment.bottomCenter,
+                  fit: BoxFit.cover)),
         ),
         Container(
-          width: screenSize.width*0.5,
-          height: screenSize.height*0.31,
-          padding: EdgeInsets.only(left: screenSize.width * 0.15, top: screenSize.height * 0.02),
-
+          width: screenSize.width * 0.5,
+          height: screenSize.height * 0.31,
+          padding: EdgeInsets.only(
+              left: screenSize.width * 0.15, top: screenSize.height * 0.02),
           child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-          Container(
-          child: Text(
-          'Career',style: GoogleFonts.poppins(fontSize: 50,fontWeight: FontWeight.bold,color: Colors.white,letterSpacing: 1.3),overflow: TextOverflow.ellipsis,),
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                child: Text(
+                  'Career',
+                  style: GoogleFonts.poppins(
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      letterSpacing: 1.3),
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ],
           ),
-        ],
-        ),
         ),
       ],
     );
-
   }
 }

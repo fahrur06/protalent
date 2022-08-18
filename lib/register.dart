@@ -17,10 +17,10 @@ class _RegisterState extends State<Register> {
   String _usmail = '';
   String _uspswd = '';
 
-  void chat(
-      {required final int phone,
-        required String message,
-      }) async {
+  void chat({
+    required final int phone,
+    required String message,
+  }) async {
     String url() {
       return "https://api.whatsapp.com/send?phone=$phone&text=${Uri.parse(message)}";
     }
@@ -63,7 +63,7 @@ class _RegisterState extends State<Register> {
               ),
             ),
             Padding(
-              padding:  EdgeInsets.only(
+              padding: EdgeInsets.only(
                   left: screenSize.width * 0.33, top: screenSize.height * 0.07),
               child: Container(
                 width: screenSize.width * 0.3,
@@ -135,7 +135,7 @@ class _RegisterState extends State<Register> {
                                   border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(5.0)),
                                 ),
-                                onChanged: (value)=> _usname = value,
+                                onChanged: (value) => _usname = value,
                               ),
                             ),
                           ],
@@ -170,7 +170,7 @@ class _RegisterState extends State<Register> {
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(5.0)),
                             ),
-                            onChanged: (value)=> _usmail = value,
+                            onChanged: (value) => _usmail = value,
                           ),
                         ),
                         Spacer(
@@ -216,8 +216,7 @@ class _RegisterState extends State<Register> {
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(5.0)),
                             ),
-                            onChanged: (value)=> _uspswd = value,
-
+                            onChanged: (value) => _uspswd = value,
                           ),
                         ),
                         Spacer(
@@ -243,7 +242,10 @@ class _RegisterState extends State<Register> {
                               width: screenSize.width * 0.09,
                               child: ElevatedButton(
                                 onPressed: () {
-                                  chat(phone: 6281807890777, message: 'Form Register Client Protalent \n\nUsername = $_usname \nemail address = $_usmail \npassword = $_uspswd \n\ndengan ini saya ingin mengajukan regristrasi akun baru.\nTerimakasih.');
+                                  chat(
+                                      phone: 6281807890777,
+                                      message:
+                                          'Form Register Client Protalent \n\nUsername = $_usname \nemail address = $_usmail \npassword = $_uspswd \n\ndengan ini saya ingin mengajukan regristrasi akun baru.\nTerimakasih.');
                                 },
                                 child: const Text('REGISTER'),
                               ),

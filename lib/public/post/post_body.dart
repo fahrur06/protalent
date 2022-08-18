@@ -11,23 +11,23 @@ class PostBody extends StatelessWidget {
   final String Tanggal;
   final String Bodyfull;
   final String Urutan;
-  const PostBody(
-      {Key? key,
-        required this.Image,
-        required this.HeadText,
-        required this.Tanggal,
-        required this.Bodyfull,
-        required this.Urutan,
-      })
-      : super(key: key);
+  const PostBody({
+    Key? key,
+    required this.Image,
+    required this.HeadText,
+    required this.Tanggal,
+    required this.Bodyfull,
+    required this.Urutan,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
-        appBar: ResponsiveWidget.isSmallScreen(context)
-        ? AppbarHomeSmall(screenSize)
-        : AppbarHomeLarge(screenSize, context, Colors.black,Colors.black,Colors.blue,Colors.black),
+      appBar: ResponsiveWidget.isSmallScreen(context)
+          ? AppbarHomeSmall(screenSize)
+          : AppbarHomeLarge(screenSize, context, Colors.black, Colors.black,
+              Colors.blue, Colors.black),
       body: ListView(
         children: [
           SingleChildScrollView(
@@ -44,41 +44,60 @@ class PostBody extends StatelessWidget {
                       children: [
                         Container(
                             height: 20,
-                            child: TextButton(onPressed: (){
+                            child: TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => HomePage(),
+                                    ),
+                                  );
+                                },
+                                child: Text(
+                                  'Home',
+                                  style: TextStyle(
+                                      color: Colors.blue, fontSize: 17),
+                                ))),
+                        Container(
+                          padding: EdgeInsets.only(top: 1),
+                          height: 20,
+                          child: Text(
+                            ' > ',
+                            style: TextStyle(color: Colors.blue, fontSize: 17),
+                          ),
+                        ),
+                        Container(
+                          height: 20,
+                          child: TextButton(
+                            onPressed: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => HomePage(),
+                                  builder: (context) => Post(),
                                 ),
                               );
-                            }, child: Text('Home',style: TextStyle(color: Colors.blue,fontSize: 17),))
-                        ),
-                        Container(
-                          padding: EdgeInsets.only(top: 1),
-                          height: 20,
-                          child: Text(' > ',style: TextStyle(color: Colors.blue,fontSize: 17),),
-                        ),
-                        Container(
-                          height: 20,
-                          child: TextButton(onPressed: (){
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => Post(),
-                              ),
-                            );
-                          }, child: Text('News',style: TextStyle(color: Colors.blue,fontSize: 17),
-                          ),
+                            },
+                            child: Text(
+                              'News',
+                              style:
+                                  TextStyle(color: Colors.blue, fontSize: 17),
+                            ),
                           ),
                         ),
                         Container(
                           padding: EdgeInsets.only(top: 1),
                           height: 20,
-                          child: Text(' >  ',style: TextStyle(color: Colors.blue,fontSize: 17),),
+                          child: Text(
+                            ' >  ',
+                            style: TextStyle(color: Colors.blue, fontSize: 17),
+                          ),
                         ),
                         Container(
                           height: 20,
-                          child: Text(Urutan,style: TextStyle(color: Colors.blue,fontSize: 17),),
+                          child: Text(
+                            Urutan,
+                            style: TextStyle(color: Colors.blue, fontSize: 17),
+                          ),
                         )
                       ],
                     ),
@@ -86,8 +105,7 @@ class PostBody extends StatelessWidget {
                   Container(
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage(Image),
-                          fit: BoxFit.cover),
+                          image: AssetImage(Image), fit: BoxFit.cover),
                     ),
                     height: 450,
                   ),

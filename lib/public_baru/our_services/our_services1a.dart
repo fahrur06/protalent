@@ -47,7 +47,7 @@ class _OurServices1aState extends State<OurServices1a> {
           // ),
         ),
         Container(
-          padding: EdgeInsets.only(right: screenSize.width*0.5),
+          padding: EdgeInsets.only(right: screenSize.width * 0.5),
           child: Center(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -98,21 +98,24 @@ class _OurServices1aState extends State<OurServices1a> {
                     direction: Direction.horizontal,
                     offset: -0.2,
                     child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/register');
-                        },
-                        style: DefaultColors(),
-                        child: Text(
-                          'FREE REGISTER',
-                          style: TextStyle(
-                              fontSize: 19,fontWeight: FontWeight.w500,
-                               letterSpacing: 1.1,
-                              color: Colors.white),
-                        ),
-                        ),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/register');
+                      },
+                      style: DefaultColors(),
+                      child: Text(
+                        'FREE REGISTER',
+                        style: TextStyle(
+                            fontSize: 19,
+                            fontWeight: FontWeight.w500,
+                            letterSpacing: 1.1,
+                            color: Colors.white),
+                      ),
+                    ),
                   ),
                 ),
-                SizedBox(height: 10,)
+                SizedBox(
+                  height: 10,
+                )
               ],
             ),
           ),

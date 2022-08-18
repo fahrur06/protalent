@@ -42,13 +42,13 @@ class Data {
 
   Data(
       {this.idsetting,
-        this.image,
-        this.name,
-        this.title,
-        this.tagline,
-        this.email,
-        this.no,
-        this.idrole});
+      this.image,
+      this.name,
+      this.title,
+      this.tagline,
+      this.email,
+      this.no,
+      this.idrole});
 
   Data.fromJson(Map<String, dynamic> json) {
     idsetting = json['idsetting'];

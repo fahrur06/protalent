@@ -41,12 +41,10 @@ class MyApp extends StatelessWidget {
         '/register': (context) => const Register(),
         '/admin': (context) => const Dashboard(),
         '/client': (context) => const DashboardClient(),
-
-
       },
 
       //home: Scaffold(
-       // body: HomePageNew(),
+      // body: HomePageNew(),
       //),
     );
   }

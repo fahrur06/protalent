@@ -4,7 +4,6 @@ import 'package:pro_talent/admin/dashboard.dart';
 import 'package:easy_table/easy_table.dart';
 import 'data_industry.dart';
 
-
 class Industry extends StatefulWidget {
   const Industry({Key? key}) : super(key: key);
 
@@ -20,65 +19,89 @@ class Industri {
   final String posting;
   final String status;
   final Widget delete;
-
 }
 
 class _IndustryState extends State<Industry> {
-  String industri='';
+  String industri = '';
   EasyTableModel<Industri>? _model;
 
   @override
-
   void initState() {
     super.initState();
 
     List<Industri> rows = [
-      Industri(1, 'Product Management', '2022-07-18', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
-      Industri(2, 'Marketing and Communication', '2022-01-01', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
-      Industri(3, 'Human Resources', '2022-01-01', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
-      Industri(4, 'Software Developer', '2022-01-01', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
-      Industri(5, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
-      Industri(6, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
-
-
+      Industri(1, 'Product Management', '2022-07-18', 'ACTIVE',
+          TextButton(onPressed: () {}, child: Text('delete'))),
+      Industri(2, 'Marketing and Communication', '2022-01-01', 'ACTIVE',
+          TextButton(onPressed: () {}, child: Text('delete'))),
+      Industri(3, 'Human Resources', '2022-01-01', 'ACTIVE',
+          TextButton(onPressed: () {}, child: Text('delete'))),
+      Industri(4, 'Software Developer', '2022-01-01', 'ACTIVE',
+          TextButton(onPressed: () {}, child: Text('delete'))),
+      Industri(
+          5, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
+      Industri(
+          6, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
     ];
 
     _model = EasyTableModel<Industri>(rows: rows, columns: [
-      EasyTableColumn(name: 'No',headerAlignment: Alignment.center,cellAlignment: Alignment.center, intValue: (row) => row.no),
-      EasyTableColumn(name: 'Industri',weight: 3, stringValue: (row) => row.industri),
-      EasyTableColumn(name: 'Posted',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 2, stringValue: (row) => row.posting),
-      EasyTableColumn(name: 'Status',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 2, stringValue: (row) => row.status),
-      EasyTableColumn(name: '',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 1, objectValue: (row) => row.delete)
-    ]
-    );
+      EasyTableColumn(
+          name: 'No',
+          headerAlignment: Alignment.center,
+          cellAlignment: Alignment.center,
+          intValue: (row) => row.no),
+      EasyTableColumn(
+          name: 'Industri', weight: 3, stringValue: (row) => row.industri),
+      EasyTableColumn(
+          name: 'Posted',
+          headerAlignment: Alignment.center,
+          cellAlignment: Alignment.center,
+          weight: 2,
+          stringValue: (row) => row.posting),
+      EasyTableColumn(
+          name: 'Status',
+          headerAlignment: Alignment.center,
+          cellAlignment: Alignment.center,
+          weight: 2,
+          stringValue: (row) => row.status),
+      EasyTableColumn(
+          name: '',
+          headerAlignment: Alignment.center,
+          cellAlignment: Alignment.center,
+          weight: 1,
+          objectValue: (row) => row.delete)
+    ]);
   }
 
-
-
   Widget build(BuildContext context) {
-    Future openDialog() => showDialog(context: context, builder: (context) => EasyTable<Industri>(_model,columnsFit: true,),
-      //     TextFormField(
-      //   textAlign: TextAlign.start,
-      //   decoration: InputDecoration(
-      //     labelText: "Isi position talent",
-      //     hintStyle: TextStyle(),
-      //     border: OutlineInputBorder(
-      //         borderRadius: BorderRadius.circular(5.0)),
-      //   ),
-      // ),
-    );
+    Future openDialog() => showDialog(
+          context: context,
+          builder: (context) => EasyTable<Industri>(
+            _model,
+            columnsFit: true,
+          ),
+          //     TextFormField(
+          //   textAlign: TextAlign.start,
+          //   decoration: InputDecoration(
+          //     labelText: "Isi position talent",
+          //     hintStyle: TextStyle(),
+          //     border: OutlineInputBorder(
+          //         borderRadius: BorderRadius.circular(5.0)),
+          //   ),
+          // ),
+        );
 
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
-        width: screenSize.width*0.64,
+        width: screenSize.width * 0.64,
         //color: Colors.blue,
-        padding: EdgeInsets.symmetric(vertical: 15,horizontal: 38),
+        padding: EdgeInsets.symmetric(vertical: 15, horizontal: 38),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              width: screenSize.width*0.2,
+              width: screenSize.width * 0.2,
               //color: Colors.grey,
               child: Text(
                 "Industry",
@@ -88,25 +111,27 @@ class _IndustryState extends State<Industry> {
                     fontWeight: FontWeight.bold),
               ),
             ),
-            Spacer(flex: 1,),
+            Spacer(
+              flex: 1,
+            ),
             Container(
-                width: screenSize.width*0.6,
+                width: screenSize.width * 0.6,
                 height: 374,
                 color: Colors.white70,
-                child: PaginatedDataTableDemo()
+                child: PaginatedDataTableDemo()),
+            Spacer(
+              flex: 1,
             ),
-            Spacer(flex: 1,),
             Container(
-              width: screenSize.width*0.6,
+              width: screenSize.width * 0.6,
               child: Row(
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 7,horizontal: 30),
-                    width: screenSize.width*0.47,
+                    padding: EdgeInsets.symmetric(vertical: 7, horizontal: 30),
+                    width: screenSize.width * 0.47,
                     height: 58,
                     //color: Colors.grey,
-                    child:
-                    TextFormField(
+                    child: TextFormField(
                       textAlign: TextAlign.start,
                       decoration: InputDecoration(
                         labelText: "Isi industri",
@@ -117,26 +142,28 @@ class _IndustryState extends State<Industry> {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 7,horizontal: 25),
-                    width: screenSize.width*0.1,
+                    padding: EdgeInsets.symmetric(vertical: 7, horizontal: 25),
+                    width: screenSize.width * 0.1,
                     height: 58,
                     //color: Colors.red,
-                    child: ElevatedButton(onPressed: ()async {
-                      final industri = await openDialog();
-                      if (industri == null || industri.isEmpty)
-                        return;
-                      setState(()=>this._model = industri);
-                    },
+                    child: ElevatedButton(
+                        onPressed: () async {
+                          final industri = await openDialog();
+                          if (industri == null || industri.isEmpty) return;
+                          setState(() => this._model = industri);
+                        },
                         child: Container(
-                          width: screenSize.width*0.08,
+                          width: screenSize.width * 0.08,
                           child: Row(
                             children: [
                               Container(
-                                  width: screenSize.width*0.017,
+                                  width: screenSize.width * 0.017,
                                   child: Icon(Icons.save)),
-                              Spacer(flex: 1,),
+                              Spacer(
+                                flex: 1,
+                              ),
                               Container(
-                                  width: screenSize.width*0.028,
+                                  width: screenSize.width * 0.028,
                                   child: Text('Save'))
                             ],
                           ),
@@ -162,10 +189,10 @@ class PaginatedDataTableDemo extends StatefulWidget {
 class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
     with RestorationMixin {
   final RestorableClientSelections _dessertSelections =
-  RestorableClientSelections();
+      RestorableClientSelections();
   final RestorableInt _rowIndex = RestorableInt(0);
   final RestorableInt _rowsPerPage =
-  RestorableInt(PaginatedDataTable.defaultRowsPerPage);
+      RestorableInt(PaginatedDataTable.defaultRowsPerPage);
   final RestorableBool _sortAscending = RestorableBool(true);
   final RestorableIntN _sortColumnIndex = RestorableIntN(null);
   late DessertDataSource _dessertsDataSource;
@@ -191,7 +218,8 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
         _dessertsDataSource.sort<num>((d) => d.nomer, _sortAscending.value);
         break;
       case 1:
-        _dessertsDataSource.sort<String>((d) => d.industri, _sortAscending.value);
+        _dessertsDataSource.sort<String>(
+            (d) => d.industri, _sortAscending.value);
         break;
       case 2:
         _dessertsDataSource.sort<String>((d) => d.post, _sortAscending.value);
@@ -199,18 +227,18 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
       case 3:
         _dessertsDataSource.sort<String>((d) => d.status, _sortAscending.value);
         break;
-    // case 4:
-    //   _dessertsDataSource.sort<Widget>((d) => d.button, _sortAscending.value);
-    //   break;
-    // case 5:
-    //   _dessertsDataSource.sort<num>((d) => d.sodium, _sortAscending.value);
-    //   break;
-    // case 6:
-    //   _dessertsDataSource.sort<num>((d) => d.calcium, _sortAscending.value);
-    //   break;
-    // case 7:
-    //   _dessertsDataSource.sort<num>((d) => d.iron, _sortAscending.value);
-    //   break;
+      // case 4:
+      //   _dessertsDataSource.sort<Widget>((d) => d.button, _sortAscending.value);
+      //   break;
+      // case 5:
+      //   _dessertsDataSource.sort<num>((d) => d.sodium, _sortAscending.value);
+      //   break;
+      // case 6:
+      //   _dessertsDataSource.sort<num>((d) => d.calcium, _sortAscending.value);
+      //   break;
+      // case 7:
+      //   _dessertsDataSource.sort<num>((d) => d.iron, _sortAscending.value);
+      //   break;
     }
     _dessertsDataSource.updateSelectedClients(_dessertSelections);
     _dessertsDataSource.addListener(_updateSelectedDessertRowListener);
@@ -231,10 +259,10 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
   }
 
   void sort<T>(
-      Comparable<T> Function(Client d) getField,
-      int columnIndex,
-      bool ascending,
-      ) {
+    Comparable<T> Function(Client d) getField,
+    int columnIndex,
+    bool ascending,
+  ) {
     _dessertsDataSource.sort<T>(getField, ascending);
     setState(() {
       _sortColumnIndex.value = columnIndex;
@@ -264,7 +292,6 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
         padding: const EdgeInsets.all(7),
         children: [
           PaginatedDataTable(
-
             rowsPerPage: _rowsPerPage.value,
             onRowsPerPageChanged: (value) {
               setState(() {
@@ -289,7 +316,6 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
               ),
               DataColumn(
                 label: const Text('Industri'),
-
                 onSort: (columnIndex, ascending) =>
                     sort<String>((d) => d.industri, columnIndex, ascending),
               ),
@@ -311,7 +337,6 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
                 // onSort: (columnIndex, ascending) =>
                 //     sort<Widget>((d) => d.button, columnIndex, ascending),
               ),
-
             ],
             source: _dessertsDataSource,
           ),

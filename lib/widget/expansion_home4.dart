@@ -11,17 +11,17 @@ class _ExpansionHome4State extends State<ExpansionHome4> {
         padding: EdgeInsets.all(5),
         child: ExpansionPanelList.radio(
           initialOpenPanelValue: 'Financial Services',
-          expansionCallback: (int index, bool isExpanded){
+          expansionCallback: (int index, bool isExpanded) {
             setState(() {
               items[index].isExpanded = !items[index].isExpanded;
             });
           },
-          children: items.map((ExpansionpanelItem item){
+          children: items.map((ExpansionpanelItem item) {
             return ExpansionPanelRadio(
               backgroundColor: Colors.grey[200],
               canTapOnHeader: true,
-                value: item.title,
-                headerBuilder: (BuildContext context, bool isExpanded){
+              value: item.title,
+              headerBuilder: (BuildContext context, bool isExpanded) {
                 return ListTile(
                   leading: item.leading,
                   selectedColor: Colors.red,
@@ -34,8 +34,8 @@ class _ExpansionHome4State extends State<ExpansionHome4> {
                     ),
                   ),
                 );
-                },
-                body: item.content,
+              },
+              body: item.content,
             );
           }).toList(),
         ),
@@ -45,12 +45,11 @@ class _ExpansionHome4State extends State<ExpansionHome4> {
 }
 
 List<ExpansionpanelItem> items = <ExpansionpanelItem>[
-
   ExpansionpanelItem(
       isExpanded: false,
       title: 'Non Financial Services',
       content: Padding(
-          padding: EdgeInsets.only( left: 20),
+          padding: EdgeInsets.only(left: 20),
           child: Column(children: <Widget>[
             _posisi('Ritel'),
             _posisi('Consumer packaged goods'),
@@ -64,12 +63,11 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
             _posisi('Telecomunications'),
           ])),
       leading: Icon(Icons.computer)),
-
   ExpansionpanelItem(
       isExpanded: false,
       title: 'Financial Services',
       content: Padding(
-          padding: EdgeInsets.only( left: 20),
+          padding: EdgeInsets.only(left: 20),
           child: Column(children: <Widget>[
             _posisi('Banking'),
             _posisi('Multifinance'),
@@ -77,12 +75,11 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
             _posisi('Financial Lending'),
           ])),
       leading: Icon(Icons.manage_accounts)),
-
   ExpansionpanelItem(
       isExpanded: false,
       title: 'Goverment and public sector',
       content: Padding(
-          padding: EdgeInsets.only( left: 20),
+          padding: EdgeInsets.only(left: 20),
           child: Column(children: <Widget>[
             _posisi('Goverment'),
             _posisi('State and local goverment'),
@@ -91,7 +88,6 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
           ])),
       leading: Icon(Icons.comment_outlined)),
 ];
-
 
 ListTile _posisi(String namaposisi) {
   return ListTile(
@@ -103,35 +99,19 @@ ListTile _posisi(String namaposisi) {
     title: Text(
       namaposisi,
       style: const TextStyle(
-          fontWeight: FontWeight.w500,
-          fontSize: 15,
-          letterSpacing: 1.2
-      ),
+          fontWeight: FontWeight.w500, fontSize: 15, letterSpacing: 1.2),
     ),
   );
 }
 
-
 class ExpansionpanelItem {
   ExpansionpanelItem(
       {required this.isExpanded,
-        required this.title,
-        required this.content,
-        required this.leading});
+      required this.title,
+      required this.content,
+      required this.leading});
   bool isExpanded;
   final String title;
   final Widget content;
   final Icon leading;
 }
-
-
-
-
-
-
-
-
-
-
-
-

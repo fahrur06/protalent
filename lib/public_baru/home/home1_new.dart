@@ -25,8 +25,7 @@ class HomeNew1 extends StatelessWidget {
           width: screenSize.width,
           height: screenSize.height * 0.65,
           padding: EdgeInsets.only(
-              right: screenSize.width * 0.48,
-              top: screenSize.height * 0.09),
+              right: screenSize.width * 0.48, top: screenSize.height * 0.09),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -80,17 +79,17 @@ class HomeNew1 extends StatelessWidget {
                   direction: Direction.horizontal,
                   offset: -0.2,
                   child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/contact');
-                      },
-                      child: Text(
-                        'CONTACT US',
-                        style: TextStyle(
-                            fontSize: 19,
-                            letterSpacing: 2,
-                            color: Colors.white,
-                        fontWeight: FontWeight.w500),
-                      ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/contact');
+                    },
+                    child: Text(
+                      'CONTACT US',
+                      style: TextStyle(
+                          fontSize: 19,
+                          letterSpacing: 2,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500),
+                    ),
                     style: DefaultColors(),
                   ),
                 ),
@@ -98,7 +97,6 @@ class HomeNew1 extends StatelessWidget {
             ],
           ),
         ),
-      
       ],
     );
   }

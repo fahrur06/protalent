@@ -8,7 +8,6 @@ import 'package:pro_talent/public/post/post_body.dart';
 import 'package:pro_talent/footer.dart';
 import 'package:pro_talent/widget/whatsapp.dart';
 
-
 class Post extends StatefulWidget {
   const Post({Key? key}) : super(key: key);
 
@@ -24,7 +23,8 @@ class _PostState extends State<Post> {
       floatingActionButton: WAChat(),
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? AppbarHomeSmall(screenSize)
-          : AppbarHomeLarge(screenSize, context, Colors.black,Colors.black,Colors.blue,Colors.black),
+          : AppbarHomeLarge(screenSize, context, Colors.black, Colors.black,
+              Colors.blue, Colors.black),
       body: ListView(
         children: [
           Container(
@@ -48,14 +48,14 @@ class _PostState extends State<Post> {
                         },
                         child: Text(
                           'Home',
-                          style: TextStyle(color: Colors.blue,fontSize: 16),
+                          style: TextStyle(color: Colors.blue, fontSize: 16),
                         ))),
                 Container(
                   padding: EdgeInsets.only(top: 1),
                   height: 20,
                   child: Text(
                     ' > ',
-                    style: TextStyle(color: Colors.blue,fontSize: 16),
+                    style: TextStyle(color: Colors.blue, fontSize: 16),
                   ),
                 ),
                 Container(
@@ -71,7 +71,7 @@ class _PostState extends State<Post> {
                       },
                       child: Text(
                         'News',
-                        style: TextStyle(color: Colors.blue,fontSize: 16),
+                        style: TextStyle(color: Colors.blue, fontSize: 16),
                       )),
                 )
               ],
@@ -124,12 +124,10 @@ class _PostState extends State<Post> {
                 ),
                 GridContainer(
                   HeadGrid: headgrid4,
-
                   ImageGrid: 'assets/images/bootcamp1.jpg',
                   BodyGrid: bodygrid4,
                   arah: PostBody(
                     Image: 'assets/images/bootcamp1.jpg',
-
                     HeadText: headgrid4,
                     Tanggal: tanggal4,
                     Bodyfull: bodyfull4,

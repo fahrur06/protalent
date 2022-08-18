@@ -51,8 +51,7 @@ class _Career2State extends State<Career2> {
                       fontSize: 17,
                       letterSpacing: 1.3,
                       height: 1.3,
-                      fontWeight: FontWeight.w500
-                  ),
+                      fontWeight: FontWeight.w500),
                 ),
               ),
               SizedBox(
@@ -68,8 +67,7 @@ class _Career2State extends State<Career2> {
                       fontSize: 17,
                       letterSpacing: 1.3,
                       height: 1.3,
-                      fontWeight: FontWeight.w500
-                  ),
+                      fontWeight: FontWeight.w500),
                 ),
               ),
               SizedBox(
@@ -113,7 +111,13 @@ class _Career2State extends State<Career2> {
                             direction: Direction.horizontal,
                             child: Text(
                               "PERMANENT POSITIONS",
-                              style: TextStyle(color: Colors.blueAccent,fontSize: 17,letterSpacing: 1.1,fontWeight: FontWeight.w600),textAlign: TextAlign.center,),
+                              style: TextStyle(
+                                  color: Colors.blueAccent,
+                                  fontSize: 17,
+                                  letterSpacing: 1.1,
+                                  fontWeight: FontWeight.w600),
+                              textAlign: TextAlign.center,
+                            ),
                           ),
                         ),
                         const SizedBox(
@@ -130,8 +134,9 @@ class _Career2State extends State<Career2> {
                               style: GoogleFonts.poppins(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500,
-                                  letterSpacing: 1.3,height: 1.4
-                              ),textAlign: TextAlign.center,
+                                  letterSpacing: 1.3,
+                                  height: 1.4),
+                              textAlign: TextAlign.center,
                             ),
                           ),
                         ),
@@ -172,7 +177,13 @@ class _Career2State extends State<Career2> {
                             direction: Direction.horizontal,
                             child: Text(
                               "CONTRACT-TO-HIRE",
-                              style: TextStyle(color: Colors.blueAccent,fontSize: 17,letterSpacing: 1.1,fontWeight: FontWeight.w600),textAlign: TextAlign.center,),
+                              style: TextStyle(
+                                  color: Colors.blueAccent,
+                                  fontSize: 17,
+                                  letterSpacing: 1.1,
+                                  fontWeight: FontWeight.w600),
+                              textAlign: TextAlign.center,
+                            ),
                           ),
                         ),
                         const SizedBox(
@@ -189,9 +200,9 @@ class _Career2State extends State<Career2> {
                               style: GoogleFonts.poppins(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500,
-                                  letterSpacing: 1.3,height: 1.4
-                              ),textAlign: TextAlign.center,
-
+                                  letterSpacing: 1.3,
+                                  height: 1.4),
+                              textAlign: TextAlign.center,
                             ),
                           ),
                         ),
@@ -232,7 +243,13 @@ class _Career2State extends State<Career2> {
                             direction: Direction.horizontal,
                             child: Text(
                               "PROJECT BASIS",
-                              style: TextStyle(color: Colors.blueAccent,fontSize: 17,letterSpacing: 1.1,fontWeight: FontWeight.w600),textAlign: TextAlign.center,),
+                              style: TextStyle(
+                                  color: Colors.blueAccent,
+                                  fontSize: 17,
+                                  letterSpacing: 1.1,
+                                  fontWeight: FontWeight.w600),
+                              textAlign: TextAlign.center,
+                            ),
                           ),
                         ),
                         const SizedBox(
@@ -249,8 +266,9 @@ class _Career2State extends State<Career2> {
                               style: GoogleFonts.poppins(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500,
-                                  letterSpacing: 1.3,height: 1.4
-                              ),textAlign: TextAlign.center,
+                                  letterSpacing: 1.3,
+                                  height: 1.4),
+                              textAlign: TextAlign.center,
                             ),
                           ),
                         ),
@@ -291,7 +309,13 @@ class _Career2State extends State<Career2> {
                             direction: Direction.horizontal,
                             child: Text(
                               "INTERNAL STAFF",
-                              style: TextStyle(color: Colors.blueAccent,fontSize: 17,letterSpacing: 1.1,fontWeight: FontWeight.w600),textAlign: TextAlign.center,),
+                              style: TextStyle(
+                                  color: Colors.blueAccent,
+                                  fontSize: 17,
+                                  letterSpacing: 1.1,
+                                  fontWeight: FontWeight.w600),
+                              textAlign: TextAlign.center,
+                            ),
                           ),
                         ),
                         const SizedBox(
@@ -308,8 +332,9 @@ class _Career2State extends State<Career2> {
                               style: GoogleFonts.poppins(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500,
-                                  letterSpacing: 1.3,height: 1.4
-                              ),textAlign: TextAlign.center,
+                                  letterSpacing: 1.3,
+                                  height: 1.4),
+                              textAlign: TextAlign.center,
                             ),
                           ),
                         ),

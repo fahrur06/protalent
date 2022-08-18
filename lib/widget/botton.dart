@@ -120,7 +120,9 @@ class _AlertFormState extends State<AlertForm> {
                         ),
                       ),
                     ),
-                    Spacer(flex: 1,),
+                    Spacer(
+                      flex: 1,
+                    ),
                     SizedBox(
                       width: 20,
                     ),
@@ -153,7 +155,9 @@ class _AlertFormState extends State<AlertForm> {
                         ),
                       ),
                     ),
-                    Spacer(flex: 1,),
+                    Spacer(
+                      flex: 1,
+                    ),
                     SizedBox(
                       width: 20,
                     ),
@@ -186,7 +190,9 @@ class _AlertFormState extends State<AlertForm> {
                         ),
                       ),
                     ),
-                    Spacer(flex: 1,),
+                    Spacer(
+                      flex: 1,
+                    ),
                     SizedBox(
                       width: 20,
                     ),
@@ -358,12 +364,12 @@ class ButtonAppbar_baru extends StatelessWidget {
         ),
         style: ButtonStyle(
           foregroundColor: MaterialStateProperty.resolveWith<Color>(
-                  (Set<MaterialState> states) {
-                if (states.contains(MaterialState.hovered))
-                  // ignore: curly_braces_in_flow_control_structures
-                  return Colors.blue;
-                return warna; // null throus error in flutter 2.2+.
-              }),
+              (Set<MaterialState> states) {
+            if (states.contains(MaterialState.hovered))
+              // ignore: curly_braces_in_flow_control_structures
+              return Colors.blue;
+            return warna; // null throus error in flutter 2.2+.
+          }),
         ),
       ),
     );

@@ -3,8 +3,6 @@ import 'package:side_navigation/side_navigation.dart';
 import 'package:pro_talent/client/talent_descrip.dart';
 import 'package:pro_talent/appbar/appbar_dashboard.dart';
 
-
-
 class SideMenuTalentClient extends StatefulWidget {
   const SideMenuTalentClient({Key? key}) : super(key: key);
 
@@ -13,13 +11,10 @@ class SideMenuTalentClient extends StatefulWidget {
 }
 
 class _SideMenuTalentClientState extends State<SideMenuTalentClient> {
-
   List<Widget> views = [
     SelectTalentClient(),
-
   ];
   int selectedIndex = 0;
-
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +39,8 @@ class _SideMenuTalentClientState extends State<SideMenuTalentClient> {
                       color: Colors.white,
                       fontSize: 18,
                       fontWeight: FontWeight.bold),
-                ),),
+                ),
+              ),
               subtitle: Container(),
               // subtitle: Text(
               //   'Admin Eksad',
@@ -65,7 +61,6 @@ class _SideMenuTalentClientState extends State<SideMenuTalentClient> {
                 icon: Icons.settings_applications,
                 label: 'My Employee',
               ),
-
             ],
             onTap: (index) {
               setState(() {
@@ -76,13 +71,13 @@ class _SideMenuTalentClientState extends State<SideMenuTalentClient> {
             // Make use of standard() constructor for other themes
             theme: SideNavigationBarTheme(
               backgroundColor:
-              //Color.fromARGB(200, 9, 47, 171),
-              Color.fromARGB(255, 18, 108, 178),
+                  //Color.fromARGB(200, 9, 47, 171),
+                  Color.fromARGB(255, 18, 108, 178),
               togglerTheme: SideNavigationBarTogglerTheme(
-                  shrinkIconColor: Colors.white,
-                  expandIconColor: Colors.white),
-              itemTheme:
-              SideNavigationBarItemTheme(selectedItemColor: Colors.white,unselectedItemColor: Colors.white60),
+                  shrinkIconColor: Colors.white, expandIconColor: Colors.white),
+              itemTheme: SideNavigationBarItemTheme(
+                  selectedItemColor: Colors.white,
+                  unselectedItemColor: Colors.white60),
               dividerTheme: SideNavigationBarDividerTheme.standard(),
             ),
           ),

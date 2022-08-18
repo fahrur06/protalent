@@ -204,13 +204,12 @@ class _Home4State extends State<Home4> {
                                 fontSize: 50, fontWeight: FontWeight.bold)),
                         TextFormField(
                           controller: nameController,
-                          decoration:
-                          const InputDecoration(hintText: 'Name'),
+                          decoration: const InputDecoration(hintText: 'Name'),
                         ),
                         TextFormField(
                           controller: phoneController,
                           decoration:
-                          const InputDecoration(hintText: 'Phone Number'),
+                              const InputDecoration(hintText: 'Phone Number'),
                         ),
                         TextFormField(
                           controller: emailController,
@@ -278,7 +277,8 @@ class _Home4State extends State<Home4> {
     );
   }
 
-  Future SendEmail(String name, String phone, String email, String message) async {
+  Future SendEmail(
+      String name, String phone, String email, String message) async {
     final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
     const serviceId = 'service_wava70j';
     const templateId = 'template_koc73cj';
@@ -291,7 +291,12 @@ class _Home4State extends State<Home4> {
           'service_id': serviceId,
           'template_id': templateId,
           'user_id': userId,
-          'template_params': {'from_name': name, 'from_phone': phone, 'to_email': email, 'message': message}
+          'template_params': {
+            'from_name': name,
+            'from_phone': phone,
+            'to_email': email,
+            'message': message
+          }
         }));
     return response.statusCode;
   }

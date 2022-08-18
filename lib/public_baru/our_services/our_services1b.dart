@@ -19,12 +19,14 @@ class _OurServices1bState extends State<OurServices1b> {
       width: screenSize.width,
       color: Colors.white,
       child: Row(
-         crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Column(
             children: [
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               Container(
                 child: Text(
                   "Our Services",
@@ -44,15 +46,14 @@ class _OurServices1bState extends State<OurServices1b> {
                   "We adopt a simple approach - we listen. Our consultants listen to our candidates and our client. The consultants are match-makers and work to meet the needs of both the client and the candidate to make the perfect fit. Of course, please feel free to ask us about any blended solution that appeals to you and we will try to make it happen.",
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
-                    color: Color(0xff111111),
-                    fontSize: 17,
-                    letterSpacing: 1.3,
-                    height: 1.3,
-                      fontWeight: FontWeight.w500
-                  ),
+                      color: Color(0xff111111),
+                      fontSize: 17,
+                      letterSpacing: 1.3,
+                      height: 1.3,
+                      fontWeight: FontWeight.w500),
                 ),
               ),
-               SizedBox(
+              SizedBox(
                 height: 40,
               ),
               Row(
@@ -62,19 +63,17 @@ class _OurServices1bState extends State<OurServices1b> {
                     child: Column(
                       children: [
                         Container(
-                          padding: EdgeInsets.only(
-                              top: screenSize.height * 0.01),
+                          padding:
+                              EdgeInsets.only(top: screenSize.height * 0.01),
                           child: Animasi_Kiri_Kanan(
                             screenSize: screenSize,
                             widget: Container(
                               width: 60,
                               height: 60,
                               decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.circular(100),
+                                borderRadius: BorderRadius.circular(100),
                                 border: Border.all(
-                                    color: Color.fromARGB(
-                                        255, 4, 97, 184),
+                                    color: Color.fromARGB(255, 4, 97, 184),
                                     width: 1),
                                 image: DecorationImage(
                                   image: AssetImage(
@@ -94,10 +93,12 @@ class _OurServices1bState extends State<OurServices1b> {
                           child: ShowUpAnimation(
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
-                            child: Text(
-                              "RETAINED SEARCH",
-                              style: TextStyle(color: Colors.blueAccent,fontSize: 16,letterSpacing: 1.1,fontWeight: FontWeight.w600)
-                            ),
+                            child: Text("RETAINED SEARCH",
+                                style: TextStyle(
+                                    color: Colors.blueAccent,
+                                    fontSize: 16,
+                                    letterSpacing: 1.1,
+                                    fontWeight: FontWeight.w600)),
                           ),
                         ),
                         const SizedBox(
@@ -115,9 +116,9 @@ class _OurServices1bState extends State<OurServices1b> {
                               style: GoogleFonts.poppins(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500,
-                                  letterSpacing: 1.3,height: 1.4
-                              ),textAlign: TextAlign.center,
-
+                                  letterSpacing: 1.3,
+                                  height: 1.4),
+                              textAlign: TextAlign.center,
                             ),
                           ),
                         ),
@@ -129,19 +130,17 @@ class _OurServices1bState extends State<OurServices1b> {
                     child: Column(
                       children: [
                         Container(
-                          padding: EdgeInsets.only(
-                              top: screenSize.height * 0.01),
+                          padding:
+                              EdgeInsets.only(top: screenSize.height * 0.01),
                           child: Animasi_Kiri_Kanan(
                             screenSize: screenSize,
                             widget: Container(
                               width: 60,
                               height: 60,
                               decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.circular(100),
+                                borderRadius: BorderRadius.circular(100),
                                 border: Border.all(
-                                    color: Color.fromARGB(
-                                        255, 4, 97, 184),
+                                    color: Color.fromARGB(255, 4, 97, 184),
                                     width: 1),
                                 image: DecorationImage(
                                   image: AssetImage(
@@ -161,10 +160,12 @@ class _OurServices1bState extends State<OurServices1b> {
                           child: ShowUpAnimation(
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
-                            child: Text(
-                              "DEDICATED SERVICES",
-                              style: TextStyle(color: Colors.blueAccent,fontSize: 16,letterSpacing: 1.1,fontWeight: FontWeight.w600)
-                            ),
+                            child: Text("DEDICATED SERVICES",
+                                style: TextStyle(
+                                    color: Colors.blueAccent,
+                                    fontSize: 16,
+                                    letterSpacing: 1.1,
+                                    fontWeight: FontWeight.w600)),
                           ),
                         ),
                         const SizedBox(
@@ -182,9 +183,9 @@ class _OurServices1bState extends State<OurServices1b> {
                               style: GoogleFonts.poppins(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500,
-                                  letterSpacing: 1.3,height: 1.4
-                              ),textAlign: TextAlign.center,
-
+                                  letterSpacing: 1.3,
+                                  height: 1.4),
+                              textAlign: TextAlign.center,
                             ),
                           ),
                         ),
@@ -196,19 +197,17 @@ class _OurServices1bState extends State<OurServices1b> {
                     child: Column(
                       children: [
                         Container(
-                          padding: EdgeInsets.only(
-                              top: screenSize.height * 0.01),
+                          padding:
+                              EdgeInsets.only(top: screenSize.height * 0.01),
                           child: Animasi_Kiri_Kanan(
                             screenSize: screenSize,
                             widget: Container(
                               width: 60,
                               height: 60,
                               decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.circular(100),
+                                borderRadius: BorderRadius.circular(100),
                                 border: Border.all(
-                                    color: Color.fromARGB(
-                                        255, 4, 97, 184),
+                                    color: Color.fromARGB(255, 4, 97, 184),
                                     width: 1),
                                 image: DecorationImage(
                                   image: AssetImage(
@@ -228,10 +227,12 @@ class _OurServices1bState extends State<OurServices1b> {
                           child: ShowUpAnimation(
                             delayStart: Duration(seconds: 1),
                             direction: Direction.horizontal,
-                            child: Text(
-                              "CONTRACT SERVICES",
-                              style: TextStyle(color: Colors.blueAccent,fontSize: 16,letterSpacing: 1.1,fontWeight: FontWeight.w600)
-                            ),
+                            child: Text("CONTRACT SERVICES",
+                                style: TextStyle(
+                                    color: Colors.blueAccent,
+                                    fontSize: 16,
+                                    letterSpacing: 1.1,
+                                    fontWeight: FontWeight.w600)),
                           ),
                         ),
                         const SizedBox(
@@ -249,9 +250,9 @@ class _OurServices1bState extends State<OurServices1b> {
                               style: GoogleFonts.poppins(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500,
-                                  letterSpacing: 1.3,height: 1.4
-                              ),textAlign: TextAlign.center,
-
+                                  letterSpacing: 1.3,
+                                  height: 1.4),
+                              textAlign: TextAlign.center,
                             ),
                           ),
                         ),
@@ -263,19 +264,17 @@ class _OurServices1bState extends State<OurServices1b> {
                     child: Column(
                       children: [
                         Container(
-                          padding: EdgeInsets.only(
-                              top: screenSize.height * 0.01),
+                          padding:
+                              EdgeInsets.only(top: screenSize.height * 0.01),
                           child: Animasi_Kiri_Kanan(
                             screenSize: screenSize,
                             widget: Container(
                               width: 60,
                               height: 60,
                               decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.circular(100),
+                                borderRadius: BorderRadius.circular(100),
                                 border: Border.all(
-                                    color: Color.fromARGB(
-                                        255, 4, 97, 184),
+                                    color: Color.fromARGB(255, 4, 97, 184),
                                     width: 1),
                                 image: DecorationImage(
                                   image: AssetImage(
@@ -297,7 +296,12 @@ class _OurServices1bState extends State<OurServices1b> {
                             direction: Direction.horizontal,
                             child: Text(
                               "RECRUITMENT PROCESS OUTSOURCING",
-                              style: TextStyle(color: Colors.blueAccent,fontSize: 16,letterSpacing: 1.1,fontWeight: FontWeight.w600),textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Colors.blueAccent,
+                                  fontSize: 16,
+                                  letterSpacing: 1.1,
+                                  fontWeight: FontWeight.w600),
+                              textAlign: TextAlign.center,
                             ),
                           ),
                         ),
@@ -316,8 +320,9 @@ class _OurServices1bState extends State<OurServices1b> {
                               style: GoogleFonts.poppins(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500,
-                                  letterSpacing: 1.3,height: 1.4
-                              ),textAlign: TextAlign.center,
+                                  letterSpacing: 1.3,
+                                  height: 1.4),
+                              textAlign: TextAlign.center,
                             ),
                           ),
                         ),

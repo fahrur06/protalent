@@ -13,7 +13,7 @@ class MasterData extends StatefulWidget {
   State<MasterData> createState() => _MasterDataState();
 }
 
-Container _container(String judul){
+Container _container(String judul) {
   return Container(
     child: Text(judul),
   );
@@ -21,13 +21,7 @@ Container _container(String judul){
 
 class _MasterDataState extends State<MasterData> {
   //position , skill , level , industry, location
-  List<Widget> views = [
-    Position(),
-    Skill(),
-    Level(),
-    Industry(),
-    Location()
-  ];
+  List<Widget> views = [Position(), Skill(), Level(), Industry(), Location()];
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -53,16 +47,23 @@ class _MasterDataState extends State<MasterData> {
                   Container(
                     decoration: BoxDecoration(
                       color: Color.fromARGB(255, 18, 108, 178),
-                      border: Border(bottom: BorderSide(color: Colors.white),
+                      border: Border(
+                        bottom: BorderSide(color: Colors.white),
                       ),
 
                       //borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20),),
                     ),
-                    padding: EdgeInsets.only(top: 27,left: 35),
+                    padding: EdgeInsets.only(top: 27, left: 35),
                     height: 95,
                     width: 1200,
-                    child: Text('Master Data',style: TextStyle(
-                        fontSize: 35,color: Colors.white,fontWeight: FontWeight.bold,letterSpacing: 2),),
+                    child: Text(
+                      'Master Data',
+                      style: TextStyle(
+                          fontSize: 35,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 2),
+                    ),
                   ),
                   Container(
                     height: 503,
@@ -103,7 +104,7 @@ class _MasterDataState extends State<MasterData> {
                             );
                           },
                           theme: SideNavigationBarTheme(
-                           // backgroundColor: Color.fromARGB(200, 9, 47, 171),
+                            // backgroundColor: Color.fromARGB(200, 9, 47, 171),
                             backgroundColor: Color.fromARGB(255, 18, 108, 178),
                             togglerTheme: SideNavigationBarTogglerTheme(
                                 shrinkIconColor: Colors.white,

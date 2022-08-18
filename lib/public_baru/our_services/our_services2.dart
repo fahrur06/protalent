@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pro_talent/widget/expansion_ourservices2.dart';
 
-
 class OurServices2 extends StatefulWidget {
   const OurServices2({Key? key}) : super(key: key);
 
@@ -16,7 +15,7 @@ class _OurServices2State extends State<OurServices2> {
     var screenSize = MediaQuery.of(context).size;
     return Container(
       height: 700,
-      width: screenSize.width ,
+      width: screenSize.width,
       child: Column(
         children: [
           Container(
@@ -25,21 +24,23 @@ class _OurServices2State extends State<OurServices2> {
             width: screenSize.width,
             child: Column(
               children: <Widget>[
-                SizedBox(height: 15,),
-                Text('Technologies Experties',
+                SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  'Technologies Experties',
                   style: GoogleFonts.poppins(
                       fontSize: 36,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                    letterSpacing: 1.3
-                  ),
+                      letterSpacing: 1.3),
                 ),
-                SizedBox(height: 15,),
-                Text('Our Talent',
-                  style: GoogleFonts.poppins(
-                      fontSize: 18,
-                    color: Colors.white
-                  ),
+                SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  'Our Talent',
+                  style: GoogleFonts.poppins(fontSize: 18, color: Colors.white),
                 ),
               ],
             ),
@@ -47,12 +48,11 @@ class _OurServices2State extends State<OurServices2> {
           Container(
             padding: EdgeInsets.only(top: 20),
             color: Colors.white,
-            width: screenSize.width*0.6,
+            width: screenSize.width * 0.6,
             child: ExpansionOurServices2(),
           )
         ],
       ),
     );
-
   }
 }

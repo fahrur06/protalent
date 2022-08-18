@@ -45,12 +45,13 @@ class _SideMenuState extends State<SideMenu> {
               title: Container(
                 padding: EdgeInsets.only(left: 10),
                 child: Text(
-              'Fahrur Huzain',
-              style: TextStyle(
-              color: Colors.white,
-              fontSize: 18,
-              fontWeight: FontWeight.bold),
-              ),),
+                  'Fahrur Huzain',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
               subtitle: Container(),
               // subtitle: Text(
               //   'Admin Eksad',
@@ -97,13 +98,13 @@ class _SideMenuState extends State<SideMenu> {
             // Make use of standard() constructor for other themes
             theme: SideNavigationBarTheme(
               backgroundColor:
-              //Color.fromARGB(200, 9, 47, 171),
-              Color.fromARGB(255, 18, 108, 178),
+                  //Color.fromARGB(200, 9, 47, 171),
+                  Color.fromARGB(255, 18, 108, 178),
               togglerTheme: SideNavigationBarTogglerTheme(
-                  shrinkIconColor: Colors.white,
-                  expandIconColor: Colors.white),
-              itemTheme:
-                  SideNavigationBarItemTheme(selectedItemColor: Colors.white,unselectedItemColor: Colors.white60),
+                  shrinkIconColor: Colors.white, expandIconColor: Colors.white),
+              itemTheme: SideNavigationBarItemTheme(
+                  selectedItemColor: Colors.white,
+                  unselectedItemColor: Colors.white60),
               dividerTheme: SideNavigationBarDividerTheme.standard(),
             ),
           ),

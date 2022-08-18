@@ -13,20 +13,23 @@ class _Talent3State extends State<Talent3> {
     var screenSize = MediaQuery.of(context).size;
     return Container(
       width: screenSize.width,
-      height: screenSize.height*0.2,
+      height: screenSize.height * 0.2,
       //color: Colors.grey,
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: screenSize.width*0.273,vertical: 53),
-        width: screenSize.width*0.5,
-        height: screenSize.height*0.05,
+        padding: EdgeInsets.symmetric(
+            horizontal: screenSize.width * 0.273, vertical: 53),
+        width: screenSize.width * 0.5,
+        height: screenSize.height * 0.05,
         //: Colors.blue,
         child: TextButton(
-          onPressed: (){},
-          child: Text('Discover more about Industries in ProTalent',
+          onPressed: () {},
+          child: Text(
+            'Discover more about Industries in ProTalent',
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 35,
-            ),),
+            ),
+          ),
           style: TextButton.styleFrom(
             primary: Color.fromARGB(255, 0, 17, 255),
             shadowColor: Colors.white,

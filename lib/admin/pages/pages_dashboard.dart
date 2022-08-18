@@ -28,7 +28,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
     return Container(
       height: 2000,
       width: screenSize.width,
-      padding: const EdgeInsets.only(left: 100,right: 100),
+      padding: const EdgeInsets.only(left: 100, right: 100),
       color: const Color.fromRGBO(238, 224, 224, 1),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,7 +56,6 @@ class _PagesDashboardState extends State<PagesDashboard> {
               children: [
                 TextButton(
                   style: TextButton.styleFrom(
-
                     primary: Colors.black,
                     textStyle: const TextStyle(fontSize: 15),
                   ),
@@ -78,12 +77,12 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       prefixIcon: const Icon(Icons.search),
                       enabledBorder: OutlineInputBorder(
                         borderSide:
-                        const BorderSide(width: 1, color: Colors.blue),
+                            const BorderSide(width: 1, color: Colors.blue),
                         borderRadius: BorderRadius.circular(5),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderSide:
-                        const BorderSide(width: 1, color: Colors.blue),
+                            const BorderSide(width: 1, color: Colors.blue),
                         borderRadius: BorderRadius.circular(5),
                       ),
                     ),
@@ -123,7 +122,6 @@ class _PagesDashboardState extends State<PagesDashboard> {
                     ],
                   ),
                 ),
-
               ],
             ),
           ),
@@ -133,10 +131,11 @@ class _PagesDashboardState extends State<PagesDashboard> {
                 flex: 6,
               ),
               Text("3 items"),
-
             ],
           ),
-          SizedBox(height: 10,),
+          SizedBox(
+            height: 10,
+          ),
           Container(
             color: Colors.white,
             height: 300,
@@ -149,295 +148,274 @@ class _PagesDashboardState extends State<PagesDashboard> {
               minWidth: 600,
               columns: [
                 DataColumn2(
-                  label: Text('Title',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold
-                    ),
+                  label: Text(
+                    'Title',
+                    style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   size: ColumnSize.M,
                 ),
                 DataColumn(
-                  label: Text('Author',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold
-                    ),
+                  label: Text(
+                    'Author',
+                    style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
                 DataColumn(
-                  label: Text('Detail',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold
-                    ),
+                  label: Text(
+                    'Detail',
+                    style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
               rows: [
                 DataRow(cells: [
-                  DataCell(
-                      Container(
-                        // padding: EdgeInsets.only(top: 10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                  DataCell(Container(
+                    // padding: EdgeInsets.only(top: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
                           children: [
-                            Row(
-
+                            Image(
+                              image: AssetImage('assets/icons/home.png'),
+                              height: 35,
+                              width: 35,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Image(image: AssetImage
-                                  ('assets/icons/home.png'),
-                                  height: 35,
-                                  width: 35,
+                                // SizedBox(height: 10,width: 10,),
+                                Text(
+                                  '     About',
+                                  style: TextStyle(
+                                      color: Color.fromARGB(255, 0, 0, 139)),
                                 ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                Row(
                                   children: [
-                                    // SizedBox(height: 10,width: 10,),
-                                    Text('     About',
-                                      style: TextStyle(
-                                          color: Color.fromARGB(255, 0, 0, 139)
-                                      ),),
-                                    Row(
-                                      children: [
-                                        // Text('Edit'),
-                                        TextButton(
-                                          onPressed: (){
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>ContactUs(),
-                                                )
-                                            );
-                                          },
-                                          child: Text('Edit',
-                                            style: TextStyle(
-                                                color: Colors.black
-                                            ),
-                                          ),
-                                        ),
-                                        TextButton(
-                                          onPressed: (){
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>ContactUs(),
-                                                )
-                                            );
-                                          },
-                                          child: Text('Remove',
-                                            style: TextStyle(
-                                                color: Colors.black
-                                            ),
-                                          ),
-                                        ),
-                                        TextButton(
-                                          onPressed: (){
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>ContactUs(),
-                                                )
-                                            );
-                                          },
-                                          child: Text('View',
-                                            style: TextStyle(
-                                                color: Colors.black
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    )
+                                    // Text('Edit'),
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) => ContactUs(),
+                                            ));
+                                      },
+                                      child: Text(
+                                        'Edit',
+                                        style: TextStyle(color: Colors.black),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) => ContactUs(),
+                                            ));
+                                      },
+                                      child: Text(
+                                        'Remove',
+                                        style: TextStyle(color: Colors.black),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) => ContactUs(),
+                                            ));
+                                      },
+                                      child: Text(
+                                        'View',
+                                        style: TextStyle(color: Colors.black),
+                                      ),
+                                    ),
                                   ],
                                 )
                               ],
-                            ),
-
+                            )
                           ],
                         ),
-                      )
-                  ),
-                  DataCell(Text('Admin',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 0, 0, 139)
+                      ],
                     ),
-                  ),),
-                  DataCell(Text('2022-06-18'),),
+                  )),
+                  DataCell(
+                    Text(
+                      'Admin',
+                      style: TextStyle(color: Color.fromARGB(255, 0, 0, 139)),
+                    ),
+                  ),
+                  DataCell(
+                    Text('2022-06-18'),
+                  ),
                 ]),
                 DataRow(cells: [
-                  DataCell(
-                      Container(
-                        // padding: EdgeInsets.only(top: 10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                  DataCell(Container(
+                    // padding: EdgeInsets.only(top: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
                           children: [
-                            Row(
-
+                            Image(
+                              image: AssetImage('assets/icons/home.png'),
+                              height: 35,
+                              width: 35,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Image(image: AssetImage
-                                  ('assets/icons/home.png'),
-                                  height: 35,
-                                  width: 35,
+                                // SizedBox(height: 10,width: 10,),
+                                Text(
+                                  '     News',
+                                  style: TextStyle(
+                                      color: Color.fromARGB(255, 0, 0, 139)),
                                 ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                Row(
                                   children: [
-                                    // SizedBox(height: 10,width: 10,),
-                                    Text('     News',
-                                      style: TextStyle(
-                                          color: Color.fromARGB(255, 0, 0, 139)
-                                      ),),
-                                    Row(
-                                      children: [
-                                        // Text('Edit'),
-                                        TextButton(
-                                          onPressed: (){
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>ContactUs(),
-                                                )
-                                            );
-                                          },
-                                          child: Text('Edit',
-                                            style: TextStyle(
-                                                color: Colors.black
-                                            ),
-                                          ),
-                                        ),
-                                        TextButton(
-                                          onPressed: (){
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>ContactUs(),
-                                                )
-                                            );
-                                          },
-                                          child: Text('Remove',
-                                            style: TextStyle(
-                                                color: Colors.black
-                                            ),
-                                          ),
-                                        ),
-                                        TextButton(
-                                          onPressed: (){
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>ContactUs(),
-                                                )
-                                            );
-                                          },
-                                          child: Text('View',
-                                            style: TextStyle(
-                                                color: Colors.black
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    )
+                                    // Text('Edit'),
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) => ContactUs(),
+                                            ));
+                                      },
+                                      child: Text(
+                                        'Edit',
+                                        style: TextStyle(color: Colors.black),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) => ContactUs(),
+                                            ));
+                                      },
+                                      child: Text(
+                                        'Remove',
+                                        style: TextStyle(color: Colors.black),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) => ContactUs(),
+                                            ));
+                                      },
+                                      child: Text(
+                                        'View',
+                                        style: TextStyle(color: Colors.black),
+                                      ),
+                                    ),
                                   ],
                                 )
                               ],
-                            ),
-
+                            )
                           ],
                         ),
-                      )
-                  ),
-                  DataCell(Text('Admin',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 0, 0, 139)
+                      ],
                     ),
-                  ),),
-                  DataCell(Text('2022-06-18'),),
+                  )),
+                  DataCell(
+                    Text(
+                      'Admin',
+                      style: TextStyle(color: Color.fromARGB(255, 0, 0, 139)),
+                    ),
+                  ),
+                  DataCell(
+                    Text('2022-06-18'),
+                  ),
                 ]),
                 DataRow(cells: [
-                  DataCell(
-                      Container(
-                        // padding: EdgeInsets.only(top: 10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                  DataCell(Container(
+                    // padding: EdgeInsets.only(top: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
                           children: [
-                            Row(
-
+                            Image(
+                              image: AssetImage('assets/icons/home.png'),
+                              height: 35,
+                              width: 35,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Image(image: AssetImage
-                                  ('assets/icons/home.png'),
-                                  height: 35,
-                                  width: 35,
+                                // SizedBox(height: 10,width: 10,),
+                                Text(
+                                  '     Contact',
+                                  style: TextStyle(
+                                      color: Color.fromARGB(255, 0, 0, 139)),
                                 ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                Row(
                                   children: [
-                                    // SizedBox(height: 10,width: 10,),
-                                    Text('     Contact',
-                                      style: TextStyle(
-                                          color: Color.fromARGB(255, 0, 0, 139)
-                                      ),),
-                                    Row(
-                                      children: [
-                                        // Text('Edit'),
-                                        TextButton(
-                                          onPressed: (){
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>ContactUs(),
-                                                )
-                                            );
-                                          },
-                                          child: Text('Edit',
-                                            style: TextStyle(
-                                                color: Colors.black
-                                            ),
-                                          ),
-                                        ),
-                                        TextButton(
-                                          onPressed: (){
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>ContactUs(),
-                                                )
-                                            );
-                                          },
-                                          child: Text('Remove',
-                                            style: TextStyle(
-                                                color: Colors.black
-                                            ),
-                                          ),
-                                        ),
-                                        TextButton(
-                                          onPressed: (){
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>ContactUs(),
-                                                )
-                                            );
-                                          },
-                                          child: Text('View',
-                                            style: TextStyle(
-                                                color: Colors.black
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    )
+                                    // Text('Edit'),
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) => ContactUs(),
+                                            ));
+                                      },
+                                      child: Text(
+                                        'Edit',
+                                        style: TextStyle(color: Colors.black),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) => ContactUs(),
+                                            ));
+                                      },
+                                      child: Text(
+                                        'Remove',
+                                        style: TextStyle(color: Colors.black),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) => ContactUs(),
+                                            ));
+                                      },
+                                      child: Text(
+                                        'View',
+                                        style: TextStyle(color: Colors.black),
+                                      ),
+                                    ),
                                   ],
                                 )
                               ],
-                            ),
-
+                            )
                           ],
                         ),
-                      )
-                  ),
-                  DataCell(Text('Admin',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 0, 0, 139)
+                      ],
                     ),
-                  ),),
-                  DataCell(Text('2022-06-18'),),
+                  )),
+                  DataCell(
+                    Text(
+                      'Admin',
+                      style: TextStyle(color: Color.fromARGB(255, 0, 0, 139)),
+                    ),
+                  ),
+                  DataCell(
+                    Text('2022-06-18'),
+                  ),
                 ]),
               ],
             ),

@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
-
 class GridContainer extends StatelessWidget {
   const GridContainer(
       {Key? key,
-        required this.HeadGrid,
-        required this.ImageGrid,
-        required this.BodyGrid,
-        required this.arah})
+      required this.HeadGrid,
+      required this.ImageGrid,
+      required this.BodyGrid,
+      required this.arah})
       : super(key: key);
   final String HeadGrid;
   final String ImageGrid;

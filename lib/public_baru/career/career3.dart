@@ -64,7 +64,6 @@ class Career3 extends StatelessWidget {
           Spacer(
             flex: 1,
           ),
-
           Container(
             height: 40,
             width: screenSize.width * 0.10,
@@ -81,7 +80,6 @@ class Career3 extends StatelessWidget {
                   ),
               onPressed: () {
                 _launchURL();
-
               },
               child: Text("APPLY NOW", style: TextStyle(fontSize: 17)),
             ),
