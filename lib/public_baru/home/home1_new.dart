@@ -65,7 +65,7 @@ class HomeNew1 extends StatelessWidget {
                         fontSize: 17,
                         letterSpacing: 2,
                         height: 1.5,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w500,
                         color: Colors.white),
                     textAlign: TextAlign.center,
                   ),
