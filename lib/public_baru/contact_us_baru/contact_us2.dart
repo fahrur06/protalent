@@ -51,13 +51,13 @@ class ContactUs2 extends StatelessWidget {
                     flex: 1,
                   ),
                   Container(
-                    height: screenSize.height*0.2,
+                    height: screenSize.height * 0.2,
                     child: const Text(
                         'Yes, you need '
-                            '\n'
-                            'an outsourcing partner '
-                            '\n'
-                            'you can trust and thrive with',
+                        '\n'
+                        'an outsourcing partner '
+                        '\n'
+                        'you can trust and thrive with',
                         textAlign: TextAlign.justify,
                         style: TextStyle(
                             color: Colors.white,
@@ -68,7 +68,7 @@ class ContactUs2 extends StatelessWidget {
                     flex: 1,
                   ),
                   Container(
-                    height: screenSize.height*0.15,
+                    height: screenSize.height * 0.15,
                     child: const Text(
                         'Go for the one who knows what they are doing, those who you share values with, '
                         'and those who will celebrate your success, and help you win over your biggest challenges. '
@@ -122,7 +122,7 @@ class ContactUs2 extends StatelessWidget {
                         fillColor: Colors.white,
                         filled: true,
                         enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8),
+                          borderRadius: BorderRadius.zero,
                           borderSide:
                               const BorderSide(width: 1, color: Colors.white),
                         ),
@@ -173,12 +173,12 @@ class ContactUs2 extends StatelessWidget {
                             fillColor: Colors.white,
                             filled: true,
                             enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(8),
+                              borderRadius: BorderRadius.zero,
                               borderSide: const BorderSide(
                                   width: 1, color: Colors.white),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(8),
+                              borderRadius: BorderRadius.zero,
                               borderSide: const BorderSide(
                                   width: 1, color: Colors.white),
                             ),
@@ -197,12 +197,12 @@ class ContactUs2 extends StatelessWidget {
                             fillColor: Colors.white,
                             filled: true,
                             enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(8),
+                              borderRadius: BorderRadius.zero,
                               borderSide: const BorderSide(
                                   width: 1, color: Colors.white),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(8),
+                              borderRadius: BorderRadius.zero,
                               borderSide: const BorderSide(
                                   width: 1, color: Colors.white),
                             ),
@@ -233,12 +233,12 @@ class ContactUs2 extends StatelessWidget {
                         fillColor: Colors.white,
                         filled: true,
                         enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8),
+                          borderRadius: BorderRadius.zero,
                           borderSide:
                               const BorderSide(width: 1, color: Colors.white),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8),
+                          borderRadius: BorderRadius.zero,
                           borderSide:
                               const BorderSide(width: 1, color: Colors.white),
                         ),
@@ -260,8 +260,6 @@ class ContactUs2 extends StatelessWidget {
                     width: 100,
                     child: TextButton(
                       style: Btn_Submit(),
-
-
                       onPressed: () async {
                         if (_formKey.currentState!.validate()) {
                           final response = await SendEmail(

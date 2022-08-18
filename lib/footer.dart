@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Footer extends StatelessWidget {
@@ -235,7 +236,7 @@ class Footer extends StatelessWidget {
 
                   Container(
                       width: screenSize.width * 0.25,
-                      height: screenSize.height * 0.65,
+                      height: screenSize.height * 0.6,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -251,7 +252,7 @@ class Footer extends StatelessWidget {
                                   letterSpacing: 1.5),
                             ),
                           ),
-
+                          SizedBox(height: 8),
 
                           Container(
                             width: screenSize.width * 0.164,
@@ -267,7 +268,7 @@ class Footer extends StatelessWidget {
                                 child: Container(
                                   height: screenSize.height*0.04,
                                   child: Text('(021) 5795 - 8040',
-                                    style: TextStyle(
+                                    style: GoogleFonts.poppins(
                                       fontSize: 17,
                                       color: Colors.black87,
                                     ),
@@ -278,7 +279,7 @@ class Footer extends StatelessWidget {
                           ),
 
                           Container(
-                            width: screenSize.width * 0.16,
+                            width: screenSize.width * 0.17,
                             child: ListTile(
                               leading: Icon(
                                 Icons.mail,
@@ -286,12 +287,12 @@ class Footer extends StatelessWidget {
                               ),
                               title: TextButton(
                                 onPressed: () {
-                                  launch('mailto:Info@eksad.com?subject=Hallo saya ingin bertanya tentang protalent');
+                                  launch('mailto:Hello@eksad.com?subject=Hello saya ingin bertanya tentang protalent');
                                 },
                                 child: Container(
                                   height: screenSize.height*0.04,
-                                  child: Text('Hallo@eksad.com',
-                                    style: TextStyle(
+                                  child: Text('Hello@eksad.com',
+                                    style: GoogleFonts.poppins(
                                         fontSize: 17,
                                         color: Colors.black87
                                     ),
@@ -310,14 +311,15 @@ class Footer extends StatelessWidget {
                                 size: 30,
                               ),
                               title: Container(
+                                padding: EdgeInsets.only(left: 14),
                                 width: screenSize.width * 0.25,
-                                height: screenSize.height*0.24,
+                                height: screenSize.height*0.22,
                                 child: Text(
                                 'PT. Tiga Daya Digital Indonesia \nThe East '
                                 'Tower 19th Floor \nJl. Dr. Ide Anak Agung '
                                 '\nGde Agung Blok E3.2 '
                                 '\nMega Kuningan, \nJakarta Selatan 12950',
-                                style: TextStyle(
+                                style: GoogleFonts.poppins(
                                     fontSize: 17,
                                     height: 1.6,
                                 ),textAlign: TextAlign.left,
@@ -362,7 +364,7 @@ class itemBawah extends StatelessWidget {
         },
         child: Text(
           item,
-          style: TextStyle(
+          style: GoogleFonts.poppins(
               color: Color(0xff1e5ea8),
               //decoration: TextDecoration.underline,
               fontSize: 17),
