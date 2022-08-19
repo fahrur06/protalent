@@ -205,7 +205,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('Edit'),
                                       ),
-                                      SizedBox(width: 20),
+                                      const SizedBox(width: 20),
                                       TextButton(
                                         style: TextButton.styleFrom(
                                           primary: Colors.blue[900],
@@ -215,7 +215,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('Remove'),
                                       ),
-                                      SizedBox(width: 20),
+                                      const SizedBox(width: 20),
                                       TextButton(
                                         style: TextButton.styleFrom(
                                           primary: Colors.blue[900],
@@ -225,7 +225,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('View'),
                                       ),
-                                      SizedBox(width: 20)
+                                      const SizedBox(width: 20)
                                     ],
                                   )
                                 ],
@@ -276,7 +276,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('Edit'),
                                       ),
-                                      SizedBox(width: 20),
+                                      const SizedBox(width: 20),
                                       TextButton(
                                         style: TextButton.styleFrom(
                                           primary: Colors.blue[900],
@@ -286,7 +286,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('Remove'),
                                       ),
-                                      SizedBox(width: 20),
+                                      const SizedBox(width: 20),
                                       TextButton(
                                         style: TextButton.styleFrom(
                                           primary: Colors.blue[900],
@@ -296,7 +296,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('View'),
                                       ),
-                                      SizedBox(width: 20)
+                                      const SizedBox(width: 20)
                                     ],
                                   )
                                 ],
@@ -347,7 +347,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('Edit'),
                                       ),
-                                      SizedBox(width: 20),
+                                      const SizedBox(width: 20),
                                       TextButton(
                                         style: TextButton.styleFrom(
                                           primary: Colors.blue[900],
@@ -357,7 +357,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('Remove'),
                                       ),
-                                      SizedBox(width: 20),
+                                      const SizedBox(width: 20),
                                       TextButton(
                                         style: TextButton.styleFrom(
                                           primary: Colors.blue[900],
@@ -367,7 +367,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('View'),
                                       ),
-                                      SizedBox(width: 20)
+                                      const SizedBox(width: 20)
                                     ],
                                   )
                                 ],
@@ -418,7 +418,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('Edit'),
                                       ),
-                                      SizedBox(height: 20, width: 20),
+                                      const SizedBox(height: 20, width: 20),
                                       TextButton(
                                         style: TextButton.styleFrom(
                                           primary: Colors.blue[900],
@@ -428,7 +428,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('Remove'),
                                       ),
-                                      SizedBox(height: 20, width: 20),
+                                      const SizedBox(height: 20, width: 20),
                                       TextButton(
                                         style: TextButton.styleFrom(
                                           primary: Colors.blue[900],
@@ -438,7 +438,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('View'),
                                       ),
-                                      SizedBox(height: 20, width: 20),
+                                      const SizedBox(height: 20, width: 20),
                                     ],
                                   )
                                 ],
@@ -489,7 +489,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('Edit'),
                                       ),
-                                      SizedBox(width: 20),
+                                      const SizedBox(width: 20),
                                       TextButton(
                                         style: TextButton.styleFrom(
                                           primary: Colors.blue[900],
@@ -499,7 +499,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('Remove'),
                                       ),
-                                      SizedBox(width: 20),
+                                      const SizedBox(width: 20),
                                       TextButton(
                                         style: TextButton.styleFrom(
                                           primary: Colors.blue[900],
@@ -509,7 +509,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('View'),
                                       ),
-                                      SizedBox(width: 20)
+                                      const SizedBox(width: 20)
                                     ],
                                   )
                                 ],
@@ -560,7 +560,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('Edit'),
                                       ),
-                                      SizedBox(width: 20),
+                                      const SizedBox(width: 20),
                                       TextButton(
                                         style: TextButton.styleFrom(
                                           primary: Colors.blue[900],
@@ -570,7 +570,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('Remove'),
                                       ),
-                                      SizedBox(width: 20),
+                                      const SizedBox(width: 20),
                                       TextButton(
                                         style: TextButton.styleFrom(
                                           primary: Colors.blue[900],
@@ -580,7 +580,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('View'),
                                       ),
-                                      SizedBox(width: 20)
+                                      const SizedBox(width: 20)
                                     ],
                                   )
                                 ],
@@ -631,7 +631,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('Edit'),
                                       ),
-                                      SizedBox(width: 20),
+                                      const SizedBox(width: 20),
                                       TextButton(
                                         style: TextButton.styleFrom(
                                           primary: Colors.blue[900],
@@ -641,7 +641,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('Remove'),
                                       ),
-                                      SizedBox(width: 20),
+                                      const SizedBox(width: 20),
                                       TextButton(
                                         style: TextButton.styleFrom(
                                           primary: Colors.blue[900],
@@ -651,7 +651,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('View'),
                                       ),
-                                      SizedBox(width: 20)
+                                      const SizedBox(width: 20)
                                     ],
                                   )
                                 ],
@@ -702,7 +702,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('Edit'),
                                       ),
-                                      SizedBox(width: 20),
+                                      const SizedBox(width: 20),
                                       TextButton(
                                         style: TextButton.styleFrom(
                                           primary: Colors.blue[900],
@@ -712,7 +712,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('Remove'),
                                       ),
-                                      SizedBox(width: 20),
+                                      const SizedBox(width: 20),
                                       TextButton(
                                         style: TextButton.styleFrom(
                                           primary: Colors.blue[900],
@@ -722,7 +722,7 @@ class _PostDashboardState extends State<PostDashboard> {
                                         onPressed: () {},
                                         child: const Text('View'),
                                       ),
-                                      SizedBox(width: 20)
+                                      const SizedBox(width: 20)
                                     ],
                                   )
                                 ],

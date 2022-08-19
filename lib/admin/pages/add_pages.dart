@@ -13,7 +13,7 @@ class _AddPagesState extends State<AddPages> {
     return Container(
       child: TextButton(
         onPressed: () {},
-        child: Text(
+        child: const Text(
           "Publish",
           style: TextStyle(
             fontSize: 18,

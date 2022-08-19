@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/widget/addnew.dart';
-import 'package:pro_talent/widget/apply.dart';
-import 'package:pro_talent/widget/filter.dart';
+// import 'package:pro_talent/widget/apply.dart';
+// import 'package:pro_talent/widget/filter.dart';
 import 'package:pro_talent/admin/pages/add_pages.dart';
 import 'package:pro_talent/public/contact_us/ContactUs.dart';
 import 'package:data_table_2/data_table_2.dart';
@@ -38,7 +38,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
             child: Row(
               children: [
                 Container(
-                  child: Text(
+                  child: const Text(
                     'Pages    ',
                     style: TextStyle(
                       fontSize: 20,
@@ -62,7 +62,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                   onPressed: () {},
                   child: const Text("All (3)"),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 3,
                 ),
                 // const Text('All(4)',
@@ -126,14 +126,14 @@ class _PagesDashboardState extends State<PagesDashboard> {
             ),
           ),
           Row(
-            children: [
+            children: const [
               Spacer(
                 flex: 6,
               ),
               Text("3 items"),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Container(
@@ -146,7 +146,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
               dataRowHeight: 70,
               horizontalMargin: 10,
               minWidth: 600,
-              columns: [
+              columns: const [
                 DataColumn2(
                   label: Text(
                     'Title',
@@ -176,7 +176,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       children: [
                         Row(
                           children: [
-                            Image(
+                            const Image(
                               image: AssetImage('assets/icons/home.png'),
                               height: 35,
                               width: 35,
@@ -185,7 +185,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 // SizedBox(height: 10,width: 10,),
-                                Text(
+                                const Text(
                                   '     About',
                                   style: TextStyle(
                                       color: Color.fromARGB(255, 0, 0, 139)),
@@ -198,10 +198,11 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                         Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                              builder: (context) => ContactUs(),
+                                              builder: (context) =>
+                                                  const ContactUs(),
                                             ));
                                       },
-                                      child: Text(
+                                      child: const Text(
                                         'Edit',
                                         style: TextStyle(color: Colors.black),
                                       ),
@@ -211,10 +212,11 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                         Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                              builder: (context) => ContactUs(),
+                                              builder: (context) =>
+                                                  const ContactUs(),
                                             ));
                                       },
-                                      child: Text(
+                                      child: const Text(
                                         'Remove',
                                         style: TextStyle(color: Colors.black),
                                       ),
@@ -224,10 +226,11 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                         Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                              builder: (context) => ContactUs(),
+                                              builder: (context) =>
+                                                  const ContactUs(),
                                             ));
                                       },
-                                      child: Text(
+                                      child: const Text(
                                         'View',
                                         style: TextStyle(color: Colors.black),
                                       ),
@@ -241,13 +244,13 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       ],
                     ),
                   )),
-                  DataCell(
+                  const DataCell(
                     Text(
                       'Admin',
                       style: TextStyle(color: Color.fromARGB(255, 0, 0, 139)),
                     ),
                   ),
-                  DataCell(
+                  const DataCell(
                     Text('2022-06-18'),
                   ),
                 ]),
@@ -259,7 +262,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       children: [
                         Row(
                           children: [
-                            Image(
+                            const Image(
                               image: AssetImage('assets/icons/home.png'),
                               height: 35,
                               width: 35,
@@ -268,7 +271,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 // SizedBox(height: 10,width: 10,),
-                                Text(
+                                const Text(
                                   '     News',
                                   style: TextStyle(
                                       color: Color.fromARGB(255, 0, 0, 139)),
@@ -281,10 +284,11 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                         Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                              builder: (context) => ContactUs(),
+                                              builder: (context) =>
+                                                  const ContactUs(),
                                             ));
                                       },
-                                      child: Text(
+                                      child: const Text(
                                         'Edit',
                                         style: TextStyle(color: Colors.black),
                                       ),
@@ -294,10 +298,11 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                         Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                              builder: (context) => ContactUs(),
+                                              builder: (context) =>
+                                                  const ContactUs(),
                                             ));
                                       },
-                                      child: Text(
+                                      child: const Text(
                                         'Remove',
                                         style: TextStyle(color: Colors.black),
                                       ),
@@ -307,10 +312,11 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                         Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                              builder: (context) => ContactUs(),
+                                              builder: (context) =>
+                                                  const ContactUs(),
                                             ));
                                       },
-                                      child: Text(
+                                      child: const Text(
                                         'View',
                                         style: TextStyle(color: Colors.black),
                                       ),
@@ -324,13 +330,13 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       ],
                     ),
                   )),
-                  DataCell(
+                  const DataCell(
                     Text(
                       'Admin',
                       style: TextStyle(color: Color.fromARGB(255, 0, 0, 139)),
                     ),
                   ),
-                  DataCell(
+                  const DataCell(
                     Text('2022-06-18'),
                   ),
                 ]),
@@ -342,7 +348,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       children: [
                         Row(
                           children: [
-                            Image(
+                            const Image(
                               image: AssetImage('assets/icons/home.png'),
                               height: 35,
                               width: 35,
@@ -351,7 +357,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 // SizedBox(height: 10,width: 10,),
-                                Text(
+                                const Text(
                                   '     Contact',
                                   style: TextStyle(
                                       color: Color.fromARGB(255, 0, 0, 139)),
@@ -364,10 +370,11 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                         Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                              builder: (context) => ContactUs(),
+                                              builder: (context) =>
+                                                  const ContactUs(),
                                             ));
                                       },
-                                      child: Text(
+                                      child: const Text(
                                         'Edit',
                                         style: TextStyle(color: Colors.black),
                                       ),
@@ -377,10 +384,11 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                         Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                              builder: (context) => ContactUs(),
+                                              builder: (context) =>
+                                                  const ContactUs(),
                                             ));
                                       },
-                                      child: Text(
+                                      child: const Text(
                                         'Remove',
                                         style: TextStyle(color: Colors.black),
                                       ),
@@ -390,10 +398,11 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                         Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                              builder: (context) => ContactUs(),
+                                              builder: (context) =>
+                                                  const ContactUs(),
                                             ));
                                       },
-                                      child: Text(
+                                      child: const Text(
                                         'View',
                                         style: TextStyle(color: Colors.black),
                                       ),
@@ -407,13 +416,13 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       ],
                     ),
                   )),
-                  DataCell(
+                  const DataCell(
                     Text(
                       'Admin',
                       style: TextStyle(color: Color.fromARGB(255, 0, 0, 139)),
                     ),
                   ),
-                  DataCell(
+                  const DataCell(
                     Text('2022-06-18'),
                   ),
                 ]),

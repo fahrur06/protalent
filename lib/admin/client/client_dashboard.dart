@@ -13,7 +13,7 @@ class _ClientDashboardState extends State<ClientDashboard> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Color.fromRGBO(238, 224, 224, 1),
+      backgroundColor: const Color.fromRGBO(238, 224, 224, 1),
       body: Center(
         child: Container(
           //padding: EdgeInsets.symmetric(vertical: screenSize.height*0.1,horizontal: screenSize.width*0.2),
@@ -22,14 +22,14 @@ class _ClientDashboardState extends State<ClientDashboard> {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               border: Border.all(
-                  color: Color.fromARGB(255, 18, 108, 178), width: 20),
-              color: Color.fromARGB(255, 18, 108, 178)),
+                  color: const Color.fromARGB(255, 18, 108, 178), width: 20),
+              color: const Color.fromARGB(255, 18, 108, 178)),
 
           child: Column(
             children: [
               Container(
-                padding: EdgeInsets.only(top: 30, left: 50),
-                decoration: BoxDecoration(
+                padding: const EdgeInsets.only(top: 30, left: 50),
+                decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(20),
                       topLeft: Radius.circular(20)),
@@ -39,7 +39,7 @@ class _ClientDashboardState extends State<ClientDashboard> {
                 ),
                 width: screenSize.width * 0.7,
                 height: screenSize.height * 0.15,
-                child: Text(
+                child: const Text(
                   'Data Client',
                   style: TextStyle(
                       color: Colors.white,
@@ -69,7 +69,7 @@ class _ClientDashboardState extends State<ClientDashboard> {
                       width: screenSize.width * 0.63,
                       height: screenSize.height * 0.5,
                       color: Colors.white,
-                      child: PaginatedDataTableDemo()
+                      child: const PaginatedDataTableDemo()
 
                       // EasyTable<_client>(
                       //   _model,

@@ -17,17 +17,18 @@ class SelectTalent extends StatelessWidget {
               Container(
                 height: 210,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(20),
                   ),
                   //color: Color.fromARGB(200, 9, 47, 171),
-                  color: Color.fromARGB(200, 179, 183, 197),
+                  color: const Color.fromARGB(200, 179, 183, 197),
                   boxShadow: [
                     BoxShadow(
-                      color: Color.fromARGB(255, 10, 116, 255).withAlpha(60),
+                      color:
+                          const Color.fromARGB(255, 10, 116, 255).withAlpha(60),
                       blurRadius: 15.0,
                       spreadRadius: 10.0,
-                      offset: Offset(
+                      offset: const Offset(
                         0.0,
                         3.0,
                       ),
@@ -38,19 +39,19 @@ class SelectTalent extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Container(width: 20, child: Text('')),
+                    SizedBox(width: 20, child: const Text('')),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         Container(
-                            padding: EdgeInsets.only(bottom: 5),
+                            padding: const EdgeInsets.only(bottom: 5),
                             width: 300,
                             height: 70,
                             child: Column(
-                              children: [
+                              children: const [
                                 Text(
-                                  'Pahrur',
+                                  'Fahrur',
                                   style: TextStyle(
                                       fontSize: 30,
                                       color: Colors.black,
@@ -60,7 +61,7 @@ class SelectTalent extends StatelessWidget {
                                   height: 3,
                                 ),
                                 Text(
-                                  'Full Stack JavaScript Development',
+                                  'Full Stack Java Development',
                                   style: TextStyle(
                                       fontSize: 17, color: Colors.black),
                                 ),
@@ -79,10 +80,10 @@ class SelectTalent extends StatelessWidget {
                       ],
                     ),
                     Container(
-                      padding: EdgeInsets.only(top: 2),
+                      padding: const EdgeInsets.only(top: 2),
                       width: 180,
                       height: 60,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage('assets/logo/logo_protalent.png'),
                             fit: BoxFit.fill),
@@ -101,9 +102,9 @@ class SelectTalent extends StatelessWidget {
                       child: Column(
                         children: [
                           Container(
-                            padding: EdgeInsets.only(left: 35, top: 15),
+                            padding: const EdgeInsets.only(left: 35, top: 15),
                             width: 500,
-                            child: Text('Work Experience',
+                            child: const Text('Work Experience',
                                 style: TextStyle(
                                     decoration: TextDecoration.underline,
                                     fontSize: 30,
@@ -111,12 +112,12 @@ class SelectTalent extends StatelessWidget {
                                     letterSpacing: 2)),
                           ),
                           Container(
-                            padding: EdgeInsets.only(left: 15),
+                            padding: const EdgeInsets.only(left: 15),
                             width: 490,
                             height: 260,
                             child: Column(
                               children: [
-                                _workexp('PT. Selamat Sejahtera',
+                                _workexp('PT. Selamat Sejahtera Sentosa',
                                     'Jakarta Selatan', 'Mar 2015 - Mar 2018'),
                                 _workexp('Fahrur Tekstil Indonesia',
                                     'Jakarta Selatan', 'Apr 2018 - Juli 2022'),
@@ -142,7 +143,7 @@ class SelectTalent extends StatelessWidget {
                             //color: Colors.grey,
                             child: Text(
                               job2 + ' | ' + job3,
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 1.5),
@@ -163,7 +164,7 @@ class SelectTalent extends StatelessWidget {
                             width: 350,
                             height: 35,
                             //color: Colors.grey,
-                            child: Text(
+                            child: const Text(
                               'Biodata',
                               style: TextStyle(
                                   fontSize: 20,
@@ -191,13 +192,14 @@ class SelectTalent extends StatelessWidget {
                 height: 400,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
-                  color: Color.fromARGB(200, 179, 183, 197),
+                  color: const Color.fromARGB(200, 179, 183, 197),
                   boxShadow: [
                     BoxShadow(
-                      color: Color.fromARGB(200, 128, 132, 143).withAlpha(60),
+                      color: const Color.fromARGB(200, 128, 132, 143)
+                          .withAlpha(60),
                       blurRadius: 15.0,
                       spreadRadius: 15.0,
-                      offset: Offset(
+                      offset: const Offset(
                         0.0,
                         3.0,
                       ),
@@ -207,16 +209,16 @@ class SelectTalent extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                      padding: EdgeInsets.only(left: 10),
+                      padding: const EdgeInsets.only(left: 10),
                       width: 505,
                       child: Column(
                         children: [
                           Container(
-                            padding: EdgeInsets.only(left: 35, top: 15),
+                            padding: const EdgeInsets.only(left: 35, top: 15),
                             width: 505,
                             height: 55,
                             //color: Colors.red,
-                            child: Text('Education',
+                            child: const Text('Education',
                                 style: TextStyle(
                                     decoration: TextDecoration.underline,
                                     fontSize: 30,
@@ -224,7 +226,7 @@ class SelectTalent extends StatelessWidget {
                                     letterSpacing: 2)),
                           ),
                           Container(
-                            padding: EdgeInsets.only(right: 20),
+                            padding: const EdgeInsets.only(right: 20),
                             width: 490,
                             // color: Colors.white,
                             child: Column(
@@ -250,11 +252,11 @@ class SelectTalent extends StatelessWidget {
                       child: Column(
                         children: [
                           Container(
-                            padding: EdgeInsets.only(top: 15, left: 30),
+                            padding: const EdgeInsets.only(top: 15, left: 30),
                             width: 750,
                             height: 50,
                             //color: Colors.red,
-                            child: Text('Skills',
+                            child: const Text('Skills',
                                 style: TextStyle(
                                     decoration: TextDecoration.underline,
                                     fontSize: 30,
@@ -264,7 +266,7 @@ class SelectTalent extends StatelessWidget {
                           Row(
                             children: [
                               Container(
-                                padding: EdgeInsets.only(left: 15),
+                                padding: const EdgeInsets.only(left: 15),
                                 width: 400,
                                 child: Column(
                                   children: [
@@ -294,14 +296,14 @@ class SelectTalent extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
+              const SizedBox(
                 width: 1200,
                 height: 100,
               )
             ],
           ),
           Container(
-            padding: EdgeInsets.only(top: 60, left: 8),
+            padding: const EdgeInsets.only(top: 60, left: 8),
             width: 260,
             height: 210,
             //color: Colors.blueAccent,
@@ -312,7 +314,7 @@ class SelectTalent extends StatelessWidget {
                   height: 150,
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.black),
-                    image: DecorationImage(
+                    image: const DecorationImage(
                         image: AssetImage('assets/images/petrik.png'),
                         fit: BoxFit.contain),
                   ),
@@ -324,7 +326,7 @@ class SelectTalent extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: EdgeInsets.only(top: 10),
+                padding: const EdgeInsets.only(top: 10),
                 width: 90,
                 height: 35,
                 child: TextButton.icon(
@@ -332,31 +334,31 @@ class SelectTalent extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Dashboard(),
+                        builder: (context) => const Dashboard(),
                       ),
                     );
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.arrow_back,
                     color: Colors.black,
                   ),
-                  label: Text(
+                  label: const Text(
                     'Back',
                     style: TextStyle(color: Colors.black),
                   ),
                 ),
               ),
               Container(
-                padding: EdgeInsets.only(top: 10),
+                padding: const EdgeInsets.only(top: 10),
                 width: 120,
                 height: 35,
                 child: TextButton.icon(
                   onPressed: () {},
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.download_rounded,
                     color: Colors.black,
                   ),
-                  label: Text(
+                  label: const Text(
                     'Download',
                     style: TextStyle(color: Colors.black),
                   ),
@@ -394,8 +396,8 @@ ListTile _edukasi(String _pengalaman, String _tingkat, String _tanggal) {
   return ListTile(
     minLeadingWidth: 8,
     leading: Container(
-        padding: EdgeInsets.only(top: 7),
-        child: Icon(
+        padding: const EdgeInsets.only(top: 7),
+        child: const Icon(
           Icons.circle,
           size: 12,
           color: Colors.black,
@@ -414,8 +416,8 @@ ListTile _skills(String skill) {
   return ListTile(
     minLeadingWidth: 8,
     leading: Container(
-        padding: EdgeInsets.only(top: 7),
-        child: Icon(
+        padding: const EdgeInsets.only(top: 7),
+        child: const Icon(
           Icons.circle,
           size: 12,
           color: Colors.black,
@@ -435,7 +437,7 @@ ListTile _tempat(String tempat) {
       style: const TextStyle(
           fontWeight: FontWeight.w600, fontSize: 20, height: 1.5),
     ),
-    trailing: Icon(
+    trailing: const Icon(
       Icons.download_for_offline_outlined,
       color: Colors.black,
     ),
@@ -446,13 +448,13 @@ Row _rowpekerjaan(String _job, String _jabatan) {
   return Row(
     children: [
       Container(
-        padding: EdgeInsets.only(left: 15),
+        padding: const EdgeInsets.only(left: 15),
         width: 180,
         height: 20,
-        child: Text(_job, style: TextStyle(fontSize: 16)),
+        child: Text(_job, style: const TextStyle(fontSize: 16)),
       ),
       Container(
-        padding: EdgeInsets.only(top: 3),
+        padding: const EdgeInsets.only(top: 3),
         height: 25,
         child: Text(': ' + _jabatan),
       )
@@ -465,14 +467,14 @@ Row _rowdeskripsi(String _deskripsi) {
     children: [
       Container(
         width: 15,
-        child: Icon(
+        child: const Icon(
           Icons.circle,
           size: 12,
           color: Colors.black,
         ),
       ),
       Container(
-        padding: EdgeInsets.only(left: 7, top: 5),
+        padding: const EdgeInsets.only(left: 7, top: 5),
         width: 765,
         height: 25,
         child: Text(deskripsis),
@@ -490,7 +492,7 @@ ListTile _language(String _bahasa, String _rangeint, String _rangeint2) {
     ),
     subtitle: Text(
       'Bicara: ' + _rangeint + " | " + ' Menulis: ' + _rangeint2,
-      style: TextStyle(fontSize: 15),
+      style: const TextStyle(fontSize: 15),
     ),
   );
 }

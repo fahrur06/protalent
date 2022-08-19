@@ -21,15 +21,21 @@ Container _container(String judul) {
 
 class _MasterDataState extends State<MasterData> {
   //position , skill , level , industry, location
-  List<Widget> views = [Position(), Skill(), Level(), Industry(), Location()];
+  List<Widget> views = const [
+    Position(),
+    Skill(),
+    Level(),
+    Industry(),
+    Location()
+  ];
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(238, 224, 224, 1),
+      backgroundColor: const Color.fromRGBO(238, 224, 224, 1),
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           Center(
@@ -45,7 +51,7 @@ class _MasterDataState extends State<MasterData> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color.fromARGB(255, 18, 108, 178),
                       border: Border(
                         bottom: BorderSide(color: Colors.white),
@@ -53,10 +59,10 @@ class _MasterDataState extends State<MasterData> {
 
                       //borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20),),
                     ),
-                    padding: EdgeInsets.only(top: 27, left: 35),
+                    padding: const EdgeInsets.only(top: 27, left: 35),
                     height: 95,
                     width: 1200,
-                    child: Text(
+                    child: const Text(
                       'Master Data',
                       style: TextStyle(
                           fontSize: 35,
@@ -105,11 +111,12 @@ class _MasterDataState extends State<MasterData> {
                           },
                           theme: SideNavigationBarTheme(
                             // backgroundColor: Color.fromARGB(200, 9, 47, 171),
-                            backgroundColor: Color.fromARGB(255, 18, 108, 178),
-                            togglerTheme: SideNavigationBarTogglerTheme(
+                            backgroundColor:
+                                const Color.fromARGB(255, 18, 108, 178),
+                            togglerTheme: const SideNavigationBarTogglerTheme(
                                 shrinkIconColor: Colors.white,
                                 expandIconColor: Colors.white),
-                            itemTheme: SideNavigationBarItemTheme(
+                            itemTheme: const SideNavigationBarItemTheme(
                                 selectedItemColor: Colors.white),
                             dividerTheme:
                                 SideNavigationBarDividerTheme.standard(),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/appbar/appbar_dashboard.dart';
-import 'package:pro_talent/admin/dashboard/main_dashboard.dart';
+//import 'package:pro_talent/admin/dashboard/main_dashboard.dart';
 import 'package:side_navigation/side_navigation.dart';
 import 'package:pro_talent/admin/dashboard/desc_talent.dart';
 import 'package:pro_talent/admin/client/client_dashboard.dart';
@@ -10,7 +10,7 @@ import 'package:pro_talent/admin/master_data/master_data.dart';
 import 'package:pro_talent/admin/setting_dashboard.dart';
 import 'package:pro_talent/admin/talent_manage/talent_manage.dart';
 
-import '../../login.dart';
+//import '../../login.dart';
 
 class SideMenuTalent extends StatefulWidget {
   const SideMenuTalent({Key? key}) : super(key: key);
@@ -39,16 +39,16 @@ class _SideMenuTalentState extends State<SideMenuTalent> {
         children: [
           SideNavigationBar(
             header: SideNavigationBarHeader(
-              image: CircleAvatar(
+              image: const CircleAvatar(
+                radius: 20,
                 child: Icon(
                   Icons.person_pin,
                   size: 20,
                 ),
-                radius: 20,
               ),
               title: Container(
-                padding: EdgeInsets.only(left: 10),
-                child: Text(
+                padding: const EdgeInsets.only(left: 10),
+                child: const Text(
                   'Fahrur Huzain',
                   style: TextStyle(
                       color: Colors.white,
@@ -99,10 +99,10 @@ class _SideMenuTalentState extends State<SideMenuTalent> {
             theme: SideNavigationBarTheme(
               backgroundColor:
                   //Color.fromARGB(200, 9, 47, 171),
-                  Color.fromARGB(255, 18, 108, 178),
-              togglerTheme: SideNavigationBarTogglerTheme(
+                  const Color.fromARGB(255, 18, 108, 178),
+              togglerTheme: const SideNavigationBarTogglerTheme(
                   shrinkIconColor: Colors.white, expandIconColor: Colors.white),
-              itemTheme: SideNavigationBarItemTheme(
+              itemTheme: const SideNavigationBarItemTheme(
                   selectedItemColor: Colors.white,
                   unselectedItemColor: Colors.white60),
               dividerTheme: SideNavigationBarDividerTheme.standard(),

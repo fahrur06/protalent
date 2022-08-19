@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/conts_warna.dart';
-import 'package:pro_talent/admin/dashboard.dart';
+//import 'package:pro_talent/admin/dashboard.dart';
 import 'package:easy_table/easy_table.dart';
 import 'data_location.dart';
 
@@ -31,17 +31,17 @@ class _LocationState extends State<Location> {
 
     List<Lokasi> rows = [
       Lokasi(1, 'Head Product', '2022-07-18', 'ACTIVE',
-          TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
       Lokasi(2, 'Java Developer', '2022-01-01', 'ACTIVE',
-          TextButton(onPressed: () {}, child: Text('delete'))),
-      Lokasi(
-          3, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
-      Lokasi(
-          4, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
-      Lokasi(
-          5, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
-      Lokasi(
-          6, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      Lokasi(3, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      Lokasi(4, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      Lokasi(5, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      Lokasi(6, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
     ];
 
     _model = EasyTableModel<Lokasi>(rows: rows, columns: [
@@ -96,14 +96,14 @@ class _LocationState extends State<Location> {
       body: Container(
         width: screenSize.width * 0.64,
         //color: Colors.blue,
-        padding: EdgeInsets.symmetric(vertical: 15, horizontal: 38),
+        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 38),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               width: screenSize.width * 0.2,
               //color: Colors.grey,
-              child: Text(
+              child: const Text(
                 "Talent Location",
                 style: TextStyle(
                     fontSize: 30,
@@ -111,15 +111,15 @@ class _LocationState extends State<Location> {
                     fontWeight: FontWeight.bold),
               ),
             ),
-            Spacer(
+            const Spacer(
               flex: 1,
             ),
             Container(
                 width: screenSize.width * 0.6,
                 height: 374,
                 color: Colors.white70,
-                child: PaginatedDataTableDemo()),
-            Spacer(
+                child: const PaginatedDataTableDemo()),
+            const Spacer(
               flex: 1,
             ),
             Container(
@@ -127,7 +127,8 @@ class _LocationState extends State<Location> {
               child: Row(
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 7, horizontal: 30),
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 7, horizontal: 30),
                     width: screenSize.width * 0.47,
                     height: 58,
                     //color: Colors.grey,
@@ -135,14 +136,15 @@ class _LocationState extends State<Location> {
                       textAlign: TextAlign.start,
                       decoration: InputDecoration(
                         labelText: "Isi lokasi talent",
-                        hintStyle: TextStyle(),
+                        hintStyle: const TextStyle(),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0)),
                       ),
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 7, horizontal: 25),
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 7, horizontal: 25),
                     width: screenSize.width * 0.1,
                     height: 58,
                     //color: Colors.red,
@@ -158,13 +160,13 @@ class _LocationState extends State<Location> {
                             children: [
                               Container(
                                   width: screenSize.width * 0.017,
-                                  child: Icon(Icons.save)),
-                              Spacer(
+                                  child: const Icon(Icons.save)),
+                              const Spacer(
                                 flex: 1,
                               ),
                               Container(
                                   width: screenSize.width * 0.028,
-                                  child: Text('Save'))
+                                  child: const Text('Save'))
                             ],
                           ),
                         )),
@@ -330,8 +332,8 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
                 onSort: (columnIndex, ascending) =>
                     sort<String>((d) => d.status, columnIndex, ascending),
               ),
-              DataColumn(
-                label: const Text(''),
+              const DataColumn(
+                label: Text(''),
                 //numeric: true,
                 // onSort: (columnIndex, ascending) =>
                 //     sort<Widget>((d) => d.button, columnIndex, ascending),
