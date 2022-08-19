@@ -10,7 +10,7 @@ class Career1_2 extends StatelessWidget {
     return Container(
       width: screenSize.width * 0.5,
       height: 330,
-      color: Color.fromARGB(60, 190, 169, 169),
+      color: const Color.fromARGB(60, 190, 169, 169),
       padding: EdgeInsets.only(
         left: screenSize.width * 0.10,
         right: screenSize.width * 0.10,
@@ -19,7 +19,7 @@ class Career1_2 extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
           Container(
@@ -27,10 +27,10 @@ class Career1_2 extends StatelessWidget {
             child: Text('How do we help?',
                 style: GoogleFonts.poppins(
                     fontSize: 30,
-                    color: Color.fromARGB(255, 12, 66, 101),
+                    color: const Color.fromARGB(255, 12, 66, 101),
                     fontWeight: FontWeight.bold)),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
@@ -45,7 +45,7 @@ class Career1_2 extends StatelessWidget {
                     height: 1.3,
                     fontWeight: FontWeight.w500)),
           ),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
           Container(

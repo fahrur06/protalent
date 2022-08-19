@@ -27,7 +27,7 @@ class _OurTalentState extends State<OurTalent> {
           : AppbarHomeLarge(screenSize, context, Colors.black, Colors.blue,
               Colors.black, Colors.black),
       body: ListView(
-        children: [
+        children: const [
           Talent1(),
           Talent2(),
           Talent3(),

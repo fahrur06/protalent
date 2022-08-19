@@ -26,7 +26,7 @@ class _CareerState extends State<Career> {
             : AppbarHomeLarge(screenSize, context, Colors.black, Colors.black,
                 Colors.black, Colors.blue, Colors.black),
         body: ListView(
-          children: [
+          children: const [
             Career1(),
             Career1_2(),
             Career2(),

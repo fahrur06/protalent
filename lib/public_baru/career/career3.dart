@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pro_talent/login.dart';
+// import 'package:pro_talent/login.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Career3 extends StatelessWidget {
@@ -11,7 +11,7 @@ class Career3 extends StatelessWidget {
     var screenSize = MediaQuery.of(context).size;
 
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           gradient: LinearGradient(
         colors: <Color>[
           Color(0xff137fc2),
@@ -31,7 +31,7 @@ class Career3 extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Spacer(
+          const Spacer(
             flex: 1,
           ),
           Container(
@@ -40,10 +40,10 @@ class Career3 extends StatelessWidget {
             child: Text('Apply Your Resume',
                 style: GoogleFonts.poppins(
                     fontSize: 30,
-                    color: Color.fromARGB(255, 255, 255, 255),
+                    color: const Color.fromARGB(255, 255, 255, 255),
                     fontWeight: FontWeight.bold)),
           ),
-          Spacer(
+          const Spacer(
             flex: 1,
           ),
           Container(
@@ -57,11 +57,11 @@ class Career3 extends StatelessWidget {
                 fontSize: 20,
                 letterSpacing: 1.1,
                 // height: 1.3,
-                color: Color.fromARGB(255, 255, 255, 255),
+                color: const Color.fromARGB(255, 255, 255, 255),
               ),
             ),
           ),
-          Spacer(
+          const Spacer(
             flex: 1,
           ),
           Container(
@@ -75,16 +75,16 @@ class Career3 extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  primary: Color.fromARGB(255, 12, 66, 101)
+                  primary: const Color.fromARGB(255, 12, 66, 101)
                   // shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0))),
                   ),
               onPressed: () {
                 _launchURL();
               },
-              child: Text("APPLY NOW", style: TextStyle(fontSize: 17)),
+              child: const Text("APPLY NOW", style: TextStyle(fontSize: 17)),
             ),
           ),
-          Spacer(
+          const Spacer(
             flex: 1,
           ),
         ],

@@ -23,19 +23,19 @@ class _Talent3State extends State<Talent3> {
         //: Colors.blue,
         child: TextButton(
           onPressed: () {},
-          child: Text(
+          style: TextButton.styleFrom(
+            primary: const Color.fromARGB(255, 0, 17, 255),
+            shadowColor: Colors.white,
+            surfaceTintColor: Colors.white,
+            backgroundColor: Colors.white,
+            onSurface: Colors.white,
+          ),
+          child: const Text(
             'Discover more about Industries in ProTalent',
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 35,
             ),
-          ),
-          style: TextButton.styleFrom(
-            primary: Color.fromARGB(255, 0, 17, 255),
-            shadowColor: Colors.white,
-            surfaceTintColor: Colors.white,
-            backgroundColor: Colors.white,
-            onSurface: Colors.white,
           ),
         ),
       ),

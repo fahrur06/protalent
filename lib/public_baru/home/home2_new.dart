@@ -25,7 +25,7 @@ class HomeNew2 extends StatelessWidget {
             child: Text('How do we help ?',
                 style: GoogleFonts.poppins(
                     fontSize: 30,
-                    color: Color.fromARGB(255, 12, 66, 101),
+                    color: const Color.fromARGB(255, 12, 66, 101),
                     fontWeight: FontWeight.bold)),
           ),
           Container(

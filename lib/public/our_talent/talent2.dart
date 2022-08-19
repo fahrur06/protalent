@@ -25,7 +25,7 @@ class _Talent2State extends State<Talent2> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Spacer(
+                const Spacer(
                   flex: 1,
                 ),
                 Row(
@@ -34,7 +34,7 @@ class _Talent2State extends State<Talent2> {
                       width: screenSize.width * 0.1,
                       height: 50,
                       //color: Colors.white,
-                      child: Text(
+                      child: const Text(
                         'Mengapa',
                         style: TextStyle(
                             fontSize: 35, fontWeight: FontWeight.bold),
@@ -44,7 +44,7 @@ class _Talent2State extends State<Talent2> {
                       width: screenSize.width * 0.1,
                       height: 50,
                       //color: Colors.white70,
-                      child: Text(
+                      child: const Text(
                         'HARUS',
                         style: TextStyle(
                             color: Color.fromARGB(255, 26, 32, 107),
@@ -60,7 +60,7 @@ class _Talent2State extends State<Talent2> {
                       width: screenSize.width * 0.13,
                       height: 50,
                       //color: Colors.white,
-                      child: Text(
+                      child: const Text(
                         'Hire Talenta',
                         style: TextStyle(
                             fontSize: 35, fontWeight: FontWeight.bold),
@@ -70,7 +70,7 @@ class _Talent2State extends State<Talent2> {
                       width: screenSize.width * 0.092,
                       height: 50,
                       //color: Colors.white,
-                      child: Text(
+                      child: const Text(
                         'ProTalent',
                         style: TextStyle(
                             color: Color.fromARGB(255, 26, 32, 107),
@@ -80,31 +80,31 @@ class _Talent2State extends State<Talent2> {
                     ),
                     Container(
                       width: screenSize.width * 0.001,
-                      child: Text('?',
+                      child: const Text('?',
                           style: TextStyle(
                               fontSize: 35, fontWeight: FontWeight.bold)),
                     )
                   ],
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 10),
+                  padding: const EdgeInsets.only(top: 10),
                   width: screenSize.width * 0.37,
                   height: 300,
                   //color: Colors.blueAccent,
                   child: Text(
                     home2_body,
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontSize: 19, letterSpacing: 1.5, height: 1.5),
                   ),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 1,
                 )
               ],
             ),
           ),
           Container(
-            padding: EdgeInsets.only(right: 30, top: 18, bottom: 18),
+            padding: const EdgeInsets.only(right: 30, top: 18, bottom: 18),
             width: screenSize.width * 0.45,
             //color: Colors.pink,
             child: Column(
@@ -129,7 +129,7 @@ ListTile _list(IconData _icon, String title, String body) {
       child: Icon(
         _icon,
         size: 50,
-        color: Color.fromARGB(255, 29, 37, 129),
+        color: const Color.fromARGB(255, 29, 37, 129),
       ),
     ),
     minLeadingWidth: 60,
@@ -137,14 +137,14 @@ ListTile _list(IconData _icon, String title, String body) {
         height: 50,
         child: Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
               fontSize: 27, fontWeight: FontWeight.bold, letterSpacing: 1.5),
         )),
     subtitle: Container(
         height: 85,
         child: Text(
           body,
-          style: TextStyle(fontSize: 18, letterSpacing: 1.1, height: 1.2),
+          style: const TextStyle(fontSize: 18, letterSpacing: 1.1, height: 1.2),
         )),
   );
 }

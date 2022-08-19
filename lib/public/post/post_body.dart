@@ -31,14 +31,14 @@ class PostBody extends StatelessWidget {
       body: ListView(
         children: [
           SingleChildScrollView(
-            padding: EdgeInsets.only(left: 70, right: 70),
+            padding: const EdgeInsets.only(left: 70, right: 70),
             controller: ScrollController(),
             child: Container(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    padding: EdgeInsets.only(top: 3),
+                    padding: const EdgeInsets.only(top: 3),
                     height: 90,
                     child: Row(
                       children: [
@@ -49,19 +49,19 @@ class PostBody extends StatelessWidget {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => HomePage(),
+                                      builder: (context) => const HomePage(),
                                     ),
                                   );
                                 },
-                                child: Text(
+                                child: const Text(
                                   'Home',
                                   style: TextStyle(
                                       color: Colors.blue, fontSize: 17),
                                 ))),
                         Container(
-                          padding: EdgeInsets.only(top: 1),
+                          padding: const EdgeInsets.only(top: 1),
                           height: 20,
-                          child: Text(
+                          child: const Text(
                             ' > ',
                             style: TextStyle(color: Colors.blue, fontSize: 17),
                           ),
@@ -73,11 +73,11 @@ class PostBody extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => Post(),
+                                  builder: (context) => const Post(),
                                 ),
                               );
                             },
-                            child: Text(
+                            child: const Text(
                               'News',
                               style:
                                   TextStyle(color: Colors.blue, fontSize: 17),
@@ -85,9 +85,9 @@ class PostBody extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.only(top: 1),
+                          padding: const EdgeInsets.only(top: 1),
                           height: 20,
-                          child: Text(
+                          child: const Text(
                             ' >  ',
                             style: TextStyle(color: Colors.blue, fontSize: 17),
                           ),
@@ -96,7 +96,8 @@ class PostBody extends StatelessWidget {
                           height: 20,
                           child: Text(
                             Urutan,
-                            style: TextStyle(color: Colors.blue, fontSize: 17),
+                            style: const TextStyle(
+                                color: Colors.blue, fontSize: 17),
                           ),
                         )
                       ],
@@ -110,10 +111,10 @@ class PostBody extends StatelessWidget {
                     height: 450,
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 19),
+                    padding: const EdgeInsets.symmetric(vertical: 19),
                     child: Text(
                       HeadText,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
                         color: Color.fromARGB(200, 4, 4, 52),
@@ -123,21 +124,21 @@ class PostBody extends StatelessWidget {
                   Container(
                     child: Text(
                       Tanggal,
-                      style: TextStyle(fontSize: 18),
+                      style: const TextStyle(fontSize: 18),
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 19),
+                    padding: const EdgeInsets.symmetric(vertical: 19),
                     child: Text(
                       Bodyfull,
-                      style: TextStyle(fontSize: 20, height: 1.5),
+                      style: const TextStyle(fontSize: 20, height: 1.5),
                     ),
                   ),
                 ],
               ),
             ),
           ),
-          Footer(),
+          const Footer(),
           // Container(
           //   height: 200,
           //   color: Colors.black87,

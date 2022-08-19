@@ -21,7 +21,7 @@ class _Talent1State extends State<Talent1> {
       padding: EdgeInsets.symmetric(horizontal: screenSize.width * 0.05),
       width: screenSize.width,
       height: screenSize.height * 0.5,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           gradient: LinearGradient(colors: <Color>[
         Color(0xFF0D5396),
         Color(0xFF2B69A4),
@@ -31,7 +31,7 @@ class _Talent1State extends State<Talent1> {
       child: Row(
         children: [
           Container(
-            padding: EdgeInsets.only(left: 20, right: 20, top: 50),
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 50),
             width: screenSize.width * 0.6,
             //color: Colors.white,
             child: Column(
@@ -43,7 +43,7 @@ class _Talent1State extends State<Talent1> {
                   //color: Colors.red,
                   child: Text(
                     talent1_head,
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontSize: 52,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -56,7 +56,7 @@ class _Talent1State extends State<Talent1> {
                   //color: Colors.blue,
                   child: Text(
                     talent1_body,
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontSize: 28,
                         color: Colors.white,
                         letterSpacing: 3,
@@ -68,7 +68,7 @@ class _Talent1State extends State<Talent1> {
                   height: 40,
                   //color: Colors.green,
                   child: Botton_tombol(
-                      title: 'Dapatkan Sekarang', arah: Register()),
+                      title: 'Dapatkan Sekarang', arah: const Register()),
                 )
               ],
             ),

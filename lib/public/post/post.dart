@@ -28,11 +28,11 @@ class _PostState extends State<Post> {
       body: ListView(
         children: [
           Container(
-            padding: EdgeInsets.only(top: 10),
+            padding: const EdgeInsets.only(top: 10),
             height: 40,
             child: Row(
               children: [
-                SizedBox(
+                const SizedBox(
                   width: 56,
                 ),
                 Container(
@@ -42,18 +42,18 @@ class _PostState extends State<Post> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => HomePage(),
+                              builder: (context) => const HomePage(),
                             ),
                           );
                         },
-                        child: Text(
+                        child: const Text(
                           'Home',
                           style: TextStyle(color: Colors.blue, fontSize: 16),
                         ))),
                 Container(
-                  padding: EdgeInsets.only(top: 1),
+                  padding: const EdgeInsets.only(top: 1),
                   height: 20,
-                  child: Text(
+                  child: const Text(
                     ' > ',
                     style: TextStyle(color: Colors.blue, fontSize: 16),
                   ),
@@ -65,11 +65,11 @@ class _PostState extends State<Post> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Post(),
+                            builder: (context) => const Post(),
                           ),
                         );
                       },
-                      child: Text(
+                      child: const Text(
                         'News',
                         style: TextStyle(color: Colors.blue, fontSize: 16),
                       )),
@@ -161,7 +161,7 @@ class _PostState extends State<Post> {
               ],
             ),
           ),
-          Footer(),
+          const Footer(),
         ],
       ),
     );

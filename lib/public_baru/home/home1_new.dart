@@ -14,7 +14,7 @@ class HomeNew1 extends StatelessWidget {
         Container(
           width: screenSize.width,
           height: screenSize.height * 0.7,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(
                     "assets/images/home2.jpg",
@@ -34,7 +34,7 @@ class HomeNew1 extends StatelessWidget {
                 width: screenSize.width * 0.3,
                 height: screenSize.height * 0.13,
                 child: ShowUpAnimation(
-                  delayStart: Duration(seconds: 1),
+                  delayStart: const Duration(seconds: 1),
                   direction: Direction.horizontal,
                   child: Text(
                     'EMPOWER YOUR BUSINESS FOR SUCCESS.',
@@ -50,7 +50,7 @@ class HomeNew1 extends StatelessWidget {
                 width: screenSize.width * 0.32,
                 height: screenSize.height * 0.30,
                 child: ShowUpAnimation(
-                  delayStart: Duration(seconds: 1),
+                  delayStart: const Duration(seconds: 1),
                   curve: Curves.bounceIn,
                   direction: Direction.horizontal,
                   offset: -0.2,
@@ -74,7 +74,7 @@ class HomeNew1 extends StatelessWidget {
                 width: screenSize.width * 0.13,
                 height: screenSize.height * 0.07,
                 child: ShowUpAnimation(
-                  delayStart: Duration(seconds: 1),
+                  delayStart: const Duration(seconds: 1),
                   curve: Curves.bounceIn,
                   direction: Direction.horizontal,
                   offset: -0.2,
@@ -82,7 +82,8 @@ class HomeNew1 extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(context, '/contact');
                     },
-                    child: Text(
+                    style: DefaultColors(),
+                    child: const Text(
                       'CONTACT US',
                       style: TextStyle(
                           fontSize: 19,
@@ -90,7 +91,6 @@ class HomeNew1 extends StatelessWidget {
                           color: Colors.white,
                           fontWeight: FontWeight.w500),
                     ),
-                    style: DefaultColors(),
                   ),
                 ),
               )

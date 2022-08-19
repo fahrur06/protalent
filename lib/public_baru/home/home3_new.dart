@@ -26,9 +26,9 @@ class _HomeNew3State extends State<HomeNew3> {
           Text("Why Protalent ?",
               style: GoogleFonts.poppins(
                   fontSize: 36,
-                  color: Color(0xff1e5ea8),
+                  color: const Color(0xff1e5ea8),
                   fontWeight: FontWeight.bold)),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
           Row(
@@ -53,10 +53,10 @@ class _HomeNew3State extends State<HomeNew3> {
                       height: 10,
                     ),
                     Container(
-                      padding: EdgeInsets.only(top: 5),
+                      padding: const EdgeInsets.only(top: 5),
                       width: 250,
                       height: 65,
-                      child: Text(
+                      child: const Text(
                         'We work as an extension of your team.',
                         style: TextStyle(
                             color: Colors.blueAccent,
@@ -70,10 +70,10 @@ class _HomeNew3State extends State<HomeNew3> {
                       height: 10,
                     ),
                     Container(
-                        padding: EdgeInsets.only(top: 10),
+                        padding: const EdgeInsets.only(top: 10),
                         width: 220,
                         height: screenSize.height * 0.43,
-                        child: Animasi_Kanan_Kiri(
+                        child: const Animasi_Kanan_Kiri(
                             judul:
                                 'We work as a true extension of your team. We believe in rolling up our sleeves, diving in and working together to deliver the top-quality, tailored solutions our clients need to grow and thrive.'))
                   ],
@@ -97,10 +97,10 @@ class _HomeNew3State extends State<HomeNew3> {
                       height: 10,
                     ),
                     Container(
-                      padding: EdgeInsets.only(top: 5),
+                      padding: const EdgeInsets.only(top: 5),
                       width: 250,
                       height: 65,
-                      child: Text(
+                      child: const Text(
                         'We offer smart tailored outsourcing and HR solutions.',
                         style: TextStyle(
                             color: Colors.blueAccent,
@@ -114,10 +114,10 @@ class _HomeNew3State extends State<HomeNew3> {
                       height: 10,
                     ),
                     Container(
-                        padding: EdgeInsets.only(top: 10),
+                        padding: const EdgeInsets.only(top: 10),
                         width: 220,
                         height: screenSize.height * 0.43,
-                        child: Animasi_Kanan_Kiri(
+                        child: const Animasi_Kanan_Kiri(
                             judul:
                                 'Through our tailored approach, exceptional support, and flexible solutions, we make finding and retaining top talents easier and simpler.'))
                   ],
@@ -141,10 +141,10 @@ class _HomeNew3State extends State<HomeNew3> {
                       height: 10,
                     ),
                     Container(
-                      padding: EdgeInsets.only(top: 5),
+                      padding: const EdgeInsets.only(top: 5),
                       width: 250,
                       height: 65,
-                      child: Text(
+                      child: const Text(
                         'We have a rich outsourcing experience across various industries.',
                         style: TextStyle(
                             color: Colors.blueAccent,
@@ -158,10 +158,10 @@ class _HomeNew3State extends State<HomeNew3> {
                       height: 10,
                     ),
                     Container(
-                        padding: EdgeInsets.only(top: 10),
+                        padding: const EdgeInsets.only(top: 10),
                         width: 220,
                         height: screenSize.height * 0.43,
-                        child: Animasi_Kanan_Kiri(
+                        child: const Animasi_Kanan_Kiri(
                             judul:
                                 'We have been providing outsourcing solutions to variance clients for eight years now helping them streamline their operations, save valuable time, and cut costs.'))
                   ],
@@ -185,10 +185,10 @@ class _HomeNew3State extends State<HomeNew3> {
                       height: 10,
                     ),
                     Container(
-                      padding: EdgeInsets.only(top: 5),
+                      padding: const EdgeInsets.only(top: 5),
                       width: 250,
                       height: 65,
-                      child: Text(
+                      child: const Text(
                         'We Are Expert recruiters.',
                         style: TextStyle(
                             color: Colors.blueAccent,
@@ -202,11 +202,11 @@ class _HomeNew3State extends State<HomeNew3> {
                       height: 10,
                     ),
                     Container(
-                        padding: EdgeInsets.only(top: 10),
+                        padding: const EdgeInsets.only(top: 10),
                         width: 220,
                         height: screenSize.height * 0.43,
                         child: ShowUpAnimation(
-                          delayStart: Duration(seconds: 1),
+                          delayStart: const Duration(seconds: 1),
                           curve: Curves.decelerate,
                           direction: Direction.horizontal,
                           child: Container(

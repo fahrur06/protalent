@@ -22,11 +22,11 @@ class _Talent4State extends State<Talent4> {
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
               width: screenSize.width * 0.9,
               height: screenSize.height * 0.09,
               color: Colors.white70,
-              child: Text(
+              child: const Text(
                 'Industry',
                 style: TextStyle(
                     fontWeight: FontWeight.bold, fontSize: 33, height: 1.5),
