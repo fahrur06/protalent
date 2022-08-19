@@ -12,7 +12,7 @@ class SideMenuTalentClient extends StatefulWidget {
 
 class _SideMenuTalentClientState extends State<SideMenuTalentClient> {
   List<Widget> views = [
-    SelectTalentClient(),
+    const SelectTalentClient(),
   ];
   int selectedIndex = 0;
 
@@ -24,16 +24,16 @@ class _SideMenuTalentClientState extends State<SideMenuTalentClient> {
         children: [
           SideNavigationBar(
             header: SideNavigationBarHeader(
-              image: CircleAvatar(
+              image: const CircleAvatar(
+                radius: 20,
                 child: Icon(
                   Icons.person_pin,
                   size: 20,
                 ),
-                radius: 20,
               ),
               title: Container(
-                padding: EdgeInsets.only(left: 10),
-                child: Text(
+                padding: const EdgeInsets.only(left: 10),
+                child: const Text(
                   'Fahrur Huzain',
                   style: TextStyle(
                       color: Colors.white,
@@ -72,10 +72,10 @@ class _SideMenuTalentClientState extends State<SideMenuTalentClient> {
             theme: SideNavigationBarTheme(
               backgroundColor:
                   //Color.fromARGB(200, 9, 47, 171),
-                  Color.fromARGB(255, 18, 108, 178),
-              togglerTheme: SideNavigationBarTogglerTheme(
+                  const Color.fromARGB(255, 18, 108, 178),
+              togglerTheme: const SideNavigationBarTogglerTheme(
                   shrinkIconColor: Colors.white, expandIconColor: Colors.white),
-              itemTheme: SideNavigationBarItemTheme(
+              itemTheme: const SideNavigationBarItemTheme(
                   selectedItemColor: Colors.white,
                   unselectedItemColor: Colors.white60),
               dividerTheme: SideNavigationBarDividerTheme.standard(),

@@ -15,10 +15,10 @@ class _Home3State extends State<Home3> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-      padding: EdgeInsets.only(top: 15),
+      padding: const EdgeInsets.only(top: 15),
       width: screenSize.width,
       height: screenSize.height * 0.75,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: <Color>[
             Color(0xFF42A5F5),
@@ -37,7 +37,7 @@ class _Home3State extends State<Home3> {
                 _container(
                     context,
                     screenSize,
-                    Color.fromARGB(255, 241, 23, 42),
+                    const Color.fromARGB(255, 241, 23, 42),
                     'assets/images/bootcamp4.jpg',
                     'Bootcamp Batch 4',
                     row1,
@@ -50,7 +50,7 @@ class _Home3State extends State<Home3> {
                 _container(
                     context,
                     screenSize,
-                    Color.fromARGB(255, 241, 23, 42),
+                    const Color.fromARGB(255, 241, 23, 42),
                     'assets/images/eksad.jpg',
                     'Penghargaan Alibaba',
                     row2,
@@ -63,7 +63,7 @@ class _Home3State extends State<Home3> {
                 _container(
                     context,
                     screenSize,
-                    Color.fromARGB(255, 241, 23, 42),
+                    const Color.fromARGB(255, 241, 23, 42),
                     'assets/images/eksad_IT_resources.jpg',
                     'Talenta ProTalent',
                     row3,
@@ -132,7 +132,7 @@ Container _container(
           child: Text(
             overflow: TextOverflow.ellipsis,
             title,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.white, fontSize: 27, fontWeight: FontWeight.w500),
           ),
         ),

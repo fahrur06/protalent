@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pro_talent/admin/post/add_post.dart';
-import 'package:pro_talent/const/text_homepage.dart';
-import 'package:pro_talent/widget/expansion_home4_old.dart';
+// import 'package:pro_talent/admin/post/add_post.dart';
+// import 'package:pro_talent/const/text_homepage.dart';
+// import 'package:pro_talent/widget/expansion_home4_old.dart';
 
 import '../../conts_warna.dart';
-import '../../widget/botton.dart';
-import '../../widget/botton.dart';
+// import '../../widget/botton.dart';
+// import '../../widget/botton.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
@@ -30,10 +30,10 @@ class _Home4State extends State<Home4> {
     var screenSize = MediaQuery.of(context).size;
     return Container(
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 100),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 100),
         width: screenSize.width * 0.9,
         height: screenSize.height * 0.75,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
               image: AssetImage(
                   "assets/images/blue-white-low-poly-triangle-shapes-background.jpg"),
@@ -72,7 +72,7 @@ class _Home4State extends State<Home4> {
                 //   onPressed: () {},
                 //   child: const Text('Get in touch'),
                 // ),
-                Spacer(),
+                const Spacer(),
                 Container(
                   child: Row(
                     children: [
@@ -268,7 +268,7 @@ class _Home4State extends State<Home4> {
                     ),
                   ),
                 ),
-                Spacer()
+                const Spacer()
               ],
             ),
           ],

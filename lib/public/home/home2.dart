@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/const/text_homepage.dart';
+// import 'package:pro_talent/const/text_homepage.dart';
 
 class Home2 extends StatefulWidget {
   const Home2({Key? key}) : super(key: key);
@@ -20,7 +20,7 @@ class _Home2State extends State<Home2> {
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.only(top: 30),
+              padding: const EdgeInsets.only(top: 30),
               width: screenSize.width * 0.9,
               height: screenSize.height * 0.1,
               //color: Colors.white,
@@ -31,7 +31,7 @@ class _Home2State extends State<Home2> {
                   Container(
                       width: screenSize.width * 0.09,
                       height: screenSize.height * 0.1,
-                      child: Text(
+                      child: const Text(
                         'Mengapa ',
                         style: TextStyle(
                             fontSize: 32, fontWeight: FontWeight.bold),
@@ -39,7 +39,7 @@ class _Home2State extends State<Home2> {
                   Container(
                       width: screenSize.width * 0.075,
                       height: screenSize.height * 0.1,
-                      child: Text(
+                      child: const Text(
                         'HARUS ',
                         style: TextStyle(
                             color: Color.fromARGB(255, 26, 32, 107),
@@ -49,7 +49,7 @@ class _Home2State extends State<Home2> {
                   Container(
                       width: screenSize.width * 0.12,
                       height: screenSize.height * 0.1,
-                      child: Text(
+                      child: const Text(
                         'Hire Talenta',
                         style: TextStyle(
                             fontSize: 32, fontWeight: FontWeight.bold),
@@ -57,7 +57,7 @@ class _Home2State extends State<Home2> {
                   Container(
                       width: screenSize.width * 0.09,
                       height: screenSize.height * 0.1,
-                      child: Text(
+                      child: const Text(
                         'ProTalent',
                         style: TextStyle(
                             color: Color.fromARGB(255, 26, 32, 107),
@@ -67,14 +67,14 @@ class _Home2State extends State<Home2> {
                   Container(
                       width: screenSize.width * 0.01,
                       height: screenSize.height * 0.1,
-                      child: Text('?',
+                      child: const Text('?',
                           style: TextStyle(
                               fontSize: 32, fontWeight: FontWeight.bold))),
                 ],
               ),
             ),
             Container(
-              padding: EdgeInsets.only(top: 10),
+              padding: const EdgeInsets.only(top: 10),
               width: screenSize.width,
               height: screenSize.height * 0.3,
               //color: Colors.blue,
@@ -89,7 +89,7 @@ class _Home2State extends State<Home2> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.person_pin_sharp,
                           size: 70,
                           color: Color.fromARGB(255, 26, 32, 107),
@@ -100,7 +100,7 @@ class _Home2State extends State<Home2> {
                         Container(
                             width: screenSize.width * 0.3,
                             height: screenSize.height * 0.05,
-                            child: Center(
+                            child: const Center(
                                 child: Text('Terlatih & Profesional',
                                     style: TextStyle(
                                         fontSize: 24,
@@ -115,7 +115,7 @@ class _Home2State extends State<Home2> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.person_add,
                           size: 70,
                           color: Color.fromARGB(255, 26, 32, 107),
@@ -126,7 +126,7 @@ class _Home2State extends State<Home2> {
                         Container(
                             width: screenSize.width * 0.3,
                             height: screenSize.height * 0.05,
-                            child: Center(
+                            child: const Center(
                                 child: Text('Proses Hiring yang Mudah',
                                     style: TextStyle(
                                         fontSize: 24,
@@ -142,7 +142,7 @@ class _Home2State extends State<Home2> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.shopping_bag_outlined,
                           size: 70,
                           color: Color.fromARGB(255, 26, 32, 107),
@@ -154,7 +154,7 @@ class _Home2State extends State<Home2> {
                             width: screenSize.width * 0.3,
                             height: screenSize.height * 0.05,
                             //color: Colors.white,
-                            child: Center(
+                            child: const Center(
                                 child: Text('Mampu Berkompetisi & Berkembang',
                                     style: TextStyle(
                                         fontSize: 24,
