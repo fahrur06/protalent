@@ -1,11 +1,8 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:pro_talent/client/sidemenu_talent.dart';
 import 'package:pro_talent/widget/dropdown_dashboard.dart';
 import 'package:pro_talent/widget/whatsapp.dart';
-import 'package:url_launcher/url_launcher.dart';
+// import 'package:url_launcher/url_launcher.dart';
 
 class FindTalent extends StatefulWidget {
   const FindTalent({Key? key}) : super(key: key);
@@ -25,7 +22,7 @@ class _FindTalentState extends State<FindTalent> {
             Container(
               width: screenSize.width,
               height: screenSize.height * 0.15,
-              color: Color.fromRGBO(238, 224, 224, 1),
+              color: const Color.fromRGBO(238, 224, 224, 1),
               child: Center(
                 child: Container(
                   width: screenSize.width * 0.83,
@@ -35,10 +32,10 @@ class _FindTalentState extends State<FindTalent> {
                       color: Colors.blue),
                   child: Column(
                     children: [
-                      Container(
+                      SizedBox(
                         height: screenSize.height * 0.04,
                         child: Row(
-                          children: [
+                          children: const [
                             SizedBox(
                               width: 23,
                             ),
@@ -110,7 +107,7 @@ class _FindTalentState extends State<FindTalent> {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          SizedBox(
+                          const SizedBox(
                             width: 20,
                           ),
                           DropDownDashboard2(
@@ -119,7 +116,7 @@ class _FindTalentState extends State<FindTalent> {
                               item3: 'Backend Developer',
                               item4: 'Frontend Developer',
                               item5: 'Mobile Developer'),
-                          SizedBox(
+                          const SizedBox(
                             width: 20,
                           ),
                           DropDownDashboard2(
@@ -128,7 +125,7 @@ class _FindTalentState extends State<FindTalent> {
                               item3: 'Backend Developer',
                               item4: 'Frontend Developer',
                               item5: 'Mobile Developer'),
-                          SizedBox(
+                          const SizedBox(
                             width: 20,
                           ),
                           DropDownDashboard2(
@@ -137,7 +134,7 @@ class _FindTalentState extends State<FindTalent> {
                               item3: 'Backend Developer',
                               item4: 'Frontend Developer',
                               item5: 'Mobile Developer'),
-                          SizedBox(
+                          const SizedBox(
                             width: 20,
                           ),
                           DropDownDashboard2(
@@ -146,7 +143,7 @@ class _FindTalentState extends State<FindTalent> {
                               item3: 'Backend Developer',
                               item4: 'Frontend Developer',
                               item5: 'Mobile Developer'),
-                          SizedBox(
+                          const SizedBox(
                             width: 20,
                           ),
                           DropDownDashboard2(
@@ -155,7 +152,7 @@ class _FindTalentState extends State<FindTalent> {
                               item3: 'Backend Developer',
                               item4: 'Frontend Developer',
                               item5: 'Mobile Developer'),
-                          SizedBox(
+                          const SizedBox(
                             width: 20,
                           ),
                           Container(
@@ -167,15 +164,15 @@ class _FindTalentState extends State<FindTalent> {
                                       primary: Colors.white,
                                       onPrimary: Colors.blue),
                                   onPressed: () {},
-                                  icon: Container(
+                                  icon: SizedBox(
                                       width: screenSize.width * 0.02,
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.search,
                                         color: Colors.blue,
                                       )),
-                                  label: Container(
+                                  label: SizedBox(
                                       width: screenSize.width * 0.08,
-                                      child: Text(
+                                      child: const Text(
                                         'Search',
                                         style: TextStyle(
                                             color: Colors.blue,
@@ -190,10 +187,10 @@ class _FindTalentState extends State<FindTalent> {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(left: 30, right: 30, top: 20),
+              padding: const EdgeInsets.only(left: 30, right: 30, top: 20),
               width: screenSize.width,
               height: screenSize.height * 0.75,
-              color: Color.fromRGBO(238, 224, 224, 1),
+              color: const Color.fromRGBO(238, 224, 224, 1),
               child: GridView.count(
                 controller: ScrollController(),
                 crossAxisCount: 3,
@@ -428,7 +425,7 @@ class Profil extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (Context) {
-              return SideMenuTalentClient();
+              return const SideMenuTalentClient();
             },
           ),
         );
@@ -445,20 +442,20 @@ class Profil extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 "New Talent!",
                 style: TextStyle(
                   color: Color(0xff01FF1A),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  CircleAvatar(
+                  const CircleAvatar(
                     foregroundImage: AssetImage("assets/images/petrik.png"),
                     radius: 35,
                   ),
@@ -471,10 +468,10 @@ class Profil extends StatelessWidget {
                           children: [
                             Text(
                               name,
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 16, fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
                             Image.asset("assets/icons/centangbiru.png")
@@ -483,7 +480,7 @@ class Profil extends StatelessWidget {
                         Text("$gender, $age years old"),
                         Text("$exp years of experience"),
                         Row(
-                          children: [
+                          children: const [
                             Text(
                               "100 % match",
                               style: TextStyle(
@@ -499,59 +496,59 @@ class Profil extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Icon(Icons.bookmark_border)
+                  const Icon(Icons.bookmark_border)
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Text(
+              const Text(
                 "Skills",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Row(
                 children: [
                   Container(
+                    color: Colors.grey[200],
+                    padding: const EdgeInsets.all(5),
                     child: Text(skill1),
-                    color: Colors.grey[200],
-                    padding: EdgeInsets.all(5),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 5,
                   ),
                   Container(
+                    color: Colors.grey[200],
+                    padding: const EdgeInsets.all(5),
                     child: Text(skill2),
-                    color: Colors.grey[200],
-                    padding: EdgeInsets.all(5),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 5,
                   ),
                   Container(
-                    child: Text(skill3),
                     color: Colors.grey[200],
-                    padding: EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(5),
+                    child: Text(skill3),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 5,
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Text("and $numSkill more"),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Text(
+              const Text(
                 "Expected Salary",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Row(
@@ -559,35 +556,36 @@ class Profil extends StatelessWidget {
                 children: [
                   Text(
                     "IDR $salary nett",
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
                       color: Color(0xFF214B9A),
                     ),
                   ),
                   Container(
-                    child: Text(
+                    color: Colors.red[200],
+                    padding: const EdgeInsets.all(5),
+                    child: const Text(
                       "Non Negotiable",
                       style: TextStyle(color: Colors.red),
                     ),
-                    color: Colors.red[200],
-                    padding: EdgeInsets.all(5),
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Text(
+              const Text(
                 "Latest Experience",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Text(
                 "$lastExp | $lastPosition",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
               Text(lastCompany),
               Text(berapaLama),
@@ -637,7 +635,7 @@ class pilihan1 extends StatelessWidget {
                     color: colorbackground,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 4,
                 ),
                 Text(

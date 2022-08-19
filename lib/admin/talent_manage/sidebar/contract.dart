@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/conts_warna.dart';
-import 'package:pro_talent/admin/dashboard.dart';
+// import 'package:pro_talent/conts_warna.dart';
+// import 'package:pro_talent/admin/dashboard.dart';
 import 'package:easy_table/easy_table.dart';
 
 class EditContract extends StatefulWidget {
@@ -30,17 +30,17 @@ class _EditContractState extends State<EditContract> {
 
     List<Posisi> rows = [
       Posisi(1, 'Head Product', '2022-07-18', 'ACTIVE',
-          TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
       Posisi(2, 'Java Developer', '2022-01-01', 'ACTIVE',
-          TextButton(onPressed: () {}, child: Text('delete'))),
-      Posisi(
-          3, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
-      Posisi(
-          4, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
-      Posisi(
-          5, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
-      Posisi(
-          6, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      Posisi(3, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      Posisi(4, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      Posisi(5, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      Posisi(6, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
     ];
 
     _model = EasyTableModel<Posisi>(rows: rows, columns: [
@@ -95,7 +95,7 @@ class _EditContractState extends State<EditContract> {
       body: Container(
         width: screenSize.width * 0.64,
         //color: Colors.blue,
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -108,7 +108,7 @@ class _EditContractState extends State<EditContract> {
                 columnsFit: true,
               ),
             ),
-            Spacer(
+            const Spacer(
               flex: 1,
             ),
             Container(
@@ -116,14 +116,15 @@ class _EditContractState extends State<EditContract> {
               child: Row(
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 25),
                     width: screenSize.width * 0.1,
                     height: 55,
                     //color: Colors.red,
                     child: ElevatedButton(
                         onPressed: () {},
                         child: Row(
-                          children: [
+                          children: const [
                             SizedBox(
                               width: 5,
                             ),
@@ -132,14 +133,15 @@ class _EditContractState extends State<EditContract> {
                         )),
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 25),
                     width: screenSize.width * 0.1,
                     height: 55,
                     //color: Colors.red,
                     child: ElevatedButton(
                         onPressed: () {},
                         child: Row(
-                          children: [
+                          children: const [
                             SizedBox(
                               width: 5,
                             ),

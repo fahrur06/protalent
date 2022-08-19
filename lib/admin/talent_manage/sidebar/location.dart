@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/conts_warna.dart';
+// import 'package:pro_talent/conts_warna.dart';
 import 'package:easy_table/easy_table.dart';
 
 class EditLocation extends StatefulWidget {
@@ -28,17 +28,17 @@ class _EditLocationState extends State<EditLocation> {
 
     List<_location> rows = [
       _location(1, 'West Jakarta', '2022-07-18', 'ACTIVE',
-          TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
       _location(2, 'Purwakarta', '2022-01-01', 'ACTIVE',
-          TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
       _location(3, 'Madura', '2022-03-29', 'ACTIVE',
-          TextButton(onPressed: () {}, child: Text('delete'))),
-      _location(
-          4, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
-      _location(
-          5, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
-      _location(
-          6, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      _location(4, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      _location(5, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      _location(6, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
     ];
 
     _model = EasyTableModel<_location>(rows: rows, columns: [
@@ -76,7 +76,7 @@ class _EditLocationState extends State<EditLocation> {
       body: Container(
         width: screenSize.width * 0.64,
         //color: Colors.blue,
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -89,7 +89,7 @@ class _EditLocationState extends State<EditLocation> {
                 columnsFit: true,
               ),
             ),
-            Spacer(
+            const Spacer(
               flex: 1,
             ),
             Container(
@@ -97,14 +97,15 @@ class _EditLocationState extends State<EditLocation> {
               child: Row(
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 25),
                     width: screenSize.width * 0.1,
                     height: 55,
                     //color: Colors.red,
                     child: ElevatedButton(
                         onPressed: () {},
                         child: Row(
-                          children: [
+                          children: const [
                             SizedBox(
                               width: 5,
                             ),
@@ -113,14 +114,15 @@ class _EditLocationState extends State<EditLocation> {
                         )),
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 25),
                     width: screenSize.width * 0.1,
                     height: 55,
                     //color: Colors.red,
                     child: ElevatedButton(
                         onPressed: () {},
                         child: Row(
-                          children: [
+                          children: const [
                             SizedBox(
                               width: 5,
                             ),

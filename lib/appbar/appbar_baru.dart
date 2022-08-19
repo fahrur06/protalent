@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/admin/dashboard.dart';
+// import 'package:pro_talent/admin/dashboard.dart';
 import 'package:pro_talent/conts_warna.dart';
-import 'package:pro_talent/homepage.dart';
-import 'package:pro_talent/homepage_new.dart';
-import 'package:pro_talent/public/contact_us/ContactUs.dart';
-import 'package:pro_talent/public/our_talent/our_talent.dart';
-import 'package:pro_talent/public_baru/contact_us_baru/contact_us_baru.dart';
-import 'package:pro_talent/register.dart';
-import 'package:pro_talent/login.dart';
+// import 'package:pro_talent/homepage.dart';
+// import 'package:pro_talent/homepage_new.dart';
+// import 'package:pro_talent/public/contact_us/ContactUs.dart';
+// import 'package:pro_talent/public/our_talent/our_talent.dart';
+// import 'package:pro_talent/public_baru/contact_us_baru/contact_us_baru.dart';
+// import 'package:pro_talent/register.dart';
+// import 'package:pro_talent/login.dart';
 import 'package:pro_talent/widget/dropdown_appbar.dart';
 import 'package:pro_talent/widget/botton.dart';
-import 'package:pro_talent/public/post/post.dart';
-
-import '../public_baru/career/career.dart';
-import '../public_baru/our_services/our_services.dart';
+// import 'package:pro_talent/public/post/post.dart';
+//
+// import '../public_baru/career/career.dart';
+// import '../public_baru/our_services/our_services.dart';
 
 AppBar AppbarHomeSmall(Size screenSize) {
   return AppBar(
@@ -31,10 +31,10 @@ AppBar AppbarHomeSmall(Size screenSize) {
             flex: 1,
           ),
           Container(
-            child: Container(
-              child: Image.asset("assets/logo/logo_protalent.png"),
+            child: SizedBox(
               height: 50,
               width: 150,
+              child: Image.asset("assets/logo/logo_protalent.png"),
             ),
           ),
           const Spacer(
@@ -69,7 +69,7 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
           onPressed: () {
             Navigator.pushNamed(context, '/');
           },
-          icon: Image(
+          icon: const Image(
             image: AssetImage('assets/logo/protalent.png'),
             width: 500,
             height: 200,
@@ -81,32 +81,32 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
     title: Row(
       children: [
         ButtonAppbar_baru(arah: '/', menu: 'Home', warna: home),
-        Spacer(
+        const Spacer(
           flex: 1,
         ),
         ButtonAppbar_baru(arah: '/', menu: 'About Us', warna: aboutUs),
-        Spacer(
+        const Spacer(
           flex: 1,
         ),
         ButtonAppbar_baru(
             arah: '/service', menu: 'Our Services', warna: ourServices),
-        Spacer(
+        const Spacer(
           flex: 1,
         ),
         ButtonAppbar_baru(arah: '/career', menu: 'Career', warna: career),
-        Spacer(
+        const Spacer(
           flex: 1,
         ),
         ButtonAppbar_baru(
             arah: '/contact', menu: 'Contact Us', warna: contactUs),
-        Spacer(
+        const Spacer(
           flex: 2,
         ),
         TextButton(
           onPressed: () {
             Navigator.pushNamed(context, '/login');
           },
-          child: Text(
+          child: const Text(
             'Login',
             style: TextStyle(
                 fontSize: 19, fontWeight: FontWeight.w500, color: Colors.black),
@@ -119,18 +119,18 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
           onPressed: () {
             Navigator.pushNamed(context, '/register');
           },
-          child: Text(
+          style: ElevatedButton.styleFrom(
+            primary: const Color(0xff1e5ea8),
+            fixedSize: const Size(130, 45),
+            onPrimary: Colors.red,
+          ),
+          child: const Text(
             'Register',
             style: TextStyle(
                 color: Colors.white, fontSize: 19, fontWeight: FontWeight.w500),
           ),
-          style: ElevatedButton.styleFrom(
-            primary: Color(0xff1e5ea8),
-            fixedSize: Size(130, 45),
-            onPrimary: Colors.red,
-          ),
         ),
-        Spacer(
+        const Spacer(
           flex: 5,
         ),
       ],

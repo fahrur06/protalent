@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/login.dart';
-import 'package:pro_talent/widget/botton.dart';
-import 'package:pro_talent/homepage.dart';
+// import 'package:pro_talent/login.dart';
+// import 'package:pro_talent/widget/botton.dart';
+// import 'package:pro_talent/homepage.dart';
 
 AppBar BarAtas(BuildContext context) {
   return AppBar(
     //backgroundColor: Color.fromARGB(200, 9, 47, 171),
     backgroundColor: Colors.white,
     leading: Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
             image: AssetImage('assets/logo/logo_protalent.png'),
             fit: BoxFit.fill),
@@ -23,10 +23,10 @@ AppBar BarAtas(BuildContext context) {
             onPressed: () {
               Navigator.pushNamed(context, '/');
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.remove_red_eye,
             ),
-            label: Text(
+            label: const Text(
               'Site Online',
             ),
           ),
@@ -34,17 +34,17 @@ AppBar BarAtas(BuildContext context) {
             onPressed: () {
               Navigator.popAndPushNamed(context, '/login');
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.output,
             ),
-            label: Text(
+            label: const Text(
               'Logout',
               style: TextStyle(),
             ),
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.person_pin,
               color: Colors.blue,
             ),

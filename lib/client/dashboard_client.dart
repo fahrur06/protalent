@@ -9,7 +9,7 @@ class DashboardClient extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: BarAtas(context),
-      body: SideClient(),
+      body: const SideClient(),
     );
   }
 }

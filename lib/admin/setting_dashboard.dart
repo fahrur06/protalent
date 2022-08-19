@@ -21,9 +21,9 @@ class _SettingDashboardState extends State<SettingDashboard> {
     var screenSize = MediaQuery.of(context).size;
     var screenSize1 = screenSize.width * 0.6;
     return Container(
-      color: Color.fromRGBO(238, 224, 224, 1),
+      color: const Color.fromRGBO(238, 224, 224, 1),
       height: 1000,
-      padding: EdgeInsets.only(left: 100),
+      padding: const EdgeInsets.only(left: 100),
       width: screenSize.width,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,7 +38,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
             color: Colors.white,
             height: 600,
             width: 1100,
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             child: Column(
               children: [
                 Row(
@@ -55,18 +55,18 @@ class _SettingDashboardState extends State<SettingDashboard> {
                     // ),
                     Botton_tombol(
                       title: "Save Setting",
-                      arah: login(),
+                      arah: const login(),
                     ),
                   ],
                 ),
-                Divider(
+                const Divider(
                   height: 20,
                   thickness: 1,
                   // indent: 20,
                   // endIndent: 0,
                   color: Colors.grey,
                 ),
-                Spacer(
+                const Spacer(
                   flex: 1,
                 ),
                 Row(
@@ -84,7 +84,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
                           Container(
@@ -93,7 +93,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                             child:
                                 Image.asset("assets/logo/logo_protalent.png"),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
                           Container(
@@ -108,11 +108,11 @@ class _SettingDashboardState extends State<SettingDashboard> {
                                     primary: Colors.white,
                                     // shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0))),
                                   ),
-                                  child: Text(
+                                  child: const Text(
                                     "Change",
                                     style: TextStyle(color: Colors.black),
                                   ))),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Container(
@@ -127,7 +127,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                                     primary: Colors.white,
                                     // shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0))),
                                   ),
-                                  child: Text(
+                                  child: const Text(
                                     "Remove",
                                     style: TextStyle(color: Colors.red),
                                   )))
@@ -150,14 +150,14 @@ class _SettingDashboardState extends State<SettingDashboard> {
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Container(
                             height: 50,
                             width: screenSize1 * 0.5,
                             child: TextFormField(
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                   labelText: "Protalent",
                                   hintStyle: TextStyle(),
                                   border: OutlineInputBorder(
@@ -165,7 +165,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                                           width: 1, color: Colors.grey))),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
                           Text(
@@ -175,14 +175,14 @@ class _SettingDashboardState extends State<SettingDashboard> {
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Container(
                             height: 50,
                             width: screenSize1 * 0.5,
                             child: TextFormField(
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                   labelText: "Talent Ready from Eksad",
                                   hintStyle: TextStyle(),
                                   border: OutlineInputBorder(
@@ -190,7 +190,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                                           width: 1, color: Colors.grey))),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Text(
@@ -205,7 +205,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                   width: 0,
                 ),
@@ -222,7 +222,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                               fontSize: 20,
                               fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Container(
@@ -232,13 +232,13 @@ class _SettingDashboardState extends State<SettingDashboard> {
                             decoration: InputDecoration(
                                 fillColor: Colors.grey[200],
                                 labelText: "xxxxxx@eksad.com",
-                                hintStyle: TextStyle(),
-                                border: OutlineInputBorder(
+                                hintStyle: const TextStyle(),
+                                border: const OutlineInputBorder(
                                     borderSide: BorderSide(
                                         width: 1, color: Colors.grey))),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Text(
@@ -248,14 +248,14 @@ class _SettingDashboardState extends State<SettingDashboard> {
                               fontSize: 20,
                               fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Container(
                           height: 50,
                           width: screenSize1 * 0.5,
                           child: TextFormField(
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                                 labelText: "02x-xxxx-xxxx",
                                 hintStyle: TextStyle(),
                                 border: OutlineInputBorder(
@@ -265,7 +265,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 30,
                     ),
                     // Column(
@@ -346,7 +346,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                   ],
                 ),
                 Row(
-                  children: [
+                  children: const [
                     SizedBox(
                       height: 30,
                       width: 0,
@@ -376,7 +376,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                     //         ))),
                   ],
                 ),
-                Spacer(
+                const Spacer(
                   flex: 20,
                 ),
               ],

@@ -6,10 +6,10 @@ import 'package:pro_talent/public/contact_us/ContactUs.dart';
 import 'package:pro_talent/public/our_talent/our_talent.dart';
 import 'package:pro_talent/public_baru/career/career.dart';
 import 'package:pro_talent/register.dart';
-import 'package:pro_talent/login.dart';
+// import 'package:pro_talent/login.dart';
 import 'package:pro_talent/widget/dropdown_appbar.dart';
 import 'package:pro_talent/widget/botton.dart';
-import 'package:pro_talent/public/post/post.dart';
+// import 'package:pro_talent/public/post/post.dart';
 
 AppBar AppbarHomeSmall(Size screenSize) {
   return AppBar(
@@ -27,10 +27,10 @@ AppBar AppbarHomeSmall(Size screenSize) {
             flex: 1,
           ),
           Container(
-            child: Container(
-              child: Image.asset("assets/logo/logo_protalent.png"),
+            child: SizedBox(
               height: 50,
               width: 150,
+              child: Image.asset("assets/logo/logo_protalent.png"),
             ),
           ),
           const Spacer(
@@ -64,8 +64,8 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
         Container(
           width: screenSize.width * 0.13,
           height: 50,
-          padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-          decoration: BoxDecoration(
+          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+          decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('assets/logo/logo_protalent.png'),
                 fit: BoxFit.fill),
@@ -75,23 +75,25 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
     ),
     title: Row(
       children: [
-        Spacer(
+        const Spacer(
           flex: 4,
         ),
-        ButtonAppbar(arah: HomePage(), menu: 'Home', warna: home),
-        Spacer(
+        ButtonAppbar(arah: const HomePage(), menu: 'Home', warna: home),
+        const Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: OurTalent(), menu: 'Our Talent', warna: ourTalent),
-        Spacer(
+        ButtonAppbar(
+            arah: const OurTalent(), menu: 'Our Talent', warna: ourTalent),
+        const Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: Career(), menu: 'Career', warna: career),
-        Spacer(
+        ButtonAppbar(arah: const Career(), menu: 'Career', warna: career),
+        const Spacer(
           flex: 1,
         ),
-        ButtonAppbar(arah: ContactUs(), menu: 'Contact Us', warna: contactUs),
-        Spacer(
+        ButtonAppbar(
+            arah: const ContactUs(), menu: 'Contact Us', warna: contactUs),
+        const Spacer(
           flex: 3,
         ),
       ],
@@ -108,7 +110,7 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
                 ),
               );
             },
-            child: Text(
+            child: const Text(
               'Login',
               style: TextStyle(
                   fontSize: 18,
@@ -121,18 +123,18 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
           ),
           ElevatedButton(
             onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Register()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Register()));
             },
-            child: Text(
+            style: ElevatedButton.styleFrom(
+                primary: const Color.fromARGB(255, 0, 17, 255)),
+            child: const Text(
               'Register',
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,
                   fontWeight: FontWeight.w400),
             ),
-            style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 0, 17, 255)),
           ),
           Container(
             width: screenSize.width * 0.02,

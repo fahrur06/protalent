@@ -28,17 +28,17 @@ class _EditEducationState extends State<EditEducation> {
 
     List<_skill> rows = [
       _skill(1, 'React', '2022-07-18', 'ACTIVE',
-          TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
       _skill(2, 'Java ', '2022-01-01', 'ACTIVE',
-          TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
       _skill(3, 'Quarkus', '2022-03-29', 'ACTIVE',
-          TextButton(onPressed: () {}, child: Text('delete'))),
-      _skill(
-          4, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
-      _skill(
-          5, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
-      _skill(
-          6, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      _skill(4, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      _skill(5, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      _skill(6, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
     ];
 
     _model = EasyTableModel<_skill>(rows: rows, columns: [
@@ -76,7 +76,7 @@ class _EditEducationState extends State<EditEducation> {
       body: Container(
         width: screenSize.width * 0.64,
         //color: Colors.blue,
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -89,7 +89,7 @@ class _EditEducationState extends State<EditEducation> {
                 columnsFit: true,
               ),
             ),
-            Spacer(
+            const Spacer(
               flex: 1,
             ),
             Container(
@@ -97,14 +97,15 @@ class _EditEducationState extends State<EditEducation> {
               child: Row(
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 25),
                     width: screenSize.width * 0.1,
                     height: 55,
                     //color: Colors.red,
                     child: ElevatedButton(
                         onPressed: () {},
                         child: Row(
-                          children: [
+                          children: const [
                             SizedBox(
                               width: 5,
                             ),
@@ -113,14 +114,15 @@ class _EditEducationState extends State<EditEducation> {
                         )),
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 25),
                     width: screenSize.width * 0.1,
                     height: 55,
                     //color: Colors.red,
                     child: ElevatedButton(
                         onPressed: () {},
                         child: Row(
-                          children: [
+                          children: const [
                             SizedBox(
                               width: 5,
                             ),
