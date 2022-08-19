@@ -20,7 +20,7 @@ class botton_tombol2 extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(50),
             ),
-            side: BorderSide(width: 1, color: kPrimaryColor),
+            side: const BorderSide(width: 1, color: kPrimaryColor),
             primary: Colors.white),
         onPressed: () {
           Navigator.push(
@@ -28,7 +28,7 @@ class botton_tombol2 extends StatelessWidget {
         },
         child: Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
               fontSize: 17, color: kPrimaryColor, fontWeight: FontWeight.bold),
         ),
       ),
@@ -55,7 +55,7 @@ class Botton_tombol extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(5),
           ),
-          primary: Color.fromARGB(255, 0, 36, 192),
+          primary: const Color.fromARGB(255, 0, 36, 192),
         ),
         onPressed: () {
           Navigator.push(
@@ -63,7 +63,7 @@ class Botton_tombol extends StatelessWidget {
         },
         child: Text(
           title,
-          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
       ),
     );
@@ -97,13 +97,13 @@ class _AlertFormState extends State<AlertForm> {
     Future openDialog() => showDialog<String>(
           context: context,
           builder: (context) => AlertDialog(
-            title: Text('Add Talent'),
-            titlePadding: EdgeInsets.only(top: 40, left: 30),
+            title: const Text('Add Talent'),
+            titlePadding: const EdgeInsets.only(top: 40, left: 30),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               verticalDirection: VerticalDirection.down,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Row(
@@ -114,16 +114,16 @@ class _AlertFormState extends State<AlertForm> {
                         textAlign: TextAlign.start,
                         decoration: InputDecoration(
                           labelText: "Full Name",
-                          hintStyle: TextStyle(),
+                          hintStyle: const TextStyle(),
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5.0)),
                         ),
                       ),
                     ),
-                    Spacer(
+                    const Spacer(
                       flex: 1,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     Container(
@@ -132,7 +132,7 @@ class _AlertFormState extends State<AlertForm> {
                         textAlign: TextAlign.start,
                         decoration: InputDecoration(
                           labelText: "Age",
-                          hintStyle: TextStyle(),
+                          hintStyle: const TextStyle(),
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5.0)),
                         ),
@@ -140,7 +140,7 @@ class _AlertFormState extends State<AlertForm> {
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Row(
                   children: [
                     Container(
@@ -149,16 +149,16 @@ class _AlertFormState extends State<AlertForm> {
                         textAlign: TextAlign.start,
                         decoration: InputDecoration(
                           labelText: "Gender",
-                          hintStyle: TextStyle(),
+                          hintStyle: const TextStyle(),
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5.0)),
                         ),
                       ),
                     ),
-                    Spacer(
+                    const Spacer(
                       flex: 1,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     Container(
@@ -167,7 +167,7 @@ class _AlertFormState extends State<AlertForm> {
                         textAlign: TextAlign.start,
                         decoration: InputDecoration(
                           labelText: "Work Experience",
-                          hintStyle: TextStyle(),
+                          hintStyle: const TextStyle(),
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5.0)),
                         ),
@@ -175,7 +175,7 @@ class _AlertFormState extends State<AlertForm> {
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Row(
                   children: [
                     Container(
@@ -184,16 +184,16 @@ class _AlertFormState extends State<AlertForm> {
                         textAlign: TextAlign.start,
                         decoration: InputDecoration(
                           labelText: "Expected Salary",
-                          hintStyle: TextStyle(),
+                          hintStyle: const TextStyle(),
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5.0)),
                         ),
                       ),
                     ),
-                    Spacer(
+                    const Spacer(
                       flex: 1,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     Container(
@@ -202,7 +202,7 @@ class _AlertFormState extends State<AlertForm> {
                         textAlign: TextAlign.start,
                         decoration: InputDecoration(
                           labelText: "Latest Position",
-                          hintStyle: TextStyle(),
+                          hintStyle: const TextStyle(),
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5.0)),
                         ),
@@ -210,53 +210,53 @@ class _AlertFormState extends State<AlertForm> {
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 TextFormField(
                   textAlign: TextAlign.start,
                   decoration: InputDecoration(
                     labelText: "Latest Company",
-                    hintStyle: TextStyle(),
+                    hintStyle: const TextStyle(),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5.0)),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 TextFormField(
                   textAlign: TextAlign.start,
                   decoration: InputDecoration(
                     labelText: "Salary Status",
-                    hintStyle: TextStyle(),
+                    hintStyle: const TextStyle(),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5.0)),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 TextFormField(
                   textAlign: TextAlign.start,
                   decoration: InputDecoration(
                     labelText: "Latest Work Period",
-                    hintStyle: TextStyle(),
+                    hintStyle: const TextStyle(),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5.0)),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 TextFormField(
                   textAlign: TextAlign.start,
                   decoration: InputDecoration(
                     labelText: "Work Location",
-                    hintStyle: TextStyle(),
+                    hintStyle: const TextStyle(),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5.0)),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
 
@@ -270,18 +270,20 @@ class _AlertFormState extends State<AlertForm> {
                 //         )))
               ],
             ),
-            actions: [ElevatedButton(onPressed: () {}, child: Text('SAVE'))],
+            actions: [
+              ElevatedButton(onPressed: () {}, child: const Text('SAVE'))
+            ],
           ),
         );
     return Row(
       children: [
         Container(
             child: ElevatedButton.icon(
-          icon: Icon(
+          icon: const Icon(
             Icons.person_add,
             size: 20.0,
           ),
-          label: Text('Add Talent'),
+          label: const Text('Add Talent'),
           onPressed: () async {
             final posisi = await openDialog();
             if (posisi == null || posisi.isEmpty) return;
@@ -317,14 +319,6 @@ class ButtonAppbar extends StatelessWidget {
             ),
           );
         },
-        child: Text(
-          menu,
-          style: TextStyle(
-            fontSize: 19,
-            letterSpacing: 1.3,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
         style: ButtonStyle(
           foregroundColor: MaterialStateProperty.resolveWith<Color>(
               (Set<MaterialState> states) {
@@ -333,6 +327,14 @@ class ButtonAppbar extends StatelessWidget {
               return Colors.blue;
             return warna; // null throus error in flutter 2.2+.
           }),
+        ),
+        child: Text(
+          menu,
+          style: const TextStyle(
+            fontSize: 19,
+            letterSpacing: 1.3,
+            fontWeight: FontWeight.w500,
+          ),
         ),
       ),
     );
@@ -354,14 +356,6 @@ class ButtonAppbar_baru extends StatelessWidget {
         onPressed: () {
           Navigator.pushNamed(context, arah);
         },
-        child: Text(
-          menu,
-          style: TextStyle(
-            fontSize: 19,
-            letterSpacing: 1.3,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
         style: ButtonStyle(
           foregroundColor: MaterialStateProperty.resolveWith<Color>(
               (Set<MaterialState> states) {
@@ -370,6 +364,14 @@ class ButtonAppbar_baru extends StatelessWidget {
               return Colors.blue;
             return warna; // null throus error in flutter 2.2+.
           }),
+        ),
+        child: Text(
+          menu,
+          style: const TextStyle(
+            fontSize: 19,
+            letterSpacing: 1.3,
+            fontWeight: FontWeight.w500,
+          ),
         ),
       ),
     );

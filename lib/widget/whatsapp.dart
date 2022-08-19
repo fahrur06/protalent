@@ -37,9 +37,9 @@ class WAChat extends StatelessWidget {
         onTap: () {
           springController.play(
               motion: Motion.reverse,
-              animDuration: Duration(milliseconds: 1000),
+              animDuration: const Duration(milliseconds: 1000),
               curve: Curves.easeInBack,
-              delay: Duration(milliseconds: 100));
+              delay: const Duration(milliseconds: 100));
           launchWhatsApp(
               phone: 6281807890777,
               message:
@@ -47,7 +47,7 @@ class WAChat extends StatelessWidget {
         },
         child: Spring.rotate(
           endAngle: 360 * 10,
-          animDuration: Duration(seconds: 3 * 10),
+          animDuration: const Duration(seconds: 3 * 10),
           springController: springController,
           alignment: Alignment.center,
           animStatus: (AnimStatus status) {},

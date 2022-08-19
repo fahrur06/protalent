@@ -49,7 +49,7 @@ class DropDownDashboard2 extends StatelessWidget {
             );
           },
         ),
-        clearButtonProps: ClearButtonProps(
+        clearButtonProps: const ClearButtonProps(
             icon: Icon(
               Icons.clear,
               color: Colors.grey,

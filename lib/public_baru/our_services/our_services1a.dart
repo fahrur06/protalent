@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pro_talent/widget/button_color.dart';
@@ -21,7 +19,7 @@ class _OurServices1aState extends State<OurServices1a> {
         Container(
           width: screenSize.width,
           height: screenSize.height * 0.6,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage(
                   "assets/images/home1.jpg",
@@ -29,10 +27,10 @@ class _OurServices1aState extends State<OurServices1a> {
                 fit: BoxFit.cover),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
-        Container(
+        SizedBox(
           width: screenSize.width,
           height: screenSize.height * 0.5,
           // decoration: BoxDecoration(
@@ -53,11 +51,11 @@ class _OurServices1aState extends State<OurServices1a> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                SizedBox(height: 100),
+                const SizedBox(height: 100),
                 Container(
                   height: screenSize.height * 0.10,
                   child: ShowUpAnimation(
-                    delayStart: Duration(seconds: 1),
+                    delayStart: const Duration(seconds: 1),
                     direction: Direction.horizontal,
                     child: Text(
                       'Find & Get the Best Talent',
@@ -69,12 +67,12 @@ class _OurServices1aState extends State<OurServices1a> {
                     ),
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Container(
                   width: screenSize.width * 0.28,
                   height: screenSize.height * 0.15,
                   child: ShowUpAnimation(
-                    delayStart: Duration(seconds: 1),
+                    delayStart: const Duration(seconds: 1),
                     curve: Curves.bounceIn,
                     direction: Direction.horizontal,
                     offset: -0.2,
@@ -93,7 +91,7 @@ class _OurServices1aState extends State<OurServices1a> {
                 Container(
                   height: 60,
                   child: ShowUpAnimation(
-                    delayStart: Duration(seconds: 1),
+                    delayStart: const Duration(seconds: 1),
                     curve: Curves.bounceIn,
                     direction: Direction.horizontal,
                     offset: -0.2,
@@ -102,7 +100,7 @@ class _OurServices1aState extends State<OurServices1a> {
                         Navigator.pushNamed(context, '/register');
                       },
                       style: DefaultColors(),
-                      child: Text(
+                      child: const Text(
                         'FREE REGISTER',
                         style: TextStyle(
                             fontSize: 19,
@@ -113,7 +111,7 @@ class _OurServices1aState extends State<OurServices1a> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 )
               ],

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/login.dart';
+// import 'package:pro_talent/login.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Register extends StatefulWidget {
@@ -39,9 +39,9 @@ class _RegisterState extends State<Register> {
       body: Container(
         height: screenSize.height,
         width: screenSize.width,
-        decoration: new BoxDecoration(
-          image: new DecorationImage(
-            image: new AssetImage("assets/images/blue_background login.jpg"),
+        decoration: const BoxDecoration(
+          image: const DecorationImage(
+            image: const AssetImage("assets/images/blue_background login.jpg"),
             fit: BoxFit.fill,
           ),
         ),
@@ -53,7 +53,7 @@ class _RegisterState extends State<Register> {
           children: [
             Container(
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 10, 116, 255),
+                color: const Color.fromARGB(255, 10, 116, 255),
                 borderRadius: BorderRadius.circular(20),
               ),
               width: screenSize.width * 0.36,
@@ -73,14 +73,15 @@ class _RegisterState extends State<Register> {
                     borderRadius: BorderRadius.circular(20),
                     border: Border.all(
                       width: 5,
-                      color: Color.fromARGB(255, 10, 116, 255),
+                      color: const Color.fromARGB(255, 10, 116, 255),
                     ),
                     boxShadow: [
                       BoxShadow(
-                        color: Color.fromARGB(255, 10, 116, 255).withAlpha(60),
+                        color: const Color.fromARGB(255, 10, 116, 255)
+                            .withAlpha(60),
                         blurRadius: 15.0,
                         spreadRadius: 20.0,
-                        offset: Offset(
+                        offset: const Offset(
                           0.0,
                           3.0,
                         ),
@@ -103,7 +104,7 @@ class _RegisterState extends State<Register> {
                           height: screenSize.width * 0.02,
                           child: Image.asset("assets/logo/logo_protalent.png"),
                         ),
-                        Spacer(
+                        const Spacer(
                           flex: 2,
                         ),
                         Row(
@@ -113,13 +114,13 @@ class _RegisterState extends State<Register> {
                               color: Colors.grey[500],
                               size: screenSize.width * 0.01,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
-                            Text("Nama"),
+                            const Text("Nama"),
                           ],
                         ),
-                        Spacer(
+                        const Spacer(
                           flex: 1,
                         ),
                         Row(
@@ -131,7 +132,7 @@ class _RegisterState extends State<Register> {
                                 textAlign: TextAlign.start,
                                 decoration: InputDecoration(
                                   labelText: "Username",
-                                  hintStyle: TextStyle(),
+                                  hintStyle: const TextStyle(),
                                   border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(5.0)),
                                 ),
@@ -140,7 +141,7 @@ class _RegisterState extends State<Register> {
                             ),
                           ],
                         ),
-                        Spacer(
+                        const Spacer(
                           flex: 2,
                         ),
                         Row(
@@ -150,13 +151,13 @@ class _RegisterState extends State<Register> {
                               color: Colors.grey[500],
                               size: screenSize.width * 0.01,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
-                            Text("Email"),
+                            const Text("Email"),
                           ],
                         ),
-                        Spacer(
+                        const Spacer(
                           flex: 1,
                         ),
                         Container(
@@ -166,14 +167,14 @@ class _RegisterState extends State<Register> {
                             textAlign: TextAlign.start,
                             decoration: InputDecoration(
                               labelText: "Email",
-                              hintStyle: TextStyle(),
+                              hintStyle: const TextStyle(),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(5.0)),
                             ),
                             onChanged: (value) => _usmail = value,
                           ),
                         ),
-                        Spacer(
+                        const Spacer(
                           flex: 2,
                         ),
                         Row(
@@ -183,13 +184,13 @@ class _RegisterState extends State<Register> {
                               color: Colors.grey[500],
                               size: screenSize.width * 0.01,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
-                            Text("Password"),
+                            const Text("Password"),
                           ],
                         ),
-                        Spacer(
+                        const Spacer(
                           flex: 1,
                         ),
                         Container(
@@ -212,14 +213,14 @@ class _RegisterState extends State<Register> {
                                   );
                                 },
                               ),
-                              hintStyle: TextStyle(),
+                              hintStyle: const TextStyle(),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(5.0)),
                             ),
                             onChanged: (value) => _uspswd = value,
                           ),
                         ),
-                        Spacer(
+                        const Spacer(
                           flex: 4,
                         ),
                         Row(
@@ -231,7 +232,7 @@ class _RegisterState extends State<Register> {
                                 onPressed: () {
                                   Navigator.pushNamed(context, '/login');
                                 },
-                                child: Text("LOGIN"),
+                                child: const Text("LOGIN"),
                               ),
                             ),
                             SizedBox(
@@ -252,7 +253,7 @@ class _RegisterState extends State<Register> {
                             ),
                           ],
                         ),
-                        Spacer(
+                        const Spacer(
                           flex: 7,
                         ),
                       ],

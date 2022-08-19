@@ -9,7 +9,7 @@ class _ExpansionOurServices2State extends State<ExpansionOurServices2> {
   Widget build(BuildContext context) {
     return Container(
       child: Padding(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: ExpansionPanelList.radio(
           initialOpenPanelValue: 'Developer',
           expansionCallback: (int index, bool isExpanded) {
@@ -49,7 +49,7 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
       isExpanded: false,
       title: 'Developer',
       content: Padding(
-        padding: EdgeInsets.only(left: 20),
+        padding: const EdgeInsets.only(left: 20),
         child: Column(
           children: <Widget>[
             _posisi('Frontend Developer'),
@@ -59,24 +59,24 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
           ],
         ),
       ),
-      leading: Icon(Icons.computer)),
+      leading: const Icon(Icons.computer)),
   ExpansionpanelItem(
       isExpanded: false,
       title: 'DevOps',
       content: Padding(
-        padding: EdgeInsets.only(left: 20),
+        padding: const EdgeInsets.only(left: 20),
         child: Column(
           children: <Widget>[
             _posisi('DevOps Engineer'),
           ],
         ),
       ),
-      leading: Icon(Icons.change_circle_sharp)),
+      leading: const Icon(Icons.change_circle_sharp)),
   ExpansionpanelItem(
       isExpanded: false,
       title: 'Database',
       content: Padding(
-        padding: EdgeInsets.only(left: 20),
+        padding: const EdgeInsets.only(left: 20),
         child: Column(
           children: <Widget>[
             _posisi('Database Engineer'),
@@ -86,12 +86,12 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
           ],
         ),
       ),
-      leading: Icon(Icons.dataset_linked_sharp)),
+      leading: const Icon(Icons.dataset_linked_sharp)),
   ExpansionpanelItem(
       isExpanded: false,
       title: 'Others',
       content: Padding(
-        padding: EdgeInsets.only(left: 20),
+        padding: const EdgeInsets.only(left: 20),
         child: Column(
           children: <Widget>[
             _posisi('Project Manager'),
@@ -101,14 +101,14 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
           ],
         ),
       ),
-      leading: Icon(Icons.account_circle)),
+      leading: const Icon(Icons.account_circle)),
 ];
 
 ListTile _posisi(String namaposisi) {
   return ListTile(
     leading: Container(
-      padding: EdgeInsets.only(top: 7),
-      child: Icon(
+      padding: const EdgeInsets.only(top: 7),
+      child: const Icon(
         Icons.circle,
         size: 10,
         color: Colors.black,

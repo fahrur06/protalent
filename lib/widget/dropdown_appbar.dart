@@ -36,7 +36,7 @@ class _DropDownHomeState extends State<DropDownHome> {
                   child: Container(
                     child: Text(
                       items,
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 17,
                           fontWeight: FontWeight.bold,
                           color: kTextColor),

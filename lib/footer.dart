@@ -46,7 +46,7 @@ class Footer extends StatelessWidget {
                                         'assets/logo/logo-eksad.png'),
                                     fit: BoxFit.fill)),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Container(
                             width: screenSize.width * 0.15,
                             height: screenSize.height * 0.04,
@@ -63,7 +63,7 @@ class Footer extends StatelessWidget {
                               ),
                             ),
                           ),
-                          Spacer(
+                          const Spacer(
                             flex: 3,
                           ),
                           Container(
@@ -78,7 +78,7 @@ class Footer extends StatelessWidget {
                                     launch(
                                         'https://www.linkedin.com/company/pt-tiga-daya-digital-indonesia-triputra-group-eksad-technology');
                                   },
-                                  icon: Icon(
+                                  icon: const Icon(
                                     FontAwesomeIcons.linkedinIn,
                                     size: 30,
                                   ),
@@ -89,7 +89,7 @@ class Footer extends StatelessWidget {
                                     launch(
                                         'https://twitter.com/eksad_technology/');
                                   },
-                                  icon: Icon(
+                                  icon: const Icon(
                                     FontAwesomeIcons.twitter,
                                     size: 30,
                                   ),
@@ -100,7 +100,7 @@ class Footer extends StatelessWidget {
                                     launch(
                                         'https://www.instagram.com/eksad_technology/');
                                   },
-                                  icon: Icon(
+                                  icon: const Icon(
                                     FontAwesomeIcons.instagram,
                                     size: 30,
                                   ),
@@ -111,7 +111,7 @@ class Footer extends StatelessWidget {
                                     launch(
                                         'https://youtube.com/eksad_technology');
                                   },
-                                  icon: Icon(
+                                  icon: const Icon(
                                     FontAwesomeIcons.youtube,
                                     size: 30,
                                   ),
@@ -120,7 +120,7 @@ class Footer extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Spacer(
+                          const Spacer(
                             flex: 8,
                           )
                         ],
@@ -142,36 +142,36 @@ class Footer extends StatelessWidget {
                                   letterSpacing: 1.5),
                             ),
                           ),
-                          Spacer(
+                          const Spacer(
                             flex: 2,
                           ),
                           Container(
                             height: screenSize.height * 0.04,
-                            child: itemBawah(
+                            child: const itemBawah(
                               item: 'Home',
                               routeName: '/',
                             ),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Container(
                             height: screenSize.height * 0.04,
-                            child: itemBawah(
+                            child: const itemBawah(
                               item: 'About Us',
                               routeName: '/about',
                             ),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Container(
                             height: screenSize.height * 0.04,
-                            child: itemBawah(
+                            child: const itemBawah(
                               item: 'Service',
                               routeName: '/service',
                             ),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Container(
                             height: screenSize.height * 0.04,
-                            child: itemBawah(
+                            child: const itemBawah(
                               item: 'Career',
                               routeName: '/career',
                             ),
@@ -196,36 +196,36 @@ class Footer extends StatelessWidget {
                                   letterSpacing: 1.5),
                             ),
                           ),
-                          Spacer(
+                          const Spacer(
                             flex: 2,
                           ),
                           Container(
                             height: screenSize.height * 0.04,
-                            child: itemBawah(
+                            child: const itemBawah(
                               item: 'Retained Search',
                               routeName: '/service',
                             ),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Container(
                             height: screenSize.height * 0.04,
-                            child: itemBawah(
+                            child: const itemBawah(
                               item: 'Dedicated Services',
                               routeName: '/service',
                             ),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Container(
                             height: screenSize.height * 0.04,
-                            child: itemBawah(
+                            child: const itemBawah(
                               item: 'Contract Services',
                               routeName: '/service',
                             ),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Container(
                             height: screenSize.height * 0.04,
-                            child: itemBawah(
+                            child: const itemBawah(
                               item: 'Recruitment',
                               routeName: '/service',
                             ),
@@ -250,11 +250,11 @@ class Footer extends StatelessWidget {
                                   letterSpacing: 1.5),
                             ),
                           ),
-                          SizedBox(height: 8),
+                          const SizedBox(height: 8),
                           Container(
                             width: screenSize.width * 0.164,
                             child: ListTile(
-                              leading: Icon(
+                              leading: const Icon(
                                 Icons.phone,
                                 size: 25,
                               ),
@@ -278,7 +278,7 @@ class Footer extends StatelessWidget {
                           Container(
                             width: screenSize.width * 0.17,
                             child: ListTile(
-                              leading: Icon(
+                              leading: const Icon(
                                 Icons.mail,
                                 size: 25,
                               ),
@@ -302,12 +302,12 @@ class Footer extends StatelessWidget {
                             width: screenSize.width * 0.25,
                             height: screenSize.height * 0.22,
                             child: ListTile(
-                                leading: Icon(
+                                leading: const Icon(
                                   Icons.location_on,
                                   size: 30,
                                 ),
                                 title: Container(
-                                  padding: EdgeInsets.only(left: 14),
+                                  padding: const EdgeInsets.only(left: 14),
                                   width: screenSize.width * 0.25,
                                   height: screenSize.height * 0.22,
                                   child: Text(
@@ -361,7 +361,7 @@ class itemBawah extends StatelessWidget {
         child: Text(
           item,
           style: GoogleFonts.poppins(
-              color: Color(0xff1e5ea8),
+              color: const Color(0xff1e5ea8),
               //decoration: TextDecoration.underline,
               fontSize: 17),
         ));

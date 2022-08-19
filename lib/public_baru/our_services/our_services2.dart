@@ -20,11 +20,11 @@ class _OurServices2State extends State<OurServices2> {
         children: [
           Container(
             height: 130,
-            color: Color(0xff1e5ea8),
+            color: const Color(0xff1e5ea8),
             width: screenSize.width,
             child: Column(
               children: <Widget>[
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Text(
@@ -35,7 +35,7 @@ class _OurServices2State extends State<OurServices2> {
                       fontWeight: FontWeight.bold,
                       letterSpacing: 1.3),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Text(
@@ -46,7 +46,7 @@ class _OurServices2State extends State<OurServices2> {
             ),
           ),
           Container(
-            padding: EdgeInsets.only(top: 20),
+            padding: const EdgeInsets.only(top: 20),
             color: Colors.white,
             width: screenSize.width * 0.6,
             child: ExpansionOurServices2(),

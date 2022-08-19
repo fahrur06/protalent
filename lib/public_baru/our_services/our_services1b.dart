@@ -24,20 +24,20 @@ class _OurServices1bState extends State<OurServices1b> {
         children: [
           Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
                 child: Text(
                   "Our Services",
                   style: GoogleFonts.poppins(
-                    color: Color(0xff1e5ea8),
+                    color: const Color(0xff1e5ea8),
                     fontSize: 36,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
@@ -46,14 +46,14 @@ class _OurServices1bState extends State<OurServices1b> {
                   "We adopt a simple approach - we listen. Our consultants listen to our candidates and our client. The consultants are match-makers and work to meet the needs of both the client and the candidate to make the perfect fit. Of course, please feel free to ask us about any blended solution that appeals to you and we will try to make it happen.",
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
-                      color: Color(0xff111111),
+                      color: const Color(0xff111111),
                       fontSize: 17,
                       letterSpacing: 1.3,
                       height: 1.3,
                       fontWeight: FontWeight.w500),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               Row(
@@ -73,9 +73,10 @@ class _OurServices1bState extends State<OurServices1b> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(100),
                                 border: Border.all(
-                                    color: Color.fromARGB(255, 4, 97, 184),
+                                    color:
+                                        const Color.fromARGB(255, 4, 97, 184),
                                     width: 1),
-                                image: DecorationImage(
+                                image: const DecorationImage(
                                   image: AssetImage(
                                     'assets/icons/icon-service-1.png',
                                   ),
@@ -89,11 +90,11 @@ class _OurServices1bState extends State<OurServices1b> {
                         ),
                         Container(
                           height: 40,
-                          padding: EdgeInsets.only(top: 5),
+                          padding: const EdgeInsets.only(top: 5),
                           child: ShowUpAnimation(
-                            delayStart: Duration(seconds: 1),
+                            delayStart: const Duration(seconds: 1),
                             direction: Direction.horizontal,
-                            child: Text("RETAINED SEARCH",
+                            child: const Text("RETAINED SEARCH",
                                 style: TextStyle(
                                     color: Colors.blueAccent,
                                     fontSize: 16,
@@ -105,11 +106,11 @@ class _OurServices1bState extends State<OurServices1b> {
                           height: 10,
                         ),
                         Container(
-                          padding: EdgeInsets.only(top: 10),
+                          padding: const EdgeInsets.only(top: 10),
                           width: 220,
                           height: 180,
                           child: ShowUpAnimation(
-                            delayStart: Duration(seconds: 1),
+                            delayStart: const Duration(seconds: 1),
                             direction: Direction.horizontal,
                             child: Text(
                               "We not only keep our eyes wide open for talented individuals, but we also make it an active endeavor. One that digs deeper to find you that star employee ahead of your competition.",
@@ -140,9 +141,10 @@ class _OurServices1bState extends State<OurServices1b> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(100),
                                 border: Border.all(
-                                    color: Color.fromARGB(255, 4, 97, 184),
+                                    color:
+                                        const Color.fromARGB(255, 4, 97, 184),
                                     width: 1),
-                                image: DecorationImage(
+                                image: const DecorationImage(
                                   image: AssetImage(
                                     'assets/icons/icon-service-2.png',
                                   ),
@@ -156,11 +158,11 @@ class _OurServices1bState extends State<OurServices1b> {
                         ),
                         Container(
                           height: 40,
-                          padding: EdgeInsets.only(top: 5),
+                          padding: const EdgeInsets.only(top: 5),
                           child: ShowUpAnimation(
-                            delayStart: Duration(seconds: 1),
+                            delayStart: const Duration(seconds: 1),
                             direction: Direction.horizontal,
-                            child: Text("DEDICATED SERVICES",
+                            child: const Text("DEDICATED SERVICES",
                                 style: TextStyle(
                                     color: Colors.blueAccent,
                                     fontSize: 16,
@@ -172,11 +174,11 @@ class _OurServices1bState extends State<OurServices1b> {
                           height: 10,
                         ),
                         Container(
-                          padding: EdgeInsets.only(top: 10),
+                          padding: const EdgeInsets.only(top: 10),
                           width: 200,
                           height: 180,
                           child: ShowUpAnimation(
-                            delayStart: Duration(seconds: 1),
+                            delayStart: const Duration(seconds: 1),
                             direction: Direction.horizontal,
                             child: Text(
                               "Our dedicated team of recruiters helps fulfill your critical hiring needs in the mid-level and executive positions making the recruitment cycle short and efficient.",
@@ -207,9 +209,10 @@ class _OurServices1bState extends State<OurServices1b> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(100),
                                 border: Border.all(
-                                    color: Color.fromARGB(255, 4, 97, 184),
+                                    color:
+                                        const Color.fromARGB(255, 4, 97, 184),
                                     width: 1),
-                                image: DecorationImage(
+                                image: const DecorationImage(
                                   image: AssetImage(
                                     'assets/icons/icon-service-3.png',
                                   ),
@@ -223,11 +226,11 @@ class _OurServices1bState extends State<OurServices1b> {
                         ),
                         Container(
                           height: 40,
-                          padding: EdgeInsets.only(top: 5),
+                          padding: const EdgeInsets.only(top: 5),
                           child: ShowUpAnimation(
-                            delayStart: Duration(seconds: 1),
+                            delayStart: const Duration(seconds: 1),
                             direction: Direction.horizontal,
-                            child: Text("CONTRACT SERVICES",
+                            child: const Text("CONTRACT SERVICES",
                                 style: TextStyle(
                                     color: Colors.blueAccent,
                                     fontSize: 16,
@@ -239,11 +242,11 @@ class _OurServices1bState extends State<OurServices1b> {
                           height: 10,
                         ),
                         Container(
-                          padding: EdgeInsets.only(top: 10),
+                          padding: const EdgeInsets.only(top: 10),
                           width: 200,
                           height: 180,
                           child: ShowUpAnimation(
-                            delayStart: Duration(seconds: 1),
+                            delayStart: const Duration(seconds: 1),
                             direction: Direction.horizontal,
                             child: Text(
                               "Time-sensitive projects are treated with urgency to provide skilled technical resources needed for quick and cost-effective turnaround.",
@@ -274,9 +277,10 @@ class _OurServices1bState extends State<OurServices1b> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(100),
                                 border: Border.all(
-                                    color: Color.fromARGB(255, 4, 97, 184),
+                                    color:
+                                        const Color.fromARGB(255, 4, 97, 184),
                                     width: 1),
-                                image: DecorationImage(
+                                image: const DecorationImage(
                                   image: AssetImage(
                                     'assets/icons/icon-service-4.png',
                                   ),
@@ -290,11 +294,11 @@ class _OurServices1bState extends State<OurServices1b> {
                         ),
                         Container(
                           height: 40,
-                          padding: EdgeInsets.only(top: 5),
+                          padding: const EdgeInsets.only(top: 5),
                           child: ShowUpAnimation(
-                            delayStart: Duration(seconds: 1),
+                            delayStart: const Duration(seconds: 1),
                             direction: Direction.horizontal,
-                            child: Text(
+                            child: const Text(
                               "RECRUITMENT PROCESS OUTSOURCING",
                               style: TextStyle(
                                   color: Colors.blueAccent,
@@ -309,11 +313,11 @@ class _OurServices1bState extends State<OurServices1b> {
                           height: 10,
                         ),
                         Container(
-                          padding: EdgeInsets.only(top: 10),
+                          padding: const EdgeInsets.only(top: 10),
                           width: 220,
                           height: 180,
                           child: ShowUpAnimation(
-                            delayStart: Duration(seconds: 1),
+                            delayStart: const Duration(seconds: 1),
                             direction: Direction.horizontal,
                             child: Text(
                               "Hire the best without ever having to face the logistics. From the very beginning till actually getting your next 'rockstar' employees to walk in and take their positions on your floors.",

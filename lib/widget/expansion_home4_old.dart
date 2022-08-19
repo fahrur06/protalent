@@ -8,7 +8,7 @@ class Expansionpaneltate extends State<Expansionpanel> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10.0),
         child: ExpansionPanelList.radio(
           expansionCallback: (int index, bool isExpanded) {
             setState(() {
@@ -24,7 +24,7 @@ class Expansionpaneltate extends State<Expansionpanel> {
                     title: Text(
                       item.title,
                       textAlign: TextAlign.left,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.w600,
                       ),
@@ -45,7 +45,7 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
       isExpanded: false,
       title: 'Software Engineering',
       content: Padding(
-          padding: EdgeInsets.only(bottom: 5, left: 20),
+          padding: const EdgeInsets.only(bottom: 5, left: 20),
           child: Column(children: <Widget>[
             _judulposisi(),
             _posisi('Backend Engineer'),
@@ -56,12 +56,12 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
             _posisi('Tester Engineer'),
             _posisi('Mobile Engineer'),
           ])),
-      leading: Icon(Icons.computer)),
+      leading: const Icon(Icons.computer)),
   ExpansionpanelItem(
       isExpanded: false,
       title: 'Product Management',
       content: Padding(
-          padding: EdgeInsets.only(bottom: 5, left: 20),
+          padding: const EdgeInsets.only(bottom: 5, left: 20),
           child: Column(children: <Widget>[
             _judulposisi(),
             _posisi('Product Marketing'),
@@ -69,24 +69,24 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
             _posisi('Project Management'),
             _posisi('Product Design'),
           ])),
-      leading: Icon(Icons.manage_accounts)),
+      leading: const Icon(Icons.manage_accounts)),
   ExpansionpanelItem(
       isExpanded: false,
       title: 'Marketing & Communications',
       content: Padding(
-          padding: EdgeInsets.only(bottom: 5, left: 20),
+          padding: const EdgeInsets.only(bottom: 5, left: 20),
           child: Column(children: <Widget>[
             _judulposisi(),
             _posisi('Social Media'),
             _posisi('Public Relations'),
             _posisi('Graphic Designer'),
           ])),
-      leading: Icon(Icons.comment_outlined)),
+      leading: const Icon(Icons.comment_outlined)),
   ExpansionpanelItem(
       isExpanded: false,
       title: 'Data Science',
       content: Padding(
-          padding: EdgeInsets.only(bottom: 5, left: 20),
+          padding: const EdgeInsets.only(bottom: 5, left: 20),
           child: Column(children: <Widget>[
             _judulposisi(),
             _posisi('Database Engineer'),
@@ -94,37 +94,37 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
             _posisi('Business Intelligence'),
             _posisi('Statistician/Scientist'),
           ])),
-      leading: Icon(Icons.table_rows)),
+      leading: const Icon(Icons.table_rows)),
   ExpansionpanelItem(
       isExpanded: false,
       title: 'Sales',
       content: Padding(
-          padding: EdgeInsets.only(bottom: 5, left: 20),
+          padding: const EdgeInsets.only(bottom: 5, left: 20),
           child: Column(children: <Widget>[
             _judulposisi(),
             _posisi('Business Development (B2B)'),
             _posisi('Business Development (B2C)'),
             _posisi('International Sales'),
           ])),
-      leading: Icon(Icons.shopping_cart)),
+      leading: const Icon(Icons.shopping_cart)),
   ExpansionpanelItem(
       isExpanded: false,
       title: 'Human Resources',
       content: Padding(
-          padding: EdgeInsets.only(bottom: 5, left: 20),
+          padding: const EdgeInsets.only(bottom: 5, left: 20),
           child: Column(children: <Widget>[
             _judulposisi(),
             _posisi('Recruitment'),
             _posisi('Training & Development'),
             _posisi('Business Partner'),
           ])),
-      leading: Icon(Icons.people)),
+      leading: const Icon(Icons.people)),
 ];
 
 Container _judulposisi() {
   return Container(
     width: 1400,
-    child: Text(
+    child: const Text(
       'Position: ',
       textAlign: TextAlign.start,
       style: TextStyle(
@@ -138,8 +138,8 @@ Container _judulposisi() {
 ListTile _posisi(String namaposisi) {
   return ListTile(
     leading: Container(
-        padding: EdgeInsets.only(top: 7),
-        child: Icon(
+        padding: const EdgeInsets.only(top: 7),
+        child: const Icon(
           Icons.circle,
           size: 10,
           color: Colors.black,

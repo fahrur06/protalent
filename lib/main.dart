@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/admin/dashboard.dart';
-import 'package:pro_talent/admin/setting_dashboard.dart';
+// import 'package:pro_talent/admin/setting_dashboard.dart';
 import 'package:pro_talent/client/dashboard_client.dart';
-import 'package:pro_talent/client/hired_talent.dart';
-import 'package:pro_talent/homepage.dart';
+// import 'package:pro_talent/client/hired_talent.dart';
+// import 'package:pro_talent/homepage.dart';
 import 'package:pro_talent/homepage_new.dart';
 import 'package:pro_talent/login.dart';
 import 'package:pro_talent/public_baru/career/career.dart';

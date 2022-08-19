@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/footer.dart';
-import 'package:pro_talent/public/home/home4.dart';
+// import 'package:pro_talent/public/home/home4.dart';
 import 'package:pro_talent/public_baru/contact_us_baru/contact_us2.dart';
 import 'package:pro_talent/public_baru/home/home1_new.dart';
 import 'package:pro_talent/public_baru/home/home2_new.dart';
@@ -30,12 +30,12 @@ class _HomePageNewState extends State<HomePageNew> {
               Colors.black, Colors.black, Colors.black),
       body: ListView(
         children: [
-          HomeNew1(),
-          HomeNew2(),
-          HomeNew3(),
-          HomeNew4(),
+          const HomeNew1(),
+          const HomeNew2(),
+          const HomeNew3(),
+          const HomeNew4(),
           ContactUs2(),
-          Footer(),
+          const Footer(),
         ],
       ),
     );
