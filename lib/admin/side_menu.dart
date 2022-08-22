@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/admin/dashboard/main_dashboard.dart';
 import 'package:side_navigation/side_navigation.dart';
-import 'package:pro_talent/admin/dashboard/desc_talent.dart';
+// import 'package:pro_talent/admin/dashboard/desc_talent.dart';
 import 'package:pro_talent/admin/client/client_dashboard.dart';
 import 'package:pro_talent/admin/pages/pages_dashboard.dart';
 import 'package:pro_talent/admin/post/post_dashboard.dart';
@@ -35,22 +35,23 @@ class _SideMenuState extends State<SideMenu> {
         children: [
           SideNavigationBar(
             header: SideNavigationBarHeader(
-              image: CircleAvatar(
+              image: const CircleAvatar(
+                radius: 20,
                 child: Icon(
                   Icons.person_pin,
                   size: 20,
                 ),
-                radius: 20,
               ),
               title: Container(
-                padding: EdgeInsets.only(left: 10),
-                child: Text(
-              'Fahrur Huzain',
-              style: TextStyle(
-              color: Colors.white,
-              fontSize: 18,
-              fontWeight: FontWeight.bold),
-              ),),
+                padding: const EdgeInsets.only(left: 10),
+                child: const Text(
+                  'Fahrur Huzain',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
               subtitle: Container(),
               // subtitle: Text(
               //   'Admin Eksad',
@@ -97,13 +98,13 @@ class _SideMenuState extends State<SideMenu> {
             // Make use of standard() constructor for other themes
             theme: SideNavigationBarTheme(
               backgroundColor:
-              //Color.fromARGB(200, 9, 47, 171),
-              Color.fromARGB(255, 18, 108, 178),
-              togglerTheme: SideNavigationBarTogglerTheme(
-                  shrinkIconColor: Colors.white,
-                  expandIconColor: Colors.white),
-              itemTheme:
-                  SideNavigationBarItemTheme(selectedItemColor: Colors.white,unselectedItemColor: Colors.white60),
+                  //Color.fromARGB(200, 9, 47, 171),
+                  const Color.fromARGB(255, 18, 108, 178),
+              togglerTheme: const SideNavigationBarTogglerTheme(
+                  shrinkIconColor: Colors.white, expandIconColor: Colors.white),
+              itemTheme: const SideNavigationBarItemTheme(
+                  selectedItemColor: Colors.white,
+                  unselectedItemColor: Colors.white60),
               dividerTheme: SideNavigationBarDividerTheme.standard(),
             ),
           ),

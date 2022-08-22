@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -18,7 +17,7 @@ class _ContactUsState extends State<ContactUs1> {
         Container(
           width: screenSize.width,
           height: screenSize.height * 0.42,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(
                     "assets/images/contactus1.jpg",
@@ -35,15 +34,13 @@ class _ContactUsState extends State<ContactUs1> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Container(
-                child: Text(
-                  'Contact Us',
-                  style: GoogleFonts.poppins(
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                  overflow: TextOverflow.ellipsis,
-                ),
+              Text(
+                'Contact Us',
+                style: GoogleFonts.poppins(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+                overflow: TextOverflow.ellipsis,
               ),
             ],
           ),

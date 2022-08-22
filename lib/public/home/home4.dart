@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pro_talent/admin/post/add_post.dart';
-import 'package:pro_talent/const/text_homepage.dart';
-import 'package:pro_talent/widget/expansion_home4_old.dart';
+// import 'package:pro_talent/admin/post/add_post.dart';
+// import 'package:pro_talent/const/text_homepage.dart';
+// import 'package:pro_talent/widget/expansion_home4_old.dart';
 
 import '../../conts_warna.dart';
-import '../../widget/botton.dart';
-import '../../widget/botton.dart';
+// import '../../widget/botton.dart';
+// import '../../widget/botton.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
@@ -30,10 +30,10 @@ class _Home4State extends State<Home4> {
     var screenSize = MediaQuery.of(context).size;
     return Container(
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 100),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 100),
         width: screenSize.width * 0.9,
         height: screenSize.height * 0.75,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
               image: AssetImage(
                   "assets/images/blue-white-low-poly-triangle-shapes-background.jpg"),
@@ -72,7 +72,7 @@ class _Home4State extends State<Home4> {
                 //   onPressed: () {},
                 //   child: const Text('Get in touch'),
                 // ),
-                Spacer(),
+                const Spacer(),
                 Container(
                   child: Row(
                     children: [
@@ -204,13 +204,12 @@ class _Home4State extends State<Home4> {
                                 fontSize: 50, fontWeight: FontWeight.bold)),
                         TextFormField(
                           controller: nameController,
-                          decoration:
-                          const InputDecoration(hintText: 'Name'),
+                          decoration: const InputDecoration(hintText: 'Name'),
                         ),
                         TextFormField(
                           controller: phoneController,
                           decoration:
-                          const InputDecoration(hintText: 'Phone Number'),
+                              const InputDecoration(hintText: 'Phone Number'),
                         ),
                         TextFormField(
                           controller: emailController,
@@ -269,7 +268,7 @@ class _Home4State extends State<Home4> {
                     ),
                   ),
                 ),
-                Spacer()
+                const Spacer()
               ],
             ),
           ],
@@ -278,7 +277,8 @@ class _Home4State extends State<Home4> {
     );
   }
 
-  Future SendEmail(String name, String phone, String email, String message) async {
+  Future SendEmail(
+      String name, String phone, String email, String message) async {
     final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
     const serviceId = 'service_wava70j';
     const templateId = 'template_koc73cj';
@@ -291,7 +291,12 @@ class _Home4State extends State<Home4> {
           'service_id': serviceId,
           'template_id': templateId,
           'user_id': userId,
-          'template_params': {'from_name': name, 'from_phone': phone, 'to_email': email, 'message': message}
+          'template_params': {
+            'from_name': name,
+            'from_phone': phone,
+            'to_email': email,
+            'message': message
+          }
         }));
     return response.statusCode;
   }

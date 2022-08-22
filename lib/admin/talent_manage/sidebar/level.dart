@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/conts_warna.dart';
+// import 'package:pro_talent/conts_warna.dart';
 import 'package:easy_table/easy_table.dart';
 
 class EditLevel extends StatefulWidget {
@@ -28,17 +28,17 @@ class _EditLevelState extends State<EditLevel> {
 
     List<_level> rows = [
       _level(1, 'Junior Java Programmer', '2022-07-18', 'ACTIVE',
-          TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
       _level(2, 'Junior Flutter Programmer ', '2022-01-01', 'ACTIVE',
-          TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
       _level(3, 'Senior Quarkus Programmer', '2022-03-29', 'ACTIVE',
-          TextButton(onPressed: () {}, child: Text('delete'))),
-      _level(
-          4, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
-      _level(
-          5, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
-      _level(
-          6, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      _level(4, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      _level(5, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      _level(6, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
     ];
 
     _model = EasyTableModel<_level>(rows: rows, columns: [
@@ -76,7 +76,7 @@ class _EditLevelState extends State<EditLevel> {
       body: Container(
         width: screenSize.width * 0.64,
         //color: Colors.blue,
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -89,7 +89,7 @@ class _EditLevelState extends State<EditLevel> {
                 columnsFit: true,
               ),
             ),
-            Spacer(
+            const Spacer(
               flex: 1,
             ),
             Container(
@@ -97,14 +97,15 @@ class _EditLevelState extends State<EditLevel> {
               child: Row(
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 25),
                     width: screenSize.width * 0.1,
                     height: 55,
                     //color: Colors.red,
                     child: ElevatedButton(
                         onPressed: () {},
                         child: Row(
-                          children: [
+                          children: const [
                             SizedBox(
                               width: 5,
                             ),
@@ -113,14 +114,15 @@ class _EditLevelState extends State<EditLevel> {
                         )),
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 25),
                     width: screenSize.width * 0.1,
                     height: 55,
                     //color: Colors.red,
                     child: ElevatedButton(
                         onPressed: () {},
                         child: Row(
-                          children: [
+                          children: const [
                             SizedBox(
                               width: 5,
                             ),

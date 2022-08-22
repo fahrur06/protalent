@@ -30,7 +30,6 @@ class Footer extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Container(
                       padding: const EdgeInsets.only(left: 5),
                       width: screenSize.width * 0.2,
@@ -47,7 +46,7 @@ class Footer extends StatelessWidget {
                                         'assets/logo/logo-eksad.png'),
                                     fit: BoxFit.fill)),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Container(
                             width: screenSize.width * 0.15,
                             height: screenSize.height * 0.04,
@@ -64,7 +63,7 @@ class Footer extends StatelessWidget {
                               ),
                             ),
                           ),
-                          Spacer(
+                          const Spacer(
                             flex: 3,
                           ),
                           Container(
@@ -79,7 +78,7 @@ class Footer extends StatelessWidget {
                                     launch(
                                         'https://www.linkedin.com/company/pt-tiga-daya-digital-indonesia-triputra-group-eksad-technology');
                                   },
-                                  icon: Icon(
+                                  icon: const Icon(
                                     FontAwesomeIcons.linkedinIn,
                                     size: 30,
                                   ),
@@ -90,7 +89,7 @@ class Footer extends StatelessWidget {
                                     launch(
                                         'https://twitter.com/eksadtechnology/');
                                   },
-                                  icon: Icon(
+                                  icon: const Icon(
                                     FontAwesomeIcons.twitter,
                                     size: 30,
                                   ),
@@ -101,7 +100,7 @@ class Footer extends StatelessWidget {
                                     launch(
                                         'https://www.instagram.com/eksad_technology/');
                                   },
-                                  icon: Icon(
+                                  icon: const Icon(
                                     FontAwesomeIcons.instagram,
                                     size: 30,
                                   ),
@@ -112,7 +111,7 @@ class Footer extends StatelessWidget {
                                     launch(
                                         'https://youtube.com/eksad_technology');
                                   },
-                                  icon: Icon(
+                                  icon: const Icon(
                                     FontAwesomeIcons.youtube,
                                     size: 30,
                                   ),
@@ -121,7 +120,7 @@ class Footer extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Spacer(
+                          const Spacer(
                             flex: 8,
                           )
                         ],
@@ -143,36 +142,36 @@ class Footer extends StatelessWidget {
                                   letterSpacing: 1.5),
                             ),
                           ),
-                          Spacer(
+                          const Spacer(
                             flex: 2,
                           ),
                           Container(
-                            height: screenSize.height*0.04,
-                            child: itemBawah(
+                            height: screenSize.height * 0.04,
+                            child: const itemBawah(
                               item: 'Home',
                               routeName: '/',
                             ),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Container(
-                            height: screenSize.height*0.04,
-                            child: itemBawah(
+                            height: screenSize.height * 0.04,
+                            child: const itemBawah(
                               item: 'About Us',
                               routeName: '/about',
                             ),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Container(
-                            height: screenSize.height*0.04,
-                            child: itemBawah(
+                            height: screenSize.height * 0.04,
+                            child: const itemBawah(
                               item: 'Service',
                               routeName: '/service',
                             ),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Container(
-                            height: screenSize.height*0.04,
-                            child: itemBawah(
+                            height: screenSize.height * 0.04,
+                            child: const itemBawah(
                               item: 'Career',
                               routeName: '/career',
                             ),
@@ -197,47 +196,45 @@ class Footer extends StatelessWidget {
                                   letterSpacing: 1.5),
                             ),
                           ),
-                          Spacer(
+                          const Spacer(
                             flex: 2,
                           ),
                           Container(
-                            height: screenSize.height*0.04,
-                            child: itemBawah(
+                            height: screenSize.height * 0.04,
+                            child: const itemBawah(
                               item: 'Retained Search',
                               routeName: '/service',
                             ),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Container(
-                            height: screenSize.height*0.04,
-                            child: itemBawah(
+                            height: screenSize.height * 0.04,
+                            child: const itemBawah(
                               item: 'Dedicated Services',
                               routeName: '/service',
                             ),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Container(
-                            height: screenSize.height*0.04,
-                            child: itemBawah(
+                            height: screenSize.height * 0.04,
+                            child: const itemBawah(
                               item: 'Contract Services',
                               routeName: '/service',
                             ),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Container(
-                            height: screenSize.height*0.04,
-                            child: itemBawah(
+                            height: screenSize.height * 0.04,
+                            child: const itemBawah(
                               item: 'Recruitment',
                               routeName: '/service',
                             ),
                           ),
                         ],
                       )),
-
                   Container(
                       width: screenSize.width * 0.25,
                       height: screenSize.height * 0.42,
-
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -253,12 +250,11 @@ class Footer extends StatelessWidget {
                                   letterSpacing: 1.5),
                             ),
                           ),
-                          SizedBox(height: 8),
-
+                          const SizedBox(height: 8),
                           Container(
                             width: screenSize.width * 0.164,
                             child: ListTile(
-                              leading: Icon(
+                              leading: const Icon(
                                 Icons.phone,
                                 size: 25,
                               ),
@@ -267,8 +263,9 @@ class Footer extends StatelessWidget {
                                   launch('tel:02157958040');
                                 },
                                 child: Container(
-                                  height: screenSize.height*0.04,
-                                  child: Text('(021) 5795 - 8040',
+                                  height: screenSize.height * 0.04,
+                                  child: Text(
+                                    '(021) 5795 - 8040',
                                     style: GoogleFonts.poppins(
                                       fontSize: 17,
                                       color: Colors.black87,
@@ -278,55 +275,53 @@ class Footer extends StatelessWidget {
                               ),
                             ),
                           ),
-
                           Container(
                             width: screenSize.width * 0.17,
                             child: ListTile(
-                              leading: Icon(
+                              leading: const Icon(
                                 Icons.mail,
                                 size: 25,
                               ),
                               title: TextButton(
                                 onPressed: () {
-                                  launch('mailto:Hello@eksad.com?subject=Hello saya ingin bertanya tentang protalent');
+                                  launch(
+                                      'mailto:Hello@eksad.com?subject=Hello saya ingin bertanya tentang protalent');
                                 },
                                 child: Container(
-                                  height: screenSize.height*0.04,
-                                  child: Text('Hello@eksad.com',
+                                  height: screenSize.height * 0.04,
+                                  child: Text(
+                                    'Hello@eksad.com',
                                     style: GoogleFonts.poppins(
-                                        fontSize: 17,
-                                        color: Colors.black87
-                                    ),
+                                        fontSize: 17, color: Colors.black87),
                                   ),
                                 ),
                               ),
                             ),
                           ),
-
                           Container(
                             width: screenSize.width * 0.25,
-                            height: screenSize.height*0.22,
+                            height: screenSize.height * 0.22,
                             child: ListTile(
-                              leading: Icon(
-                                Icons.location_on,
-                                size: 30,
-                              ),
-                              title: Container(
-                                padding: EdgeInsets.only(left: 14),
-                                width: screenSize.width * 0.25,
-                                height: screenSize.height*0.22,
-                                child: Text(
-                                'PT. Tiga Daya Digital Indonesia \nThe East '
-                                'Tower 19th Floor \nJl. Dr. Ide Anak Agung '
-                                '\nGde Agung Blok E3.2 '
-                                '\nMega Kuningan, \nJakarta Selatan 12950',
-                                style: GoogleFonts.poppins(
-                                    fontSize: 17,
-                                    height: 1.6,
-                                ),textAlign: TextAlign.left,
-                              ),
-                              )
-                            ),
+                                leading: const Icon(
+                                  Icons.location_on,
+                                  size: 30,
+                                ),
+                                title: Container(
+                                  padding: const EdgeInsets.only(left: 14),
+                                  width: screenSize.width * 0.25,
+                                  height: screenSize.height * 0.22,
+                                  child: Text(
+                                    'PT. Tiga Daya Digital Indonesia \nThe East '
+                                    'Tower 19th Floor \nJl. Dr. Ide Anak Agung '
+                                    '\nGde Agung Blok E3.2 '
+                                    '\nMega Kuningan, \nJakarta Selatan 12950',
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 17,
+                                      height: 1.6,
+                                    ),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                )),
                           ),
                         ],
                       )),
@@ -366,7 +361,7 @@ class itemBawah extends StatelessWidget {
         child: Text(
           item,
           style: GoogleFonts.poppins(
-              color: Color(0xff1e5ea8),
+              color: const Color(0xff1e5ea8),
               //decoration: TextDecoration.underline,
               fontSize: 17),
         ));

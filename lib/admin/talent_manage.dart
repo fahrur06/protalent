@@ -29,12 +29,27 @@ class _TalentmanagementState extends State<TalentManagement> {
     super.initState();
 
     List<_TalentManagementState> rows = [
-      _TalentManagementState(1, 'Joko', 'Software Engineer', 'Hired',
-          '2022-07-18', TextButton(onPressed: () {}, child: Text('edit'))),
-      _TalentManagementState(2, 'Bambang', 'Quality Assuarance', 'Pre Hired',
-          '2022-01-01', TextButton(onPressed: () {}, child: Text('edit'))),
-      _TalentManagementState(3, 'Udin', 'Bussiness Analyst', 'Available',
-          '2022-03-29', TextButton(onPressed: () {}, child: Text('edit'))),
+      _TalentManagementState(
+          1,
+          'Joko',
+          'Software Engineer',
+          'Hired',
+          '2022-07-18',
+          TextButton(onPressed: () {}, child: const Text('edit'))),
+      _TalentManagementState(
+          2,
+          'Bambang',
+          'Quality Assuarance',
+          'Pre Hired',
+          '2022-01-01',
+          TextButton(onPressed: () {}, child: const Text('edit'))),
+      _TalentManagementState(
+          3,
+          'Udin',
+          'Bussiness Analyst',
+          'Available',
+          '2022-03-29',
+          TextButton(onPressed: () {}, child: const Text('edit'))),
     ];
 
     _model = EasyTableModel<_TalentManagementState>(rows: rows, columns: [
@@ -68,15 +83,15 @@ class _TalentmanagementState extends State<TalentManagement> {
           height: screenSize.height,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            border:
-                Border.all(color: Color.fromARGB(255, 18, 108, 178), width: 5),
+            border: Border.all(
+                color: const Color.fromARGB(255, 18, 108, 178), width: 5),
           ),
 
           child: Column(
             children: [
               Container(
-                padding: EdgeInsets.only(top: 30, left: 50),
-                decoration: BoxDecoration(
+                padding: const EdgeInsets.only(top: 30, left: 50),
+                decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(10),
                       topLeft: Radius.circular(10)),
@@ -88,7 +103,7 @@ class _TalentmanagementState extends State<TalentManagement> {
                   children: [
                     Row(
                       children: [
-                        Text(
+                        const Text(
                           'Talent Management',
                           style: TextStyle(
                               color: Colors.white,
@@ -96,7 +111,7 @@ class _TalentmanagementState extends State<TalentManagement> {
                               fontWeight: FontWeight.bold,
                               letterSpacing: 2),
                         ),
-                        Spacer(
+                        const Spacer(
                           flex: 15,
                         ),
                         Container(
@@ -124,17 +139,17 @@ class _TalentmanagementState extends State<TalentManagement> {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
-                    AlertForm(),
+                    const AlertForm(),
                   ],
                 ),
               ),
               Container(
                 width: screenSize.width * 0.7,
                 height: screenSize.height * 0.025,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   border: Border(
                     top: BorderSide(
                         color: Color.fromARGB(255, 18, 108, 178), width: 5),
@@ -144,7 +159,7 @@ class _TalentmanagementState extends State<TalentManagement> {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Color.fromARGB(255, 18, 108, 178),
+                  color: const Color.fromARGB(255, 18, 108, 178),
                 ),
                 width: screenSize.width * 0.67,
                 height: screenSize.height * 0.6,

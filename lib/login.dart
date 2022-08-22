@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/client/dashboard_client.dart';
-import 'package:pro_talent/register.dart';
-
-import 'admin/dashboard.dart';
+// import 'package:pro_talent/client/dashboard_client.dart';
+// import 'package:pro_talent/register.dart';
+//
+// import 'admin/dashboard.dart';
 
 class login extends StatefulWidget {
   const login({Key? key}) : super(key: key);
@@ -25,15 +25,13 @@ class _loginState extends State<login> {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
-        decoration: new BoxDecoration(
-            image: new DecorationImage(
-              image: new AssetImage("assets/images/blue_background login.jpg"),
-              fit: BoxFit.fill,
-            )
-        ),
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+          image: AssetImage("assets/images/blue_background login.jpg"),
+          fit: BoxFit.fill,
+        )),
         height: screenSize.height,
         width: screenSize.width,
-
         padding: EdgeInsets.only(
             left: screenSize.width * 0.15,
             top: screenSize.height * 0.13,
@@ -42,7 +40,7 @@ class _loginState extends State<login> {
           children: [
             Container(
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 10, 116, 255),
+                color: const Color.fromARGB(255, 10, 116, 255),
                 borderRadius: BorderRadius.circular(20),
               ),
               width: screenSize.width * 0.36,
@@ -62,14 +60,15 @@ class _loginState extends State<login> {
                     borderRadius: BorderRadius.circular(20),
                     border: Border.all(
                       width: 5,
-                      color: Color.fromARGB(255, 10, 116, 255),
+                      color: const Color.fromARGB(255, 10, 116, 255),
                     ),
                     boxShadow: [
                       BoxShadow(
-                        color: Color.fromARGB(255, 10, 116, 255).withAlpha(60),
+                        color: const Color.fromARGB(255, 10, 116, 255)
+                            .withAlpha(60),
                         blurRadius: 15.0,
                         spreadRadius: 20.0,
-                        offset: Offset(
+                        offset: const Offset(
                           0.0,
                           3.0,
                         ),
@@ -88,11 +87,11 @@ class _loginState extends State<login> {
                       children: [
                         Container(
                           padding:
-                          EdgeInsets.only(left: screenSize.width * 0.055),
+                              EdgeInsets.only(left: screenSize.width * 0.055),
                           height: screenSize.width * 0.02,
                           child: Image.asset("assets/logo/logo_protalent.png"),
                         ),
-                        Spacer(
+                        const Spacer(
                           flex: 1,
                         ),
                         Row(
@@ -102,13 +101,13 @@ class _loginState extends State<login> {
                               color: Colors.grey[500],
                               size: screenSize.width * 0.01,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
-                            Text("Email"),
+                            const Text("Email"),
                           ],
                         ),
-                        Spacer(
+                        const Spacer(
                           flex: 1,
                         ),
                         Container(
@@ -119,26 +118,26 @@ class _loginState extends State<login> {
                             textAlign: TextAlign.start,
                             decoration: InputDecoration(
                               labelText: "Enter Your Email",
-                              hintStyle: TextStyle(),
+                              hintStyle: const TextStyle(),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(5.0),
                               ),
                             ),
-                            validator: (value){
-                              if(value == null || value.trim().isEmpty){
+                            validator: (value) {
+                              if (value == null || value.trim().isEmpty) {
                                 _editingController.clear();
                                 return "please enter your email address";
-                              }else if(!RegExp(r'\S+@\S+\.\S+').hasMatch(value)){
+                              } else if (!RegExp(r'\S+@\S+\.\S+')
+                                  .hasMatch(value)) {
                                 return 'Please enter a valid email address';
-                              }else{
+                              } else {
                                 return null;
                               }
                             },
-
                             onChanged: (value) => _usmail = value,
                           ),
                         ),
-                        Spacer(
+                        const Spacer(
                           flex: 2,
                         ),
                         Row(
@@ -148,13 +147,13 @@ class _loginState extends State<login> {
                               color: Colors.grey[500],
                               size: screenSize.width * 0.01,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
-                            Text("Password"),
+                            const Text("Password"),
                           ],
                         ),
-                        Spacer(
+                        const Spacer(
                           flex: 1,
                         ),
                         Container(
@@ -172,21 +171,21 @@ class _loginState extends State<login> {
                                     : Icons.visibility_off),
                                 onPressed: () {
                                   setState(
-                                        () {
+                                    () {
                                       _isObscure = !_isObscure;
                                     },
                                   );
                                 },
                               ),
-                              hintStyle: TextStyle(),
+                              hintStyle: const TextStyle(),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(5.0)),
                             ),
-                            validator: (value){
-                              if(value == null || value.trim().isEmpty){
+                            validator: (value) {
+                              if (value == null || value.trim().isEmpty) {
                                 _editingController2.clear();
                                 return 'This field is required';
-                              } else if(value.trim().length<8){
+                              } else if (value.trim().length < 8) {
                                 return 'Password must be at least 8 characters in length';
                               }
                               return null;
@@ -194,7 +193,7 @@ class _loginState extends State<login> {
                             onChanged: (value) => _uspswd = value,
                           ),
                         ),
-                        Spacer(
+                        const Spacer(
                           flex: 3,
                         ),
                         Row(
@@ -204,47 +203,60 @@ class _loginState extends State<login> {
                               width: screenSize.width * 0.08,
                               child: ElevatedButton(
                                 onPressed: () {
-                                  if(_usmail == 'admin@admin.com' && _uspswd != 'administrator') {
+                                  if (_usmail == 'admin@admin.com' &&
+                                      _uspswd != 'administrator') {
                                     showDialog<String>(
                                       context: context,
-                                      builder: (BuildContext context) => AlertDialog(
+                                      builder: (BuildContext context) =>
+                                          AlertDialog(
                                         title: const Text('Gagal login'),
-                                        content: const Text('Password anda salah!!!'),
+                                        content: const Text(
+                                            'Password anda salah!!!'),
                                         actions: <Widget>[
                                           TextButton(
-                                            onPressed: () => Navigator.pop(context, 'OK'),
+                                            onPressed: () =>
+                                                Navigator.pop(context, 'OK'),
                                             child: const Text('OK'),
                                           ),
                                         ],
                                       ),
                                     );
-                                  } else if(_usmail == 'client@client.com' && _uspswd != 'clientpage') {
+                                  } else if (_usmail == 'client@client.com' &&
+                                      _uspswd != 'clientpage') {
                                     showDialog<String>(
                                       context: context,
-                                      builder: (BuildContext context) => AlertDialog(
+                                      builder: (BuildContext context) =>
+                                          AlertDialog(
                                         title: const Text('Gagal login'),
-                                        content: const Text('Password anda salah!!!'),
+                                        content: const Text(
+                                            'Password anda salah!!!'),
                                         actions: <Widget>[
                                           TextButton(
-                                            onPressed: () => Navigator.pop(context, 'OK'),
+                                            onPressed: () =>
+                                                Navigator.pop(context, 'OK'),
                                             child: const Text('OK'),
                                           ),
                                         ],
                                       ),
                                     );
-                                  } else if(_usmail == 'admin@admin.com' && _uspswd == 'administrator') {
+                                  } else if (_usmail == 'admin@admin.com' &&
+                                      _uspswd == 'administrator') {
                                     Navigator.pushNamed(context, '/admin');
-                                  } else if (_usmail == 'client@client.com' && _uspswd == 'clientpage'){
+                                  } else if (_usmail == 'client@client.com' &&
+                                      _uspswd == 'clientpage') {
                                     Navigator.pushNamed(context, '/client');
-                                  }else{
+                                  } else {
                                     showDialog<String>(
                                       context: context,
-                                      builder: (BuildContext context) => AlertDialog(
+                                      builder: (BuildContext context) =>
+                                          AlertDialog(
                                         title: const Text('Gagal login'),
-                                        content: const Text('Akun Belum terdaftar, Silahkan Registrasi'),
+                                        content: const Text(
+                                            'Akun Belum terdaftar, Silahkan Registrasi'),
                                         actions: <Widget>[
                                           TextButton(
-                                            onPressed: () => Navigator.pop(context, 'OK'),
+                                            onPressed: () =>
+                                                Navigator.pop(context, 'OK'),
                                             child: const Text('OK'),
                                           ),
                                         ],
@@ -252,7 +264,7 @@ class _loginState extends State<login> {
                                     );
                                   }
                                 },
-                                child: Text("LOGIN"),
+                                child: const Text("LOGIN"),
                               ),
                             ),
                             SizedBox(
@@ -265,12 +277,12 @@ class _loginState extends State<login> {
                                 onPressed: () {
                                   Navigator.pushNamed(context, '/register');
                                 },
-                                child: Text("REGISTER"),
+                                child: const Text("REGISTER"),
                               ),
                             ),
                           ],
                         ),
-                        Spacer(
+                        const Spacer(
                           flex: 7,
                         ),
                       ],

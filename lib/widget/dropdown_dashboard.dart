@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 
 class DropDownDashboard2 extends StatelessWidget {
-  DropDownDashboard2({Key? key, required this.item1,
-    required this.item2 ,
-    required this.item3 ,
-    required this.item4,
-    required this.item5}) : super(key: key);
+  DropDownDashboard2(
+      {Key? key,
+      required this.item1,
+      required this.item2,
+      required this.item3,
+      required this.item4,
+      required this.item5})
+      : super(key: key);
 
   String item1;
   String item2;
@@ -26,13 +29,11 @@ class DropDownDashboard2 extends StatelessWidget {
     ];
     var screenSize = MediaQuery.of(context).size;
     return Container(
-      width: screenSize.width*0.124,
-
+      width: screenSize.width * 0.124,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),
         color: Colors.white,
       ),
-
       child: DropdownSearch<MultiLevelString>(
         key: myKey,
         items: myItems,
@@ -48,13 +49,16 @@ class DropDownDashboard2 extends StatelessWidget {
             );
           },
         ),
-        clearButtonProps: ClearButtonProps(icon: Icon(Icons.clear,color: Colors.grey,),isVisible: true),
+        clearButtonProps: const ClearButtonProps(
+            icon: Icon(
+              Icons.clear,
+              color: Colors.grey,
+            ),
+            isVisible: true),
       ),
     );
   }
 }
-
-
 
 class MultiLevelString {
   final String level1;

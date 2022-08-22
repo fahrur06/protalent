@@ -3,8 +3,6 @@ import 'package:side_navigation/side_navigation.dart';
 import 'package:pro_talent/client/talent_descrip.dart';
 import 'package:pro_talent/appbar/appbar_dashboard.dart';
 
-
-
 class SideMenuTalentClient extends StatefulWidget {
   const SideMenuTalentClient({Key? key}) : super(key: key);
 
@@ -13,13 +11,10 @@ class SideMenuTalentClient extends StatefulWidget {
 }
 
 class _SideMenuTalentClientState extends State<SideMenuTalentClient> {
-
   List<Widget> views = [
-    SelectTalentClient(),
-
+    const SelectTalentClient(),
   ];
   int selectedIndex = 0;
-
 
   @override
   Widget build(BuildContext context) {
@@ -29,22 +24,23 @@ class _SideMenuTalentClientState extends State<SideMenuTalentClient> {
         children: [
           SideNavigationBar(
             header: SideNavigationBarHeader(
-              image: CircleAvatar(
+              image: const CircleAvatar(
+                radius: 20,
                 child: Icon(
                   Icons.person_pin,
                   size: 20,
                 ),
-                radius: 20,
               ),
               title: Container(
-                padding: EdgeInsets.only(left: 10),
-                child: Text(
+                padding: const EdgeInsets.only(left: 10),
+                child: const Text(
                   'Fahrur Huzain',
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,
                       fontWeight: FontWeight.bold),
-                ),),
+                ),
+              ),
               subtitle: Container(),
               // subtitle: Text(
               //   'Admin Eksad',
@@ -65,7 +61,6 @@ class _SideMenuTalentClientState extends State<SideMenuTalentClient> {
                 icon: Icons.settings_applications,
                 label: 'My Employee',
               ),
-
             ],
             onTap: (index) {
               setState(() {
@@ -76,13 +71,13 @@ class _SideMenuTalentClientState extends State<SideMenuTalentClient> {
             // Make use of standard() constructor for other themes
             theme: SideNavigationBarTheme(
               backgroundColor:
-              //Color.fromARGB(200, 9, 47, 171),
-              Color.fromARGB(255, 18, 108, 178),
-              togglerTheme: SideNavigationBarTogglerTheme(
-                  shrinkIconColor: Colors.white,
-                  expandIconColor: Colors.white),
-              itemTheme:
-              SideNavigationBarItemTheme(selectedItemColor: Colors.white,unselectedItemColor: Colors.white60),
+                  //Color.fromARGB(200, 9, 47, 171),
+                  const Color.fromARGB(255, 18, 108, 178),
+              togglerTheme: const SideNavigationBarTogglerTheme(
+                  shrinkIconColor: Colors.white, expandIconColor: Colors.white),
+              itemTheme: const SideNavigationBarItemTheme(
+                  selectedItemColor: Colors.white,
+                  unselectedItemColor: Colors.white60),
               dividerTheme: SideNavigationBarDividerTheme.standard(),
             ),
           ),

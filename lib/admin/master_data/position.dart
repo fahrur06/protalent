@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pro_talent/conts_warna.dart';
-import 'package:pro_talent/admin/dashboard.dart';
+//import 'package:pro_talent/admin/dashboard.dart';
 import 'package:easy_table/easy_table.dart';
 import 'data_position.dart';
-
 
 class Position extends StatefulWidget {
   const Position({Key? key}) : super(key: key);
@@ -20,67 +19,91 @@ class Posisi {
   final String posting;
   final String status;
   final Widget delete;
-
 }
 
 class _PositionState extends State<Position> {
-  String posisi='';
+  String posisi = '';
   EasyTableModel<Posisi>? _model;
 
   @override
-
   void initState() {
     super.initState();
 
     List<Posisi> rows = [
-      Posisi(1, 'Head Product', '2022-07-18', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
-      Posisi(2, 'Java Developer', '2022-01-01', 'ACTIVE', TextButton(onPressed: (){}, child: Text('delete'))),
-      Posisi(3, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
-      Posisi(4, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
-      Posisi(5, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
-      Posisi(6, '', '', '', TextButton(onPressed: (){}, child: Text('delete'))),
-
-
+      Posisi(1, 'Head Product', '2022-07-18', 'ACTIVE',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      Posisi(2, 'Java Developer', '2022-01-01', 'ACTIVE',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      Posisi(3, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      Posisi(4, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      Posisi(5, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      Posisi(6, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
     ];
 
     _model = EasyTableModel<Posisi>(rows: rows, columns: [
-      EasyTableColumn(name: 'No',headerAlignment: Alignment.center,cellAlignment: Alignment.center, intValue: (row) => row.no),
-      EasyTableColumn(name: 'Position',weight: 3, stringValue: (row) => row.position),
-      EasyTableColumn(name: 'Posted',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 2, stringValue: (row) => row.posting),
-      EasyTableColumn(name: 'Status',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 2, stringValue: (row) => row.status),
-      EasyTableColumn(name: '',headerAlignment: Alignment.center,cellAlignment: Alignment.center,weight: 1, objectValue: (row) => row.delete)
-    ]
-    );
+      EasyTableColumn(
+          name: 'No',
+          headerAlignment: Alignment.center,
+          cellAlignment: Alignment.center,
+          intValue: (row) => row.no),
+      EasyTableColumn(
+          name: 'Position', weight: 3, stringValue: (row) => row.position),
+      EasyTableColumn(
+          name: 'Posted',
+          headerAlignment: Alignment.center,
+          cellAlignment: Alignment.center,
+          weight: 2,
+          stringValue: (row) => row.posting),
+      EasyTableColumn(
+          name: 'Status',
+          headerAlignment: Alignment.center,
+          cellAlignment: Alignment.center,
+          weight: 2,
+          stringValue: (row) => row.status),
+      EasyTableColumn(
+          name: '',
+          headerAlignment: Alignment.center,
+          cellAlignment: Alignment.center,
+          weight: 1,
+          objectValue: (row) => row.delete)
+    ]);
   }
 
-
-
   Widget build(BuildContext context) {
-    Future openDialog() => showDialog(context: context, builder: (context) => EasyTable<Posisi>(_model,columnsFit: true,),
-    //     TextFormField(
-    //   textAlign: TextAlign.start,
-    //   decoration: InputDecoration(
-    //     labelText: "Isi position talent",
-    //     hintStyle: TextStyle(),
-    //     border: OutlineInputBorder(
-    //         borderRadius: BorderRadius.circular(5.0)),
-    //   ),
-    // ),
-    );
+    Future openDialog() => showDialog(
+          context: context,
+          builder: (context) => EasyTable<Posisi>(
+            _model,
+            columnsFit: true,
+          ),
+          //     TextFormField(
+          //   textAlign: TextAlign.start,
+          //   decoration: InputDecoration(
+          //     labelText: "Isi position talent",
+          //     hintStyle: TextStyle(),
+          //     border: OutlineInputBorder(
+          //         borderRadius: BorderRadius.circular(5.0)),
+          //   ),
+          // ),
+        );
 
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
-        width: screenSize.width*0.64,
+        width: screenSize.width * 0.64,
         //color: Colors.blue,
-        padding: EdgeInsets.symmetric(vertical: 15,horizontal: 38),
+        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 38),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              width: screenSize.width*0.2,
+              width: screenSize.width * 0.2,
               //color: Colors.grey,
-              child: Text(
+              child: const Text(
                 "Talent Positions",
                 style: TextStyle(
                     fontSize: 30,
@@ -88,59 +111,65 @@ class _PositionState extends State<Position> {
                     fontWeight: FontWeight.bold),
               ),
             ),
-            Spacer(flex: 1,),
-            Container(
-              width: screenSize.width*0.6,
-              height: 374,
-              color: Colors.white70,
-              child: PaginatedDataTableDemo()
+            const Spacer(
+              flex: 1,
             ),
-            Spacer(flex: 1,),
             Container(
-              width: screenSize.width*0.6,
+                width: screenSize.width * 0.6,
+                height: 374,
+                color: Colors.white70,
+                child: const PaginatedDataTableDemo()),
+            const Spacer(
+              flex: 1,
+            ),
+            Container(
+              width: screenSize.width * 0.6,
               child: Row(
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 7,horizontal: 30),
-                    width: screenSize.width*0.47,
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 7, horizontal: 30),
+                    width: screenSize.width * 0.47,
                     height: 58,
                     //color: Colors.grey,
-                    child:
-                    TextFormField(
+                    child: TextFormField(
                       textAlign: TextAlign.start,
                       decoration: InputDecoration(
                         labelText: "Isi position talent",
-                        hintStyle: TextStyle(),
+                        hintStyle: const TextStyle(),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0)),
                       ),
                     ),
-                   ),
+                  ),
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 7,horizontal: 25),
-                    width: screenSize.width*0.1,
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 7, horizontal: 25),
+                    width: screenSize.width * 0.1,
                     height: 58,
                     //color: Colors.red,
-                    child: ElevatedButton(onPressed: ()async {
-                      final posisi = await openDialog();
-                      if (posisi == null || posisi.isEmpty)
-                        return;
-                      setState(()=>this._model = posisi);
-                    },
+                    child: ElevatedButton(
+                        onPressed: () async {
+                          final posisi = await openDialog();
+                          if (posisi == null || posisi.isEmpty) return;
+                          setState(() => this._model = posisi);
+                        },
                         child: Container(
-                          width: screenSize.width*0.08,
-                      child: Row(
-                        children: [
-                          Container(
-                            width: screenSize.width*0.017,
-                              child: Icon(Icons.save)),
-                          Spacer(flex: 1,),
-                          Container(
-                            width: screenSize.width*0.028,
-                              child: Text('Save'))
-                        ],
-                      ),
-                    )),
+                          width: screenSize.width * 0.08,
+                          child: Row(
+                            children: [
+                              Container(
+                                  width: screenSize.width * 0.017,
+                                  child: const Icon(Icons.save)),
+                              const Spacer(
+                                flex: 1,
+                              ),
+                              Container(
+                                  width: screenSize.width * 0.028,
+                                  child: const Text('Save'))
+                            ],
+                          ),
+                        )),
                   )
                 ],
               ),
@@ -162,10 +191,10 @@ class PaginatedDataTableDemo extends StatefulWidget {
 class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
     with RestorationMixin {
   final RestorableClientSelections _dessertSelections =
-  RestorableClientSelections();
+      RestorableClientSelections();
   final RestorableInt _rowIndex = RestorableInt(0);
   final RestorableInt _rowsPerPage =
-  RestorableInt(PaginatedDataTable.defaultRowsPerPage);
+      RestorableInt(PaginatedDataTable.defaultRowsPerPage);
   final RestorableBool _sortAscending = RestorableBool(true);
   final RestorableIntN _sortColumnIndex = RestorableIntN(null);
   late DessertDataSource _dessertsDataSource;
@@ -202,15 +231,15 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
       // case 4:
       //   _dessertsDataSource.sort<Widget>((d) => d.button, _sortAscending.value);
       //   break;
-    // case 5:
-    //   _dessertsDataSource.sort<num>((d) => d.sodium, _sortAscending.value);
-    //   break;
-    // case 6:
-    //   _dessertsDataSource.sort<num>((d) => d.calcium, _sortAscending.value);
-    //   break;
-    // case 7:
-    //   _dessertsDataSource.sort<num>((d) => d.iron, _sortAscending.value);
-    //   break;
+      // case 5:
+      //   _dessertsDataSource.sort<num>((d) => d.sodium, _sortAscending.value);
+      //   break;
+      // case 6:
+      //   _dessertsDataSource.sort<num>((d) => d.calcium, _sortAscending.value);
+      //   break;
+      // case 7:
+      //   _dessertsDataSource.sort<num>((d) => d.iron, _sortAscending.value);
+      //   break;
     }
     _dessertsDataSource.updateSelectedClients(_dessertSelections);
     _dessertsDataSource.addListener(_updateSelectedDessertRowListener);
@@ -231,10 +260,10 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
   }
 
   void sort<T>(
-      Comparable<T> Function(Client d) getField,
-      int columnIndex,
-      bool ascending,
-      ) {
+    Comparable<T> Function(Client d) getField,
+    int columnIndex,
+    bool ascending,
+  ) {
     _dessertsDataSource.sort<T>(getField, ascending);
     setState(() {
       _sortColumnIndex.value = columnIndex;
@@ -264,7 +293,6 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
         padding: const EdgeInsets.all(7),
         children: [
           PaginatedDataTable(
-
             rowsPerPage: _rowsPerPage.value,
             onRowsPerPageChanged: (value) {
               setState(() {
@@ -289,7 +317,6 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
               ),
               DataColumn(
                 label: const Text('Position'),
-
                 onSort: (columnIndex, ascending) =>
                     sort<String>((d) => d.posisi, columnIndex, ascending),
               ),
@@ -305,13 +332,12 @@ class PaginatedDataTableDemoState extends State<PaginatedDataTableDemo>
                 onSort: (columnIndex, ascending) =>
                     sort<String>((d) => d.status, columnIndex, ascending),
               ),
-              DataColumn(
-                label: const Text(''),
+              const DataColumn(
+                label: Text(''),
                 //numeric: true,
                 // onSort: (columnIndex, ascending) =>
                 //     sort<Widget>((d) => d.button, columnIndex, ascending),
               ),
-
             ],
             source: _dessertsDataSource,
           ),

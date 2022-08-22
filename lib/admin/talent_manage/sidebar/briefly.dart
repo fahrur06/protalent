@@ -28,17 +28,17 @@ class _EditBrieflyState extends State<EditBriefly> {
 
     List<_skill> rows = [
       _skill(1, 'React', '2022-07-18', 'ACTIVE',
-          TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
       _skill(2, 'Java ', '2022-01-01', 'ACTIVE',
-          TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
       _skill(3, 'Quarkus', '2022-03-29', 'ACTIVE',
-          TextButton(onPressed: () {}, child: Text('delete'))),
-      _skill(
-          4, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
-      _skill(
-          5, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
-      _skill(
-          6, '', '', '', TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      _skill(4, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      _skill(5, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
+      _skill(6, '', '', '',
+          TextButton(onPressed: () {}, child: const Text('delete'))),
     ];
 
     _model = EasyTableModel<_skill>(rows: rows, columns: [
@@ -77,7 +77,7 @@ class _EditBrieflyState extends State<EditBriefly> {
       body: Container(
           width: screenSize.width * 0.64,
           //color: Colors.blue,
-          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             // Container(
@@ -104,14 +104,14 @@ class _EditBrieflyState extends State<EditBriefly> {
                           fontSize: 15,
                           fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 8,
                     ),
                     Container(
                       height: 30,
                       width: screenSize1 * 0.3,
                       child: TextFormField(
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                             // labelText: "Fullname",
                             // hintStyle: TextStyle(),
                             border: OutlineInputBorder(
@@ -119,7 +119,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                                     BorderSide(width: 1, color: Colors.grey))),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Text(
@@ -129,7 +129,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                           fontSize: 15,
                           fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 8,
                     ),
                     Row(children: [
@@ -137,7 +137,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                         height: 30,
                         width: screenSize1 * 0.3,
                         child: TextFormField(
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                               // labelText: "Fullname",
                               // hintStyle: TextStyle(),
                               border: OutlineInputBorder(
@@ -145,11 +145,11 @@ class _EditBrieflyState extends State<EditBriefly> {
                                       width: 1, color: Colors.grey))),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                     ]),
-                    SizedBox(
+                    const SizedBox(
                       height: 8,
                     ),
                     Row(
@@ -166,7 +166,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                             height: 30,
                             width: screenSize1 * 0.1,
                             child: TextFormField(
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                   // labelText: "Fullname",
                                   // hintStyle: TextStyle(),
                                   border: OutlineInputBorder(
@@ -175,7 +175,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                             ),
                           ),
                         ]),
-                        SizedBox(
+                        const SizedBox(
                           width: 7,
                         ),
                         Column(
@@ -191,7 +191,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                               height: 30,
                               width: screenSize1 * 0.1,
                               child: TextFormField(
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                     // labelText: "Fullname",
                                     // hintStyle: TextStyle(),
                                     border: OutlineInputBorder(
@@ -217,7 +217,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                             height: 30,
                             width: screenSize1 * 0.1,
                             child: TextFormField(
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                   // labelText: "Fullname",
                                   // hintStyle: TextStyle(),
                                   border: OutlineInputBorder(
@@ -226,7 +226,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                             ),
                           ),
                         ]),
-                        SizedBox(
+                        const SizedBox(
                           width: 7,
                         ),
                         Column(
@@ -242,7 +242,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                               height: 30,
                               width: screenSize1 * 0.1,
                               child: TextFormField(
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                     // labelText: "Fullname",
                                     // hintStyle: TextStyle(),
                                     border: OutlineInputBorder(
@@ -254,7 +254,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                         )
                       ],
                     ),
-                    Spacer(
+                    const Spacer(
                       flex: 1,
                     ),
                     Row(
@@ -271,7 +271,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                             height: 30,
                             width: screenSize1 * 0.1,
                             child: TextFormField(
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                   // labelText: "Fullname",
                                   // hintStyle: TextStyle(),
                                   border: OutlineInputBorder(
@@ -280,7 +280,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                             ),
                           ),
                         ]),
-                        SizedBox(
+                        const SizedBox(
                           width: 7,
                         ),
                         Column(
@@ -296,7 +296,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                               height: 30,
                               width: screenSize1 * 0.1,
                               child: TextFormField(
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                     // labelText: "Fullname",
                                     // hintStyle: TextStyle(),
                                     border: OutlineInputBorder(
@@ -308,7 +308,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                         )
                       ],
                     ),
-                    Spacer(
+                    const Spacer(
                       flex: 1,
                     ),
                     Column(
@@ -322,14 +322,14 @@ class _EditBrieflyState extends State<EditBriefly> {
                               fontSize: 15,
                               fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Container(
                           height: 30,
                           width: screenSize1 * 0.3,
                           child: TextFormField(
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                                 // labelText: "Fullname",
                                 // hintStyle: TextStyle(),
                                 border: OutlineInputBorder(
@@ -337,7 +337,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                                         width: 1, color: Colors.grey))),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Text(
@@ -352,7 +352,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                           child: Row(
                             children: [
                               Container(
-                                padding: EdgeInsets.symmetric(
+                                padding: const EdgeInsets.symmetric(
                                     vertical: 10, horizontal: 25),
                                 width: screenSize.width * 0.1,
                                 height: 55,
@@ -360,7 +360,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                                 child: ElevatedButton(
                                     onPressed: () {},
                                     child: Row(
-                                      children: [
+                                      children: const [
                                         SizedBox(
                                           width: 5,
                                         ),
@@ -369,7 +369,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                                     )),
                               ),
                               Container(
-                                padding: EdgeInsets.symmetric(
+                                padding: const EdgeInsets.symmetric(
                                     vertical: 10, horizontal: 25),
                                 width: screenSize.width * 0.1,
                                 height: 55,
@@ -377,7 +377,7 @@ class _EditBrieflyState extends State<EditBriefly> {
                                 child: ElevatedButton(
                                     onPressed: () {},
                                     child: Row(
-                                      children: [
+                                      children: const [
                                         SizedBox(
                                           width: 5,
                                         ),

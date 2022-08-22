@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:easy_table/easy_table.dart';
-import 'package:pro_talent/admin/talent_manage/add_talent.dart';
-import 'package:pro_talent/admin/talent_manage/edit_talent.dart';
-import 'package:pro_talent/admin/talent_manage/side_manage_talent.dart';
+// import 'package:pro_talent/admin/talent_manage/add_talent.dart';
+// import 'package:pro_talent/admin/talent_manage/edit_talent.dart';
+// import 'package:pro_talent/admin/talent_manage/side_manage_talent.dart';
 import 'package:pro_talent/widget/botton.dart';
 
 class TalentManagement extends StatefulWidget {
@@ -46,9 +46,9 @@ class _TalentmanagementState extends State<TalentManagement> {
         ),
       ),
       _TalentManagementState(2, 'Bambang', 'Quality Assuarance', 'Pre Hired',
-          TextButton(onPressed: () {}, child: Text('edit'))),
+          TextButton(onPressed: () {}, child: const Text('edit'))),
       _TalentManagementState(3, 'Udin', 'Bussiness Analyst', 'Available',
-          TextButton(onPressed: () {}, child: Text('edit'))),
+          TextButton(onPressed: () {}, child: const Text('edit'))),
     ];
 
     _model = EasyTableModel<_TalentManagementState>(rows: rows, columns: [
@@ -82,17 +82,17 @@ class _TalentmanagementState extends State<TalentManagement> {
           height: screenSize.height,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            border:
-                Border.all(color: Color.fromARGB(255, 18, 108, 178), width: 5),
+            border: Border.all(
+                color: const Color.fromARGB(255, 18, 108, 178), width: 5),
           ),
 
           child: Container(
-            color: Color.fromARGB(255, 18, 108, 178),
+            color: const Color.fromARGB(255, 18, 108, 178),
             child: Column(
               children: [
                 Container(
-                  padding: EdgeInsets.only(top: 30, left: 50),
-                  decoration: BoxDecoration(
+                  padding: const EdgeInsets.only(top: 30, left: 50),
+                  decoration: const BoxDecoration(
                     borderRadius: BorderRadius.only(
                         topRight: Radius.circular(10),
                         topLeft: Radius.circular(10)),
@@ -104,7 +104,7 @@ class _TalentmanagementState extends State<TalentManagement> {
                     children: [
                       Row(
                         children: [
-                          Text(
+                          const Text(
                             'Talent Management',
                             style: TextStyle(
                                 color: Colors.white,
@@ -112,7 +112,7 @@ class _TalentmanagementState extends State<TalentManagement> {
                                 fontWeight: FontWeight.bold,
                                 letterSpacing: 2),
                           ),
-                          Spacer(
+                          const Spacer(
                             flex: 15,
                           ),
                           Container(
@@ -139,7 +139,7 @@ class _TalentmanagementState extends State<TalentManagement> {
                         ],
                       ),
 
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
 
@@ -162,14 +162,14 @@ class _TalentmanagementState extends State<TalentManagement> {
                       //     onPrimary: Colors.black,
                       //   ),
                       // )
-                      AlertForm(),
+                      const AlertForm(),
                     ],
                   ),
                 ),
                 Container(
                   width: screenSize.width * 0.7,
                   height: screenSize.height * 0.025,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     border: Border(
                       top: BorderSide(
                           color: Color.fromARGB(255, 18, 108, 178), width: 5),

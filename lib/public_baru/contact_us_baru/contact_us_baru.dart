@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pro_talent/public/contact_us/ContactUs.dart';
-import 'package:pro_talent/public_baru/career/career3.dart';
+// import 'package:pro_talent/public/contact_us/ContactUs.dart';
+// import 'package:pro_talent/public_baru/career/career3.dart';
 import 'package:pro_talent/public_baru/contact_us_baru/contact_us1.dart';
 import 'package:pro_talent/public_baru/contact_us_baru/contact_us2.dart';
 
@@ -27,9 +27,9 @@ class _ContactUsState extends State<ContactUs_baru> {
                 Colors.black, Colors.black, Colors.blue),
         body: ListView(
           children: [
-            ContactUs1(),
+            const ContactUs1(),
             ContactUs2(),
-            Footer(),
+            const Footer(),
           ],
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,

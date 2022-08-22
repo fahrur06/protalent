@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pro_talent/const/text_homepage.dart';
 import 'package:pro_talent/widget/botton.dart';
 import 'package:pro_talent/register.dart';
-import 'dart:math';
+// import 'dart:math';
 import 'package:pro_talent/widget/image_slide.dart';
 
 class Home1 extends StatefulWidget {
@@ -22,19 +22,17 @@ class _Home1State extends State<Home1> {
       padding: EdgeInsets.symmetric(horizontal: screenSize.width * 0.05),
       width: screenSize.width,
       height: screenSize.height * 0.5,
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-            colors: <Color>[
-              Color(0xFF0D5396),
-              Color(0xFF2B69A4),
-              Color(0xFF42A5F5),
-            ])
-      ),
+      decoration: const BoxDecoration(
+          gradient: LinearGradient(colors: <Color>[
+        Color(0xFF0D5396),
+        Color(0xFF2B69A4),
+        Color(0xFF42A5F5),
+      ])),
       //color: Colors.blue,
       child: Row(
         children: [
           Container(
-            padding: EdgeInsets.only(left: 20, right: 20, top: 50),
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 50),
             width: screenSize.width * 0.6,
             //color: Colors.white,
             child: Column(
@@ -46,7 +44,7 @@ class _Home1State extends State<Home1> {
                   //color: Colors.red,
                   child: Text(
                     home1_head,
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontSize: 52,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -59,7 +57,7 @@ class _Home1State extends State<Home1> {
                   //color: Colors.blue,
                   child: Text(
                     home1_body,
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontSize: 28,
                         color: Colors.white,
                         letterSpacing: 3,
@@ -71,7 +69,7 @@ class _Home1State extends State<Home1> {
                   height: 40,
                   //color: Colors.green,
                   child: Botton_tombol(
-                      title: 'Registrasi Sekarang', arah: Register()),
+                      title: 'Registrasi Sekarang', arah: const Register()),
                 )
               ],
             ),

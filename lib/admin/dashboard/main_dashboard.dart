@@ -1,465 +1,454 @@
-import 'dart:ui';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:pro_talent/admin/dashboard/side_talent.dart';
 import 'package:spring/spring.dart';
 
-import 'desc_talent.dart';
+//import 'desc_talent.dart';
 
 class MainDashboard extends StatelessWidget {
   MainDashboard({Key? key}) : super(key: key);
   final SpringController springController =
-  SpringController(initialAnim: Motion.play);
-  Color _color = Colors.red;
+      SpringController(initialAnim: Motion.play);
+  //final Color _color = Colors.red;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            // Add your onPressed code here!
+        onPressed: () {
+          // Add your onPressed code here!
+        },
+        backgroundColor: Colors.green,
+        child: GestureDetector(
+          onTap: () {
+            springController.play(
+                motion: Motion.reverse,
+                animDuration: const Duration(milliseconds: 1000),
+                curve: Curves.easeInBack,
+                delay: const Duration(milliseconds: 100));
+          },
+          child: Spring.rotate(
+            springController: springController,
+            alignment: Alignment.center,
+            animStatus: (AnimStatus status) {
+              print(status);
             },
-          backgroundColor: Colors.green,
-          child: GestureDetector(
-            onTap: (){
-              springController.play(
-                  motion: Motion.reverse,
-                  animDuration: Duration(milliseconds: 1000),
-                  curve: Curves.easeInBack,
-                  delay: Duration(milliseconds: 100)
-              );
-            },
-            child: Spring.rotate(
-              springController: springController,
-              alignment: Alignment.center,
-              animStatus: (AnimStatus status){
-                print(status);
-              },
-
-              child: const Icon(
-                        Icons.whatsapp,
-                      size: 30),
-            ),
+            child: const Icon(Icons.whatsapp, size: 30),
           ),
+        ),
       ),
       body: DefaultTabController(
           length: 3,
           child: Container(
-            padding: EdgeInsets.fromLTRB(50, 0, 50, 0),
+            padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
             color: Colors.grey[200],
             child: Center(
               child: Column(
                 children: [
                   TabBar(
-                      labelColor: Color(0xFF214B9A),
-                      indicatorColor: Color(0xFF214B9A),
-                      tabs: [
-                        Container(
-                          height: 100,
-                          child: Tab(
-                            icon: Icon(
-                              Icons.person,
-                              size: 50,
-                            ),
-                            text: "ALL",
+                    labelColor: const Color(0xFF214B9A),
+                    indicatorColor: const Color(0xFF214B9A),
+                    tabs: [
+                      Container(
+                        height: 100,
+                        child: const Tab(
+                          icon: Icon(
+                            Icons.person,
+                            size: 50,
                           ),
+                          text: "ALL",
                         ),
-                        Container(
-                          height: 100,
-                          child: Tab(
-                            icon: Icon(
-                              Icons.person,
-                              size: 50,
-                            ),
-                            text: "Available",
+                      ),
+                      Container(
+                        height: 100,
+                        child: const Tab(
+                          icon: Icon(
+                            Icons.person,
+                            size: 50,
                           ),
+                          text: "Available",
                         ),
-                        Container(
+                      ),
+                      Container(
                           height: 100,
-                          child: Tab(
+                          child: const Tab(
                             icon: Icon(
                               Icons.person,
                               size: 50,
                             ),
-                            text: "Hired",))
-                      ],),
-        
-  
-            
-                SizedBox(
-                  height: 50,
-                ),
-                Expanded(
-                  child: TabBarView(
-                    children: [
-                      GridView.count(
-                        crossAxisCount: 3,
-                        mainAxisSpacing: 50,
-                        crossAxisSpacing: 50,
-                        children: [
-                          Profil(
-                            name: "Bagas",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                          Profil(
-                            name: "Qori",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                          Profil(
-                            name: "Faid",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                          Profil(
-                            name: "Fahrur",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                          Profil(
-                            name: "Budi",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                          Profil(
-                            name: "Jay",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                          Profil(
-                            name: "Rizki",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                          Profil(
-                            name: "Tohap",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                          Profil(
-                            name: "Manik",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                          Profil(
-                            name: "Arham",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                          Profil(
-                            name: "Fikri",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                          Profil(
-                            name: "Maharani",
-                            gender: "Female",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                        ],
-                      ),
-                      GridView.count(
-                        crossAxisCount: 3,
-                        mainAxisSpacing: 50,
-                        crossAxisSpacing: 50,
-                        children: [
-                          Profil(
-                            name: "Bagas",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                          Profil(
-                            name: "Bagas",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                          Profil(
-                            name: "Bagas",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                          Profil(
-                            name: "Bagas",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                          Profil(
-                            name: "Bagas",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                        ],
-                      ),
-                      GridView.count(
-                        crossAxisCount: 3,
-                        mainAxisSpacing: 50,
-                        crossAxisSpacing: 50,
-                        children: [
-                          Profil(
-                            name: "Bagas",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                          Profil(
-                            name: "Bagas",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                          Profil(
-                            name: "Bagas",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                          Profil(
-                            name: "Bagas",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 2020 - Juni 2024",
-                          ),
-                          Profil(
-                            name: "Bagas",
-                            gender: "Male",
-                            age: "26",
-                            exp: "5",
-                            skill1: "Java",
-                            skill2: "Flutter",
-                            skill3: "Quarkus",
-                            numSkill: "7",
-                            salary: "10.000.000",
-                            lastExp: "Java Developer",
-                            lastPosition: "Backend Developer",
-                            lastCompany: "EKSAD",
-                            berapaLama: "Feb 202 - Juni 2024",
-                          ),
-                        ],
-                      )
+                            text: "Hired",
+                          ))
                     ],
                   ),
-                 )
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  Expanded(
+                    child: TabBarView(
+                      children: [
+                        GridView.count(
+                          crossAxisCount: 3,
+                          mainAxisSpacing: 50,
+                          crossAxisSpacing: 50,
+                          children: const [
+                            Profil(
+                              name: "Bagas",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                            Profil(
+                              name: "Qori",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                            Profil(
+                              name: "Faid",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                            Profil(
+                              name: "Fahrur",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                            Profil(
+                              name: "Budi",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                            Profil(
+                              name: "Jay",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                            Profil(
+                              name: "Rizki",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                            Profil(
+                              name: "Tohap",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                            Profil(
+                              name: "Manik",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                            Profil(
+                              name: "Arham",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                            Profil(
+                              name: "Fikri",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                            Profil(
+                              name: "Maharani",
+                              gender: "Female",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                          ],
+                        ),
+                        GridView.count(
+                          crossAxisCount: 3,
+                          mainAxisSpacing: 50,
+                          crossAxisSpacing: 50,
+                          children: const [
+                            Profil(
+                              name: "Bagas",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                            Profil(
+                              name: "Bagas",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                            Profil(
+                              name: "Bagas",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                            Profil(
+                              name: "Bagas",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                            Profil(
+                              name: "Bagas",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                          ],
+                        ),
+                        GridView.count(
+                          crossAxisCount: 3,
+                          mainAxisSpacing: 50,
+                          crossAxisSpacing: 50,
+                          children: const [
+                            Profil(
+                              name: "Bagas",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                            Profil(
+                              name: "Bagas",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                            Profil(
+                              name: "Bagas",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                            Profil(
+                              name: "Bagas",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 2020 - Juni 2024",
+                            ),
+                            Profil(
+                              name: "Bagas",
+                              gender: "Male",
+                              age: "26",
+                              exp: "5",
+                              skill1: "Java",
+                              skill2: "Flutter",
+                              skill3: "Quarkus",
+                              numSkill: "7",
+                              salary: "10.000.000",
+                              lastExp: "Java Developer",
+                              lastPosition: "Backend Developer",
+                              lastCompany: "EKSAD",
+                              berapaLama: "Feb 202 - Juni 2024",
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
-            
           )),
     );
-        
   }
 }
 
 class Profil extends StatelessWidget {
-  Profil({
+  const Profil({
     Key? key,
     required this.name,
     required this.gender,
@@ -498,7 +487,7 @@ class Profil extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (Context) {
-              return SideMenuTalent();
+              return const SideMenuTalent();
             },
           ),
         );
@@ -515,13 +504,13 @@ class Profil extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 "New Talent!",
                 style: TextStyle(
                   color: Color(0xff01FF1A),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               // ListTile(
@@ -561,7 +550,7 @@ class Profil extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  CircleAvatar(
+                  const CircleAvatar(
                     foregroundImage: AssetImage("assets/images/petrik.png"),
                     radius: 35,
                   ),
@@ -574,10 +563,10 @@ class Profil extends StatelessWidget {
                           children: [
                             Text(
                               name,
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 16, fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
                             Image.asset("assets/icons/centangbiru.png")
@@ -586,7 +575,7 @@ class Profil extends StatelessWidget {
                         Text("$gender, $age years old"),
                         Text("$exp years of experience"),
                         Row(
-                          children: [
+                          children: const [
                             Text(
                               "100 % match",
                               style: TextStyle(
@@ -602,17 +591,17 @@ class Profil extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Icon(Icons.bookmark_border)
+                  const Icon(Icons.bookmark_border)
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Text(
+              const Text(
                 "Skills",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Row(
@@ -620,41 +609,41 @@ class Profil extends StatelessWidget {
                   Container(
                     child: Text(skill1),
                     color: Colors.grey[200],
-                    padding: EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(5),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 5,
                   ),
                   Container(
                     child: Text(skill2),
                     color: Colors.grey[200],
-                    padding: EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(5),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 5,
                   ),
                   Container(
                     child: Text(skill3),
                     color: Colors.grey[200],
-                    padding: EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(5),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 5,
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Text("and $numSkill more"),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Text(
+              const Text(
                 "Expected Salary",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Row(
@@ -662,35 +651,35 @@ class Profil extends StatelessWidget {
                 children: [
                   Text(
                     "IDR $salary nett",
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
                       color: Color(0xFF214B9A),
                     ),
                   ),
                   Container(
-                    child: Text(
+                    child: const Text(
                       "Non Negotiable",
                       style: TextStyle(color: Colors.red),
                     ),
                     color: Colors.red[200],
-                    padding: EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(5),
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Text(
+              const Text(
                 "Latest Experience",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Text(
                 "$lastExp | $lastPosition",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
 
               Text(lastCompany),
@@ -705,7 +694,7 @@ class Profil extends StatelessWidget {
 }
 
 class pilihan1 extends StatelessWidget {
-  pilihan1({
+  const pilihan1({
     Key? key,
     required this.title,
     required this.colorbackground,
@@ -742,7 +731,7 @@ class pilihan1 extends StatelessWidget {
                     color: colorbackground,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 4,
                 ),
                 Text(

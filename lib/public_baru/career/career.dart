@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:pro_talent/public_baru/career/career2.dart';
 import 'package:pro_talent/public_baru/career/career3.dart';
@@ -25,11 +23,10 @@ class _CareerState extends State<Career> {
     return Scaffold(
         appBar: ResponsiveWidget.isSmallScreen(context)
             ? AppbarHomeSmall(screenSize)
-            : AppbarHomeLarge(screenSize, context, Colors.black, Colors.black,Colors.black,
-            Colors.blue, Colors.black),
+            : AppbarHomeLarge(screenSize, context, Colors.black, Colors.black,
+                Colors.black, Colors.blue, Colors.black),
         body: ListView(
-          children: [
-
+          children: const [
             Career1(),
             Career1_2(),
             Career2(),
@@ -38,7 +35,6 @@ class _CareerState extends State<Career> {
           ],
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-        floatingActionButton: WAChat()
-    );
+        floatingActionButton: WAChat());
   }
 }

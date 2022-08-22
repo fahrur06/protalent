@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pro_talent/admin/post/add_post.dart';
 import 'package:pro_talent/conts_warna.dart';
-import 'package:pro_talent/public/contact_us/SendEmail.dart';
+// import 'package:pro_talent/admin/post/add_post.dart';
+// import 'package:pro_talent/public/contact_us/SendEmail.dart';
 import 'package:pro_talent/footer.dart';
 import 'package:pro_talent/widget/responsive.dart';
 import 'package:pro_talent/appbar/appbar_home.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-import '../../widget/botton.dart';
+// import '../../widget/botton.dart';
 import '../../widget/whatsapp.dart';
 
 class ContactUs extends StatefulWidget {
@@ -171,18 +171,17 @@ class _ContactUsState extends State<ContactUs> {
                                   fontSize: 50, fontWeight: FontWeight.bold)),
                           TextFormField(
                             controller: nameController,
-                            decoration:
-                                const InputDecoration(hintText: 'Name'),
+                            decoration: const InputDecoration(hintText: 'Name'),
                           ),
                           TextFormField(
                             controller: phoneController,
                             decoration:
-                            const InputDecoration(hintText: 'Phone Number'),
+                                const InputDecoration(hintText: 'Phone Number'),
                           ),
                           TextFormField(
                             controller: emailController,
                             decoration:
-                            const InputDecoration(hintText: 'Email'),
+                                const InputDecoration(hintText: 'Email'),
                           ),
                           TextFormField(
                             controller: messageController,
@@ -250,7 +249,8 @@ class _ContactUsState extends State<ContactUs> {
     );
   }
 
-  Future SendEmail(String name, String phone, String email, String message) async {
+  Future SendEmail(
+      String name, String phone, String email, String message) async {
     final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
     const serviceId = 'service_wava70j';
     const templateId = 'template_koc73cj';
@@ -263,7 +263,12 @@ class _ContactUsState extends State<ContactUs> {
           'service_id': serviceId,
           'template_id': templateId,
           'user_id': userId,
-          'template_params': {'from_name': name, 'from_phone': phone, 'to_email': email, 'message': message}
+          'template_params': {
+            'from_name': name,
+            'from_phone': phone,
+            'to_email': email,
+            'message': message
+          }
         }));
     return response.statusCode;
   }

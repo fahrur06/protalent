@@ -13,12 +13,12 @@ class _HiredTalentState extends State<HiredTalent> {
     var screenSize = MediaQuery.of(context).size;
     var screenSize1 = screenSize.width * 0.8;
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       color: Colors.grey[200],
       child: Column(
         children: [
           Container(
-            padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+            padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
             color: Colors.grey[200],
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -26,7 +26,7 @@ class _HiredTalentState extends State<HiredTalent> {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text(
                       "Hired Talent",
                       style:
@@ -35,12 +35,11 @@ class _HiredTalentState extends State<HiredTalent> {
                     Text("13 results found"),
                   ],
                 ),
-                
-                 Container(
+                Container(
                   width: 200,
                   child: Expanded(
                     child: TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         prefixIcon: Icon(Icons.search),
                         border: OutlineInputBorder(),
                       ),
@@ -51,15 +50,18 @@ class _HiredTalentState extends State<HiredTalent> {
             ),
           ),
           Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             color: Colors.white,
             width: screenSize.width,
             child: Row(
               children: [
-                Container(width: screenSize.width * 0.3, child: Text("Name")),
-                Container(width: screenSize.width * 0.2, child: Text("Status")),
-                Container(
-                    width: screenSize.width * 0.3, child: Text("Position")),
+                SizedBox(
+                    width: screenSize.width * 0.3, child: const Text("Name")),
+                SizedBox(
+                    width: screenSize.width * 0.2, child: const Text("Status")),
+                SizedBox(
+                    width: screenSize.width * 0.3,
+                    child: const Text("Position")),
               ],
             ),
           ),
@@ -256,18 +258,18 @@ class ListProfil extends StatelessWidget {
               width: screenSize.width * 0.3,
               child: Row(
                 children: [
-                  CircleAvatar(
+                  const CircleAvatar(
                     foregroundImage: AssetImage("assets/images/petrik.png"),
                     radius: 20,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   Text(nama)
                 ],
               )),
-          Container(width: screenSize.width * 0.2, child: Text(status)),
-          Container(width: screenSize.width * 0.3, child: Text(posisi)),
+          SizedBox(width: screenSize.width * 0.2, child: Text(status)),
+          SizedBox(width: screenSize.width * 0.3, child: Text(posisi)),
         ],
       ),
     );

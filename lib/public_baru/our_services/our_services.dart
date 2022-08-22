@@ -27,12 +27,12 @@ class _OurServicesState extends State<OurServices> {
                 Colors.blue, Colors.black, Colors.black),
         body: ListView(
           children: [
-            OurServices1a(),
-            OurServices1b(),
-            OurServices2(),
+            const OurServices1a(),
+            const OurServices1b(),
+            const OurServices2(),
             // OurServices3(),
             ContactUs2(),
-            Footer(),
+            const Footer(),
           ],
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,

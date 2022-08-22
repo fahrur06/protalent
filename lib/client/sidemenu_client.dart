@@ -13,7 +13,11 @@ class SideClient extends StatefulWidget {
 
 class _SideClientState extends State<SideClient> {
   // script untuk mengatur navigation menu client
-  List<Widget> views = [FindTalent(), HiredTalent(), MyEmployee()];
+  List<Widget> views = [
+    const FindTalent(),
+    const HiredTalent(),
+    const MyEmployee()
+  ];
   // ==============================================================
   int selectedIndex = 0;
 
@@ -24,16 +28,16 @@ class _SideClientState extends State<SideClient> {
         children: [
           SideNavigationBar(
             header: SideNavigationBarHeader(
-              image: CircleAvatar(
+              image: const CircleAvatar(
+                radius: 20,
                 child: Icon(
                   Icons.person_pin,
                   size: 20,
                 ),
-                radius: 20,
               ),
               title: Container(
-                padding: EdgeInsets.only(left: 10),
-                child: Text(
+                padding: const EdgeInsets.only(left: 10),
+                child: const Text(
                   'Fahrur Huzain',
                   style: TextStyle(
                       color: Colors.white,
@@ -74,10 +78,10 @@ class _SideClientState extends State<SideClient> {
             theme: SideNavigationBarTheme(
               backgroundColor:
                   //Color.fromARGB(200, 9, 47, 171),
-                  Color.fromARGB(255, 18, 108, 178),
-              togglerTheme: SideNavigationBarTogglerTheme(
+                  const Color.fromARGB(255, 18, 108, 178),
+              togglerTheme: const SideNavigationBarTogglerTheme(
                   shrinkIconColor: Colors.white, expandIconColor: Colors.white),
-              itemTheme: SideNavigationBarItemTheme(
+              itemTheme: const SideNavigationBarItemTheme(
                   selectedItemColor: Colors.white,
                   unselectedItemColor: Colors.white60),
               dividerTheme: SideNavigationBarDividerTheme.standard(),

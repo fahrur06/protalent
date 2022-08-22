@@ -3,15 +3,15 @@ import 'package:pro_talent/admin/dashboard/main_dashboard.dart';
 import 'package:pro_talent/admin/talent_manage/add_talent.dart';
 import 'package:pro_talent/appbar/appbar_dashboard.dart';
 import 'package:side_navigation/side_navigation.dart';
-import 'package:pro_talent/admin/dashboard/desc_talent.dart';
+// import 'package:pro_talent/admin/dashboard/desc_talent.dart';
 import 'package:pro_talent/admin/client/client_dashboard.dart';
 import 'package:pro_talent/admin/pages/pages_dashboard.dart';
 import 'package:pro_talent/admin/post/post_dashboard.dart';
 import 'package:pro_talent/admin/master_data/master_data.dart';
 import 'package:pro_talent/admin/setting_dashboard.dart';
-import 'package:pro_talent/admin/talent_manage/talent_manage.dart';
+// import 'package:pro_talent/admin/talent_manage/talent_manage.dart';
 
-import '../../login.dart';
+// import '../../login.dart';
 
 class SideMenuManageTalent extends StatefulWidget {
   const SideMenuManageTalent({Key? key}) : super(key: key);
@@ -40,7 +40,7 @@ class _SideMenuManageTalentState extends State<SideMenuManageTalent> {
         children: [
           SideNavigationBar(
             header: SideNavigationBarHeader(
-              image: CircleAvatar(
+              image: const CircleAvatar(
                 child: Icon(
                   Icons.person_pin,
                   size: 20,
@@ -48,8 +48,8 @@ class _SideMenuManageTalentState extends State<SideMenuManageTalent> {
                 radius: 20,
               ),
               title: Container(
-                padding: EdgeInsets.only(left: 10),
-                child: Text(
+                padding: const EdgeInsets.only(left: 10),
+                child: const Text(
                   'Fahrur Huzain',
                   style: TextStyle(
                       color: Colors.white,
@@ -58,9 +58,6 @@ class _SideMenuManageTalentState extends State<SideMenuManageTalent> {
                 ),
               ),
               subtitle: Container(),
-
-
-
             ),
             selectedIndex: selectedIndex,
             items: const [
@@ -102,12 +99,13 @@ class _SideMenuManageTalentState extends State<SideMenuManageTalent> {
             // Make use of standard() constructor for other themes
             theme: SideNavigationBarTheme(
               backgroundColor:
-              //Color.fromARGB(200, 9, 47, 171),
-              Color.fromARGB(255, 18, 108, 178),
-              togglerTheme: SideNavigationBarTogglerTheme(
+                  //Color.fromARGB(200, 9, 47, 171),
+                  const Color.fromARGB(255, 18, 108, 178),
+              togglerTheme: const SideNavigationBarTogglerTheme(
                   shrinkIconColor: Colors.white, expandIconColor: Colors.white),
-              itemTheme:
-              SideNavigationBarItemTheme(selectedItemColor: Colors.white,unselectedItemColor: Colors.white60),
+              itemTheme: const SideNavigationBarItemTheme(
+                  selectedItemColor: Colors.white,
+                  unselectedItemColor: Colors.white60),
               dividerTheme: SideNavigationBarDividerTheme.standard(),
             ),
           ),

@@ -48,22 +48,22 @@ class _AddTalentState extends State<AddTalent> {
 
     List<_talent> rows = [
       _talent(1, 'Budi', 'Dibu', 'South Jakarta', '2022-07-18',
-          TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
       _talent(2, 'Fahrur', 'Dota 2 Champions', 'Madura', '2022-01-01',
-          TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
       _talent(3, 'Udin', 'Jualan tahu bulat', 'Ciamis', '2022-03-29',
-          TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
       _talent(4, 'Rizki', 'Pro Player Mobile Legend', 'Bekasi', '2022-04-2',
-          TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
       _talent(
           5,
           'Faid',
           'Angker, KRL Mania, Pengguna Transportasi Public',
           'Bogor',
           '2022-05-29',
-          TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
       _talent(6, 'Tohap', 'Member Eksad', 'Jakarta Barat', '2022-03-9',
-          TextButton(onPressed: () {}, child: Text('delete'))),
+          TextButton(onPressed: () {}, child: const Text('delete'))),
     ];
 
     _model = EasyTableModel<_talent>(rows: rows, columns: [
@@ -96,7 +96,7 @@ class _AddTalentState extends State<AddTalent> {
     var screenSize = MediaQuery.of(context).size;
     var screenSize1 = screenSize.width * 0.6;
     return Scaffold(
-      backgroundColor: Color.fromRGBO(238, 224, 224, 1),
+      backgroundColor: const Color.fromRGBO(238, 224, 224, 1),
       body: Center(
         child: Container(
           //padding: EdgeInsets.symmetric(vertical: screenSize.height*0.1,horizontal: screenSize.width*0.2),
@@ -104,16 +104,16 @@ class _AddTalentState extends State<AddTalent> {
           height: screenSize.height * 0.75,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            border:
-                Border.all(color: Color.fromARGB(255, 18, 108, 178), width: 20),
+            border: Border.all(
+                color: const Color.fromARGB(255, 18, 108, 178), width: 20),
             color: Colors.white,
           ),
 
           child: Column(
             children: [
               Container(
-                padding: EdgeInsets.only(top: 30, left: 50),
-                decoration: BoxDecoration(
+                padding: const EdgeInsets.only(top: 30, left: 50),
+                decoration: const BoxDecoration(
                   // borderRadius: BorderRadius.only(
                   //     topRight: Radius.circular(20),
                   //     topLeft: Radius.circular(20)),
@@ -122,7 +122,7 @@ class _AddTalentState extends State<AddTalent> {
                 ),
                 width: screenSize.width * 0.7,
                 height: screenSize.height * 0.15,
-                child: Text(
+                child: const Text(
                   'Create Talent',
                   style: TextStyle(
                       color: Colors.white,
@@ -135,7 +135,7 @@ class _AddTalentState extends State<AddTalent> {
               Container(
                 width: screenSize.width * 0.7,
                 height: screenSize.height * 0.06,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   border: Border(
                     top: BorderSide(
                         color: Color.fromARGB(255, 18, 108, 178), width: 20),
@@ -143,7 +143,7 @@ class _AddTalentState extends State<AddTalent> {
                 ),
               ),
               Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     // borderRadius: BorderRadius.circular(20),
                     // color: Color.fromARGB(255, 18, 108, 178),
                     ),
@@ -164,14 +164,14 @@ class _AddTalentState extends State<AddTalent> {
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Container(
                             height: 50,
                             width: screenSize1 * 0.2,
                             child: TextFormField(
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                   labelText: "Fullname",
                                   hintStyle: TextStyle(),
                                   border: OutlineInputBorder(
@@ -179,7 +179,7 @@ class _AddTalentState extends State<AddTalent> {
                                           width: 1, color: Colors.grey))),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Text(
@@ -189,14 +189,14 @@ class _AddTalentState extends State<AddTalent> {
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Container(
                             height: 50,
                             width: screenSize1 * 0.2,
                             child: TextFormField(
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                   labelText: "Gender",
                                   hintStyle: TextStyle(),
                                   border: OutlineInputBorder(
@@ -204,7 +204,7 @@ class _AddTalentState extends State<AddTalent> {
                                           width: 1, color: Colors.grey))),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Text(
@@ -214,14 +214,14 @@ class _AddTalentState extends State<AddTalent> {
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Container(
                             height: 50,
                             width: screenSize1 * 0.2,
                             child: TextFormField(
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                   labelText: "Expected Salary",
                                   hintStyle: TextStyle(),
                                   border: OutlineInputBorder(
@@ -229,7 +229,7 @@ class _AddTalentState extends State<AddTalent> {
                                           width: 1, color: Colors.grey))),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                         ]
