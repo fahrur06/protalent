@@ -8,6 +8,14 @@ import '../../appbar/appbar_baru.dart';
 import '../../footer.dart';
 import '../../widget/responsive.dart';
 import '../../widget/whatsapp.dart';
+import 'package:flutter/services.dart';
+
+void setPageTitle(String title, BuildContext context) {
+  SystemChrome.setApplicationSwitcherDescription(ApplicationSwitcherDescription(
+    label: title,
+    primaryColor: Theme.of(context).primaryColor.value, // This line is required
+  ));
+}
 
 class OurServices extends StatefulWidget {
   const OurServices({Key? key}) : super(key: key);
@@ -19,6 +27,7 @@ class OurServices extends StatefulWidget {
 class _OurServicesState extends State<OurServices> {
   @override
   Widget build(BuildContext context) {
+    setPageTitle('Services Protalent', context);
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
         appBar: ResponsiveWidget.isSmallScreen(context)

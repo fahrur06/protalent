@@ -8,6 +8,14 @@ import '../../widget/responsive.dart';
 import '../../widget/whatsapp.dart';
 import 'career1.dart';
 import 'career1_2.dart';
+import 'package:flutter/services.dart';
+
+void setPageTitle(String title, BuildContext context) {
+  SystemChrome.setApplicationSwitcherDescription(ApplicationSwitcherDescription(
+    label: title,
+    primaryColor: Theme.of(context).primaryColor.value, // This line is required
+  ));
+}
 
 class Career extends StatefulWidget {
   const Career({Key? key}) : super(key: key);
@@ -19,6 +27,7 @@ class Career extends StatefulWidget {
 class _CareerState extends State<Career> {
   @override
   Widget build(BuildContext context) {
+    setPageTitle('Career Protalent', context);
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
         appBar: ResponsiveWidget.isSmallScreen(context)

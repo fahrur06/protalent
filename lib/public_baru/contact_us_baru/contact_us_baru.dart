@@ -8,6 +8,14 @@ import '../../appbar/appbar_baru.dart';
 import '../../footer.dart';
 import '../../widget/responsive.dart';
 import '../../widget/whatsapp.dart';
+import 'package:flutter/services.dart';
+
+void setPageTitle(String title, BuildContext context) {
+  SystemChrome.setApplicationSwitcherDescription(ApplicationSwitcherDescription(
+    label: title,
+    primaryColor: Theme.of(context).primaryColor.value, // This line is required
+  ));
+}
 
 class ContactUs_baru extends StatefulWidget {
   const ContactUs_baru({Key? key}) : super(key: key);
@@ -19,6 +27,7 @@ class ContactUs_baru extends StatefulWidget {
 class _ContactUsState extends State<ContactUs_baru> {
   @override
   Widget build(BuildContext context) {
+    setPageTitle('Contact Us', context);
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
         appBar: ResponsiveWidget.isSmallScreen(context)

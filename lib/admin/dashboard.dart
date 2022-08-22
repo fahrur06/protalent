@@ -2,12 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:pro_talent/admin/side_menu.dart';
 import 'package:pro_talent/appbar/appbar_dashboard.dart';
 // import 'package:pro_talent/main.dart';
+import 'package:flutter/services.dart';
+
+void setPageTitle(String title, BuildContext context) {
+  SystemChrome.setApplicationSwitcherDescription(ApplicationSwitcherDescription(
+    label: title,
+    primaryColor: Theme.of(context).primaryColor.value, // This line is required
+  ));
+}
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    setPageTitle('Dashboard Admin Protalent', context);
     return Scaffold(
       appBar: BarAtas(context),
       body: const SideMenu(),

@@ -3,6 +3,14 @@ import 'package:flutter/material.dart';
 // import 'package:pro_talent/register.dart';
 //
 // import 'admin/dashboard.dart';
+import 'package:flutter/services.dart';
+
+void setPageTitle(String title, BuildContext context) {
+  SystemChrome.setApplicationSwitcherDescription(ApplicationSwitcherDescription(
+    label: title,
+    primaryColor: Theme.of(context).primaryColor.value, // This line is required
+  ));
+}
 
 class login extends StatefulWidget {
   const login({Key? key}) : super(key: key);
@@ -22,6 +30,7 @@ class _loginState extends State<login> {
 
   @override
   Widget build(BuildContext context) {
+    setPageTitle('Login Protalent', context);
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(

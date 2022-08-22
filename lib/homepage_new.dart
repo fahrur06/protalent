@@ -10,6 +10,14 @@ import 'package:pro_talent/widget/whatsapp.dart';
 import '../appbar/appbar_baru.dart';
 
 import '../widget/responsive.dart';
+import 'package:flutter/services.dart';
+
+void setPageTitle(String title, BuildContext context) {
+  SystemChrome.setApplicationSwitcherDescription(ApplicationSwitcherDescription(
+    label: title,
+    primaryColor: Theme.of(context).primaryColor.value, // This line is required
+  ));
+}
 
 class HomePageNew extends StatefulWidget {
   const HomePageNew({Key? key}) : super(key: key);
@@ -21,6 +29,7 @@ class HomePageNew extends StatefulWidget {
 class _HomePageNewState extends State<HomePageNew> {
   @override
   Widget build(BuildContext context) {
+    setPageTitle('Protalent by Eksad', context);
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       floatingActionButton: WAChat(),
