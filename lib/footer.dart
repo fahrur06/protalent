@@ -88,7 +88,7 @@ class Footer extends StatelessWidget {
                                 IconButton(
                                   onPressed: () {
                                     launch(
-                                        'https://twitter.com/eksad_technology/');
+                                        'https://twitter.com/eksadtechnology/');
                                   },
                                   icon: Icon(
                                     FontAwesomeIcons.twitter,
