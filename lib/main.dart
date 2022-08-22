@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "PROTALENT BY EKSAD",
+      title: "Protalent by Eksad",
       initialRoute: '/',
       routes: {
         '/': (context) => const HomePageNew(),
